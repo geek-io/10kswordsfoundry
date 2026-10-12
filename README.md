@@ -4,7 +4,7 @@ A Foundry VTT v14 game system for *10,000 Swords Against Heaven*, based on rules
 
 - System by: Geek IO Dev Team
 
-***THIS IS 1 SWORD AGAINST HEAVEN***
+![This Is 1 Sword Against Heaven](assets/character-logo.png)
 
 # v 0.1.40
 
