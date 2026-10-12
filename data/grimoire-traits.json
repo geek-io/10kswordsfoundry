@@ -1,0 +1,1444 @@
+{
+  "folders": [
+    {
+      "_id": "0178397f93449c4e",
+      "name": "Traits",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "color": null
+    }
+  ],
+  "items": [
+    {
+      "_id": "19e5414845461670",
+      "name": "Animal Magnetism",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>Itʼs hard to ignore you. Something deep within calls. Perhaps the Beast is more attractive than some say… Add +[Level] dice to any WRD Check to intimidate, seduce, or rally through sheer charisma. Your first impression is unforgettable—people remember you for days.</p>",
+        "source": "Rules 2.0.3, p.114; Trait 11",
+        "tags": "Grimoire, Trait, d66 11",
+        "level": 1,
+        "active": false
+      },
+      "effects": [
+        {
+          "_id": "9827d2c25608e73b",
+          "name": "Intimidate, seduce, or rally",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.114; Trait 11. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.cultivations.wrd",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "2dad55d92847066c",
+      "name": "Dialectician",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>Reach the truths of the world through that flensing blade named Unity of Oppositions. When someone speaks, you can identify their hidden assumptions, logical gaps, and self-deceptions—as easily as you can see rust on a blade. If you spend a full exchange (about 5 minutes) debating or persuading with logic, add +[Level] dice to your DIA pool.</p>",
+        "source": "Rules 2.0.3, p.114; Trait 12",
+        "tags": "Grimoire, Trait, d66 12",
+        "level": 1,
+        "active": false
+      },
+      "effects": [
+        {
+          "_id": "c5cbe593cea5c542",
+          "name": "After five minutes debating or persuading with logic",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.114; Trait 12. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.cultivations.dia",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "b1ee1ffe84d41163",
+      "name": "Ascetic’s Meditation",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>Your body rejects even the greatest of magicks. +[Level] against Magick-based Attacks.</p>",
+        "source": "Rules 2.0.3, p.114; Trait 13",
+        "tags": "Grimoire, Trait, d66 13",
+        "level": 1,
+        "active": false
+      },
+      "effects": [
+        {
+          "_id": "aa2366fb3da48bd0",
+          "name": "Defending against Magick-based attacks",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.114; Trait 13. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.defenseBonus",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "effdbce86fad985c",
+      "name": "Beast Grip",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>Gain the herculean, colossus strength of the Gleaming Saint Badrapan. You can wield two-handed weapons in one hand, even Colossal Weapons. Add +[Level] dice to any VIO Check to grapple, hold, disarm, or overpower.</p>",
+        "source": "Rules 2.0.3, p.114; Trait 14",
+        "tags": "Grimoire, Trait, d66 14",
+        "level": 1,
+        "active": false
+      },
+      "effects": [
+        {
+          "_id": "d2c767f486da98ac",
+          "name": "Grapple, hold, disarm, or overpower",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.114; Trait 14. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.cultivations.vio",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "039703791eb87c70",
+      "name": "Beast Shrine",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>At the heart of every sentient being is the Beast writhing. The purest expression of the prima materia of all life: the Void. Break doors, chains, bones. Laugh at the weak. Once per Rest, you may lose 1 Health to gain +[Level] dice to all VIO Checks for 10 minutes. During this time, suffer -[Level] dice to all DIA Checks. You must act on instinct.</p>",
+        "source": "Rules 2.0.3, p.114; Trait 15",
+        "tags": "Grimoire, Trait, d66 15",
+        "level": 1,
+        "active": false
+      },
+      "effects": [
+        {
+          "_id": "ffc4c7dfd201d7a9",
+          "name": "Beast Shrine active: pay 1 Health; ten minutes; once per Rest",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.114; Trait 15. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.cultivations.vio",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              },
+              {
+                "key": "system.cultivations.dia",
+                "type": "add",
+                "value": "-1 * @system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "604492c4e573142f",
+      "name": "Dead Poet Disciple",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>O captain, heart of my soul! The world sings yonder of thine erstwhile achievements. O warlord, liver of my days! The world shall remember thy lost ages. All poets are dead, all poets are dead. All poets must first die to live within their words! What other school can perfectly embody the nature of Emptiness? To die is to be Empty. To be Empty is to find reality. To find reality is to express it. To express reality is to be a poet. Add +[Level] dice to any Check involving poetry—writing, reciting, or improvising. When you speak poetry in the presence of the dead (within 20m), they hear you. Ghosts must make a SPI Check or be swayed.</p>",
+        "source": "Rules 2.0.3, p.114; Trait 16",
+        "tags": "Grimoire, Trait, d66 16",
+        "level": 1,
+        "active": false
+      },
+      "effects": [
+        {
+          "_id": "76a54ab0d973a8f5",
+          "name": "Writing, reciting, or improvising poetry",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.114; Trait 16. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.checkBonus",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "e10357208d5e9fab",
+      "name": "Killing Intent",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>You can smell the violence before it erupts. The stench of ozone. +[Level] dice to any SAV Check to sense danger or hostile intent. +[Level] dice to any VIO Check to intimidate through credible threat.</p>",
+        "source": "Rules 2.0.3, p.115; Trait 21",
+        "tags": "Grimoire, Trait, d66 21",
+        "level": 1,
+        "active": false
+      },
+      "effects": [
+        {
+          "_id": "46d7070ec3250154",
+          "name": "Sense danger or hostile intent",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.115; Trait 21. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.cultivations.sav",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        },
+        {
+          "_id": "6c091ebc204783e7",
+          "name": "Intimidate through credible threat",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": true,
+          "description": "<p>Rules 2.0.3, p.115; Trait 21. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.cultivations.vio",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "c5cade667a0f909f",
+      "name": "Brewmaster",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>Your soul is touched by the spirits of alcohol and distillation. +[Level] dice to any Check to brew, distill, or identify spirits and elixirs. When you drink something you brewed, gain +[Level] dice on your next Check (does not stack). You can identify any drink's ingredients and origin by taste.</p>",
+        "source": "Rules 2.0.3, p.115; Trait 22",
+        "tags": "Grimoire, Trait, d66 22",
+        "level": 1,
+        "active": false
+      },
+      "effects": [
+        {
+          "_id": "ef7f0bed739db418",
+          "name": "Brew, distill, identify spirits/elixirs OR next check after own brew (no stacking)",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.115; Trait 22. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.checkBonus",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "677d9e7bb85da587",
+      "name": "Music Made Visible",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>Dance is the silent song. Every dance step a twist of the world-flow. The siren song of the land to itself. Tap, tap, tap: in the midst of the unheard music is bliss. +[Level] to all Dancing-related Checks. When you dance a perfect dance for at least 10 minutes, enter Samadhi for at least a minute during the dance.</p>",
+        "source": "Rules 2.0.3, p.115; Trait 23",
+        "tags": "Grimoire, Trait, d66 23",
+        "level": 1,
+        "active": false
+      },
+      "effects": [
+        {
+          "_id": "9d252b7846ef3892",
+          "name": "Dancing-related checks",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.115; Trait 23. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.checkBonus",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "5e11f1a174a95fac",
+      "name": "Adamance",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>Ignore damage so you can soldier on, until the bittermost end. Those that have developed this to the extreme become demon carapace warriors in the front lines of the war against heaven, led by the Warrior Demon Dyakemban. Gain +[Level] max Health.</p>",
+        "source": "Rules 2.0.3, p.115; Trait 24",
+        "tags": "Grimoire, Trait, d66 24",
+        "level": 1,
+        "active": true
+      },
+      "effects": [
+        {
+          "_id": "2a2ed6c78746db9f",
+          "name": "Maximum Health",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.115; Trait 24. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.health.max",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "81109f7a8c52e015",
+      "name": "Fist-Sized Muscle",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>Your heart burgeons with the whimsy and the love of the performer fighting for survival. Add +[Level] die to any WRD or SPI Check where you express truthfully. Add +[Level] dice when performing for an audience of at least 5 people.</p>",
+        "source": "Rules 2.0.3, p.115; Trait 25",
+        "tags": "Grimoire, Trait, d66 25",
+        "level": 1,
+        "active": false
+      },
+      "effects": [
+        {
+          "_id": "2a63fe75c787c7ae",
+          "name": "Express truthfully",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.115; Trait 25. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.cultivations.wrd",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              },
+              {
+                "key": "system.cultivations.spi",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        },
+        {
+          "_id": "c5bce8873fc6669d",
+          "name": "Perform for an audience of at least five",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": true,
+          "description": "<p>Rules 2.0.3, p.115; Trait 25. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.checkBonus",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "2281097754c31225",
+      "name": "Beggar",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>You grew up in the dirt. Wretched of the earth. But the grit of the gutters has sharpened you to a cutting blade. Add +[Level] dice to any SAV Check to find shelter, food, or information in urban environments. You can identify other street folk instantly.</p>",
+        "source": "Rules 2.0.3, p.115; Trait 26",
+        "tags": "Grimoire, Trait, d66 26",
+        "level": 1,
+        "active": false
+      },
+      "effects": [
+        {
+          "_id": "be2fcf89f4deab52",
+          "name": "Find shelter, food, or information in urban environments",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.115; Trait 26. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.cultivations.sav",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "ed2530a1b593d90a",
+      "name": "Sleepless Madness",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>Caffeine, rage, pamphlets, and revolution keep you awake. You need only 3 hours of sleep per night. +[Level] dice to any Check to endure exhaustion or stay awake. After 18 hours awake, suffer -[Level] die to DIA Checks.</p>",
+        "source": "Rules 2.0.3, p.115; Trait 31",
+        "tags": "Grimoire, Trait, d66 31",
+        "level": 1,
+        "active": false
+      },
+      "effects": [
+        {
+          "_id": "7698502cc08fd808",
+          "name": "Endure exhaustion or stay awake",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.115; Trait 31. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.checkBonus",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        },
+        {
+          "_id": "0e93154b88901251",
+          "name": "After eighteen hours awake",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": true,
+          "description": "<p>Rules 2.0.3, p.115; Trait 31. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.cultivations.dia",
+                "type": "add",
+                "value": "-1 * @system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "4afd03c8d9111ca3",
+      "name": "Oracle Soul",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>You have a... strange entanglement with possibility. Once per week (when the moon returns to its phase), you may enter a trance requiring 10 minutes of meditation. During this trance, you ask the world a single question about the future, a hidden truth, a looming threat. The world answers in visions—true and cryptic. You get [Level] words arising into your mind describing the future.</p>",
+        "source": "Rules 2.0.3, p.116; Trait 32",
+        "tags": "Grimoire, Trait, d66 32",
+        "level": 1,
+        "active": false
+      },
+      "effects": []
+    },
+    {
+      "_id": "eb73f80c69bfbbe7",
+      "name": "Artisan",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>You have mastered a craft—blacksmithing, tailoring, alchemy, something that lets you make order from chaos. Choose what craft when you first choose this Trait. Add +[Level] dice to any Check related to your chosen craft. You can appraise goods of your craft at a glance—you know their value, quality, and origin. You produce work in half the usual time.</p>",
+        "source": "Rules 2.0.3, p.116; Trait 33",
+        "tags": "Grimoire, Trait, d66 33",
+        "level": 1,
+        "active": false
+      },
+      "effects": [
+        {
+          "_id": "6f925492812112a8",
+          "name": "Chosen craft",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.116; Trait 33. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.checkBonus",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "2c0ebd621033aacc",
+      "name": "Eminence",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>The authority building in your heart is always threatening to explode, always threatening to kill you and all those around you that you care about. You can project it, not into a blade but into yourself. Lead them all. Lead them to what they want. Add +[Level] die to any Check to lead, rally, or inspire others. If you spend a few minutes speaking to a group, your words sink in—allies within earshot (about 20m) gain +[Level] to their next relevant Check.</p>",
+        "source": "Rules 2.0.3, p.116; Trait 34",
+        "tags": "Grimoire, Trait, d66 34",
+        "level": 1,
+        "active": false
+      },
+      "effects": [
+        {
+          "_id": "bf265b89dcd74824",
+          "name": "Lead, rally, or inspire others (self)",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.116; Trait 34. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.checkBonus",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "bbf4e19a18baf7f4",
+      "name": "Moonchild",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>The soul is always bare. You just need the eyes to see. And what does vulnerability demand? Vulnerability. Your eyes see into the inner souls of people, that aggregate of emotions and contexts and histories. But you can't contain your own melancholy. A sadness pervades you. You can only look into others by looking into yourself. And what does the heart demand? Vulnerability. When you focus on someone, you can glean [Level] piece/s of information about their emotional state, hidden pain, or secret longing. The World reveals it to you. The effort leaves you hollow—you suffer -[Level] to your next SAV Check as their emotions linger.</p>",
+        "source": "Rules 2.0.3, p.116; Trait 35",
+        "tags": "Grimoire, Trait, d66 35",
+        "level": 1,
+        "active": false
+      },
+      "effects": [
+        {
+          "_id": "43cee5349c488303",
+          "name": "Next SAV check after reading emotions",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.116; Trait 35. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.cultivations.sav",
+                "type": "add",
+                "value": "-1 * @system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "a7912bd3d1456604",
+      "name": "Songbird",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>Your voice is the sound of a moon-kissed nightingale. The sound is beautiful and monstrous. Your voice is a physical force—it carries, your singing or oration heard clearly up to 100m in open air. Add +[Level] dice to any Check to perform, persuade, or move an audience through your singing.</p>",
+        "source": "Rules 2.0.3, p.117; Trait 36",
+        "tags": "Grimoire, Trait, d66 36",
+        "level": 1,
+        "active": false
+      },
+      "effects": [
+        {
+          "_id": "4dfcd31783de429b",
+          "name": "Perform, persuade, or move an audience through singing",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.117; Trait 36. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.checkBonus",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "b3aa01709882d1af",
+      "name": "Seeker",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>Your tendency is to the occult, the weird, the uncanny. Ever since you were a child. Add +[Level] dice to any Check to research, decode, or identify occult phenomena.</p>",
+        "source": "Rules 2.0.3, p.117; Trait 41",
+        "tags": "Grimoire, Trait, d66 41",
+        "level": 1,
+        "active": false
+      },
+      "effects": [
+        {
+          "_id": "c1492a1521c1f25f",
+          "name": "Research, decode, or identify occult phenomena",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.117; Trait 41. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.checkBonus",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "71a19f66d87e5385",
+      "name": "Wanton",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>The animal within you is a maddened three-headed dog drunk with purple wine. An intuitive knowledge of drugs, sex, and alcohol. +[Level] dice to any Check to find vice, illicit goods, or secret dens. When you indulge in a vice, heal 1 Health. -[Level] Dice to SPI Checks to resist temptation.</p>",
+        "source": "Rules 2.0.3, p.117; Trait 42",
+        "tags": "Grimoire, Trait, d66 42",
+        "level": 1,
+        "active": false
+      },
+      "effects": [
+        {
+          "_id": "5432ba04075b196c",
+          "name": "Find vice, illicit goods, or secret dens",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.117; Trait 42. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.checkBonus",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        },
+        {
+          "_id": "69ee0ec1901f2151",
+          "name": "Resist temptation",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": true,
+          "description": "<p>Rules 2.0.3, p.117; Trait 42. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.cultivations.spi",
+                "type": "add",
+                "value": "-1 * @system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "aee2cd0468183471",
+      "name": "Silken Mien",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>Wield the subtle art of pacification. Do you think the world will be kind to you? Your hands are porcelain and your skin is ceramic. The fires of passion glance off you but you will shatter in careless hands. +[Level] dice to any Check to pacify, de-escalate, or persuade toward peace. If you initiate violence, this effect is lost until you spend a day re-establishing your reputation.</p>",
+        "source": "Rules 2.0.3, p.117; Trait 43",
+        "tags": "Grimoire, Trait, d66 43",
+        "level": 1,
+        "active": false
+      },
+      "effects": [
+        {
+          "_id": "0e4e6c728cdc4084",
+          "name": "Pacify, de-escalate, or persuade toward peace; unavailable after initiating violence",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.117; Trait 43. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.checkBonus",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "e9e637d3ea94fa01",
+      "name": "Chills",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>Cold rushes down your spine. This state of super-awareness lets you hear the sigh of the world, the voice of the city, the heartbeat of the People. When hidden threat, ambush, or supernatural presence lurks within [Level x 10]m, you feel it as a cold rush down your spine, like someone walking over your grave. You may then focus and ask the world one question: \"What is the nature of the danger?\"</p>",
+        "source": "Rules 2.0.3, p.117; Trait 44",
+        "tags": "Grimoire, Trait, d66 44",
+        "level": 1,
+        "active": false
+      },
+      "effects": []
+    },
+    {
+      "_id": "0c228c067c227b62",
+      "name": "Rapid Heart Ticking",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>The ability to move before thinking. Say the funniest thing, dance between raindrops. +[Level] die to any SAV Check made to detect immediate danger or react before someone else acts. You cannot suppress this.</p>",
+        "source": "Rules 2.0.3, p.117; Trait 45",
+        "tags": "Grimoire, Trait, d66 45",
+        "level": 1,
+        "active": false
+      },
+      "effects": [
+        {
+          "_id": "c996f98da6f96b8e",
+          "name": "Detect immediate danger or react before another acts",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.117; Trait 45. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.cultivations.sav",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "9965862944e64a1e",
+      "name": "Machinism",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>Youʼre connection with the machines is like one with a pet. You change them, and they change you. +[Level] dice to any Check to repair, modify, inspect, or sabotage technology.</p>",
+        "source": "Rules 2.0.3, p.118; Trait 46",
+        "tags": "Grimoire, Trait, d66 46",
+        "level": 1,
+        "active": false
+      },
+      "effects": [
+        {
+          "_id": "0a8c15ca25b0ddc4",
+          "name": "Repair, modify, inspect, or sabotage technology",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.118; Trait 46. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.checkBonus",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "648484d5666aef2b",
+      "name": "Blessed Is The Flame",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>Your heart rejects the power of all the deities. You want to watch it all burn down. +[Level] dice to any VIO or DIA Check whose goal is destruction, upending, or burning down a system. -[Level] to SAV Checks that perceive consequences beyond immediate destruction.</p>",
+        "source": "Rules 2.0.3, p.118; Trait 51",
+        "tags": "Grimoire, Trait, d66 51",
+        "level": 1,
+        "active": false
+      },
+      "effects": [
+        {
+          "_id": "824b81384b0bcc4c",
+          "name": "Destruction, upending, or burning down a system",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.118; Trait 51. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.cultivations.vio",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              },
+              {
+                "key": "system.cultivations.dia",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        },
+        {
+          "_id": "1be032a7b5c353fe",
+          "name": "Perceive consequences beyond immediate destruction",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": true,
+          "description": "<p>Rules 2.0.3, p.118; Trait 51. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.cultivations.sav",
+                "type": "add",
+                "value": "-1 * @system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "734f6797f9412cac",
+      "name": "Primafascist",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>(Requires table consent. Represents reactionary ideology.) It was so much better back in the day, you know. Look at what they took away from you. God has abandoned us, the Lotus Throne destroyed! Our mighty traditions that kept us together! Our way of life where we put first our own! Nothing with trying to help those foreigners! See, to help others, we must first help ourselves, isnʼt that right? What Iʼm trying to say is that all these progressibos and radikals erode the very foundation of our nation, and thus, our existence! We need great violence, we must act! No time for peace: that breeds the weakest of men! The people must move, and now! It takes a powerful will, one like yours, to keep up the fight for fascism after it has been scathed and scourged in hellfire. +[Level] dice to VIO Checks when acting for your \"nation\" or against \"outsiders.\" When you wake, lose [Level] Health. SPI Checks to connect across difference suffer -[Level].</p>",
+        "source": "Rules 2.0.3, p.118; Trait 52",
+        "tags": "Grimoire, Trait, d66 52",
+        "level": 1,
+        "active": false
+      },
+      "effects": [
+        {
+          "_id": "a13a5329df9e7b96",
+          "name": "Act for nation or against outsiders",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.118; Trait 52. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.cultivations.vio",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        },
+        {
+          "_id": "4049b9a26c1981c9",
+          "name": "Connect across difference",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": true,
+          "description": "<p>Rules 2.0.3, p.118; Trait 52. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.cultivations.spi",
+                "type": "add",
+                "value": "-1 * @system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "48ef5218d9842b1c",
+      "name": "Shrine Maiden",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>Internalize the Patroness of Shrine Maidens, who died for the Sins of the World. The first Shrine Maiden was said to be Yenja, who gave her life for Prima. +[Level] dice to any SPI Check to interact with spirits, a local deity, or one of the dead. An extra +1 if it is a ritual and with the proper offerings.</p>",
+        "source": "Rules 2.0.3, p.118; Trait 53",
+        "tags": "Grimoire, Trait, d66 53",
+        "level": 1,
+        "active": false
+      },
+      "effects": [
+        {
+          "_id": "2c8dd88a8b04d198",
+          "name": "Interact with spirits, local deity, or dead",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.118; Trait 53. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.cultivations.spi",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        },
+        {
+          "_id": "1051c97943f082e9",
+          "name": "Ritual with proper offerings (additional)",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": true,
+          "description": "<p>Rules 2.0.3, p.118; Trait 53. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.cultivations.spi",
+                "type": "add",
+                "value": "1",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "7dca39d73c04fb51",
+      "name": "Operatic Athleticism",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>The grand Jetung Opera, the crux of Jeng and Jaxiya. Don the pheasant helmets, the ogre masks, the armor-costumes and dance in light and shadow. Operatics are true performers and masters of the art, but this requires an almost lifetime worth of investment to achieve. More importantly, many dances are used for combat, and vice versa. +[Level] dice to any GRC Check to leap, vault, climb, or maneuver. Add +1 die to any movement-based performance. You can recreate any motion you have performed before.</p>",
+        "source": "Rules 2.0.3, p.118; Trait 54",
+        "tags": "Grimoire, Trait, d66 54",
+        "level": 1,
+        "active": false
+      },
+      "effects": [
+        {
+          "_id": "6dce790f5ad3ecc8",
+          "name": "Leap, vault, climb, or maneuver",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.118; Trait 54. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.cultivations.grc",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        },
+        {
+          "_id": "9ecb00d20cd9b4c3",
+          "name": "Movement-based performance (additional)",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": true,
+          "description": "<p>Rules 2.0.3, p.118; Trait 54. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.checkBonus",
+                "type": "add",
+                "value": "1",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "4ac68888620c2460",
+      "name": "Tenth Sense",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>Aha, your heart is lined with eyes. You perceive the emotional field of living beings as a subtle pressure against your skin. You can see people's aura. They manifest as colors. When rolling their Disposition toward you, add +[Level] to the Disposition roll.</p>",
+        "source": "Rules 2.0.3, p.119; Trait 55",
+        "tags": "Grimoire, Trait, d66 55",
+        "level": 1,
+        "active": false
+      },
+      "effects": []
+    },
+    {
+      "_id": "e2938a409939339f",
+      "name": "Third Eye",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>Oh God… you see them too, donʼt you? You perceive Spirits, Ghosts, and Subtle Entities as readily as you perceive the living. +[Level] to dealing and speaking with ghosts and spirits.</p>",
+        "source": "Rules 2.0.3, p.119; Trait 56",
+        "tags": "Grimoire, Trait, d66 56",
+        "level": 1,
+        "active": false
+      },
+      "effects": [
+        {
+          "_id": "568d245b3ec0394d",
+          "name": "Deal and speak with ghosts or spirits",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.119; Trait 56. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.checkBonus",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "f26e2d5fad6a2884",
+      "name": "High Revolutionist",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>Not everyone has what it takes to be a revolutionary. An ideology that arose from Kafeng Masangwa and the Shennin Commune, which was summarily destroyed even after they successfully conducted the First World Revolution against the Invincible Blade Princess. They dared to think different: no wages, no rulers, no middlemen. A society that loves humanity. It failed, but they did try. To be a communist still is to be someone of a vajra-will and vajra-intelligence, to find the stars in the darkness. +[Level] die to DIA Checks analyzing social structures (Pessimism of the Intellect). +[Level] die to SPI Checks resisting coercion or despair (Optimism of the Will). However, you gain -[Level] dice when attempting to carouse or chill with others: all your theory is scaring off the studs and the huzz.</p>",
+        "source": "Rules 2.0.3, p.119; Trait 61",
+        "tags": "Grimoire, Trait, d66 61",
+        "level": 1,
+        "active": false
+      },
+      "effects": [
+        {
+          "_id": "80b67437cea9ca14",
+          "name": "Analyze social structures",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.119; Trait 61. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.cultivations.dia",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        },
+        {
+          "_id": "b67091440c1a761c",
+          "name": "Resist coercion or despair",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": true,
+          "description": "<p>Rules 2.0.3, p.119; Trait 61. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.cultivations.spi",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        },
+        {
+          "_id": "6ddd88c101bff28f",
+          "name": "Carouse or chill with others",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": true,
+          "description": "<p>Rules 2.0.3, p.119; Trait 61. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.checkBonus",
+                "type": "add",
+                "value": "-1 * @system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "a4f3d4869e123aa0",
+      "name": "Clean Meridian Channels",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>The channels through which your Hawa flurries are clean and energetic. Add +[Level] to any GRC Check involving fluid movement. Once per day, reduce the Ardor Burn of any ability by 1—minimum 1.</p>",
+        "source": "Rules 2.0.3, p.119; Trait 62",
+        "tags": "Grimoire, Trait, d66 62",
+        "level": 1,
+        "active": false
+      },
+      "effects": [
+        {
+          "_id": "2faa7a86b3cbd88b",
+          "name": "Fluid movement",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.119; Trait 62. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.cultivations.grc",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "379a8141a962dd98",
+      "name": "Bleeding Heart",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>Empathy. Skewer yourself with anotherʼs soul. Find out why things hurt, and why people love. Understanding, compassion. Use this to figure out the mental states of people. +[Level] dice to any Check to empathize, comfort, or persuade through compassion. When you speak to someone in distress, you may ask the World what they truly need to trust you. You carry their pain until you rest.</p>",
+        "source": "Rules 2.0.3, p.119; Trait 63",
+        "tags": "Grimoire, Trait, d66 63",
+        "level": 1,
+        "active": false
+      },
+      "effects": [
+        {
+          "_id": "11a089fc17530657",
+          "name": "Empathize, comfort, or persuade through compassion",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.119; Trait 63. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.checkBonus",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "51ab5e894fbf5c47",
+      "name": "Lover Soul",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>True darkness has love for a face. You know this. And yet you do it. Your heart hemorrhages. You cannot stop yourself. You love, you love, you love. Your idea of love does not belong to this world. Donʼt you know? That love has long passed us? That itʼs for them, the new humanity who are once again human, and not for you? +[Level] dice to any SPI Check to connect intimately with someone. You cannot lie about love.</p>",
+        "source": "Rules 2.0.3, p.120; Trait 64",
+        "tags": "Grimoire, Trait, d66 64",
+        "level": 1,
+        "active": false
+      },
+      "effects": [
+        {
+          "_id": "35cc6fac5faac6c0",
+          "name": "Connect intimately",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.120; Trait 64. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.cultivations.spi",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "00bf195be99fa405",
+      "name": "Thundercloud Zeal",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>You are intensely dedicated to the Truth that you have chosen to follow. What God or Ideology do you serve? Do you actually think it is the answer to the worldʼs ills? What kind of love do you bear in your heart to be so attached to this? May it be worth it in the end. Of course itʼs worth it in the end. Only God|Ideology can save the world. Only that can change the world. +[Level] dice to any Check made in service of your chosen Truth. Once per day, you may reroll any failed Check that serves your Truth—you become exhausted afterward (suffer -[Level] die to all Checks for 1 hour).</p>",
+        "source": "Rules 2.0.3, p.120; Trait 65",
+        "tags": "Grimoire, Trait, d66 65",
+        "level": 1,
+        "active": false
+      },
+      "effects": [
+        {
+          "_id": "fd9a74abef459c10",
+          "name": "In service of chosen Truth",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.120; Trait 65. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.checkBonus",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        },
+        {
+          "_id": "11ddc6e0b1765884",
+          "name": "Exhaustion after daily reroll: one hour",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": true,
+          "description": "<p>Rules 2.0.3, p.120; Trait 65. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.checkBonus",
+                "type": "add",
+                "value": "-1 * @system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "c4cb76ab6101ed6b",
+      "name": "Beautiful",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "0178397f93449c4e",
+      "system": {
+        "description": "<p>Everyone can be beautiful. Not everyone can commit to it, or is a natural at it. This cultivation has you practicing facial movements, perfecting makeup, and performing rituals for face-shapings to attain final beauty. Beauty is an armor. And all armor weighs on you. +[Level] dice to any Check that leverages your appearance to persuade, charm, or influence. You cannot remain unnoticed in a crowd—people remember your face.</p>",
+        "source": "Rules 2.0.3, p.120; Trait 66",
+        "tags": "Grimoire, Trait, d66 66",
+        "level": 1,
+        "active": false
+      },
+      "effects": [
+        {
+          "_id": "f9c77da82a1164e5",
+          "name": "Appearance to persuade, charm, or influence",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.120; Trait 66. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.checkBonus",
+                "type": "add",
+                "value": "@system.level",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

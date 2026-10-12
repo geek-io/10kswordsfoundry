@@ -1,0 +1,13 @@
+import './check-effect-pipeline-035.mjs';
+import assert from 'node:assert/strict';
+const {SwordsActorSheet}=await import('../scripts/sheets.mjs');
+const effect={disabled:true,async update(data){Object.assign(this,data);}};
+const secondary={disabled:true,async update(data){Object.assign(this,data);}};
+const item={type:'trait',system:{active:true},effects:{contents:[effect,secondary],get:()=>secondary},async update(data){this.system.active=data['system.active'];}};
+const sheet={isEditable:true,submit:async()=>{},document:{items:{get:()=>item}}};
+const target={dataset:{itemId:'trait',effectId:'secondary'}};
+await SwordsActorSheet.toggleTrait.call(sheet,null,target);assert.equal(effect.disabled,false);assert.equal(item.system.active,true);assert.equal(secondary.disabled,true);
+await SwordsActorSheet.toggleTrait.call(sheet,null,target);assert.equal(item.system.active,false);
+await SwordsActorSheet.toggleTraitEffect.call(sheet,null,target);assert.equal(secondary.disabled,false);assert.equal(item.system.active,true);
+sheet.isEditable=false;await SwordsActorSheet.toggleTrait.call(sheet,null,target);assert.equal(item.system.active,true);
+console.log('Existing all-disabled Traits activate their primary effect; secondary effects activate their parent; Deactivate and permissions work.');

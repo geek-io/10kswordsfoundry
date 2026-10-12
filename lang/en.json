@@ -1,0 +1,24 @@
+{
+  "TYPES": {
+    "Actor": {
+      "wanderer": "Wanderer",
+      "npc": "World-Being / NPC"
+    },
+    "Item": {
+      "gear": "Gear",
+      "weapon": "Weapon",
+      "armor": "Armor",
+      "trait": "Trait",
+      "license": "License",
+      "technique": "Technick",
+      "job": "Job",
+      "fashion": "Fashion",
+      "magick": "Magick",
+      "weaponMod": "Weapon Mod",
+      "accessory": "Accessory",
+      "ammunition": "Ammo",
+      "gambit": "World Being Gambit",
+      "salvage": "Salvage"
+    }
+  }
+}

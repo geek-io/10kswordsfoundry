@@ -1,0 +1,10 @@
+import {createRequire} from 'node:module';
+import {readFile,writeFile} from 'node:fs/promises';
+import {pathToFileURL} from 'node:url';
+const {chromium}=createRequire('C:/Users/drago/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/package.json')('playwright');
+const flavor=await readFile('tmp/ui/defense-flavor.html','utf8');
+await writeFile('tmp/ui/defense-preview.html',`<!doctype html><html><head><base href="${pathToFileURL(process.cwd()+'/').href}"><link rel="stylesheet" href="styles/system.css"><style>body{background:#202329;padding:20px;font:15px Arial}.chat-message{background:#efe9da;color:#171717;width:330px;padding:12px;border-radius:6px}</style></head><body><article class="chat-message">${flavor}</article></body></html>`);
+const browser=await chromium.launch({headless:true,channel:'msedge'}),page=await browser.newPage({viewport:{width:400,height:650}});
+await page.goto(pathToFileURL(process.cwd()+'/tmp/ui/defense-preview.html').href);
+if(await page.locator('.swords-defense').evaluate(el=>el.scrollWidth>el.clientWidth))throw Error('Defense card overflows chat width');
+await page.screenshot({path:'tmp/ui/defense.png'});await browser.close();console.log('Defense card fits a 330px chat column.');

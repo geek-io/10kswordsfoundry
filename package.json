@@ -1,0 +1,10 @@
+{
+  "name": "10kswordsfoundry",
+  "version": "0.1.40",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "check": "node tools/check-package.mjs"
+  }
+}

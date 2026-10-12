@@ -1,0 +1,2802 @@
+{
+  "folders": [
+    {
+      "_id": "b08648dbd62b71bd",
+      "name": "Accessories",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "f5ba1f5823a37525",
+      "name": "Ammunition",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "7cb53ac08582f52d",
+      "name": "Consumables",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "000b821603b66426",
+      "name": "Crafting",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "341cf1f9321d90ae",
+      "name": "Esotery",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "00d20d0632f5e1ef",
+      "name": "Fashion",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "75f34b26c92bf9cb",
+      "name": "Salvage",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "a0c45e8339b8d690",
+      "name": "Talismans",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "ea93d6a262ecb87a",
+      "name": "Tools",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "aafc7b0e9b9e48bd",
+      "name": "Weapons",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "color": null
+    }
+  ],
+  "items": [
+    {
+      "name": "Elixir Healing Vial",
+      "type": "gear",
+      "system": {
+        "rarity": "common",
+        "slots": 1,
+        "description": "Heal 1 Health. So widespread and common that people have begun to call all painkilling liquids and juices as “Elixirsˮ despite that being the brand name. Made by thaumaturgical alchemy machines. 50 MAG",
+        "magCost": 50,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.94",
+        "consumable": {
+          "enabled": true,
+          "apCost": 1,
+          "health": 1,
+          "burntArdor": 0,
+          "allHealth": false,
+          "allBurntArdor": false
+        }
+      },
+      "_id": "d27acdc35ee527ab",
+      "folder": "7cb53ac08582f52d",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 94,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Gussio Thunderbolt Latte",
+      "type": "gear",
+      "system": {
+        "rarity": "common",
+        "slots": 1,
+        "description": "+1 DIA for an hour. Lose ¼ of max Health. Immune to Sleep and Stun. A super strong latte that ejects energizing Sidhi into a mortalʼs nervous system, ensuring wakefulness. 10 MAG",
+        "magCost": 10,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.94"
+      },
+      "_id": "f9016dab406e39c3",
+      "folder": "7cb53ac08582f52d",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 94,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Elixir Chakra Pill",
+      "type": "gear",
+      "system": {
+        "rarity": "uncommon",
+        "slots": 1,
+        "description": "Recover 1 burnt Ardor. People drink this when they feel like they need a quick pick me up. For normal beings, itʼs an upper. The recipe for this Chakra Pill was only found when the Divine Mountain Sectʼs holy temple on Mount Aratan was burnt down. 500 MAG",
+        "magCost": 500,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.94",
+        "consumable": {
+          "enabled": true,
+          "apCost": 1,
+          "health": 0,
+          "burntArdor": 1,
+          "allHealth": false,
+          "allBurntArdor": false
+        }
+      },
+      "_id": "7605a4fa6d3e1160",
+      "folder": "7cb53ac08582f52d",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 94,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Inter-Elix Asura Stim",
+      "type": "gear",
+      "system": {
+        "rarity": "deluxe",
+        "slots": 1,
+        "description": "Suffer 3 piercing Wounds. Gain +2 to all Attacks Checks for 30 minutes. Drinking this sends one into a violent frenzy. Asura are another name for Devils, the oppressed earthbound superhumans thrown down by the Deities. In modern folklore, they are depicted as black-skinned, red-eyed, warobsessed freaks. 5000 MAG",
+        "magCost": 5000,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.94"
+      },
+      "_id": "e1fc43137b1b426a",
+      "folder": "7cb53ac08582f52d",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 94,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Inter-Elix Soma",
+      "type": "gear",
+      "system": {
+        "rarity": "prestige",
+        "slots": 1,
+        "description": "Heal all Health and recover all burnt Ardor. Soma is the food of the gods in old Razrunan folklore. Soma is said to have the “Essence of True-Restˮ distilled within. Alchemizing one requires high level thaumaturgicals or external alchemy cauldrons fired by Samadhi Flames. Rare to make, even among the Immortals of the Orbital Heaven. 300000 MAG",
+        "magCost": 300000,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.94",
+        "consumable": {
+          "enabled": true,
+          "apCost": 1,
+          "health": 0,
+          "burntArdor": 0,
+          "allHealth": true,
+          "allBurntArdor": true
+        }
+      },
+      "_id": "da69b47bfeafda92",
+      "folder": "7cb53ac08582f52d",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 94,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Elixir Magnesium Pill",
+      "type": "gear",
+      "system": {
+        "rarity": "enhanced",
+        "slots": 1,
+        "description": "Regain 2 burnt Ardor. An up and coming product in ELIXIR. Lets people control themselves more. Gives mortals better volition. Self-control. Morale. For cultivators, it lets them keep their Ardor reserves topped up. Especially useful for Magick Cultivators. 1000 MAG",
+        "magCost": 1000,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.94",
+        "consumable": {
+          "enabled": true,
+          "apCost": 1,
+          "health": 0,
+          "burntArdor": 2,
+          "allHealth": false,
+          "allBurntArdor": false
+        }
+      },
+      "_id": "656e02d286799ca7",
+      "folder": "7cb53ac08582f52d",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 94,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "UM Red Eye Ring",
+      "type": "accessory",
+      "system": {
+        "rarity": "common",
+        "slots": 1,
+        "description": "+1 max Health. A ring with a tiny life-giving ruby. The Cultivation Womb reacts favorably with a rubyʼs interiority. A little help can go a long way. 500 MAG",
+        "magCost": 500,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.95"
+      },
+      "_id": "78f6f49b946b4e75",
+      "folder": "b08648dbd62b71bd",
+      "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 95,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "AWW Thaumaturgical Choker",
+      "type": "accessory",
+      "system": {
+        "rarity": "uncommon",
+        "slots": 1,
+        "description": "+1 max Ardor. A choker made of practical esoteric knowledges. Thaumaturgicals are blends of Classic Science and Esoteric Science. 800 MAG",
+        "magCost": 800,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.95"
+      },
+      "_id": "5a933d7af98ed5dc",
+      "folder": "b08648dbd62b71bd",
+      "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 95,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Exdead Soul Integrity Earring",
+      "type": "accessory",
+      "system": {
+        "rarity": "enhanced",
+        "slots": 1,
+        "description": "Choose to ignore 1 TRAUMA at any time, once per Rest. “ABANDON ALL HESITATION. THE ONLY BEAST HERE IS YOU.ˮ 200 MAG",
+        "magCost": 200,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.95"
+      },
+      "_id": "d2500e5855faf51f",
+      "folder": "b08648dbd62b71bd",
+      "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 95,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Haeco All-Purpose Carabiner",
+      "type": "accessory",
+      "system": {
+        "rarity": "deluxe",
+        "slots": 1,
+        "description": "You can hook things to this. 2 Carry Slots. You can only have up to 2 All-Purpose Carabiners. Carrying items is the most important job in Hingsajagra. Never go without something to carry your items. 200 MAG",
+        "magCost": 200,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.95"
+      },
+      "_id": "7d84dc47453bf5a8",
+      "folder": "b08648dbd62b71bd",
+      "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 95,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "SSA Angel Arm Prosthetic",
+      "type": "accessory",
+      "system": {
+        "rarity": "prestige",
+        "slots": 1,
+        "description": "Choose which arm it replaces. All Attack Checks you do with a weapon in that Hand gain +1. There are 108,000,000 Angels and there are 666,666,666 Demons. Angels are servants of the Gods and are powered by Magnetite and Sidhi. The most powerful angels are powered by exploding stars. TECHNICALLY A HALF TRUTH // ANGELS ARE UNKNOWABLE ARTIFICIAL CONSCIOUSNESSES.AUTOMATA MADE WITH NEUTRON STAR CARAPACES AND SUPERNOVA HEARTS. THEY SERVED A GOD ONCE. AN IMPOSSIBLY VAST COSMIC COMMUNIST CIVILIZATION THAT CAELAFORMED THE UNIVERSE 108 KALPAS AGO. 12000 MAG",
+        "magCost": 12000,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.95"
+      },
+      "_id": "c0a3b4c2f996f5e1",
+      "folder": "b08648dbd62b71bd",
+      "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 95,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Demon God Prayer Beads",
+      "type": "accessory",
+      "system": {
+        "rarity": "rare",
+        "slots": 1,
+        "description": "+1 to all Empty Hand Attacks. Mala with the heart bead being the face of a Wrathful Buddha. Can there ever be succor when Nonviolence is also Violence? 200 MAG",
+        "magCost": 200,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.95"
+      },
+      "_id": "269893f9dab33d3b",
+      "folder": "b08648dbd62b71bd",
+      "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 95,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Junk Scrap",
+      "type": "gear",
+      "system": {
+        "rarity": "common",
+        "slots": 1,
+        "description": "Some pieces of metal that can probably be cobbled together into something more useful… In Post-Calamity, the refuse of a hundred factories litter the planet and the cosmos. 1 MAG",
+        "magCost": 1,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.96"
+      },
+      "_id": "ef9f6a395a004d77",
+      "folder": "75f34b26c92bf9cb",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 96,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Processor Grid-Shards",
+      "type": "gear",
+      "system": {
+        "rarity": "common",
+        "slots": 1,
+        "description": "Shards of a full grid. Useless now. Can maybe be recycled for reuse later. Processors are new thaumaturgicals that require and extremely skilled machine labor to even create. Non-corpo machinists and Techgnostics need all the resources they can get. 50 MAG",
+        "magCost": 50,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.96"
+      },
+      "_id": "2ba81547022fecdb",
+      "folder": "75f34b26c92bf9cb",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 96,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Wairini Locket",
+      "type": "gear",
+      "system": {
+        "rarity": "uncommon",
+        "slots": 1,
+        "description": "A locket with a button. When pressed, plays the last three sentences of Dattreya Wairini the Thrice-Awoken’s Speech during the establishment of the Selorong Commune during the Decades of Carnage. Only passed down by members of the Commune: would be a good way to prove loyalty to Revolutionary Ideals. Dattreya Wairini was one of the final revolutionaries during the Decades of Carnage, leadiner the proletariat, the monastery, and the hermitages into a final assault against the Heavendome of Selorongʼs comprador bourgeoisie. During the final assault her speech ended in three sentences: “Ye proletariat are the hand, the gun, the bullet; I am nothing but the consenter to your Revolution. No one will be free until all are free, until the ultimate emancipation of world and nature! Arise, ye new chakravartins, to fight in the final battle!ˮ 1 MAG",
+        "magCost": 1,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.96"
+      },
+      "_id": "5a3865369f552c8e",
+      "folder": "75f34b26c92bf9cb",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 96,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Communist Sutra",
+      "type": "gear",
+      "system": {
+        "rarity": "enhanced",
+        "slots": 1,
+        "description": "Read at the dayʼs beginning and gain +1 DIA for a day. Cannot stack. If you read it for 20 days straight, your Alignment must change to Communism. The abridged version of the Communist Sutra written by Kafeng Masangwa and Fuzi Ekajaya in a 6 fold pamphlet, complete with mantras and holy symbols to turn it into a protective amulet. Easily burned, but easily produced. Sold in Revolution Dharma Temples or subversive Yenjanese Cathedrals. 1 MAG",
+        "magCost": 1,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.96"
+      },
+      "_id": "23fb748067e6c711",
+      "folder": "75f34b26c92bf9cb",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 96,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Cassette Tape: Lover Rockers",
+      "type": "gear",
+      "system": {
+        "rarity": "enhanced",
+        "slots": 1,
+        "description": "Has the entire 21 song Lovers Rockers Album “Too Drunk To Ride”. Requires a music player to listen to. Too Drunk To Ride, an avant-garde, slipstream communist lo-fi shoegaze sonic project, is a failure. The Lovers Rockers was a group of proletarian avantgarde service workers in North Selorong who was too into shoegaze and retropunk and tried to make music off of that. Lovers Rockers ended not long after Too Drunk To Ride, their 4th album, released. Mostly because their recording label, World Mantric Sonarguild, decided that they were getting a bit too... communist with their themes. After disbanding, one of the Lovers Rockers tried to start a board game company. 50 MAG",
+        "magCost": 50,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.96"
+      },
+      "_id": "043e52522819439d",
+      "folder": "75f34b26c92bf9cb",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 96,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Tsushing Pressplay Player",
+      "type": "gear",
+      "system": {
+        "rarity": "enhanced",
+        "slots": 1,
+        "description": "Can be used to play cassette tapes. Comes with a headset. Tsushing was a rice cooker company during the Decades of Carnage that dipped their toes into caravan manufacturing and ship manufacturing during the Second World Revolution. After the Amatsunese Empire was beaten back by the Ressen-Nalenjese, they shifted into electrotechnology: a new industry after revolutions in electrotech. One of their most popular products is the Pressplay PCP, which has revolutionized how music was listened to and therefore how it was made. Pressplays have become ubiquitous especially in the cities, and even revolutionary armies have begun using them for relaying communist studies. 100 MAG SAL V AGE",
+        "magCost": 100,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.96"
+      },
+      "_id": "c0e9573041281142",
+      "folder": "75f34b26c92bf9cb",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 96,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Bintang Handheld Lotus Light",
+      "type": "gear",
+      "system": {
+        "rarity": "common",
+        "slots": 1,
+        "description": "A flashlight in the shape of a lotus. One tap and a mantra activates a 10m long cone of light, 10m wide at its end. Handheld flashlights made in the mold of blossoming lotuses with the root syllable for Light in the middle of the blossom. Emits strong amounts of light, though must be recharged through chanting. 20 MAG",
+        "magCost": 20,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.97"
+      },
+      "_id": "fda6a1dde30f4225",
+      "folder": "ea93d6a262ecb87a",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 97,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Bintang Lighter",
+      "type": "gear",
+      "system": {
+        "rarity": "common",
+        "slots": 1,
+        "description": "Has around 40 uses in it. Flick open to get a small fire going. Common now, especially with the rise of smokes. Various brands have began producing lighters but the difference is so negligible you could just buy it from any one of them and not really care about the difference. 20 MAG",
+        "magCost": 20,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.97"
+      },
+      "_id": "8aa28a441b2b3cd9",
+      "folder": "ea93d6a262ecb87a",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 97,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "AWW Devil Battery",
+      "type": "gear",
+      "system": {
+        "rarity": "uncommon",
+        "slots": 1,
+        "description": "Little nodes that store Devil Fuel that can power most items made from 11600s onwards. 3-pack. Kedrat Company is a guild of electrotech mystics and electromachinist monks who sell their wares to any convenience store, grocery, or shop that can afford to buy them and take the vow of peace, vowing to sell it to no state military force. The vow holds power: it is a curse, after all. Should it be sold to a state military, untold misfortune will befall their business and life. 10 MAG",
+        "magCost": 10,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.97"
+      },
+      "_id": "ce20edf9475c86b2",
+      "folder": "ea93d6a262ecb87a",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 97,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Haeco Handheld Radio",
+      "type": "gear",
+      "system": {
+        "rarity": "uncommon",
+        "slots": 1,
+        "description": "Can be used to communicate with other handheld radios tuned into the same frequency or to other radio waves. Handheld radios used as communication receivers. Crafted by Tsunglai Sunggan Engineers during the Second World Revolution, powered by Devil Batteries. Now sold more or less commercially by the Tsunglai Conglomerate—subsumed into HaeCo. 35 MAG",
+        "magCost": 35,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.97"
+      },
+      "_id": "5af6db608cb27132",
+      "folder": "ea93d6a262ecb87a",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 97,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Haeco Fine Focus Binoculars",
+      "type": "gear",
+      "system": {
+        "rarity": "enhanced",
+        "slots": 1,
+        "description": "Empowers any scouting checks done with the binoculars. Lets you see up to 400m, with focus features to clarify. Commercial high-focus binoculars by HaeCo. Lets you see really far. Indispensible for assassins, spies, scouts, birdwatchers, firefighters, and so on. 300 MAG",
+        "magCost": 300,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.97"
+      },
+      "_id": "ab7815ee6576b03d",
+      "folder": "ea93d6a262ecb87a",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 97,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Haeco Magnetic Compass",
+      "type": "gear",
+      "system": {
+        "rarity": "uncommon",
+        "slots": 1,
+        "description": "A magnetic pocket compass. Points always to the north, to Thule. A pocket compass magnetically attuned to the True North. Analog. Haestann Car Industries, under HaeCo, is one of the greatest skyskiff and weapons manufacturer of modern day, and one of the reasons why the United Coalition won in the Second World Revolution. Ultangma Haestann was the one who revolutionized the assembly line, giving birth to “Haestannist Industrialism.ˮ 40 MAG",
+        "magCost": 40,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.97"
+      },
+      "_id": "0e0f53b31911eabb",
+      "folder": "ea93d6a262ecb87a",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 97,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Ylourgne Makeup Set",
+      "type": "gear",
+      "system": {
+        "rarity": "enhanced",
+        "slots": 1,
+        "description": "Thaumaturgically enhanced makeup. Eyeliner, lip paint, face powder, mascara (different colors). +1 when interacting with people, +2 if they're attracted to you. -1 to avoiding attention. Lasts for a day or until it’s taken off. Ylourgne is a popular East Kamguk cosmetics brand supported by the machinations of the Ressen-Nalenjese Confederation. They source their items “ethicallyˮ from Dangnu Island. 200 MAG",
+        "magCost": 200,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.98"
+      },
+      "_id": "c5ba0c80004fc5d1",
+      "folder": "341cf1f9321d90ae",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 98,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Devildrug",
+      "type": "gear",
+      "system": {
+        "rarity": "enhanced",
+        "slots": 1,
+        "description": "While a Wanderer has time and appropriate materials, they can attempt a DIA Check to convert this into d6 Bullets. Devildrug is made up of six parts brimstone, one part rubydust, one part honey, and one part cinnabar snow. Cinnabar snow can only be created by wizards and alchemists by expelling from their Cultivation Womb and crystallization through Samadhi Fires. It is through Devildrug that firearms were made. 200 MAG",
+        "magCost": 200,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.98"
+      },
+      "_id": "e770fcdcc8079f21",
+      "folder": "341cf1f9321d90ae",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 98,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Protection Amulet",
+      "type": "gear",
+      "system": {
+        "rarity": "rare",
+        "slots": 1,
+        "description": "1 charge. Expend charge at any time to turn a Strike from someone else's Check into a Miss. Refills through attunement by mystics and masters. Otherwise known as an “agimatˮ in the Isles. Often have yantra diagrams on them. Usually necklaces with transgressive substances within bottles, gold medallions or triangles with potent esoteric-mystic script, or as Alignmentcharged esoterica inscribed onto shirts, armors, boots, gloves, and the like. Important people almost always have an agimat on them or two. 200 MAG",
+        "magCost": 200,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.98"
+      },
+      "_id": "6a104b1178e18079",
+      "folder": "341cf1f9321d90ae",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 98,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Devaraja’s Dying Gasp",
+      "type": "gear",
+      "system": {
+        "rarity": "rare",
+        "slots": 1,
+        "description": "A vial with the dying breath of a God- King, swirling in black and gold. When opened and inhaled, inflicts 3 SCATHE on the inhaler and gives them +1 VIO for an hour. Awan Rakan was the last of the Solar Kings of Hingsajagra and the Hiyan System. He ruled for 700 years with the sheer power of his Will and the cowing of lesser beings. But time is the medium of dialectics. A legion of lesser gods and mortal heroes overthrew him, and in his end he gasped, seeing the feebleness of his Power. 400 MAG",
+        "magCost": 400,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.98"
+      },
+      "_id": "a636a0d846884f5c",
+      "folder": "341cf1f9321d90ae",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 98,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Heart Container",
+      "type": "accessory",
+      "system": {
+        "rarity": "deluxe",
+        "slots": 1,
+        "description": "Consume this with a Meal to gain +1 Max Health. Sometime in the 7000s, ancient Razrunan Jagaratthan Mystics fought and killed a Deity named Jarityassera, a Red God who had eaten a thousand spirits from Metom's Furnace. The Mystics ripped open Jarityassera's stomach to reveal that the spirits had been calcified and distilled into ruby hearts within the Red God's stomach. They knew each Heart would grant vitality to whosoever consumed them. And so the Mystics scattered them to the winds. Impossible to commercialize. 100 MAG, but impossibly rare",
+        "magCost": 100,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.98"
+      },
+      "_id": "fe14b80a9c5f6869",
+      "folder": "341cf1f9321d90ae",
+      "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 98,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Soul Container",
+      "type": "accessory",
+      "system": {
+        "rarity": "prestige",
+        "slots": 1,
+        "description": "Consume this with a Meal to gain +1 Max Ardor. Jarityassera had a wife, a Blue God named Rawitricheri, a medicinal and magick master. Seri Rawitrisseri gathered her armies of her heaven and sent them crashing into Jagarattha (an ancient Razrunan Kingdom headed by Seri Kangdraputtha) to destroy it in anger. The Mystics rode upon their vimanas and brandished their astras to defeat Rawitrisseri and opened her womb to reveal ten thousand containers for life. They threw this into the wind as well. Impossible to commercialize. 100 MAG, but impossibly rare ESOTERIESAREMAGICALITEMS. THEYAREIMPOSSIBLETOREPRODUCE. THEIR MAG = USE VALUE.",
+        "magCost": 100,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.98"
+      },
+      "_id": "7ca704481962ae96",
+      "folder": "341cf1f9321d90ae",
+      "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 98,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Second Dimension Vivification",
+      "type": "gear",
+      "system": {
+        "rarity": "rare",
+        "slots": 1,
+        "description": "Nearby 2D objects—paintings, murals, textiles, drawings, shadows, and so on— become sentient for a day and obeys commands to their ability. Cannot leave 2D surfaces but can move through them. Used often by animators and painters that wish to move their paintings. This talisman has smoothed the labor of animators a hundredfold, but it has become a means of the ruling class to eschew hiring skilled animators. The Contradiction intensifies. 100 MAG",
+        "magCost": 100,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.99"
+      },
+      "_id": "1786ddd6fe4b3c5e",
+      "folder": "a0c45e8339b8d690",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 99,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Thief’s Last Door",
+      "type": "gear",
+      "system": {
+        "rarity": "rare",
+        "slots": 1,
+        "description": "Fold the paper three times and up to three feet can step on it. All that step upon it are teleported to a single location within an urban center that the three of them can clearly visualize. If even one cannot, they have to make a DIA Check. On a failure, suffer the World. A master burglar used this to try and steal a Devil Engine for his community after theyʼve suffered incredible price hikes for electricity. Though the Sidhic Signature was too powerful and led to his torture and arrest by state forces, he managed to teleport all the same. 300 MAG",
+        "magCost": 300,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.99"
+      },
+      "_id": "16931a845fe55c48",
+      "folder": "a0c45e8339b8d690",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 99,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Enter The Intrajala",
+      "type": "gear",
+      "system": {
+        "rarity": "rare",
+        "slots": 1,
+        "description": "Project your Consciousness into a nearby Terminal for up to 6 hours. Can travel through the Intrajala purely as a Consciousness, moving through its akashic nexus-space. The Intrajala is essentially the internet of Hingsajagra and the nearby Hiyan System Celestial Spheres. It sends data through quantum entanglement vis-a-vis Sidhic Akasha Workings. 200 MAG",
+        "magCost": 200,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.99"
+      },
+      "_id": "066bb19c3741125b",
+      "folder": "a0c45e8339b8d690",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 99,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Mosesian Spring",
+      "type": "gear",
+      "system": {
+        "rarity": "deluxe",
+        "slots": 1,
+        "description": "Summons potable water enough to fill up a medium sized room from thin air. An incredibly useful talisman in landlocked areas far from rivers, settlements of which have grown ever since the adoption of Capitalism by the World. The knowledge to create these Talismans have been killed. 600 MAG",
+        "magCost": 600,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.99"
+      },
+      "_id": "f3573f19b1061048",
+      "folder": "a0c45e8339b8d690",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 99,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Rend",
+      "type": "gear",
+      "system": {
+        "rarity": "deluxe",
+        "slots": 1,
+        "description": "Point at a target within sight. RUINATION them. A common Talisman during the Esoteric Era, used as a means at destroying others. Rend Talisman creation was controlled by the Wizards. When firearms and Devildrug knowledge arrived, the ability to bypass the high-skill labor of Rend Creation caused Rend to fall out of favor and turned into a niche attack option by scholars and mystics that know of its existence. 600 MAG",
+        "magCost": 600,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.99"
+      },
+      "_id": "3fa7eb9c431b9d30",
+      "folder": "a0c45e8339b8d690",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 99,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Sky Dance",
+      "type": "gear",
+      "system": {
+        "rarity": "prestige",
+        "slots": 1,
+        "description": "Gain the ability to fly for one hour. Can go anywhere, but still suffer from thin air pressure and so on. This Talisman was created by the Mystic Arasanjentun who wished to ascend to the heavens with his Dakini Lover. He could not learn the Art of Sky Dancing due to his ill-temper and chose to wield his skill expediently. It is said that when he used this he did fly, but as he reached thin atmospheres he eventually succumbed to the lack of oxygen… and his body never fell to the ground. Some say his Consciousness was captured by his Dakini lover, who placed it in a body fit for someone like him. 1,000 MAG and impossible to find THE ORIGINALTECHNOLOGY. THESETHAUMA TURGICALSAREP APERITEMSTHA T TRIGGERAN EFFECTUPONRIPPINGOR DESTRUCTION.",
+        "magCost": 1000,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.99"
+      },
+      "_id": "bb9d1ce68aa2c91f",
+      "folder": "a0c45e8339b8d690",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 99,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "AWW Longclaws",
+      "type": "weapon",
+      "system": {
+        "rarity": "common",
+        "slots": 1,
+        "description": "NIMBLE ✦ WORN ✦ LACERATING Three serrated blades that can be worn and used for striking. A favorite of Exdead Assassins.",
+        "magCost": 50,
+        "bonus": 1,
+        "damageType": "impact",
+        "range": 1,
+        "weaponType": "melee",
+        "upgrade": "base",
+        "properties": {
+          "lacerating": true,
+          "worn": true
+        },
+        "affinity": "Nimble",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.104"
+      },
+      "_id": "e00bdb9a930df621",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 104,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Inter-Elix Occult Prayer Wraps",
+      "type": "weapon",
+      "system": {
+        "rarity": "enhanced",
+        "slots": 1,
+        "description": "WORN ✦ PSIONIC PSIOBLITZ [ ❂][✦] Attacks with the wraps extend to 3m. Prayer wraps with talisman gauzes and steel prayer beads for striking and dealing damage. The ability to pray while striking is integral to cultivators of the Luminous Mind and Divine Communion.",
+        "magCost": 150,
+        "bonus": 1,
+        "damageType": "impact",
+        "range": 1,
+        "weaponType": "melee",
+        "upgrade": "base",
+        "properties": {
+          "psionic": true,
+          "worn": true
+        },
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.104"
+      },
+      "_id": "3b36f42c7ed831ee",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 104,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "TMNI Gunong",
+      "type": "weapon",
+      "system": {
+        "rarity": "common",
+        "slots": 1,
+        "description": "NIMBLE Utility knife and thrusting weapon. Singleedged. Proficient for close-ranged fighting.",
+        "magCost": 10,
+        "bonus": 2,
+        "damageType": "cut",
+        "range": 1,
+        "weaponType": "melee",
+        "upgrade": "base",
+        "properties": {
+          "concealable": true
+        },
+        "affinity": "Nimble",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.104"
+      },
+      "_id": "b3081093b8b903db",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 104,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Ritual Keris",
+      "type": "weapon",
+      "system": {
+        "rarity": "deluxe",
+        "slots": 1,
+        "description": "OCCULT ✦ PIERCING ✦ TOXIC ✦ RITUAL SOUL HERALD [✹✹] Summon ancestral souls to caster’s side. They can materialize and fight to the best of their ability. The ancestral soul has the same Cultivations as the caster and has 6 Health Sutra. All kerises are dipped in venoms and blessed. The resonant consciousnesses of kerises make them particularly susceptible to Spirit-Generation. Souls live within ancient old kerises. The strongest ones are the ones not made by factories.",
+        "magCost": 10000,
+        "bonus": 2,
+        "damageType": "cut",
+        "range": 1,
+        "weaponType": "melee",
+        "upgrade": "divine",
+        "properties": {
+          "piercing": true,
+          "ritual": true,
+          "toxic": true,
+          "concealable": true
+        },
+        "affinity": "Occult",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.104"
+      },
+      "_id": "bfde0f9b817fefab",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 104,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Ma Stardust Wrap",
+      "type": "weapon",
+      "system": {
+        "rarity": "deluxe",
+        "slots": 1,
+        "description": "OCCULT ✦ PIERCING ✦ RITUAL STARFIRE PULSE [✹][✦] Shoot blasts of starfire from your hands, up to 12m as an Attack. This BURNS. Should you encounter God on your travels, then you should know that God will be subject to photonic ablation.",
+        "magCost": 3999,
+        "bonus": 1,
+        "damageType": "impact",
+        "range": 1,
+        "weaponType": "melee",
+        "upgrade": "refined",
+        "properties": {
+          "piercing": true,
+          "ritual": true
+        },
+        "affinity": "Occult",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.104"
+      },
+      "_id": "a5567aee80e34611",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 104,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "TMNI Venom Balaraw",
+      "type": "weapon",
+      "system": {
+        "rarity": "uncommon",
+        "slots": 1,
+        "description": "✦ NIMBLE ✦ TOXIC ✦ A push dagger. For quick stabbing. Often dipped in toxins and so on.",
+        "magCost": 20,
+        "bonus": 2,
+        "damageType": "cut",
+        "range": 1,
+        "weaponType": "melee",
+        "upgrade": "base",
+        "properties": {
+          "toxic": true,
+          "ferocious": true
+        },
+        "affinity": "Nimble",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.104"
+      },
+      "_id": "8675ee6d1c1dde31",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 104,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Kalis",
+      "type": "weapon",
+      "system": {
+        "rarity": "common",
+        "slots": 1,
+        "description": "Once a spiritual symbol, it has turned into a factory reproduced weapon and the most common Sword in the Islands. Serpentine blade variants are rarer and more expensive than the straight variants.",
+        "magCost": 5,
+        "bonus": 2,
+        "damageType": "cut",
+        "range": 1,
+        "weaponType": "melee",
+        "upgrade": "base",
+        "properties": {},
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.105"
+      },
+      "_id": "797446e62662ad57",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 105,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "TTC People’s Kiem 592",
+      "type": "weapon",
+      "system": {
+        "rarity": "enhanced",
+        "slots": 1,
+        "description": "NIMBLE ✦ FEROCIOUS ✦ VISCERAL Battle Meditation [✹] When making a DEF, activate this to add this weapon's ATK to the DEF. The Peopleʼs Kiem ‘592 is so named due to its availability, ease of production, and factory make. Any person in the Oxomese Republic walks around with one, alongside an umbrella.",
+        "magCost": 330,
+        "bonus": 2,
+        "damageType": "cut",
+        "range": 1,
+        "weaponType": "melee",
+        "upgrade": "base",
+        "properties": {
+          "ferocious": true,
+          "visceral": true
+        },
+        "affinity": "Nimble",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.105"
+      },
+      "_id": "c896f80761f3bf58",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 105,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "HDF Cutting Logic Jian",
+      "type": "weapon",
+      "system": {
+        "rarity": "rare",
+        "slots": 1,
+        "description": "✦ NIMBLE ✦ PIERCING ✦ Before an Attack, teleport 1m. A jian—double-edged shennin sword— with a thaumaturgical system that senses a thrust with violent-intent, and displaces them, refracting in and out of reality. The HDF harnesses esoteric thaumaturgies to match the savagery of the bourgeoisie.",
+        "magCost": 1000,
+        "bonus": 2,
+        "damageType": "cut",
+        "range": 1,
+        "weaponType": "melee",
+        "upgrade": "refined",
+        "properties": {
+          "piercing": true
+        },
+        "affinity": "Nimble",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.105"
+      },
+      "_id": "fb595a0954417cc8",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 105,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Sundang",
+      "type": "weapon",
+      "system": {
+        "rarity": "common",
+        "slots": 1,
+        "description": "The everymanʼs tool. For chopping, cutting, clearing weeds, opening coconuts, jamming machines, and so on. Also good for killing people.",
+        "magCost": 5,
+        "bonus": 3,
+        "damageType": "cut",
+        "range": 1,
+        "weaponType": "melee",
+        "upgrade": "base",
+        "properties": {},
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.105"
+      },
+      "_id": "a6c0c825fa5a470a",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 105,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Ma Reaping Teppōkatana",
+      "type": "weapon",
+      "system": {
+        "rarity": "enhanced",
+        "slots": 1,
+        "description": "NIMBLE ✦ FEROCIOUS ✦ VISCERAL REV-BLAST CHAMBER [ ✹] Fire off a chamber upon attacking, gaining +2 ATK and the [BLAZE] mod for that Attack. A gun curved sword from the prestigious REAPING HILDEMEJ line of weaponry from Masando Atelier. Famously fashioned after the weapon of Murasamo Makai of the Makai Clan, who wielded six gunblades on both hands.",
+        "magCost": 330,
+        "bonus": 3,
+        "damageType": "cut",
+        "range": 1,
+        "weaponType": "melee",
+        "upgrade": "base",
+        "properties": {
+          "ferocious": true,
+          "visceral": true
+        },
+        "affinity": "Nimble",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.105"
+      },
+      "_id": "5e5993beb1623b3d",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 105,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "UM Buddhocommunist Ginunting",
+      "type": "weapon",
+      "system": {
+        "rarity": "prestige",
+        "slots": 1,
+        "description": "ARTIFACT ✦ BLAZE ✦ NOETIC ✦ VISCERAL SWORD ORBIT [ ❂] Let go of the saber and let it orbit them. While orbiting, +1 to all ATK and DEF. The Buddhocommunists are a strand of Masangwanist-Wairinists who fight for the Liberation of all Sentient Beings across the entire Cosmos. Much of them have been expelled from Hingsajagra, but they have left a few of their iconic ginunting— with blades made of captured supernovae—to inspire the Masangwanists to aspire for the Heavens.",
+        "magCost": 1000000,
+        "bonus": 3,
+        "damageType": "cut",
+        "range": 1,
+        "weaponType": "melee",
+        "upgrade": "immortal",
+        "properties": {
+          "artifact": true,
+          "blaze": true,
+          "visceral": true
+        },
+        "affinity": "Noetic",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.105"
+      },
+      "_id": "673d9179ac0f2e57",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 105,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Rattan Stick",
+      "type": "weapon",
+      "system": {
+        "rarity": "common",
+        "slots": 1,
+        "description": "Sticks made of pliable and strong rattan. Surprisingly effective, against modern metal.",
+        "magCost": 2,
+        "bonus": 2,
+        "damageType": "impact",
+        "range": 1,
+        "weaponType": "melee",
+        "upgrade": "base",
+        "properties": {
+          "crushing": true
+        },
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.106"
+      },
+      "_id": "2dea88a9d9686522",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 106,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Haeco Riot Shield",
+      "type": "weapon",
+      "system": {
+        "rarity": "uncommon",
+        "slots": 1,
+        "description": "SHIELD ✦ FEROCIOUS Heavy—all attempts to knockback gain +2. The only thing that is constant in this world is war. It never… ever changes.",
+        "magCost": 150,
+        "bonus": 2,
+        "damageType": "impact",
+        "range": 1,
+        "weaponType": "melee",
+        "upgrade": "base",
+        "properties": {
+          "ferocious": true,
+          "shield": true,
+          "crushing": true
+        },
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.106"
+      },
+      "_id": "ba028f8fe0a79efb",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 106,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "HDF Goremaul",
+      "type": "weapon",
+      "system": {
+        "rarity": "rare",
+        "slots": 1,
+        "description": "COLOSSAL ✦ FEROCIOUS Giant two-handed war-mace that is 2m long and has a head the size of a shield. WHO AMONGST YOU YET STILL DOUBTS? WHAT GREAT GOD MUST YOU SEE IN THE FLESH TO BELIEVE IN THE MOMENTUM OF THE WORKING CLASS? THERE IS NO GOD ABOVE, THERE IS NO SA T AN BELOW . THERE IS ONLY YOU!\n\nImport review: Price absent or ambiguous; default cost is not a claim that the item is free.",
+        "bonus": 2,
+        "damageType": "impact",
+        "range": 1,
+        "weaponType": "melee",
+        "upgrade": "base",
+        "properties": {
+          "colossal": true,
+          "ferocious": true,
+          "crushing": true
+        },
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.106"
+      },
+      "_id": "d7ba9569737b16a5",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 106,
+          "reviewNotes": [
+            "Price absent or ambiguous; default cost is not a claim that the item is free."
+          ]
+        }
+      }
+    },
+    {
+      "name": "Hatchet",
+      "type": "weapon",
+      "system": {
+        "rarity": "common",
+        "slots": 1,
+        "description": "NIMBLE Useful single-edged axe. Commonly thrown.",
+        "magCost": 10,
+        "bonus": 2,
+        "damageType": "cut",
+        "range": 1,
+        "weaponType": "melee",
+        "upgrade": "base",
+        "properties": {
+          "ferocious": true
+        },
+        "affinity": "Nimble",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.106"
+      },
+      "_id": "8262ed92dbf15414",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 106,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Ka Parashurma",
+      "type": "weapon",
+      "system": {
+        "rarity": "rare",
+        "slots": 1,
+        "description": "CRUSHING ✦ ALMIGHTY ✦ RITUAL UNIVERSAL SLAUGHTER [✹✹✹] Upon dealing Wounds activate this to apply all Wounds from this Attack to all chosen entities and the environment up to 5m from the target. SHE SAW THE UNIVERSAL FORM WITH UNLIMITED MOUTHS AND EYES AND IT WAS WONDROUS. A GARLANDED BODY, EVER EXPANDING, UNLIMITED. A THOUSAND SUNS RISING INTO THE SKY CAN NEVER COMPARE TO THE EFFULGENCE OF THE SUPREME OVERSOUL. AND THE OVERSOUL SAID: “I AM TIME AND I AM DEA TH. I AM THE DESTROYER OF WORLDS. ALL OF REALITY IS THIS: TREMENDOUS AUTOPHAGOUS VIOLENCE.ˮ",
+        "magCost": 10000,
+        "bonus": 2,
+        "damageType": "cut",
+        "range": 1,
+        "weaponType": "melee",
+        "upgrade": "divine",
+        "properties": {
+          "almighty": true,
+          "crushing": true,
+          "ritual": true,
+          "ferocious": true
+        },
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.106"
+      },
+      "_id": "5a2ab1f2371b07ca",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 106,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "HDF Kai Shan Fu",
+      "type": "weapon",
+      "system": {
+        "rarity": "uncommon",
+        "slots": 1,
+        "description": "GREAT ✦ FEROCIOUS DESTROY HEAVEN'S PILLARS [✹] When attacking a weapon of lower Rarity or Upgrade to destroy it completely. Erlang Shen was an Archeprimval Deity who stood toe to toe and had an intense rivalry with the Great Sage Equal To Heaven, Wukong. His Mountain- Opening Axe was a highlight of his inventory and repertoire.",
+        "magCost": 200,
+        "bonus": 2,
+        "damageType": "cut",
+        "range": 1,
+        "weaponType": "melee",
+        "upgrade": "base",
+        "properties": {
+          "ferocious": true,
+          "great": true
+        },
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.106"
+      },
+      "_id": "e22f5f84ad30b4bd",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 106,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Meteor Hammer",
+      "type": "weapon",
+      "system": {
+        "rarity": "common",
+        "slots": 1,
+        "description": "NIMBLE WIND UP [✦] Next attack gains +1 ATK and knockback. A common long ranged weapon that can whip, strike, and wrap around.",
+        "magCost": 50,
+        "bonus": 2,
+        "damageType": "impact",
+        "range": 2,
+        "weaponType": "melee",
+        "upgrade": "base",
+        "properties": {},
+        "affinity": "Nimble",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.107"
+      },
+      "_id": "f1fc680315bbf00d",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 107,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "UM Stingray Tail",
+      "type": "weapon",
+      "system": {
+        "rarity": "uncommon",
+        "slots": 1,
+        "description": "NIMBLE ✦ FEROCIOUS ✦ HOLY Inflicts CUTS. The Stingray Tail has a sidhic infusion in it that functions greatly as a purificatory or exorcizing tool. Similarly to salt.",
+        "magCost": 200,
+        "bonus": 2,
+        "damageType": "cut",
+        "range": 2,
+        "weaponType": "melee",
+        "upgrade": "base",
+        "properties": {
+          "ferocious": true,
+          "holy": true
+        },
+        "affinity": "Nimble",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.107"
+      },
+      "_id": "788c48a0be502971",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 107,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Lance",
+      "type": "weapon",
+      "system": {
+        "rarity": "common",
+        "slots": 1,
+        "description": "A long spear. Perfect soldierʼs tool. Factory made lances have carbon fiber shafts and springsteel.",
+        "magCost": 5,
+        "bonus": 2,
+        "damageType": "cut",
+        "range": 2,
+        "weaponType": "melee",
+        "upgrade": "base",
+        "properties": {},
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.107"
+      },
+      "_id": "4f64e43f610b8568",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 107,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Haeco Folding Spear",
+      "type": "weapon",
+      "system": {
+        "rarity": "enhanced",
+        "slots": 1,
+        "description": "NIMBLE ✦ CONCEALABLE ✦ VISCERAL Can flip into half its size to conceal. Folding Spears are commonly used by Law Knights of Selorong, Soreh, and Uzu. Those with Folding Spears are often at a higher rank than those only wielding Folding Swords.",
+        "magCost": 330,
+        "bonus": 2,
+        "damageType": "cut",
+        "range": 2,
+        "weaponType": "melee",
+        "upgrade": "base",
+        "properties": {
+          "concealable": true,
+          "visceral": true
+        },
+        "affinity": "Nimble",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.107"
+      },
+      "_id": "9364faeb76bcb948",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 107,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "AWW Sky Feather Naginata",
+      "type": "weapon",
+      "system": {
+        "rarity": "rare",
+        "slots": 1,
+        "description": "PRECISE SKYFEATHER MODE [❂❂] to activate the naginata’s Sky Feather mode, where its blade unravels into a scything numenweave pattern, giving it the PIERCING AND REACH mods. The Deities of the Heaven wield weapons made of strange fibers. Their blades look like theyʼre woven from astral heavenly white stone. They call this Numenweave, and it is crafted by Akasha Spiders, constructs that tend to all Fabrication.\n\nImport review: Price absent or ambiguous; default cost is not a claim that the item is free.",
+        "bonus": 2,
+        "damageType": "cut",
+        "range": 2,
+        "weaponType": "melee",
+        "upgrade": "base",
+        "properties": {
+          "precise": true
+        },
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.107"
+      },
+      "_id": "bf06f74bf8df3970",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 107,
+          "reviewNotes": [
+            "Price absent or ambiguous; default cost is not a claim that the item is free."
+          ]
+        }
+      }
+    },
+    {
+      "name": "AWW Jadesteel Sleeves",
+      "type": "weapon",
+      "system": {
+        "rarity": "rare",
+        "slots": 1,
+        "description": "WORN ✦ LYRIC ✦ CRUSHING ✦ REACH Long sleeves worn around the wrist. Extends farther than one thinks. Part of Amatsunese War Wearʼs high fashion “TENNOJINˮ line, these sleeves make real the high kung fu concept of fighting with nothing but your clothesleeves.",
+        "magCost": 4999,
+        "bonus": 2,
+        "damageType": "impact",
+        "range": 2,
+        "weaponType": "melee",
+        "upgrade": "refined",
+        "properties": {
+          "crushing": true,
+          "reach": true,
+          "worn": true
+        },
+        "affinity": "Lyric",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.107"
+      },
+      "_id": "e5f5f11da5134294",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 107,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Wooden Longbow",
+      "type": "weapon",
+      "system": {
+        "rarity": "common",
+        "slots": 1,
+        "description": "Classic longbow made of wood.",
+        "magCost": 2,
+        "bonus": 2,
+        "damageType": "cut",
+        "range": 20,
+        "weaponType": "ranged",
+        "upgrade": "base",
+        "properties": {},
+        "ammoFamily": "bow",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.108"
+      },
+      "_id": "d703617fb08283fb",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 108,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "AWW Compound Yumi",
+      "type": "weapon",
+      "system": {
+        "rarity": "uncommon",
+        "slots": 1,
+        "description": "PRECISE ✦ THUNDERING 2m long compound bow. Only needs VIO 0 to wield. Increase effective range up to 60m. Yumi are used for Kyudo, but AWW created compound complex yumi for long range sniping.",
+        "magCost": 150,
+        "bonus": 2,
+        "damageType": "cut",
+        "range": 20,
+        "weaponType": "ranged",
+        "upgrade": "base",
+        "properties": {
+          "precise": true,
+          "thundering": true
+        },
+        "ammoFamily": "bow",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.108"
+      },
+      "_id": "d1be4954afabc32c",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 108,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "TMNI Sikarom",
+      "type": "weapon",
+      "system": {
+        "rarity": "rare",
+        "slots": 1,
+        "description": "COLOSSAL ✦ FEROCIOUS ✦ PRECISE A giant longbow made of meteor-fiber and with bowstrings made of hardphoton. LIGHT JAVELIN [✹] Turn 1 ammo into a light javelin (BURN). There are monsters that lurk in the heavens and we have called them Gods. There is justice to be yet had from the Mountains. Let the workers, let the people judge. We are the final arbiters, not the Gods and their bourgeois-first morality.\n\nImport review: Price absent or ambiguous; default cost is not a claim that the item is free. Header says Bludgeon; description and Bow section identify a longbow. Uses Bow pattern.",
+        "bonus": 2,
+        "damageType": "cut",
+        "range": 20,
+        "weaponType": "ranged",
+        "upgrade": "base",
+        "properties": {
+          "colossal": true,
+          "ferocious": true,
+          "precise": true
+        },
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.108",
+        "ammoFamily": "bow"
+      },
+      "_id": "f657eee857746319",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 108,
+          "reviewNotes": [
+            "Price absent or ambiguous; default cost is not a claim that the item is free.",
+            "Header says Bludgeon; description and Bow section identify a longbow. Uses Bow pattern."
+          ]
+        }
+      }
+    },
+    {
+      "name": "TTC Hunting Crossbow",
+      "type": "weapon",
+      "system": {
+        "rarity": "common",
+        "slots": 1,
+        "description": "Useful carbon crossbow. Sturdy but simple.",
+        "magCost": 100,
+        "bonus": 3,
+        "damageType": "cut",
+        "range": 10,
+        "weaponType": "ranged",
+        "upgrade": "base",
+        "properties": {},
+        "ammoFamily": "crossbow",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.108"
+      },
+      "_id": "fba8abdad9fec79f",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 108,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "EXK Vampire Hunter",
+      "type": "weapon",
+      "system": {
+        "rarity": "rare",
+        "slots": 1,
+        "description": "PIERCING ✦ RITUAL PURIFICATORY MANTRAS [✹] Next attack gains HOLY and +1 ATK. OH, WANDERER. WHY DO YOU NOT INGEST THE GESTATING BLOOD MATTER? DO YOU FEAR ATTAINING ENLIGHTENMENT? IS THE TRUTH BEYOND YOUR GRASP? WE ARE HERE TO HELP YOU AND SUPPORT YOU. WE ARE HERE TO TELL YOU THAT THERE ARE THINGS WORSE THAN US. COME AND PARTAKE. A FESTIVAL OF VIOLENCE AWAITS US.",
+        "magCost": 6969,
+        "bonus": 3,
+        "damageType": "cut",
+        "range": 10,
+        "weaponType": "ranged",
+        "upgrade": "refined",
+        "properties": {
+          "piercing": true,
+          "ritual": true
+        },
+        "ammoFamily": "crossbow",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.108"
+      },
+      "_id": "6970cde22e6b6d47",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 108,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "HDF Miniature Arblast",
+      "type": "weapon",
+      "system": {
+        "rarity": "uncommon",
+        "slots": 1,
+        "description": "FEROCIOUS Targets that are within 3m have -2 DEF. Automatically reloads after firing. Huge arbalests with self-reloading mechanisms instead of needing a cranequein. Common among Shennin and Selorongian private armies, due to the quieter nature of the Arblast compared to a Gun.",
+        "magCost": 20,
+        "bonus": 3,
+        "damageType": "cut",
+        "range": 10,
+        "weaponType": "ranged",
+        "upgrade": "base",
+        "properties": {
+          "ferocious": true
+        },
+        "ammoFamily": "crossbow",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.108"
+      },
+      "_id": "411975cd0fb821b7",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 108,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Haeco Dragonhead .380 Lcp",
+      "type": "weapon",
+      "system": {
+        "rarity": "common",
+        "slots": 1,
+        "description": "The great equalizer. Most common gun to wield. Often used by Law Knights and gangbangers alike. Sold like contraband.",
+        "magCost": 600,
+        "bonus": 3,
+        "damageType": "impact",
+        "range": 25,
+        "weaponType": "ranged",
+        "upgrade": "base",
+        "properties": {},
+        "ammoFamily": "gun",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.109"
+      },
+      "_id": "f4c395b43a806636",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 109,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "AWW Magicite Onslaught Rifle",
+      "type": "weapon",
+      "system": {
+        "rarity": "enhanced",
+        "slots": 1,
+        "description": "FEROCIOUS ✦ HOLY INSTANT LOADING [✹] Immediately reload and next attack BURNS. Wielded by high impact javelin-head battalions in Amatsu and Ressen Nalenji, these are outfitted with special magicite stones within their barrels that, when infused with Sidhi, activate an automatic reloading sequence. Often wielders of this also carry around a Sidhi Pack to power such a device.",
+        "magCost": 1200,
+        "bonus": 3,
+        "damageType": "impact",
+        "range": 25,
+        "weaponType": "ranged",
+        "upgrade": "base",
+        "properties": {
+          "ferocious": true,
+          "holy": true
+        },
+        "ammoFamily": "gun",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.109"
+      },
+      "_id": "22002be68cfa428f",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 109,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Sling",
+      "type": "weapon",
+      "system": {
+        "rarity": "common",
+        "slots": 1,
+        "description": "A common, almost childish launching implement.",
+        "magCost": 5,
+        "bonus": 2,
+        "damageType": "cut",
+        "range": 6,
+        "weaponType": "ranged",
+        "upgrade": "base",
+        "properties": {},
+        "ammoFamily": "launcher",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.109"
+      },
+      "_id": "409daba2a5edbb31",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 109,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "UM Blowgun",
+      "type": "weapon",
+      "system": {
+        "rarity": "uncommon",
+        "slots": 1,
+        "description": "FEROCIOUS Can only use Darts, but +1 ATK with them. Blowguns used to be the prime way to perform assassinations in the Charnel Isles. Often they are outfitted with darts that have toxic payloads.",
+        "magCost": 330,
+        "bonus": 2,
+        "damageType": "cut",
+        "range": 6,
+        "weaponType": "ranged",
+        "upgrade": "base",
+        "properties": {
+          "ferocious": true
+        },
+        "ammoFamily": "launcher",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.109"
+      },
+      "_id": "717c0cbfab614130",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 109,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "HDF Heavenly Slingstaff",
+      "type": "weapon",
+      "system": {
+        "rarity": "prestige",
+        "slots": 1,
+        "description": "PRECISE ✦ ARTIFACT ✦ FEROCIOUS Can launch almost anything. Increased range up to 30m. The Deities of the Heaven wield weapons made of strange fibers. The HDF only has access to Numenweave through their connection with the 10,000 Dragons. This Slingstaff they have is exceedingly rare and in short supply, but is exceedingly effective.",
+        "magCost": 119999,
+        "bonus": 2,
+        "damageType": "cut",
+        "range": 30,
+        "weaponType": "ranged",
+        "upgrade": "divine",
+        "properties": {
+          "artifact": true,
+          "ferocious": true,
+          "precise": true
+        },
+        "ammoFamily": "launcher",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.109"
+      },
+      "_id": "ab968c929df0a22f",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 109,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "HDF Dragon Fire Cannon",
+      "type": "weapon",
+      "system": {
+        "rarity": "deluxe",
+        "slots": 1,
+        "description": "COLOSSAL ✦ ARTIFACT Only works with specific Dragon Fire Meteor Ammo. Can otherwise be used like a Colossal Reach Bludgeon. And we shall call upon Fire from heaven, and the East Wind shall set even these fiery red cliffs ablaze. And upon their defeat, we shall reach far past the Astral Limit, and find those selfsame Celestial Spheres, and conquer them too. Do you not see? That across the heavens, there is no God but the Proletariat?",
+        "magCost": 4999,
+        "bonus": 3,
+        "damageType": "impact",
+        "range": 25,
+        "weaponType": "ranged",
+        "upgrade": "base",
+        "properties": {
+          "artifact": true,
+          "colossal": true
+        },
+        "ammoFamily": "gun",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.109"
+      },
+      "_id": "63520f5c2a055d2a",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 109,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "HDF Dragon Fire Meteor",
+      "type": "ammunition",
+      "system": {
+        "rarity": "deluxe",
+        "slots": 1,
+        "description": "BLAZE ✦ CRUSHING ✦ PIERCING ✦ CAN KNOCKBACK UP TO 3M ✦ EXPLODES IN A 1M BURST UPON IMPACT, ATK TO ALL IN BURST.",
+        "magCost": 500,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.109",
+        "ammoType": "custom"
+      },
+      "_id": "d652394823c7271b",
+      "folder": "f5ba1f5823a37525",
+      "img": "systems/10kswordsfoundry/assets/icons/ammunition.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 109,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Working Class Clothes",
+      "type": "fashion",
+      "system": {
+        "rarity": "common",
+        "slots": 1,
+        "description": "ARMOR +1 ARDOR +0 +1 to all Checks dealing with courage, bravery, or staying steadfast; all forced movement are reduced by 1. A ragged shirt, headwrap and wide-brimmed straw hat, some light pants and leather boots or rubber slippers. Just enough to get by.",
+        "magCost": 100,
+        "armor": 1,
+        "ardor": 0,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.110"
+      },
+      "_id": "0ca14c29178aae91",
+      "folder": "00d20d0632f5e1ef",
+      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 110,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Scrapper’s Guard",
+      "type": "fashion",
+      "system": {
+        "rarity": "common",
+        "slots": 1,
+        "description": "ARMOR +2 ARDOR +0 Gain +1 on all melee attacks when adjacent against 2+ hostiles. A lightsteel breastplate strapped over some padded clothing and a shirt.",
+        "magCost": 100,
+        "armor": 2,
+        "ardor": 0,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.110"
+      },
+      "_id": "c739eeb2cd051647",
+      "folder": "00d20d0632f5e1ef",
+      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 110,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Hunter’s Garb",
+      "type": "fashion",
+      "system": {
+        "rarity": "common",
+        "slots": 1,
+        "description": "ARMOR +1 ARDOR +0 As an Action, mark an entity that can be seen as the wearer’s mark. The wearer deals +1 ATK against their mark. A coat and cloak with some leather gloves. For hunting across the world.",
+        "magCost": 100,
+        "armor": 1,
+        "ardor": 0,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.110"
+      },
+      "_id": "b0b58b43f9d94973",
+      "folder": "00d20d0632f5e1ef",
+      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 110,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "SSA Dragon Knight Armor",
+      "type": "fashion",
+      "system": {
+        "rarity": "enhanced",
+        "slots": 2,
+        "description": "ARMOR +3 ARDOR +0 After suffering a Strike or a Cut, roll an attack die that burns against the attacker as fire erupts from the scales. Gain +2 to all checks to leap, jump, or dash. Armor that resembles an ancient dragon or naka, featuring webbed fills, scales, and a majestic horn-crest. Each part is articulated, moving as if alive, giving one the impression of a breathing dragon. Covers one in head to toe in dragonscales, harvested from ancient decaying corpses. The majority of which come from the Vale of Tears, once the capital city of an ancient dragon civilization, before the Yenjan Church backed Munese Empire committed utter holocaust upon them.",
+        "magCost": 1000,
+        "armor": 3,
+        "ardor": 0,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.110"
+      },
+      "_id": "91cd9661f4c25402",
+      "folder": "00d20d0632f5e1ef",
+      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 110,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Savant Robes",
+      "type": "fashion",
+      "system": {
+        "rarity": "uncommon",
+        "slots": 1,
+        "description": "ARMOR 0 ARDOR +2 All attempts to deduce, anal yze, or research something gain +2. Light robes with talisman geometries scrawled across it. Leather dress shoes, a nice beret or hat or some glasses. Clothes for those that cannot sleep at night, chasing after the great mysteries of the Trichiliocosm.",
+        "magCost": 200,
+        "armor": 0,
+        "ardor": 2,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.110"
+      },
+      "_id": "7982f98280b81671",
+      "folder": "00d20d0632f5e1ef",
+      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 110,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Rogue Garb",
+      "type": "fashion",
+      "system": {
+        "rarity": "uncommon",
+        "slots": 1,
+        "description": "Armor +0 ARDOR +0 +1 MOV while worn. +1 to all attempts at steal th and Larceny. +1 ATK vs someone unsuspecting. A set of clothes that cover the face, the fingers, and the body. Scarf-like shawls and cloaks blossoming into harem pants, high boots, opentoed sandals, or running shoes. Often with a mask of some sort.",
+        "magCost": 200,
+        "armor": 0,
+        "ardor": 0,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.110"
+      },
+      "_id": "e6d57fcb6f88540d",
+      "folder": "00d20d0632f5e1ef",
+      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 110,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Occultist Vesture",
+      "type": "fashion",
+      "system": {
+        "rarity": "uncommon",
+        "slots": 1,
+        "description": "ARMOR 0 ARDOR +1 Can burn or install Heal th in place of Ardor. +1 SPI. A dark, edgy style with cybersigils or curving, slicing angles. Show off too much skin or none at all. Tattoos hanging in the wind. Deep eyeliner, long leather coats, belts for gloves. High boots, uneven beanie, two layers of cloaks with forbidden yantras.",
+        "magCost": 300,
+        "armor": 0,
+        "ardor": 1,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.110"
+      },
+      "_id": "f118ca6ea3cf8dd4",
+      "folder": "00d20d0632f5e1ef",
+      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 110,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "UM Blademaster Vestments",
+      "type": "fashion",
+      "system": {
+        "rarity": "enhanced",
+        "slots": 1,
+        "description": "ARMOR +0 ARDOR +1 +1 on all Sword/Saber/Dagger ATK and DEF and grant it [Lacerating]. A loose shirt woven with Sword Saint Sidhi, a hakama threaded through with talismans of the Sword Buddha, a cape or cloak and a straw hat or some sort of head covering. A classic getup for the wandering swordsman.",
+        "magCost": 800,
+        "armor": 0,
+        "ardor": 1,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.111"
+      },
+      "_id": "5f111afe5513bd46",
+      "folder": "00d20d0632f5e1ef",
+      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 111,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "Exdead Knife Shroud",
+      "type": "fashion",
+      "system": {
+        "rarity": "enhanced",
+        "slots": 1,
+        "description": "ARMOR +0 ARDOR +2 Gain +2 MOV; When you make your free step before or after an Action, you can teleport that step. You are always considered as behind Cover against Melee Weapon Attacks. Gothic cloak woven with old god-blood. When it rustles, it sounds like a childʼs music box lullaby. Tight bound skin-tight suits for quick movement and infiltration. Bangles that ring as one dances. Carved from dead Sky Dancers. The bones that intertwine with your fingers. Boots made with impossible to make Mind-Silk, woven from the lingering Esoteric Mind-Patterns of ancient Deities.",
+        "magCost": 1000,
+        "armor": 0,
+        "ardor": 2,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.111"
+      },
+      "_id": "a38835191c096909",
+      "folder": "00d20d0632f5e1ef",
+      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 111,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "HDF “Mingwang” Suit",
+      "type": "fashion",
+      "system": {
+        "rarity": "deluxe",
+        "slots": 0,
+        "description": "ARMOR +4 ARDOR +2 +2 VIO; -1 GRC; -2 MOV ALL HOSTILES WITHIN 2M OF THE WEARER MUST PASS A VIO VS SPI CHECK TO BE ABLE TO LEAVE THAT RADIUS. OTHERWISE, THEY STOP MOVING AND SUFFER 1 RUINATION. WHEN THE WEARER FORCE-MOVES AN ENTITY, THEY MAY MOVE WITH THE ENTITY, KEEPING ADJACENT. One of the most iconic armor-fashions from the HDF. This suit of armor is part of their “MINGWANGˮ series. Wearing it turns one into a Wisdom King. Dragonsteel that covers the whole head, with a mask depicting a Tathagata in Wrathful Visage. Heavy, scallop-shaped gauntlets that wrap around into the likeness of a Wrathful Enlightened Oneʼs clenched fist. Excessively intricate hagoromo made of interlocking bone lamellae—human femurs, beast ribs, saint-scapulae—each acid-etched with the name of a Wrathful Buddha. Heavy plated armor, mix of golds and porcelains and steels. Shaped into the likeness of the lower half of the Wrathful Bodhisattvas. Sabatons of burning black steel, gleaming like porcelain. There are Dragon Deities in the near heavens who breathed vajra like flamethrowers. Their vajra was captured by Shennin Orbital Heaven Expeditionaries and researched to create this armor.\n\nImport review: Printed header says “6 DELUXE HEADGEAR” without Carry squares. Fashion classification follows its section and Armor/Ardor stats; Carry remains unconfirmed.",
+        "magCost": 10999,
+        "armor": 4,
+        "ardor": 2,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.111"
+      },
+      "_id": "5832d7c95fe3dce3",
+      "folder": "00d20d0632f5e1ef",
+      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 111,
+          "reviewNotes": [
+            "Printed header says “6 DELUXE HEADGEAR” without Carry squares. Fashion classification follows its section and Armor/Ardor stats; Carry remains unconfirmed."
+          ]
+        }
+      }
+    },
+    {
+      "name": "HW Silver Tongue Diplomacy Attire",
+      "type": "fashion",
+      "system": {
+        "rarity": "rare",
+        "slots": 1,
+        "description": "ARMOR +0 ARDOR +0 +1 TO ALL ATTEMPTS TO GAIN LEVERAGE +1 TO ALL ATTEMPTS TO CAROUSE OR MANEUVER THROUGH HIGH-CUL TURE LOCATIONS CAN ATTEMPT TO PERSUADE SOMEONE THROUGH JUST LOOKS OR TOUCH. A beautiful formal atitire for important, international diplomatic events.",
+        "magCost": 2000,
+        "armor": 0,
+        "ardor": 0,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.111"
+      },
+      "_id": "88ef4bd1a7e5facb",
+      "folder": "00d20d0632f5e1ef",
+      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 111,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "name": "AWW “Genji” Heavensilk Raiments",
+      "type": "fashion",
+      "system": {
+        "rarity": "rare",
+        "slots": 1,
+        "description": "ARMOR +2 ARDOR +2 +2 MOV; IMMUNE TO STUN, BEING SET AFLAME, HOBBLE, AND DAZE; +1 TO DIA AND SPI A suit from the GENJI-Series of fashionarmors, combining Gothic sensibilities with Oriental Zen aesthetics. Very popular among the deities of the Orbital Heavens. A skin tight suit woven with Numenweave. Provides protection without getting in the way. A loose flowing hagoromo that responds to the Mind flows. High boots",
+        "magCost": 20000,
+        "armor": 2,
+        "ardor": 2,
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.111"
+      },
+      "_id": "c824a77efa05854e",
+      "folder": "00d20d0632f5e1ef",
+      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 111,
+          "reviewNotes": []
+        }
+      }
+    },
+    {
+      "_id": "19ccb07f544fb9d4",
+      "name": "Empty Hand",
+      "type": "weapon",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "system": {
+        "bonus": 1,
+        "damageType": "impact",
+        "range": 1,
+        "weaponType": "melee",
+        "ammoFamily": "none",
+        "properties": {},
+        "description": "+1 to disarm, trips, or knockback. Base pattern; situational rules remain manual. Price and rarity are not specified in the pattern table.",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.100"
+      },
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 100
+        }
+      }
+    },
+    {
+      "_id": "b97261e0422486c9",
+      "name": "Dagger",
+      "type": "weapon",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "system": {
+        "bonus": 2,
+        "damageType": "cut",
+        "range": 1,
+        "weaponType": "melee",
+        "ammoFamily": "none",
+        "properties": {
+          "concealable": true
+        },
+        "description": "Concealable; Piercing on surprise attacks; may use GRC for ATK. Base pattern; situational rules remain manual. Price and rarity are not specified in the pattern table.",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.100"
+      },
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 100
+        }
+      }
+    },
+    {
+      "_id": "55dc8cf41733a048",
+      "name": "Sword",
+      "type": "weapon",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "system": {
+        "bonus": 2,
+        "damageType": "cut",
+        "range": 1,
+        "weaponType": "melee",
+        "ammoFamily": "none",
+        "properties": {},
+        "description": "+1 die when defending with this weapon. Base pattern; situational rules remain manual. Price and rarity are not specified in the pattern table.",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.100"
+      },
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 100
+        }
+      }
+    },
+    {
+      "_id": "c6c4d00c01d56f81",
+      "name": "Saber",
+      "type": "weapon",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "system": {
+        "bonus": 3,
+        "damageType": "cut",
+        "range": 1,
+        "weaponType": "melee",
+        "ammoFamily": "none",
+        "properties": {},
+        "description": "No extra pattern property. Base pattern; situational rules remain manual. Price and rarity are not specified in the pattern table.",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.100"
+      },
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 100
+        }
+      }
+    },
+    {
+      "_id": "5f8a009074a3f2da",
+      "name": "Bludgeon",
+      "type": "weapon",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "system": {
+        "bonus": 2,
+        "damageType": "impact",
+        "range": 1,
+        "weaponType": "melee",
+        "ammoFamily": "none",
+        "properties": {
+          "crushing": true
+        },
+        "description": "Inherent Crushing. Base pattern; situational rules remain manual. Price and rarity are not specified in the pattern table.",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.100"
+      },
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 100
+        }
+      }
+    },
+    {
+      "_id": "6f5d375fd1b056cf",
+      "name": "Cleaver",
+      "type": "weapon",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "system": {
+        "bonus": 2,
+        "damageType": "cut",
+        "range": 1,
+        "weaponType": "melee",
+        "ammoFamily": "none",
+        "properties": {
+          "ferocious": true
+        },
+        "description": "Inherent Ferocious. Base pattern; situational rules remain manual. Price and rarity are not specified in the pattern table.",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.100"
+      },
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 100
+        }
+      }
+    },
+    {
+      "_id": "5ece042b4dea3212",
+      "name": "Polearm",
+      "type": "weapon",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "system": {
+        "bonus": 2,
+        "damageType": "cut",
+        "range": 2,
+        "weaponType": "melee",
+        "ammoFamily": "none",
+        "properties": {},
+        "description": "2 m reach. Base pattern; situational rules remain manual. Price and rarity are not specified in the pattern table.",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.100"
+      },
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 100
+        }
+      }
+    },
+    {
+      "_id": "2d19e090e2b54792",
+      "name": "Whip",
+      "type": "weapon",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "system": {
+        "bonus": 2,
+        "damageType": "impact",
+        "range": 2,
+        "weaponType": "melee",
+        "ammoFamily": "none",
+        "properties": {},
+        "description": "2 m reach. Base pattern; situational rules remain manual. Price and rarity are not specified in the pattern table.",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.100"
+      },
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 100
+        }
+      }
+    },
+    {
+      "_id": "ad24ca2d1693165f",
+      "name": "Bow",
+      "type": "weapon",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "system": {
+        "bonus": 2,
+        "damageType": "cut",
+        "range": 20,
+        "weaponType": "ranged",
+        "ammoFamily": "bow",
+        "properties": {},
+        "description": "Requires VIO 1+. Base pattern; situational rules remain manual. Price and rarity are not specified in the pattern table.",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.100"
+      },
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 100
+        }
+      }
+    },
+    {
+      "_id": "8a5799d62cb803ca",
+      "name": "Crossbow",
+      "type": "weapon",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "system": {
+        "bonus": 3,
+        "damageType": "cut",
+        "range": 10,
+        "weaponType": "ranged",
+        "ammoFamily": "crossbow",
+        "properties": {},
+        "description": "Reload after firing. Base pattern; situational rules remain manual. Price and rarity are not specified in the pattern table.",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.100"
+      },
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 100
+        }
+      }
+    },
+    {
+      "_id": "53b37217b89ee90e",
+      "name": "Launcher",
+      "type": "weapon",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "system": {
+        "bonus": 2,
+        "damageType": "cut",
+        "range": 6,
+        "weaponType": "ranged",
+        "ammoFamily": "launcher",
+        "properties": {},
+        "description": "Versatile. Base pattern; situational rules remain manual. Price and rarity are not specified in the pattern table.",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.100"
+      },
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 100
+        }
+      }
+    },
+    {
+      "_id": "d84e01547ed7f833",
+      "name": "Gun",
+      "type": "weapon",
+      "folder": "aafc7b0e9b9e48bd",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "effects": [],
+      "system": {
+        "bonus": 3,
+        "damageType": "impact",
+        "range": 25,
+        "weaponType": "ranged",
+        "ammoFamily": "gun",
+        "properties": {},
+        "description": "Reload after firing. Base pattern; situational rules remain manual. Price and rarity are not specified in the pattern table.",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.100"
+      },
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 100
+        }
+      }
+    },
+    {
+      "_id": "5315ea2d90f383cf",
+      "name": "Dart",
+      "type": "ammunition",
+      "folder": "f5ba1f5823a37525",
+      "img": "systems/10kswordsfoundry/assets/icons/ammunition.svg",
+      "effects": [],
+      "system": {
+        "ammoType": "dart",
+        "quantity": 1,
+        "magCost": 0,
+        "description": "Dart. For launcher weapons. Each ammo type occupies one Carry slot, stacking. Price is not specified in the source.",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.101"
+      },
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 101
+        }
+      }
+    },
+    {
+      "_id": "9cdd2757beed2b36",
+      "name": "Blunt Dart",
+      "type": "ammunition",
+      "folder": "f5ba1f5823a37525",
+      "img": "systems/10kswordsfoundry/assets/icons/ammunition.svg",
+      "effects": [],
+      "system": {
+        "ammoType": "bluntDart",
+        "quantity": 1,
+        "magCost": 0,
+        "description": "Blunt Dart. For launcher weapons. Damage: impact. Each ammo type occupies one Carry slot, stacking. Price is not specified in the source.",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.101"
+      },
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 101
+        }
+      }
+    },
+    {
+      "_id": "ef430bc28d252a41",
+      "name": "Arrow",
+      "type": "ammunition",
+      "folder": "f5ba1f5823a37525",
+      "img": "systems/10kswordsfoundry/assets/icons/ammunition.svg",
+      "effects": [],
+      "system": {
+        "ammoType": "arrow",
+        "quantity": 1,
+        "magCost": 0,
+        "description": "Arrow. For bow weapons. Each ammo type occupies one Carry slot, stacking. Price is not specified in the source.",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.101"
+      },
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 101
+        }
+      }
+    },
+    {
+      "_id": "e3c74e1f37f13c80",
+      "name": "Blunt Arrow",
+      "type": "ammunition",
+      "folder": "f5ba1f5823a37525",
+      "img": "systems/10kswordsfoundry/assets/icons/ammunition.svg",
+      "effects": [],
+      "system": {
+        "ammoType": "bluntArrow",
+        "quantity": 1,
+        "magCost": 0,
+        "description": "Blunt Arrow. For bow weapons. Damage: impact. Each ammo type occupies one Carry slot, stacking. Price is not specified in the source.",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.101"
+      },
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 101
+        }
+      }
+    },
+    {
+      "_id": "257cb63bec3befce",
+      "name": "Bolt",
+      "type": "ammunition",
+      "folder": "f5ba1f5823a37525",
+      "img": "systems/10kswordsfoundry/assets/icons/ammunition.svg",
+      "effects": [],
+      "system": {
+        "ammoType": "bolt",
+        "quantity": 1,
+        "magCost": 0,
+        "description": "Bolt. For crossbow weapons. Each ammo type occupies one Carry slot, stacking. Price is not specified in the source.",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.101"
+      },
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 101
+        }
+      }
+    },
+    {
+      "_id": "f2497955b505d03e",
+      "name": "Grenade Bolt",
+      "type": "ammunition",
+      "folder": "f5ba1f5823a37525",
+      "img": "systems/10kswordsfoundry/assets/icons/ammunition.svg",
+      "effects": [],
+      "system": {
+        "ammoType": "grenadeBolt",
+        "quantity": 1,
+        "magCost": 0,
+        "description": "Grenade Bolt. For crossbow weapons. Damage: burn. Explodes in a 1 m burst. Each ammo type occupies one Carry slot, stacking. Price is not specified in the source.",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.101"
+      },
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 101
+        }
+      }
+    },
+    {
+      "_id": "9a1b25457e06f956",
+      "name": "Bullet",
+      "type": "ammunition",
+      "folder": "f5ba1f5823a37525",
+      "img": "systems/10kswordsfoundry/assets/icons/ammunition.svg",
+      "effects": [],
+      "system": {
+        "ammoType": "bullet",
+        "quantity": 1,
+        "magCost": 5,
+        "description": "Bullet. For gun weapons. Each ammo type occupies one Carry slot, stacking.",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.101"
+      },
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 101
+        }
+      }
+    },
+    {
+      "_id": "7c84182d2308dd9f",
+      "name": "Fireshot",
+      "type": "ammunition",
+      "folder": "f5ba1f5823a37525",
+      "img": "systems/10kswordsfoundry/assets/icons/ammunition.svg",
+      "effects": [],
+      "system": {
+        "ammoType": "fireshot",
+        "quantity": 1,
+        "magCost": 10,
+        "description": "Fireshot. For gun weapons. Property: blaze. Each ammo type occupies one Carry slot, stacking.",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.101"
+      },
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 101
+        }
+      }
+    },
+    {
+      "_id": "a69efa5c22bb7cd1",
+      "name": "Glaveshot",
+      "type": "ammunition",
+      "folder": "f5ba1f5823a37525",
+      "img": "systems/10kswordsfoundry/assets/icons/ammunition.svg",
+      "effects": [],
+      "system": {
+        "ammoType": "glaveshot",
+        "quantity": 1,
+        "magCost": 200,
+        "description": "Glaveshot. For gun weapons. Damage: ruination. Each ammo type occupies one Carry slot, stacking.",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.101"
+      },
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 101
+        }
+      }
+    },
+    {
+      "_id": "991fd947bdd78ab9",
+      "name": "Roundshot",
+      "type": "ammunition",
+      "folder": "f5ba1f5823a37525",
+      "img": "systems/10kswordsfoundry/assets/icons/ammunition.svg",
+      "effects": [],
+      "system": {
+        "ammoType": "roundshot",
+        "quantity": 1,
+        "magCost": 150,
+        "description": "Roundshot. For gun weapons. Damage: impact. Property: crushing. Each ammo type occupies one Carry slot, stacking.",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.101"
+      },
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 101
+        }
+      }
+    },
+    {
+      "_id": "e243aaed9642ba92",
+      "name": "Siderite Shard",
+      "type": "gear",
+      "folder": "000b821603b66426",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "effects": [],
+      "system": {
+        "magCost": 50,
+        "slots": 0,
+        "description": "Weapon reinforcement material for Refined Form. Exchange value 50 Mag. Carry cost and rarity are unspecified; review with the Intercessor.",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.102"
+      },
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 102
+        }
+      }
+    },
+    {
+      "_id": "1892315d311c496c",
+      "name": "Siderite Fragments",
+      "type": "gear",
+      "folder": "000b821603b66426",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "effects": [],
+      "system": {
+        "magCost": 500,
+        "slots": 0,
+        "description": "Weapon reinforcement material for Divine Form. Exchange value 500 Mag. Carry cost and rarity are unspecified; review with the Intercessor.",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.102"
+      },
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 102
+        }
+      }
+    },
+    {
+      "_id": "3150bcd1d01bbdcd",
+      "name": "Siderite Core",
+      "type": "gear",
+      "folder": "000b821603b66426",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "effects": [],
+      "system": {
+        "magCost": 5000,
+        "slots": 0,
+        "description": "Weapon reinforcement material for Immortal Form. Exchange value 5000 Mag. Carry cost and rarity are unspecified; review with the Intercessor.",
+        "source": "10,000 Swords Against Heaven 2.0.3, PDF p.102"
+      },
+      "flags": {
+        "10kswordsfoundry": {
+          "sourcePage": 102
+        }
+      }
+    }
+  ]
+}

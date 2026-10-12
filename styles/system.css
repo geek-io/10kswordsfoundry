@@ -1,0 +1,98 @@
+.swords { --swords-accent: #b60042; }
+.swords .window-content { overflow-y: auto; }
+.swords .sheet-body { display: flex; flex-direction: column; gap: 16px; padding: 12px; }
+.swords header { border-bottom: 3px solid var(--swords-accent); padding-bottom: 12px; }
+.swords h2 { color: var(--swords-accent); font-size: 1.2rem; margin: 0 0 8px; }
+.swords .character-motto { color: #e53935; font-weight: 800; letter-spacing: 0.04em; line-height: 1.3; margin-bottom: 12px; }
+.swords .character-heading { display: flex; align-items: center; gap: 18px; }
+.swords .portrait-picker { flex: 0 0 112px; width: 112px; height: 136px; padding: 0; overflow: hidden; border: 2px solid var(--swords-accent); border-radius: 6px; background: #181818; cursor: pointer; }
+.swords .character-portrait { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center; border: 0; }
+.swords .portrait-picker:focus-visible { outline: 2px solid #e53935; outline-offset: 3px; }
+.swords .portrait-picker:disabled { opacity: 1; cursor: default; }
+.swords .character-name { flex: 1; min-width: 0; }
+.swords .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.swords label { display: flex; flex-direction: column; gap: 4px; }
+.swords input, .swords textarea { width: 100%; }
+.swords textarea { min-height: 100px; resize: vertical; }
+.swords .cultivation { display: flex; gap: 6px; }
+.swords .cultivation input { width: 64px; }
+.swords .cultivation button { flex: 1; }
+.swords .hint { font-size: 0.85rem; opacity: 0.8; }
+.swords .inventory { list-style: none; padding: 0; }
+.swords .inventory li { display: flex; justify-content: space-between; gap: 12px; padding: 5px; border-bottom: 1px solid #8885; }
+.swords .job-drop-zone { border: 2px dashed var(--swords-accent); min-height: 65px; padding: 12px; }
+.swords .job-entry { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.swords .license-entry > span { flex: 1; }
+.swords .license-entry small { display: block; }
+.swords .license-entry.unqualified > span { opacity: 0.6; }
+.swords .inventory button, .swords .job-entry button { flex: 0 0 auto; width: auto; }
+.swords .weapon-mod-slot { display:flex; align-items:center; gap:12px; min-height:60px; border:1px dashed var(--swords-accent); padding:10px; margin:8px 0; }
+.swords .weapon-mod-slot button { width:auto; margin-left:auto; }
+.swords .weapon-mod-name { position:relative; cursor:help; }
+.swords .weapon-mod-tooltip { display:none; position:absolute; z-index:20; bottom:100%; left:0; width:260px; max-height:240px; overflow:auto; padding:12px; border:1px solid #aaa; border-radius:4px; background:#202020; color:#fff; white-space:pre-wrap; overflow-wrap:anywhere; box-shadow:0 3px 10px #0008; }
+.swords .weapon-mod-name:hover .weapon-mod-tooltip, .swords .weapon-mod-name:focus .weapon-mod-tooltip { display:block; }
+.swords prose-mirror { display:block; min-height:150px; border:1px solid #8886; border-radius:4px; padding:8px; }
+.swords .rich-content { min-height:60px; overflow-wrap:anywhere; }
+.swords .modifier-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:6px; }
+.swords .modifier-grid label { flex-direction:row; align-items:center; }
+.swords .modifier-grid input { width:auto; }
+.swords .capacity-warning { color:#dc5c46; font-weight:bold; }
+
+.swords select { width:100%; }
+.swords prose-mirror { min-height:220px; height:260px; display:flex; flex-direction:column; }
+.swords prose-mirror .editor-content { min-height:140px; overflow-y:auto; flex:1; }
+.swords .health-sutra { display:flex; flex-wrap:wrap; gap:8px; }
+.swords .health-box { width:auto; min-width:110px; padding:6px 10px; }
+.swords .health-box.wounded { background:#681c29; color:#fff; border-color:#df6575; }
+
+/* DialogV2 puts its footer beside dialog-content inside dialog-form. Only the
+   content scrolls, leaving the Roll button reachable at small window heights. */
+.application.swords-attack-dialog { max-height:calc(100dvh - 24px); max-width:calc(100vw - 24px); }
+.application.swords-attack-dialog .window-content { min-height:0; overflow:hidden; display:flex; flex-direction:column; }
+.application.swords-attack-dialog .dialog-form { flex:1; min-height:0; overflow:hidden; display:flex; flex-direction:column; }
+ .application.swords-attack-dialog .dialog-content { flex:1; min-height:0; overflow-y:auto; overscroll-behavior:contain; scrollbar-gutter:stable; padding-right:8px; display:flex; flex-direction:column; gap:16px; }
+.application.swords-attack-dialog .attack-summary { margin:0; line-height:1.5; }
+.application.swords-attack-dialog .attack-summary strong { font-size:1.1em; }
+.application.swords-attack-dialog .attack-group { flex:0 0 auto; min-width:0; margin:0; padding:12px 14px 14px; border:1px solid var(--color-border-light-primary, #736572); border-radius:6px; background:var(--color-bg-option, #8888880a); }
+.application.swords-attack-dialog .attack-group legend { padding:0 8px; font-size:1em; font-weight:700; letter-spacing:0.025em; }
+.application.swords-attack-dialog .attack-fields, .application.swords-attack-dialog .attack-options { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px 18px; }
+.application.swords-attack-dialog .attack-fields + .attack-options { margin-top:14px; padding-top:12px; border-top:1px solid #8884; }
+.application.swords-attack-dialog .attack-fields > label { min-width:0; display:flex; flex-direction:column; gap:6px; }
+.application.swords-attack-dialog .attack-option { display:flex; flex-direction:row; align-items:flex-start; gap:8px; line-height:1.4; }
+.application.swords-attack-dialog .attack-option input { flex:0 0 auto; margin:2px 0 0; }
+.application.swords-attack-dialog .attack-hint { margin:10px 0 0; font-size:0.9em; line-height:1.5; opacity:0.8; }
+.application.swords-attack-dialog .form-footer { flex:0 0 auto; padding-top:10px; }
+@media (max-width:560px) {
+  .application.swords-attack-dialog .attack-fields, .application.swords-attack-dialog .attack-options { grid-template-columns:minmax(0,1fr); }
+}
+
+.swords-sixes { color:#16833c; font-weight:800; background:#e5ffed; border-radius:3px; padding:1px 5px; }
+
+.swords .condition-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+.swords .condition-entry {border:1px solid #8886;border-radius:4px;padding:10px;}
+.swords .condition-entry input {width:auto;}
+.swords .condition-entry small {opacity:0.8;}
+.swords .action-controls {display:flex;gap:8px;}
+
+.swords .health-hale.selected {background:#176c37;color:#fff;border-color:#51c575;}
+.swords .health-bloody.selected {background:#800c1c;color:#fff;border-color:#c53f50;}
+.swords .health-critical.selected {background:#ed202d;color:#fff;border-color:#ff8189;font-weight:800;}
+.swords .health-ko.selected {background:#050505;color:#fff;border:2px solid #fff;font-weight:900;}
+.swords-defense h3 { margin:0 0 .5rem; }
+.swords-defense .defense-totals { display:flex; flex-wrap:wrap; gap:.45rem; align-items:center; padding:.5rem; border:1px solid #7777; border-radius:5px; }
+.swords-defense fieldset { margin:.65rem 0; border:1px solid #7777; border-radius:5px; }
+.swords-defense dl { display:grid; grid-template-columns:1fr auto; gap:.3rem 1rem; margin:.5rem 0; }
+.swords-defense dd { margin:0; font-weight:700; }
+.swords-defense p { font-size:.9em; }
+.swords-defense details { margin:.5rem 0; }
+.swords .special-attack { margin-top:1rem; }
+.swords .special-attack prose-mirror { min-height:150px; height:170px; }
+.swords .special-attack prose-mirror .editor-content { min-height:80px; }
+.armor-sutra { border-top:1px solid #8886; padding-top:.65rem; margin-top:.65rem; }
+.armor-boxes { display:flex; flex-wrap:wrap; gap:.35rem; align-items:center; margin-top:.4rem; }
+.swords .armor-boxes button { flex:0 0 32px; width:32px; min-width:32px; padding:3px; }
+.swords .armor-box.filled { background:#31637c; color:#f3faff; border-color:#69b2d8; }
+.round-controls { margin:0 0 .6rem; }
+.swords label.special-hostile { flex-direction:row; align-items:center; align-self:center; gap:.5rem; }
+.swords .special-hostile input[type=checkbox] { appearance:auto; width:18px; height:18px; flex:0 0 18px; }
+.swords .special-hostile input[type=checkbox]::before,.swords .special-hostile input[type=checkbox]::after { content:none; }

@@ -1,0 +1,151 @@
+{
+  "id": "10kswordsfoundry",
+  "title": "10,000 Swords Against Heaven",
+  "description": "A Foundry VTT v14 game system for 10,000 Swords Against Heaven, based on rules version 2.0.3.",
+  "version": "0.1.40",
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14.367",
+    "maximum": "14"
+  },
+  "authors": [
+    {
+      "name": "Dragos_kai"
+    }
+  ],
+  "esmodules": [
+    "scripts/entry-0.1.40.mjs"
+  ],
+  "styles": [
+    "styles/system.css",
+    "styles/polish.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "documentTypes": {
+    "Actor": {
+      "wanderer": {
+        "htmlFields": [
+          "notes"
+        ]
+      },
+      "npc": {
+        "htmlFields": [
+          "notes"
+        ]
+      }
+    },
+    "Item": {
+      "gear": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "weapon": {
+        "htmlFields": [
+          "description",
+          "mods.*.description"
+        ]
+      },
+      "armor": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "trait": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "license": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "technique": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "job": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "fashion": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "magick": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "weaponMod": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "accessory": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "ammunition": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "gambit": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "salvage": {
+        "htmlFields": [
+          "description"
+        ]
+      }
+    }
+  },
+  "primaryTokenAttribute": "health",
+  "grid": {
+    "distance": 1,
+    "units": "m"
+  },
+  "packs": [
+    {
+      "name": "non-sect-items",
+      "label": "Non-Sect Items · Rules 2.0.3",
+      "path": "packs/non-sect-items",
+      "type": "Item",
+      "system": "10kswordsfoundry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "grimoire-traits",
+      "label": "Grimoire Traits · Rules 2.0.3",
+      "path": "packs/grimoire-traits",
+      "type": "Item",
+      "system": "10kswordsfoundry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ],
+  "url": "https://github.com/geek-io/10kswordsfoundry",
+  "manifest": "https://github.com/geek-io/10kswordsfoundry/releases/latest/download/system.json",
+  "download": "https://github.com/geek-io/10kswordsfoundry/releases/download/v0.1.40/10kswordsfoundry-0.1.40.zip",
+  "bugs": "https://github.com/geek-io/10kswordsfoundry/issues",
+  "changelog": "https://github.com/geek-io/10kswordsfoundry/releases/tag/v0.1.40"
+}

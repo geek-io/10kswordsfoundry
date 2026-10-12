@@ -1,1 +1,18 @@
+# Local workspace and generated release artifacts
+AGENTS.md
+last_version.txt
+/tmp/
+/dist/
+/node_modules/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
 
+# LevelDB runtime locks and diagnostic logs (numeric .log files contain data).
+/packs/**/LOCK
+/packs/**/LOG
+/packs/**/LOG.old

@@ -1,0 +1,10 @@
+import './check-foundry-resources.mjs';
+import assert from 'node:assert/strict';
+const {SwordsActorSheet}=await import('../scripts/sheets.mjs');
+let updates=0;const effect={disabled:true,async update(data){Object.assign(this,data);updates++;}};
+const sheet={isEditable:true,submit:async()=>{},document:{items:{get:()=>({type:'trait',effects:{get:()=>effect}})}}};
+const target={dataset:{itemId:'trait',effectId:'effect'}};
+await SwordsActorSheet.toggleTraitEffect.call(sheet,null,target);assert.equal(effect.disabled,false);
+await SwordsActorSheet.toggleTraitEffect.call(sheet,null,target);assert.equal(effect.disabled,true);
+sheet.isEditable=false;await SwordsActorSheet.toggleTraitEffect.call(sheet,null,target);assert.equal(updates,2);
+console.log('Owned Trait effect buttons toggle individual effects and respect read-only sheets.');
