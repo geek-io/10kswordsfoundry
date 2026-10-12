@@ -10,6 +10,7 @@ A Foundry VTT v14 game system for *10,000 Swords Against Heaven*, based on rules
 
 - Moved all 12 generic weapons into the **Weapons** compendium folder and removed the separate **Weapon Patterns** folder.
 - Removed “(Pattern)” from their names. All entries use the **Weapon** item type; their stats and IDs are preserved.
+- First public release on Github.
 
 # v 0.1.39
 
