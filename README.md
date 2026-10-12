@@ -164,7 +164,6 @@ World Being imports preserve printed resource totals and start equipment/Trait e
 - Removed Armor from item creation. Legacy Armor loads as Fashion, retaining its original data in a recovery flag. Review Fashion bonuses and slot assignments on converted items.
 - Interrupt now opens an opposed-response dialog: Clash cancels matching attack dice; Sabotage compares successes and reports a weakened-attack/disarm outcome. Actions, ammo, conditions, injury and Samadhi are accounted for.
 - Added JSON, CSV, and pasted rulebook-text importing for all supported types, including Jobs, Licenses, Technicks and Magicks. Editable preview, model validation, duplicate skipping, and a downloadable JSON template precede creation.
-- See [Import guide](docs/item-importer.md) and [UI follow-up](docs/ui-follow-up.md) for examples and boundaries.
 
 # v 0.1.22
 
@@ -176,7 +175,6 @@ World Being imports preserve printed resource totals and start equipment/Trait e
 - Added The Archive, opened from the character sheet's Archive button. Search world items and accessible Item compendiums; filter by type or source; View entries or drag them onto character sheets.
 - Archive indexes are cached, results load in batches, unavailable packs are reported, and Refresh reloads the library. No compendium content is bundled in this update.
 - Tightened field spacing, inventory rows, headings, portrait sizing, condition cards, primary actions, and keyboard focus states.
-- Reference study and validation details: [UI and Archive](docs/ui-archive.md).
 
 # v 0.1.21
 
@@ -187,7 +185,6 @@ World Being imports preserve printed resource totals and start equipment/Trait e
 - Attack and Defense chat show total successes including sixes, with sixes still highlighted in green.
 - Defense can select a recent visible attack created in this version. Rolls cancel Strikes and calculate Armor/Health loss using stored weapon properties; damage is reported, not applied automatically.
 - Active Effects opened from the system sheet offer named variable dropdowns and Add/subtract, Multiply, or Set value. Existing custom modifiers are preserved; Advanced opens Foundry's full editor.
-- A dedicated UI pass is planned soon; these are focused usability changes.
 
 # v 0.1.20
 
@@ -260,7 +257,6 @@ World Being imports preserve printed resource totals and start equipment/Trait e
 - Added Active Effect creation, configuration, enable/disable, and removal on actor and item sheets. Equipment effects transfer only while equipped; temporary bonuses stay separate from saved base ratings.
 - Added shared Ammo stacks, weapon ammo selection, and per-attack switching. Selected ammo is spent automatically, with one Carry slot per nonempty type.
 - Added rule-linked modifiers and inherent properties: attack dice, Precise rerolls, two-hand requirements, movement/range changes, Affinity-based Cultivations, and pre-Defense Wound summaries. Context-dependent conditions remain reminders.
-- Sources: rules pp.39, 66-67, 100-103, and 124. See [QA update](docs/qa-update.md) for upgrade behavior and test scope.
 
 # v 0.1.13
 
@@ -276,7 +272,6 @@ World Being imports preserve printed resource totals and start equipment/Trait e
 - Added optional Ammo type and quantity. Weapon attacks spend one round; empty ammo blocks the roll with “Out of ammo, please reload or use another weapon”.
 - Added Refined (+1), Divine (+2), and Immortal (+3) upgrade paths with automatic descriptions, attack dice, DR, and 2/3/4 mod slots. Base weapons have one slot.
 - Added optional Affinity text with book-listed suggestions. An Affinity occupies one mod slot. Occupied slots cannot be lost through a downgrade.
-- Upgrade costs and mod effects remain manual. See [Weapons](docs/weapons.md). Local checks pass; remote Foundry verification remains pending.
 
 # v 0.1.11
 
@@ -294,8 +289,6 @@ World Being imports preserve printed resource totals and start equipment/Trait e
 - Equipped edits apply cost differences; insufficient capacity blocks the change. Existing equipped Fashion must be unequipped/re-equipped to begin paying its Meridian cost.
 - Added Magick as an item type; existing Technique items are now labeled Technick, retaining their data. See [Equipment](docs/equipment.md).
 
-Local checks pass; remote Foundry 14.367 verification remains pending.
-
 # v 0.1.9
 
 ## Fashion
@@ -305,8 +298,6 @@ Local checks pass; remote Foundry 14.367 verification remains pending.
 - Removing Ardor capacity that is already burnt or installed is blocked with a friendly message.
 - Existing Armor items remain available under the Armor type. See [Fashion](docs/fashion.md).
 
-Local automated checks pass; remote Foundry sheet verification is pending.
-
 # v 0.1.8
 
 ## Job drop area and Licenses
@@ -315,9 +306,6 @@ Local automated checks pass; remote Foundry sheet verification is pending.
 - Ordered Cultivations VIO, DIA, GRC, SAV, WRD, SPI across sheets and prerequisites.
 - Added License items with 15 sects, each offering Novice, Expert, and Master, editable Cultivation/Sidhi prerequisites, and Notes.
 - Qualified License drops equip automatically. Unqualified drops or equip attempts show “You do not meet the qualifications of this license”. Owned Licenses have their own section and dim when requirements are unmet.
-- This pass checks numeric prerequisites; XP, Meridians, technique prerequisites, and granted abilities remain manual. See [Licenses](docs/licenses.md).
-
-Local tests pass; these new sheet interactions still need verification on the remote Foundry 14.367 instance.
 
 # v 0.1.7
 
@@ -328,20 +316,16 @@ Local tests pass; these new sheet interactions still need verification on the re
 - Renamed the currency label to **Magnetite (Mag)**.
 - Removed the creation-wizard plan; character creation remains manual apart from applying Jobs.
 
-Example: Job Vio 2, manually raised to 3, becomes 5 when replaced by Job Vio 4. On the first Job drop, changes from the original default of 1 are treated as manual adjustments. See [Job items](docs/jobs.md) for existing-character handling.
-
 # v 0.1.6
 
 ## A face for your Wanderer
 
 - Character sheets have a clickable portrait in the upper left, with the red heading **THIS IS 1 SWORD AGAINST HEAVEN** above it. Click the portrait to choose an image.
-- Reorganized this README around release history and moved setup instructions to a separate guide.
 
 # v 0.1.5
 
 ## Cleaner sheets and shared Wanderer data
 
-- **Sync with sidebar** updates the existing Wanderer from its map token, preserves its ID, and links it. No duplicate sidebar Actor. A recovery snapshot is saved on the Scene first. See [token-linking.md](docs/token-linking.md).
 - Removed sheet version labels and instructional filler.
 - Negative roll adjustments show a non-blocking caution and still roll. Pools of zero or less use two d6 and keep the lower die. Cultivation ratings remain nonnegative.
 
@@ -380,16 +364,3 @@ Example: Job Vio 2, manually raised to 3, becomes 5 when replaced by Job Vio 4. 
 
 - Added Wanderer and NPC sheets, Item records, Cultivation checks, and manual resource tracking.
 - Established rules 2.0.3 as the source for implementation.
-- Corrected compatibility metadata so Foundry 14.367 could use the system for world creation.
-
-## Current scope
-
-Actor/Item sheets, basic checks, linked Wanderers, draggable Jobs, License prerequisites, Fashion bonuses, equipment costs, and optional weapon attack bonuses. Health penalties, Samadhi, conditions, advancement, and full conflict resolution remain manual. Sidebar Items and Actor-owned copies remain independent by design.
-
-Character creation remains manual, with draggable Jobs supplying Cultivation bases. Conflict automation remains [planned](docs/next-passes.md).
-
-## Project notes
-
-[Installation and development](docs/setup.md) · [Rules basis](docs/rules-basis.md) · [Wanderer linking](docs/token-linking.md)
-
-[Foundry installation](docs/setup.md) · [Manual release publishing](docs/publishing.md)
