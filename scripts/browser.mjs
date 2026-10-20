@@ -1,4 +1,4 @@
-import {libraryEntries,filterLibrary,clearLibraryCache} from "./library-service.mjs?v=0.1.40";
+import {libraryEntries,filterLibrary,clearLibraryCache} from "./library-service.mjs?v=0.1.45";
 export class SwordsBrowser extends foundry.applications.api.HandlebarsApplicationMixin(foundry.applications.api.ApplicationV2) {
  static DEFAULT_OPTIONS={id:"swords-library",classes:["swords","swords-library"],window:{title:"Compendium Browser · 10,000 Swords",resizable:true},position:{width:800,height:700},actions:{inspect:SwordsBrowser.inspect,refresh:SwordsBrowser.refresh,more:SwordsBrowser.more}};
  static PARTS={main:{template:"systems/10kswordsfoundry/templates/browser.hbs"}};

@@ -1,5 +1,5 @@
-import { reconcileCosts } from "./equipment.mjs?v=0.1.40";
-import { assignSlot } from "./slots.mjs?v=0.1.40";
+import { reconcileCosts } from "./equipment.mjs?v=0.1.45";
+import { assignSlot } from "./slots.mjs?v=0.1.45";
 export function migrateInventory(source) {
   if((source.flags?.['10kswordsfoundry']?.inventoryVersion??0)>=28) return false;
   const oldItems=structuredClone(source.items);

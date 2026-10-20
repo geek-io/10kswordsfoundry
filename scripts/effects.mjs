@@ -1,4 +1,4 @@
-import { EQUIPMENT_TYPES } from "./equipment.mjs?v=0.1.40";
+import { EQUIPMENT_TYPES } from "./equipment.mjs?v=0.1.45";
 export function equipmentEffectSuppressed(item) {
   if(item.type==='trait')return item.system.active===false;
   return EQUIPMENT_TYPES.includes(item.type) && !item.system.equipped;
@@ -40,6 +40,7 @@ export function effectRows(document) {
 }
 
 export const EFFECT_VARIABLES={
+ "system.magickAreaBonus":"Magick area size bonus (m)",
  "system.cultivations.vio":"Violence (VIO)","system.cultivations.dia":"Dialectics (DIA)","system.cultivations.grc":"Grace (GRC)","system.cultivations.sav":"Savvy (SAV)","system.cultivations.wrd":"Word (WRD)","system.cultivations.spi":"Spirit (SPI)",
  "system.health.max":"Maximum Health","system.armor.max":"Maximum Armor","system.ardor.max":"Maximum Ardor","system.movement":"Movement","system.checkBonus":"All checks bonus","system.attackBonus":"Attack bonus","system.defenseBonus":"Defense bonus","system.meridians":"Open Meridians","system.carry":"Carry capacity","system.sidhi":"Sidhi Stage"
 };

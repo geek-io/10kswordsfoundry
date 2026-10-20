@@ -6,6 +6,42 @@ A Foundry VTT v14 game system for *10,000 Swords Against Heaven*, based on rules
 
 ***THIS IS 1 SWORD AGAINST HEAVEN***
 
+# v 0.1.45
+
+- Equipped **Hermetic Robes** automatically add **1 m to Magick area sizes**, following page 135. Scathe becomes a 2 m burst within its normal 6 m casting range.
+- The bonus appears as a transferable Active Effect in the robes’ Effects tab and is suppressed while unequipped. Existing world and character copies receive the missing effect on GM world load.
+- Added **Magick area size bonus (m)** to the Active Effect variable dropdown. The casting prompt shows automatic area bonuses.
+
+# v 0.1.44
+
+- Magicks, Technicks, and Special Abilities can place an area selector on the canvas and automatically target characters inside it.
+- Bursts use their radius, blasts use triangular cones, and lines are 1 m wide. Scathe defaults to a 1 m burst within 6 m.
+- Adjust shape, size, and placement range before casting. Cancelling placement spends no AP, Ardor, or ammunition.
+- Existing imports can infer explicit area dimensions from their descriptions; no re-import is required.
+- See [Area targeting](docs/area-targeting.md) for placement controls and targeting details.
+
+# v 0.1.43
+
+- Configured **69 Special Abilities on 64 Sect Technicks**, including weapon attacks, activation actions, rites, and triggered abilities. Use them under **Combat → Special Abilities**.
+- **Six Demon Cutting Sword** requires a wielded Great/Colossal weapon, spends 2 AP and 1 Burn Ardor, and applies its +2 attack dice, Crushing, Blaze, and extra Wounds on 5s and 6s.
+- Weapon-based abilities include the chosen weapon’s bonuses, modifiers, and ammunition. Installed activation abilities retain a Release control; variable Burn costs prompt for an amount.
+- On GM world load, matching existing imports with empty Special Ability lists receive the configured actions. Existing custom lists and customized activation costs are preserved.
+- Multi-attack sequences, movement, summons, conditional bonuses, and unusual effects retain explicit manual instructions. See [Technick action notes](docs/technick-actions.md).
+
+# v 0.1.42
+
+- Added optional **Automated Animations** support for weapon attacks, Magicks, Technicks, and Special Abilities.
+- Configure animations using the module’s item controls or automatic name recognition. Special Abilities use their parent item’s animation configuration.
+- Added a world setting to enable or disable this integration. Private rolls do not trigger scene animations.
+- See [Automated Animations setup](docs/automated-animations.md).
+
+# v 0.1.41
+
+- Added **Sect Licenses**, **Sect Technicks**, and **Sect Magicks** compendiums covering the 15 sects on pages 127–185.
+- Includes **156 Licenses**, **74 Technicks**, and **52 Magicks**, organized into **Sect → Novice / Expert / Master** folders. Each ability links to its matching License.
+- Includes source pages, prerequisites, descriptions, and explicit AP/Ardor costs. Magicks include printed Mantras and Mudras, with explicit attack fields where available.
+- Variable costs, conditional mechanics, and requirements for other Licenses remain in the descriptions for manual handling. See [Sect catalog notes](docs/sect-catalog.md).
+
 # v 0.1.40
 
 - Moved all 12 generic weapons into the **Weapons** compendium folder and removed the separate **Weapon Patterns** folder.

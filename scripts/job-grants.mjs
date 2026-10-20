@@ -1,4 +1,4 @@
-import {IMPORT_TYPES} from './import-data.mjs?v=0.1.40';
+import {IMPORT_TYPES} from './import-data.mjs?v=0.1.45';
 export function grantSnapshot(document){
  if(document.documentName!=='Item'||document.type==='job'||!IMPORT_TYPES[document.type])throw new Error('Drop an Item or Trait here. Jobs cannot grant other Jobs.');
  const data=document.toObject();

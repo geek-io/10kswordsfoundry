@@ -1,0 +1,31 @@
+import {createRequire} from 'node:module';
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {pathToFileURL} from 'node:url';
+import assert from 'node:assert/strict';
+import {WEAPON_REQUIREMENTS} from '../scripts/special-abilities.mjs';
+import {abilityView} from '../scripts/ability-state.mjs';
+const h=createRequire('C:/Program Files/Foundry Virtual Tabletop/resources/app/package.json')('handlebars');
+h.registerHelper('selectOptions',(choices,o)=>new h.SafeString(Object.entries(choices??{}).map(([v,l])=>`<option value="${h.escapeExpression(v)}" ${v===o.hash.selected?'selected':''}>${h.escapeExpression(l)}</option>`).join('')));
+h.registerHelper('checked',v=>v?'checked':'');
+const {chromium}=createRequire('C:/Users/drago/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/package.json')('playwright');
+const browser=await chromium.launch({headless:true,channel:'msedge'});
+try{
+ const page=await browser.newPage({viewport:{width:900,height:900}});
+ const catalog=JSON.parse(await readFile('data/sect-technicks.json','utf8'));
+ const item=catalog.items.find(i=>i.name==='Six Demon Cutting Sword');item.id=item._id;
+ const fields={editable:true,item,system:item.system,hasSpecialAttacks:true,specialAttacks:item.system.specialAttacks.map(a=>({range:0,criticalExtra:0,allCritical:false,effectValue:0,...a})),weaponRequirements:WEAPON_REQUIREMENTS,abilityModes:{attack:'Attack',check:'Check',automatic:'Automatic'},poolChoices:{vio:'Violence',grc:'Grace'},damageChoices:{cut:'Cut',impact:'Impact',burn:'Burn'},targetEffectChoices:{'':'None'}};
+ const content=h.compile(await readFile('templates/item.hbs','utf8'))(fields);
+ await mkdir('tmp/ui',{recursive:true});
+ const base=pathToFileURL(process.cwd()+'/').href;
+ await writeFile('tmp/ui/technick-043.html',`<html><head><base href="${base}"><link rel="stylesheet" href="file:///C:/Program%20Files/Foundry%20Virtual%20Tabletop/resources/app/public/css/foundry2.css"><link rel="stylesheet" href="styles/system.css"><link rel="stylesheet" href="styles/polish.css"><style>body{background:#090b10;padding:20px}.application{position:relative!important;width:720px;height:840px}.window-content{overflow:auto!important}section[data-sheet-panel]{display:block!important}</style></head><body class="theme-dark"><form class="application swords item-sheet"><header class="window-header">Six Demon Cutting Sword</header><div class="window-content">${content}</div></form></body></html>`);
+ await page.goto(pathToFileURL(process.cwd()+'/tmp/ui/technick-043.html').href);
+ assert.equal(await page.locator('[name="system.specialAttacks.0.weaponRequirement"]').inputValue(),'heavy');
+ assert.equal(await page.locator('[name="system.specialAttacks.0.fivePlusExtra"]').inputValue(),'1');
+ await page.locator('[name="system.specialAttacks.0.weaponRequirement"]').scrollIntoViewIfNeeded();
+ await page.screenshot({path:'tmp/ui/technick-043.png'});
+ const row=abilityView(item);
+ await page.setContent(h.compile(await readFile('templates/actor.hbs','utf8'))({editable:true,actor:{},system:{},combatItems:[{...row,isAbility:true}],specialAttackRows:[{...item.system.specialAttacks[0],itemId:item.id,index:0,itemName:item.name,actionLabel:'Attack'}]}));
+ assert.equal(await page.locator('[data-action="useAbility"][data-special-index="0"]').count(),1);
+ assert.equal(await page.locator('[data-action="useAbility"]:not([data-special-index])').count(),0);
+ console.log('Headless Edge: heavy-weapon and extra-Wound fields populated; one Special Ability button, no duplicate generic cost button.');
+}finally{await browser.close();}

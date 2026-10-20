@@ -1,37 +1,39 @@
-import {useConsumable} from './consumables.mjs?v=0.1.40';
-import {CULTIVATION_DETAILS} from './cultivations.mjs?v=0.1.40';
-import {grantSnapshot} from './job-grants.mjs?v=0.1.40';
-import {defaultItemIcon} from './item-icons.mjs?v=0.1.40';
-import {abilityView,isAbility,isInternalized} from './ability-state.mjs?v=0.1.40';
-import {armorTrack} from './health.mjs?v=0.1.40';
-import {inflictedConditions,resolveOngoing} from './mod-conditions.mjs?v=0.1.40';
-import {useAbility,resourceSymbols,AREA_SHAPES} from "./abilities.mjs?v=0.1.40";
-import {RANKS,licenseIdentity,licenseLabel} from "./licenses.mjs?v=0.1.40";
-import {RARITIES} from "./rarity.mjs?v=0.1.40";
-import {interruptAttack} from "./interrupt.mjs?v=0.1.40";
-import {activatePanel,sheetPanel,openCompendium} from "./sheet-navigation.mjs?v=0.1.40";
-import {resolveDefense,recentAttacks,escapeHTML} from "./resolution.mjs?v=0.1.40";
-import {CONDITIONS,assertAction,restChanges} from "./conditions.mjs?v=0.1.40";
-import { sixesHTML, requireFreeHand, wieldedWeapons, tagBonus, inSamadhi, enterSamadhi } from "./roll-support.mjs?v=0.1.40";
-import { attackCultivation, combatModifiers } from "./combat.mjs?v=0.1.40";
-import { healthSutra } from "./health.mjs?v=0.1.40";
-import { createEffect, editEffect, toggleEffect, removeEffect, effectRows } from "./effects.mjs?v=0.1.40";
-import { editorValue, enriched } from "./rich-text.mjs?v=0.1.40";
-import { slotSummary } from "./slots.mjs?v=0.1.40";
-import { AMMO_CHOICES, AMMO_FAMILIES } from "./ammunition.mjs?v=0.1.40";
-import { MODIFIER_CHOICES, modifierProfile, AFFINITIES } from "./modifiers.mjs?v=0.1.40";
-import { UPGRADE_CHOICES, weaponDetails, validateWeapon, installMod } from "./weapons.mjs?v=0.1.40";
-import { LICENSE_CHOICES, LICENSE_DENIED, qualifiesForLicense } from "./licenses.mjs?v=0.1.40";
-import { applyJobToActor } from "./jobs.mjs?v=0.1.40";
-import { CULTIVATIONS, checkFormula, summarizeCheck } from "./rules.mjs?v=0.1.40";
+import {WEAPON_REQUIREMENTS} from './special-abilities.mjs?v=0.1.45';
+import {animationContext,playItemAnimation} from './animations.mjs?v=0.1.45';
+import {useConsumable} from './consumables.mjs?v=0.1.45';
+import {CULTIVATION_DETAILS} from './cultivations.mjs?v=0.1.45';
+import {grantSnapshot} from './job-grants.mjs?v=0.1.45';
+import {defaultItemIcon} from './item-icons.mjs?v=0.1.45';
+import {abilityView,isAbility,isInternalized} from './ability-state.mjs?v=0.1.45';
+import {armorTrack} from './health.mjs?v=0.1.45';
+import {inflictedConditions,resolveOngoing} from './mod-conditions.mjs?v=0.1.45';
+import {useAbility,resourceSymbols,AREA_SHAPES} from "./abilities.mjs?v=0.1.45";
+import {RANKS,licenseIdentity,licenseLabel} from "./licenses.mjs?v=0.1.45";
+import {RARITIES} from "./rarity.mjs?v=0.1.45";
+import {interruptAttack} from "./interrupt.mjs?v=0.1.45";
+import {activatePanel,sheetPanel,openCompendium} from "./sheet-navigation.mjs?v=0.1.45";
+import {resolveDefense,recentAttacks,escapeHTML} from "./resolution.mjs?v=0.1.45";
+import {CONDITIONS,assertAction,restChanges} from "./conditions.mjs?v=0.1.45";
+import { sixesHTML, requireFreeHand, wieldedWeapons, tagBonus, inSamadhi, enterSamadhi } from "./roll-support.mjs?v=0.1.45";
+import { attackCultivation, combatModifiers } from "./combat.mjs?v=0.1.45";
+import { healthSutra } from "./health.mjs?v=0.1.45";
+import { createEffect, editEffect, toggleEffect, removeEffect, effectRows } from "./effects.mjs?v=0.1.45";
+import { editorValue, enriched } from "./rich-text.mjs?v=0.1.45";
+import { slotSummary } from "./slots.mjs?v=0.1.45";
+import { AMMO_CHOICES, AMMO_FAMILIES } from "./ammunition.mjs?v=0.1.45";
+import { MODIFIER_CHOICES, modifierProfile, AFFINITIES } from "./modifiers.mjs?v=0.1.45";
+import { UPGRADE_CHOICES, weaponDetails, validateWeapon, installMod } from "./weapons.mjs?v=0.1.45";
+import { LICENSE_CHOICES, LICENSE_DENIED, qualifiesForLicense } from "./licenses.mjs?v=0.1.45";
+import { applyJobToActor } from "./jobs.mjs?v=0.1.45";
+import { CULTIVATIONS, checkFormula, summarizeCheck } from "./rules.mjs?v=0.1.45";
 
-import { boundedResources, resourceLimits } from "./resources.mjs?v=0.1.40";
+import { boundedResources, resourceLimits } from "./resources.mjs?v=0.1.45";
 
-import { preserveAndLinkWanderer } from "./token-linking.mjs?v=0.1.40";
+import { preserveAndLinkWanderer } from "./token-linking.mjs?v=0.1.45";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 
-export const SHEET_CODE_VERSION = "0.1.40";
+export const SHEET_CODE_VERSION = "0.1.43";
 
 export class SwordsActorSheet extends HandlebarsApplicationMixin(foundry.applications.sheets.ActorSheetV2) {
 
@@ -86,7 +88,7 @@ export class SwordsActorSheet extends HandlebarsApplicationMixin(foundry.applica
     return Object.assign(context, {
 
       armorTrack:armorTrack(this.document.system.armor),
-      specialAttackRows:sorted.filter(i=>(i.type==='technique'?!(i.system.installArdor>0)||isInternalized(i):['fashion','weapon'].includes(i.type)&&i.system.equipped)).flatMap(i=>(i.system.specialAttacks??[]).map((a,index)=>({...a,itemId:i.id,itemName:i.name,index,actionLabel:a.mode==='automatic'?'Activate':a.mode==='check'?'Check':'Attack'}))),
+      specialAttackRows:sorted.filter(i=>i.type==='technique'||['fashion','weapon'].includes(i.type)&&i.system.equipped).flatMap(i=>(i.system.specialAttacks??[]).map((a,index)=>({...a,itemId:i.id,itemName:i.name,index,actionLabel:a.mode==='automatic'?'Activate':a.mode==='check'?'Check':'Attack'})).filter(a=>i.type!=='technique'||(a.activation?!isInternalized(i):!(i.system.installArdor>0)||isInternalized(i)))),
       conditionRows:Object.entries(CONDITIONS).map(([key,description])=>({key,label:key[0].toUpperCase()+key.slice(1),description,active:!!source.conditions?.[key]})),
       ...resourceSymbols(this.document.system), actor: this.document,isWorldBeing:this.document.type==='npc',effectiveMovement:this.document.system.movement, samadhiActive:inSamadhi(this.document), system: source, sutra:healthSutra(this.document.system.health), effectiveSummary:effective.join("; "),
       notesEditor:foundry.utils.cleanHTML(editorValue(source.notes)), notesHTML:await enriched(source.notes,this.document), effects:effectRows(this.document), gearSlots:slotSummary(sorted), codeVersion: SHEET_CODE_VERSION,
@@ -565,14 +567,16 @@ export class SwordsActorSheet extends HandlebarsApplicationMixin(foundry.applica
     try {samadhiNotice=await enterSamadhi(this.document,result.sixes);}catch(error){ui.notifications.warn(error.message);}
     modifierText+=`<p>${sixesHTML(result.sixes)}${situationalTags?`; weapon task bonus: +${situationalTags}`:''}</p>${samadhiNotice}`;
     if(target.dataset.magickId) modifierText+=`<p>${escape(casting.name)}: casting check. Resolve its listed costs and effects separately.</p>`;
-    await roll.toMessage({
+    const animation=animationContext(this.document);
+    const animationMessage=await roll.toMessage({
 
-      flags:weapon?{"10kswordsfoundry":{attack:{name:weapon.name,results,profile,actorUuid:this.document.uuid}}}:{},
+      flags:weapon?{"10kswordsfoundry":{animationHandled:true,attack:{name:weapon.name,results,profile,actorUuid:this.document.uuid}}}:{},
       speaker: foundry.documents.ChatMessage.getSpeaker({ actor: this.document }),
 
       flavor: `${input.attack ? `${escape(weapon.name)} — ${CULTIVATIONS[rollKey]} Attack: ${result.strikes} total Strikes (${result.strikes-result.sixes} ordinary; ${result.sixes} Perfect Strikes). Weapon bonus: ${weaponBonus}. Miscellaneous: ${input.adjustment>=0?'+':''}${input.adjustment}. Roll once; resolve Defense separately for ${combat.targets} target(s).` : `${CULTIVATIONS[rollKey]}: ${result.strikes} Strikes / Demand ${input.demand} - ${result.success ? "Success" : "Failure"}. Sixes: ${result.sixes}.`} Adjusted pool: ${pool}.${sutra.penalty ? ` ${sutra.status}: ${sutra.penalty} dice.` : ""} ${pool <= 0 ? `Fallback: roll 2d6 and keep the lower die (${formula}). Only the kept die counts.` : `Roll: ${formula}.`}${modifierText}`
 
     }, { messageMode: game.settings.get("core", "messageMode") });
+    if(weapon)void playItemAnimation(animation,weapon,animationMessage);
     if(actionCost) {
       try {await this.document.update({"system.actions":Math.max(0,(this.document.toObject().system.actions??3)-actionCost)});}
       catch(error) {ui.notifications.warn("Roll completed, but Actions could not be saved. Adjust Actions manually.");}
@@ -710,7 +714,7 @@ export class SwordsItemSheet extends HandlebarsApplicationMixin(foundry.applicat
     const system = this.document.toObject?.().system ?? this.document.system;
     return Object.assign(await super._prepareContext(options), {
       abilityModes:{attack:'Attack',check:'Check',automatic:'Automatic (no roll)'},targetEffectChoices:{'':'None','system.attackBonus':'Attack dice','system.defenseBonus':'Defense dice','system.checkBonus':'All check dice','system.movement':'Movement'},
-      hasSpecialAttacks:['fashion','technique','weapon'].includes(this.document.type),specialAttacks:this.document.system.specialAttacks??[],damageChoices:{cut:'Cut',impact:'Impact',burn:'Burn',trauma:'Trauma',ruination:'Ruination'},
+      weaponRequirements:WEAPON_REQUIREMENTS,hasSpecialAttacks:['fashion','technique','weapon'].includes(this.document.type),specialAttacks:this.document.system.specialAttacks??[],damageChoices:{cut:'Cut',impact:'Impact',burn:'Burn',trauma:'Trauma',ruination:'Ruination'},
       item: this.document, system:this.document.type==='license'?{...system,...licenseIdentity(system)}:system, rankChoices:RANKS,areaChoices:AREA_SHAPES, poolChoices:CULTIVATIONS, isConsumableGear:this.document.type==='gear',isGear:['gear','salvage'].includes(this.document.type),isGambit:this.document.type==='gambit',isTrait:this.document.type==='trait',showRarity:!['trait','job','technique','magick','license','gambit'].includes(this.document.type),isAbility:['magick','technique'].includes(this.document.type),isMagick:this.document.type==='magick', rarityChoices:RARITIES,
       descriptionEditor:foundry.utils.cleanHTML(editorValue(system.description)), descriptionHTML:await enriched(system.description,this.document), effects:effectRows(this.document),
       gearSlotChoices:this.document.type==='weapon'?{carry:'Auto hand',right:'Right Hand',left:'Left Hand',both:'Both Hands'}:{carry:'Carry',right:'Right Hand',left:'Left Hand',both:'Both Hands',fashion:'Fashion'},
@@ -745,5 +749,5 @@ export class SwordsItemSheet extends HandlebarsApplicationMixin(foundry.applicat
 
 }
 
-import { queueEquipment, changeEquipment, EQUIPMENT_TYPES, attackBonus, useWeapon, addEquipment } from "./equipment.mjs?v=0.1.40";
+import { queueEquipment, changeEquipment, EQUIPMENT_TYPES, attackBonus, useWeapon, addEquipment } from "./equipment.mjs?v=0.1.45";
 

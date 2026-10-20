@@ -38,4 +38,4 @@ export function ammoAfterUse(system) {
   if (!Number.isSafeInteger(system.ammo.quantity) || system.ammo.quantity <= 0) throw new Error(OUT_OF_AMMO);
   return system.ammo.quantity-1;
 }
-import { modifierProfile, modifierKeys } from "./modifiers.mjs?v=0.1.40";
+import { modifierProfile, modifierKeys } from "./modifiers.mjs?v=0.1.45";

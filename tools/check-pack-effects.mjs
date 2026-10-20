@@ -15,7 +15,7 @@ const warnings=[];
 const expand=vm.runInNewContext(`(${code.slice(begin,end)})`,{global:{logger:{warn:m=>warnings.push(m)}},LevelDatabase:{formatKey:(...parts)=>parts.join('.')}});
 const packRoot=process.argv[2]??'packs';
 let count=0;
-for(const name of ['non-sect-items','grimoire-traits']){
+for(const name of ['non-sect-items','grimoire-traits','sect-licenses','sect-technicks','sect-magicks']){
  const source=JSON.parse(await readFile(`data/${name}.json`,'utf8'));
  const database=new ClassicLevel(resolve(packRoot,name),{keyEncoding:'utf8',valueEncoding:'json'});
  await database.open();

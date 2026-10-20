@@ -1,12 +1,12 @@
-import {recentAttacks,escapeHTML,clashDice,resolveDefense} from './resolution.mjs?v=0.1.40';
-import {assertAction} from './conditions.mjs?v=0.1.40';
-import {wieldedWeapons,inSamadhi,enterSamadhi,sixesHTML,tagBonus} from './roll-support.mjs?v=0.1.40';
-import {attackCultivation} from './combat.mjs?v=0.1.40';
-import {modifierProfile} from './modifiers.mjs?v=0.1.40';
-import {weaponDetails} from './weapons.mjs?v=0.1.40';
-import {useWeapon} from './equipment.mjs?v=0.1.40';
-import {healthSutra} from './health.mjs?v=0.1.40';
-import {CULTIVATIONS,checkFormula,summarizeCheck} from './rules.mjs?v=0.1.40';
+import {recentAttacks,escapeHTML,clashDice,resolveDefense} from './resolution.mjs?v=0.1.45';
+import {assertAction} from './conditions.mjs?v=0.1.45';
+import {wieldedWeapons,inSamadhi,enterSamadhi,sixesHTML,tagBonus} from './roll-support.mjs?v=0.1.45';
+import {attackCultivation} from './combat.mjs?v=0.1.45';
+import {modifierProfile} from './modifiers.mjs?v=0.1.45';
+import {weaponDetails} from './weapons.mjs?v=0.1.45';
+import {useWeapon} from './equipment.mjs?v=0.1.45';
+import {healthSutra} from './health.mjs?v=0.1.45';
+import {CULTIVATIONS,checkFormula,summarizeCheck} from './rules.mjs?v=0.1.45';
 export async function interruptAttack() {
  if(!this.isEditable||this._interrupting) return;
  this._interrupting=true;
@@ -20,6 +20,7 @@ export async function interruptAttack() {
   if(!input) return;
   const message=attacks.find(m=>m.id===input.attack);if(!message?.isContentVisible) throw new Error('That attack is no longer visible.');
   const incoming=message.getFlag('10kswordsfoundry','attack');
+  if(incoming.profile?.uninterruptible)throw Error('This attack is Uninterruptible.');
   if(!Number.isSafeInteger(input.adjustment)||!Object.hasOwn(CULTIVATIONS,input.key)) throw new Error('Choose a Cultivation and whole-number adjustment.');
   if(input.disarm&&incoming.profile.keys?.includes('worn')) throw new Error('Worn: this weapon cannot be disarmed.');
   const perform=async(weapon=null,ammo=null)=>{

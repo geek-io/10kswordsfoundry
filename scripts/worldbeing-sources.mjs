@@ -1,4 +1,4 @@
-import {parseWorldBeings} from './worldbeing-import.mjs?v=0.1.40';
+import {parseWorldBeings} from './worldbeing-import.mjs?v=0.1.45';
 // Index first; only fetch full compendium documents actually used by this preview.
 export async function previewWorldBeings(texts){
  const candidates=[],failures=[];

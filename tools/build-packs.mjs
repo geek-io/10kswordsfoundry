@@ -4,7 +4,7 @@ import {resolve} from 'node:path';
 import assert from 'node:assert/strict';
 const require=createRequire('C:/Program Files/Foundry Virtual Tabletop/resources/app/package.json');
 const {ClassicLevel}=require('classic-level');
-for(const pack of ['non-sect-items','grimoire-traits']) {
+for(const pack of ['non-sect-items','grimoire-traits','sect-licenses','sect-technicks','sect-magicks']) {
 const source=JSON.parse(await readFile(`data/${pack}.json`,'utf8'));
 await mkdir('packs',{recursive:true});
 const database=new ClassicLevel(resolve(`packs/${pack}`),{keyEncoding:'utf8',valueEncoding:'json'});

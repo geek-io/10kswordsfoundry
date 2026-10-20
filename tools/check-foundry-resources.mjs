@@ -46,6 +46,10 @@ FieldEffect.applyChangeField(effectActor,{key:"system.cultivations.vio",type:"ad
 assert.equal(effectActor.system.cultivations.vio,4);
 assert.equal(effectActor.system.toObject().cultivations.vio,2);
 console.log("Foundry Active Effect field application changes prepared Cultivations without changing saved base ratings.");
+const areaActor={system:new SwordsActorData({})};
+FieldEffect.applyChangeField(areaActor,{key:'system.magickAreaBonus',type:'add',value:1},{field:areaActor.system.getFieldForProperty('magickAreaBonus')});
+assert.equal(areaActor.system.magickAreaBonus,1);assert.equal(areaActor.system.toObject().magickAreaBonus,0);
+console.log('Hermetic Robes area bonus applies through the real Foundry Active Effect field engine without persisting into the base actor.');
 const weaponModel=new SwordsWeaponData({upgrade:"divine",ammo:{type:"Arrow",quantity:2},mods:[{slot:0,name:"Precise",description:"Reroll 1s"}]},{strict:true});
 assert.equal(weaponModel.toObject().ammo.quantity,2);
 assert.equal(weaponModel.dr,12);

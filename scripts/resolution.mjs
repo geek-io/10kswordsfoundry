@@ -1,12 +1,12 @@
 // p.66: only Perfect Defenses cancel Critical Strikes.
 export function resolveDefense(attack,defenseResults,armor=0,conditions={}) {
  const profile=attack.profile;
- const cost=die=>1+(profile.extraWounds??0)+(die===6?(profile.criticalExtra??0):0)+(die>=5?(profile.fivePlusExtra??0):0);
+ const cost=die=>1+(profile.extraWounds??0)+(die===6||profile.allCritical?(profile.criticalExtra??0):0)+(die>=5?(profile.fivePlusExtra??0):0);
  let perfect=defenseResults.filter(n=>n===6).length;
  let normal=defenseResults.filter(n=>n===4||n===5).length;
- const critical=attack.results.filter(n=>n===6);
+ const critical=attack.results.filter(n=>profile.allCritical?n>=4:n===6).sort((a,b)=>cost(b)-cost(a));
  const cancelledCritical=Math.min(perfect,critical.length);perfect-=cancelledCritical;
- const ordinary=attack.results.filter(n=>n===4||n===5).sort((a,b)=>cost(b)-cost(a));
+ const ordinary=attack.results.filter(n=>!profile.allCritical&&(n===4||n===5)).sort((a,b)=>cost(b)-cost(a));
  const survivors=[...critical.slice(cancelledCritical),...ordinary.slice(normal+perfect)];
  const wounds=survivors.reduce((sum,die)=>sum+cost(die),0)+(survivors.length&&conditions.lacerating?1:0);
  const armorCost=profile.armorPerWound??1;

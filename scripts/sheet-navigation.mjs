@@ -17,4 +17,4 @@ export function activatePanel(sheet,panel) {
  }
 }
 export function sheetPanel(event,target){activatePanel(this,target.dataset.panel);}
-export async function openCompendium(){const {openLibrary}=await import('./browser.mjs?v=0.1.40');return openLibrary();}
+export async function openCompendium(){const {openLibrary}=await import('./browser.mjs?v=0.1.45');return openLibrary();}

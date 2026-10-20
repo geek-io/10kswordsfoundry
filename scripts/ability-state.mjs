@@ -1,6 +1,6 @@
 export const isAbility=item=>['technique','magick'].includes(item?.type);
 export const isInternalized=item=>isAbility(item)&&!!item.system.equipped&&(item.system.paidArdor??0)>0;
-export function abilityView(item){return {id:item.id,name:item.name,system:item.system,internalized:isInternalized(item),actionLabel:(item.system.installArdor??0)>0?'Internalize':'Activate'};}
+export function abilityView(item){return {id:item.id,name:item.name,system:item.system,configuredActions:(item.flags?.['10kswordsfoundry']?.sectCatalog?.specialAbilitiesVersion??0)>=43,internalized:isInternalized(item),actionLabel:(item.system.installArdor??0)>0?'Internalize':'Activate'};}
 export function installationChanges(actorSource,itemId,amount){
  const items=structuredClone(actorSource.items);
  const item=items.find(i=>i._id===itemId);

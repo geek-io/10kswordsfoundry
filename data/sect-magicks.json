@@ -1,0 +1,2174 @@
+{
+  "folders": [
+    {
+      "_id": "db957156bda82445",
+      "name": "Aswang",
+      "folder": null,
+      "type": "Item",
+      "sorting": "m",
+      "sort": 0,
+      "color": null
+    },
+    {
+      "_id": "f666dc56d108a4b8",
+      "name": "Master",
+      "folder": "db957156bda82445",
+      "type": "Item",
+      "sorting": "a",
+      "sort": 200000,
+      "color": null
+    },
+    {
+      "_id": "315b900e2436d490",
+      "name": "Eschatonian",
+      "folder": null,
+      "type": "Item",
+      "sorting": "m",
+      "sort": 0,
+      "color": null
+    },
+    {
+      "_id": "4a0f816060834f27",
+      "name": "Novice",
+      "folder": "315b900e2436d490",
+      "type": "Item",
+      "sorting": "a",
+      "sort": 0,
+      "color": null
+    },
+    {
+      "_id": "a7bd4a3cfa65aae7",
+      "name": "Expert",
+      "folder": "315b900e2436d490",
+      "type": "Item",
+      "sorting": "a",
+      "sort": 100000,
+      "color": null
+    },
+    {
+      "_id": "ed6cfeb110820540",
+      "name": "Master",
+      "folder": "315b900e2436d490",
+      "type": "Item",
+      "sorting": "a",
+      "sort": 200000,
+      "color": null
+    },
+    {
+      "_id": "5898c908c74a9fd7",
+      "name": "Immanent",
+      "folder": null,
+      "type": "Item",
+      "sorting": "m",
+      "sort": 0,
+      "color": null
+    },
+    {
+      "_id": "b7971e5c9f10be5e",
+      "name": "Novice",
+      "folder": "5898c908c74a9fd7",
+      "type": "Item",
+      "sorting": "a",
+      "sort": 0,
+      "color": null
+    },
+    {
+      "_id": "9a548552da6a8d53",
+      "name": "Expert",
+      "folder": "5898c908c74a9fd7",
+      "type": "Item",
+      "sorting": "a",
+      "sort": 100000,
+      "color": null
+    },
+    {
+      "_id": "b8a737f52302f56f",
+      "name": "Master",
+      "folder": "5898c908c74a9fd7",
+      "type": "Item",
+      "sorting": "a",
+      "sort": 200000,
+      "color": null
+    },
+    {
+      "_id": "f60cf1120309e3bd",
+      "name": "Jyotisha",
+      "folder": null,
+      "type": "Item",
+      "sorting": "m",
+      "sort": 0,
+      "color": null
+    },
+    {
+      "_id": "9965ec33c7156535",
+      "name": "Novice",
+      "folder": "f60cf1120309e3bd",
+      "type": "Item",
+      "sorting": "a",
+      "sort": 0,
+      "color": null
+    },
+    {
+      "_id": "35eae33552cf66a0",
+      "name": "Expert",
+      "folder": "f60cf1120309e3bd",
+      "type": "Item",
+      "sorting": "a",
+      "sort": 100000,
+      "color": null
+    },
+    {
+      "_id": "70c7219577a751c9",
+      "name": "Master",
+      "folder": "f60cf1120309e3bd",
+      "type": "Item",
+      "sorting": "a",
+      "sort": 200000,
+      "color": null
+    },
+    {
+      "_id": "0456ef410a74050b",
+      "name": "Katalonan",
+      "folder": null,
+      "type": "Item",
+      "sorting": "m",
+      "sort": 0,
+      "color": null
+    },
+    {
+      "_id": "644057316cd21cfd",
+      "name": "Novice",
+      "folder": "0456ef410a74050b",
+      "type": "Item",
+      "sorting": "a",
+      "sort": 0,
+      "color": null
+    },
+    {
+      "_id": "aa32407da891f535",
+      "name": "Expert",
+      "folder": "0456ef410a74050b",
+      "type": "Item",
+      "sorting": "a",
+      "sort": 100000,
+      "color": null
+    },
+    {
+      "_id": "99ce5272f22a0178",
+      "name": "Master",
+      "folder": "0456ef410a74050b",
+      "type": "Item",
+      "sorting": "a",
+      "sort": 200000,
+      "color": null
+    },
+    {
+      "_id": "ead4fcd8d7dfca90",
+      "name": "Sword Dialectician",
+      "folder": null,
+      "type": "Item",
+      "sorting": "m",
+      "sort": 0,
+      "color": null
+    },
+    {
+      "_id": "fc232c01fb6fa60c",
+      "name": "Master",
+      "folder": "ead4fcd8d7dfca90",
+      "type": "Item",
+      "sorting": "a",
+      "sort": 200000,
+      "color": null
+    },
+    {
+      "_id": "acbb9667795e3b44",
+      "name": "Techgnostic",
+      "folder": null,
+      "type": "Item",
+      "sorting": "m",
+      "sort": 0,
+      "color": null
+    },
+    {
+      "_id": "e2bcd2cb709ac9a2",
+      "name": "Novice",
+      "folder": "acbb9667795e3b44",
+      "type": "Item",
+      "sorting": "a",
+      "sort": 0,
+      "color": null
+    },
+    {
+      "_id": "1441e81e882d7c81",
+      "name": "Expert",
+      "folder": "acbb9667795e3b44",
+      "type": "Item",
+      "sorting": "a",
+      "sort": 100000,
+      "color": null
+    },
+    {
+      "_id": "3718c9a4f9dc3f3d",
+      "name": "Master",
+      "folder": "acbb9667795e3b44",
+      "type": "Item",
+      "sorting": "a",
+      "sort": 200000,
+      "color": null
+    },
+    {
+      "_id": "b4e8bf7e6eeefbb6",
+      "name": "Wukong",
+      "folder": null,
+      "type": "Item",
+      "sorting": "m",
+      "sort": 0,
+      "color": null
+    },
+    {
+      "_id": "ddb7a83de621cd00",
+      "name": "Expert",
+      "folder": "b4e8bf7e6eeefbb6",
+      "type": "Item",
+      "sorting": "a",
+      "sort": 100000,
+      "color": null
+    },
+    {
+      "_id": "2dbdc1c36d889d7a",
+      "name": "Master",
+      "folder": "b4e8bf7e6eeefbb6",
+      "type": "Item",
+      "sorting": "a",
+      "sort": 200000,
+      "color": null
+    },
+    {
+      "_id": "964d2dc9497c3afb",
+      "name": "Zhongkui",
+      "folder": null,
+      "type": "Item",
+      "sorting": "m",
+      "sort": 0,
+      "color": null
+    },
+    {
+      "_id": "c15c44079e9f12a1",
+      "name": "Novice",
+      "folder": "964d2dc9497c3afb",
+      "type": "Item",
+      "sorting": "a",
+      "sort": 0,
+      "color": null
+    },
+    {
+      "_id": "276c9b63416ae721",
+      "name": "Expert",
+      "folder": "964d2dc9497c3afb",
+      "type": "Item",
+      "sorting": "a",
+      "sort": 100000,
+      "color": null
+    }
+  ],
+  "items": [
+    {
+      "_id": "10f554bca9b03274",
+      "name": "Monster-Shifting",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SAV 5, GRC 5, SPI 5, VIO 3, SIDHI 4</p><p>…all things in this world are but fabrications of the human mind.</p><p>[❂❂][✦] The Aswang can take on the shape of entities and beings that she has eaten or had sex with before. She largely preserves her traits and statistics while in this other form. Eating another entity’s Flesh recovers 1 burnt Ardor or heals 1 Health. It can also fill the Protein requirement for a full meal. [❂❂❂❂] The Aswang can reach out and install 4 Ardor to shape the flesh of another entity. If they’re willing, this goes smoothly. If not, this becomes a Magick attack: VIO vs SPI. Inflicts RUINATIONS and upon wounding, the caster may forcibly shape their flesh.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.35b5272b723a645b]{Monster-Shifting}</p>",
+        "source": "Rules 2.0.3, p.133",
+        "tags": "Aswang, Master, Magick",
+        "sect": "Aswang",
+        "rank": "master",
+        "sidhi": 4,
+        "apCost": 1,
+        "burnArdor": 0,
+        "installArdor": 2,
+        "equipped": false,
+        "mudraHands": 1,
+        "attackPool": "vio",
+        "defensePool": "spi",
+        "damageType": "ruination"
+      },
+      "folder": "f666dc56d108a4b8",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 133,
+            "rank": "master",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.35b5272b723a645b",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.10f554bca9b03274",
+            "printedType": "magick",
+            "prerequisiteText": "SAV 5, GRC 5, SPI 5, VIO 3, SIDHI 4"
+          }
+        }
+      }
+    },
+    {
+      "_id": "e93b6b368da90441",
+      "name": "Scathe",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: DIA 3, SPI 2</p><p>The Eschatonian Sect was constructed by the Scarlet Cadre. Those who followed the Metteya Scriptures, the Future Enlightened One, who will turn the Wheel, and face the world back to the Law.</p><p>Mantra: LAGYAB VARAM Mudra: Earth → Heat → Spear [✹][✦✦] Summon a 1m burst thermonuclear explosion within 6m. DIA VS SPI MAGICK ATTACK (+2 ATK, BURNS).</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.15810be069b0a53c]{Scathe}</p>",
+        "source": "Rules 2.0.3, p.135",
+        "tags": "Eschatonian, Novice, Magick",
+        "sect": "Eschatonian",
+        "rank": "novice",
+        "sidhi": 0,
+        "apCost": 2,
+        "burnArdor": 1,
+        "installArdor": 0,
+        "equipped": false,
+        "mantra": "LAGYAB VARAM",
+        "mudra": "Earth → Heat → Spear",
+        "mudraHands": 2,
+        "attackPool": "dia",
+        "defensePool": "spi",
+        "bonus": 2,
+        "damageType": "burn",
+        "areaShape": "circle",
+        "areaSize": 1
+      },
+      "folder": "4a0f816060834f27",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 135,
+            "rank": "novice",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.15810be069b0a53c",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.e93b6b368da90441",
+            "printedType": "magick",
+            "prerequisiteText": "DIA 3, SPI 2"
+          }
+        }
+      }
+    },
+    {
+      "_id": "da5d16c8503ce3ef",
+      "name": "Scour",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: DIA 3, SPI 2</p><p>A magick where you take away the heat in a particular locality to accelerate entropy.</p><p>Mantra: TEGUS VARAM Mudra: Heaven → Stillness → Intent [✹][✦✦] Take away the heat and accelerate entropy in a 1m burst within 6m. DIA VS SPI MAGICK ATTACK: (+2 ATK, CUTS, inflicts HOBBLE upon Wounding as chill frosts the targets.).</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.7e2ea9e165621f79]{Scour}</p>",
+        "source": "Rules 2.0.3, p.135",
+        "tags": "Eschatonian, Novice, Magick",
+        "sect": "Eschatonian",
+        "rank": "novice",
+        "sidhi": 0,
+        "apCost": 2,
+        "burnArdor": 1,
+        "installArdor": 0,
+        "equipped": false,
+        "mantra": "TEGUS VARAM",
+        "mudra": "Heaven → Stillness → Intent",
+        "mudraHands": 2,
+        "attackPool": "dia",
+        "defensePool": "spi",
+        "bonus": 2,
+        "damageType": "cut",
+        "areaShape": "circle",
+        "areaSize": 1
+      },
+      "folder": "4a0f816060834f27",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 135,
+            "rank": "novice",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.7e2ea9e165621f79",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.da5d16c8503ce3ef",
+            "printedType": "magick",
+            "prerequisiteText": "DIA 3, SPI 2"
+          }
+        }
+      }
+    },
+    {
+      "_id": "4e5461127f4bf134",
+      "name": "Shock",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: DIA 3, SPI 2</p><p>The Commission of Battle Magick received the consent of oppressed masters everywhere to craft a revolutionary battle magick, from the depths of sea caves to the peaks of mountain retreats.</p><p>Mantra: KISLAP VARAM Mudra: Noose → Stillness [✹][✦✦] Ionize a 1m burst area within 6m. DIA VS SPI MAGICK ATTACK: +1 ATK, BURNS and inflicts STUN upon Wounding.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.1b5866bd13baebae]{Shock}</p>",
+        "source": "Rules 2.0.3, p.135",
+        "tags": "Eschatonian, Novice, Magick",
+        "sect": "Eschatonian",
+        "rank": "novice",
+        "sidhi": 0,
+        "apCost": 2,
+        "burnArdor": 1,
+        "installArdor": 0,
+        "equipped": false,
+        "mantra": "KISLAP VARAM",
+        "mudra": "Noose → Stillness",
+        "mudraHands": 2,
+        "attackPool": "dia",
+        "defensePool": "spi",
+        "bonus": 1,
+        "damageType": "burn",
+        "areaShape": "circle",
+        "areaSize": 1
+      },
+      "folder": "4a0f816060834f27",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 135,
+            "rank": "novice",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.1b5866bd13baebae",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.4e5461127f4bf134",
+            "printedType": "magick",
+            "prerequisiteText": "DIA 3, SPI 2"
+          }
+        }
+      }
+    },
+    {
+      "_id": "6e3eaa6833fae795",
+      "name": "Self-Furnace",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: DIA 4, SPI 3, SIDHI 1</p><p>They dance on the knifeʼs edge: most traitor Eschatonians become jobbers for the high military. for HAECO or for Amatsu. The communist party needs their explosive power the most.</p><p>The Cultivator can now burn her Health or install her Health in place of Ardor when she uses her Esoteric Techniques. She cannot install Health that would leave her at 0. However, if she burns her Health and that brings her to 0, she stays standing for another Round before collapsing. Any attacks made with Techniques from burnt health gain +2 ATK.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.fe2c0018cbcb5924]{Self-Furnace}</p>",
+        "source": "Rules 2.0.3, p.136",
+        "tags": "Eschatonian, Expert, Magick",
+        "sect": "Eschatonian",
+        "rank": "expert",
+        "sidhi": 1,
+        "apCost": 0,
+        "burnArdor": 0,
+        "installArdor": 0,
+        "equipped": false,
+        "mudraHands": 1
+      },
+      "folder": "a7bd4a3cfa65aae7",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 136,
+            "rank": "expert",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.fe2c0018cbcb5924",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.6e3eaa6833fae795",
+            "printedType": "magick",
+            "prerequisiteText": "DIA 4, SPI 3, SIDHI 1"
+          }
+        }
+      }
+    },
+    {
+      "_id": "d80b2adbc74d9fb1",
+      "name": "Seethe",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: DIA 4, SPI 3, SIDHI 1</p><p>Even the vaunted Batara Kala, an ancient Deity who has ascended to one of the Deepest Heavens returned to teach his Carving Magick.</p><p>Mantra: RIPOR VARAM Mudra: Heaven → Man → Earth → Noose [✹][✦✦] Overload neurons in a 1m burst within 6m. DIA VS SPI MAGICK ATTACK: +1 ATK, TRAUMA and inflicts DAZE upon Wounding.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.d9df1aed6707fa08]{Seethe}</p>",
+        "source": "Rules 2.0.3, p.136",
+        "tags": "Eschatonian, Expert, Magick",
+        "sect": "Eschatonian",
+        "rank": "expert",
+        "sidhi": 1,
+        "apCost": 2,
+        "burnArdor": 1,
+        "installArdor": 0,
+        "equipped": false,
+        "mantra": "RIPOR VARAM",
+        "mudra": "Heaven → Man → Earth → Noose",
+        "mudraHands": 2,
+        "attackPool": "dia",
+        "defensePool": "spi",
+        "bonus": 1,
+        "damageType": "trauma",
+        "areaShape": "circle",
+        "areaSize": 1
+      },
+      "folder": "a7bd4a3cfa65aae7",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 136,
+            "rank": "expert",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.d9df1aed6707fa08",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.d80b2adbc74d9fb1",
+            "printedType": "magick",
+            "prerequisiteText": "DIA 4, SPI 3, SIDHI 1"
+          }
+        }
+      }
+    },
+    {
+      "_id": "537d4a205849feac",
+      "name": "8 Armed Devil Eschaton Carve",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: DIA 6, VIO 3, SIDHI 3</p><p>Emanate a slash of pure annihilative vajra energy, burgeoning from one's cacotopic soul. Crafted by the 8-Armed Asura, an Annihilation Cult who followed the Sword Law. They believed that focusing eskatonic sidhi into an information-cutting blade is the first step to Enlightenment. They believed that in the destruction can one find love.</p><p>Mantra: IHIVA Mudra: Heaven → Sword [✹][✦✦] 8m. DIA VS SPI MAGICK ATTACK. RUINATIONS. // [+✹✹] Turn this into a 8m long Curve within 8m instead.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.e141ca44bf43d6c5]{8 Armed Devil Eschaton Carve}</p>",
+        "source": "Rules 2.0.3, p.137",
+        "tags": "Eschatonian, Master, Magick",
+        "sect": "Eschatonian",
+        "rank": "master",
+        "sidhi": 3,
+        "apCost": 2,
+        "burnArdor": 1,
+        "installArdor": 0,
+        "equipped": false,
+        "mantra": "IHIVA",
+        "mudra": "Heaven → Sword",
+        "mudraHands": 2,
+        "attackPool": "dia",
+        "defensePool": "spi",
+        "damageType": "ruination"
+      },
+      "folder": "ed6cfeb110820540",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 137,
+            "rank": "master",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.e141ca44bf43d6c5",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.537d4a205849feac",
+            "printedType": "magick",
+            "prerequisiteText": "DIA 6, VIO 3, SIDHI 3"
+          }
+        }
+      }
+    },
+    {
+      "_id": "442ae3bb618d53fe",
+      "name": "Calamity",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: DIA 6, SPI 4, SIDHI 3</p><p>Summon a lance of pure annihilative vajra energy that explodes in a burst of thermobaric ruination.</p><p>Mantra: SAGUNA Mudra: Heaven → Thunderbolt [✹][✦✦] 2m burst within 12m. DIA VS SPI MAGICK ATTACK. +3 ATK. RUINATIONS. BLAZE.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.02718bee3490cb76]{Calamity}</p>",
+        "source": "Rules 2.0.3, p.137",
+        "tags": "Eschatonian, Master, Magick",
+        "sect": "Eschatonian",
+        "rank": "master",
+        "sidhi": 3,
+        "apCost": 2,
+        "burnArdor": 1,
+        "installArdor": 0,
+        "equipped": false,
+        "mantra": "SAGUNA",
+        "mudra": "Heaven → Thunderbolt",
+        "mudraHands": 2,
+        "attackPool": "dia",
+        "defensePool": "spi",
+        "bonus": 3,
+        "damageType": "ruination",
+        "areaShape": "circle",
+        "areaSize": 2
+      },
+      "folder": "ed6cfeb110820540",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 137,
+            "rank": "master",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.02718bee3490cb76",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.442ae3bb618d53fe",
+            "printedType": "magick",
+            "prerequisiteText": "DIA 6, SPI 4, SIDHI 3"
+          }
+        }
+      }
+    },
+    {
+      "_id": "8fd08e7a8ef31771",
+      "name": "Cise",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: DIA 6, SPI 6, SIDHI 3</p><p>The Eschatonian cuts herself out of reality for a moment, apparating again in a different location through advanced entanglement principles.</p><p>Mantra: PARATITYA WARAM Mudra: Heaven → Wheel → Ego-Cutting → Intent → Violence [✹][✦✦] The caster teleports up to x2 her DIA in meters. Beyond that, there’s a 3-in-6 chance of her not appearing for 2d6 days instead. // [+✹] Force this teleportation upon another instead. DIA VS SPI OPPOSED CHECK. On a Success, teleport them up to [x2 DIA]m. On a Failure, only up to 3m.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.9529f46f2b2734e6]{Cise}</p>",
+        "source": "Rules 2.0.3, p.137",
+        "tags": "Eschatonian, Master, Magick",
+        "sect": "Eschatonian",
+        "rank": "master",
+        "sidhi": 3,
+        "apCost": 2,
+        "burnArdor": 1,
+        "installArdor": 0,
+        "equipped": false,
+        "mantra": "PARATITYA WARAM",
+        "mudra": "Heaven → Wheel → Ego-Cutting → Intent → Violence",
+        "mudraHands": 2,
+        "attackPool": "dia",
+        "defensePool": "spi"
+      },
+      "folder": "ed6cfeb110820540",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 137,
+            "rank": "master",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.9529f46f2b2734e6",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.8fd08e7a8ef31771",
+            "printedType": "magick",
+            "prerequisiteText": "DIA 6, SPI 6, SIDHI 3"
+          }
+        }
+      }
+    },
+    {
+      "_id": "75c0f8d853700f28",
+      "name": "Mahakali Halo",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: DIA 6, SPI 3, SIDHI 3</p><p>A manifestation of the Buddha Metteya, and her return heralds the final End of a current World Order and the establishment of a new World Order that is beneficial for the Wretched of the Earth, so that Hingsajagra might finally ascend to the next stage of civilization. To the teachings of the Eschaton, the end is nothing but the Trichiliocosmʼs movement to its next incarnation.</p><p>After casting Magick, the Eschatonian can bring the Omniverse’s Heat Death to the present and obliterate all illusion of time to cast a different Eschatonian Magick immediately by permanently losing 1 max Health. This new Magick cast has +4 dice and recovers all your burnt Ardor after casting. Every use of a MAGICK grants the Eschatonian a VAJRA HALO, up to 3. At 3 VAJRA HALOS, she can consume all of them reflexively to regain 2 burnt Ardor.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.1ce638421e3f9931]{Mahakali Halo}</p>",
+        "source": "Rules 2.0.3, p.137",
+        "tags": "Eschatonian, Master, Magick",
+        "sect": "Eschatonian",
+        "rank": "master",
+        "sidhi": 3,
+        "apCost": 0,
+        "burnArdor": 0,
+        "installArdor": 0,
+        "equipped": false,
+        "mudraHands": 1
+      },
+      "folder": "ed6cfeb110820540",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 137,
+            "rank": "master",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.1ce638421e3f9931",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.75c0f8d853700f28",
+            "printedType": "magick",
+            "prerequisiteText": "DIA 6, SPI 3, SIDHI 3"
+          }
+        }
+      }
+    },
+    {
+      "_id": "2aecd6309894702f",
+      "name": "Balm",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SPI 3, WRD 2</p><p>Immanents are always in a half-Trance state that lets them channel azure Compassion Sidhi to heal the deteriorated into a better state. This ability is half inspired by the indigenous Folk Healers and Shamans of the local islands.</p><p>Mantra: ALMA Mudra: Heaven → Wisdom [✹✹][✦] 6m range. Roll SPI: Heal 1 + 1 per 6 rolled.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.a73262d7370d61fd]{Balm}</p>",
+        "source": "Rules 2.0.3, p.147",
+        "tags": "Immanent, Novice, Magick",
+        "sect": "Immanent",
+        "rank": "novice",
+        "sidhi": 0,
+        "apCost": 1,
+        "burnArdor": 2,
+        "installArdor": 0,
+        "equipped": false,
+        "mantra": "ALMA",
+        "mudra": "Heaven → Wisdom",
+        "mudraHands": 2
+      },
+      "folder": "b7971e5c9f10be5e",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 147,
+            "rank": "novice",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.a73262d7370d61fd",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.2aecd6309894702f",
+            "printedType": "magick",
+            "prerequisiteText": "SPI 3, WRD 2"
+          }
+        }
+      }
+    },
+    {
+      "_id": "e7aa96f98591c421",
+      "name": "Solace",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SPI 3, WRD 2</p><p>To heal more than one requires a heart that is not pure. Compassion does not denote purity. It denotes courage and wisdom. It denotes a soul that has been blackened but still insists on doing good.</p><p>Mantra: ALMAKSHETRA Mudra: Heaven → Wisdom → Dragon [✹✹][✦✦] 6m range. Affects a 1m burst. Roll SPI: Heal 1 + 1 per 6 rolled.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.6c3f4fa58e72b745]{Solace}</p>",
+        "source": "Rules 2.0.3, p.147",
+        "tags": "Immanent, Novice, Magick",
+        "sect": "Immanent",
+        "rank": "novice",
+        "sidhi": 0,
+        "apCost": 2,
+        "burnArdor": 2,
+        "installArdor": 0,
+        "equipped": false,
+        "mantra": "ALMAKSHETRA",
+        "mudra": "Heaven → Wisdom → Dragon",
+        "mudraHands": 2,
+        "areaShape": "circle",
+        "areaSize": 1
+      },
+      "folder": "b7971e5c9f10be5e",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 147,
+            "rank": "novice",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.6c3f4fa58e72b745",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.e7aa96f98591c421",
+            "printedType": "magick",
+            "prerequisiteText": "SPI 3, WRD 2"
+          }
+        }
+      }
+    },
+    {
+      "_id": "734ca685a1c8f9fe",
+      "name": "Aegis Talisman",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SPI 3, WRD 2</p><p>The Immanents became protectors. They spread their knowledges with other places—particularly, Selorong synthesized their Arts with their own Soul Herald practices, creating the new Celestial Restoration Art that can be taught by all, without the need for an innate healing spirit to choose you.</p><p>Mantra: BEDZRA Mudra: Heaven → Earth → Violence [✹][✦] Target gains +1 Armor.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.97371b5c76d656f6]{Aegis Talisman}</p>",
+        "source": "Rules 2.0.3, p.147",
+        "tags": "Immanent, Novice, Magick",
+        "sect": "Immanent",
+        "rank": "novice",
+        "sidhi": 0,
+        "apCost": 1,
+        "burnArdor": 1,
+        "installArdor": 0,
+        "equipped": false,
+        "mantra": "BEDZRA",
+        "mudra": "Heaven → Earth → Violence",
+        "mudraHands": 2
+      },
+      "folder": "b7971e5c9f10be5e",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 147,
+            "rank": "novice",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.97371b5c76d656f6",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.734ca685a1c8f9fe",
+            "printedType": "magick",
+            "prerequisiteText": "SPI 3, WRD 2"
+          }
+        }
+      }
+    },
+    {
+      "_id": "f01cd8b45c876722",
+      "name": "Esrafylian",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SPI 4, WRD 3, SIDHI 1</p><p>Esrafyl is the celestine of healing, protection, and medicine. Sometimes considered a deity. Othertimes considered just a registry angel. He is a powerful entity all the same that sides clandestinely with the Working Class.</p><p>Mantra: ESRAFYLIAN Mudra: Wisdom → Sword [✹✹][✦] 25m range. Lasts for [target’s SPI] minutes. Envelops in a subtle-kinetic barrier: +3 DEF against weapon attacks.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.2ce997ac300f66ff]{Esrafylian}</p>",
+        "source": "Rules 2.0.3, p.148",
+        "tags": "Immanent, Expert, Magick",
+        "sect": "Immanent",
+        "rank": "expert",
+        "sidhi": 1,
+        "apCost": 1,
+        "burnArdor": 2,
+        "installArdor": 0,
+        "equipped": false,
+        "mantra": "ESRAFYLIAN",
+        "mudra": "Wisdom → Sword",
+        "mudraHands": 1
+      },
+      "folder": "9a548552da6a8d53",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 148,
+            "rank": "expert",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.2ce997ac300f66ff",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.f01cd8b45c876722",
+            "printedType": "magick",
+            "prerequisiteText": "SPI 4, WRD 3, SIDHI 1"
+          }
+        }
+      }
+    },
+    {
+      "_id": "39994abd0131c373",
+      "name": "Oryeline",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SPI 4, WRD 3, SIDHI 1</p><p>The Soul Herald practices blended with the Celestial Healer practices to strengthen an allyʼs very body composition. The Astral Seraphic Sidhi of Oryeline burns to protect his allies.</p><p>Mantra: ORYELINE Mudra: Heaven → Thunderbolt [✹✹][✦] 25m. Lasts for [target’s SPI] minutes. Envelops in an esoteric weave-net: +3 DEF against magick attacks.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.02548b55264668aa]{Oryeline}</p>",
+        "source": "Rules 2.0.3, p.148",
+        "tags": "Immanent, Expert, Magick",
+        "sect": "Immanent",
+        "rank": "expert",
+        "sidhi": 1,
+        "apCost": 1,
+        "burnArdor": 2,
+        "installArdor": 0,
+        "equipped": false,
+        "mantra": "ORYELINE",
+        "mudra": "Heaven → Thunderbolt",
+        "mudraHands": 2
+      },
+      "folder": "9a548552da6a8d53",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 148,
+            "rank": "expert",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.02548b55264668aa",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.39994abd0131c373",
+            "printedType": "magick",
+            "prerequisiteText": "SPI 4, WRD 3, SIDHI 1"
+          }
+        }
+      }
+    },
+    {
+      "_id": "4bf90c44c595e938",
+      "name": "Succorous Soul Waters",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SPI 4, WRD 3</p><p>The Celestial Healers became much wanted healers in the Revolutions. There was never a cadre without them. They did this because they knew—the day of the Red Sun was soon.</p><p>Mantra: MULAK LANTA Mudra: Heaven → Earth → Heat [❂❂][✦] Touch someone and alleviate their suffering: as long as the Ardor is installed, they ignore all Health Level Penalties to dice and also remove all Conditions except Encumbered.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.c19e1cc7d08f25ba]{Succorous Soul Waters}</p>",
+        "source": "Rules 2.0.3, p.148",
+        "tags": "Immanent, Expert, Magick",
+        "sect": "Immanent",
+        "rank": "expert",
+        "sidhi": 0,
+        "apCost": 1,
+        "burnArdor": 0,
+        "installArdor": 2,
+        "equipped": false,
+        "mantra": "MULAK LANTA",
+        "mudra": "Heaven → Earth → Heat",
+        "mudraHands": 2
+      },
+      "folder": "9a548552da6a8d53",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 148,
+            "rank": "expert",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.c19e1cc7d08f25ba",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.4bf90c44c595e938",
+            "printedType": "magick",
+            "prerequisiteText": "SPI 4, WRD 3"
+          }
+        }
+      }
+    },
+    {
+      "_id": "1e77ae5820dde9e2",
+      "name": "Diacritical Gnosis",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SPI 4, WRD 4, SIDHI 1</p><p>The Immanents eventually became known as the Divine Hand of the Mountains when they were forced to flee into the mountains after the victory of the Heavenly Bourgeoisie. They compiled all their learnings, magicks, technicks, and inscribed them upon imperishable stone. Then, they kept it within hidden soul caves, sealed by powerful magicks. The secret teaching of one of these stones was found here by a peasant who ventured too far into the mountains. His revolutionary spirit unraveled the seals.</p><p>Mantra: DIA Mudra: Heaven → Wisdom [✹✹][✦✦✦] The Cultivator reduces a long operation or medical treatment to seconds, at a rate of 1 hour into 1 minute.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.8279d2bf19c88181]{Diacritical Gnosis}</p>",
+        "source": "Rules 2.0.3, p.148",
+        "tags": "Immanent, Expert, Magick",
+        "sect": "Immanent",
+        "rank": "expert",
+        "sidhi": 1,
+        "apCost": 3,
+        "burnArdor": 2,
+        "installArdor": 0,
+        "equipped": false,
+        "mantra": "DIA",
+        "mudra": "Heaven → Wisdom",
+        "mudraHands": 2
+      },
+      "folder": "9a548552da6a8d53",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 148,
+            "rank": "expert",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.8279d2bf19c88181",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.1e77ae5820dde9e2",
+            "printedType": "magick",
+            "prerequisiteText": "SPI 4, WRD 4, SIDHI 1"
+          }
+        }
+      }
+    },
+    {
+      "_id": "62dcdbd7f4da6fb4",
+      "name": "Ing Kung Dharani",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SPI 8, DIA 6, WRD 6, SIDHI 6, 3 NOVICE IMMANENT LICENSES, 3 EXPERT IMMANENT LICENSES</p><p>Magick Healing targets Health—that is to say, the Inner Sidhi. The Life Force of a person. It does not regrow lost limbs or impaired functions, only the vivacity of a person. And so, surgeons, prostheticians, and other medical professionals are still required for more specific healing jobs.</p><p>[✹✹✹✹✹✹] Perform a ritual for 8 hours to cast the Magick: DHARANI OF ING KUNG. The Immanent loses half of her max Health—if her max Health is already 5 or lower, she must die instead as an exchange. The Immanent chooses someone she loves and brings him back from the brink of death, as long as it hasn’t been 24 hours and she can touch him skin to skin or bone to bone. They are healed to full Health, though they do not reconstitute any lost limbs. While in Samadhi, the Ing Kung Immanent can now focus her Compassion Sidhi into a burning halo. She must burn 4 Ardor and channel at least 6 hours (lasts even when Samadhi ends), without moving, to expunge a single area within 10m of rot and entropy and fill it once again with flourishing life, at the prime of its life. Any sentient beings and objects within this area are cleansed of any viruses and diseases and are healed of all Wounds. Any demonic taint or corruptive Sidhi is vaporized, unless the corruptive Sidhi is too strong, in which case it is revealed instead.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.766b9d10e2a7692f]{Ing Kung Dharani}</p>",
+        "source": "Rules 2.0.3, p.149",
+        "tags": "Immanent, Master, Magick",
+        "sect": "Immanent",
+        "rank": "master",
+        "sidhi": 6,
+        "apCost": 0,
+        "burnArdor": 6,
+        "installArdor": 0,
+        "equipped": false,
+        "mudraHands": 1
+      },
+      "folder": "b8a737f52302f56f",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 149,
+            "rank": "master",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.766b9d10e2a7692f",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.62dcdbd7f4da6fb4",
+            "printedType": "magick",
+            "prerequisiteText": "SPI 8, DIA 6, WRD 6, SIDHI 6, 3 NOVICE IMMANENT LICENSES, 3 EXPERT IMMANENT LICENSES"
+          }
+        }
+      }
+    },
+    {
+      "_id": "944faef8594f22ac",
+      "name": "Celestial Stem",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SPI 3, WRD 2</p><p>The Distant Stars are all Archons— servants of the Cosmic Chakravartins. All the stars are other heavens. They are watching us.</p><p>The Jyotisha can now read the Celestial Stems. At the end of a Rest, they can roll a d6 to glean the stars. Her and the rest of her Party gain the following passive benefit for 8 hours. 1 Fire. +1 to Attack Checks. 2 Water. +1 to Defense Checks. 3 Earth. +1 to Exploration and Searching Checks. 4 Air. +1 to movement and dexterity checks. 5 Metal. +1 to protection and destruction checks. 6 Mind. +1 to reasoning and remembering checks.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.41868d51302e2f2e]{Celestial Stem}</p>",
+        "source": "Rules 2.0.3, p.151",
+        "tags": "Jyotisha, Novice, Magick",
+        "sect": "Jyotisha",
+        "rank": "novice",
+        "sidhi": 0,
+        "apCost": 0,
+        "burnArdor": 0,
+        "installArdor": 0,
+        "equipped": false,
+        "mudraHands": 1
+      },
+      "folder": "9965ec33c7156535",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 151,
+            "rank": "novice",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.41868d51302e2f2e",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.944faef8594f22ac",
+            "printedType": "magick",
+            "prerequisiteText": "SPI 3, WRD 2"
+          }
+        }
+      }
+    },
+    {
+      "_id": "87c8abc04611073e",
+      "name": "Starblitz",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SPI 3, WRD 2, VIO 2</p><p>Most common battle magick used by the military astrologians of Amatsu and Ressen-Nalenji. It is worth noting that the Distant Stars are different from the closer stars: the Morning Star Lusbel is one of our deities, and so is the Evening Star Sunran. But they are star spirits all the same.</p><p>Mantra: ATARA Mudra: Heaven → Sword [✹][✦] The Cultivator sends a ribbon of starstuff engraved with an Archonian syllable to sear upon something or someone. SPI + 2 vs SPI ATTACK CHECK. BURNS.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.39fdf32880a82671]{Starblitz}</p>",
+        "source": "Rules 2.0.3, p.151",
+        "tags": "Jyotisha, Novice, Magick",
+        "sect": "Jyotisha",
+        "rank": "novice",
+        "sidhi": 0,
+        "apCost": 1,
+        "burnArdor": 1,
+        "installArdor": 0,
+        "equipped": false,
+        "mantra": "ATARA",
+        "mudra": "Heaven → Sword",
+        "mudraHands": 2,
+        "attackPool": "spi",
+        "defensePool": "spi",
+        "bonus": 2,
+        "damageType": "burn"
+      },
+      "folder": "9965ec33c7156535",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 151,
+            "rank": "novice",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.39fdf32880a82671",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.87c8abc04611073e",
+            "printedType": "magick",
+            "prerequisiteText": "SPI 3, WRD 2, VIO 2"
+          }
+        }
+      }
+    },
+    {
+      "_id": "7a1ef211aa06975f",
+      "name": "Archfiend And Manta",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SPI 4, DIA 2</p><p>The Budha Circle contains the next three closest constellations. Meteors are thermonuclear attempts to destroy us, but the deities that live in our heavens—in those transdimensional orbital realms— constantly protect us.</p><p>MANTRA: KUNLUNTHA JONGDARI MUDRA: Heaven → Wisdom Roll a d6 and cast the Magick: [1-3] KUNLUNTHA, THE CHAOS-BURIED ARCHFIEND [✹✹][✦] Summon the chaos of Kunluntha into the world: a 2m burst area within 8m is covered in spiking lightning chaos. Any hostile within it suffers DAZE. Any ally within’s next Check Strikes on a 3+. [4-6] JONGDARI, THE MANTRA MANTA RAY [❂❂][✦] Call upon Jongdari’s Astral Essence: all entities and objects in a 2m burst within 8m start floating while installed. They can move normally, but they float over terrain and have no trouble moving vertically up walls.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.590dcf391b12c905]{Archfiend And Manta}</p><h3>Import Notes</h3><p>Conditional or prose costs remain in the description; check the trigger and spend resources as described.</p>",
+        "source": "Rules 2.0.3, p.152",
+        "tags": "Jyotisha, Expert, Magick",
+        "sect": "Jyotisha",
+        "rank": "expert",
+        "sidhi": 0,
+        "apCost": 0,
+        "burnArdor": 0,
+        "installArdor": 0,
+        "equipped": false,
+        "mantra": "KUNLUNTHA JONGDARI",
+        "mudra": "Heaven → Wisdom",
+        "mudraHands": 2,
+        "areaShape": "circle",
+        "areaSize": 2
+      },
+      "folder": "35eae33552cf66a0",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 152,
+            "rank": "expert",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.590dcf391b12c905",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.7a1ef211aa06975f",
+            "printedType": "magick",
+            "prerequisiteText": "SPI 4, DIA 2",
+            "notes": [
+              "Conditional or prose costs remain in the description; check the trigger and spend resources as described."
+            ]
+          }
+        }
+      }
+    },
+    {
+      "_id": "45167cff10c014a8",
+      "name": "Serenity And Violence",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SPI 4, SAV 2</p><p>Magick created by the Seventh Star Lord Bini, after speaking with a Cosmic Chakravartin and having his head burst open in Enastralment.</p><p>MANTRA: KANGAHOM TĲAJAYON MUDRA: Heaven → Sword Roll a d6 and cast the Magick: [1-3] KANGAHOM, THE BLACK SUN IMMANENCE [✹][✦✦] Summons a black sun within 12m. The black sun explodes in a Burst 1m, granting protective Black Sun Sidhi to all entities of your choice: they gain [DIA] ARMOR. [5-6] TĲAJAYON, THE CELESTIAL VIOLENCE [✹][✦] Summon Tĳajayon’s essence: astral starfire erupts from her hands. This is a DIA vs SPI Attack Check against any target within 10m. This attack BURNS and inflicts STAGGER.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.2962c94e7a0e0f47]{Serenity And Violence}</p><h3>Import Notes</h3><p>Conditional or prose costs remain in the description; check the trigger and spend resources as described.</p>",
+        "source": "Rules 2.0.3, p.152",
+        "tags": "Jyotisha, Expert, Magick",
+        "sect": "Jyotisha",
+        "rank": "expert",
+        "sidhi": 0,
+        "apCost": 0,
+        "burnArdor": 0,
+        "installArdor": 0,
+        "equipped": false,
+        "mantra": "KANGAHOM TĲAJAYON",
+        "mudra": "Heaven → Sword",
+        "mudraHands": 2,
+        "attackPool": "dia",
+        "defensePool": "spi",
+        "damageType": "burn"
+      },
+      "folder": "35eae33552cf66a0",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 152,
+            "rank": "expert",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.2962c94e7a0e0f47",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.45167cff10c014a8",
+            "printedType": "magick",
+            "prerequisiteText": "SPI 4, SAV 2",
+            "notes": [
+              "Conditional or prose costs remain in the description; check the trigger and spend resources as described."
+            ]
+          }
+        }
+      }
+    },
+    {
+      "_id": "6826178c8c8fd707",
+      "name": "Devil And Alien",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SPI 4, SAV 2</p><p>Magick created by the Seventh Star Lord Bini, after speaking with a Cosmic Chakravartin and having his head burst open in Enastralment.</p><p>MANTRA: YONKASHDERAM RENGOZAN MUDRA: Heaven → Thunderbolt Roll a d6 and cast the Magick: [1-3] YONKASHDERAM, THE HIGH DEVIL [❂][✦] Summon Yonkashderam’s star: while installed, Yonkashderam’s illusion befalls her, granting her attractiveness beyond measure. This is a kind of attractiveness that changes depending on who is looking. [4-6] RENGOZAN, THE ALIEN SERAPH LOTUS [✹][✦] Summon Rengozan: she orbits one entity in 10m. That entity heals all Conditions and becomes immune to Conditions for 10m. That entity also gains +1 Armor.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.f0683e2a252a5718]{Devil And Alien}</p><h3>Import Notes</h3><p>Conditional or prose costs remain in the description; check the trigger and spend resources as described.</p>",
+        "source": "Rules 2.0.3, p.152",
+        "tags": "Jyotisha, Expert, Magick",
+        "sect": "Jyotisha",
+        "rank": "expert",
+        "sidhi": 0,
+        "apCost": 0,
+        "burnArdor": 0,
+        "installArdor": 0,
+        "equipped": false,
+        "mantra": "YONKASHDERAM RENGOZAN",
+        "mudra": "Heaven → Thunderbolt",
+        "mudraHands": 2
+      },
+      "folder": "35eae33552cf66a0",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 152,
+            "rank": "expert",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.f0683e2a252a5718",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.6826178c8c8fd707",
+            "printedType": "magick",
+            "prerequisiteText": "SPI 4, SAV 2",
+            "notes": [
+              "Conditional or prose costs remain in the description; check the trigger and spend resources as described."
+            ]
+          }
+        }
+      }
+    },
+    {
+      "_id": "3c6045121a5df181",
+      "name": "Tigress And Dog",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SPI 5, SIDHI 3</p><p>The Surya Circle contains the last three closest constellations. These stars are said to contain star systems of their own, with entire celestial civilizations that broadcast Entanglements into the Void, that the Surya Circle Jyotisha can harness and wield.</p><p>MANTRA: ADAXUYUN SUNGDIMTAR MUDRA: Heaven → Wisdom → Dragon Roll a d6 and cast the Magick: [1-3] ADAXUYUN, THE JADE TIGRESS [❂][✦] Adaxuyun’s Fierce Mien takes the caster. While installed, all the Jyotisha’s social flourishes are always perfectly timed: witticisms, interruptions, flattery. She gets +3 to all attempts to negotiate, persuade, and flatter. [4-6] SUNGDIMTAR, HEAVENLY LIGHTNING DOG [✹✹][✦✦] She makes a DIA vs SPI Attack Check against up to 3 entities within 20m. This deals STUN and inflicts RUINATIONS.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.6a6689f2787819b6]{Tigress And Dog}</p><h3>Import Notes</h3><p>Conditional or prose costs remain in the description; check the trigger and spend resources as described.</p>",
+        "source": "Rules 2.0.3, p.153",
+        "tags": "Jyotisha, Master, Magick",
+        "sect": "Jyotisha",
+        "rank": "master",
+        "sidhi": 3,
+        "apCost": 0,
+        "burnArdor": 0,
+        "installArdor": 0,
+        "equipped": false,
+        "mantra": "ADAXUYUN SUNGDIMTAR",
+        "mudra": "Heaven → Wisdom → Dragon",
+        "mudraHands": 2,
+        "attackPool": "dia",
+        "defensePool": "spi",
+        "damageType": "ruination"
+      },
+      "folder": "70c7219577a751c9",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 153,
+            "rank": "master",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.6a6689f2787819b6",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.3c6045121a5df181",
+            "printedType": "magick",
+            "prerequisiteText": "SPI 5, SIDHI 3",
+            "notes": [
+              "Conditional or prose costs remain in the description; check the trigger and spend resources as described."
+            ]
+          }
+        }
+      }
+    },
+    {
+      "_id": "b28a6fa8379d859a",
+      "name": "Carabao And Crocodile",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SPI 5, SIDHI 3</p><p>It is said that the knowledge of calling upon the stars and wielding its sidereal Sidhi known as Starstuff, was given to us by Lusbel's great mistress Daknaka, whose tail eddies ripple across the night sky as the Silver River.</p><p>MANTRA: KAGJYAME FENGIRENG MUDRA: Heaven → Earth → Noose Roll a d6 and cast the Magick: [1-3] KAGJYAME, THE VAJRA CARABAO [✹][✦] Summon the gravity of Kagjyame: she makes a DIA vs SPI CHECK against all chosen entities in a 3m burst within 10m. On a win: inflict STUN. [4-6] FENGRIRENG, THE TEMPEST CROCODILE [✹✹✹][✦] Manifest the fearsome riposte of Fengrireng: grant one entity within 12m REFLECT: the next Magick’s effect against them is reflected back at the caster. If the caster also has Reflect, they cancel the effects of their Magick.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.c98eb3b80a357701]{Carabao And Crocodile}</p><h3>Import Notes</h3><p>Conditional or prose costs remain in the description; check the trigger and spend resources as described.</p>",
+        "source": "Rules 2.0.3, p.153",
+        "tags": "Jyotisha, Master, Magick",
+        "sect": "Jyotisha",
+        "rank": "master",
+        "sidhi": 3,
+        "apCost": 0,
+        "burnArdor": 0,
+        "installArdor": 0,
+        "equipped": false,
+        "mantra": "KAGJYAME FENGIRENG",
+        "mudra": "Heaven → Earth → Noose",
+        "mudraHands": 2,
+        "attackPool": "dia",
+        "defensePool": "spi",
+        "areaShape": "circle",
+        "areaSize": 3
+      },
+      "folder": "70c7219577a751c9",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 153,
+            "rank": "master",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.c98eb3b80a357701",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.b28a6fa8379d859a",
+            "printedType": "magick",
+            "prerequisiteText": "SPI 5, SIDHI 3",
+            "notes": [
+              "Conditional or prose costs remain in the description; check the trigger and spend resources as described."
+            ]
+          }
+        }
+      }
+    },
+    {
+      "_id": "cdfd988bd0956193",
+      "name": "Dragon And Bearcat",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SPI 7, SIDHI 3</p><p>The three fartest constellations are of the Ratuketu Circle, and they are said to be actively malevolent against the Civilization of Hingsajagra for some reason. It is said that Galdasigwa, the Immortal of Storms, is protecting Hingsajagra from the assaults of the Distant Archons. Some suspect this is propaganda—as most things are. Some higher ups in the Revolutionary Party think Galdasigwa is preventing eyes from gazing past the Firmament. To not see the true celestial past the Orbital Heavens.</p><p>MANTRA: DINREONGGHO ZAYANGPRA MUDRA: Heaven → Earth → Noose Roll a d6 and cast the Magick: [1-3] DINREONGGHO, THE NARAKA DRAGON [✹✹][✦] Summon Dinreonggoh, the Naraka Dragon Sovereign: target within 8m and perform DIA vs SPI Opposed Check against them. If you Win: Dinreonggoh’s manifest essence wraps around them. They lose their next Action immediately, even if their next Action is in the next Round. [4-6] ZAYANGPRA, THE SEVERING BEARCAT [✹✹✹][✦✦] Manifest the cutting wind haste of Zayangpra: all chosen entities within a 2m burst within 10m gain Haste: they gain +1 Action for this Round.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.a94c62a2484efce5]{Dragon And Bearcat}</p><h3>Import Notes</h3><p>Conditional or prose costs remain in the description; check the trigger and spend resources as described.</p>",
+        "source": "Rules 2.0.3, p.153",
+        "tags": "Jyotisha, Master, Magick",
+        "sect": "Jyotisha",
+        "rank": "master",
+        "sidhi": 3,
+        "apCost": 0,
+        "burnArdor": 0,
+        "installArdor": 0,
+        "equipped": false,
+        "mantra": "DINREONGGHO ZAYANGPRA",
+        "mudra": "Heaven → Earth → Noose",
+        "mudraHands": 2,
+        "attackPool": "dia",
+        "defensePool": "spi",
+        "areaShape": "circle",
+        "areaSize": 2
+      },
+      "folder": "70c7219577a751c9",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 153,
+            "rank": "master",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.a94c62a2484efce5",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.cdfd988bd0956193",
+            "printedType": "magick",
+            "prerequisiteText": "SPI 7, SIDHI 3",
+            "notes": [
+              "Conditional or prose costs remain in the description; check the trigger and spend resources as described."
+            ]
+          }
+        }
+      }
+    },
+    {
+      "_id": "66fea066e54f3ce4",
+      "name": "Covenant",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SPI 3, WRD 4, SIDHI 1</p><p>The covenant is our Radicalization. The initiate is matched with a compatible Esoteric entity—a spirit, a deity-fragment, an ancestor-ghost, a pacified demon, a digital devil who has attained Self-Sorcery. Through ritual, mantra, and the mutual consent of both parties (or, in some cases, the binding of the entity against its will—a more dangerous but sometimes necessary path), the two consciousnesses are interlaced into an esoteric superposition—they become each other but also separate beings.</p><p>The Katlonan gains an Entity she’s in a Convenant with—describe what this Entity is and what it looks like. Then choose its expertise—this can be any sphere of life. Fighting, Working, Loving, Doing Taxes, Bureauracy, and so on. Based on what that Entity is, you have +1 to all checks on that expertise. The entity cannot be an expert of combat, but can be an expert of a particular weapon. The Covenant entity can be used to speak with and/or interact wit the esoteric societies of spirit that exist through Sidhi and in Akasha. Their information is always impossible to understand... but it always has Truth.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.6f293aada604e86a]{Covenant}</p>",
+        "source": "Rules 2.0.3, p.155",
+        "tags": "Katalonan, Novice, Magick",
+        "sect": "Katalonan",
+        "rank": "novice",
+        "sidhi": 1,
+        "apCost": 0,
+        "burnArdor": 0,
+        "installArdor": 0,
+        "equipped": false,
+        "mudraHands": 1
+      },
+      "folder": "644057316cd21cfd",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 155,
+            "rank": "novice",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.6f293aada604e86a",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.66fea066e54f3ce4",
+            "printedType": "magick",
+            "prerequisiteText": "SPI 3, WRD 4, SIDHI 1"
+          }
+        }
+      }
+    },
+    {
+      "_id": "0af0deb6d789cec2",
+      "name": "Aegis",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SPI 4, WRD 3</p><p>A field of protective spiritual armor.</p><p>[✹][✦] 8m range. Target gains +1 Armor.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.914516434bd61140]{Aegis}</p>",
+        "source": "Rules 2.0.3, p.155",
+        "tags": "Katalonan, Novice, Magick",
+        "sect": "Katalonan",
+        "rank": "novice",
+        "sidhi": 0,
+        "apCost": 1,
+        "burnArdor": 1,
+        "installArdor": 0,
+        "equipped": false,
+        "mudraHands": 1
+      },
+      "folder": "644057316cd21cfd",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 155,
+            "rank": "novice",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.914516434bd61140",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.0af0deb6d789cec2",
+            "printedType": "magick",
+            "prerequisiteText": "SPI 4, WRD 3"
+          }
+        }
+      }
+    },
+    {
+      "_id": "11f1c4af65d117db",
+      "name": "Bless",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SPI 4, WRD 3</p><p>A twist of better fate. For someone that needs it. Pull upon pure Spirit-Sidhi strings. The Katalonan know the truth: the Spirit is not what is apart from Matter, it is its most interior aspect.</p><p>[✹][✦] 8m range. Target gains +2 on next Check. This cannot stack.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.b2a0bbce79af73e3]{Bless}</p>",
+        "source": "Rules 2.0.3, p.155",
+        "tags": "Katalonan, Novice, Magick",
+        "sect": "Katalonan",
+        "rank": "novice",
+        "sidhi": 0,
+        "apCost": 1,
+        "burnArdor": 1,
+        "installArdor": 0,
+        "equipped": false,
+        "mudraHands": 1
+      },
+      "folder": "644057316cd21cfd",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 155,
+            "rank": "novice",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.b2a0bbce79af73e3",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.11f1c4af65d117db",
+            "printedType": "magick",
+            "prerequisiteText": "SPI 4, WRD 3"
+          }
+        }
+      }
+    },
+    {
+      "_id": "d0597214a1d5c9f5",
+      "name": "Self Altar: Claw",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SPI 3, WRD 4</p><p>These inhuman minds are beyond even the Deities and Devils—those extra-powerful Cultivators that inhabit the Chthonic Hells and the Orbital Heavens of Hingsajagra. Though they might not be greater in power, they are inhuman.</p><p>[❂][✦] The Katalonan transforms any part of her into her Covenant God’s. This grants her +2 bonuses on anything, and she can choose to apply one depending on the manifestation: [CRUSHING], [PIERCING], [BLAZE], [REACH], [HOVER (Ignore terrain and can move up vertical spaces)], [RITUAL], [ALMIGHTY]</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.1aae1785a24eff7c]{Self Altar: Claw}</p>",
+        "source": "Rules 2.0.3, p.156",
+        "tags": "Katalonan, Expert, Magick",
+        "sect": "Katalonan",
+        "rank": "expert",
+        "sidhi": 0,
+        "apCost": 1,
+        "burnArdor": 0,
+        "installArdor": 1,
+        "equipped": false,
+        "mudraHands": 1
+      },
+      "folder": "aa32407da891f535",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 156,
+            "rank": "expert",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.1aae1785a24eff7c",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.d0597214a1d5c9f5",
+            "printedType": "magick",
+            "prerequisiteText": "SPI 3, WRD 4"
+          }
+        }
+      }
+    },
+    {
+      "_id": "4f2933c2b65cfe0e",
+      "name": "Self Altar: Flame",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SPI 4, WRD 5</p><p>The Katalonan have found it extremely dangerous to practice the Self-Altar arts. Sometimes Covenant Gods press their Katalonan vessels to learn Self Altar Magicks to be able to be free for a while. Despite this danger, it stands as one of the Katalonan's most useful tools. Moderated use is recommended. Too much and the Katalonan might become a vessel in their own body.</p><p>[❂][✦] The Katalonan sends out Sacred Flame from her hands or mouth. It casts a pure white light in a 30m radius and is respected by Spirits. Can burn the installed Ardor to wield the Sacred Flame as a weapon with a 10m range: WRD vs SPI/WRD HOLY Magick Attack, inflicting RUINATION.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.abc46a80bcf72a38]{Self Altar: Flame}</p>",
+        "source": "Rules 2.0.3, p.156",
+        "tags": "Katalonan, Expert, Magick",
+        "sect": "Katalonan",
+        "rank": "expert",
+        "sidhi": 0,
+        "apCost": 1,
+        "burnArdor": 0,
+        "installArdor": 1,
+        "equipped": false,
+        "mudraHands": 1,
+        "attackPool": "wrd",
+        "defensePool": "spi",
+        "damageType": "ruination"
+      },
+      "folder": "aa32407da891f535",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 156,
+            "rank": "expert",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.abc46a80bcf72a38",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.4f2933c2b65cfe0e",
+            "printedType": "magick",
+            "prerequisiteText": "SPI 4, WRD 5"
+          }
+        }
+      }
+    },
+    {
+      "_id": "b74b222e96e3b09b",
+      "name": "Throne",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SPI 7, WRD 8, SIDHI 4</p><p>The Katalonan fuses with her Covenant God to enter THRONE. A state of being where one removes the delusion of Non-God, and becomes the World's Throne.</p><p>[❂❂❂][✦✦] When the Cultivator enters this mode, she chooses up to 2 from the following. At any point, she can install +❂ to install another manifestation. Throne cannot last longer than 10 minutes. ✦ [MEKAR] — All the Bathala’s and her Allies’ Attack Checks deal +1 Wound on a Critical Strike. She gains +1 to all martial and military checks. ✦ [GAVRI] — The Bathala can freely fly up to her MOV in any direction. Her voice thunders up to 100m. She gains +3 to all Persuasion and Negotiation Checks. ✦ [RAFYL] — All the Bathala’s and her Allies’ Defense Checks within 10m are Empowered. She gains +3 to all Medicine Checks. ✦ [URYL] — All the Bathala’s Attacks and her Allies’ Attacks now deal RUINATION. She gains +3 to all investigation, reasoning, and calculation checks. ✦ [SEALJYL] — +3 to all contemplation and meditation checks, she and all allies within 20m recover 1 burnt Ardor every Round and all Magick costs are reduced by 1 Ardor to a minimum of 1 (0 if Burnt). ✦ [JEGUYIL] — +3 to all attempts at manual labor and at organizing mass workers. The Bathala also gains +1 Armor per ally within 10m of her, to a maximum of her SPI. ✦ [VARAKIL] — +3 to all attempts to lead. The Bathala can now forcibly move anything or anyone with her Mind within 50m. This does not just mean force-move, but also knocking down, or up, and so on. She can move them up to [SPI x 2] meters.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.eb83fbea06deeb85]{Throne}</p>",
+        "source": "Rules 2.0.3, p.157",
+        "tags": "Katalonan, Master, Magick",
+        "sect": "Katalonan",
+        "rank": "master",
+        "sidhi": 4,
+        "apCost": 2,
+        "burnArdor": 0,
+        "installArdor": 3,
+        "equipped": false,
+        "mudraHands": 1,
+        "damageType": "ruination"
+      },
+      "folder": "99ce5272f22a0178",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 157,
+            "rank": "master",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.eb83fbea06deeb85",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.b74b222e96e3b09b",
+            "printedType": "magick",
+            "prerequisiteText": "SPI 7, WRD 8, SIDHI 4"
+          }
+        }
+      }
+    },
+    {
+      "_id": "72e5b4af66e17f27",
+      "name": "Word Of God",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SPI 5, WRD 6, SIDHI 3</p><p>Often, Cultivators dedicate their lives to a single Divinity or a shard of Divinity—often Prima, the Yenjanistʼs Goddess PRIMA, or Eolo, the God of All-Consuming Light of the Eolomites. Or one of their Servants, known as Angels.</p><p>[✹✹][✦] All Spirits within 50m must listen to the Cultivator and take you seriously. While listening to what you have to say, they cannot willingly move or take any Action.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.5557f9eeb2764cc5]{Word Of God}</p>",
+        "source": "Rules 2.0.3, p.157",
+        "tags": "Katalonan, Master, Magick",
+        "sect": "Katalonan",
+        "rank": "master",
+        "sidhi": 3,
+        "apCost": 1,
+        "burnArdor": 2,
+        "installArdor": 0,
+        "equipped": false,
+        "mudraHands": 1
+      },
+      "folder": "99ce5272f22a0178",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 157,
+            "rank": "master",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.5557f9eeb2764cc5",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.72e5b4af66e17f27",
+            "printedType": "magick",
+            "prerequisiteText": "SPI 5, WRD 6, SIDHI 3"
+          }
+        }
+      }
+    },
+    {
+      "_id": "61409c9a341791fc",
+      "name": "Commandment",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SPI 5, WRD 6, SIDHI 2</p><p>Just as often these are the various goddesses of the world: such as Kanzen of the Northern Star, Luzbel of the Evening Star, the Blasted Sun, Mirona the Ocean Goddess, and so on. Having powerful spirits in general as oneʼs dedicated Divinity is just as valid.</p><p>[✹][✦] Someone that can hear the Cultivator. SPI/WRD vs SPI Magick Attack. Deals TRAUMA + STUN + THROW in any direction up to 6m.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.cf7ed2571e856945]{Commandment}</p>",
+        "source": "Rules 2.0.3, p.157",
+        "tags": "Katalonan, Master, Magick",
+        "sect": "Katalonan",
+        "rank": "master",
+        "sidhi": 2,
+        "apCost": 1,
+        "burnArdor": 1,
+        "installArdor": 0,
+        "equipped": false,
+        "mudraHands": 1,
+        "attackPool": "wrd",
+        "defensePool": "spi",
+        "damageType": "trauma"
+      },
+      "folder": "99ce5272f22a0178",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 157,
+            "rank": "master",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.cf7ed2571e856945",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.61409c9a341791fc",
+            "printedType": "magick",
+            "prerequisiteText": "SPI 5, WRD 6, SIDHI 2"
+          }
+        }
+      }
+    },
+    {
+      "_id": "dd29eeb24f854b40",
+      "name": "Possession",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: WRD 7, SPI 6, SIDHI 3</p><p>Despite the general culture, it's actually not common for many in the Katalonan Sect to only worship a single God. More common are blossoms of Panentheism that focus on the God-ness of Matter, and the Ultramaterialists who understand the Material Divinity.</p><p>[✹][✦] The Cultivator allows themself to be possessed, letting a Dead Entity or a Spirit speak through you or interact with the world through you.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.a4f5a49a1f41bd6c]{Possession}</p>",
+        "source": "Rules 2.0.3, p.157",
+        "tags": "Katalonan, Master, Magick",
+        "sect": "Katalonan",
+        "rank": "master",
+        "sidhi": 3,
+        "apCost": 1,
+        "burnArdor": 1,
+        "installArdor": 0,
+        "equipped": false,
+        "mudraHands": 1
+      },
+      "folder": "99ce5272f22a0178",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 157,
+            "rank": "master",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.a4f5a49a1f41bd6c",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.dd29eeb24f854b40",
+            "printedType": "magick",
+            "prerequisiteText": "WRD 7, SPI 6, SIDHI 3"
+          }
+        }
+      }
+    },
+    {
+      "_id": "0ef7ab9bfd438460",
+      "name": "Awaken The Immanent Blade",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: VIO 6, GRC 6, SPI 6, SIDHI 4</p><p>Femon Antang Kaburnei was one of the students of the Mahakala Sword Satan Kriyang Tambuhan, who before the Second World Revolution sought to bring together the disparate martial arts of Selorong (which included Insular Selorong). Kriyang Tambuhan did not have the words for it, but he expressed a form of fighting that was the purest form of dialectics. When he was called to fight in the Second World Revolution, it was he that created the third License.</p><p>Mantra: PINAKA KALI Mudra: SWORD [❂❂❂][✦] The Cultivator lets go of her weapon and it floats beside her. It gains a life of her own, gaining its own 3 Actions, and can Fly up to 8m as its movement. It shares its Cultivations with her Cultivators. However attacking it forces all Wounds into the Sword's Durability. But the Sword can protect itself. Should the Sword move into its Cultivator and vice versa, the Cultivator can ride on the Sword like a surfboard, moving with the Sword, using the Sword's MOV.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.4fd9420f9d8a4085]{Awaken The Immanent Blade}</p>",
+        "source": "Rules 2.0.3, p.169",
+        "tags": "Sword Dialectician, Master, Magick",
+        "sect": "Sword Dialectician",
+        "rank": "master",
+        "sidhi": 4,
+        "apCost": 1,
+        "burnArdor": 0,
+        "installArdor": 3,
+        "equipped": false,
+        "mantra": "PINAKA KALI",
+        "mudra": "SWORD",
+        "mudraHands": 1
+      },
+      "folder": "fc232c01fb6fa60c",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 169,
+            "rank": "master",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.4fd9420f9d8a4085",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.0ef7ab9bfd438460",
+            "printedType": "magick",
+            "prerequisiteText": "VIO 6, GRC 6, SPI 6, SIDHI 4"
+          }
+        }
+      }
+    },
+    {
+      "_id": "c87e77db7521f714",
+      "name": "Sidhi Boosters",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SAV 3, DIA 4</p><p>It is said that the Black Deity Metom formed the shapes of humanity today. To the extent that this is true is hotly debated. But many say it was Metom that shared both Machinery and helped the discovery of the Intrajala.</p><p>MANTRA: MA TAN USOSHI MUDRA: Dragon -&gt; Wisdom [✹] The Techgnostic unleashes Boosters of Digital Sidhi from her legs or hands: she pushes herself or inflict knockback on another person adjacent up to 12m.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.8bad52fe87b716b4]{Sidhi Boosters}</p>",
+        "source": "Rules 2.0.3, p.171",
+        "tags": "Techgnostic, Novice, Magick",
+        "sect": "Techgnostic",
+        "rank": "novice",
+        "sidhi": 0,
+        "apCost": 0,
+        "burnArdor": 1,
+        "installArdor": 0,
+        "equipped": false,
+        "mantra": "MA TAN USOSHI",
+        "mudra": "Dragon -> Wisdom",
+        "mudraHands": 1
+      },
+      "folder": "e2bcd2cb709ac9a2",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 171,
+            "rank": "novice",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.8bad52fe87b716b4",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.c87e77db7521f714",
+            "printedType": "magick",
+            "prerequisiteText": "SAV 3, DIA 4"
+          }
+        }
+      }
+    },
+    {
+      "_id": "f573e0e3a7641a8a",
+      "name": "Digital Summoner",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SAV 4, DIA 4, SIDHI 1</p><p>Digital Summoners are sometimes called Devil Summoners. They work with Digital Devils most of the time, which are considered Spirits that inhabit the Intrajala, which itself is inextricably bound to the rest of the Universe by the fact that it's impossibly FTL speeds are due to its foundation in SIdhi. As Digital Summoners, they know that Digital Devils in truth, supranormal intelligences—or Souls without a Body—that arose from the Sea of Information generated by the Intrajala. They are AGI, to some people. And yet their Souls are not human... so it would be folly to think of them as such...</p><p>MANTRA: KI SHI MUDRA: HEAVEN -&gt; SWORD [❂][✦] The Techgnostic summons something made up of Digital Sidhi somewhere in her hands or within 2m of her. This cannot be larger than her. It does not have its own consciousness, but works just like its physical counterpart (a digital sword works like a sword) with the caveat that it only has 1dr. This cannot be fire, lightning, ice, or any other dynamic force: it must be snapshot of an artificial object.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.b8be5a39241c7612]{Digital Summoner}</p>",
+        "source": "Rules 2.0.3, p.172",
+        "tags": "Techgnostic, Expert, Magick",
+        "sect": "Techgnostic",
+        "rank": "expert",
+        "sidhi": 1,
+        "apCost": 1,
+        "burnArdor": 0,
+        "installArdor": 1,
+        "equipped": false,
+        "mantra": "KI SHI",
+        "mudra": "HEAVEN -> SWORD",
+        "mudraHands": 2
+      },
+      "folder": "1441e81e882d7c81",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 172,
+            "rank": "expert",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.b8be5a39241c7612",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.f573e0e3a7641a8a",
+            "printedType": "magick",
+            "prerequisiteText": "SAV 4, DIA 4, SIDHI 1"
+          }
+        }
+      }
+    },
+    {
+      "_id": "e4951d268f79eabf",
+      "name": "Gift Of Knowledge",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: DIA 4, SAV 4</p><p>Named after the Devil that granted Humanity the gift of Knowledge, so that we may be as Gods. The Tree of Life is nothing but an Intarjala Terminal. God is nothing but an Omni-Mind.</p><p>MANTRA: IN HA THOTH MUDRA: HEAVEN -&gt; SWORD -&gt; DRAGON [❂❂][✦] The Techgnostic may project their Consciousness into any machine, controlling it remotely, within 20m. She can use this to also move tools and technology with her mind.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.700246a713f5da51]{Gift Of Knowledge}</p>",
+        "source": "Rules 2.0.3, p.172",
+        "tags": "Techgnostic, Novice, Magick",
+        "sect": "Techgnostic",
+        "rank": "novice",
+        "sidhi": 0,
+        "apCost": 1,
+        "burnArdor": 0,
+        "installArdor": 2,
+        "equipped": false,
+        "mantra": "IN HA THOTH",
+        "mudra": "HEAVEN -> SWORD -> DRAGON",
+        "mudraHands": 2
+      },
+      "folder": "e2bcd2cb709ac9a2",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 172,
+            "rank": "novice",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.700246a713f5da51",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.e4951d268f79eabf",
+            "printedType": "magick",
+            "prerequisiteText": "DIA 4, SAV 4"
+          }
+        }
+      }
+    },
+    {
+      "_id": "cd88194b9b3a6033",
+      "name": "Thaumasynth Graft",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SAV 4, DIA 4, VIO 3, SIDHI 2</p><p>Together, we developed a path of Cultivation that treats the body as the machine-shrine that it is. Replacing flesh with refined Magnetite, blood with Black Nectar, and thought with mantra-computation. We were there when the first thinking machines attained Self-Sorcery. We know the secrets to their dyadic mantras.</p><p>The Techgnostic gains a subdermal biothaumaturgical graft into her skin that turns her into a walking Intrajala router, as long as she has potential signal to the underground Indrajala established by the Techgnostic. Through this Graft as well, she can project her Mind into the Intrajala through strong enough Thinking Machine terminals. She also gains +2 to all Checks to resist mental influence.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.99ef6ed2f117125b]{Thaumasynth Graft}</p>",
+        "source": "Rules 2.0.3, p.172",
+        "tags": "Techgnostic, Expert, Magick",
+        "sect": "Techgnostic",
+        "rank": "expert",
+        "sidhi": 2,
+        "apCost": 0,
+        "burnArdor": 0,
+        "installArdor": 0,
+        "equipped": false,
+        "mudraHands": 1
+      },
+      "folder": "1441e81e882d7c81",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 172,
+            "rank": "expert",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.99ef6ed2f117125b",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.cd88194b9b3a6033",
+            "printedType": "magick",
+            "prerequisiteText": "SAV 4, DIA 4, VIO 3, SIDHI 2"
+          }
+        }
+      }
+    },
+    {
+      "_id": "32868e12484c4b2b",
+      "name": "Virtual Demon Projection",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SAV 3, DIA 4</p><p>Techgnostics created the bastard ability to project constructs of light straight into the retinas of unsuspecting passerbys.</p><p>MANTRA: SA KAN NO MUDRA: SHIELD -&gt; THUNDERBOLT -&gt; INTENT [✹][✦] DIA + 2 vs SPI Attack Check on someone within 12m. Deals TRAUMA and DAZE as target is gripped by imageries of virtual demons.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.cdc453ca3dc840ca]{Virtual Demon Projection}</p>",
+        "source": "Rules 2.0.3, p.172",
+        "tags": "Techgnostic, Novice, Magick",
+        "sect": "Techgnostic",
+        "rank": "novice",
+        "sidhi": 0,
+        "apCost": 1,
+        "burnArdor": 1,
+        "installArdor": 0,
+        "equipped": false,
+        "mantra": "SA KAN NO",
+        "mudra": "SHIELD -> THUNDERBOLT -> INTENT",
+        "mudraHands": 2,
+        "attackPool": "dia",
+        "defensePool": "spi",
+        "bonus": 2,
+        "damageType": "trauma"
+      },
+      "folder": "e2bcd2cb709ac9a2",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 172,
+            "rank": "novice",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.cdc453ca3dc840ca",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.32868e12484c4b2b",
+            "printedType": "magick",
+            "prerequisiteText": "SAV 3, DIA 4"
+          }
+        }
+      }
+    },
+    {
+      "_id": "cbbb4d00095cc940",
+      "name": "Holoprojection Field",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SAV 4, DIA 4, SIDHI 1</p><p>The ability to project holographic imagery is considered Thaumaturgical: that is, magitech. The highest and most bleeding edge of all technology. Through Holoprojection, anyone can be a Wizard or a Cultivator.</p><p>MANTRA: PRANYA HO LO MUDRA: LOTUS -&gt; VIOLENCE [❂][✦] Project a 2m burst wide illusory terrain within 10m that can look like anything provided it looks like it can be entered. The terrain counts as Difficult and provides Cover for entities outside from entities within and vice versa. All hostiles within suffer -1 to all Checks.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.97927e910768708a]{Holoprojection Field}</p>",
+        "source": "Rules 2.0.3, p.172",
+        "tags": "Techgnostic, Expert, Magick",
+        "sect": "Techgnostic",
+        "rank": "expert",
+        "sidhi": 1,
+        "apCost": 1,
+        "burnArdor": 0,
+        "installArdor": 1,
+        "equipped": false,
+        "mantra": "PRANYA HO LO",
+        "mudra": "LOTUS -> VIOLENCE",
+        "mudraHands": 2,
+        "areaShape": "circle",
+        "areaSize": 2
+      },
+      "folder": "1441e81e882d7c81",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 172,
+            "rank": "expert",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.97927e910768708a",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.cbbb4d00095cc940",
+            "printedType": "magick",
+            "prerequisiteText": "SAV 4, DIA 4, SIDHI 1"
+          }
+        }
+      }
+    },
+    {
+      "_id": "f4f64d601338ef6d",
+      "name": "Digital Devil Thoth Binding",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SAV 6, DIA 6, SIDHI 3</p><p>Named after the ancient God of Wisdom and Writing. Specialists at thinking machines and the INTRAJALA. Professional thinking machine engineers and all the weirdofuckery that comes with it. Work and bind Digital Devils, which operate with different consciousnesses from both humans and spirits.</p><p>MANTRA: RA KEE RA THOTH MUDRA: LOTUS -&gt; HEAVEN -&gt; NOOSE [❂❂❂❂][✦] The Techgnostic conjures and prods at a particular item or object and brings to life the immanent Consciousness within it. It begins to speak and has memory of its time there. By burning the Ardor installed, the Techgnostic can provoke it to Self Sorcery to turn it into a sentient Digital Devil. Doing so, however, might have immediate precautions once the Digital Devil becomes aware.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.a6ac89092345fc9f]{Digital Devil Thoth Binding}</p>",
+        "source": "Rules 2.0.3, p.173",
+        "tags": "Techgnostic, Master, Magick",
+        "sect": "Techgnostic",
+        "rank": "master",
+        "sidhi": 3,
+        "apCost": 1,
+        "burnArdor": 0,
+        "installArdor": 4,
+        "equipped": false,
+        "mantra": "RA KEE RA THOTH",
+        "mudra": "LOTUS -> HEAVEN -> NOOSE",
+        "mudraHands": 2
+      },
+      "folder": "3718c9a4f9dc3f3d",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 173,
+            "rank": "master",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.a6ac89092345fc9f",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.f4f64d601338ef6d",
+            "printedType": "magick",
+            "prerequisiteText": "SAV 6, DIA 6, SIDHI 3"
+          }
+        }
+      }
+    },
+    {
+      "_id": "deac630d7c8d0fff",
+      "name": "Body-Fixing Method",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SPI 5, VIO 4, SIDHI 2</p><p>The Wukong Sect was established to create a Cultivator that could raid the Orbital Heavens and steal away their the vaunted Peaches of Immortality which held immense amounts of Sidhi within them. Huowang means Monkey King.</p><p>MANTRA: SAMA DHI SKAN DHA MUDRA: DRAGON [✹✹ + ❂][✦] Immobilize someone within 10m: they cannot move voluntarily but they can still perform actions. If they are of higher Sidhi, the Cultivator must win a VIO vs SPI Opposed Check first. The immobilized lasts for as long as the Ardor is installed.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.ce5b206e2df0a9a4]{Body-Fixing Method}</p>",
+        "source": "Rules 2.0.3, p.180",
+        "tags": "Wukong, Expert, Magick",
+        "sect": "Wukong",
+        "rank": "expert",
+        "sidhi": 2,
+        "apCost": 1,
+        "burnArdor": 2,
+        "installArdor": 1,
+        "equipped": false,
+        "mantra": "SAMA DHI SKAN DHA",
+        "mudra": "DRAGON",
+        "mudraHands": 1,
+        "attackPool": "vio",
+        "defensePool": "spi"
+      },
+      "folder": "ddb7a83de621cd00",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 180,
+            "rank": "expert",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.ce5b206e2df0a9a4",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.deac630d7c8d0fff",
+            "printedType": "magick",
+            "prerequisiteText": "SPI 5, VIO 4, SIDHI 2"
+          }
+        }
+      }
+    },
+    {
+      "_id": "58d9158838274d3b",
+      "name": "Copper Head Iron Limbs",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SPI 4, VIO 4, SIDHI 1</p><p>Not just a metaphor. With just an incantation, the Wukongs are able to emulate the actions of the hallowed Bhante, turning into stone and becoming impervious to all things.</p><p>MANTRA: TAMRA SIRSA LOHA PADA MUDRA: SWORD [✹ + ❂❂❂] The Cultivator suddenly turns her body into solid rock: she become impervious to all Wounds and cannot be moved. However, she also cannot perform any Actions, cannot move, and is effectively asleep. She can end the Magick at any time by releasing the Ardor. Any entity that strikes her solid rock form is STAGGERED and STUNNED.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.47cee70a70312bfd]{Copper Head Iron Limbs}</p>",
+        "source": "Rules 2.0.3, p.180",
+        "tags": "Wukong, Expert, Magick",
+        "sect": "Wukong",
+        "rank": "expert",
+        "sidhi": 1,
+        "apCost": 0,
+        "burnArdor": 1,
+        "installArdor": 3,
+        "equipped": false,
+        "mantra": "TAMRA SIRSA LOHA PADA",
+        "mudra": "SWORD",
+        "mudraHands": 1
+      },
+      "folder": "ddb7a83de621cd00",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 180,
+            "rank": "expert",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.47cee70a70312bfd",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.58d9158838274d3b",
+            "printedType": "magick",
+            "prerequisiteText": "SPI 4, VIO 4, SIDHI 1"
+          }
+        }
+      }
+    },
+    {
+      "_id": "272ac3969b205dc9",
+      "name": "Great Sage Equal To Heaven",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: VIO 8, SPI 8, SIDHI 5</p><p>At journey's end, the great Wukong, having attained Enlightenment, became the Victorious Fighting Buddha, escaping finally from the world as an Enlightened One. His tales became beacons of inspiration for the great revolutionaries of our time, especially Kafeng Masangwa, who sought to also attain Enlightenment Through Violence.</p><p>MANTRA: QI TIAN DA SHENG MUDRA: HEAVEN -&gt; EARTH -&gt; MAN -&gt; THUNDERBOLT -&gt; LOTUS -&gt; THUNDERBOLT -&gt; WISDOM [✹✹✹ + ❂❂❂][✦✦] The Cultivator grows up to Size 2, so does her Gear. She makes a VIO vs SPI check against all hostiles that can see her. Those that lose against cannot see anyone but her, and are filled with an unexplainable fury for as long as the Ardor is installed. While in this form, the Cultivator's Weapon Attacks become innately [CRUSHING] and [UNBLOCKABLE].</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.1b94dd41cb81b0b0]{Great Sage Equal To Heaven}</p>",
+        "source": "Rules 2.0.3, p.181",
+        "tags": "Wukong, Master, Magick",
+        "sect": "Wukong",
+        "rank": "master",
+        "sidhi": 5,
+        "apCost": 2,
+        "burnArdor": 3,
+        "installArdor": 3,
+        "equipped": false,
+        "mantra": "QI TIAN DA SHENG",
+        "mudra": "HEAVEN -> EARTH -> MAN -> THUNDERBOLT -> LOTUS -> THUNDERBOLT -> WISDOM",
+        "mudraHands": 2,
+        "attackPool": "vio",
+        "defensePool": "spi"
+      },
+      "folder": "2dbdc1c36d889d7a",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 181,
+            "rank": "master",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.1b94dd41cb81b0b0",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.272ac3969b205dc9",
+            "printedType": "magick",
+            "prerequisiteText": "VIO 8, SPI 8, SIDHI 5"
+          }
+        }
+      }
+    },
+    {
+      "_id": "058fe484ce02d690",
+      "name": "Partition",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SPI 3, WRD 2, SAV 2</p><p>Exorcists are integral to the Revolutionary Army: the Forces of Reaction and Liberalism wield the Spirits the geists to strengthen their forces and fight back against revolutionary mysticks and wizards. A way to bind these entities is imperative. Thus why in the rebuilding of the Communist Party it became imperative to establish the Zhongkui Sect.</p><p>MANTRA PARTITION MUDRA SWORD [❂][✦] The Zhongkui creates an up to 10m long straight line anywhere on a solid surface. Spirits cannot cross these Partitions. For sentient beings these become low-hazy light walls that can be used as cover and is Difficult Terrain to move through. If placed upon an object, the Zhongkui turns that object into an anathema to Spirits. Spirits fall away from the item, and using it as a weapon imbues that weapon with the [HOLY] property.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.d1d4ae8e309f6919]{Partition}</p>",
+        "source": "Rules 2.0.3, p.183",
+        "tags": "Zhongkui, Novice, Magick",
+        "sect": "Zhongkui",
+        "rank": "novice",
+        "sidhi": 0,
+        "apCost": 1,
+        "burnArdor": 0,
+        "installArdor": 1,
+        "equipped": false,
+        "mantra": "PARTITION",
+        "mudra": "SWORD",
+        "mudraHands": 1
+      },
+      "folder": "c15c44079e9f12a1",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 183,
+            "rank": "novice",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.d1d4ae8e309f6919",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.058fe484ce02d690",
+            "printedType": "magick",
+            "prerequisiteText": "SPI 3, WRD 2, SAV 2"
+          }
+        }
+      }
+    },
+    {
+      "_id": "ce6065feb78fdbba",
+      "name": "Binding",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SPI 3, WRD 2, SAV 2</p><p>The oldest exorcist magick, taught by the spiritworkers and shamans of the old world. The world is the world of spirits, not of man. May we all attain concordance with Void.</p><p>MANTRA ANG MANG SANG MUDRA WISDOM [✹][✦] A binding mudra: WRD vs SPI Attack Check. 20m range. TRAUMATIZES and STUNS upon wounding. If the target is a Spirit, the Zhongkui can also install ❂ to Seal them into an object or another person. Sealing a Spirit into another person risks Consciousness Violence, so it is safer to put them into an object with a subtler Consciousness. Zhongkui can Seal spirits to themselves by losing 2 max Health. While Sealed, the Spirit knows it is the Zhongkui that sealed them, and will act accordingly. The object that the Spirit inhabits will exhibit the Spirit’s features—a Fire Demon might cast an object on fire, while a poltergeist might inflict Knockback. A Zhongkui with a sealed Spirit can call upon the Spirit’s special abilities.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.395cb8480bf92e4b]{Binding}</p>",
+        "source": "Rules 2.0.3, p.183",
+        "tags": "Zhongkui, Novice, Magick",
+        "sect": "Zhongkui",
+        "rank": "novice",
+        "sidhi": 0,
+        "apCost": 1,
+        "burnArdor": 1,
+        "installArdor": 0,
+        "equipped": false,
+        "mantra": "ANG MANG SANG",
+        "mudra": "WISDOM",
+        "mudraHands": 1,
+        "attackPool": "wrd",
+        "defensePool": "spi",
+        "damageType": "trauma"
+      },
+      "folder": "c15c44079e9f12a1",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 183,
+            "rank": "novice",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.395cb8480bf92e4b",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.ce6065feb78fdbba",
+            "printedType": "magick",
+            "prerequisiteText": "SPI 3, WRD 2, SAV 2"
+          }
+        }
+      }
+    },
+    {
+      "_id": "04033e955c24cc9c",
+      "name": "Holy Exorcist Fire",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SPI 5, WRD 4, SIDHI 2</p><p>Nature Gods are trickier. These are emergent informational patterns that arise from the dialectical movement of an ecosystem powered by Sidhi that sometimes inhabit an animal, or cobble together a coherent, mythic form. Appeasing these requires tapping into informational resonances, a form of mystic science that the ancestors had a sensitivity to through application of symbol. It's much less complicated to just eat them all.</p><p>ANTRA NALA PURA MUDRA WISDOM -&gt; DRAGON -&gt; THUNDERBOLT [✹✹✹][✦] 10m blast cone. WRD+2 vs SPI Attack. HOLY. BURNS. But against Spirits, RUINATIONS.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.94f6da55689f21bf]{Holy Exorcist Fire}</p>",
+        "source": "Rules 2.0.3, p.184",
+        "tags": "Zhongkui, Expert, Magick",
+        "sect": "Zhongkui",
+        "rank": "expert",
+        "sidhi": 2,
+        "apCost": 1,
+        "burnArdor": 3,
+        "installArdor": 0,
+        "equipped": false,
+        "mantra": "NALA PURA",
+        "mudra": "WISDOM -> DRAGON -> THUNDERBOLT",
+        "mudraHands": 1,
+        "attackPool": "wrd",
+        "defensePool": "spi",
+        "bonus": 2,
+        "damageType": "burn",
+        "areaShape": "cone",
+        "areaSize": 10
+      },
+      "folder": "276c9b63416ae721",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 184,
+            "rank": "expert",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.94f6da55689f21bf",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.04033e955c24cc9c",
+            "printedType": "magick",
+            "prerequisiteText": "SPI 5, WRD 4, SIDHI 2"
+          }
+        }
+      }
+    },
+    {
+      "_id": "c78918a1c56e29f7",
+      "name": "Spirit Seeking Thread",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SPI 4, WRD 4, SIDHI 1</p><p>A magick perfectly formulated by the Angel Spirit King Tattanzon of Woeʼs Fissure. She used it to find her wife in the Akasha, where ghosts dwell. She found nothing but truth.</p><p>ANTRA PANA HA MUDRA HEAVEN -&gt; MAN -&gt; EARTH -&gt; SWORD [✹ + ❂][✦] Drop some blood from the target or flowers from the target's grave. The blood or petals stay in the air and then snake towards the target being found. The trail lasts for as long as the Ardor is Installed.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.efef1ef757222ec1]{Spirit Seeking Thread}</p>",
+        "source": "Rules 2.0.3, p.184",
+        "tags": "Zhongkui, Expert, Magick",
+        "sect": "Zhongkui",
+        "rank": "expert",
+        "sidhi": 1,
+        "apCost": 1,
+        "burnArdor": 1,
+        "installArdor": 1,
+        "equipped": false,
+        "mantra": "PANA HA",
+        "mudra": "HEAVEN -> MAN -> EARTH -> SWORD",
+        "mudraHands": 2
+      },
+      "folder": "276c9b63416ae721",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 184,
+            "rank": "expert",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.efef1ef757222ec1",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.c78918a1c56e29f7",
+            "printedType": "magick",
+            "prerequisiteText": "SPI 4, WRD 4, SIDHI 1"
+          }
+        }
+      }
+    },
+    {
+      "_id": "1eb41ec71318cbd3",
+      "name": "High Spirit Bind",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: SPI 3, WRD 4, PARTITION</p><p>“Spiritˮ is a wide designation used to refer to a whole slew of Esoteric beings: ghosts (persistent information of dead sentient beings that linger), demons (entities structured by malevolent information patterns given life by Sidhi) and the undead (corpses reanimated by an outer force).</p><p>MANTRA WAY U SOG MUDRA HEAVEN -&gt; SWORD -&gt; DRAGON [✹+❂❂❂][✦] The Zhongkui can now tie the Partition around an entity: they can choose up to 4 entities within 20m. The Bound cannot move from their point in space until the Ardor is released. If the target is of equal or higher Sidhi Level, this requires an opposed WRD vs SPI Check.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.a9d0ea8829979433]{High Spirit Bind}</p>",
+        "source": "Rules 2.0.3, p.184",
+        "tags": "Zhongkui, Expert, Magick",
+        "sect": "Zhongkui",
+        "rank": "expert",
+        "sidhi": 0,
+        "apCost": 1,
+        "burnArdor": 1,
+        "installArdor": 3,
+        "equipped": false,
+        "mantra": "WAY U SOG",
+        "mudra": "HEAVEN -> SWORD -> DRAGON",
+        "mudraHands": 2,
+        "attackPool": "wrd",
+        "defensePool": "spi"
+      },
+      "folder": "276c9b63416ae721",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 184,
+            "rank": "expert",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.a9d0ea8829979433",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.1eb41ec71318cbd3",
+            "printedType": "magick",
+            "prerequisiteText": "SPI 3, WRD 4, PARTITION"
+          }
+        }
+      }
+    },
+    {
+      "_id": "1ce852a164a5e723",
+      "name": "Ghost Hand Seal",
+      "type": "magick",
+      "img": "systems/10kswordsfoundry/assets/icons/magick.svg",
+      "system": {
+        "description": "<p>Prerequisites: WRD 3, SPI 4, BIND</p><p>Unbeknownst to you, your soul has a hundred hands, and some of them arenʼt yours. Some say Sorcery is connected to the avernal energies of the deeper and greater Consciousness, the Ego that arises from Self-Grasping.</p><p>MANTRA JI MUDRA WISDOM [✹+❂][✦] The Cultivator can move an entity within 20m up to [DIA + SPI]m in any direction telekinetically. Against Unwilling Entities, win a SPI vs SPI Check.</p><p>License: @UUID[Compendium.10kswordsfoundry.sect-licenses.Item.724c491e3f29f0a7]{Ghost Hand Seal}</p>",
+        "source": "Rules 2.0.3, p.184",
+        "tags": "Zhongkui, Expert, Magick",
+        "sect": "Zhongkui",
+        "rank": "expert",
+        "sidhi": 0,
+        "apCost": 1,
+        "burnArdor": 1,
+        "installArdor": 1,
+        "equipped": false,
+        "mantra": "JI",
+        "mudra": "WISDOM",
+        "mudraHands": 1,
+        "attackPool": "spi",
+        "defensePool": "spi"
+      },
+      "folder": "276c9b63416ae721",
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "sectCatalog": {
+            "sourcePage": 184,
+            "rank": "expert",
+            "licenseUuid": "Compendium.10kswordsfoundry.sect-licenses.Item.724c491e3f29f0a7",
+            "abilityUuid": "Compendium.10kswordsfoundry.sect-magicks.Item.1ce852a164a5e723",
+            "printedType": "magick",
+            "prerequisiteText": "WRD 3, SPI 4, BIND"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-import { modifierProfile } from "./modifiers.mjs?v=0.1.40";
+import { modifierProfile } from "./modifiers.mjs?v=0.1.45";
 const PHYSICAL=['weapon','fashion','gear','accessory','ammunition','armor','salvage'];
 export function occupiedSlots(item) {
   if (!item?.system?.equipped || ["magick","technique","license"].includes(item.type)) return [];

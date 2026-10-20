@@ -1,4 +1,4 @@
-import { AFFINITIES, modifierProfile } from "./modifiers.mjs?v=0.1.40";
+import { AFFINITIES, modifierProfile } from "./modifiers.mjs?v=0.1.45";
 export function attackCultivation(system) {
   return AFFINITIES[system.affinity?.trim().toLowerCase()] ?? (system.weaponType === "ranged" ? "grc" : "vio");
 }
