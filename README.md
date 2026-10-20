@@ -9,6 +9,7 @@ A Foundry VTT v14 game system for *10,000 Swords Against Heaven*, based on rules
 [Official 10K Swords Discord Link](https://discord.gg/k8fHKrNP)  
 [Official Geek IO Discord Link](https://www.geek-io.net/discord)  
 
+
 # v 0.1.45
 
 - Equipped **Hermetic Robes** automatically add **1 m to Magick area sizes**, following page 135. Scathe becomes a 2 m burst within its normal 6 m casting range.
@@ -44,6 +45,7 @@ A Foundry VTT v14 game system for *10,000 Swords Against Heaven*, based on rules
 - Includes **156 Licenses**, **74 Technicks**, and **52 Magicks**, organized into **Sect → Novice / Expert / Master** folders. Each ability links to its matching License.
 - Includes source pages, prerequisites, descriptions, and explicit AP/Ardor costs. Magicks include printed Mantras and Mudras, with explicit attack fields where available.
 - Variable costs, conditional mechanics, and requirements for other Licenses remain in the descriptions for manual handling. See [Sect catalog notes](docs/sect-catalog.md).
+
 
 # v 0.1.40
 
