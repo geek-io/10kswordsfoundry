@@ -4,7 +4,10 @@ A Foundry VTT v14 game system for *10,000 Swords Against Heaven*, based on rules
 
 - System by: Geek IO Dev Team
 
-***THIS IS 1 SWORD AGAINST HEAVEN***
+![This Is 1 Sword Against Heaven](assets/character-logo.png)  
+
+[Official 10K Swords Discord Link](https://discord.gg/k8fHKrNP)  
+[Official Geek IO Discord Link](https://www.geek-io.net/discord)  
 
 # v 0.1.45
 
@@ -46,6 +49,7 @@ A Foundry VTT v14 game system for *10,000 Swords Against Heaven*, based on rules
 
 - Moved all 12 generic weapons into the **Weapons** compendium folder and removed the separate **Weapon Patterns** folder.
 - Removed “(Pattern)” from their names. All entries use the **Weapon** item type; their stats and IDs are preserved.
+- First public release on Github.
 
 # v 0.1.39
 
