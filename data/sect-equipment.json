@@ -1,0 +1,1394 @@
+{
+  "name": "sect-equipment",
+  "folders": [
+    {
+      "_id": "46a0caa6c036dd05",
+      "name": "Asuri",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "4b407e75fbf19b54",
+      "name": "Fashion",
+      "type": "Item",
+      "folder": "46a0caa6c036dd05",
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "256a3398bdb119fa",
+      "name": "Weapons",
+      "type": "Item",
+      "folder": "46a0caa6c036dd05",
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "bb89f6f5b25789f3",
+      "name": "Aswang",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "01054a4a9d35b29e",
+      "name": "Fashion",
+      "type": "Item",
+      "folder": "bb89f6f5b25789f3",
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "492447237e7a0133",
+      "name": "Weapons",
+      "type": "Item",
+      "folder": "bb89f6f5b25789f3",
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "38c3df7261780b88",
+      "name": "Eschatonian",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "7989f54d730d2ed3",
+      "name": "Fashion",
+      "type": "Item",
+      "folder": "38c3df7261780b88",
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "0ff07a4b42245df2",
+      "name": "Weapons",
+      "type": "Item",
+      "folder": "38c3df7261780b88",
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "2be6f4a8258f6d53",
+      "name": "Fangshi",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "246bac243e0b0ee5",
+      "name": "Fashion",
+      "type": "Item",
+      "folder": "2be6f4a8258f6d53",
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "fba8a24d280e228e",
+      "name": "Weapons",
+      "type": "Item",
+      "folder": "2be6f4a8258f6d53",
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "1dd6a32d4dfac9d6",
+      "name": "Houyi",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "17db067144e9ec21",
+      "name": "Fashion",
+      "type": "Item",
+      "folder": "1dd6a32d4dfac9d6",
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "577b132c01a3a953",
+      "name": "Weapons",
+      "type": "Item",
+      "folder": "1dd6a32d4dfac9d6",
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "390d7b131da9e81c",
+      "name": "Immanent",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "ed02537954fa3159",
+      "name": "Fashion",
+      "type": "Item",
+      "folder": "390d7b131da9e81c",
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "8ee74f31eca1770c",
+      "name": "Weapons",
+      "type": "Item",
+      "folder": "390d7b131da9e81c",
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "2a572ac2cf7cf62e",
+      "name": "Jyotisha",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "32928682401782a1",
+      "name": "Fashion",
+      "type": "Item",
+      "folder": "2a572ac2cf7cf62e",
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "5b90141608256af5",
+      "name": "Katalonan",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "75c2b66b91f6bd4a",
+      "name": "Fashion",
+      "type": "Item",
+      "folder": "5b90141608256af5",
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "9d9182f165be8eea",
+      "name": "Weapons",
+      "type": "Item",
+      "folder": "5b90141608256af5",
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "fed69f56cf4439fb",
+      "name": "Mendicant",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "470cb1970f936690",
+      "name": "Fashion",
+      "type": "Item",
+      "folder": "fed69f56cf4439fb",
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "1ef3cba69ca2f725",
+      "name": "Nezha",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "88000ca3cb214ad2",
+      "name": "Fashion",
+      "type": "Item",
+      "folder": "1ef3cba69ca2f725",
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "1dd1076549062c47",
+      "name": "Accessories",
+      "type": "Item",
+      "folder": "1ef3cba69ca2f725",
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "396f7698c4f6ed78",
+      "name": "Weapons",
+      "type": "Item",
+      "folder": "1ef3cba69ca2f725",
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "ba00561b5cb477e5",
+      "name": "Sword Dialectician",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "d182268954a5cc7c",
+      "name": "Fashion",
+      "type": "Item",
+      "folder": "ba00561b5cb477e5",
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "1ffd12ca8f34de91",
+      "name": "Weapons",
+      "type": "Item",
+      "folder": "ba00561b5cb477e5",
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "d475ff9b4d827207",
+      "name": "Techgnostic",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "829b7d8e6461a201",
+      "name": "Fashion",
+      "type": "Item",
+      "folder": "d475ff9b4d827207",
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "79955898a8b76846",
+      "name": "Gear",
+      "type": "Item",
+      "folder": "d475ff9b4d827207",
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "79aa4e73987dc14e",
+      "name": "Ultramystic",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "4a3fe1e03791e598",
+      "name": "Fashion",
+      "type": "Item",
+      "folder": "79aa4e73987dc14e",
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "0696f330d4d24735",
+      "name": "Weapons",
+      "type": "Item",
+      "folder": "79aa4e73987dc14e",
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "582ad7a8c1e71daa",
+      "name": "Wukong",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "3186a9b31dd0f9bd",
+      "name": "Fashion",
+      "type": "Item",
+      "folder": "582ad7a8c1e71daa",
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "f85e56d0de4e26fc",
+      "name": "Accessories",
+      "type": "Item",
+      "folder": "582ad7a8c1e71daa",
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "c7f77ae4d54de17c",
+      "name": "Weapons",
+      "type": "Item",
+      "folder": "582ad7a8c1e71daa",
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "377a595390175b22",
+      "name": "Zhongkui",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "1e3c3d2ea73d2eaa",
+      "name": "Fashion",
+      "type": "Item",
+      "folder": "377a595390175b22",
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "4c18602b3c60252f",
+      "name": "Gear",
+      "type": "Item",
+      "folder": "377a595390175b22",
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "c51d17d8f666c21e",
+      "name": "Weapons",
+      "type": "Item",
+      "folder": "377a595390175b22",
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "028105ee911dce03",
+      "name": "Accessories",
+      "type": "Item",
+      "folder": "377a595390175b22",
+      "sorting": "a",
+      "color": null
+    }
+  ],
+  "items": [
+    {
+      "_id": "7d4c6aa492b0089c",
+      "name": "Asuri Devil Crucible",
+      "type": "fashion",
+      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+      "folder": "4b407e75fbf19b54",
+      "system": {
+        "description": "<p>ARMOR +3 ARDOR +1 COLOSSUS: +1 ATK to all weapons that have the [GREAT] or [COLOSSAL]. gain +1 BLOSSOMING TIGER: +2 dice to all checks involving drugs, wine, anger, passion, and killing intent. EXUDE KILLING INTENT [❂]: Strike a pose. Killing Intent expands up to 3m of the wearer. Should someone attack within three meters of her— The wearer must be a victim in that attack. Else— Reduce that Attack Pool by three. This only affects entities that are of equal or lower Sidhi Stages.</p><p>The Devil Crucible projects the wearerʼs Killing Intent. This armor often takes on the look of sleek, countercultural demon imagery, succubus or incubus forms, Mara-like iconography, wrathful deities, and other such demons.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.127",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Asuri, Fashion, Prestige",
+        "gearSlot": "fashion",
+        "armor": 3,
+        "ardor": 1
+      },
+      "effects": []
+    },
+    {
+      "_id": "cb98b0e5700b166c",
+      "name": "Asuri Kalikhadga",
+      "type": "weapon",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "folder": "256a3398bdb119fa",
+      "system": {
+        "description": "<p>ARTIFACT ✦ GREAT ✦ FEROCIOUS ✦ VISCERAL ✦ CRUSHING Upon dealing Wounds, those wounded lose 1 Ardor. If they have no Ardor, they suffer 1 RUINATION. This weapon suffers no penalties to Attack Checks from being a [GREAT] weapon.</p><p>Named after the blessed Black Mother, the Kalikhadga was once Dattreyaʼs weapon, which she infused with Dialectical Sidhi to affect not just the Matter but the interior negations of Matter. Only those that have subsumed their Passions into greater Enlightenment can wield this. Those that have not quickly devolve into Fascists who impose their Will upon reality, Nihilists who seek to destroy the World, or Capitalists who accumulate wealth through physical violence.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.129",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Asuri, Sword, Prestige",
+        "gearSlot": "right",
+        "bonus": 2,
+        "damageType": "cut",
+        "range": 1,
+        "weaponType": "melee",
+        "ammoFamily": "none",
+        "properties": {
+          "artifact": true,
+          "great": true,
+          "ferocious": true,
+          "visceral": true,
+          "crushing": true
+        },
+        "upgrade": "base"
+      },
+      "effects": []
+    },
+    {
+      "_id": "6ba17cc0b2d5df1e",
+      "name": "Liver-Eater’s Raiment",
+      "type": "fashion",
+      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+      "folder": "01054a4a9d35b29e",
+      "system": {
+        "description": "<p>ARMOR +0 ARDOR +2 Shadow Sutra: +2 to stealth, infiltration, corpse examination, and subterfuge. Dagger Mastery: +1 to all ATK and DEF while wielding at least one Dagger. Shadowsilk: When you Step, you can step 2m instead of just 1m. Additionally, gain +1 to MOV.</p><p>The Liver-Eaterʼs Raiment is shaped in shadowy, almost vampiric hues. Inspired by the ghoulish Aswang, this raiment is tailor-made to the wearerʼs specific tastes, especially if those tastes are edgy, bloodpunk, and gloomcore.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.131",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Aswang, Fashion, Prestige",
+        "gearSlot": "fashion",
+        "armor": 0,
+        "ardor": 2
+      },
+      "effects": [
+        {
+          "_id": "12126a8eb3a6abdc",
+          "name": "Shadowsilk — Movement +1",
+          "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.131.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.movement",
+                "type": "add",
+                "value": "1",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "cc25446b14e5b559",
+      "name": "Aswang Mahadirga Knife",
+      "type": "weapon",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "folder": "492447237e7a0133",
+      "system": {
+        "description": "<p>ARTIFACT ✦ HOLY ✦ ALMIGHTY ✦ PIERCING ✦ FEROCIOUS Before and after an attack with this, may teleport 1m in any direction. All attacks with this weapon adds the target&#x27;s HEALTH SUTRA PENALTY to the ATK.</p><p>A knife showcasing a Black Demon Warrior Goddess on the hilt, and her tongue being the crimson blade, known as Mahadirga, one of the manifestations of the Buddha of Killing, Kroma Nagmi. The blade sings out and compels the wielder to satiate her bloodlust. In so doing, the Aswang sacrifices their own karma for the sake of a thousand thousand suffering sentient beings, who would have suffered worse if the Aswang did not take up the blade and performed the martyr motive to save others while damning themselves.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.132",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Aswang, Dagger, Prestige",
+        "gearSlot": "right",
+        "bonus": 2,
+        "damageType": "cut",
+        "range": 1,
+        "weaponType": "melee",
+        "ammoFamily": "none",
+        "properties": {
+          "concealable": true,
+          "artifact": true,
+          "holy": true,
+          "almighty": true,
+          "piercing": true,
+          "ferocious": true
+        },
+        "upgrade": "base"
+      },
+      "effects": []
+    },
+    {
+      "_id": "1d753bb64af543bc",
+      "name": "Hermetic Robes",
+      "type": "fashion",
+      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+      "folder": "7989f54d730d2ed3",
+      "system": {
+        "description": "<p>ARMOR +0 ARDOR +3 SCIENCE OF ANNIHILATION: +2 dice to thermodynamics, destruction, entropy, ruin, and decay checks. AVATAR OF DESTRUCTION: All MAGICKS that have areas gain +1 to their Area pattern sizes and any Magick Attack, upon Wounding also reduces a target&#x27;s Armor by 1. BENEFICENT REVELATION: ALL HOSTILE MAGICKS not affect allies. VIOLENT SORCERY: ALL MAGICKS that have Opposed Checks against hostiles gain +1, including MAGICK ATTACKS.</p><p>The Hermes Trismegistus of Hingsajagra was one of the most accomplished Bodhisattva Mahasiddhas in the arts of destructive magick. The Thrice-Great is known as the Revealer of Cosmic Laws and the Teacher of Deities in the arts of all Magick.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.135",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Eschatonian, Fashion, Prestige",
+        "gearSlot": "fashion",
+        "armor": 0,
+        "ardor": 3
+      },
+      "effects": [
+        {
+          "_id": "af586acba18feb8c",
+          "name": "Avatar of Destruction — Magick area +1 m",
+          "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.135.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.magickAreaBonus",
+                "type": "add",
+                "value": "1",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "ec23897ec86482b0",
+      "name": "Eschatonian Trismegistus",
+      "type": "weapon",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "folder": "0ff07a4b42245df2",
+      "system": {
+        "description": "<p>DOUBLEHANDED ✦ ARTIFACT As a DIA Attack, the TRISMEGISTUS can fire off a SOUL-FLENSING BOLT up to 15m using this weapon&#x27;s Attack traits (which means it gains extra ATK as it is upgraded). The TRISMEGISTUS has Ardor charges that can be used to cast Magick. If she has time, the Eschatonian can refill these Ardor charges with any Sidhi source, even herself. The TRISMEGISTUS can only keep a number of Ardor charges equal to her DIA.</p><p>A triple serpent-headed staff that burgeons with Entropic and Cacotopic Sidhi. It exemplifies the sheerest and purest form of Magick. The largest Sect that makes up the Eschatonians used to be the Hermetic Order of Drg, who channeled the Compassionate Sidhi of the Deity of Ends and Cacotopia. The Hermetics are an ancient order, who believe that the whole of Creation is a single Divine Mind or God, and it is moving in only one direction: equilibrium. Heat Death. The supreme secret of the Trichiliocosm.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.136",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Eschatonian, Bludgeon, Prestige",
+        "gearSlot": "right",
+        "bonus": 2,
+        "damageType": "impact",
+        "range": 1,
+        "weaponType": "melee",
+        "ammoFamily": "none",
+        "properties": {
+          "crushing": true,
+          "doublehand": true,
+          "artifact": true
+        },
+        "upgrade": "base"
+      },
+      "effects": []
+    },
+    {
+      "_id": "b74d3ddf28bafb00",
+      "name": "Fangshi Yajist Robes",
+      "type": "fashion",
+      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+      "folder": "246bac243e0b0ee5",
+      "system": {
+        "description": "<p>ARMOR +1 ARDOR +1 GEOMANCER: +2 to all herbalism, alchemy, chemistry, and geomancy checks. MASTER OF METHODS: +2 DEF against Magick Attacks. WIDE SLEEVES: The wearer has four extra carry slots within the Yajist&#x27;s Robes. These slots can only be for: pills, talismans, elixirs, and cores.</p><p>Flowing, wide-sleeved robes inscribed with the Three-Pronged Yaji patterns. Often emerald, jade, gold, silver, or black. Contains ribbons floating upon the wearer&#x27;s Sidhi. All three things cast aloft. Heaven begets Earth begets Man begets Heaven. The reality of the world is in the Supreme Principle of the Three- As-One. Ya, Earth. Ji, Heaven. And Yaji, Man.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.139",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Fangshi, Fashion, Prestige",
+        "gearSlot": "fashion",
+        "armor": 1,
+        "ardor": 1
+      },
+      "effects": []
+    },
+    {
+      "_id": "4eda7e0012db6617",
+      "name": "Fangshi Portable Elixir Furnace",
+      "type": "weapon",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "folder": "fba8a24d280e228e",
+      "system": {
+        "description": "<p>COLOSSAL ✦ ARTIFACT By burning ✹✹✹ and putting in up to 100,000mag, transmute the mag into a raw material of equivalent exchange-value. If an Elixir or Pill is put in here, duplicate the concoction by d6+1.</p><p>A cauldron that houses the Fangshiʼs Golden Core. Prized and powerful, but reliant on a good Fangshi to wield, and crumbles apart when not attached to a Cultivation Womb.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.141",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Fangshi, Bludgeon, Prestige",
+        "gearSlot": "right",
+        "bonus": 2,
+        "damageType": "impact",
+        "range": 1,
+        "weaponType": "melee",
+        "ammoFamily": "none",
+        "properties": {
+          "crushing": true,
+          "colossal": true,
+          "artifact": true
+        },
+        "upgrade": "base"
+      },
+      "effects": []
+    },
+    {
+      "_id": "7a8beabdfc368411",
+      "name": "Vipassanadhanu Garb",
+      "type": "fashion",
+      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+      "folder": "17db067144e9ec21",
+      "system": {
+        "description": "<p>ARMOR +0 ARDOR +2 SUNYATA: +2 to all meditation, archery, focus, and awareness checks. The wearer also gets +2 to attempts to hide and camouflage, blending into the surroundings. These clothes don&#x27;t make noise and the wearer footsteps are muffled while wearing them. UNFETTERED JAVELIN: +1 to all BOW, CROSSBOW, and LAUNCHER Attacks and ignore Cover. DEADZONE: All attacks against targets 15m or further deals +1 Wound.</p><p>The Samadhi Archers are always focused on absolute perfect meditation. Always focusing on a single point, otherwise known as the Vipassana. Vipassanadhanu Garb tends to be on the minimalist side, sleek side, almost luxury or premium, something that can throw off even Amatsunese War Wear or Masando Atelier in its luxury.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.143",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Houyi, Fashion, Prestige",
+        "gearSlot": "fashion",
+        "armor": 0,
+        "ardor": 2
+      },
+      "effects": []
+    },
+    {
+      "_id": "3fedee79bac1e922",
+      "name": "Houyi Tonggong (Bow)",
+      "type": "weapon",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "folder": "577b132c01a3a953",
+      "system": {
+        "description": "<p>DOUBLEHANDED ✦ FEROCIOUS ✦ ARTIFACT When claimed, choose the Weapon Pattern (choose from above). This weapon&#x27;s ATK is +4. The Tonggong needs no ammunition and produces its own ammunition, which BURNS. The Tonggong’s range is x2 of the normal Pattern’s range and all its attacks are Unblockable.</p><p>The TONGGONG was crafted by a smithing collective who was set to be dismantled by a Capitalist Landowner who bought the land their workshop was on. After crafting it, they raised the TONGGONG together and shot and killed the Capitalist. Half of them were killed right after by other Capitalists in the area. The other half went on to wreak havoc with the Proletariat.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p><p>Choose one Tonggong weapon form when claimed. This is the bow form; printed +4 ATK includes the Artifact +2, and its range is twice the base weapon range.</p>",
+        "source": "Rules 2.0.3, p.145",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Houyi, Bow, Prestige",
+        "gearSlot": "both",
+        "bonus": 2,
+        "damageType": "burn",
+        "range": 40,
+        "weaponType": "ranged",
+        "ammoFamily": "none",
+        "properties": {
+          "doublehand": true,
+          "ferocious": true,
+          "artifact": true,
+          "unblockable": true
+        },
+        "upgrade": "base"
+      },
+      "effects": []
+    },
+    {
+      "_id": "ed31b54f39a25ec2",
+      "name": "Houyi Tonggong (Crossbow)",
+      "type": "weapon",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "folder": "577b132c01a3a953",
+      "system": {
+        "description": "<p>DOUBLEHANDED ✦ FEROCIOUS ✦ ARTIFACT When claimed, choose the Weapon Pattern (choose from above). This weapon&#x27;s ATK is +4. The Tonggong needs no ammunition and produces its own ammunition, which BURNS. The Tonggong’s range is x2 of the normal Pattern’s range and all its attacks are Unblockable.</p><p>The TONGGONG was crafted by a smithing collective who was set to be dismantled by a Capitalist Landowner who bought the land their workshop was on. After crafting it, they raised the TONGGONG together and shot and killed the Capitalist. Half of them were killed right after by other Capitalists in the area. The other half went on to wreak havoc with the Proletariat.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p><p>Choose one Tonggong weapon form when claimed. This is the crossbow form; printed +4 ATK includes the Artifact +2, and its range is twice the base weapon range.</p>",
+        "source": "Rules 2.0.3, p.145",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Houyi, Crossbow, Prestige",
+        "gearSlot": "both",
+        "bonus": 2,
+        "damageType": "burn",
+        "range": 20,
+        "weaponType": "ranged",
+        "ammoFamily": "none",
+        "properties": {
+          "doublehand": true,
+          "ferocious": true,
+          "artifact": true,
+          "unblockable": true
+        },
+        "upgrade": "base"
+      },
+      "effects": []
+    },
+    {
+      "_id": "965aa0d0fd2e6742",
+      "name": "Houyi Tonggong (Launcher)",
+      "type": "weapon",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "folder": "577b132c01a3a953",
+      "system": {
+        "description": "<p>DOUBLEHANDED ✦ FEROCIOUS ✦ ARTIFACT When claimed, choose the Weapon Pattern (choose from above). This weapon&#x27;s ATK is +4. The Tonggong needs no ammunition and produces its own ammunition, which BURNS. The Tonggong’s range is x2 of the normal Pattern’s range and all its attacks are Unblockable.</p><p>The TONGGONG was crafted by a smithing collective who was set to be dismantled by a Capitalist Landowner who bought the land their workshop was on. After crafting it, they raised the TONGGONG together and shot and killed the Capitalist. Half of them were killed right after by other Capitalists in the area. The other half went on to wreak havoc with the Proletariat.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p><p>Choose one Tonggong weapon form when claimed. This is the launcher form; printed +4 ATK includes the Artifact +2, and its range is twice the base weapon range.</p>",
+        "source": "Rules 2.0.3, p.145",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Houyi, Launcher, Prestige",
+        "gearSlot": "right",
+        "bonus": 2,
+        "damageType": "burn",
+        "range": 12,
+        "weaponType": "ranged",
+        "ammoFamily": "none",
+        "properties": {
+          "doublehand": true,
+          "ferocious": true,
+          "artifact": true,
+          "unblockable": true
+        },
+        "upgrade": "base"
+      },
+      "effects": []
+    },
+    {
+      "_id": "ea34a92c1c378798",
+      "name": "Houyi Tonggong (Gun)",
+      "type": "weapon",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "folder": "577b132c01a3a953",
+      "system": {
+        "description": "<p>DOUBLEHANDED ✦ FEROCIOUS ✦ ARTIFACT When claimed, choose the Weapon Pattern (choose from above). This weapon&#x27;s ATK is +4. The Tonggong needs no ammunition and produces its own ammunition, which BURNS. The Tonggong’s range is x2 of the normal Pattern’s range and all its attacks are Unblockable.</p><p>The TONGGONG was crafted by a smithing collective who was set to be dismantled by a Capitalist Landowner who bought the land their workshop was on. After crafting it, they raised the TONGGONG together and shot and killed the Capitalist. Half of them were killed right after by other Capitalists in the area. The other half went on to wreak havoc with the Proletariat.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p><p>Choose one Tonggong weapon form when claimed. This is the gun form; printed +4 ATK includes the Artifact +2, and its range is twice the base weapon range.</p>",
+        "source": "Rules 2.0.3, p.145",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Houyi, Gun, Prestige",
+        "gearSlot": "right",
+        "bonus": 2,
+        "damageType": "burn",
+        "range": 50,
+        "weaponType": "ranged",
+        "ammoFamily": "none",
+        "properties": {
+          "doublehand": true,
+          "ferocious": true,
+          "artifact": true,
+          "unblockable": true
+        },
+        "upgrade": "base"
+      },
+      "effects": []
+    },
+    {
+      "_id": "be9b2d1f162d975a",
+      "name": "Immanent White Robes",
+      "type": "fashion",
+      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+      "folder": "ed02537954fa3159",
+      "system": {
+        "description": "<p>ARMOR +0 ARDOR +2 MEDICINE SUTRA: +2 dice to all medicine, acupuncture, physical therapy, pharmaceutical, and diagnosis checks. SAVIOR: While worn, +1 to all outgoing Healing. AZURE BODHISATTVA: After healing someone else with Magick, the wearer regains 1 burnt Ardor.</p><p>White robes that are purely clean and impossible to dirty. Though the color of the robes changes depending on the wearer, it always has white accents of some kind. These robes tend to have shamanic, shrine-maiden-like, spiritcore aesthetics, echoing the ancient healing traditions of old.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.147",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Immanent, Fashion, Prestige",
+        "gearSlot": "fashion",
+        "armor": 0,
+        "ardor": 2
+      },
+      "effects": []
+    },
+    {
+      "_id": "ccec2fb6569d8192",
+      "name": "Immanent Celestine Needles",
+      "type": "weapon",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "folder": "8ee74f31eca1770c",
+      "system": {
+        "description": "<p>OCCULT ✦ FOCUS ✦ RITUAL The needles can be used for acupoint healing. The wielder can burn ✹ to convert 1 Wound inflicted into a healed Health Level on the target, to a maximum of [wielder&#x27;s SPI]. These daggers can be thrown up to 15m away and always return by spiritsilk strands.</p><p>A set of 108 needles forged from Celestine, a kind of silk-like gold that, when woven together, becomes a flexible steel-like mesh and can take on shapes. Celestine Needles are attached to the wielderʼs Cultivation Womb, so they can be manipulated from afar.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.148",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Immanent, Dagger, Prestige",
+        "gearSlot": "right",
+        "bonus": 2,
+        "damageType": "cut",
+        "range": 1,
+        "weaponType": "melee",
+        "ammoFamily": "none",
+        "properties": {
+          "concealable": true,
+          "occult": true,
+          "focus": true,
+          "ritual": true
+        },
+        "upgrade": "base",
+        "affinity": "Occult"
+      },
+      "effects": []
+    },
+    {
+      "_id": "413cb8ab69fcbdc0",
+      "name": "Immanent Rod Of Bekanze",
+      "type": "weapon",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "folder": "8ee74f31eca1770c",
+      "system": {
+        "description": "<p>OCCULT ✦ FOCUS ✦ RITUAL ✦ ARTIFACT ✦ BEDZRA HEALING [✹✹✹✹] Immediately heal everyone within 5m of the wielder by 3 Health Levels. BEKANZE&#x27;S DHARANI: While wielded, allies within 5m are heartened: they gain +2 to all their Defense Checks. WORLD-SPIRIT LASER: The wielder can focus World Spirit Sidhi into a laser of Purefire from this weapon, making an attack that deals BURNS in a 10m long, 3m wide line. Any ally within the laser instead Heals 1 Health.</p><p>The Rod turns the Immanent into a lightning rod for the World Spirit, channeling this infinite productive force to keep her allies moving in the flow of the Spirit of Nature. Bekanze is an immanent Angel Buddha Equal To Heaven who manifests in all Medicine and Healing.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.149",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Immanent, Bludgeon, Prestige",
+        "gearSlot": "right",
+        "bonus": 2,
+        "damageType": "impact",
+        "range": 1,
+        "weaponType": "melee",
+        "ammoFamily": "none",
+        "properties": {
+          "crushing": true,
+          "occult": true,
+          "focus": true,
+          "ritual": true,
+          "artifact": true
+        },
+        "upgrade": "base",
+        "affinity": "Occult"
+      },
+      "effects": []
+    },
+    {
+      "_id": "bfef36a7eaa61587",
+      "name": "Jyotisha Astrologian Robes",
+      "type": "fashion",
+      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+      "folder": "32928682401782a1",
+      "system": {
+        "description": "<p>ARMOR +0 ARDOR +2 ASTROLOGIAN: +2 to astrology, astrophysics, and astromancy checks. ASTRAL SIGN: the wearer and her allies within 5m gain +1 to all Defense Checks against area and magick attacks and +1 to all checks to read intentions and negotiate. STAR ORACLE: After rolling dice (even if a dice pool or just a single die), can burn ✹ to choose the result of one of the dice.</p><p>Jyotisha are Astrologians that consult the Heavenly Roots to divine the movement of the future. They believe that the Heavens and the Earths are mirrors, a truth of the groundbreaking concept of Entanglement.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.151",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Jyotisha, Fashion, Prestige",
+        "gearSlot": "fashion",
+        "armor": 0,
+        "ardor": 2
+      },
+      "effects": []
+    },
+    {
+      "_id": "2a69ce72ba6b8aad",
+      "name": "Katalonan Shrine Raiments",
+      "type": "fashion",
+      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+      "folder": "75c2b66b91f6bd4a",
+      "system": {
+        "description": "<p>ARMOR +1 ARDOR +2 SHAMAN: +2 to spirit-speaking, communion, religion, and spiritualism checks. SPIRIT MEDIUM: The Katalonan can make all Attacks, Defenses, and Magick Checks with WRD, as she calls upon the spirits to help her. VOICE OF REASON: All respectful spirits in the vicinity immediately gain +1 Disposition if they’re equal or lower Sidhi. SPIRIT SUMMONS: The wearer can summon their Covenant God as a Bound God that can materialize within 15m as an Action, but dematerialize into their Subtle Body at any time. They cannot be targeted. The wearer can Cast Magicks with the Bound God as the origin point.</p><p>Katalonan still exist to this day, but those of the Katalonan Sect are the ones the majority have given the blessing of wielding the powers over spiritworking to strike a blow at the oppressive Lattice of Heaven.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.155",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Katalonan, Fashion, Prestige",
+        "gearSlot": "fashion",
+        "armor": 1,
+        "ardor": 2
+      },
+      "effects": []
+    },
+    {
+      "_id": "6023a650375e3c3b",
+      "name": "Katalonan San Miguel",
+      "type": "weapon",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "folder": "9d9182f165be8eea",
+      "system": {
+        "description": "<p>GREAT ✦ ARTIFACT ✦ HOLY ✦ REACH ✦ ALMIGHTY ✦ CONCEALABLE Can install ❂ to activate its holy essence, letting it attack in 10m long line slashes. Its attacks are Magicks for the purposes of the Bound God. Can also dissipate into the Covenant’s Sidhi when not in use.</p><p>Named after the great Archangel and Warrior Aspect of IMPINITO, the God Before God, who slew the treacherous Luxbel after it tried to introduce the Trinity. Its weapon scathes both Dark and Light.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.156",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Katalonan, Sword, Prestige",
+        "gearSlot": "right",
+        "bonus": 2,
+        "damageType": "cut",
+        "range": 1,
+        "weaponType": "melee",
+        "ammoFamily": "none",
+        "properties": {
+          "great": true,
+          "artifact": true,
+          "holy": true,
+          "reach": true,
+          "almighty": true,
+          "concealable": true
+        },
+        "upgrade": "base"
+      },
+      "effects": []
+    },
+    {
+      "_id": "289a9ed6349d702a",
+      "name": "Mendicant Begging Garb",
+      "type": "fashion",
+      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+      "folder": "470cb1970f936690",
+      "system": {
+        "description": "<p>ARMOR +0 ARDOR +0 BEGGAR: +2 to all Checks to run, escape, and find information. DOG LAUGHS AT GOD: +1 Empty Hand ATK and it gains an innate [KEEN] Affinity. And also +2 max Health. MIND OF A BUDDHA: While in Samadhi: the Mendicant becomes immune to TRAUMA and IMPACTS and their Empty Hand Attacks become CRUSHING.</p><p>A simple monksrobe. Nothing special. Thatʼs the point. A thief once stole a beggarʼs garb from a Mendicant. That thief became a Buddha, and has begun spreading the Dharma across the near Arm of the Cosmos.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.159",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Mendicant, Fashion, Prestige",
+        "gearSlot": "fashion",
+        "armor": 0,
+        "ardor": 0
+      },
+      "effects": [
+        {
+          "_id": "44d6eceda0f9799b",
+          "name": "Dog Laughs At God — Health +2",
+          "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.159.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.health.max",
+                "type": "add",
+                "value": "2",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "fb4ca52a6615bac6",
+      "name": "Nezha San Tou Liu Bi",
+      "type": "fashion",
+      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+      "folder": "88000ca3cb214ad2",
+      "system": {
+        "description": "<p>ARMOR +1 ARDOR +2 GUNWITCH: +2 to ballistics, firearms, explosives, and bullet checks. +1 to all GUN and POLEARM ATKs and can apply the ATK bonus to the DEF Check. THREE HEADS MODE [❂][✦]: Wearer enters THREE HEADS MODE. While in it… ✦CROSSBOW and GUN attacks immediately reload after firing. ✦ Gain 1 SAMADHI FIRE when you Attack with a Gun or Crossbow, up to [SAV]. When THREE HEADS MODE ends, unleash the SIX ARMS ONSLAUGHT: release 1 piercing bullet against anything within 5m for each SAMADHI FIRE, losing all of it. The piercing bullet is an attack die per bullet that is [PIERCING], STRIKES on a 2+, and any attempts to avoid it must succeed on a Demand 3 GRC Check (to avoid it usually means INTERRUPTING the incoming bullet).</p><p>Each attainer of the San Tou Liu Bi have diverse aesthetics on this Fashion piece, but all of them always have one throughline: they contain something that reveals 3 Heads and Six Arms.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.163",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Nezha, Fashion, Prestige",
+        "gearSlot": "fashion",
+        "armor": 1,
+        "ardor": 2
+      },
+      "effects": []
+    },
+    {
+      "_id": "b470fd2d36e98ab0",
+      "name": "Nezha Fenghuolun",
+      "type": "accessory",
+      "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
+      "folder": "1dd1076549062c47",
+      "system": {
+        "description": "<p>When unactivated, looks like boots with wheels attached to the heels. FLIGHT MODE [❂❂❂][✦] Chant “IGNITE” to activate. The wheels begin spinning, generating wind and fire, and elevate to the skies. The wearer flies for as long as the Ardor is installed. SAMADHI FIRE AIM [✹✹✹] Chant “FOCUS” to activate. The wearer has the Fire-Wind Wheels shoot out and create special fire-wind reticle-wheels to guide a ranged weapon attack. Attack Strikes on 3+ and deal +1 Wound on Critical Strikes.</p><p>The FENGHUOLUN was constructed by Nezha who readied themselves for the Second World Revolution. They knew they had unparalleled range with their guns, and that all they needed to be able to stay out of range is to take to the skies. The FENGHUOLUN is difficult to construct in Post-Calamity, and so it requires a Level 2 Nezha License to claim and wield.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.165",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Nezha, Accessory, Prestige",
+        "gearSlot": "carry"
+      },
+      "effects": []
+    },
+    {
+      "_id": "091b58732493b888",
+      "name": "Nezha Huojianqiang",
+      "type": "weapon",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "folder": "396f7698c4f6ed78",
+      "system": {
+        "description": "<p>DOUBLEHANDED ✦ FEROCIOUS ✦ ARTIFACT All attacks from the HUOJIANQIANG can either be fired off as a normal shot or as a fire laser (20m line in a straight line). Never needs to Reload. The Huojianqiang has its own Fire- powered bullets. All its bullets also inflicts RUINATIONS. BLOSSOMING HELL LOTUS [✹✹] Upon Wounding, activate this to make the bullet explode, converting wounds inflicted into to BURNS on all entities within 3m of the target.</p><p>The HUOJIANQIANG was forged by the Red Military Lord Hong Qi Gong, who was a traitor to the Heavenly Bourgeoisie and the Heavens themselves. As the God of Guns, he was sympathetic to the cause of the proletariat. All the Nezha that stormed Grand August Yellow-Onset Orbital Heaven were outfitted by him, and all of them wielded Huojianqiang.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.165",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Nezha, Gun, Prestige",
+        "gearSlot": "right",
+        "bonus": 3,
+        "damageType": "ruination",
+        "range": 25,
+        "weaponType": "ranged",
+        "ammoFamily": "none",
+        "properties": {
+          "doublehand": true,
+          "ferocious": true,
+          "artifact": true
+        },
+        "upgrade": "base"
+      },
+      "effects": []
+    },
+    {
+      "_id": "a749db9bea9487df",
+      "name": "Sword Runner",
+      "type": "fashion",
+      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+      "folder": "d182268954a5cc7c",
+      "system": {
+        "description": "<p>ARMOR +1 ARDOR +1 BLADEMASTER: +2 to sword, swordsmanship, fencing, and sword maintenance checks. This includes SWORD or SABER Attacks and Defenses, as well as attempts to resist getting the Dialectician’s SWORD or SABER disarmed. FLENSING BLADE: All the wearer&#x27;s SWORD or SABER Attacks generate +1 Wound on a Critical Strike.</p><p>Sword Dialecticians establish a very dialectical fashion piece with the Swordrunner. As much as possible, this Fashion is a mix of local/native/indigenous sword-brave aesthetics with modern, grungy, traveling swordsman aesthetics. It creates for a strange, almost anachronistic and dualist-non-dualist style that has marked a Sword Dialectician.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.167",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Sword Dialectician, Fashion, Prestige",
+        "gearSlot": "fashion",
+        "armor": 1,
+        "ardor": 1
+      },
+      "effects": []
+    },
+    {
+      "_id": "7f1c20e78483bde7",
+      "name": "Atardar's Fangs",
+      "type": "weapon",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "folder": "1ffd12ca8f34de91",
+      "system": {
+        "description": "<p>VISCERAL ✦ LACERATING ✦ FEROCIOUS ✦ ARTIFACT Any cut from Atardar’s Fangs is considered two cuts for the purposes of intalling a Negation Cut. Additionally, when the wielder enters Samadhi, she can make another Attack with the Atardar&#x27;s Fangs for free. DUAL FANG ESSENCE [❂] The Atardar&#x27;s Fangs duplicates into a pair for dual sword purposes. SWORD DEVIL CUT [✹✹] Activate at any time to make a SWORD or SABER Attack for free.</p><p>ATARDAR is the Wrathful Manifestation of the IMPINITU, the Anteprime Sempiternal Bodhisattva of the previous Trichiliocosm, the collected consciousness of that Omniverseʼs sentience. ATARDAR is the dharmapala that killed God so that He may be reborn with a chance at becoming a Buddha.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.168",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Sword Dialectician, Sword, Prestige",
+        "gearSlot": "right",
+        "bonus": 2,
+        "damageType": "cut",
+        "range": 1,
+        "weaponType": "melee",
+        "ammoFamily": "none",
+        "properties": {
+          "visceral": true,
+          "lacerating": true,
+          "ferocious": true,
+          "artifact": true
+        },
+        "upgrade": "base"
+      },
+      "effects": []
+    },
+    {
+      "_id": "5d746e23cb669ae9",
+      "name": "Biomechanical Sheathe",
+      "type": "fashion",
+      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+      "folder": "829b7d8e6461a201",
+      "system": {
+        "description": "<p>ARMOR +2 ARDOR +2 BIOTERMINAL: +2 to Machinery, Intrajala, Gear Construction, Thaumaturgical, and Digital Checks. THAUMAPPENDAGE: The sheathe comes with a Third Arm. It is folded into the dermal layer of the bodily sheathe until the wearer installs 1 Ardor. It acts as a Third Hand. SCRAMBLING FIELD: the wearer and all allies within 2m of her are considered under Cover against Ranged Attacks. All attempts to analyze her face with digital machinery fail as her face is scrambled.</p><p>The Biomechanical Sheathe is a synthetic, thaumaturgical marvel that wraps perfectly to the shape of the wearer and grants them a sleek, technosorcerous look. The Sheathe works almost like a suit of symbiotic liquid, but quickly hardens into something lighter than kevlar but stronger than titanium. Those that wear this tend to have strong cybersigilistic tendencies, or cyberminimalist aesthetics. Sometimes the classic cyberpunkian applies their aesthetics and creates a retro-futurist hacker platform.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.171",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Techgnostic, Fashion, Prestige",
+        "gearSlot": "fashion",
+        "armor": 2,
+        "ardor": 2
+      },
+      "effects": []
+    },
+    {
+      "_id": "ab867f09a4a871b1",
+      "name": "Techgnostic 666 PTM",
+      "type": "gear",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "folder": "79955898a8b76846",
+      "system": {
+        "description": "<p>Can be used to interact with the Intrajala. Due to its top of the line specifications, any Intrajala focused Checks gain +3. This also counts as a Terminal for Virtual Projection. The 666 PTM has a 6 Battery Charges that can be used to burn or Install Ardor for TECHGNOSTIC MAGICKS and also removes the need for Mudras and Mantras. The PTM can send out a MASS CASTIGATION protocol to every entity within 2m for [✹][✦✦]. This is a DIA vs SPI Attack Check on all entities in a 2m burst within 12m. Deals TRAUMA and HESITANT upon Wounding. Any electronic device in the vicinity is immediately shut off.</p><p>Thinking Machines are thaumaturgical devices— meaning they are the interpoint of Classic Engineering and Esoteric Engineering. Its a network of data bound together by a quantum information field known as the Akasha, which records every movement of matter in the universe.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.171",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Techgnostic, Gear, Prestige",
+        "gearSlot": "carry"
+      },
+      "effects": []
+    },
+    {
+      "_id": "31e7a040afb883dd",
+      "name": "Techgnostic Adamantite Body",
+      "type": "gear",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "folder": "79955898a8b76846",
+      "system": {
+        "description": "<p>The Body can look whatever the Techgnostic wishes. It blossoms from an interspatial fold- lotus that the Techgnostic buries deep into her hypothalamus. When creating the ADAMANTITE BODY, it has the same Cultivations as her but she has 2 points to spend to raise them. It has its own DR (equal to her own Health + her own SIDHI). It can wield its own weapons. It has a number of Open Meridians equal to the Techgnostic at the time she makes the Adamantite Body + 1. The Adamantite Body can wear Sect Gear and wield Spiritual Treasures. When the Techgnostic dies, she can choose to transfer her Mindstream to the Adamantite Body and that becomes her new body, though it must shed its bulk and size and fall to a 1m x 1m size again instead of its larger size.</p><p>The Techgnostic must build a new body. She spends weeks in a laboratory or workshop, crafting a replacement limb, organ, or full- body carapace from refined Bio-Nectar, mantra-inscriptions, and numenweave. After crafting, the Techgnostic undergoes God Machine Injection: her old body and new shell must coalesce and sync. The Techgnostic must commit violence to their own mindstream against a manifestation of their unoptimized past-body.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.173",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Techgnostic, Gear, Prestige",
+        "gearSlot": "carry"
+      },
+      "effects": []
+    },
+    {
+      "_id": "a2dc59014b07f3fc",
+      "name": "Ultramystic Revolt Suit",
+      "type": "fashion",
+      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+      "folder": "4a3fe1e03791e598",
+      "system": {
+        "description": "<p>ARMOR +2 ARDOR +2 ORGANIZER: +2 to organizing, agitation, mass leading, rhetoric checks. AGITATOR: an aura of confidence erupts from the wearer up to a 2m radius. All allies within this Aura gain +1 to all Checks. When an ally within this aura takes Wounds, she can take the Wounds instead.</p><p>A mandarin-collared Shennin Tunic Suit with multiple pockets and holders. Ancient Urdic texts name this as a Mao Suit. Woven with Numenweave and Scarletite Silk-threads, woven from Revolutionary Thaumaturgical Synthworms.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.175",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Ultramystic, Fashion, Prestige",
+        "gearSlot": "fashion",
+        "armor": 2,
+        "ardor": 2
+      },
+      "effects": []
+    },
+    {
+      "_id": "df1c88e30e762382",
+      "name": "UM Lance Of Revolutionary Will",
+      "type": "weapon",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "folder": "0696f330d4d24735",
+      "system": {
+        "description": "<p>ARTIFACT ✦ PIERCING ✦ NOETIC ✦ BLAZE This weapon gains +1 ATK per ally within its range. This weapon can only be wielded by someone Communist, Socialist, or Anarchist.</p><p>A weapon that is powered by the Class Consciousness of the wielder. Drawing upon the Revolutionary Consciousness, it sends gouts of flame to strike at the enemy. It is said that this was the weapon Kafeng Masangwa wielded against the Invincible Blade Princess. The worker&#x27;s weapon against the aristocrat&#x27;s symbol.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.176",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Ultramystic, Polearm, Prestige",
+        "gearSlot": "right",
+        "bonus": 2,
+        "damageType": "cut",
+        "range": 2,
+        "weaponType": "melee",
+        "ammoFamily": "none",
+        "properties": {
+          "artifact": true,
+          "piercing": true,
+          "noetic": true,
+          "blaze": true
+        },
+        "upgrade": "base",
+        "affinity": "Noetic"
+      },
+      "effects": []
+    },
+    {
+      "_id": "80f527ea9ddaad91",
+      "name": "Golden Chainmail Shirt",
+      "type": "fashion",
+      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+      "folder": "3186a9b31dd0f9bd",
+      "system": {
+        "description": "<p>ARMOR +5 ARDOR 0 MOUNTAIN SOUL: +2 to endurance, resistance, and integrity checks. DRAGON SHEDS ITS SCALES: every time the wearer loses Armor, their next Movement gains +2 MOV. This does not stack. VICTORIOUS FIGHTING BUDDHA: When the wearer loses Health, her next Attack becomes [FEROCIOUS] and +2. Does not stack.</p><p>One of the strongest armors in the vast battlefields of Hingsajagra. Crafted from star-mined aurichalcum, harder than titanium and yet lighter than feathers, this mountain-pattern chainmail can turn away orbital lasers, energetic weapons, and kinetic projectiles alike. No wonder the Qitian Dasheng favored it. The shape of this armor changes according to the tendency of the wearer, but they are always something imposing and impenetrable, like a mountain on the sun.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.179",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Wukong, Fashion, Prestige",
+        "gearSlot": "fashion",
+        "armor": 5,
+        "ardor": 0
+      },
+      "effects": []
+    },
+    {
+      "_id": "1424cbccc86f9d87",
+      "name": "Phoenix Feather Cap",
+      "type": "accessory",
+      "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
+      "folder": "f85e56d0de4e26fc",
+      "system": {
+        "description": "<p>The wearer gains +2 Ardor and +3 to all Checks to resist mental influence and Mental and Magick attacks.</p><p>Made from natural gold of high hardness, thaumaturgically bound. The phoenix feathers are plucked from the holy beast Fenghuang. They sprout and move about like twin flames and resemble pheasant feathers.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.180",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Wukong, Accessory, Prestige",
+        "gearSlot": "carry"
+      },
+      "effects": [
+        {
+          "_id": "3bbcaa64718aba0d",
+          "name": "Phoenix Feather Cap — Ardor +2",
+          "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.180.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.ardor.max",
+                "type": "add",
+                "value": "2",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "e4102c9461774c05",
+      "name": "Wukong Ruyi Jingu Bang",
+      "type": "weapon",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "folder": "c7f77ae4d54de17c",
+      "system": {
+        "description": "<p>REACH ✦ ARTIFACT ✦ CRUSHING ✦ CONCEALABLE +1 to all attempts to knock down or push back. Cannot be disarmed. Cannot be moved if wielder does not want it to be moved, unless by someone of a higher Sidhi Level than the wielder. When thrown, flies back with a thought at any moment. By installing [❂...], can lengthen the bludgeon’s reach by 2m per Ardor installed, to a maximum of +VIO.</p><p>The RUYI JINGU BANG means “The Compliant Golden-Hooped Rod.ˮ It was crafted by ancient wizard-smiths that stole the blueprints from the data vaults of the nearer Jade Sunrise Orbital Heaven. They spoke of tales of an ancient monkey king that always upended the natural order of the Heavens, and that it took a Buddha to stop him. The Ruyi Jingu Bang can be lengthened or shortened, according to the wielderʼs Sidhi.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.181",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Wukong, Bludgeon, Prestige",
+        "gearSlot": "right",
+        "bonus": 2,
+        "damageType": "impact",
+        "range": 1,
+        "weaponType": "melee",
+        "ammoFamily": "none",
+        "properties": {
+          "crushing": true,
+          "reach": true,
+          "artifact": true,
+          "concealable": true
+        },
+        "upgrade": "base"
+      },
+      "effects": []
+    },
+    {
+      "_id": "6dce0ae3b8f90bbc",
+      "name": "Zhongkui Dharma Robe",
+      "type": "fashion",
+      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+      "folder": "1e3c3d2ea73d2eaa",
+      "system": {
+        "description": "<p>ARMOR +1 ARDOR +2 EXORCIST: +2 to exorcism, necromnacy, demonology, ghost lore, and spirit investigation Checks. This includes Checks dealing with finding out what binds a Ghost or Shade into the world instead of sending them off into Oblivion. CLEANER: The wearer can always see ghosts and spirits, and their residue. VANQUISHER: All of the Wearer&#x27;s attacks against Ghosts and Spirits are HOLY and gain +2 ATK.</p><p>A heavily layered dharma robe with multiple sutra scriptures woven into the saffron fabric. It is heavy and it sounds heavy. It is said the first Spirit Binder Dharma Robe was worn by the first Zhongkui himself, who was said to be the Buddha of Hingsajagraʼs current Kalpa, Sanja Kitama.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.183",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Zhongkui, Fashion, Prestige",
+        "gearSlot": "fashion",
+        "armor": 1,
+        "ardor": 2
+      },
+      "effects": []
+    },
+    {
+      "_id": "36e586aaadf55a85",
+      "name": "Spectral Seal Talisman",
+      "type": "gear",
+      "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+      "folder": "4c18602b3c60252f",
+      "system": {
+        "description": "<p>Can be applied onto a Ghost, Spirit, or Malevolent Entity to immediately hold them: they cannot move nor perform any actions. This lasts for [7 - entity&#x27;s Sidhi] minutes.</p><p>A Fu Talisman with the pictograph for EVIL and BINDING.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.183",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Zhongkui, Gear, Prestige",
+        "gearSlot": "carry"
+      },
+      "effects": []
+    },
+    {
+      "_id": "6481f6db4a4dec77",
+      "name": "Zhongkui Demon Subjugating Sword",
+      "type": "weapon",
+      "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+      "folder": "c51d17d8f666c21e",
+      "system": {
+        "description": "<p>ARTIFACT ✦ HOLY ✦ LYRIC All Spirits within this 25m are immediately revealed, forced out of their Subtle Bodies, and suffer -2 to Defense Checks. Additionally, all attempts to attack the wielder suffer -1 ATK. This weapon deals RUINATIONS against Spirits.</p><p>&quot;Thus have I heard: all that must reckon under the rule of the law of violence must see to it that their violence is pure and sacred and liberatory. All else spins the wheel, when what must be done is to destroy it. With this Sword, let justice carry it and let compassion whet its blade, and let wisdom guide its path. With this Sword, the may the world itself be rent in two, and make way for the future without subjugation.&quot; —11:22 ^ 3 of the Red Shintai Manual. Swords have long been a sign of leadership and control, especially when it comes to the Legions of Ghosts and Demons. The Demon Subjugating Sword is based off of one of the first swords ever made, said to have been used to subjugate the Demon of Entropy at the Beginning of Time, slowing it down and allowing Reality as we know it to exist.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.185",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 1,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Zhongkui, Sword, Prestige",
+        "gearSlot": "right",
+        "bonus": 2,
+        "damageType": "cut",
+        "range": 1,
+        "weaponType": "melee",
+        "ammoFamily": "none",
+        "properties": {
+          "artifact": true,
+          "holy": true,
+          "lyric": true
+        },
+        "upgrade": "base",
+        "affinity": "Lyric"
+      },
+      "effects": []
+    },
+    {
+      "_id": "98bc9bedc42220cf",
+      "name": "Zhongkui Five Thunder Japamala",
+      "type": "accessory",
+      "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
+      "folder": "028105ee911dce03",
+      "system": {
+        "description": "<p>WHILE WORN… ✧ All harmful Magicks are reflected back at the caster. ✧ All attacks performed by the wearer with a weapon from their hands RUINATION as every strike is imbued with the karmic weight of 108 Recitations of the Mind Sutra. ✧ If the target of an attack is a Spirit, the attack is considered [HOLY]. If it’s already [HOLY], it also inflicts STUN and HESITANT.</p><p>108 Prayer Beads on both arms, large and snaking up to the biceps. Made out of a mixture of an Arhatʼs Bones and Heavenly Tribulation Lightning. Impossibly holy and filled with enlightenment. An armament created by the Devil Immortal Exorcist Yazatram of the Rutilant Coven, at first, to strengthen himself. Later, when he was transformed by a Buddha, she chose to pass down the Spiritual Treasure and the Akashic Pattern for it to be reproduced among the Revolutionaries. It was impossible to recreate at first, but eventually the Angel Spirit King Tattanzon of Woeʼs Fissure, forced a Spirit God-King to be bound into a Fabricator Machine, allowing for this to happen.</p><p>Price is N/A in the source; the numeric Mag cost is 0 as a placeholder, not a free purchase. Conditional, triggered and narrative rules remain in this description for manual resolution.</p>",
+        "source": "Rules 2.0.3, p.185",
+        "rarity": "prestige",
+        "quantity": 1,
+        "slots": 3,
+        "magCost": 0,
+        "equipped": false,
+        "tags": "Zhongkui, Accessory, Prestige",
+        "gearSlot": "carry"
+      },
+      "effects": []
+    }
+  ]
+}

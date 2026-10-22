@@ -1,0 +1,2 @@
+# Preserve compiled LevelDB files byte-for-byte on every platform.
+packs/** -text

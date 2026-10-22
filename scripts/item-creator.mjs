@@ -1,13 +1,13 @@
-import {rememberImport,changeImportTab,previewImport,commitImport} from './import-workflow.mjs?v=0.1.45';
-import {itemFolders,checkedFolder} from "./import-folders.mjs?v=0.1.45";
-import {IMPORT_TYPES} from './import-data.mjs?v=0.1.45';
-import {validateImport,openImporter} from './importer.mjs?v=0.1.45';
-import {escapeHTML} from './resolution.mjs?v=0.1.45';
-import {LICENSE_CHOICES} from './licenses.mjs?v=0.1.45';
-import {UPGRADE_CHOICES} from './weapons.mjs?v=0.1.45';
-import {AMMO_CHOICES,AMMO_FAMILIES} from './ammunition.mjs?v=0.1.45';
-import {MODIFIER_CHOICES,AFFINITIES} from './modifiers.mjs?v=0.1.45';
-import {clearLibraryCache} from './library-service.mjs?v=0.1.45';
+import {rememberImport,changeImportTab,previewImport,commitImport} from './import-workflow.mjs?v=0.1.47';
+import {itemFolders,checkedFolder} from "./import-folders.mjs?v=0.1.47";
+import {IMPORT_TYPES} from './import-data.mjs?v=0.1.47';
+import {validateImport,openImporter} from './importer.mjs?v=0.1.47';
+import {escapeHTML} from './resolution.mjs?v=0.1.47';
+import {LICENSE_CHOICES} from './licenses.mjs?v=0.1.47';
+import {UPGRADE_CHOICES} from './weapons.mjs?v=0.1.47';
+import {AMMO_CHOICES,AMMO_FAMILIES} from './ammunition.mjs?v=0.1.47';
+import {MODIFIER_CHOICES,AFFINITIES} from './modifiers.mjs?v=0.1.47';
+import {clearLibraryCache} from './library-service.mjs?v=0.1.47';
 
 const hidden=new Set(['description','equipped','paidCarry','paidMeridians','paidArdor','ammoId','mods']);
 const labels={burntArdor:'Recover burnt Ardor',allBurntArdor:'Recover all burnt Ardor',allHealth:'Heal all Health',health:'Health restored',bonus:'Base bonus',slots:'Carry cost',meridianCost:'Meridian cost',apCost:'AP cost (✦)',installArdor:'Install Ardor (❂)',burnArdor:'Burn Ardor (✹)',mudraHands:'Hands required',areaSize:'Area size (m)',magCost:'Magnetite (Mag) cost',gearSlot:'Equipment slot',category:'Body / Mind',sect:'Sect',range:'Base range (m)',properties:'Inherent modifiers',ammo:'Inline ammo',cultivations:'Cultivations',prerequisites:'Prerequisites',vio:'VIO',dia:'DIA',grc:'GRC',sav:'SAV',wrd:'WRD',spi:'SPI'};

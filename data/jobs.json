@@ -1,0 +1,1356 @@
+{
+  "name": "jobs",
+  "folders": [
+    {
+      "_id": "d77b86d8082e76c4",
+      "name": "Body",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "color": null
+    },
+    {
+      "_id": "530e558a4d9ef398",
+      "name": "Mind",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "color": null
+    }
+  ],
+  "items": [
+    {
+      "_id": "fe167c06b812aedd",
+      "name": "Wretched",
+      "type": "job",
+      "img": "systems/10kswordsfoundry/assets/icons/job.svg",
+      "folder": "d77b86d8082e76c4",
+      "system": {
+        "description": "<p>Wretched Unchosen. Cultivations: You start with the following spread: ✦✦✦✦ (4), ✦✦✦ (3), ✦✦ (2), ✦✦ (2), ✦ (1), ✦ (1) Gear: Start with 1 melee or ranged weapon (6+d6 ammo). Then gain a [COMMON] or [UNCOMMON] Fashion. Trait: Choose 1 from the Trait list</p><p>Before applying this Job: assign 4, 3, 2, 2, 1, 1 to the six Cultivations and add one chosen weapon, one Common/Uncommon Fashion and one Trait to its loadout. For a ranged weapon roll 6+d6 ammunition and set its ammo quantity. The six 1s are unassigned placeholders; this template cannot be applied until customized.</p>",
+        "source": "Rules 2.0.3, p.42",
+        "category": "body",
+        "cultivations": {
+          "vio": 1,
+          "dia": 1,
+          "grc": 1,
+          "sav": 1,
+          "wrd": 1,
+          "spi": 1
+        },
+        "grants": [],
+        "tags": "Job, Body"
+      },
+      "effects": [],
+      "flags": {
+        "10kswordsfoundry": {
+          "jobChoicesRequired": true
+        }
+      }
+    },
+    {
+      "_id": "500a7aace96156b1",
+      "name": "Laborer",
+      "type": "job",
+      "img": "systems/10kswordsfoundry/assets/icons/job.svg",
+      "folder": "d77b86d8082e76c4",
+      "system": {
+        "description": "<p>Laborer Toil to earn the right to live. VIO✦✦✦✦DIA✦GRC✦SAV✦✦✦WRD✦✦SPI✦✦ [R HAND] Workhammer (Bludgeon) [FASHION] Working Class Clothes (+1 Armor. +1 to all Checks dealing with courage, bravery, or staying steadfast. All forced movement are reduced by 1.) [TRAIT] Adamance (+1 Max Health)</p>",
+        "source": "Rules 2.0.3, p.42",
+        "category": "body",
+        "cultivations": {
+          "vio": 4,
+          "dia": 1,
+          "grc": 1,
+          "sav": 3,
+          "wrd": 2,
+          "spi": 2
+        },
+        "grants": [
+          {
+            "id": "1845cc530cba82e4",
+            "name": "Workhammer",
+            "type": "weapon",
+            "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+            "system": {
+              "bonus": 2,
+              "damageType": "impact",
+              "range": 1,
+              "weaponType": "melee",
+              "ammoFamily": "none",
+              "properties": {
+                "crushing": true
+              },
+              "description": "<p>Laborer Toil to earn the right to live. VIO✦✦✦✦DIA✦GRC✦SAV✦✦✦WRD✦✦SPI✦✦ [R HAND] Workhammer (Bludgeon) [FASHION] Working Class Clothes (+1 Armor. +1 to all Checks dealing with courage, bravery, or staying steadfast. All forced movement are reduced by 1.) [TRAIT] Adamance (+1 Max Health)</p>",
+              "source": "Rules 2.0.3, p.42; Laborer Job",
+              "gearSlot": "right",
+              "equipped": false,
+              "quantity": 1,
+              "slots": 1,
+              "magCost": 0
+            },
+            "effects": []
+          },
+          {
+            "id": "ff3f7d6e8746d554",
+            "name": "Working Class Clothes",
+            "type": "fashion",
+            "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+            "system": {
+              "rarity": "common",
+              "slots": 1,
+              "description": "ARMOR +1 ARDOR +0 +1 to all Checks dealing with courage, bravery, or staying steadfast; all forced movement are reduced by 1. A ragged shirt, headwrap and wide-brimmed straw hat, some light pants and leather boots or rubber slippers. Just enough to get by.",
+              "magCost": 100,
+              "armor": 1,
+              "ardor": 0,
+              "source": "10,000 Swords Against Heaven 2.0.3, PDF p.110",
+              "equipped": false,
+              "quantity": 1,
+              "gearSlot": "fashion"
+            },
+            "effects": []
+          },
+          {
+            "id": "59bf784b120e78a2",
+            "name": "Adamance",
+            "type": "trait",
+            "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+            "system": {
+              "description": "<p>Ignore damage so you can soldier on, until the bittermost end. Those that have developed this to the extreme become demon carapace warriors in the front lines of the war against heaven, led by the Warrior Demon Dyakemban. Gain +[Level] max Health.</p>",
+              "source": "Rules 2.0.3, p.115; Trait 24",
+              "tags": "Grimoire, Trait, d66 24",
+              "level": 1,
+              "active": true
+            },
+            "effects": [
+              {
+                "_id": "2a2ed6c78746db9f",
+                "name": "Maximum Health",
+                "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+                "transfer": true,
+                "disabled": false,
+                "description": "<p>Rules 2.0.3, p.115; Trait 24. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+                "system": {
+                  "changes": [
+                    {
+                      "key": "system.health.max",
+                      "type": "add",
+                      "value": "@system.level",
+                      "phase": "initial",
+                      "priority": 20
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "tags": "Job, Body"
+      },
+      "effects": []
+    },
+    {
+      "_id": "93b005d34f75f4d3",
+      "name": "Pugilist",
+      "type": "job",
+      "img": "systems/10kswordsfoundry/assets/icons/job.svg",
+      "folder": "d77b86d8082e76c4",
+      "system": {
+        "description": "<p>Pugilist Monk of the sweet science. VIO✦✦DIA✦✦GRC✦SAV✦✦✦✦WRD✦✦SPI✦✦✦ [FASHION] Scrapperʼs Guard (2 Armor. Gain +1 on all melee attacks when adjacent against 2+ hostiles.) Trait: Asceticʼs Meditation (+1 DEF against Magick-based Attacks)</p>",
+        "source": "Rules 2.0.3, p.42",
+        "category": "body",
+        "cultivations": {
+          "vio": 2,
+          "dia": 2,
+          "grc": 1,
+          "sav": 4,
+          "wrd": 2,
+          "spi": 3
+        },
+        "grants": [
+          {
+            "id": "926f9a75e240c59d",
+            "name": "Scrapper’s Guard",
+            "type": "fashion",
+            "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+            "system": {
+              "rarity": "common",
+              "slots": 1,
+              "description": "ARMOR +2 ARDOR +0 Gain +1 on all melee attacks when adjacent against 2+ hostiles. A lightsteel breastplate strapped over some padded clothing and a shirt.",
+              "magCost": 100,
+              "armor": 2,
+              "ardor": 0,
+              "source": "10,000 Swords Against Heaven 2.0.3, PDF p.110",
+              "equipped": false,
+              "quantity": 1,
+              "gearSlot": "fashion"
+            },
+            "effects": []
+          },
+          {
+            "id": "47fecdb79184a091",
+            "name": "Ascetic’s Meditation",
+            "type": "trait",
+            "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+            "system": {
+              "description": "<p>Your body rejects even the greatest of magicks. +[Level] against Magick-based Attacks.</p>",
+              "source": "Rules 2.0.3, p.114; Trait 13",
+              "tags": "Grimoire, Trait, d66 13",
+              "level": 1,
+              "active": false
+            },
+            "effects": [
+              {
+                "_id": "aa2366fb3da48bd0",
+                "name": "Defending against Magick-based attacks",
+                "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+                "transfer": true,
+                "disabled": false,
+                "description": "<p>Rules 2.0.3, p.114; Trait 13. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+                "system": {
+                  "changes": [
+                    {
+                      "key": "system.defenseBonus",
+                      "type": "add",
+                      "value": "@system.level",
+                      "phase": "initial",
+                      "priority": 20
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "tags": "Job, Body"
+      },
+      "effects": []
+    },
+    {
+      "_id": "9833a469d016a040",
+      "name": "Bodyguard",
+      "type": "job",
+      "img": "systems/10kswordsfoundry/assets/icons/job.svg",
+      "folder": "d77b86d8082e76c4",
+      "system": {
+        "description": "<p>Bodyguard Protector of the client. VIO✦✦✦✦DIA✦GRC✦✦✦SAV✦✦WRD✦SPI✦✦ [R HAND] HaeCo Foldblade (Concealable Sword) [L HAND] HaeCo Foldshield (Concealable Shield Bludgeon) [FASHION] Scrapperʼs Guard (2 Armor. Gain +1 on all melee attacks when adjacent against 2+ hostiles.) [TRAIT] Beast Shrine (Once per day, you may lose 1 Health to gain +1 dice to all VIO Checks for 10 minutes. During this time, suffer -1 dice to all DIA Checks. You must act on instinct.)</p>",
+        "source": "Rules 2.0.3, p.42",
+        "category": "body",
+        "cultivations": {
+          "vio": 4,
+          "dia": 1,
+          "grc": 3,
+          "sav": 2,
+          "wrd": 1,
+          "spi": 2
+        },
+        "grants": [
+          {
+            "id": "8890d5ea9e1be017",
+            "name": "HaeCo Foldblade",
+            "type": "weapon",
+            "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+            "system": {
+              "bonus": 2,
+              "damageType": "cut",
+              "range": 1,
+              "weaponType": "melee",
+              "ammoFamily": "none",
+              "properties": {
+                "concealable": true
+              },
+              "description": "<p>Bodyguard Protector of the client. VIO✦✦✦✦DIA✦GRC✦✦✦SAV✦✦WRD✦SPI✦✦ [R HAND] HaeCo Foldblade (Concealable Sword) [L HAND] HaeCo Foldshield (Concealable Shield Bludgeon) [FASHION] Scrapperʼs Guard (2 Armor. Gain +1 on all melee attacks when adjacent against 2+ hostiles.) [TRAIT] Beast Shrine (Once per day, you may lose 1 Health to gain +1 dice to all VIO Checks for 10 minutes. During this time, suffer -1 dice to all DIA Checks. You must act on instinct.)</p>",
+              "source": "Rules 2.0.3, p.42; Bodyguard Job",
+              "gearSlot": "right",
+              "equipped": false,
+              "quantity": 1,
+              "slots": 1,
+              "magCost": 0
+            },
+            "effects": []
+          },
+          {
+            "id": "ba1b3bb9f89a3a8c",
+            "name": "HaeCo Foldshield",
+            "type": "weapon",
+            "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+            "system": {
+              "bonus": 2,
+              "damageType": "impact",
+              "range": 1,
+              "weaponType": "melee",
+              "ammoFamily": "none",
+              "properties": {
+                "crushing": true,
+                "concealable": true,
+                "shield": true
+              },
+              "description": "<p>Bodyguard Protector of the client. VIO✦✦✦✦DIA✦GRC✦✦✦SAV✦✦WRD✦SPI✦✦ [R HAND] HaeCo Foldblade (Concealable Sword) [L HAND] HaeCo Foldshield (Concealable Shield Bludgeon) [FASHION] Scrapperʼs Guard (2 Armor. Gain +1 on all melee attacks when adjacent against 2+ hostiles.) [TRAIT] Beast Shrine (Once per day, you may lose 1 Health to gain +1 dice to all VIO Checks for 10 minutes. During this time, suffer -1 dice to all DIA Checks. You must act on instinct.)</p>",
+              "source": "Rules 2.0.3, p.42; Bodyguard Job",
+              "gearSlot": "left",
+              "equipped": false,
+              "quantity": 1,
+              "slots": 1,
+              "magCost": 0
+            },
+            "effects": []
+          },
+          {
+            "id": "85d45884668818ab",
+            "name": "Scrapper’s Guard",
+            "type": "fashion",
+            "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+            "system": {
+              "rarity": "common",
+              "slots": 1,
+              "description": "ARMOR +2 ARDOR +0 Gain +1 on all melee attacks when adjacent against 2+ hostiles. A lightsteel breastplate strapped over some padded clothing and a shirt.",
+              "magCost": 100,
+              "armor": 2,
+              "ardor": 0,
+              "source": "10,000 Swords Against Heaven 2.0.3, PDF p.110",
+              "equipped": false,
+              "quantity": 1,
+              "gearSlot": "fashion"
+            },
+            "effects": []
+          },
+          {
+            "id": "7d2c97c767b66101",
+            "name": "Beast Shrine",
+            "type": "trait",
+            "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+            "system": {
+              "description": "<p>At the heart of every sentient being is the Beast writhing. The purest expression of the prima materia of all life: the Void. Break doors, chains, bones. Laugh at the weak. Once per Rest, you may lose 1 Health to gain +[Level] dice to all VIO Checks for 10 minutes. During this time, suffer -[Level] dice to all DIA Checks. You must act on instinct.</p>",
+              "source": "Rules 2.0.3, p.114; Trait 15",
+              "tags": "Grimoire, Trait, d66 15",
+              "level": 1,
+              "active": false
+            },
+            "effects": [
+              {
+                "_id": "ffc4c7dfd201d7a9",
+                "name": "Beast Shrine active: pay 1 Health; ten minutes; once per Rest",
+                "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+                "transfer": true,
+                "disabled": false,
+                "description": "<p>Rules 2.0.3, p.114; Trait 15. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+                "system": {
+                  "changes": [
+                    {
+                      "key": "system.cultivations.vio",
+                      "type": "add",
+                      "value": "@system.level",
+                      "phase": "initial",
+                      "priority": 20
+                    },
+                    {
+                      "key": "system.cultivations.dia",
+                      "type": "add",
+                      "value": "-1 * @system.level",
+                      "phase": "initial",
+                      "priority": 20
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "tags": "Job, Body"
+      },
+      "effects": []
+    },
+    {
+      "_id": "ceedf4981962a1f1",
+      "name": "Hunter",
+      "type": "job",
+      "img": "systems/10kswordsfoundry/assets/icons/job.svg",
+      "folder": "d77b86d8082e76c4",
+      "system": {
+        "description": "<p>Hunter Prowl and kill. VIO✦✦DIA✦✦GRC✦✦✦✦SAV✦✦✦WRD✦SPI✦ [R + L HAND] REVIKEYA Longbow k640 (Bow, 12 Arrows) [FASHION] Hunterʼs Garb (As an Action, mark an entity that can be seen as the wearerʼs mark. The wearer deals +1 ATK against their mark.) [TRAIT] Operatic Athleticism (+1 dice to any GRC Check to leap, vault, climb, or maneuver and to any movement-based performance. You can recreate any motion you have performed before.)</p>",
+        "source": "Rules 2.0.3, p.42",
+        "category": "body",
+        "cultivations": {
+          "vio": 2,
+          "dia": 2,
+          "grc": 4,
+          "sav": 3,
+          "wrd": 1,
+          "spi": 1
+        },
+        "grants": [
+          {
+            "id": "3d4917b4d215d6ca",
+            "name": "REVIKEYA Longbow k640",
+            "type": "weapon",
+            "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+            "system": {
+              "bonus": 2,
+              "damageType": "cut",
+              "range": 20,
+              "weaponType": "ranged",
+              "ammoFamily": "none",
+              "properties": {},
+              "description": "<p>Hunter Prowl and kill. VIO✦✦DIA✦✦GRC✦✦✦✦SAV✦✦✦WRD✦SPI✦ [R + L HAND] REVIKEYA Longbow k640 (Bow, 12 Arrows) [FASHION] Hunterʼs Garb (As an Action, mark an entity that can be seen as the wearerʼs mark. The wearer deals +1 ATK against their mark.) [TRAIT] Operatic Athleticism (+1 dice to any GRC Check to leap, vault, climb, or maneuver and to any movement-based performance. You can recreate any motion you have performed before.)</p>",
+              "source": "Rules 2.0.3, p.42; Hunter Job",
+              "gearSlot": "both",
+              "equipped": false,
+              "quantity": 1,
+              "slots": 1,
+              "magCost": 0,
+              "ammo": {
+                "type": "Arrow",
+                "quantity": 12
+              }
+            },
+            "effects": []
+          },
+          {
+            "id": "ef62ccd60470f47e",
+            "name": "Hunter’s Garb",
+            "type": "fashion",
+            "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+            "system": {
+              "rarity": "common",
+              "slots": 1,
+              "description": "ARMOR +1 ARDOR +0 As an Action, mark an entity that can be seen as the wearer’s mark. The wearer deals +1 ATK against their mark. A coat and cloak with some leather gloves. For hunting across the world.",
+              "magCost": 100,
+              "armor": 1,
+              "ardor": 0,
+              "source": "10,000 Swords Against Heaven 2.0.3, PDF p.110",
+              "equipped": false,
+              "quantity": 1,
+              "gearSlot": "fashion"
+            },
+            "effects": []
+          },
+          {
+            "id": "52d766a8574bb937",
+            "name": "Operatic Athleticism",
+            "type": "trait",
+            "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+            "system": {
+              "description": "<p>The grand Jetung Opera, the crux of Jeng and Jaxiya. Don the pheasant helmets, the ogre masks, the armor-costumes and dance in light and shadow. Operatics are true performers and masters of the art, but this requires an almost lifetime worth of investment to achieve. More importantly, many dances are used for combat, and vice versa. +[Level] dice to any GRC Check to leap, vault, climb, or maneuver. Add +1 die to any movement-based performance. You can recreate any motion you have performed before.</p>",
+              "source": "Rules 2.0.3, p.118; Trait 54",
+              "tags": "Grimoire, Trait, d66 54",
+              "level": 1,
+              "active": false
+            },
+            "effects": [
+              {
+                "_id": "6dce790f5ad3ecc8",
+                "name": "Leap, vault, climb, or maneuver",
+                "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+                "transfer": true,
+                "disabled": false,
+                "description": "<p>Rules 2.0.3, p.118; Trait 54. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+                "system": {
+                  "changes": [
+                    {
+                      "key": "system.cultivations.grc",
+                      "type": "add",
+                      "value": "@system.level",
+                      "phase": "initial",
+                      "priority": 20
+                    }
+                  ]
+                }
+              },
+              {
+                "_id": "9ecb00d20cd9b4c3",
+                "name": "Movement-based performance (additional)",
+                "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+                "transfer": true,
+                "disabled": true,
+                "description": "<p>Rules 2.0.3, p.118; Trait 54. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+                "system": {
+                  "changes": [
+                    {
+                      "key": "system.checkBonus",
+                      "type": "add",
+                      "value": "1",
+                      "phase": "initial",
+                      "priority": 20
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "tags": "Job, Body"
+      },
+      "effects": []
+    },
+    {
+      "_id": "87a9992ddcc9028e",
+      "name": "Assassin",
+      "type": "job",
+      "img": "systems/10kswordsfoundry/assets/icons/job.svg",
+      "folder": "d77b86d8082e76c4",
+      "system": {
+        "description": "<p>Assassin Hunt down discreetly. VIO✦✦✦DIA✦✦GRC✦✦✦✦SAV✦WRD✦✦SPI✦ [R HAND] EXDEAD Sutra-Knife [NIMBLE DAGGER] [L HAND] EXDEAD Sutra-Knife [NIMBLE DAGGER] [FASHION] Rogue Garb (+1 MOV while worn. +1 to all attempts at stealth and Larceny. +1 ATK vs someone unsuspecting.) [TRAIT] Beautiful (+1 to any Check that leverages your appearance to persuade, charm, or influence. You cannot remain unnoticed in a crowd—people remember your face)</p>",
+        "source": "Rules 2.0.3, p.42",
+        "category": "body",
+        "cultivations": {
+          "vio": 3,
+          "dia": 2,
+          "grc": 4,
+          "sav": 1,
+          "wrd": 2,
+          "spi": 1
+        },
+        "grants": [
+          {
+            "id": "80d332b545ec9a11",
+            "name": "EXDEAD Sutra-Knife",
+            "type": "weapon",
+            "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+            "system": {
+              "bonus": 2,
+              "damageType": "cut",
+              "range": 1,
+              "weaponType": "melee",
+              "ammoFamily": "none",
+              "properties": {
+                "concealable": true
+              },
+              "description": "<p>Assassin Hunt down discreetly. VIO✦✦✦DIA✦✦GRC✦✦✦✦SAV✦WRD✦✦SPI✦ [R HAND] EXDEAD Sutra-Knife [NIMBLE DAGGER] [L HAND] EXDEAD Sutra-Knife [NIMBLE DAGGER] [FASHION] Rogue Garb (+1 MOV while worn. +1 to all attempts at stealth and Larceny. +1 ATK vs someone unsuspecting.) [TRAIT] Beautiful (+1 to any Check that leverages your appearance to persuade, charm, or influence. You cannot remain unnoticed in a crowd—people remember your face)</p>",
+              "source": "Rules 2.0.3, p.42; Assassin Job",
+              "gearSlot": "right",
+              "equipped": false,
+              "quantity": 1,
+              "slots": 1,
+              "magCost": 0,
+              "affinity": "Nimble"
+            },
+            "effects": []
+          },
+          {
+            "id": "d982249f1b4e974a",
+            "name": "EXDEAD Sutra-Knife",
+            "type": "weapon",
+            "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+            "system": {
+              "bonus": 2,
+              "damageType": "cut",
+              "range": 1,
+              "weaponType": "melee",
+              "ammoFamily": "none",
+              "properties": {
+                "concealable": true
+              },
+              "description": "<p>Assassin Hunt down discreetly. VIO✦✦✦DIA✦✦GRC✦✦✦✦SAV✦WRD✦✦SPI✦ [R HAND] EXDEAD Sutra-Knife [NIMBLE DAGGER] [L HAND] EXDEAD Sutra-Knife [NIMBLE DAGGER] [FASHION] Rogue Garb (+1 MOV while worn. +1 to all attempts at stealth and Larceny. +1 ATK vs someone unsuspecting.) [TRAIT] Beautiful (+1 to any Check that leverages your appearance to persuade, charm, or influence. You cannot remain unnoticed in a crowd—people remember your face)</p>",
+              "source": "Rules 2.0.3, p.42; Assassin Job",
+              "gearSlot": "left",
+              "equipped": false,
+              "quantity": 1,
+              "slots": 1,
+              "magCost": 0,
+              "affinity": "Nimble"
+            },
+            "effects": []
+          },
+          {
+            "id": "e98eb4fe6fbb1dc1",
+            "name": "Rogue Garb",
+            "type": "fashion",
+            "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+            "system": {
+              "rarity": "uncommon",
+              "slots": 1,
+              "description": "Armor +0 ARDOR +0 +1 MOV while worn. +1 to all attempts at steal th and Larceny. +1 ATK vs someone unsuspecting. A set of clothes that cover the face, the fingers, and the body. Scarf-like shawls and cloaks blossoming into harem pants, high boots, opentoed sandals, or running shoes. Often with a mask of some sort.",
+              "magCost": 200,
+              "armor": 0,
+              "ardor": 0,
+              "source": "10,000 Swords Against Heaven 2.0.3, PDF p.110",
+              "equipped": false,
+              "quantity": 1,
+              "gearSlot": "fashion"
+            },
+            "effects": [
+              {
+                "_id": "fe09084acb8eaac1",
+                "name": "Rogue Garb — Movement +1",
+                "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+                "transfer": true,
+                "disabled": false,
+                "description": "<p>10,000 Swords Against Heaven 2.0.3, PDF p.110.</p>",
+                "system": {
+                  "changes": [
+                    {
+                      "key": "system.movement",
+                      "type": "add",
+                      "value": "1",
+                      "phase": "initial",
+                      "priority": 20
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "92dda27ae18657c9",
+            "name": "Beautiful",
+            "type": "trait",
+            "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+            "system": {
+              "description": "<p>Everyone can be beautiful. Not everyone can commit to it, or is a natural at it. This cultivation has you practicing facial movements, perfecting makeup, and performing rituals for face-shapings to attain final beauty. Beauty is an armor. And all armor weighs on you. +[Level] dice to any Check that leverages your appearance to persuade, charm, or influence. You cannot remain unnoticed in a crowd—people remember your face.</p>",
+              "source": "Rules 2.0.3, p.120; Trait 66",
+              "tags": "Grimoire, Trait, d66 66",
+              "level": 1,
+              "active": false
+            },
+            "effects": [
+              {
+                "_id": "f9c77da82a1164e5",
+                "name": "Appearance to persuade, charm, or influence",
+                "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+                "transfer": true,
+                "disabled": false,
+                "description": "<p>Rules 2.0.3, p.120; Trait 66. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+                "system": {
+                  "changes": [
+                    {
+                      "key": "system.checkBonus",
+                      "type": "add",
+                      "value": "@system.level",
+                      "phase": "initial",
+                      "priority": 20
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "tags": "Job, Body"
+      },
+      "effects": []
+    },
+    {
+      "_id": "dd14075f826d5857",
+      "name": "Scholar",
+      "type": "job",
+      "img": "systems/10kswordsfoundry/assets/icons/job.svg",
+      "folder": "530e558a4d9ef398",
+      "system": {
+        "description": "<p>Scholar Educate and be educated. VIO✦DIA✦✦✦✦GRC✦✦SAV✦✦WRD✦SPI✦✦✦ [R HAND] Book (Bludgeon) [FASHION] Savant Robes (+2 Ardor; all attempts to deduce, analyze, or research something gain +2). [TRAIT] High Revolutionist (+1 die to DIA Checks analyzing social structures (Pessimism of the Intellect). Add +1 die to SPI Checks resisting coercion or despair (Optimism of the Will). However, suffer -1 dice when attempting to carouse or chill with others: all your theory is scaring off the studs and the huzz.)</p>",
+        "source": "Rules 2.0.3, p.43",
+        "category": "mind",
+        "cultivations": {
+          "vio": 1,
+          "dia": 4,
+          "grc": 2,
+          "sav": 2,
+          "wrd": 1,
+          "spi": 3
+        },
+        "grants": [
+          {
+            "id": "b252e678e6c23966",
+            "name": "Book",
+            "type": "weapon",
+            "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+            "system": {
+              "bonus": 2,
+              "damageType": "impact",
+              "range": 1,
+              "weaponType": "melee",
+              "ammoFamily": "none",
+              "properties": {
+                "crushing": true
+              },
+              "description": "<p>Scholar Educate and be educated. VIO✦DIA✦✦✦✦GRC✦✦SAV✦✦WRD✦SPI✦✦✦ [R HAND] Book (Bludgeon) [FASHION] Savant Robes (+2 Ardor; all attempts to deduce, analyze, or research something gain +2). [TRAIT] High Revolutionist (+1 die to DIA Checks analyzing social structures (Pessimism of the Intellect). Add +1 die to SPI Checks resisting coercion or despair (Optimism of the Will). However, suffer -1 dice when attempting to carouse or chill with others: all your theory is scaring off the studs and the huzz.)</p>",
+              "source": "Rules 2.0.3, p.43; Scholar Job",
+              "gearSlot": "right",
+              "equipped": false,
+              "quantity": 1,
+              "slots": 1,
+              "magCost": 0
+            },
+            "effects": []
+          },
+          {
+            "id": "2dba7e13349d8bb4",
+            "name": "Savant Robes",
+            "type": "fashion",
+            "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+            "system": {
+              "rarity": "uncommon",
+              "slots": 1,
+              "description": "ARMOR 0 ARDOR +2 All attempts to deduce, anal yze, or research something gain +2. Light robes with talisman geometries scrawled across it. Leather dress shoes, a nice beret or hat or some glasses. Clothes for those that cannot sleep at night, chasing after the great mysteries of the Trichiliocosm.",
+              "magCost": 200,
+              "armor": 0,
+              "ardor": 2,
+              "source": "10,000 Swords Against Heaven 2.0.3, PDF p.110",
+              "equipped": false,
+              "quantity": 1,
+              "gearSlot": "fashion"
+            },
+            "effects": []
+          },
+          {
+            "id": "0877873ba186cd3a",
+            "name": "High Revolutionist",
+            "type": "trait",
+            "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+            "system": {
+              "description": "<p>Not everyone has what it takes to be a revolutionary. An ideology that arose from Kafeng Masangwa and the Shennin Commune, which was summarily destroyed even after they successfully conducted the First World Revolution against the Invincible Blade Princess. They dared to think different: no wages, no rulers, no middlemen. A society that loves humanity. It failed, but they did try. To be a communist still is to be someone of a vajra-will and vajra-intelligence, to find the stars in the darkness. +[Level] die to DIA Checks analyzing social structures (Pessimism of the Intellect). +[Level] die to SPI Checks resisting coercion or despair (Optimism of the Will). However, you gain -[Level] dice when attempting to carouse or chill with others: all your theory is scaring off the studs and the huzz.</p>",
+              "source": "Rules 2.0.3, p.119; Trait 61",
+              "tags": "Grimoire, Trait, d66 61",
+              "level": 1,
+              "active": false
+            },
+            "effects": [
+              {
+                "_id": "80b67437cea9ca14",
+                "name": "Analyze social structures",
+                "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+                "transfer": true,
+                "disabled": false,
+                "description": "<p>Rules 2.0.3, p.119; Trait 61. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+                "system": {
+                  "changes": [
+                    {
+                      "key": "system.cultivations.dia",
+                      "type": "add",
+                      "value": "@system.level",
+                      "phase": "initial",
+                      "priority": 20
+                    }
+                  ]
+                }
+              },
+              {
+                "_id": "b67091440c1a761c",
+                "name": "Resist coercion or despair",
+                "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+                "transfer": true,
+                "disabled": true,
+                "description": "<p>Rules 2.0.3, p.119; Trait 61. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+                "system": {
+                  "changes": [
+                    {
+                      "key": "system.cultivations.spi",
+                      "type": "add",
+                      "value": "@system.level",
+                      "phase": "initial",
+                      "priority": 20
+                    }
+                  ]
+                }
+              },
+              {
+                "_id": "6ddd88c101bff28f",
+                "name": "Carouse or chill with others",
+                "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+                "transfer": true,
+                "disabled": true,
+                "description": "<p>Rules 2.0.3, p.119; Trait 61. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+                "system": {
+                  "changes": [
+                    {
+                      "key": "system.checkBonus",
+                      "type": "add",
+                      "value": "-1 * @system.level",
+                      "phase": "initial",
+                      "priority": 20
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "tags": "Job, Mind"
+      },
+      "effects": []
+    },
+    {
+      "_id": "ddcdde9d9640d05e",
+      "name": "Cryptomancer",
+      "type": "job",
+      "img": "systems/10kswordsfoundry/assets/icons/job.svg",
+      "folder": "530e558a4d9ef398",
+      "system": {
+        "description": "<p>Cryptomancer Become digital devils. VIO✦DIA✦✦✦GRC✦✦SAV✦✦✦✦WRD✦SPI✦✦ [R HAND] HaeCo Pistol (Keen Gun, 10 Bullets) [FASHION] Occultist Vesture (+1 Ardor. Can burn or install Health in place of Ardor. +1 SPI.) [TRAIT] Chills (When hidden threat, ambush, or supernatural presence lurks within [Level x 10]m, you feel it as a cold rush down your spine, like someone walking over your grave. You may then focus and ask the world one question: &quot;What is the nature of the danger?&quot;)</p>",
+        "source": "Rules 2.0.3, p.43",
+        "category": "mind",
+        "cultivations": {
+          "vio": 1,
+          "dia": 3,
+          "grc": 2,
+          "sav": 4,
+          "wrd": 1,
+          "spi": 2
+        },
+        "grants": [
+          {
+            "id": "be819fc59628f7c4",
+            "name": "HaeCo Pistol",
+            "type": "weapon",
+            "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+            "system": {
+              "bonus": 3,
+              "damageType": "impact",
+              "range": 25,
+              "weaponType": "ranged",
+              "ammoFamily": "none",
+              "properties": {},
+              "description": "<p>Cryptomancer Become digital devils. VIO✦DIA✦✦✦GRC✦✦SAV✦✦✦✦WRD✦SPI✦✦ [R HAND] HaeCo Pistol (Keen Gun, 10 Bullets) [FASHION] Occultist Vesture (+1 Ardor. Can burn or install Health in place of Ardor. +1 SPI.) [TRAIT] Chills (When hidden threat, ambush, or supernatural presence lurks within [Level x 10]m, you feel it as a cold rush down your spine, like someone walking over your grave. You may then focus and ask the world one question: &quot;What is the nature of the danger?&quot;)</p>",
+              "source": "Rules 2.0.3, p.43; Cryptomancer Job",
+              "gearSlot": "right",
+              "equipped": false,
+              "quantity": 1,
+              "slots": 1,
+              "magCost": 0,
+              "affinity": "Keen",
+              "ammo": {
+                "type": "Bullet",
+                "quantity": 10
+              }
+            },
+            "effects": []
+          },
+          {
+            "id": "aee1b9a59fc5d420",
+            "name": "Occultist Vesture",
+            "type": "fashion",
+            "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+            "system": {
+              "rarity": "uncommon",
+              "slots": 1,
+              "description": "ARMOR 0 ARDOR +1 Can burn or install Heal th in place of Ardor. +1 SPI. A dark, edgy style with cybersigils or curving, slicing angles. Show off too much skin or none at all. Tattoos hanging in the wind. Deep eyeliner, long leather coats, belts for gloves. High boots, uneven beanie, two layers of cloaks with forbidden yantras.",
+              "magCost": 300,
+              "armor": 0,
+              "ardor": 1,
+              "source": "10,000 Swords Against Heaven 2.0.3, PDF p.110",
+              "equipped": false,
+              "quantity": 1,
+              "gearSlot": "fashion"
+            },
+            "effects": [
+              {
+                "_id": "093129864267bfac",
+                "name": "Occultist Vesture — Spirit +1",
+                "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+                "transfer": true,
+                "disabled": false,
+                "description": "<p>10,000 Swords Against Heaven 2.0.3, PDF p.110.</p>",
+                "system": {
+                  "changes": [
+                    {
+                      "key": "system.cultivations.spi",
+                      "type": "add",
+                      "value": "1",
+                      "phase": "initial",
+                      "priority": 20
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "359a235e00dd9920",
+            "name": "Chills",
+            "type": "trait",
+            "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+            "system": {
+              "description": "<p>Cold rushes down your spine. This state of super-awareness lets you hear the sigh of the world, the voice of the city, the heartbeat of the People. When hidden threat, ambush, or supernatural presence lurks within [Level x 10]m, you feel it as a cold rush down your spine, like someone walking over your grave. You may then focus and ask the world one question: \"What is the nature of the danger?\"</p>",
+              "source": "Rules 2.0.3, p.117; Trait 44",
+              "tags": "Grimoire, Trait, d66 44",
+              "level": 1,
+              "active": false
+            },
+            "effects": []
+          }
+        ],
+        "tags": "Job, Mind"
+      },
+      "effects": []
+    },
+    {
+      "_id": "ddfb17021fdd383c",
+      "name": "Occultist",
+      "type": "job",
+      "img": "systems/10kswordsfoundry/assets/icons/job.svg",
+      "folder": "530e558a4d9ef398",
+      "system": {
+        "description": "<p>Occultist Touch the skin of God. VIO✦DIA✦✦GRC✦SAV✦✦WRD✦✦✦SPI✦✦✦✦ [R HAND] PuJaEso Occult Keris (OCCULT RITUAL DAGGER, Returns immediately after being thrown) [FASHION] Occultist Vesture (+1 Ardor. Can burn or install Health in place of Ardor. +1 SPI.) [TRAIT] Third Eye (You perceive Spirits, Ghosts, and Subtle Entities as readily as you perceive the living. They are always visible to you—shimmering, translucent, sometimes screaming silently. +1 to all Checks dealing with ghosts and spirits.)</p>",
+        "source": "Rules 2.0.3, p.43",
+        "category": "mind",
+        "cultivations": {
+          "vio": 1,
+          "dia": 2,
+          "grc": 1,
+          "sav": 2,
+          "wrd": 3,
+          "spi": 4
+        },
+        "grants": [
+          {
+            "id": "e5ab88e2c9a06769",
+            "name": "PuJaEso Occult Keris",
+            "type": "weapon",
+            "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+            "system": {
+              "bonus": 2,
+              "damageType": "cut",
+              "range": 1,
+              "weaponType": "melee",
+              "ammoFamily": "none",
+              "properties": {
+                "concealable": true,
+                "ritual": true
+              },
+              "description": "<p>Occultist Touch the skin of God. VIO✦DIA✦✦GRC✦SAV✦✦WRD✦✦✦SPI✦✦✦✦ [R HAND] PuJaEso Occult Keris (OCCULT RITUAL DAGGER, Returns immediately after being thrown) [FASHION] Occultist Vesture (+1 Ardor. Can burn or install Health in place of Ardor. +1 SPI.) [TRAIT] Third Eye (You perceive Spirits, Ghosts, and Subtle Entities as readily as you perceive the living. They are always visible to you—shimmering, translucent, sometimes screaming silently. +1 to all Checks dealing with ghosts and spirits.)</p>",
+              "source": "Rules 2.0.3, p.43; Occultist Job",
+              "gearSlot": "right",
+              "equipped": false,
+              "quantity": 1,
+              "slots": 1,
+              "magCost": 0,
+              "affinity": "Occult"
+            },
+            "effects": []
+          },
+          {
+            "id": "cac072fc9f5d357b",
+            "name": "Occultist Vesture",
+            "type": "fashion",
+            "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+            "system": {
+              "rarity": "uncommon",
+              "slots": 1,
+              "description": "ARMOR 0 ARDOR +1 Can burn or install Heal th in place of Ardor. +1 SPI. A dark, edgy style with cybersigils or curving, slicing angles. Show off too much skin or none at all. Tattoos hanging in the wind. Deep eyeliner, long leather coats, belts for gloves. High boots, uneven beanie, two layers of cloaks with forbidden yantras.",
+              "magCost": 300,
+              "armor": 0,
+              "ardor": 1,
+              "source": "10,000 Swords Against Heaven 2.0.3, PDF p.110",
+              "equipped": false,
+              "quantity": 1,
+              "gearSlot": "fashion"
+            },
+            "effects": [
+              {
+                "_id": "093129864267bfac",
+                "name": "Occultist Vesture — Spirit +1",
+                "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+                "transfer": true,
+                "disabled": false,
+                "description": "<p>10,000 Swords Against Heaven 2.0.3, PDF p.110.</p>",
+                "system": {
+                  "changes": [
+                    {
+                      "key": "system.cultivations.spi",
+                      "type": "add",
+                      "value": "1",
+                      "phase": "initial",
+                      "priority": 20
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "7c4ed61c012aa51b",
+            "name": "Third Eye",
+            "type": "trait",
+            "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+            "system": {
+              "description": "<p>Oh God… you see them too, donʼt you? You perceive Spirits, Ghosts, and Subtle Entities as readily as you perceive the living. +[Level] to dealing and speaking with ghosts and spirits.</p>",
+              "source": "Rules 2.0.3, p.119; Trait 56",
+              "tags": "Grimoire, Trait, d66 56",
+              "level": 1,
+              "active": false
+            },
+            "effects": [
+              {
+                "_id": "568d245b3ec0394d",
+                "name": "Deal and speak with ghosts or spirits",
+                "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+                "transfer": true,
+                "disabled": false,
+                "description": "<p>Rules 2.0.3, p.119; Trait 56. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+                "system": {
+                  "changes": [
+                    {
+                      "key": "system.checkBonus",
+                      "type": "add",
+                      "value": "@system.level",
+                      "phase": "initial",
+                      "priority": 20
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "tags": "Job, Mind"
+      },
+      "effects": []
+    },
+    {
+      "_id": "f9a875ff2ec4d7dd",
+      "name": "Investigator",
+      "type": "job",
+      "img": "systems/10kswordsfoundry/assets/icons/job.svg",
+      "folder": "530e558a4d9ef398",
+      "system": {
+        "description": "<p>Investigator Unravel the world. VIO✦DIA✦✦✦✦GRC✦✦✦SAV✦✦WRD✦✦SPI✦ [R HAND] TMNI Reaper ([FEROCIOUS] [SABER]) [FASHION] Hunterʼs Garb (1 Armor. As an Action, mark an entity that can be seen as the wearerʼs mark. The wearer deals +1 ATK against their mark.) [TRAIT] Dialectician (If you spend a full exchange (about 5 minutes) debating or persuading with logic, add +1 to your DIA pool. )</p>",
+        "source": "Rules 2.0.3, p.43",
+        "category": "mind",
+        "cultivations": {
+          "vio": 1,
+          "dia": 4,
+          "grc": 3,
+          "sav": 2,
+          "wrd": 2,
+          "spi": 1
+        },
+        "grants": [
+          {
+            "id": "e5505269f417dae4",
+            "name": "TMNI Reaper",
+            "type": "weapon",
+            "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+            "system": {
+              "bonus": 3,
+              "damageType": "cut",
+              "range": 1,
+              "weaponType": "melee",
+              "ammoFamily": "none",
+              "properties": {
+                "ferocious": true
+              },
+              "description": "<p>Investigator Unravel the world. VIO✦DIA✦✦✦✦GRC✦✦✦SAV✦✦WRD✦✦SPI✦ [R HAND] TMNI Reaper ([FEROCIOUS] [SABER]) [FASHION] Hunterʼs Garb (1 Armor. As an Action, mark an entity that can be seen as the wearerʼs mark. The wearer deals +1 ATK against their mark.) [TRAIT] Dialectician (If you spend a full exchange (about 5 minutes) debating or persuading with logic, add +1 to your DIA pool. )</p>",
+              "source": "Rules 2.0.3, p.43; Investigator Job",
+              "gearSlot": "right",
+              "equipped": false,
+              "quantity": 1,
+              "slots": 1,
+              "magCost": 0
+            },
+            "effects": []
+          },
+          {
+            "id": "93841acfc021d8f1",
+            "name": "Hunter’s Garb",
+            "type": "fashion",
+            "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+            "system": {
+              "rarity": "common",
+              "slots": 1,
+              "description": "ARMOR +1 ARDOR +0 As an Action, mark an entity that can be seen as the wearer’s mark. The wearer deals +1 ATK against their mark. A coat and cloak with some leather gloves. For hunting across the world.",
+              "magCost": 100,
+              "armor": 1,
+              "ardor": 0,
+              "source": "10,000 Swords Against Heaven 2.0.3, PDF p.110",
+              "equipped": false,
+              "quantity": 1,
+              "gearSlot": "fashion"
+            },
+            "effects": []
+          },
+          {
+            "id": "0afdc750838d4bec",
+            "name": "Dialectician",
+            "type": "trait",
+            "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+            "system": {
+              "description": "<p>Reach the truths of the world through that flensing blade named Unity of Oppositions. When someone speaks, you can identify their hidden assumptions, logical gaps, and self-deceptions—as easily as you can see rust on a blade. If you spend a full exchange (about 5 minutes) debating or persuading with logic, add +[Level] dice to your DIA pool.</p>",
+              "source": "Rules 2.0.3, p.114; Trait 12",
+              "tags": "Grimoire, Trait, d66 12",
+              "level": 1,
+              "active": false
+            },
+            "effects": [
+              {
+                "_id": "c5cbe593cea5c542",
+                "name": "After five minutes debating or persuading with logic",
+                "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+                "transfer": true,
+                "disabled": false,
+                "description": "<p>Rules 2.0.3, p.114; Trait 12. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+                "system": {
+                  "changes": [
+                    {
+                      "key": "system.cultivations.dia",
+                      "type": "add",
+                      "value": "@system.level",
+                      "phase": "initial",
+                      "priority": 20
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "tags": "Job, Mind"
+      },
+      "effects": []
+    },
+    {
+      "_id": "93856bb98270968a",
+      "name": "Mechanist",
+      "type": "job",
+      "img": "systems/10kswordsfoundry/assets/icons/job.svg",
+      "folder": "530e558a4d9ef398",
+      "system": {
+        "description": "<p>Mechanist Build a better world. VIO✦✦DIA✦✦✦✦GRC✦✦SAV✦✦✦WRD✦SPI✦ [R HAND] Engineering Hammer (Noetic Bludgeon) [FASHION] Working Class Clothes (+1 Armor. +1 to all Checks dealing with courage, bravery, or staying steadfast. All forced movement are reduced by 1.) [TRAIT] Machinism (+1 dice to any Check to inspect, repair, modify, or sabotage technology.)</p>",
+        "source": "Rules 2.0.3, p.43",
+        "category": "mind",
+        "cultivations": {
+          "vio": 2,
+          "dia": 4,
+          "grc": 2,
+          "sav": 3,
+          "wrd": 1,
+          "spi": 1
+        },
+        "grants": [
+          {
+            "id": "b2f7b2f6c9f4c136",
+            "name": "Engineering Hammer",
+            "type": "weapon",
+            "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+            "system": {
+              "bonus": 2,
+              "damageType": "impact",
+              "range": 1,
+              "weaponType": "melee",
+              "ammoFamily": "none",
+              "properties": {
+                "crushing": true
+              },
+              "description": "<p>Mechanist Build a better world. VIO✦✦DIA✦✦✦✦GRC✦✦SAV✦✦✦WRD✦SPI✦ [R HAND] Engineering Hammer (Noetic Bludgeon) [FASHION] Working Class Clothes (+1 Armor. +1 to all Checks dealing with courage, bravery, or staying steadfast. All forced movement are reduced by 1.) [TRAIT] Machinism (+1 dice to any Check to inspect, repair, modify, or sabotage technology.)</p>",
+              "source": "Rules 2.0.3, p.43; Mechanist Job",
+              "gearSlot": "right",
+              "equipped": false,
+              "quantity": 1,
+              "slots": 1,
+              "magCost": 0,
+              "affinity": "Noetic"
+            },
+            "effects": []
+          },
+          {
+            "id": "149d5bdf3b8f3ff3",
+            "name": "Working Class Clothes",
+            "type": "fashion",
+            "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+            "system": {
+              "rarity": "common",
+              "slots": 1,
+              "description": "ARMOR +1 ARDOR +0 +1 to all Checks dealing with courage, bravery, or staying steadfast; all forced movement are reduced by 1. A ragged shirt, headwrap and wide-brimmed straw hat, some light pants and leather boots or rubber slippers. Just enough to get by.",
+              "magCost": 100,
+              "armor": 1,
+              "ardor": 0,
+              "source": "10,000 Swords Against Heaven 2.0.3, PDF p.110",
+              "equipped": false,
+              "quantity": 1,
+              "gearSlot": "fashion"
+            },
+            "effects": []
+          },
+          {
+            "id": "61ca156fbbdc8aaf",
+            "name": "Machinism",
+            "type": "trait",
+            "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+            "system": {
+              "description": "<p>Youʼre connection with the machines is like one with a pet. You change them, and they change you. +[Level] dice to any Check to repair, modify, inspect, or sabotage technology.</p>",
+              "source": "Rules 2.0.3, p.118; Trait 46",
+              "tags": "Grimoire, Trait, d66 46",
+              "level": 1,
+              "active": false
+            },
+            "effects": [
+              {
+                "_id": "0a8c15ca25b0ddc4",
+                "name": "Repair, modify, inspect, or sabotage technology",
+                "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+                "transfer": true,
+                "disabled": false,
+                "description": "<p>Rules 2.0.3, p.118; Trait 46. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+                "system": {
+                  "changes": [
+                    {
+                      "key": "system.checkBonus",
+                      "type": "add",
+                      "value": "@system.level",
+                      "phase": "initial",
+                      "priority": 20
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "tags": "Job, Mind"
+      },
+      "effects": []
+    },
+    {
+      "_id": "733b134a9f091258",
+      "name": "Diplomat",
+      "type": "job",
+      "img": "systems/10kswordsfoundry/assets/icons/job.svg",
+      "folder": "530e558a4d9ef398",
+      "system": {
+        "description": "<p>Diplomat Connect the world. VIO✦DIA✦GRC✦✦SAV✦✦WRD✦✦✦✦SPI✦✦✦ [R HAND] IN-ELIX Silksteel Ribbons (LYRIC WORN CONCEALABLE WHIP) [L HAND] IN-ELIX Silksteel Ribbons (LYRIC WORN CONCEALABLE WHIP) [FASHION] HW Silver Tongue Diplomacy Attire (+1 to all attempts to gain Leverage; +1 to all attempts to carouse or maneuver through high-culture locations; Can attempt to persuade someone through just looks or touch.) [TRAIT] Fist-Sized Muscle (Add +1 die to any WRD or SPI Check where you express truthfully. Add +1 when performing for an audience of at least 5 people).</p>",
+        "source": "Rules 2.0.3, p.43",
+        "category": "mind",
+        "cultivations": {
+          "vio": 1,
+          "dia": 1,
+          "grc": 2,
+          "sav": 2,
+          "wrd": 4,
+          "spi": 3
+        },
+        "grants": [
+          {
+            "id": "185afa62694d00a5",
+            "name": "IN-ELIX Silksteel Ribbons",
+            "type": "weapon",
+            "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+            "system": {
+              "bonus": 2,
+              "damageType": "impact",
+              "range": 2,
+              "weaponType": "melee",
+              "ammoFamily": "none",
+              "properties": {
+                "worn": true,
+                "concealable": true
+              },
+              "description": "<p>Diplomat Connect the world. VIO✦DIA✦GRC✦✦SAV✦✦WRD✦✦✦✦SPI✦✦✦ [R HAND] IN-ELIX Silksteel Ribbons (LYRIC WORN CONCEALABLE WHIP) [L HAND] IN-ELIX Silksteel Ribbons (LYRIC WORN CONCEALABLE WHIP) [FASHION] HW Silver Tongue Diplomacy Attire (+1 to all attempts to gain Leverage; +1 to all attempts to carouse or maneuver through high-culture locations; Can attempt to persuade someone through just looks or touch.) [TRAIT] Fist-Sized Muscle (Add +1 die to any WRD or SPI Check where you express truthfully. Add +1 when performing for an audience of at least 5 people).</p>",
+              "source": "Rules 2.0.3, p.43; Diplomat Job",
+              "gearSlot": "right",
+              "equipped": false,
+              "quantity": 1,
+              "slots": 1,
+              "magCost": 0,
+              "affinity": "Lyric"
+            },
+            "effects": []
+          },
+          {
+            "id": "d6f115a1e7dcb77e",
+            "name": "IN-ELIX Silksteel Ribbons",
+            "type": "weapon",
+            "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+            "system": {
+              "bonus": 2,
+              "damageType": "impact",
+              "range": 2,
+              "weaponType": "melee",
+              "ammoFamily": "none",
+              "properties": {
+                "worn": true,
+                "concealable": true
+              },
+              "description": "<p>Diplomat Connect the world. VIO✦DIA✦GRC✦✦SAV✦✦WRD✦✦✦✦SPI✦✦✦ [R HAND] IN-ELIX Silksteel Ribbons (LYRIC WORN CONCEALABLE WHIP) [L HAND] IN-ELIX Silksteel Ribbons (LYRIC WORN CONCEALABLE WHIP) [FASHION] HW Silver Tongue Diplomacy Attire (+1 to all attempts to gain Leverage; +1 to all attempts to carouse or maneuver through high-culture locations; Can attempt to persuade someone through just looks or touch.) [TRAIT] Fist-Sized Muscle (Add +1 die to any WRD or SPI Check where you express truthfully. Add +1 when performing for an audience of at least 5 people).</p>",
+              "source": "Rules 2.0.3, p.43; Diplomat Job",
+              "gearSlot": "left",
+              "equipped": false,
+              "quantity": 1,
+              "slots": 1,
+              "magCost": 0,
+              "affinity": "Lyric"
+            },
+            "effects": []
+          },
+          {
+            "id": "0de9f3f59a557aa5",
+            "name": "HW Silver Tongue Diplomacy Attire",
+            "type": "fashion",
+            "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+            "system": {
+              "rarity": "rare",
+              "slots": 1,
+              "description": "ARMOR +0 ARDOR +0 +1 TO ALL ATTEMPTS TO GAIN LEVERAGE +1 TO ALL ATTEMPTS TO CAROUSE OR MANEUVER THROUGH HIGH-CUL TURE LOCATIONS CAN ATTEMPT TO PERSUADE SOMEONE THROUGH JUST LOOKS OR TOUCH. A beautiful formal atitire for important, international diplomatic events.",
+              "magCost": 2000,
+              "armor": 0,
+              "ardor": 0,
+              "source": "10,000 Swords Against Heaven 2.0.3, PDF p.111",
+              "equipped": false,
+              "quantity": 1,
+              "gearSlot": "fashion"
+            },
+            "effects": []
+          },
+          {
+            "id": "35a03fc7c53e2591",
+            "name": "Fist-Sized Muscle",
+            "type": "trait",
+            "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+            "system": {
+              "description": "<p>Your heart burgeons with the whimsy and the love of the performer fighting for survival. Add +[Level] die to any WRD or SPI Check where you express truthfully. Add +[Level] dice when performing for an audience of at least 5 people.</p>",
+              "source": "Rules 2.0.3, p.115; Trait 25",
+              "tags": "Grimoire, Trait, d66 25",
+              "level": 1,
+              "active": false
+            },
+            "effects": [
+              {
+                "_id": "2a63fe75c787c7ae",
+                "name": "Express truthfully",
+                "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+                "transfer": true,
+                "disabled": false,
+                "description": "<p>Rules 2.0.3, p.115; Trait 25. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+                "system": {
+                  "changes": [
+                    {
+                      "key": "system.cultivations.wrd",
+                      "type": "add",
+                      "value": "@system.level",
+                      "phase": "initial",
+                      "priority": 20
+                    },
+                    {
+                      "key": "system.cultivations.spi",
+                      "type": "add",
+                      "value": "@system.level",
+                      "phase": "initial",
+                      "priority": 20
+                    }
+                  ]
+                }
+              },
+              {
+                "_id": "c5bce8873fc6669d",
+                "name": "Perform for an audience of at least five",
+                "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+                "transfer": true,
+                "disabled": true,
+                "description": "<p>Rules 2.0.3, p.115; Trait 25. Enable only while this condition applies. Disable after a one-use benefit or when its duration ends.</p>",
+                "system": {
+                  "changes": [
+                    {
+                      "key": "system.checkBonus",
+                      "type": "add",
+                      "value": "@system.level",
+                      "phase": "initial",
+                      "priority": 20
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "tags": "Job, Mind"
+      },
+      "effects": []
+    }
+  ]
+}

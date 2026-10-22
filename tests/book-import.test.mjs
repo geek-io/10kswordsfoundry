@@ -6,6 +6,7 @@ import {enhancedAbility} from '../scripts/abilities.mjs';
 import {resolveDefense} from '../scripts/resolution.mjs';
 test('folders remain under parents and sort alphabetically among siblings',()=>{
  const rows=[{id:'z',name:'Zeta'},{id:'a',name:'Alpha'},{id:'childZ',name:'Zulu',folder:'a'},{id:'childA',name:'Aardvark',folder:{id:'a'}},{id:'deep',name:'Child',folder:'childZ'}].map(f=>({...f,type:'Item'}));
+ for(const row of rows)row.displayed=false;
  globalThis.game={folders:{contents:rows}};
  assert.deepEqual(Object.keys(itemFolders()),['','a','childA','childZ','deep','z']);assert.equal(itemFolders().deep,'— — Child');
 });

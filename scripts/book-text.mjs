@@ -1,4 +1,4 @@
-import {MODIFIER_CHOICES,AFFINITIES} from './modifiers.mjs?v=0.1.45';
+import {MODIFIER_CHOICES,AFFINITIES} from './modifiers.mjs?v=0.1.47';
 export const PATTERNS={
  'empty hand':{bonus:1,damageType:'impact',range:1},dagger:{bonus:2,damageType:'cut',range:1},sword:{bonus:2,damageType:'cut',range:1},saber:{bonus:3,damageType:'cut',range:1},bludgeon:{bonus:2,damageType:'impact',range:1},cleaver:{bonus:2,damageType:'cut',range:1},polearm:{bonus:2,damageType:'cut',range:2},whip:{bonus:2,damageType:'impact',range:2},bow:{bonus:2,damageType:'cut',range:20},crossbow:{bonus:3,damageType:'cut',range:10},launcher:{bonus:2,damageType:'cut',range:6},gun:{bonus:3,damageType:'impact',range:25}};
 const tidy=s=>s.replace(/\u00ad/g,'').replace(/\r/g,'').replace(/A WW/g,'AWW').replace(/OCCUL T/g,'OCCULT').replace(/HOL Y/g,'HOLY').replace(/L YRIC/g,'LYRIC');

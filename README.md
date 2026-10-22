@@ -10,6 +10,17 @@ A Foundry VTT v14 game system for *10,000 Swords Against Heaven*, based on rules
 [Official Geek IO Discord Link](https://www.geek-io.net/discord)  
 
 
+# v 0.1.47
+
+- Fixed destination folders in the Item and Mass Importer. Existing Item folders are available even before the sidebar displays them, with hierarchy and alphabetical sorting preserved.
+
+# v 0.1.46
+
+- Added **World Being Traits**: all 16 entries from page 213, with supported numeric Active Effects and conditional bonuses disabled until needed.
+- Added **Sect Fashion & Gear**, organized by Sect and item type: 34 equipment cards represented by 37 entries, including all four Houyi Tonggong weapon forms.
+- Added all **12 Jobs**, organized into Body and Mind, with printed Cultivations and independent starting loadouts. Wretched preserves its player-selected choices.
+- Release ZIPs now include all **eight compendiums**. See [catalog details and manual mechanics](docs/expansion-catalogs.md).
+
 # v 0.1.45
 
 - Equipped **Hermetic Robes** automatically add **1 m to Magick area sizes**, following page 135. Scathe becomes a 2 m burst within its normal 6 m casting range.

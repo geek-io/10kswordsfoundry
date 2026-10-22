@@ -1,8 +1,8 @@
-import { CULTIVATIONS } from "./rules.mjs?v=0.1.45";
-import {grantedItems} from './job-grants.mjs?v=0.1.45';
-import {reconcileCosts} from './equipment.mjs?v=0.1.45';
-import {fashionResources} from './fashion.mjs?v=0.1.45';
-import {refundInstallation} from './ability-state.mjs?v=0.1.45';
+import { CULTIVATIONS } from "./rules.mjs?v=0.1.47";
+import {grantedItems} from './job-grants.mjs?v=0.1.47';
+import {reconcileCosts} from './equipment.mjs?v=0.1.47';
+import {fashionResources} from './fashion.mjs?v=0.1.47';
+import {refundInstallation} from './ability-state.mjs?v=0.1.47';
 
 export function jobCultivations(current, previousBase, previousAdjustments, nextBase) {
   const cultivations = {}, adjustments = {};
@@ -20,11 +20,18 @@ export function jobCultivations(current, previousBase, previousAdjustments, next
 }
 
 const pending = new WeakMap();
+export function validateJobChoices(job){
+ if(!job.flags?.['10kswordsfoundry']?.jobChoicesRequired)return;
+ const ratings=Object.keys(CULTIVATIONS).map(k=>job.system.cultivations[k]).sort((a,b)=>a-b);
+ const grants=job.system.grants??[];
+ if(JSON.stringify(ratings)!=='[1,1,2,2,3,4]'||!grants.some(g=>g.type==='weapon')||!grants.some(g=>g.type==='trait')||!grants.some(g=>g.type==='fashion'&&['common','uncommon'].includes(g.system.rarity)))throw Error('Customize Wretched first: assign 4, 3, 2, 2, 1, 1 Cultivations and add your chosen weapon, Common/Uncommon Fashion, and Trait to its loadout. For a ranged weapon, roll and enter 6+d6 ammunition.');
+}
 export function applyJobToActor(actor, jobData, {origin}={}) {
   const prior = pending.get(actor) ?? Promise.resolve();
   const task = prior.catch(() => {}).then(async () => {
     if (!actor.isOwner) throw new Error("You cannot change this character's Job.");
     if (jobData.type !== "job") throw new Error("Expected a Job item.");
+    validateJobChoices(jobData);
     const source = actor.toObject();
     const oldItems=structuredClone(source.items);
     const result = jobCultivations(source.system.cultivations, source.system.jobBase, source.system.jobAdjustments, jobData.system.cultivations);

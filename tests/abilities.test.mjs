@@ -16,7 +16,7 @@ test('internalized abilities never occupy physical slots, including legacy slot 
  for(const type of ['magick','technique'])assert.deepEqual(occupiedSlots({type,system:{equipped:true,gearSlot:'both'}}),[]);
 });
 test('folder selector includes Item folders and rejects removed or other document folders',()=>{
- const rows=[{id:'items',type:'Item',name:'Armory'},{id:'actors',type:'Actor',name:'Actors'}];
+ const rows=[{id:'items',type:'Item',name:'Armory',displayed:false},{id:'actors',type:'Actor',name:'Actors'}];
  globalThis.game={folders:{contents:rows,get:id=>rows.find(f=>f.id===id)}};
  assert.deepEqual(itemFolders(),{'':'Items root',items:'Armory'});assert.equal(checkedFolder('items'),'items');assert.equal(checkedFolder(''),null);
  assert.throws(()=>checkedFolder('actors'));assert.throws(()=>checkedFolder('gone'));

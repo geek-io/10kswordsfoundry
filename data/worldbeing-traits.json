@@ -1,0 +1,578 @@
+{
+  "name": "worldbeing-traits",
+  "folders": [
+    {
+      "_id": "df38e71c0e7b020d",
+      "name": "World Being Traits",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "color": null
+    }
+  ],
+  "items": [
+    {
+      "_id": "304fc91db538160f",
+      "name": "Dragon Eye",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "df38e71c0e7b020d",
+      "system": {
+        "description": "<p>The WB has 4 Actions instead of 3. And their first Action becomes uninterruptible.</p><p>World Being Trait. Conditional effects are disabled until their condition applies. Action-count changes, immunities, triggered healing and narrative abilities remain manual.</p>",
+        "source": "Rules 2.0.3, p.213",
+        "tags": "World Being, Trait, 3d6 3",
+        "level": 1,
+        "active": true
+      },
+      "effects": []
+    },
+    {
+      "_id": "633c0856a3189639",
+      "name": "Deity",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "df38e71c0e7b020d",
+      "system": {
+        "description": "<p>A deity of the Orbital Heaven Colonies from a tribe of humans that arrived before the humans we know. Lives off of bureauracy and machinery that orders and terraforms Hingsajagra. Worship grants them Sidhi. Tend to be taller, immaculately beautiful. They have +5 Hale levels and have +2 to all Cultivations.</p><p>World Being Trait. Conditional effects are disabled until their condition applies. Action-count changes, immunities, triggered healing and narrative abilities remain manual.</p>",
+        "source": "Rules 2.0.3, p.213",
+        "tags": "World Being, Trait, 3d6 4",
+        "level": 1,
+        "active": true
+      },
+      "effects": [
+        {
+          "_id": "3758b322355b030b",
+          "name": "Deity",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.213.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.health.max",
+                "type": "add",
+                "value": "5",
+                "phase": "initial",
+                "priority": 20
+              },
+              {
+                "key": "system.cultivations.vio",
+                "type": "add",
+                "value": "2",
+                "phase": "initial",
+                "priority": 20
+              },
+              {
+                "key": "system.cultivations.dia",
+                "type": "add",
+                "value": "2",
+                "phase": "initial",
+                "priority": 20
+              },
+              {
+                "key": "system.cultivations.grc",
+                "type": "add",
+                "value": "2",
+                "phase": "initial",
+                "priority": 20
+              },
+              {
+                "key": "system.cultivations.sav",
+                "type": "add",
+                "value": "2",
+                "phase": "initial",
+                "priority": 20
+              },
+              {
+                "key": "system.cultivations.wrd",
+                "type": "add",
+                "value": "2",
+                "phase": "initial",
+                "priority": 20
+              },
+              {
+                "key": "system.cultivations.spi",
+                "type": "add",
+                "value": "2",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "ca2f300494684be5",
+      "name": "Chthonian",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "df38e71c0e7b020d",
+      "system": {
+        "description": "<p>A deity of the Earthly Cities from a tribe of humans that arrived before the humans we know. Lives off of subordination to the Astrals, after the Heaven-Earth War established the ruling and ruled class. Imagine folk horror gods. They have +3 Hale levels and have +1 to all Cultivations.</p><p>World Being Trait. Conditional effects are disabled until their condition applies. Action-count changes, immunities, triggered healing and narrative abilities remain manual.</p>",
+        "source": "Rules 2.0.3, p.213",
+        "tags": "World Being, Trait, 3d6 5",
+        "level": 1,
+        "active": true
+      },
+      "effects": [
+        {
+          "_id": "45652499f23e874b",
+          "name": "Chthonian",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.213.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.health.max",
+                "type": "add",
+                "value": "3",
+                "phase": "initial",
+                "priority": 20
+              },
+              {
+                "key": "system.cultivations.vio",
+                "type": "add",
+                "value": "1",
+                "phase": "initial",
+                "priority": 20
+              },
+              {
+                "key": "system.cultivations.dia",
+                "type": "add",
+                "value": "1",
+                "phase": "initial",
+                "priority": 20
+              },
+              {
+                "key": "system.cultivations.grc",
+                "type": "add",
+                "value": "1",
+                "phase": "initial",
+                "priority": 20
+              },
+              {
+                "key": "system.cultivations.sav",
+                "type": "add",
+                "value": "1",
+                "phase": "initial",
+                "priority": 20
+              },
+              {
+                "key": "system.cultivations.wrd",
+                "type": "add",
+                "value": "1",
+                "phase": "initial",
+                "priority": 20
+              },
+              {
+                "key": "system.cultivations.spi",
+                "type": "add",
+                "value": "1",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "7f0555476a902f9b",
+      "name": "Ghost",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "df38e71c0e7b020d",
+      "system": {
+        "description": "<p>An informational echo given flesh by Esoteric Fluctuation. Is endlessly hungry and lost. A spirit. Can dissipate and take on a Subtle Body. Always has a craving that tethers their information to the present world.</p><p>World Being Trait. Conditional effects are disabled until their condition applies. Action-count changes, immunities, triggered healing and narrative abilities remain manual.</p>",
+        "source": "Rules 2.0.3, p.213",
+        "tags": "World Being, Trait, 3d6 6",
+        "level": 1,
+        "active": true
+      },
+      "effects": []
+    },
+    {
+      "_id": "8111ccafb4a22b1c",
+      "name": "Murderer",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "df38e71c0e7b020d",
+      "system": {
+        "description": "<p>+1 on all attacks against Bloody targets.</p><p>World Being Trait. Conditional effects are disabled until their condition applies. Action-count changes, immunities, triggered healing and narrative abilities remain manual.</p>",
+        "source": "Rules 2.0.3, p.213",
+        "tags": "World Being, Trait, 3d6 7",
+        "level": 1,
+        "active": true
+      },
+      "effects": [
+        {
+          "_id": "5cd9a1aee65656cc",
+          "name": "Against Bloody targets",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": true,
+          "description": "<p>Rules 2.0.3, p.213. Enable only when the described condition applies.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.attackBonus",
+                "type": "add",
+                "value": "1",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "1494269323b1db20",
+      "name": "Rhetorician",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "df38e71c0e7b020d",
+      "system": {
+        "description": "<p>+2 to all straight argumentation.</p><p>World Being Trait. Conditional effects are disabled until their condition applies. Action-count changes, immunities, triggered healing and narrative abilities remain manual.</p>",
+        "source": "Rules 2.0.3, p.213",
+        "tags": "World Being, Trait, 3d6 8",
+        "level": 1,
+        "active": true
+      },
+      "effects": [
+        {
+          "_id": "e327f3b9a585a5cf",
+          "name": "Straight argumentation",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": true,
+          "description": "<p>Rules 2.0.3, p.213. Enable only when the described condition applies.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.checkBonus",
+                "type": "add",
+                "value": "2",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "3473881850259edf",
+      "name": "Clever",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "df38e71c0e7b020d",
+      "system": {
+        "description": "<p>+1 to all attempts to gain advantage over someone through wit.</p><p>World Being Trait. Conditional effects are disabled until their condition applies. Action-count changes, immunities, triggered healing and narrative abilities remain manual.</p>",
+        "source": "Rules 2.0.3, p.213",
+        "tags": "World Being, Trait, 3d6 9",
+        "level": 1,
+        "active": true
+      },
+      "effects": [
+        {
+          "_id": "2ee83d622283beb2",
+          "name": "Gain advantage through wit",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": true,
+          "description": "<p>Rules 2.0.3, p.213. Enable only when the described condition applies.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.checkBonus",
+                "type": "add",
+                "value": "1",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "7d793d4bef015f34",
+      "name": "Hunter",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "df38e71c0e7b020d",
+      "system": {
+        "description": "<p>+1 ATK if the target is alone and has no adjacent allies.</p><p>World Being Trait. Conditional effects are disabled until their condition applies. Action-count changes, immunities, triggered healing and narrative abilities remain manual.</p>",
+        "source": "Rules 2.0.3, p.213",
+        "tags": "World Being, Trait, 3d6 10",
+        "level": 1,
+        "active": true
+      },
+      "effects": [
+        {
+          "_id": "4628f55cc3555aa3",
+          "name": "Target alone with no adjacent allies",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": true,
+          "description": "<p>Rules 2.0.3, p.213. Enable only when the described condition applies.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.attackBonus",
+                "type": "add",
+                "value": "1",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "2f2165e2224f9a9f",
+      "name": "Salt Of The Earth",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "df38e71c0e7b020d",
+      "system": {
+        "description": "<p>+2 to all Checks to maintain integrity.</p><p>World Being Trait. Conditional effects are disabled until their condition applies. Action-count changes, immunities, triggered healing and narrative abilities remain manual.</p>",
+        "source": "Rules 2.0.3, p.213",
+        "tags": "World Being, Trait, 3d6 11",
+        "level": 1,
+        "active": true
+      },
+      "effects": [
+        {
+          "_id": "4018fd32315d3b06",
+          "name": "Maintain integrity",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": true,
+          "description": "<p>Rules 2.0.3, p.213. Enable only when the described condition applies.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.checkBonus",
+                "type": "add",
+                "value": "2",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "f0f417df7e8ddd5c",
+      "name": "Mystical",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "df38e71c0e7b020d",
+      "system": {
+        "description": "<p>+1 max Ardor.</p><p>World Being Trait. Conditional effects are disabled until their condition applies. Action-count changes, immunities, triggered healing and narrative abilities remain manual.</p>",
+        "source": "Rules 2.0.3, p.213",
+        "tags": "World Being, Trait, 3d6 12",
+        "level": 1,
+        "active": true
+      },
+      "effects": [
+        {
+          "_id": "f41c7159efb0b5dc",
+          "name": "Mystical",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.213.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.ardor.max",
+                "type": "add",
+                "value": "1",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "831e95e10d647f45",
+      "name": "Exdead",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "df38e71c0e7b020d",
+      "system": {
+        "description": "<p>Corpses made to move again, animated by another force, an Antinomial phenomenon, or by leftover body information. +1 Damage from Holy weapons. Gain +1 max Health.</p><p>World Being Trait. Conditional effects are disabled until their condition applies. Action-count changes, immunities, triggered healing and narrative abilities remain manual.</p>",
+        "source": "Rules 2.0.3, p.213",
+        "tags": "World Being, Trait, 3d6 13",
+        "level": 1,
+        "active": true
+      },
+      "effects": [
+        {
+          "_id": "95dcb789ee60b93d",
+          "name": "Exdead",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.213.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.health.max",
+                "type": "add",
+                "value": "1",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "2db1bed5e297ff5b",
+      "name": "Demon",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "df38e71c0e7b020d",
+      "system": {
+        "description": "<p>An Esoteric Fluctuation arising from an imbalance of forces, tainted or ruptured Sidhi flow, or through the intense passion of a cultivating sorceror. Immune to TRAUMA. +1 ATK. +1 ATK against Bloody targets.</p><p>World Being Trait. Conditional effects are disabled until their condition applies. Action-count changes, immunities, triggered healing and narrative abilities remain manual.</p>",
+        "source": "Rules 2.0.3, p.213",
+        "tags": "World Being, Trait, 3d6 14",
+        "level": 1,
+        "active": true
+      },
+      "effects": [
+        {
+          "_id": "c404b44f77a884d6",
+          "name": "Demon",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": false,
+          "description": "<p>Rules 2.0.3, p.213.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.attackBonus",
+                "type": "add",
+                "value": "1",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        },
+        {
+          "_id": "ec17d314d08ee4b3",
+          "name": "Against Bloody targets",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": true,
+          "description": "<p>Rules 2.0.3, p.213. Enable only when the described condition applies.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.attackBonus",
+                "type": "add",
+                "value": "1",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "c77f06cfea3e5518",
+      "name": "Keen Mind",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "df38e71c0e7b020d",
+      "system": {
+        "description": "<p>+2 to all perception, sensation, and insight Checks.</p><p>World Being Trait. Conditional effects are disabled until their condition applies. Action-count changes, immunities, triggered healing and narrative abilities remain manual.</p>",
+        "source": "Rules 2.0.3, p.213",
+        "tags": "World Being, Trait, 3d6 15",
+        "level": 1,
+        "active": true
+      },
+      "effects": [
+        {
+          "_id": "afe4ce62ac8c1cfc",
+          "name": "Perception, sensation and insight",
+          "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+          "transfer": true,
+          "disabled": true,
+          "description": "<p>Rules 2.0.3, p.213. Enable only when the described condition applies.</p>",
+          "system": {
+            "changes": [
+              {
+                "key": "system.checkBonus",
+                "type": "add",
+                "value": "2",
+                "phase": "initial",
+                "priority": 20
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "1c6056517935c58d",
+      "name": "Divine Fountain",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "df38e71c0e7b020d",
+      "system": {
+        "description": "<p>In Violence, heal 1 after every Action taken. Declare a BANE for this Trait. When wounded by the Bane, lose the healing for a day.</p><p>World Being Trait. Conditional effects are disabled until their condition applies. Action-count changes, immunities, triggered healing and narrative abilities remain manual.</p>",
+        "source": "Rules 2.0.3, p.213",
+        "tags": "World Being, Trait, 3d6 16",
+        "level": 1,
+        "active": true
+      },
+      "effects": []
+    },
+    {
+      "_id": "200d28e324faa12a",
+      "name": "Boss",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "df38e71c0e7b020d",
+      "system": {
+        "description": "<p>This person holds a lot of power in a local place. He always comes around with at least 2 bodyguards.</p><p>World Being Trait. Conditional effects are disabled until their condition applies. Action-count changes, immunities, triggered healing and narrative abilities remain manual.</p>",
+        "source": "Rules 2.0.3, p.213",
+        "tags": "World Being, Trait, 3d6 17",
+        "level": 1,
+        "active": true
+      },
+      "effects": []
+    },
+    {
+      "_id": "3ef5e91765c74f0f",
+      "name": "Rage",
+      "type": "trait",
+      "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+      "folder": "df38e71c0e7b020d",
+      "system": {
+        "description": "<p>Upon becoming Bloody, the World Being gains +1 Action per Round instead of 3 for the rest of the fight.</p><p>World Being Trait. Conditional effects are disabled until their condition applies. Action-count changes, immunities, triggered healing and narrative abilities remain manual.</p>",
+        "source": "Rules 2.0.3, p.213",
+        "tags": "World Being, Trait, 3d6 18",
+        "level": 1,
+        "active": true
+      },
+      "effects": []
+    }
+  ]
+}

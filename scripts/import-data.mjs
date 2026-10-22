@@ -1,8 +1,8 @@
-import {titleCase,paragraphText} from "./import-format.mjs?v=0.1.45";
-import {splitBookText} from './import-boundaries.mjs?v=0.1.45';
-import {bookEntries} from "./book-text.mjs?v=0.1.45";
-import {LICENSE_CHOICES} from './licenses.mjs?v=0.1.45';
-import {MODIFIER_CHOICES} from './modifiers.mjs?v=0.1.45';
+import {titleCase,paragraphText} from "./import-format.mjs?v=0.1.47";
+import {splitBookText} from './import-boundaries.mjs?v=0.1.47';
+import {bookEntries} from "./book-text.mjs?v=0.1.47";
+import {LICENSE_CHOICES} from './licenses.mjs?v=0.1.47';
+import {MODIFIER_CHOICES} from './modifiers.mjs?v=0.1.47';
 export const IMPORT_TYPES={weapon:'Weapon',fashion:'Fashion',gear:'Gear',accessory:'Accessory',ammunition:'Ammo',job:'Job',license:'License',technique:'Technick',magick:'Magick',trait:'Trait',weaponMod:'Weapon Mod',gambit:'World Being Gambit',salvage:'Salvage'};
 const aliases={'world being gambit':'gambit',gambits:'gambit',salvages:'salvage',armor:'fashion',armour:'fashion',technick:'technique',technicks:'technique',techniques:'technique',magicks:'magick',jobs:'job',licenses:'license',weapons:'weapon',ammo:'ammunition','weapon mod':'weaponMod',weaponmod:'weaponMod'};
 export function importType(value){const key=String(value??'').trim();return Object.hasOwn(IMPORT_TYPES,key)?key:Object.hasOwn(aliases,key.toLowerCase())?aliases[key.toLowerCase()]:key.toLowerCase();}

@@ -1,4 +1,4 @@
-import {titleCase,paragraphText} from './import-format.mjs?v=0.1.45';
+import {titleCase,paragraphText} from './import-format.mjs?v=0.1.47';
 export const normalizeItemName=s=>String(s).normalize('NFKD').toLowerCase().replace(/[’'ʼ]s\b/g,'').replace(/[^a-z0-9]/g,'');
 const normalize=normalizeItemName;
 const escape=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
