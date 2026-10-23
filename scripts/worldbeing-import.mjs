@@ -1,4 +1,4 @@
-import {titleCase,paragraphText} from './import-format.mjs?v=0.1.47';
+import {titleCase,paragraphText} from './import-format.mjs?v=0.1.51';
 export const normalizeItemName=s=>String(s).normalize('NFKD').toLowerCase().replace(/[’'ʼ]s\b/g,'').replace(/[^a-z0-9]/g,'');
 const normalize=normalizeItemName;
 const escape=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
@@ -11,11 +11,13 @@ export function parseWorldBeings(text,worldItems=[]){
  if(text.length>2000000)throw new Error('Import at most 2 MB at a time.');
  const normalized=clean(text.replaceAll('\r',''));
  const lines=normalized.split('\n');const starts=[];
+ let previousHealth=-1;
  for(let i=0;i<lines.length;i++)if(/^\s*HEALTH\b/i.test(lines[i])){
   let start=i-1;
-  while(start>=0&&!/^\s*(?:Name\s*:|[A-Z][A-Z /’'“”"()–—-]{2,}$)/.test(lines[start]))start--;
-  if(start<0)throw new Error('Put the World Being name on its own uppercase line before HEALTH.');
+  while(start>previousHealth&&!/^\s*(?:Name\s*:|[A-Z][A-Z ,/’'“”"()–—-]{2,}$)/.test(lines[start]))start--;
+  if(start<=previousHealth)throw new Error('Put the World Being name on its own uppercase line before HEALTH.');
   starts.push(start);
+  previousHealth=i;
  }
  if(!starts.length)throw new Error('No HEALTH stat line found. Include the name, HEALTH, stats, and item sections.');
  if(starts.length>50||new Set(starts).size!==starts.length)throw new Error('Separate each complete World Being block with its own uppercase name. Limit: 50.');

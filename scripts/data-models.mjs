@@ -1,8 +1,8 @@
-import {RARITIES} from "./rarity.mjs?v=0.1.47";
-import {CONDITIONS} from "./conditions.mjs?v=0.1.47";
-import { MODIFIER_CHOICES } from "./modifiers.mjs?v=0.1.47";
-import { AMMO_CHOICES, AMMO_FAMILIES } from "./ammunition.mjs?v=0.1.47";
-import { LICENSE_CHOICES, RANKS, licenseIdentity } from "./licenses.mjs?v=0.1.47";
+import {RARITIES} from "./rarity.mjs?v=0.1.51";
+import {CONDITIONS} from "./conditions.mjs?v=0.1.51";
+import { MODIFIER_CHOICES } from "./modifiers.mjs?v=0.1.51";
+import { AMMO_CHOICES, AMMO_FAMILIES } from "./ammunition.mjs?v=0.1.51";
+import { LICENSE_CHOICES, RANKS, licenseIdentity } from "./licenses.mjs?v=0.1.51";
 const { NumberField, StringField, SchemaField, BooleanField, ArrayField, ObjectField, HTMLField } = foundry.data.fields;
 const integer = (initial = 0, extra = {}) => new NumberField({ required: true, nullable: false, integer: true, min: 0, initial, ...extra });
 const text = () => new StringField({ required: true, nullable: false, initial: "" });
@@ -107,7 +107,7 @@ export class SwordsLicenseData extends SwordsItemData {
     };
   }
 }
-import { UPGRADE_CHOICES, weaponDetails } from "./weapons.mjs?v=0.1.47";
+import { UPGRADE_CHOICES, weaponDetails } from "./weapons.mjs?v=0.1.51";
 
 export class SwordsAmmoData extends SwordsEquipmentData {
   static defineSchema() {return {...super.defineSchema(),ammoType:new StringField({required:true,nullable:false,initial:"bullet",choices:Object.keys(AMMO_CHOICES)})};}

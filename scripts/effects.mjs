@@ -1,4 +1,4 @@
-import { EQUIPMENT_TYPES } from "./equipment.mjs?v=0.1.47";
+import { EQUIPMENT_TYPES } from "./equipment.mjs?v=0.1.51";
 export function equipmentEffectSuppressed(item) {
   if(item.type==='trait')return item.system.active===false;
   return EQUIPMENT_TYPES.includes(item.type) && !item.system.equipped;

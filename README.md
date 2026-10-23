@@ -10,6 +10,26 @@ A Foundry VTT v14 game system for *10,000 Swords Against Heaven*, based on rules
 [Official Geek IO Discord Link](https://www.geek-io.net/discord)  
 
 
+# v 0.1.51
+
+- Kept the Force OCR checkbox beside its label and moved the explanation below it.
+- Matched the Mass Importer step bubbles to World Being · Text, with detailed formatting guidance tucked into an expandable section.
+
+# v 0.1.50
+
+- Added local PDF text extraction and English OCR to **Mass Importer** and **World Being · Text**, with page ranges, progress, cancellation, and editable extracted text before preview.
+- **World Being · Manual** now accepts items dragged from the compendium browser or Items directory. Review and remove starting items before creation; their embedded effects are preserved.
+- PDF reading supports up to 20 pages per operation and files up to 100 MB. OCR output should be reviewed for names, columns, symbols, and numbers.
+
+# v 0.1.49
+
+- Added **World Being · Manual** to the importer: enter a name, Actor folder, resources, movement, Siddhi, Magnetite, and all six Cultivations. Creation opens the sheet and keeps the importer available.
+- Cleaned up text importing with grouped steps, a dedicated upload area, expandable instructions, and an advanced preview editor.
+
+# v 0.1.48
+
+- Fixed World Being imports rejecting names containing commas, including multiple stat blocks in one batch.
+
 # v 0.1.47
 
 - Fixed destination folders in the Item and Mass Importer. Existing Item folders are available even before the sidebar displays them, with hierarchy and alphabetical sorting preserved.

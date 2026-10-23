@@ -1,13 +1,15 @@
-import {rememberImport,changeImportTab,previewImport,commitImport} from './import-workflow.mjs?v=0.1.47';
-import {itemFolders,checkedFolder} from "./import-folders.mjs?v=0.1.47";
-import {IMPORT_TYPES} from './import-data.mjs?v=0.1.47';
-import {validateImport,openImporter} from './importer.mjs?v=0.1.47';
-import {escapeHTML} from './resolution.mjs?v=0.1.47';
-import {LICENSE_CHOICES} from './licenses.mjs?v=0.1.47';
-import {UPGRADE_CHOICES} from './weapons.mjs?v=0.1.47';
-import {AMMO_CHOICES,AMMO_FAMILIES} from './ammunition.mjs?v=0.1.47';
-import {MODIFIER_CHOICES,AFFINITIES} from './modifiers.mjs?v=0.1.47';
-import {clearLibraryCache} from './library-service.mjs?v=0.1.47';
+import {readPdf,cancelPdf} from './pdf-reader.mjs?v=0.1.51';
+import {rememberImport,changeImportTab,previewImport,commitImport} from './import-workflow.mjs?v=0.1.51';
+import {MANUAL_STATS,rememberManual,createManualWorldBeing,browseManualItems,dropManualItem,removeManualItem} from './worldbeing-manual.mjs?v=0.1.51';
+import {itemFolders,checkedFolder} from "./import-folders.mjs?v=0.1.51";
+import {IMPORT_TYPES} from './import-data.mjs?v=0.1.51';
+import {validateImport,openImporter} from './importer.mjs?v=0.1.51';
+import {escapeHTML} from './resolution.mjs?v=0.1.51';
+import {LICENSE_CHOICES} from './licenses.mjs?v=0.1.51';
+import {UPGRADE_CHOICES} from './weapons.mjs?v=0.1.51';
+import {AMMO_CHOICES,AMMO_FAMILIES} from './ammunition.mjs?v=0.1.51';
+import {MODIFIER_CHOICES,AFFINITIES} from './modifiers.mjs?v=0.1.51';
+import {clearLibraryCache} from './library-service.mjs?v=0.1.51';
 
 const hidden=new Set(['description','equipped','paidCarry','paidMeridians','paidArdor','ammoId','mods']);
 const labels={burntArdor:'Recover burnt Ardor',allBurntArdor:'Recover all burnt Ardor',allHealth:'Heal all Health',health:'Health restored',bonus:'Base bonus',slots:'Carry cost',meridianCost:'Meridian cost',apCost:'AP cost (✦)',installArdor:'Install Ardor (❂)',burnArdor:'Burn Ardor (✹)',mudraHands:'Hands required',areaSize:'Area size (m)',magCost:'Magnetite (Mag) cost',gearSlot:'Equipment slot',category:'Body / Mind',sect:'Sect',range:'Base range (m)',properties:'Inherent modifiers',ammo:'Inline ammo',cultivations:'Cultivations',prerequisites:'Prerequisites',vio:'VIO',dia:'DIA',grc:'GRC',sav:'SAV',wrd:'WRD',spi:'SPI'};
@@ -29,16 +31,17 @@ function fieldsHTML(fields,values,prefix='system',type='') {
  }).join('');
 }
 export class SwordsItemCreator extends foundry.applications.api.HandlebarsApplicationMixin(foundry.applications.api.ApplicationV2) {
- static DEFAULT_OPTIONS={id:'swords-item-creator',tag:'form',classes:['swords','swords-item-creator'],window:{title:'Universal Item Importer',resizable:true},position:{width:740,height:760},form:{handler:SwordsItemCreator.createItem,closeOnSubmit:false,submitOnChange:false},actions:{importTab:changeImportTab,previewImport,commitImport,queue:SwordsItemCreator.queueItem,createBatch:SwordsItemCreator.createBatch,removeQueued:SwordsItemCreator.removeQueued,bulk:SwordsItemCreator.bulk,editLast:SwordsItemCreator.editLast}};
+ static DEFAULT_OPTIONS={id:'swords-item-creator',tag:'form',classes:['swords','swords-item-creator'],window:{title:'Importer',resizable:true},position:{width:740,height:760},form:{handler:SwordsItemCreator.createItem,closeOnSubmit:false,submitOnChange:false},actions:{readPdf,cancelPdf,browseManualItems,removeManualItem,createManualWorldBeing,importTab:changeImportTab,previewImport,commitImport,queue:SwordsItemCreator.queueItem,createBatch:SwordsItemCreator.createBatch,removeQueued:SwordsItemCreator.removeQueued,bulk:SwordsItemCreator.bulk,editLast:SwordsItemCreator.editLast}};
  static PARTS={main:{template:'systems/10kswordsfoundry/templates/item-creator.hbs'}};
- tab='single';importDrafts={};folder='';batch=[];type='weapon';count=0;lastItem=null;busy=false;drafts={};
+ tab='single';importDrafts={};folder='';batch=[];type='weapon';count=0;lastItem=null;busy=false;drafts={};manualDraft={};manualStatus='';manualItems=[];
  async _prepareContext(){
   const Model=CONFIG.Item.dataModels[this.type];
   const draft=this.drafts[this.type]??{name:'',system:new Model().toObject()};
-  return {isSingle:this.tab==='single',isWorld:this.tab==='world',tab:this.tab,importState:this.importDrafts[this.tab]??{format:'text',type:'trait'},formats:{text:'Rulebook text',json:'JSON',csv:'CSV'},folders:itemFolders(),folder:this.folder,batch:this.batch.map((item,index)=>({index,name:item.name,type:IMPORT_TYPES[item.type]})),types:IMPORT_TYPES,type:this.type,name:draft.name,fields:fieldsHTML(Model.schema.fields,draft.system,'system',this.type),description:draft.system.description??'',count:this.count,lastName:this.lastItem?.name};
+  return {manualItems:this.manualItems.map((item,index)=>({index,name:item.name,type:item.type})),isManual:this.tab==='manual',manual:this.manualDraft,manualStatus:this.manualStatus,manualStats:MANUAL_STATS.map(([key,label,initial,min,max],index)=>({key,label,value:this.manualDraft[key]??initial,min,max,resource:index<6})),actorFolders:Object.fromEntries([['','Actors root'],...(game.folders?.contents??[]).filter(f=>f.type==='Actor').sort((a,b)=>a.name.localeCompare(b.name)).map(f=>[f.id,f.name])]),isSingle:this.tab==='single',isWorld:this.tab==='world',tab:this.tab,importState:this.importDrafts[this.tab]??{format:'text',type:'trait'},formats:{text:'Rulebook text',json:'JSON',csv:'CSV'},folders:itemFolders(),folder:this.folder,batch:this.batch.map((item,index)=>({index,name:item.name,type:IMPORT_TYPES[item.type]})),types:IMPORT_TYPES,type:this.type,name:draft.name,fields:fieldsHTML(Model.schema.fields,draft.system,'system',this.type),description:draft.system.description??'',count:this.count,lastName:this.lastItem?.name};
  }
  async _onRender(context,options){
   await super._onRender(context,options);
+  const drop=this.element.querySelector('[data-manual-loadout]');drop?.addEventListener('dragover',e=>{e.preventDefault();e.dataTransfer.dropEffect='copy';});drop?.addEventListener('drop',dropManualItem.bind(this));
   for(const button of this.element.querySelectorAll('[data-action="importTab"]')){const active=button.dataset.tab===this.tab;button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));}
   this.element.querySelector('[name="folder"]')?.addEventListener('change',event=>{this.folder=event.target.value;});
   this.element.querySelector('[name="itemType"]')?.addEventListener('change',async event=>{
@@ -74,6 +77,7 @@ export class SwordsItemCreator extends foundry.applications.api.HandlebarsApplic
   }catch(error){ui.notifications.error(error.message);}
  }
  rememberDraft(){
+  if(this.tab==='manual'){rememberManual(this);return;}
   if(this.tab!=='single'){rememberImport(this);return;}
   if(!this.element?.querySelector)return;
   const data=foundry.utils.expandObject(new foundry.applications.ux.FormDataExtended(this.element).object);
@@ -95,6 +99,6 @@ export class SwordsItemCreator extends foundry.applications.api.HandlebarsApplic
 }
 let creator;
 export function openItemCreator(tab='single',folder){
- if(!game.user.isGM&&!game.user.can(tab==='world'?'ACTOR_CREATE':'ITEM_CREATE'))return ui.notifications.warn('You do not have permission to create these documents.');
+ if(!game.user.isGM&&!game.user.can(['world','manual'].includes(tab)?'ACTOR_CREATE':'ITEM_CREATE'))return ui.notifications.warn('You do not have permission to create these documents.');
  creator??=new SwordsItemCreator();if(creator.busy)return;creator.rememberDraft();creator.tab=tab;if(folder!==undefined)creator.folder=folder;return creator.render({force:true});
 }

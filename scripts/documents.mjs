@@ -1,7 +1,7 @@
-import {conditionStats,injuryChanges} from "./conditions.mjs?v=0.1.47";
-import { equipmentEffectSuppressed } from "./effects.mjs?v=0.1.47";
-import { modifierProfile } from "./modifiers.mjs?v=0.1.47";
-import {resolveEffectValue} from './effect-values.mjs?v=0.1.47';
+import {conditionStats,injuryChanges} from "./conditions.mjs?v=0.1.51";
+import { equipmentEffectSuppressed } from "./effects.mjs?v=0.1.51";
+import { modifierProfile } from "./modifiers.mjs?v=0.1.51";
+import {resolveEffectValue} from './effect-values.mjs?v=0.1.51';
 export class SwordsActiveEffect extends foundry.documents.ActiveEffect {
   static applyChange(target,change,options={}){
     try{return super.applyChange(target,{...change,value:resolveEffectValue(change.value,change.effect,target)},options);}

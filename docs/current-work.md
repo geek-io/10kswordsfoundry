@@ -1,5 +1,13 @@
 # Current work status
 
+Deployed **0.1.51** on 2026-10-23: adjacent nonwrapping Force OCR toggle and matching importer step bubbles. All eight compendiums packaged. Uploaded checksum and installed version verified; update script completed; PM2 online; uploaded ZIP deleted. Backup: `/exd/foundrydata/system-backups/10kswordsfoundry-20261023-150939`. No Git actions. See [layout verification](testing-051.md).
+
+Deployed **0.1.50** on 2026-10-23: PDF/OCR reading in both text importers and compendium-browser loadout drops during manual World Being creation. All eight compendiums included. Checksum and installed version verified; `sh /exd/updatepush.sh` completed; PM2 online; uploaded ZIP deleted. Backup: `/exd/foundrydata/system-backups/10kswordsfoundry-20261023-150141`. No Git actions. See [testing](testing-050.md).
+
+Deployed **0.1.49** on 2026-10-23: manual World Being creation tab and importer layout cleanup. All eight compendiums included. Uploaded checksum and installed version verified; `sh /exd/updatepush.sh` completed; PM2 online; uploaded ZIP deleted. Backup: `/exd/foundrydata/system-backups/10kswordsfoundry-20261023-144820`. No Git actions. See [testing](testing-049.md); interactive visual verification remains pending.
+
+Deployed **0.1.48** on 2026-10-23: World Being importer accepts commas in names and keeps batch headings separate. All eight compendiums packaged. Checksum and installed version verified; `sh /exd/updatepush.sh` completed; PM2 online; uploaded ZIP deleted. Backup: `/exd/foundrydata/system-backups/10kswordsfoundry-20261023-131405`. No Git actions. Interactive verification pending. See [testing](testing-048.md).
+
 Deployed **0.1.47** on 2026-10-21: importer destination folders no longer depend on transient sidebar visibility. All eight compendiums included. Uploaded checksum verified; `sh /exd/updatepush.sh` completed; PM2 0 online; installed version confirmed; uploaded ZIP deleted. Backup: `/exd/foundrydata/system-backups/10kswordsfoundry-20261021-121723`. No Git actions. See [testing](testing-047.md).
 
 Deployed **0.1.46** on 2026-10-21: World Being Traits, Sect Fashion & Gear, and Jobs compendiums; 65 new entries and 35 Job grants. All eight packs ship in the release. Uploaded checksum verified; `sh /exd/updatepush.sh` completed; PM2 0 online; installed version 0.1.46 confirmed; uploaded ZIP deleted. Backup: `/exd/foundrydata/system-backups/10kswordsfoundry-20261021-120134`. No Git actions. Interactive gameplay verification remains pending. See [catalog details](expansion-catalogs.md) and [testing](testing-046.md).

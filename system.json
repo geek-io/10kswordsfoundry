@@ -2,7 +2,7 @@
   "id": "10kswordsfoundry",
   "title": "10,000 Swords Against Heaven",
   "description": "A Foundry VTT v14 game system for 10,000 Swords Against Heaven, based on rules version 2.0.3.",
-  "version": "0.1.47",
+  "version": "0.1.51",
   "compatibility": {
     "minimum": "14",
     "verified": "14.367",
@@ -14,7 +14,7 @@
     }
   ],
   "esmodules": [
-    "scripts/entry-0.1.47.mjs"
+    "scripts/entry-0.1.51.mjs"
   ],
   "styles": [
     "styles/system.css",
@@ -211,7 +211,7 @@
   ],
   "url": "https://github.com/geek-io/10kswordsfoundry",
   "manifest": "https://github.com/geek-io/10kswordsfoundry/releases/latest/download/system.json",
-  "download": "https://github.com/geek-io/10kswordsfoundry/releases/download/v0.1.47/10kswordsfoundry-0.1.47.zip",
+  "download": "https://github.com/geek-io/10kswordsfoundry/releases/download/v0.1.51/10kswordsfoundry-0.1.51.zip",
   "bugs": "https://github.com/geek-io/10kswordsfoundry/issues",
-  "changelog": "https://github.com/geek-io/10kswordsfoundry/releases/tag/v0.1.47"
+  "changelog": "https://github.com/geek-io/10kswordsfoundry/releases/tag/v0.1.51"
 }

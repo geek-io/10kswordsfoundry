@@ -7,9 +7,9 @@ function addTool(html,id,label,callback) {
 }
 export function registerSidebarTools() {
  const importer=(app,html)=>{
-  if(game.user.isGM||game.user.can('ITEM_CREATE')||game.user.can('ACTOR_CREATE'))addTool(html,'importer','Importer',async()=>{const {openItemCreator}=await import('./item-creator.mjs?v=0.1.47');return openItemCreator(game.user.isGM||game.user.can('ITEM_CREATE')?'single':'world');});
+  if(game.user.isGM||game.user.can('ITEM_CREATE')||game.user.can('ACTOR_CREATE'))addTool(html,'importer','Importer',async()=>{const {openItemCreator}=await import('./item-creator.mjs?v=0.1.51');return openItemCreator(game.user.isGM||game.user.can('ITEM_CREATE')?'single':'world');});
  };
  Hooks.on('renderItemDirectory',importer);
  Hooks.on('renderActorDirectory',importer);
- Hooks.on('renderCompendiumDirectory',(app,html)=>{importer(app,html);addTool(html,'browser','Compendium Browser',async()=>{const {openLibrary}=await import('./browser.mjs?v=0.1.47');return openLibrary();});});
+ Hooks.on('renderCompendiumDirectory',(app,html)=>{importer(app,html);addTool(html,'browser','Compendium Browser',async()=>{const {openLibrary}=await import('./browser.mjs?v=0.1.51');return openLibrary();});});
 }

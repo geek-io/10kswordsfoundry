@@ -167,3 +167,6 @@ actor=actor.replace('<span><strong>{{name}}</strong></span>', '<span><strong>{{n
 actor=actor.replace('{{#if canCast}}<button type="button" data-action="cast" data-item-id="{{id}}">Cast</button>{{/if}}{{#if canUse}}<button type="button" data-action="useAbility" data-item-id="{{id}}">Use</button>{{/if}}','{{#if isAbility}}'+controls+'{{/if}}')
 actor=actor.replace('Equip weapons, Magicks, or Technicks from Inventory.', 'Equip weapons or add Magicks and Technicks from Inventory.')
 write('templates/actor.hbs',actor)
+
+# Keep the importer layout in a readable, dedicated source template.
+write("templates/item-creator.hbs", Path("tools/templates/item-creator.hbs").read_text(encoding="utf-8"))

@@ -1,2 +1,4 @@
 # Preserve compiled LevelDB files byte-for-byte on every platform.
 packs/** -text
+# Preserve third-party distributions and their original license formatting.
+assets/vendor/** -text -whitespace

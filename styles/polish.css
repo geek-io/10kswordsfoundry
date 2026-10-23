@@ -150,3 +150,27 @@
 .swords :is(h3,h4,h5,h6,legend,.window-title),.swords-attack-dialog :is(h3,h4,h5,h6,legend,.window-title) {font-family:'Times New Roman',Times,serif;}
 .swords .character-name input {font-family:'Times New Roman',Times,serif;}
 .swords .rich-content,.swords prose-mirror {font-family:'Swords Inter',Inter,sans-serif;}
+.swords-item-creator .creator-scroll > fieldset > label { margin:16px 0; }
+.swords-item-creator .creator-lead { margin:0 0 16px; line-height:1.5; color:#e5dfd5; }
+.swords-item-creator .import-steps { display:flex; flex-wrap:wrap; gap:12px; margin:0 0 18px; }
+.swords-item-creator .import-steps span { display:flex; gap:8px; align-items:center; color:#d2c9bd; font-size:13px; }
+.swords-item-creator .import-steps b { display:grid; place-items:center; width:25px; height:25px; border:1px solid #986174; border-radius:50%; background:#38232e; color:#f2d7df; }
+.swords-item-creator .import-help { margin:14px 0; padding:12px 14px; border:1px solid #454851; border-radius:7px; background:#171a21; }
+.swords-item-creator .import-help summary { cursor:pointer; color:#d7b47b; }
+.swords-item-creator .import-help p { line-height:1.55; color:#c3c6ce; }
+.swords-item-creator .import-upload { padding:14px; border:1px dashed #65616a; border-radius:7px; background:#171a21; }
+.swords-item-creator input[type=file] { height:auto; padding:8px; max-width:100%; }
+.swords-item-creator input[type=file]::file-selector-button { padding:7px 12px; margin-right:12px; background:#39313f; color:#f5eee7; border:1px solid #79616d; border-radius:4px; }
+.swords-item-creator textarea { padding:12px; line-height:1.5; resize:vertical; min-height:140px; }
+.swords-item-creator .swords-nav { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:6px; }
+.swords-item-creator .swords-nav button { white-space:normal; min-height:36px; margin:0; }
+.swords-item-creator .manual-world input { min-height:36px; }
+.swords-item-creator .pdf-actions { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+.swords-item-creator .manual-loadout { border:1px dashed #b48194; background:#25202a; }
+.swords-item-creator .manual-loadout .creator-queue { max-height:240px; }
+.swords-item-creator .manual-loadout small { display:block; color:#bdb7b1; }
+.swords-item-creator [data-pdf-status] { color:#e6c58b; min-height:1.4em; }
+.swords-item-creator label.pdf-ocr-toggle { display:flex; flex-direction:row; justify-content:flex-start; align-items:center; flex-wrap:nowrap; gap:8px; width:max-content; white-space:nowrap; margin:12px 0 0; }
+.swords-item-creator .pdf-ocr-toggle input[type=checkbox] { flex:0 0 18px; width:18px; height:18px; margin:0; }
+.swords-item-creator .pdf-ocr-toggle span { flex:0 0 auto; }
+.swords-item-creator .pdf-ocr-hint { margin:6px 0 12px; }
