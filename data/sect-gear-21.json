@@ -1,0 +1,2468 @@
+{
+ "folders": [
+  {
+   "_id": "8802136466c30f3c",
+   "name": "Asuri",
+   "folder": null,
+   "type": "Item",
+   "sorting": "m",
+   "sort": 0,
+   "color": null
+  },
+  {
+   "_id": "246184e6c316cef3",
+   "name": "Weapons",
+   "folder": "8802136466c30f3c",
+   "type": "Item",
+   "sorting": "m",
+   "sort": 0,
+   "color": null
+  },
+  {
+   "_id": "57139d791e3aff4a",
+   "name": "Aswang",
+   "folder": null,
+   "type": "Item",
+   "sorting": "m",
+   "sort": 100000,
+   "color": null
+  },
+  {
+   "_id": "e4d0019dccdd4649",
+   "name": "Weapons",
+   "folder": "57139d791e3aff4a",
+   "type": "Item",
+   "sorting": "m",
+   "sort": 0,
+   "color": null
+  },
+  {
+   "_id": "c3e4cc0116c3c319",
+   "name": "Armor & Fashion",
+   "folder": "57139d791e3aff4a",
+   "type": "Item",
+   "sorting": "m",
+   "sort": 100000,
+   "color": null
+  },
+  {
+   "_id": "fa9bd0b43a908dc6",
+   "name": "Dracontine",
+   "folder": null,
+   "type": "Item",
+   "sorting": "m",
+   "sort": 200000,
+   "color": null
+  },
+  {
+   "_id": "4774b21d6278504b",
+   "name": "Weapons",
+   "folder": "fa9bd0b43a908dc6",
+   "type": "Item",
+   "sorting": "m",
+   "sort": 0,
+   "color": null
+  },
+  {
+   "_id": "96968f8abb597f80",
+   "name": "Armor & Fashion",
+   "folder": "fa9bd0b43a908dc6",
+   "type": "Item",
+   "sorting": "m",
+   "sort": 100000,
+   "color": null
+  },
+  {
+   "_id": "112b103dacee543e",
+   "name": "Eskatonian",
+   "folder": null,
+   "type": "Item",
+   "sorting": "m",
+   "sort": 300000,
+   "color": null
+  },
+  {
+   "_id": "880afdb4b9f89c31",
+   "name": "Weapons",
+   "folder": "112b103dacee543e",
+   "type": "Item",
+   "sorting": "m",
+   "sort": 0,
+   "color": null
+  },
+  {
+   "_id": "ac1894b775373ffd",
+   "name": "Armor & Fashion",
+   "folder": "112b103dacee543e",
+   "type": "Item",
+   "sorting": "m",
+   "sort": 100000,
+   "color": null
+  },
+  {
+   "_id": "ee6101ba56267f04",
+   "name": "Fangshi",
+   "folder": null,
+   "type": "Item",
+   "sorting": "m",
+   "sort": 400000,
+   "color": null
+  },
+  {
+   "_id": "08b4d2e8c17c2629",
+   "name": "Weapons",
+   "folder": "ee6101ba56267f04",
+   "type": "Item",
+   "sorting": "m",
+   "sort": 0,
+   "color": null
+  },
+  {
+   "_id": "e859cf501c9a07c4",
+   "name": "Armor & Fashion",
+   "folder": "ee6101ba56267f04",
+   "type": "Item",
+   "sorting": "m",
+   "sort": 100000,
+   "color": null
+  },
+  {
+   "_id": "a35e35fab85a368d",
+   "name": "Houyi",
+   "folder": null,
+   "type": "Item",
+   "sorting": "m",
+   "sort": 500000,
+   "color": null
+  },
+  {
+   "_id": "ec5e056ad1d3e49b",
+   "name": "Weapons",
+   "folder": "a35e35fab85a368d",
+   "type": "Item",
+   "sorting": "m",
+   "sort": 0,
+   "color": null
+  },
+  {
+   "_id": "6c72af764e9efc20",
+   "name": "Armor & Fashion",
+   "folder": "a35e35fab85a368d",
+   "type": "Item",
+   "sorting": "m",
+   "sort": 100000,
+   "color": null
+  },
+  {
+   "_id": "5eb11ff4c51cb809",
+   "name": "Imma",
+   "folder": null,
+   "type": "Item",
+   "sorting": "m",
+   "sort": 600000,
+   "color": null
+  },
+  {
+   "_id": "35540b7895a615f9",
+   "name": "Weapons",
+   "folder": "5eb11ff4c51cb809",
+   "type": "Item",
+   "sorting": "m",
+   "sort": 0,
+   "color": null
+  },
+  {
+   "_id": "f782f9e28346a113",
+   "name": "Armor & Fashion",
+   "folder": "5eb11ff4c51cb809",
+   "type": "Item",
+   "sorting": "m",
+   "sort": 100000,
+   "color": null
+  },
+  {
+   "_id": "b4c730ee79d0e0f9",
+   "name": "Jyotisha",
+   "folder": null,
+   "type": "Item",
+   "sorting": "m",
+   "sort": 700000,
+   "color": null
+  },
+  {
+   "_id": "3ce27e5f4a416702",
+   "name": "Armor & Fashion",
+   "folder": "b4c730ee79d0e0f9",
+   "type": "Item",
+   "sorting": "m",
+   "sort": 0,
+   "color": null
+  },
+  {
+   "_id": "a674a3eb7b931225",
+   "name": "Katalonan",
+   "folder": null,
+   "type": "Item",
+   "sorting": "m",
+   "sort": 800000,
+   "color": null
+  },
+  {
+   "_id": "2cdbddf4b4021082",
+   "name": "Weapons",
+   "folder": "a674a3eb7b931225",
+   "type": "Item",
+   "sorting": "m",
+   "sort": 0,
+   "color": null
+  },
+  {
+   "_id": "47ec15c20d228b24",
+   "name": "Armor & Fashion",
+   "folder": "a674a3eb7b931225",
+   "type": "Item",
+   "sorting": "m",
+   "sort": 100000,
+   "color": null
+  },
+  {
+   "_id": "6f6783ccd318fb04",
+   "name": "Mendicant",
+   "folder": null,
+   "type": "Item",
+   "sorting": "m",
+   "sort": 900000,
+   "color": null
+  },
+  {
+   "_id": "e46bf8ad6a7afca7",
+   "name": "Armor & Fashion",
+   "folder": "6f6783ccd318fb04",
+   "type": "Item",
+   "sorting": "m",
+   "sort": 0,
+   "color": null
+  },
+  {
+   "_id": "a50228ecc58d3db8",
+   "name": "Nezha",
+   "folder": null,
+   "type": "Item",
+   "sorting": "m",
+   "sort": 1000000,
+   "color": null
+  },
+  {
+   "_id": "cf657fd9f681e3c8",
+   "name": "Weapons",
+   "folder": "a50228ecc58d3db8",
+   "type": "Item",
+   "sorting": "m",
+   "sort": 0,
+   "color": null
+  },
+  {
+   "_id": "023e92dad4dc3e10",
+   "name": "Armor & Fashion",
+   "folder": "a50228ecc58d3db8",
+   "type": "Item",
+   "sorting": "m",
+   "sort": 100000,
+   "color": null
+  },
+  {
+   "_id": "e4b933bf95012f0a",
+   "name": "Accessories",
+   "folder": "a50228ecc58d3db8",
+   "type": "Item",
+   "sorting": "m",
+   "sort": 200000,
+   "color": null
+  },
+  {
+   "_id": "ee000c4aadd8a863",
+   "name": "Sword Dialectician",
+   "folder": null,
+   "type": "Item",
+   "sorting": "m",
+   "sort": 1100000,
+   "color": null
+  },
+  {
+   "_id": "60bfbae9890c678e",
+   "name": "Weapons",
+   "folder": "ee000c4aadd8a863",
+   "type": "Item",
+   "sorting": "m",
+   "sort": 0,
+   "color": null
+  },
+  {
+   "_id": "07f0ce178bc864bf",
+   "name": "Armor & Fashion",
+   "folder": "ee000c4aadd8a863",
+   "type": "Item",
+   "sorting": "m",
+   "sort": 100000,
+   "color": null
+  },
+  {
+   "_id": "cacbe73ffacc04eb",
+   "name": "Techgnostic",
+   "folder": null,
+   "type": "Item",
+   "sorting": "m",
+   "sort": 1200000,
+   "color": null
+  },
+  {
+   "_id": "cfc5b4e58ae21d64",
+   "name": "Accessories",
+   "folder": "cacbe73ffacc04eb",
+   "type": "Item",
+   "sorting": "m",
+   "sort": 0,
+   "color": null
+  },
+  {
+   "_id": "47dba8fdec9f1d16",
+   "name": "Ultramystic",
+   "folder": null,
+   "type": "Item",
+   "sorting": "m",
+   "sort": 1300000,
+   "color": null
+  },
+  {
+   "_id": "b602f8c1af2d9a2b",
+   "name": "Weapons",
+   "folder": "47dba8fdec9f1d16",
+   "type": "Item",
+   "sorting": "m",
+   "sort": 0,
+   "color": null
+  },
+  {
+   "_id": "33636f0aed732ca0",
+   "name": "Armor & Fashion",
+   "folder": "47dba8fdec9f1d16",
+   "type": "Item",
+   "sorting": "m",
+   "sort": 100000,
+   "color": null
+  },
+  {
+   "_id": "e3ffc40e14bddce7",
+   "name": "Wukong",
+   "folder": null,
+   "type": "Item",
+   "sorting": "m",
+   "sort": 1400000,
+   "color": null
+  },
+  {
+   "_id": "156fd514ef6352b4",
+   "name": "Weapons",
+   "folder": "e3ffc40e14bddce7",
+   "type": "Item",
+   "sorting": "m",
+   "sort": 0,
+   "color": null
+  },
+  {
+   "_id": "755fe5b4062027a8",
+   "name": "Armor & Fashion",
+   "folder": "e3ffc40e14bddce7",
+   "type": "Item",
+   "sorting": "m",
+   "sort": 100000,
+   "color": null
+  },
+  {
+   "_id": "ef022bd01c52bde4",
+   "name": "Zhongkui",
+   "folder": null,
+   "type": "Item",
+   "sorting": "m",
+   "sort": 1500000,
+   "color": null
+  },
+  {
+   "_id": "1dde196b1efbdd85",
+   "name": "Weapons",
+   "folder": "ef022bd01c52bde4",
+   "type": "Item",
+   "sorting": "m",
+   "sort": 0,
+   "color": null
+  },
+  {
+   "_id": "aafcde42fe25fa36",
+   "name": "Armor & Fashion",
+   "folder": "ef022bd01c52bde4",
+   "type": "Item",
+   "sorting": "m",
+   "sort": 100000,
+   "color": null
+  },
+  {
+   "_id": "fac7b87a903350f3",
+   "name": "Accessories",
+   "folder": "ef022bd01c52bde4",
+   "type": "Item",
+   "sorting": "m",
+   "sort": 200000,
+   "color": null
+  }
+ ],
+ "items": [
+  {
+   "_id": "a0625684cb2b3812",
+   "name": "Asuri Kalikhadga",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "system": {
+    "description": "<p><em>One of the most important members of the Asuri Sect was Jenma Malari, a decorated practitioner of the Esoteric Infinite Doctrine of the Buddhas, who showed the expedient application of the Dharma into places where hedonism is upheld.</em></p><p><strong>License:</strong> Demon Body ✦✦✦✦ — The Cultivator is now licensed to wield the the KALIKHADGA.</p><p><strong>Asuri Prestige Sword · 10 kg · Price N/A · Hilt / Sword · Nethicite</strong></p><p><strong>Mods:</strong> ARTIFACT ✦ GREAT ✦ FEROCIOUS ✦ VISCERAL ✦ CRUSHING</p><p>Upon inflicting Damage, those wounded lose 1 Flame. If they have no Flame, they suffer 1 damage to their Torso instead. This weapon suffers no penalties to Attack Checks from being a [GREAT] weapon. Named after the blessed Black Mother, the Kalikhadga was once Dattreya’s weapon, which she infused with Dialectical Sidhi to affect not just the Matter but the interior negations of Matter. Only those that have subsumed their Passions into greater Enlightenment can wield this. Those that have not quickly devolve into Fascists who impose their Will upon reality, Nihilists who seek to destroy the World, or Capitalists who accumulate wealth through physical violence.</p><p><em>Catalog note: GREAT is applied as +1 damage and two hands without the usual -1, because the Kalikhadga \"suffers no penalties to Attack Checks from being a [GREAT] weapon\".</em></p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.133",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Asuri, Demon Body, Prestige, Weapon, ARTIFACT, GREAT, FEROCIOUS, VISCERAL, CRUSHING",
+    "gearSlot": "carry",
+    "weaponType": "melee",
+    "range": 1,
+    "damageType": "cut",
+    "r21": {
+     "profile": "sword",
+     "grip": "hilt",
+     "damage": 3,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "ferocious": 1,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": true,
+      "great": false,
+      "colossal": false,
+      "doublehand": true,
+      "focus": false,
+      "blaze": false,
+      "artifact": true,
+      "smashing": false
+     },
+     "weight": 10
+    }
+   },
+   "folder": "246184e6c316cef3",
+   "sort": 0,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 133,
+      "cultivation": "Demon Body",
+      "license": "Demon Body ✦✦✦✦",
+      "printedMods": [
+       "ARTIFACT",
+       "GREAT",
+       "FEROCIOUS",
+       "VISCERAL",
+       "CRUSHING"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "_id": "00f00e5efb7799a8",
+   "name": "Liver-Eater's Raiment",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p><em>…and when she would strike she would first bleed herself… You must listen to us. We are the apple of knowledge. We are the hidden semiotics and subliminal sutras embedded into television static and radio waves.</em></p><p><strong>License:</strong> Devil Beast ✦✦✦ — The Cultivator is now licensed to wear the LIVER-EATER'S RAIMENT.</p><p><strong>Aswang Prestige Head + Torso + Limbs · 2 kg · Price N/A</strong></p><p>Shadow Sutra The wearer may add her +[DEVIL BEAST] to all checks to go stealth or hide. Umbra Body When entering a KILL THE BUDDHA, the wearer generates one free Counter. Shadow Silk Weave The wearer footsteps don't make noise and she can run up walls and other vertical surfaces up to her movement speed. She also gains +2m to all her movement speeds. The Liver-Eater’s Raiment is shaped in shadowy, almost vampiric hues. Inspired by the ghoulish Aswang, this raiment is tailor-made to the wearer’s specific tastes, especially if those tastes are edgy, bloodpunk, and gloomcore.</p><p><em>Catalog note: Covers Head, Torso and Limbs; the printed statblock gives no Soak value. Shadow Silk Weave adds +2 m/s to all movement as an Active Effect.</em></p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.136",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Aswang, Devil Beast, Prestige, Fashion",
+    "gearSlot": "fashion",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 2
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "folder": "c3e4cc0116c3c319",
+   "sort": 0,
+   "effects": [
+    {
+     "_id": "4fa446b97a0c94a1",
+     "name": "Liver-Eater's Raiment: +2 m/s movement",
+     "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+     "transfer": true,
+     "disabled": false,
+     "description": "<p>Rules 2.1 (2.1 playtest Sects), p.136. Applies while equipped.</p>",
+     "system": {
+      "changes": [
+       {
+        "key": "system.moveBonus",
+        "type": "add",
+        "value": "2",
+        "phase": "initial",
+        "priority": 20
+       }
+      ]
+     }
+    }
+   ],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 136,
+      "cultivation": "Devil Beast",
+      "license": "Devil Beast ✦✦✦",
+      "printedMods": []
+     }
+    }
+   }
+  },
+  {
+   "_id": "36eca3201b58658f",
+   "name": "Aswang Mahadirga Knife",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "system": {
+    "description": "<p><em>…and her strike would cut through all the lights… We are the hidden truth hidden by human fear. What are we? We are Death. And Death is the only Real thing.</em></p><p><strong>License:</strong> Devil Beast ✦✦✦ — The Cultivator is now licensed to wield the the MAHADIRGA KNIFE.</p><p><strong>Aswang Prestige Dagger · 1.5 kg · Price N/A · Hilt / Dagger · Death Goddess Bonesteel</strong></p><p><strong>Mods:</strong> ARTIFACT ✦ PIERCING ✦ FEROCIOUS</p><p>All of this dagger's damage upon an already damaged part deals +1. Additionally, if thrown, it immediately returns to the wielder. A knife showcasing a Black Demon Warrior Goddess on the hilt, and her tongue being the crimson blade, known as Mahadirga, one of the manifestations of the Buddha of Killing, Kroma Nagmi. The blade sings out and compels the wielder to satiate her bloodlust. In so doing, the Aswang sacrifices their own karma for the sake of a thousand thousand suffering sentient beings, who would have suffered worse if the Aswang did not take up the blade and performed the martyr motive to save others while damning themselves.</p><p><em>Catalog note: Printed grip is HANDLE; recorded as a Hilt (Dagger profile).</em></p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.136",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Aswang, Devil Beast, Prestige, Weapon, ARTIFACT, PIERCING, FEROCIOUS",
+    "gearSlot": "carry",
+    "weaponType": "melee",
+    "range": 1,
+    "damageType": "cut",
+    "r21": {
+     "profile": "dagger",
+     "grip": "hilt",
+     "damage": 2,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "ferocious": 1,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": false,
+      "focus": false,
+      "blaze": false,
+      "artifact": true,
+      "smashing": false
+     },
+     "weight": 1.5
+    }
+   },
+   "folder": "e4d0019dccdd4649",
+   "sort": 1000,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 136,
+      "cultivation": "Devil Beast",
+      "license": "Devil Beast ✦✦✦",
+      "printedMods": [
+       "ARTIFACT",
+       "PIERCING",
+       "FEROCIOUS"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "_id": "25ddd0072e275bbf",
+   "name": "Dracontine Areindama",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "system": {
+    "description": "<p><em>Named after an ancient hero of archeprimeval times, said to have been granted by a God of Lightning and the God-King of Gods. The Dracontines adopted the spear or the javelin as their weapon of choice due to the need to be able to puncture through the tough hides of Dragons, and their interlocking scales, large as plates.</em></p><p><strong>License:</strong> Sky Dragon ✦✦ — The Cultivator is now licensed to wield the AREINDAMA Polearm.</p><p><strong>Dracontine Prestige Polearm · 5 kg · Price N/A · Haft / Polearm · Dragonsteel</strong></p><p><strong>Mods:</strong> ARTIFACT ✦ KEEN ✦ FEROCIOUS</p><p>+2 dice on KILL THE BUDDHA or SHOOT GOD IN THE HEAD against targets in flight, hovering, or higher than 3m high elevation. Another +1 against targets that are larger than the wielder. Kyai Pleret [❂] Can be thrown up to [5 x SKY DRAGON] meters. Releasing the Flame teleports the polearm back to the wielder’s hands. The truth is, the Dragon Buddhas taught the use of wielding spears to the Dracontines to immaculately emulate how Dragons would bite with their terrifying fangs and sharper-than-swords claws. The whole of dragonflight and drasgonspear combat was predicated on the fact that the Dragon Buddhas taught the Dracontines how to move and fight like them.</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.140",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Dracontine, Sky Dragon, Prestige, Weapon, ARTIFACT, KEEN, FEROCIOUS",
+    "gearSlot": "carry",
+    "weaponType": "melee",
+    "range": 3,
+    "damageType": "cut",
+    "r21": {
+     "profile": "polearm",
+     "grip": "haft",
+     "damage": 2,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "ferocious": 1,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": false,
+      "focus": false,
+      "blaze": false,
+      "artifact": true,
+      "smashing": false
+     },
+     "weight": 5
+    }
+   },
+   "folder": "4774b21d6278504b",
+   "sort": 0,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 140,
+      "cultivation": "Sky Dragon",
+      "license": "Sky Dragon ✦✦",
+      "printedMods": [
+       "ARTIFACT",
+       "KEEN",
+       "FEROCIOUS"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "_id": "bbe7478b8ea4151e",
+   "name": "Interlocking Dragonsteel Helm",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p><em>The Dracontines found it difficult at first to wear armor with their high-flying capabilities. It took the immense effort of the Dracontine Disciple Rugan to travel to the depths of a hellworld and find the bones of an ancient dragon. From this they alchemically synthesized a new kind of steel, and found they could easily recreate it with dragonsblood asked from willing grantors.</em></p><p><strong>License:</strong> Sky Dragon ✦ — The Cultivator is now licensed to wear the INTERLOCKING DRAGONSTEEL Armor.</p><p><strong>Dracontine Prestige Fashion · 1.5 kg · Price N/A</strong></p><p><strong>Soak:</strong> Head 4</p><p>Dragoncharge Performing a KILL THE BUDDHA after moving at least 5m grants +2 dice to that KILL THE BUDDHA. Made of overlapping parts, light like the skin of a serpent, but with a very spiky silhouette for maximum aerodynamic performance.</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.140",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Dracontine, Sky Dragon, Prestige, Fashion",
+    "gearSlot": "fashion",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 4
+     },
+     "morale": 0,
+     "weight": 1.5
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "folder": "96968f8abb597f80",
+   "sort": 1000,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 140,
+      "cultivation": "Sky Dragon",
+      "license": "Sky Dragon ✦",
+      "printedMods": []
+     }
+    }
+   }
+  },
+  {
+   "_id": "ff16095da3a19f67",
+   "name": "Interlocking Dragonsteel Plate",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p><em>The Dracontines found it difficult at first to wear armor with their high-flying capabilities. It took the immense effort of the Dracontine Disciple Rugan to travel to the depths of a hellworld and find the bones of an ancient dragon. From this they alchemically synthesized a new kind of steel, and found they could easily recreate it with dragonsblood asked from willing grantors.</em></p><p><strong>License:</strong> Sky Dragon ✦ — The Cultivator is now licensed to wear the INTERLOCKING DRAGONSTEEL Armor.</p><p><strong>Dracontine Prestige Fashion · 2 kg · Price N/A</strong></p><p><strong>Soak:</strong> Torso 4</p><p>Dragonsteel is surprisingly light while being great at spreading impacts across its frame. Like an improved ceramic, it is resistant to fire, bludgeoning, and is lighter than ceramic, allowing for flight.</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.140",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Dracontine, Sky Dragon, Prestige, Fashion",
+    "gearSlot": "fashion",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 4,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 2
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "folder": "96968f8abb597f80",
+   "sort": 2000,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 140,
+      "cultivation": "Sky Dragon",
+      "license": "Sky Dragon ✦",
+      "printedMods": []
+     }
+    }
+   }
+  },
+  {
+   "_id": "0de516fb0e2794dc",
+   "name": "Interlocking Dragonsteel Gauntlet",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p><em>The Dracontines found it difficult at first to wear armor with their high-flying capabilities. It took the immense effort of the Dracontine Disciple Rugan to travel to the depths of a hellworld and find the bones of an ancient dragon. From this they alchemically synthesized a new kind of steel, and found they could easily recreate it with dragonsblood asked from willing grantors.</em></p><p><strong>License:</strong> Sky Dragon ✦ — The Cultivator is now licensed to wear the INTERLOCKING DRAGONSTEEL Armor.</p><p><strong>Dracontine Prestige Fashion · 1 kg · Price N/A</strong></p><p><strong>Soak:</strong> Right Arm 4</p><p>Dragon Talon When the wielder KILLS THE BUDDHA with a Polearm or [REACH] weapon, they gain +1 die. Dragonsteel is made out the calcified Sidhi mined from the decaying bones of ancient dragons.</p><p><em>Catalog note: Printed as ARM 4 SOAK without a side; recorded on the right arm. Move it to the left arm in the item if worn there.</em></p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.140",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Dracontine, Sky Dragon, Prestige, Fashion",
+    "gearSlot": "fashion",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 4,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 1
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "folder": "96968f8abb597f80",
+   "sort": 3000,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 140,
+      "cultivation": "Sky Dragon",
+      "license": "Sky Dragon ✦",
+      "printedMods": []
+     }
+    }
+   }
+  },
+  {
+   "_id": "157b9847b834a0f1",
+   "name": "Interlocking Dragonsteel Greaves",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p><em>The Dracontines found it difficult at first to wear armor with their high-flying capabilities. It took the immense effort of the Dracontine Disciple Rugan to travel to the depths of a hellworld and find the bones of an ancient dragon. From this they alchemically synthesized a new kind of steel, and found they could easily recreate it with dragonsblood asked from willing grantors.</em></p><p><strong>License:</strong> Sky Dragon ✦ — The Cultivator is now licensed to wear the INTERLOCKING DRAGONSTEEL Armor.</p><p><strong>Dracontine Prestige Fashion · 3 kg · Price N/A</strong></p><p><strong>Soak:</strong> Left Leg 3, Right Leg 3</p><p>Sky High The wearer gains +3 dice to all leaping and jumping checks and they do not suffer any damage from falling. Nowadays dragonsteel is harder to come by, as the populations of rongxeng become scarcer. The largest concentration of dragonsteel can be found in the Sky Pillars of Hingsajagra.</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.140",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Dracontine, Sky Dragon, Prestige, Fashion",
+    "gearSlot": "fashion",
+    "r21": {
+     "coverage": {
+      "rleg": 3,
+      "lleg": 3,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 3
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "folder": "96968f8abb597f80",
+   "sort": 4000,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 140,
+      "cultivation": "Sky Dragon",
+      "license": "Sky Dragon ✦",
+      "printedMods": []
+     }
+    }
+   }
+  },
+  {
+   "_id": "d9c66f3a8a7cee19",
+   "name": "Eskatonian Trismegistus",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "system": {
+    "description": "<p><em>Hermes Trismegistus’ wrathful form, Dirga Aramagesti, is said to have destroyed an entire Celestial Civilization that tried to invade Hingsajagra while it wasn’t developed enough yet.</em></p><p><strong>License:</strong> Black Sorcery ✦✦✦ — The Cultivator is now Licensed to wield the TRISMEGISTUS.</p><p><strong>Prestige Bludgeon (printed \"Dracontine Prestige Bludgeon\") · 2 kg · Price N/A · Haft / Bludgeon · Cacocarbon</strong></p><p><strong>Mods:</strong> DOUBLEHAND ✦ ARTIFACT ✦ FOCUS</p><p>The TRISMEGISTUS has Flame charges that can be used to cast Magick. If she has time, the Eschatonian can refill these Flame charges with any Sidhi source, even herself. The TRISMEGISTUS can only keep a number of Flame charges equal to her MIND. A triple serpent-headed staff that burgeons with Entropic and Cacotopic Sidhi. It exemplifies the sheerest and purest form of Magick. The largest Sect that makes up the Eschatonians used to be the Hermetic Order of Drg, who channeled the Compassionate Sidhi of the Deity of Ends and Cacotopia. The Hermetics are an ancient order, who believe that the whole of Creation is a single Divine Mind or God, and it is moving in only one direction: equilibrium. Heat Death. The supreme secret of the Trichiliocosm.</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.144",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Eskatonian, Black Sorcery, Prestige, Weapon, DOUBLEHAND, ARTIFACT, FOCUS",
+    "gearSlot": "carry",
+    "weaponType": "melee",
+    "range": 1,
+    "damageType": "impact",
+    "r21": {
+     "profile": "bludgeon",
+     "grip": "haft",
+     "damage": 2,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": true,
+      "focus": true,
+      "blaze": false,
+      "artifact": true,
+      "smashing": false
+     },
+     "weight": 2
+    }
+   },
+   "folder": "880afdb4b9f89c31",
+   "sort": 0,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 144,
+      "cultivation": "Black Sorcery",
+      "license": "Black Sorcery ✦✦✦",
+      "printedMods": [
+       "DOUBLEHAND",
+       "ARTIFACT",
+       "FOCUS"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "_id": "3e52e82aca26fe9b",
+   "name": "Hermetic Robes",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p><em>All destruction ticks the hand toward Metteyaʼs imminent manifestation, her Final Rebirth: where Metteya is said to herald the Seven Suns, which will scour Hingsajagra and begin it anew. To this end, all Eschatonians endeavor to bring about this Final Rebirth, otherwise known as the Great Equilibirum, which shall herald about a new Universe.</em></p><p><strong>License:</strong> Black Sorcery ✦✦✦✦ — The Cultivator is now Licensed to wear the HERMETIC ROBES.</p><p><strong>Eschatonian Prestige Fashion · 0 kg · Price N/A</strong></p><p><strong>Soak:</strong> Torso 2, Right Arm 2, Left Arm 2</p><p>Calculus of Annihilation All Magicks cast cost one less burnt or installed Flame, to a minimum of 1. Beneficent Revelation ALL HOSTILE MAGICKS do not affect allies, unless the wearer wishes it so. Violent Sorcery The wearer suffers no penalties and can Counter normally when participating in a KILL THE BUDDHA while Casting Magick. Also all Magicks that deals damage cast by the wearer have PIERCING. The Hermes Trismegistus of Hingsajagra was one of the most accomplished Bodhisattva Mahasiddhas in the arts of destructive magick. The Thrice-Great is known as the Revealer of Cosmic Laws and the Teacher of Deities in the arts of all Magick.</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.144",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Eskatonian, Black Sorcery, Prestige, Fashion",
+    "gearSlot": "fashion",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 2,
+      "larm": 2,
+      "torso": 2,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "folder": "ac1894b775373ffd",
+   "sort": 1000,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 144,
+      "cultivation": "Black Sorcery",
+      "license": "Black Sorcery ✦✦✦✦",
+      "printedMods": []
+     }
+    }
+   }
+  },
+  {
+   "_id": "603d5efa67381c76",
+   "name": "Fangshi Yajist Robes",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p><em>Over millennia, the Elixir path was systematized into a complete science of immortality: the refinement of Essence, Breath, and Self-God into a single, indestructible Golden Core.</em></p><p><strong>License:</strong> Internal Elixir ✦✦ — Gain access to the YAJIST ROBES.</p><p><strong>Prestige Fashion · 1 kg · Price N/A</strong></p><p>Master of Methods When the target of a KILL THE BUDDHA, generate one Counter for free. Wide Sleeves The wearer has four extra carry slots within the Yajist's Robes. These slots can only be for: pills, talismans, elixirs, and cores. Flowing, wide-sleeved robes inscribed with the Three-Pronged Yaji patterns. Often emerald, jade, gold, silver, or black. Contains ribbons floating upon the wearer's Sidhi. All three things cast aloft. Heaven begets Earth begets Man begets Heaven. The reality of the world is in the Supreme Principle of the Three- As-One. Ya, Earth. Ji, Heaven. And Yaji, Man.</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.147",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Fangshi, Internal Elixir, Prestige, Fashion",
+    "gearSlot": "fashion",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 1
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "folder": "e859cf501c9a07c4",
+   "sort": 0,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 147,
+      "cultivation": "Internal Elixir",
+      "license": "Internal Elixir ✦✦",
+      "printedMods": []
+     }
+    }
+   }
+  },
+  {
+   "_id": "48ac8c979c21e9c2",
+   "name": "Fangshi Portable Elixir Furnace",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "system": {
+    "description": "<p><em>We are the keepers of the old ways. We are the hermits in the mountains, the mendicants in the caves.</em></p><p><strong>License:</strong> Internal Elixir ✦✦✦ — Gains License to use the PORTABLE ELIXIR FURNACE.</p><p><strong>Prestige Bludgeon · 10 kg · Price N/A · Haft / Bludgeon · Black Iron</strong></p><p><strong>Mods:</strong> COLOSSAL ✦ ARTIFACT ✦ FOCUS</p><p>By burning ✹✹✹ and putting in up to 100,000mag, transmute the mag into a raw material of equivalent exchange-value. If an Elixir or Pill is put in here, duplicate the concoction by d6+1. This can also hold up to 10 Flames of Sidhi. Store Flames by refining 10,000mag. The stored Flames can be used as long as the Cauldron is nearby. A cauldron that houses the Fangshiʼs Golden Core. Prized and powerful, but reliant on a good Fangshi to wield, and crumbles apart when not attached to a Cultivation Womb.</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.149",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Fangshi, Internal Elixir, Prestige, Weapon, COLOSSAL, ARTIFACT, FOCUS",
+    "gearSlot": "carry",
+    "weaponType": "melee",
+    "range": 1,
+    "damageType": "impact",
+    "r21": {
+     "profile": "bludgeon",
+     "grip": "haft",
+     "damage": 2,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": true,
+      "doublehand": false,
+      "focus": true,
+      "blaze": false,
+      "artifact": true,
+      "smashing": false
+     },
+     "weight": 10
+    }
+   },
+   "folder": "08b4d2e8c17c2629",
+   "sort": 1000,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 149,
+      "cultivation": "Internal Elixir",
+      "license": "Internal Elixir ✦✦✦",
+      "printedMods": [
+       "COLOSSAL",
+       "ARTIFACT",
+       "FOCUS"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "_id": "abb5ab6c754cf1ee",
+   "name": "Houyi Tonggong",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "system": {
+    "description": "<p><em>Developed by the first of the Houyi and inspired by the mythological bow of the legendary Houyi figure. Its range can increase to strike at the sun from the earth.</em></p><p><strong>License:</strong> Solar Bow ✦✦✦✦ — Gain access to the TONGGONG.</p><p><strong>Houyi Prestige Bow · 3 kg · Price N/A · Riser / Bow · Blood Orichalcum</strong></p><p><strong>Mods:</strong> DOUBLEHAND ✦ FEROCIOUS ✦ ARTIFACT ✦ MORPH (BOW/CROSSBOW/LAUNCHER/HANDGUN/LONGGUN)</p><p>The Tonggong needs no ammunition and produces its own ammunition, which sets on fire. Also it deals an innate +2 damage on all body Parts. The Tonggong’s range is x400 of the normal Profile range and all its attempts to damage are Uncounterable. The TONGGONG was crafted by a smithing collective who was set to be dismantled by a Capitalist Landowner who bought the land their workshop was on. After crafting it, they raised the TONGGONG together and shot and killed the Capitalist. Half of them were killed right after by other Capitalists in the area. The other half went on to wreak havoc with the Proletariat.</p><p><em>Catalog note: The innate +2 damage is recorded as base damage 4. MORPH is not defined in the manuscript; switch the Profile on the item to use it as a crossbow, launcher, handgun or longgun. The x400 range and Uncounterable damage are left to the table.</em></p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.153",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Houyi, Solar Bow, Prestige, Weapon, DOUBLEHAND, FEROCIOUS, ARTIFACT, MORPH (BOW/CROSSBOW/LAUNCHER/HANDGUN/LONGGUN)",
+    "gearSlot": "carry",
+    "weaponType": "ranged",
+    "range": 250,
+    "damageType": "cut",
+    "r21": {
+     "profile": "bow",
+     "grip": "riser",
+     "damage": 4,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "ferocious": 1,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": true,
+      "focus": false,
+      "blaze": false,
+      "artifact": true,
+      "smashing": false
+     },
+     "weight": 3
+    }
+   },
+   "folder": "ec5e056ad1d3e49b",
+   "sort": 0,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 153,
+      "cultivation": "Solar Bow",
+      "license": "Solar Bow ✦✦✦✦",
+      "printedMods": [
+       "DOUBLEHAND",
+       "FEROCIOUS",
+       "ARTIFACT",
+       "MORPH (BOW/CROSSBOW/LAUNCHER/HANDGUN/LONGGUN)"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "_id": "aa7d72fa9e7827ac",
+   "name": "Vipassanadhanu Garb",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p><em>Crafted from the once the signature bow style of the Heaven Pillar Sect, before the Siddha Sect destroyed their reactionary monastery. It was saved by the arrival of worker-crafters who wanted to keep the art of meditation-sniping alive.</em></p><p><strong>License:</strong> Solar Bow ✦✦✦✦✦ — Gain access to the VIPASSANADHANU GARB.</p><p><strong>Houyi Prestige Fashion · 0 kg · Price N/A</strong></p><p><strong>Soak:</strong> Torso 4</p><p>Empty Soul These clothes don't make noise and the wearer footsteps are muffled while wearing them. Unfettered Javelin +1 to all KILL THE BUDDHAS with BOW, CROSSBOW, and LAUNCHERS and ignores Light Cover. Deadzone All damage from ranged weapons against the wearer is reduced by 1, to a minimum of 1. The Samadhi Archers are always focused on absolute perfect meditation. Always focusing on a single point, otherwise known as the Vipassana. This garb tends to be on the minimalist side, sleek side, almost luxury or premium.</p><p><em>Catalog note: No weight is printed.</em></p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.153",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Houyi, Solar Bow, Prestige, Fashion",
+    "gearSlot": "fashion",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 4,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "folder": "6c72af764e9efc20",
+   "sort": 1000,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 153,
+      "cultivation": "Solar Bow",
+      "license": "Solar Bow ✦✦✦✦✦",
+      "printedMods": []
+     }
+    }
+   }
+  },
+  {
+   "_id": "cef0c1c4a2ef3a3b",
+   "name": "Immanent Celestine Needles",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "system": {
+    "description": "<p><em>Purefire or Cleanfire is the physical manifestation of overwhelming Compassion Sidhi. It is fire without smoke, and is said to be the Fire of the Buddhas. This fire can be configured according to the Will of the caster. It can heal or it can take away.</em></p><p><strong>License:</strong> White Sorcery ✦✦✦ — The Cultivator is now licensed to wield the CELESTINE NEEDLES.</p><p><strong>Prestige Dagger · 1 kg · Price N/A · Hilt / Dagger · Celestine</strong></p><p><strong>Mods:</strong> FOCUS ✦ RITUAL ✦ CONCEALABLE</p><p>The needles can be used for acupoint healing. The wielder can burn ✹ to convert the damage dealt HP healed on that part, to a maximum of [wielder's HRT]. These daggers can be thrown up to 15m away and always return by spiritsilk strands. A set of 108 needles forged from Celestine, a kind of silk-like gold that, when woven together, becomes a flexible steel-like mesh and can take on shapes. Celestine Needles are attached to the wielder’s Cultivation Womb, so they can be manipulated from afar.</p><p><em>Catalog note: Thrown up to 15m; RITUAL and CONCEALABLE are not defined in the rules and are left to the table.</em></p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.156",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Imma, White Sorcery, Prestige, Weapon, FOCUS, RITUAL, CONCEALABLE",
+    "gearSlot": "carry",
+    "weaponType": "melee",
+    "range": 1,
+    "damageType": "cut",
+    "r21": {
+     "profile": "dagger",
+     "grip": "hilt",
+     "damage": 2,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": false,
+      "focus": true,
+      "blaze": false,
+      "artifact": false,
+      "smashing": false
+     },
+     "weight": 1
+    }
+   },
+   "folder": "35540b7895a615f9",
+   "sort": 0,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 156,
+      "cultivation": "White Sorcery",
+      "license": "White Sorcery ✦✦✦",
+      "printedMods": [
+       "FOCUS",
+       "RITUAL",
+       "CONCEALABLE"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "_id": "b567ebf6494cb31a",
+   "name": "Immanent Rod of Bekanze",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "system": {
+    "description": "<p><em>Immanents are the opposite of Eskatonians— while Eschatonians move with dignity and grim determination to Equilibrium through Entropy and thus the Heat Death of the Universe, Immanents focus on the movement of the Cosmic Spirit to its internal sublation and ultimation, which includes the triumph of the Universe’s Heat Death.</em></p><p><strong>License:</strong> White Sorcery ✦✦✦✦ — The Cultivator is now licensed to wield the ROD OF BEKANZE.</p><p><strong>Prestige Bludgeon · 2 kg · Price N/A · Haft / Bludgeon · Celestine</strong></p><p><strong>Mods:</strong> FOCUS ✦ RITUAL ✦ ARTIFACT</p><p>The wielder is imbued with Spirit: she gains +1 outgoing magick damage and +2 to outgoing magick healing. Holy Ghost The Rod can fire bolts of holy lightning made from the expression of the immanent mind of the world: this weapon has a Rate of 8, [WHITE SORCERY] damage, and range of 15m. The Rod turns the Immanent into a lightning rod for the World Spirit, channeling this infinite productive force to keep her allies moving in the flow of the Spirit of Nature. Bekanze is an immanent Angel Buddha Equal To Heaven who manifests in all Medicine and Healing.</p><p><em>Catalog note: Holy Ghost bolts (Rate 8, [WHITE SORCERY] damage, 15m) are resolved at the table; the item keeps its bludgeon profile.</em></p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.157",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Imma, White Sorcery, Prestige, Weapon, FOCUS, RITUAL, ARTIFACT",
+    "gearSlot": "carry",
+    "weaponType": "melee",
+    "range": 1,
+    "damageType": "impact",
+    "r21": {
+     "profile": "bludgeon",
+     "grip": "haft",
+     "damage": 2,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": false,
+      "focus": true,
+      "blaze": false,
+      "artifact": true,
+      "smashing": false
+     },
+     "weight": 2
+    }
+   },
+   "folder": "35540b7895a615f9",
+   "sort": 1000,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 157,
+      "cultivation": "White Sorcery",
+      "license": "White Sorcery ✦✦✦✦",
+      "printedMods": [
+       "FOCUS",
+       "RITUAL",
+       "ARTIFACT"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "_id": "4109ff100742c1d2",
+   "name": "Immanent White Robes",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p><em>The greatest of Immanents are inherent dialecticians and spiritual adepts. As the Immanent Sect expanded into an Interspherical membership, they continued to sublate more and more knowledge of the negation of pain and the movement of the Cosmic Mind. Those that have mastered this heady, arcane dialectics is awarded with the White Robes. Cultivators are both wary and relieved when they see an entity wrapped in these White Robes.</em></p><p><strong>License:</strong> White Sorcery ✦✦✦✦✦ — The Cultivator is now licensed to wear the WHITE ROBES.</p><p><strong>Prestige Fashion · 1 kg · Price N/A</strong></p><p><strong>Soak:</strong> Torso 3, Right Arm 3, Left Arm 3</p><p>Medicine Sutra Can add +[WHITE SORCERY] to all medicine, acupuncture, physical therapy, pharmaceutical, and diagnosis checks. Saint The wearer cannot suffer Burning, Stunned, or Winded. True Rationality The White Robes has 4 Flames that the wearer can harness. The Flames can only be refreshed by an Immanent willing to pour 4 HP over a 24 hour ritual. White robes that are purely clean and impossible to dirty. Though the color of the robes changes depending on the wearer, it always has white accents of some kind.</p><p><em>Catalog note: Printed in the column beside ING KUNG DHARANI. The robes' own 4 Flames are tracked by hand.</em></p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.157",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Imma, White Sorcery, Prestige, Fashion",
+    "gearSlot": "fashion",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 3,
+      "larm": 3,
+      "torso": 3,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 1
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "folder": "f782f9e28346a113",
+   "sort": 2000,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 157,
+      "cultivation": "White Sorcery",
+      "license": "White Sorcery ✦✦✦✦✦",
+      "printedMods": []
+     }
+    }
+   }
+  },
+  {
+   "_id": "9fa27a428d8f54b5",
+   "name": "Jyotisha Star-Stitched Robes",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p><em>It is said that the knowledge of calling upon the stars and wielding its sidereal Sidhi known as Starstuff, was given to us by Lusbel's great mistress Daknaka, whose tail eddies ripple across the night sky as the Silver River.</em></p><p><strong>License:</strong> Astral ✦✦✦✦✦ — The Cultivator gains the License to wear the STAR-STITCHED ROBES.</p><p><strong>Prestige Torso Armor · 1 kg · Price N/A</strong></p><p><strong>Soak:</strong> Torso 2, Right Arm 2, Left Arm 2</p><p>Star Oracle Burn ✹ to reroll any single Check. North Star Tethered Soul Any damage from weapons can never Disable or Cleave the wearer's Parts. Lunar Link The robes have [ASTRAL] Flame that can be used at any time, and regains at a rate of 1 per Month. Jyotisha are Astrologians that consult the Heavenly Roots to divine the movement of the future. They believe that the Heavens and the Earths are mirrors, a truth of the groundbreaking concept of Entanglement.</p><p><em>Catalog note: The robes' own [ASTRAL] Flame is tracked by hand.</em></p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.161",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Jyotisha, Astral, Prestige, Fashion",
+    "gearSlot": "fashion",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 2,
+      "larm": 2,
+      "torso": 2,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 1
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "folder": "3ce27e5f4a416702",
+   "sort": 0,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 161,
+      "cultivation": "Astral",
+      "license": "Astral ✦✦✦✦✦",
+      "printedMods": []
+     }
+    }
+   }
+  },
+  {
+   "_id": "a506e8656294e830",
+   "name": "Katalonan Shrine Raiments",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p><em>INTRA-INTs, in their primeval era, called gods, spirits, devils, angels. These entities are not supernatural. They are Intramaterial— informational sequences and patterns arising from highly complex material systems.</em></p><p><strong>License:</strong> Divine Communion ✦✦ — The Cultivator gains the License to wear the SHRINE RAIMENTS.</p><p><strong>Katalonan Prestige Fashion · 2 kg · Price N/A</strong></p><p><strong>Soak:</strong> Torso 2, Right Arm 2, Left Arm 2</p><p>Spirit Medium The wearer has +2 Flame and +2 Morale. She also immediately establishes rapport with nearby Numina. Their dispositions are usually Neutral, wary at the least. +1 Disposition if they’re equal or lower Sidhi. Katalonan deal with consciousnesses imprinted into the winds and the point particles that have existed for millions of years. Sometimes condensing into physical form, sometimes merging with human hosts.</p><p><em>Catalog note: Printed \"torso_ 2 / arms_ 2\" without the word Soak; recorded as Soak.</em></p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.164",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Katalonan, Divine Communion, Prestige, Fashion",
+    "gearSlot": "fashion",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 2,
+      "larm": 2,
+      "torso": 2,
+      "head": 0
+     },
+     "morale": 2,
+     "weight": 2
+    },
+    "armor": 0,
+    "ardor": 1
+   },
+   "folder": "47ec15c20d228b24",
+   "sort": 0,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 164,
+      "cultivation": "Divine Communion",
+      "license": "Divine Communion ✦✦",
+      "printedMods": []
+     }
+    }
+   }
+  },
+  {
+   "_id": "4e4c33964f75cf44",
+   "name": "Katalonan San Miguel",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "system": {
+    "description": "<p><em>To be initiated, a Katalonan rep tasks you to spend a week in the area of divinity you find most powerful. Protect whatever divinity lives within from malevolent manifestations of its karma. Then, be possessed by the divinity for a day. Afterwards, defeat the Divinity-Possessed Heart Demon. Failure means the Divinity gains your body as a vessel. Success means the Covenant is established.</em></p><p><strong>License:</strong> Divine Communion ✦✦✦ — The Cultivator gains the License to wield the SAN MIGUEL.</p><p><strong>Katalonan Prestige Sword · 5 kg · Price N/A · Hilt / Sword · Numicite</strong></p><p><strong>Mods:</strong> GREAT ✦ ARTIFACT ✦ HOLY ✦ REACH</p><p>Can be used as a Focus for casting Magicks. KILL THE BUDDHA with this weapon is made with DIVINE COMMUNION and can go up to 25m range, shooting beams of light. Can also dissipate into Sidhi when not in use by installing ❂. Named after the great Archangel and Warrior Aspect of IMPINITO, the God Before God, who slew the treacherous Luxbel after it tried to introduce the Trinity. Its weapon scathes both Dark and Light.</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.164",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Katalonan, Divine Communion, Prestige, Weapon, GREAT, ARTIFACT, HOLY, REACH",
+    "gearSlot": "carry",
+    "weaponType": "melee",
+    "range": 1,
+    "damageType": "cut",
+    "r21": {
+     "profile": "sword",
+     "grip": "hilt",
+     "damage": 2,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": true,
+      "colossal": false,
+      "doublehand": false,
+      "focus": true,
+      "blaze": false,
+      "artifact": true,
+      "smashing": false
+     },
+     "weight": 5
+    }
+   },
+   "folder": "2cdbddf4b4021082",
+   "sort": 1000,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 164,
+      "cultivation": "Divine Communion",
+      "license": "Divine Communion ✦✦✦",
+      "printedMods": [
+       "GREAT",
+       "ARTIFACT",
+       "HOLY",
+       "REACH"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "_id": "870378107cf2deb6",
+   "name": "Mendicant Begging Garb",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p><em>We operate schools and temples for teaching subversive Enlightened Code sutras and revolutionary politics. We will sharpen minds until it is atomic, until it is superposition, until it is Emptiness.</em></p><p><strong>License:</strong> Vajra Fist ✦✦✦ — The Cultivator gains the License to wear the BEGGING GARB.</p><p><strong>Mendicant Prestige Fashion · 0.5 kg · Price N/A</strong></p><p>Vajra Mind Adamance: When the wearer would suffer damage, she may roll a d6. On a 4+, the damage reduces her Morale instead. Mind of a Buddha: The wearer gains +2 max Morale. A simple monksrobe. Nothing special. That is the point.</p><p><em>Catalog note: The statblock prints no Soak.</em></p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.168",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Mendicant, Vajra Fist, Prestige, Fashion",
+    "gearSlot": "fashion",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 2,
+     "weight": 0.5
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "folder": "e46bf8ad6a7afca7",
+   "sort": 0,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 168,
+      "cultivation": "Vajra Fist",
+      "license": "Vajra Fist ✦✦✦",
+      "printedMods": []
+     }
+    }
+   }
+  },
+  {
+   "_id": "3a90002c6a096e16",
+   "name": "Nezha San Tou Liu Bi",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p><em>Devildust, also known as gunpowder or firedrug, is made from the ashes of slain fire demons.</em></p><p><strong>License:</strong> Red Gun ✦✦✦✦ — Gain the San Tou Liu Bi (Three Heads and Six Arms) Armor.</p><p><strong>Prestige Torso + Arms + Legs · 5 kg · Price N/A</strong></p><p><strong>Soak:</strong> Torso 2, Right Arm 2, Left Arm 2, Right Leg 2, Left Leg 2</p><p>Three Godly Heads All HANDGUNs, LONGGUNs and POLEARMs deal +1 damage and +1 to KILL THE BUDDHA Checks. Six Lucifer Arms The wearer gains two extra arms that can hold weapons (but can also be targeted). They're constructed, so Disabling them destroys them (they have 8 Durability each). At any point, the wearer may install ❂ to summon 2 more arms, or any number of extra arms to reach 6 arms. She cannot have more than 6 arms in this way. Uninstalling the Flame releases all arms. She can install multiple times to keep her arms \"topped off\" at 6, though this requires significant investment. Uninstalling and reinstalling might be more cost efficient, but that would drop the weapons the other arms are holding unless they succeed on a MOTORICS + THEWS AND SINEWS Check. Each attainer of the San Tou Liu Bi have diverse aesthetics on this Fashion piece, but all of them always have one throughline: they contain something that reveals 3 Heads and Six Arms.</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.172",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Nezha, Red Gun, Prestige, Fashion",
+    "gearSlot": "fashion",
+    "r21": {
+     "coverage": {
+      "rleg": 2,
+      "lleg": 2,
+      "rarm": 2,
+      "larm": 2,
+      "torso": 2,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 5
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "folder": "023e92dad4dc3e10",
+   "sort": 0,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 172,
+      "cultivation": "Red Gun",
+      "license": "Red Gun ✦✦✦✦",
+      "printedMods": []
+     }
+    }
+   }
+  },
+  {
+   "_id": "abfbf127c61b3cef",
+   "name": "Nezha Fenghuolun",
+   "type": "accessory",
+   "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
+   "system": {
+    "description": "<p><em>The Communist Gun-Monk Nezha named Red Boy rampaged across the astral heaven-barge “XUAN DU” in an attempt to retake a stolen Angel-Engine for the Movement. His rival was a highly skilled Libertarian Anarchist Staff- Assassin Wukong named Goku.</em></p><p><strong>License:</strong> Red Gun ✦✦✦✦✦ — The Cultivator gains the License to wield the FENG HUO LUN.</p><p><strong>Nezha Prestige Feet · 2 kg · Price N/A</strong></p><p>When unactivated, looks like boots with wheels attached to the heels. Accessory that can be worn at the feet. Flight Mode Chant “IGNITE” and install ❂❂ to activate. The wheels begin spinning, generating wind and fire, and elevate to the skies. The wearer flies for as long as the Flame is installed. Samadhi Chant “FOCUS” and burn ✹ to activate. The wearer has the Fire-Wind Wheels shoot out and create special fire-wind reticle-wheels to guide a ranged weapon attack. Her next KILL THE BUDDHA with a ranged weapon gains +RED GUN dice. The FENGHUOLUN was constructed by Nezha who readied themselves for the Second World Revolution. They knew they had unparalleled range with their guns, and that all they needed to be able to stay out of range is to take to the skies. The FENGHUOLUN is difficult to construct in Post- Calamity, and so it requires a Level 2 Nezha License to claim and wield.</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.173",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Nezha, Red Gun, Prestige, Accessory",
+    "gearSlot": "carry",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 2
+    }
+   },
+   "folder": "e4b933bf95012f0a",
+   "sort": 1000,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 173,
+      "cultivation": "Red Gun",
+      "license": "Red Gun ✦✦✦✦✦",
+      "printedMods": []
+     }
+    }
+   }
+  },
+  {
+   "_id": "d17930dadf562c2f",
+   "name": "Nezha Huojianqiang",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "system": {
+    "description": "<p><em>The Second World Revolution had a battalion of 1,000 Nezha hosts. They were a formidable force, and blasted the Grand August Yellow- Onset Orbital Heaven open. To destroy them required the destruction of one of Hingsajagra’s Moons. And even then, evidently, some Nezha’s stayed alive.</em></p><p><strong>License:</strong> Red Gun ✦✦✦✦✦ — The Cultivator gains the License to wield the HUO JIAN QIANG.</p><p><strong>Nezha Prestige Gun · 5 kg · Price N/A · Stock / Longgun · Red God Metal</strong></p><p><strong>Mods:</strong> DOUBLEHANDED ✦ ARTIFACT ✦ HOLY ✦ SMASHING ✦ TRANSFORM (POLEARM)</p><p>Red Gun Mode Install ❂❂. While installed: all attacks from the HUOJIANQIANG can either be fired off as a normal shot or as a fire laser (20m line in a straight line). Additionally, while installed, the Huojianqiang produces its own Firepowered bullets. All its bullets also are piercing. While wielded, you can always counter incoming shots by shooting at them. Fire Lance Mode At any time, can transform into a long gunstaff firelance (Polearm). Wielder can burn ✹ to accelerate impacts, dealing +2 damage upon weapon impact. Blossoming Hell Lotus Burn ✹ to activate upon dealing damage: the bullet explodes, dealing the same damage to all enemies within 5m of the target. The HUOJIANQIANG was forged by the Red Military Lord Hong Qi Gong, who was a traitor to the Heavenly Bourgeoisie and the Heavens themselves. As the God of Guns, he was sympathetic to the cause of the proletariat. All the Nezha that stormed Grand August Yellow- Onset Orbital Heaven were outfitted by him, and all of them wielded Huojianqiang.</p><p><em>Catalog note: Magazine: infinite (Capacity left at 0).</em></p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.173",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Nezha, Red Gun, Prestige, Weapon, DOUBLEHANDED, ARTIFACT, HOLY, SMASHING, TRANSFORM (POLEARM)",
+    "gearSlot": "carry",
+    "weaponType": "ranged",
+    "range": 400,
+    "damageType": "cut",
+    "r21": {
+     "profile": "longgun",
+     "grip": "stock",
+     "damage": 2,
+     "range": 0,
+     "rate": 15,
+     "capacity": 0,
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": true,
+      "focus": false,
+      "blaze": false,
+      "artifact": true,
+      "smashing": true
+     },
+     "weight": 5
+    }
+   },
+   "folder": "cf657fd9f681e3c8",
+   "sort": 2000,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 173,
+      "cultivation": "Red Gun",
+      "license": "Red Gun ✦✦✦✦✦",
+      "printedMods": [
+       "DOUBLEHANDED",
+       "ARTIFACT",
+       "HOLY",
+       "SMASHING",
+       "TRANSFORM (POLEARM)"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "_id": "5eb9365f8599af98",
+   "name": "Sword Runner Jacket",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p><em>You must learn how to hold two things at once in your mind to be able to sublate them. Often, you get two things from one thing. That's the point of dialectics after all.</em></p><p><strong>License:</strong> Sword Dialectics ✦✦✦ — The Cultivator now has the License to wear the SWORD RUNNER.</p><p><strong>Prestige Fashion · 1 kg · Price N/A</strong></p><p><strong>Soak:</strong> Torso 3, Right Arm 3, Left Arm 3</p><p>Blade Master The wearer can only be Disarmed with a Perfect Opening. Sword Dialecticians establish a very dialectical fashion piece with the Swordrunner. As much as possible, this Fashion is a mix of local/native/ indigenous sword-brave aesthetics with modern, grungy, traveling swordsman aesthetics.</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.176",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Sword Dialectician, Sword Dialectics, Prestige, Fashion",
+    "gearSlot": "fashion",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 3,
+      "larm": 3,
+      "torso": 3,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 1
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "folder": "07f0ce178bc864bf",
+   "sort": 0,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 176,
+      "cultivation": "Sword Dialectics",
+      "license": "Sword Dialectics ✦✦✦",
+      "printedMods": []
+     }
+    }
+   }
+  },
+  {
+   "_id": "0427007fbb5d4a32",
+   "name": "Sword Runner Trousers",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p><em>You must learn how to hold two things at once in your mind to be able to sublate them. Often, you get two things from one thing. That's the point of dialectics after all.</em></p><p><strong>License:</strong> Sword Dialectics ✦✦✦ — The Cultivator now has the License to wear the SWORD RUNNER.</p><p><strong>Prestige Fashion · 1 kg · Price N/A</strong></p><p><strong>Soak:</strong> Right Leg 3, Left Leg 3</p><p>Flensing Sword Attitude All SWORD or SABER Perfect Opening damage gains PIERCING against Torso or Limbs. The Sword Runner's style creates for a strange, almost anachronistic and dualist-non-dualist style that has marked a Sword Dialectician.</p><p><em>Catalog note: The statblock prints \"legs_ torso ⛨⛨⛨; arms ⛨⛨⛨\"; recorded as 3 Soak on each leg.</em></p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.176",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Sword Dialectician, Sword Dialectics, Prestige, Fashion",
+    "gearSlot": "fashion",
+    "r21": {
+     "coverage": {
+      "rleg": 3,
+      "lleg": 3,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 1
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "folder": "07f0ce178bc864bf",
+   "sort": 1000,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 176,
+      "cultivation": "Sword Dialectics",
+      "license": "Sword Dialectics ✦✦✦",
+      "printedMods": []
+     }
+    }
+   }
+  },
+  {
+   "_id": "5b9f38a166fb37a2",
+   "name": "Atardar's Fang",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "system": {
+    "description": "<p><em>Sword Dialecticians profess that the most accurate analysis of reality is the dialectical one. Of immanent contradictions and eventual sublations. With this meditation in mind, they find that within a Sword’s attack is its own immanent negation, and within an enemy’s victory is in their own defeat.</em></p><p><strong>License:</strong> Sword Dialectics ✦✦✦✦ — The Cultivator now has the License to wield the ATARDAR'S FANG.</p><p><strong>Sword Dialectician Prestige Sword · 2 kg · Price N/A · Hilt / Sword · Numensteel</strong></p><p><strong>Mods:</strong> VISCERAL ✦ LACERATING ✦ FEROCIOUS ✦ ARTIFACT</p><p>Any unsoaked damage from Atardar’s Fang may automatically implant a Negation Cut. Additionally, when the wielder enters Samadhi, she can immediately deal weapon damage upon anyone within range of Atardar's Fang for free. Dual Fang Essence [❂] The Atardar's Fangs duplicates into a pair for dual sword purposes: gain +1 to all KILL THE BUDDHA while dual wielding. Sword Devil Cut [✹✹] Activate at any time to immediately inflict weapon damage to a non-head Part on any target within reach. ATARDAR is the Wrathful Manifestation of the IMPINITU, the Anteprime Sempiternal Bodhisattva of the previous Trichiliocosm, the collected consciousness of that Omniverse’s sentience. ATARDAR is the dharmapala that killed God so that He may be reborn with a chance at becoming a Buddha.</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.176",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Sword Dialectician, Sword Dialectics, Prestige, Weapon, VISCERAL, LACERATING, FEROCIOUS, ARTIFACT",
+    "gearSlot": "carry",
+    "weaponType": "melee",
+    "range": 1,
+    "damageType": "cut",
+    "r21": {
+     "profile": "sword",
+     "grip": "hilt",
+     "damage": 2,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "ferocious": 1,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": false,
+      "focus": false,
+      "blaze": false,
+      "artifact": true,
+      "smashing": false
+     },
+     "weight": 2
+    }
+   },
+   "folder": "60bfbae9890c678e",
+   "sort": 2000,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 176,
+      "cultivation": "Sword Dialectics",
+      "license": "Sword Dialectics ✦✦✦✦",
+      "printedMods": [
+       "VISCERAL",
+       "LACERATING",
+       "FEROCIOUS",
+       "ARTIFACT"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "_id": "57c66fab9557a47c",
+   "name": "Techgnostic COMP (666 PTM)",
+   "type": "accessory",
+   "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
+   "system": {
+    "description": "<p><em>Thinking Machines are thaumaturgical devices— meaning they are the interpoint of Classic Engineering and Esoteric Engineering. Its a network of data bound together by a quantum information field known as the Akasha, which records every movement of matter in the universe.</em></p><p><strong>License:</strong> Techgnosis ✦✦ — The Cultivator now has the License to wield the 666 PTM.</p><p><strong>Techgnostic Prestige Accessory · 1 kg · Price N/A</strong></p><p>Can be used to interact with the Intrajala. Due to its top of the line specifications, any Intrajala focused Checks gain +3. This also counts as a Terminal for Virtual Projection. The 666 PTM has a 3 Battery Charges that can be used to burn or Install Flame for TECHGNOSTIC MAGICKS AND TECHNICKS and also removes the need for Mudras and Mantras. The PTM can attempt to ANALYZE any target that the user can see by burning ✹. This immediately reveals their Speed, Morale, Parts HP, Soak, and 1 advantageous info. Short for Communication Player. It is the next stage of Thinking Machines, but due again to the Digital Devil Menace, they are largely contained from the larger public. The closest the public have are Nodes—portable glass slabs or folders that interact through the Intrajala but are not Terminals. COMPs are movable, portable Terminals.</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.179",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Techgnostic, Techgnosis, Prestige, Accessory",
+    "gearSlot": "carry",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 1
+    }
+   },
+   "folder": "cfc5b4e58ae21d64",
+   "sort": 0,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 179,
+      "cultivation": "Techgnosis",
+      "license": "Techgnosis ✦✦",
+      "printedMods": []
+     }
+    }
+   }
+  },
+  {
+   "_id": "1cd9fc7d911eeae7",
+   "name": "Lance of Revolutionary Will",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "system": {
+    "description": "<p><em>Ultramystics uphold an ancient Tradition, handed down from the Shaman of Selorong. Performed during the Full Moon, when Sidhi is volatile, as both the Moon has a larger pull upon human bodies during a full moon, the Deity sealed within the moon can be clearly seen, and the Moon Immortal Mentra, one of the vectors of the Five-Armed Demiurge Array, is weakest.</em></p><p><strong>License:</strong> Immortal Science ✦✦✦ — The Cultivator gains the License to wield the LANCE OF REVOLUTIONARY WILL.</p><p><strong>Prestige Base Polearm · 3 kg · Price N/A · Haft / Polearm · Noosteel</strong></p><p><strong>Mods:</strong> ARTIFACT ✦ PIERCING ✦ NOETIC ✦ BLAZE</p><p>This weapon gains +1 dice to KILL THE BUDDHA Checks per Party member within range, to a maximum of [DIALECTICS]. Can only be wielded by someone Communist, Socialist, or Anarchist. A weapon that is powered by the Class Consciousness of the wielder. Drawing upon the Revolutionary Consciousness, it sends gouts of flame to strike at the enemy. It is said that this was the weapon Kafeng Masangwa wielded against the Invincible Blade Princess. The worker's weapon against the aristocrat's symbol.</p><p><em>Catalog note: Printed under a Technick heading; it is a License to wield this weapon.</em></p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.184",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Ultramystic, Immortal Science, Prestige, Weapon, ARTIFACT, PIERCING, NOETIC, BLAZE",
+    "gearSlot": "carry",
+    "weaponType": "melee",
+    "range": 3,
+    "damageType": "cut",
+    "r21": {
+     "profile": "polearm",
+     "grip": "haft",
+     "damage": 2,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": false,
+      "focus": false,
+      "blaze": true,
+      "artifact": true,
+      "smashing": false
+     },
+     "weight": 3
+    }
+   },
+   "folder": "b602f8c1af2d9a2b",
+   "sort": 0,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 184,
+      "cultivation": "Immortal Science",
+      "license": "Immortal Science ✦✦✦",
+      "printedMods": [
+       "ARTIFACT",
+       "PIERCING",
+       "NOETIC",
+       "BLAZE"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "_id": "7911c4b3bef2a941",
+   "name": "Ultramystic Revolt Suit",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p><em>We do not hide in caves. We do not refine ourselves in solitude. We do not pray to gods or build machines to replace the self. We fight. We organize. Cultivate the one force that the Heavenly Bourgeoisie cannot co-opt, cannot commodify, cannot seal away: Violence.</em></p><p><strong>License:</strong> Immortal Science ✦ — Gain the Revolt Suit.</p><p><strong>Ultramystic Prestige Fashion · 1 kg · Price N/A</strong></p><p><strong>Soak:</strong> Head 3, Torso 3, Right Arm 3, Left Arm 3, Right Leg 3, Left Leg 3</p><p>Organizer All allies within 5m of the wearer gain +1d to all Checks concerning organization, resisting mental influence, forced movement, and ideological assault. When an ally within this aura takes damage, she can take the damage instead to the appropriate Part. Agitator The wearer gains +2 to all Checks when in a sitation where they are facing a much larger and more well-organized force. A mandarin-collared Shennin Tunic Suit with multiple pockets and holders. Archeprimeval texts from earth name this as a Mao Suit. Woven with Numenweave and Scarletite Silk-threads, spun by Thaumaturgical Synthworms stolen from bourgeois Fabricators.</p><p><em>Catalog note: Printed \"soak_ all ⛨⛨⛨\" (3 Soak on every Part) and \"morale_ +[DIALECTICS]\". DIALECTICS is now MIND, so add the wearer's Mind to the Morale bonus field by hand.</em></p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.185",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Ultramystic, Immortal Science, Prestige, Fashion",
+    "gearSlot": "fashion",
+    "r21": {
+     "coverage": {
+      "rleg": 3,
+      "lleg": 3,
+      "rarm": 3,
+      "larm": 3,
+      "torso": 3,
+      "head": 3
+     },
+     "morale": 0,
+     "weight": 1
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "folder": "33636f0aed732ca0",
+   "sort": 1000,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 185,
+      "cultivation": "Immortal Science",
+      "license": "Immortal Science ✦",
+      "printedMods": []
+     }
+    }
+   }
+  },
+  {
+   "_id": "b2a4ff8a270fd215",
+   "name": "Phoenix Feather Cap",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p><em>\"Did you not know that to strengthen the body is to also strengthen the mind? The Soul comes from Consciousness. And the Consciousness comes from Matter. So therefore strengthen yourself.\" — Seven-Eared and Five-Eyed Macaque</em></p><p><strong>License:</strong> Sage Body ✦✦✦ — Gain the license to wear the PHOENIX FEATHER CAP.</p><p><strong>Wukong Prestige Head Piece · 1 kg · Price N/A</strong></p><p><strong>Soak:</strong> Head 3</p><p>The wearer gains +2 Flame. +2 to all Checks to resist mental influence and Mental and Magick attacks. Made from heavensilk aureate of high hardness, thaumaturgically bound. The phoenix feathers are plucked from the holy beast Fenghuang. They sprout and move about like twin flames and resemble pheasant feathers.</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.188",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Wukong, Sage Body, Prestige, Fashion",
+    "gearSlot": "fashion",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 3
+     },
+     "morale": 2,
+     "weight": 1
+    },
+    "armor": 0,
+    "ardor": 2
+   },
+   "folder": "755fe5b4062027a8",
+   "sort": 0,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 188,
+      "cultivation": "Sage Body",
+      "license": "Sage Body ✦✦✦",
+      "printedMods": []
+     }
+    }
+   }
+  },
+  {
+   "_id": "fa2e1d7d652f9058",
+   "name": "Golden Chainmail Shirt",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p><em>Yaohou means Monster or Demon Monkey. It was an insult to the great Bhante, but for us, it is a proof of our capability. Abandon all hesitation: there is no greater monster than you.</em></p><p><strong>License:</strong> Sage Body ✦✦✦✦ — The Cultivator gains the license to wear the GOLDEN CHAINMAIL SHIRT.</p><p><strong>Wukong Prestige Torso · 5 kg · Price N/A</strong></p><p><strong>Soak:</strong> Torso 8</p><p>Mind Monkey Sheds Its Ego When the chainmail loses all Soak, all KILL THE BUDDHAs by the wearer gains +2 for 30 minutes. Victorious Fighting Buddha When the wearer suffers damage, the next instance of damage she deals increases by 1, to a maximum of +3. One of the strongest armors in the vast battlefields of Hingsajagra. Crafted from star-mined aurichalcum, harder than titanium and yet lighter than feathers, this mountain-pattern chainmail can turn away orbital lasers, energetic weapons, and kinetic projectiles alike. No wonder the Qitian Dasheng favored it. The shape of this armor changes according to the tendency of the wearer, but they are always something imposing and impenetrable, like a mountain on the sun.</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.188",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Wukong, Sage Body, Prestige, Fashion",
+    "gearSlot": "fashion",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 8,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 5
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "folder": "755fe5b4062027a8",
+   "sort": 1000,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 188,
+      "cultivation": "Sage Body",
+      "license": "Sage Body ✦✦✦✦",
+      "printedMods": []
+     }
+    }
+   }
+  },
+  {
+   "_id": "830b248ca7604c86",
+   "name": "Cloud Walking Boots",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p><em>\"We have always walked upon the heavens! Do not let the fairies and the celestials make you think otherwise!</em></p><p><strong>License:</strong> Sage Body ✦✦✦ — Gain the license to wear the CLOUD WALKING BOOTS.</p><p><strong>Wukong Prestige Leg Piece · 0.25 kg · Price N/A</strong></p><p><strong>Soak:</strong> Right Leg 4, Left Leg 4</p><p>+3m to all Movement. The wearer will never accidentally crash through weak or faulty terrain and surfaces. She will always walk upon it as if like a feather, even clouds and raindrops. While worn, she can move 3m while in midair, and she can immediately chase anyone she sends Juggling. Made from heavensilk. Kung Fu boots highly sought after, but never claimed...</p><p><em>Catalog note: Printed \"LEGS\" with eight Soak pips; recorded as 4 Soak on each leg.</em></p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.188",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Wukong, Sage Body, Prestige, Fashion",
+    "gearSlot": "fashion",
+    "r21": {
+     "coverage": {
+      "rleg": 4,
+      "lleg": 4,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.25
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "folder": "755fe5b4062027a8",
+   "sort": 2000,
+   "effects": [
+    {
+     "_id": "bd1e6d17933a1076",
+     "name": "Cloud Walking Boots: +3 m/s movement",
+     "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+     "transfer": true,
+     "disabled": false,
+     "description": "<p>Rules 2.1 (2.1 playtest Sects), p.188. Applies while equipped.</p>",
+     "system": {
+      "changes": [
+       {
+        "key": "system.moveBonus",
+        "type": "add",
+        "value": "3",
+        "phase": "initial",
+        "priority": 20
+       }
+      ]
+     }
+    }
+   ],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 188,
+      "cultivation": "Sage Body",
+      "license": "Sage Body ✦✦✦",
+      "printedMods": []
+     }
+    }
+   }
+  },
+  {
+   "_id": "fd9aa40fddeda64d",
+   "name": "Wukong Ruyi Jingu Bang",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "system": {
+    "description": "<p><em>The greatest of Wukong carry the whole armor of the Victorious Fighting Buddha. They are the supreme bodyguards, fighting to be able to protect all those that matter to them.</em></p><p><strong>License:</strong> Sage Body ✦✦✦✦✦ — The Cultivator gains the License to wield the RUYI JINGU BANG.</p><p><strong>Prestige Bludgeon · 5 kg · Price N/A · Haft / Bludgeon · Heavenly Ninefold Divine Black Iron</strong></p><p><strong>Mods:</strong> REACH ✦ ARTIFACT ✦ CRUSHING ✦ CONCEALABLE</p><p>Inflicts 10m KNOCKBACK automatically upon dealing damage. Cannot be disarmed. Cannot be moved if wielder does not want it to be moved, unless by someone of a higher Sidhi Level than the wielder. When thrown, flies back with a thought at any moment. By installing [❂...], she can lengthen the bludgeon’s reach by 2m per Flame installed, to a maximum of 10m. The RUYI JINGU BANG means “The Compliant Golden-Hooped Rod.” It was crafted by ancient wizard-smiths that stole the blueprints from the data vaults of the nearer Jade Sunrise Orbital Heaven. They spoke of tales of an ancient monkey king that always upended the natural order of the Heavens, and that it took a Buddha to stop him. The Ruyi Jingu Bang can be lengthened or shortened, according to the wielder’s Sidhi.</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.189",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Wukong, Sage Body, Prestige, Weapon, REACH, ARTIFACT, CRUSHING, CONCEALABLE",
+    "gearSlot": "carry",
+    "weaponType": "melee",
+    "range": 1,
+    "damageType": "impact",
+    "r21": {
+     "profile": "bludgeon",
+     "grip": "haft",
+     "damage": 2,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": true,
+      "great": false,
+      "colossal": false,
+      "doublehand": false,
+      "focus": false,
+      "blaze": false,
+      "artifact": true,
+      "smashing": false
+     },
+     "weight": 5
+    }
+   },
+   "folder": "156fd514ef6352b4",
+   "sort": 3000,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 189,
+      "cultivation": "Sage Body",
+      "license": "Sage Body ✦✦✦✦✦",
+      "printedMods": [
+       "REACH",
+       "ARTIFACT",
+       "CRUSHING",
+       "CONCEALABLE"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "_id": "eeb7e4786c633d76",
+   "name": "Spectral Seal Talisman",
+   "type": "accessory",
+   "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
+   "system": {
+    "description": "<p><em>Crafted by the lowly soil Exorcist Perangsis, in an attempt to bind a Fox Immortal to become his wife. Perangsis has never been seen ever since.</em></p><p><strong>License:</strong> Spirit Binding ✦✦ — The Cultivator gains the License to wield the SPECTRAL SEAL TALISMAN. She gets 3 to begin with upon approval of Licensure.</p><p><strong>Zhongkui Prestige Item · 0.15 kg · Price N/A</strong></p><p>Can be applied onto an INTRA-INT to immediately hold them: they cannot move nor perform any actions. This lasts for [7 - entity's Sidhi] minutes. A Fu Talisman with the pictograph for EVIL and BINDING.</p><p><em>Catalog note: The License grants 3 talismans.</em></p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.191",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Zhongkui, Spirit Binding, Prestige, Accessory",
+    "gearSlot": "carry",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.15
+    }
+   },
+   "folder": "fac7b87a903350f3",
+   "sort": 0,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 191,
+      "cultivation": "Spirit Binding",
+      "license": "Spirit Binding ✦✦",
+      "printedMods": []
+     }
+    }
+   }
+  },
+  {
+   "_id": "e579b1b46bc42414",
+   "name": "Ghost Hand Talisman",
+   "type": "accessory",
+   "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
+   "system": {
+    "description": "<p><em>Unbeknownst to you, your soul has a hundred hands, and some of them aren’t yours. Some say Sorcery is connected to the avernal energies of the deeper and greater Consciousness, the Ego that arises from Self-Grasping.</em></p><p><strong>License:</strong> Spirit Binding ✦✦ — The Cultivator gains the License to wield the GHOST HAND TALISMAN. She gets 3 to begin with upon approval of Licensure.</p><p><strong>Zhongkui Prestige Item · 0.15 kg · Price N/A</strong></p><p>When applied to any thing or object, the applier can Install ❂ to forcefully move it up to [1 + SPIRIT BINDING]m/s. A Fulu with the pictograph for TRANSPORT.</p><p><em>Catalog note: Printed under a Magick heading; it is a License to wield this talisman (3 to begin with).</em></p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.191",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Zhongkui, Spirit Binding, Prestige, Accessory",
+    "gearSlot": "carry",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.15
+    }
+   },
+   "folder": "fac7b87a903350f3",
+   "sort": 1000,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 191,
+      "cultivation": "Spirit Binding",
+      "license": "Spirit Binding ✦✦",
+      "printedMods": []
+     }
+    }
+   }
+  },
+  {
+   "_id": "e00344bbc4374317",
+   "name": "Peachwood Talisman",
+   "type": "accessory",
+   "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
+   "system": {
+    "description": "<p><em>\"Peachwood is imbued with an immanent INTRA-INT strength. It might have something to do with the intramaterial lattice that makes up peachwood, or perhaps a million years of Sidhic conditioning...\" — Codex of Archivist Ramarukiah</em></p><p><strong>License:</strong> Spirit Binding ✦✦✦ — Gain license to use the Peachwood Talisman.</p><p><strong>Zhongkui Prestige Item · 0.25 kg · Price N/A</strong></p><p>When a possession attempt succeeds against the holder, the talisman shatters first instead and the INTRA-INT possesses nothing.</p><p><em>Catalog note: Printed heading PEACHWOOD BLADE; the statblock is the Peachwood Talisman.</em></p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.192",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Zhongkui, Spirit Binding, Prestige, Accessory",
+    "gearSlot": "carry",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.25
+    }
+   },
+   "folder": "fac7b87a903350f3",
+   "sort": 2000,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 192,
+      "cultivation": "Spirit Binding",
+      "license": "Spirit Binding ✦✦✦",
+      "printedMods": []
+     }
+    }
+   }
+  },
+  {
+   "_id": "6b6bd14775f63544",
+   "name": "Five Thunder Talisman",
+   "type": "accessory",
+   "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
+   "system": {
+    "description": "<p><em>The ancient and primeval Seven-Star Constellation is inhabited by INTRA-INTs who are commonly known as the Seven Demon Kings—powerful Cultivators who established a long tradition of demon slaying and exorcism.</em></p><p><strong>License:</strong> Spirit Binding ✦✦✦ — Gain license to use the Five Thunder Talisman.</p><p><strong>Zhongkui Prestige Item · 0.25 kg · Price N/A</strong></p><p>Can be burned with ✹ remotely. When destroyed, the Talisman erupts, summoning Cosmic Thunder. This deals [1 + SPIRIT BINDING] damage. If the target's Morale is 2 or lower, they are Stunned as well for 3 seconds. If the target is a Ghost or Demon, they are similarly Stunned and suffer piercing damage. Demons of Sidhi 1 or lower are dispersed into Sidhi outright.</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.192",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Zhongkui, Spirit Binding, Prestige, Accessory",
+    "gearSlot": "carry",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.25
+    }
+   },
+   "folder": "fac7b87a903350f3",
+   "sort": 3000,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 192,
+      "cultivation": "Spirit Binding",
+      "license": "Spirit Binding ✦✦✦",
+      "printedMods": []
+     }
+    }
+   }
+  },
+  {
+   "_id": "15ed438b30f17378",
+   "name": "Zhongkui Demon Subjugating Sword",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "system": {
+    "description": "<p><em>Swords have long been a sign of leadership and control, especially when it comes to the Legions of Ghosts and Demons. The Demon Subjugating Sword is based off of one of the first swords ever made, said to have been used to subjugate the Demon of Entropy at the Beginning of Time, slowing it down and allowing Reality as we know it to exist.</em></p><p><strong>License:</strong> Spirit Binding ✦✦✦✦✦ — The Cultivator gains the License to wield the DEMON SUBJUGATING SWORD.</p><p><strong>Zhongkui Prestige Sword · 3 kg · Price N/A · Hilt / Sword · Saltsteel</strong></p><p><strong>Mods:</strong> ARTIFACT ✦ HOLY</p><p>All Spirits within 25m or enter into that space are immediately revealed, forced out of their Subtle Bodies, and suffer -2 to KILL THE BUDDHA Checks. Upon dealing damage, the wielder may install ❂❂ to block the target's Meridians, prohibiting them from casting Magick while installed. \"Thus have I heard: all that must reckon under the rule of the law of violence must see to it that their violence is pure and sacred and liberatory. All else spins the wheel, when what must be done is to destroy it. With this Sword, let justice carry it and let compassion whet its blade, and let wisdom guide its path. With this Sword, the may the world itself be rent in two, and make way for the future without subjugation.\" — 11:22 ^ 3 of the Red Shintai Manual.</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.193",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Zhongkui, Spirit Binding, Prestige, Weapon, ARTIFACT, HOLY",
+    "gearSlot": "carry",
+    "weaponType": "melee",
+    "range": 1,
+    "damageType": "cut",
+    "r21": {
+     "profile": "sword",
+     "grip": "hilt",
+     "damage": 2,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": false,
+      "focus": false,
+      "blaze": false,
+      "artifact": true,
+      "smashing": false
+     },
+     "weight": 3
+    }
+   },
+   "folder": "1dde196b1efbdd85",
+   "sort": 4000,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 193,
+      "cultivation": "Spirit Binding",
+      "license": "Spirit Binding ✦✦✦✦✦",
+      "printedMods": [
+       "ARTIFACT",
+       "HOLY"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "_id": "3bcf5009c7121939",
+   "name": "Zhongkui Dharma Robe",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p><em>The Sacred Exorcist of Siyucheng, while in service to the Lucent Immortal Ri Sogaha, took a portion of the Lucent Immortals' semen and set it alight with Divine Fire. Through this ritual she gleaned the Enlightenment needed to subjugate even Deities.</em></p><p><strong>License:</strong> Spirit Binding ✦✦✦✦✦ — The Cultivator gains the License to wield the DHARMA ROBE.</p><p><strong>Zhongkui Prestige Fashion · 2 kg · Price N/A</strong></p><p><strong>Soak:</strong> Torso 4</p><p>Purificant The wearer can always see INTRA-INT and their residue. They suffer -1 damage from INTRA-INT attacks and cannot be Possessed. Vanquisher Dealing damage against any Bloody Part inflicts an extra +1 damage. A heavily layered dharma robe with multiple sutra scriptures woven into the saffron fabric. It is heavy and it sounds heavy. It is said the first Spirit Binder Dharma Robe was worn by the first Zhongkui himself, who was said to be the Buddha of Hingsajagraʼs current Kalpa, Sanja Kitama.</p><p><em>Catalog note: Printed in the column below the FIVE THUNDER JAPAMALA.</em></p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.193",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Zhongkui, Spirit Binding, Prestige, Fashion",
+    "gearSlot": "fashion",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 4,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 2
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "folder": "aafcde42fe25fa36",
+   "sort": 5000,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 193,
+      "cultivation": "Spirit Binding",
+      "license": "Spirit Binding ✦✦✦✦✦",
+      "printedMods": []
+     }
+    }
+   }
+  },
+  {
+   "_id": "9da9182379ffbcc8",
+   "name": "Zhongkui Five Thunder Japamala",
+   "type": "accessory",
+   "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
+   "system": {
+    "description": "<p><em>Seek the old fires. Rekindle the broken pyres. Encircle the shadowed vessel. To bind one to another's desires. A litany sung by the Old Exorcists. It is the destiny of exorcists to either become Immortal… or turn into the very Ghost and Demons they banish and ward. The greatest of Zhongkui—the Shaman Kings—threaten the very Heavens themselves.</em></p><p><strong>License:</strong> Spirit Binding ✦✦✦✦✦ — The Cultivator gains the License to wield the FIVE THUNDER JAPAMALA.</p><p><strong>Zhongkui Prestige Accessory · 5 kg · Price N/A</strong></p><p>While worn, all harmful Magicks are reflected back at the caster. She also becomes a master of Talismans: she can throw Talismans like knives up to 50m and can use them to Cut, as if attacking with [HANDGUNS]. At any point, she can cut a Talisman for free to immediately deal damage or trigger the Talisman's intended effect. She can also overload any Talisman she can see with Ghost Sidhi to explode it, dealing 1 piercing damage to all in a 2m radius. 108 Prayer Beads on both arms, large and snaking up to the biceps. Made out of a mixture of an Arhat’s Bones and Heavenly Tribulation Lightning. Impossibly holy and filled with enlightenment. An armament created by the Devil Immortal Exorcist Yazatram of the Rutilant Coven, at first, to strengthen himself. Later, when he was transformed by a Buddha, she chose to pass down the Spiritual Treasure and the Akashic Pattern for it to be reproduced among the Revolutionaries. It was impossible to recreate at first, but eventually the Angel Spirit King Tattanzon of Woe’s Fissure, forced a Spirit God-King to be bound into a Gossamer Loom.</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.193",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Zhongkui, Spirit Binding, Prestige, Accessory",
+    "gearSlot": "carry",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 5
+    }
+   },
+   "folder": "fac7b87a903350f3",
+   "sort": 6000,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 193,
+      "cultivation": "Spirit Binding",
+      "license": "Spirit Binding ✦✦✦✦✦",
+      "printedMods": []
+     }
+    }
+   }
+  }
+ ]
+}

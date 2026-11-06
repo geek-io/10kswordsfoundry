@@ -1,0 +1,1224 @@
+{
+ "folders": [
+  {
+   "_id": "b22ec6074d5e27ae",
+   "name": "Panoply",
+   "folder": null,
+   "type": "Item",
+   "sorting": "a",
+   "sort": 0,
+   "color": null
+  },
+  {
+   "_id": "8384e6e8728986d6",
+   "name": "Weapon Profiles",
+   "folder": null,
+   "type": "Item",
+   "sorting": "a",
+   "sort": 100000,
+   "color": null
+  },
+  {
+   "_id": "08f8686829fad770",
+   "name": "Heed Us, O Mighty Fury (one-shot)",
+   "folder": null,
+   "type": "Item",
+   "sorting": "a",
+   "sort": 200000,
+   "color": null
+  },
+  {
+   "_id": "7cbc96d9a6bbb24b",
+   "name": "Shields",
+   "folder": null,
+   "type": "Item",
+   "sorting": "a",
+   "sort": 300000,
+   "color": null
+  }
+ ],
+ "items": [
+  {
+   "_id": "edd2d72e2703fc2f",
+   "name": "HaeCo Black Iron Saber",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>Weapon built from mass produced black iron or carbon steel. Made from MORTAR Divine Blueprints. Sharp and robust, perfect for mass production and outfitting armies and paramilitaries.</p><p><strong>Hilt · Saber · Physique + Beast Shrine · 1 m · Black Iron · 1.5 kg</strong></p><p><strong>Profile:</strong> Chop: a Critical Opening can be used to chop through a Limb, dealing +1 Damage.</p><p>At base, all weapons deal 2 Damage (p.33).</p><p><em>Catalog note: Printed grip is Handle; recorded as a Hilt.</em></p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.33",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "weaponType": "melee",
+    "range": 1,
+    "damageType": "cut",
+    "ammoFamily": "none",
+    "tags": "2.1, Weapon, Saber",
+    "r21": {
+     "profile": "saber",
+     "grip": "hilt",
+     "damage": 2,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": false,
+      "focus": false,
+      "blaze": false,
+      "artifact": false,
+      "smashing": false
+     },
+     "weight": 1.5
+    }
+   },
+   "folder": "b22ec6074d5e27ae",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "weapons-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "0eaf6a90315c8859",
+   "name": "TDF Feathersword",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>Weapon mass produced by Thousand Dragons Forge, made from ancient Revolutionist blueprints, ran through a Divine Loom to fabricate it with feathersteel. Extremely light and flexible, able to be used for biting striking attacks and sudden cutting angles.</p><p><strong>Hilt · Sword · Physique or Motorics + Beast Shrine · 1 m · Feathersteel · 0.5 kg</strong></p><p><strong>Profile:</strong> Swords are some of the most common weapons in the Trichiliocosm.</p><p>At base, all weapons deal 2 Damage (p.33).</p><p><em>Catalog note: Printed grip is Handle; recorded as a Hilt.</em></p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.33",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "weaponType": "melee",
+    "range": 1,
+    "damageType": "cut",
+    "ammoFamily": "none",
+    "tags": "2.1, Weapon, Sword",
+    "r21": {
+     "profile": "sword",
+     "grip": "hilt",
+     "damage": 2,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": false,
+      "focus": false,
+      "blaze": false,
+      "artifact": false,
+      "smashing": false
+     },
+     "weight": 0.5
+    }
+   },
+   "folder": "b22ec6074d5e27ae",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "weapons-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "ef102ebd4941ae5e",
+   "name": "VATAC Collapsing Lance",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>The premiere infantry weapon line of Vajra Tactical. Made for striking from afar and for carrying into any theater through its collapsing capabilities.</p><p><strong>Haft · Polearm · Physique + Beast Shrine · 3 m · Black Jade Fiber · 3 kg</strong></p><p><strong>Profile:</strong> Innately have farther effective range.</p><p>At base, all weapons deal 2 Damage (p.33).</p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.33",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "weaponType": "melee",
+    "range": 3,
+    "damageType": "cut",
+    "ammoFamily": "none",
+    "tags": "2.1, Weapon, Polearm",
+    "r21": {
+     "profile": "polearm",
+     "grip": "haft",
+     "damage": 2,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": false,
+      "focus": false,
+      "blaze": false,
+      "artifact": false,
+      "smashing": false
+     },
+     "weight": 3
+    }
+   },
+   "folder": "b22ec6074d5e27ae",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "weapons-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "f39cd91453c056b3",
+   "name": "MORTAR AT-CR Cudgel",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>MORTAR's highest and most premium weapon line is their AT-CR line, which stands for \"Anti-Terrorism Counter Revolution.\" It is made to break the wills of revolutionaries and to counter the strength of Cultivators. The Cudgel is the most common and cheapest weapon: the majority of bodyguards wield cudgels.</p><p><strong>Haft · Bludgeon · Physique + Beast Shrine · 1 m · Petrojade · 2 kg</strong></p><p><strong>Profile:</strong> Strike: A Critical Strike can be used to hammer into armor: if the Part targeted has Soak, reduce the target's Soak by 2 instead of just 1.</p><p><strong>Mods:</strong> CONCEALABLE ✦ SMASHING</p><p>At base, all weapons deal 2 Damage (p.33).</p><p><em>Catalog note: CONCEALABLE is not defined in the manuscript; it is kept as a tag.</em></p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.33",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "weaponType": "melee",
+    "range": 1,
+    "damageType": "impact",
+    "ammoFamily": "none",
+    "tags": "2.1, Weapon, Bludgeon, CONCEALABLE, SMASHING",
+    "r21": {
+     "profile": "bludgeon",
+     "grip": "haft",
+     "damage": 2,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": false,
+      "focus": false,
+      "blaze": false,
+      "artifact": false,
+      "smashing": true
+     },
+     "weight": 2
+    }
+   },
+   "folder": "b22ec6074d5e27ae",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "weapons-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "6cc6c35f34af223c",
+   "name": "TD-7 Ruyi",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>MORTAR's common mass manufactured rifle line, found across the Trichiliocosm indiscriminately.</p><p><strong>Stock · Longgun · Motorics + Hand/Eye Coordination · 400 m · Gunmetal · 4 kg</strong></p><p><strong>Profile:</strong> The most dangerous weapon in modern Hingsajagra and perhaps the most common among militaries, paramilitaries, and mercenary outfits. Needs appropriate long gun bullets to shoot, and often uses magazines. Reloading replaces magazines.</p><p><strong>Mods:</strong> AUTO</p><p><strong>Rate</strong> 30 · <strong>Capacity</strong> 30</p><p>At base, all weapons deal 2 Damage (p.33).</p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.33",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "weaponType": "ranged",
+    "range": 400,
+    "damageType": "cut",
+    "ammoFamily": "gun",
+    "tags": "2.1, Weapon, Longgun, AUTO",
+    "r21": {
+     "profile": "longgun",
+     "grip": "stock",
+     "damage": 2,
+     "range": 0,
+     "rate": 30,
+     "capacity": 30,
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": true,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": false,
+      "focus": false,
+      "blaze": false,
+      "artifact": false,
+      "smashing": false
+     },
+     "weight": 4
+    }
+   },
+   "folder": "b22ec6074d5e27ae",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "weapons-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "69109c31cd226fcc",
+   "name": "MORTAR Parabellum 9mm",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>MORTAR's common mass manufactured pistol line, found across the Trichiliocosm indiscriminately.</p><p><strong>Stock · Handgun · Motorics + Hand/Eye Coordination · 30 m · Gunmetal · 1 kg</strong></p><p><strong>Profile:</strong> The most common weapon in modern Hingsajagra. Pistols, dragoons, and revolvers all fall in this category. Needs short bullets as ammo. Revolvers count by the bullet, while modern handguns work with 12 round magazines.</p><p><strong>Rate</strong> 10 · <strong>Capacity</strong> 15</p><p>At base, all weapons deal 2 Damage (p.33).</p><p><em>Catalog note: Capacity 15 is printed here; the Handgun profile says modern handguns use 12-round magazines.</em></p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.33",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "weaponType": "ranged",
+    "range": 30,
+    "damageType": "cut",
+    "ammoFamily": "gun",
+    "tags": "2.1, Weapon, Handgun",
+    "r21": {
+     "profile": "handgun",
+     "grip": "stock",
+     "damage": 2,
+     "range": 0,
+     "rate": 10,
+     "capacity": 15,
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": false,
+      "focus": false,
+      "blaze": false,
+      "artifact": false,
+      "smashing": false
+     },
+     "weight": 1
+    }
+   },
+   "folder": "b22ec6074d5e27ae",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "weapons-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "35365f0e64ad2cd0",
+   "name": "Dagger (profile)",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>A generic Dagger built from the 2.1 profile. Rename it and add Material and Mods (pp.64–66).</p><p><strong>Hilt · Dagger · Physique + Beast Shrine · 1 m</strong></p><p><strong>Profile:</strong> As a Critical Opening they can Stab any part, ignoring Soak, dealing damage.</p><p>At base, all weapons deal 2 Damage (p.33).</p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.65",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "weaponType": "melee",
+    "range": 1,
+    "damageType": "cut",
+    "ammoFamily": "none",
+    "tags": "2.1, Weapon, Dagger, Template",
+    "r21": {
+     "profile": "dagger",
+     "grip": "hilt",
+     "damage": 2,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": false,
+      "focus": false,
+      "blaze": false,
+      "artifact": false,
+      "smashing": false
+     },
+     "weight": 0.0
+    }
+   },
+   "folder": "8384e6e8728986d6",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "weapons-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "00b0c39058fc25e6",
+   "name": "Saber (profile)",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>A generic Saber built from the 2.1 profile. Rename it and add Material and Mods (pp.64–66).</p><p><strong>Hilt · Saber · Physique + Beast Shrine · 1 m</strong></p><p><strong>Profile:</strong> Chop: a Critical Opening can be used to chop through a Limb, dealing +1 Damage.</p><p>At base, all weapons deal 2 Damage (p.33).</p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.65",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "weaponType": "melee",
+    "range": 1,
+    "damageType": "cut",
+    "ammoFamily": "none",
+    "tags": "2.1, Weapon, Saber, Template",
+    "r21": {
+     "profile": "saber",
+     "grip": "hilt",
+     "damage": 2,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": false,
+      "focus": false,
+      "blaze": false,
+      "artifact": false,
+      "smashing": false
+     },
+     "weight": 0.0
+    }
+   },
+   "folder": "8384e6e8728986d6",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "weapons-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "930b82eeed7647bc",
+   "name": "Sword (profile)",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>A generic Sword built from the 2.1 profile. Rename it and add Material and Mods (pp.64–66).</p><p><strong>Hilt · Sword · Physique or Motorics + Beast Shrine · 1 m</strong></p><p><strong>Profile:</strong> Swords are some of the most common weapons in the Trichiliocosm.</p><p>At base, all weapons deal 2 Damage (p.33).</p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.65",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "weaponType": "melee",
+    "range": 1,
+    "damageType": "cut",
+    "ammoFamily": "none",
+    "tags": "2.1, Weapon, Sword, Template",
+    "r21": {
+     "profile": "sword",
+     "grip": "hilt",
+     "damage": 2,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": false,
+      "focus": false,
+      "blaze": false,
+      "artifact": false,
+      "smashing": false
+     },
+     "weight": 0.0
+    }
+   },
+   "folder": "8384e6e8728986d6",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "weapons-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "a43e44e7f9708f83",
+   "name": "Whip (profile)",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>A generic Whip built from the 2.1 profile. Rename it and add Material and Mods (pp.64–66).</p><p><strong>Hilt · Whip · Motorics + Thews and Sinews · 3 m</strong></p><p><strong>Profile:</strong> Innately have farther effective range but more difficult to wield.</p><p>At base, all weapons deal 2 Damage (p.33).</p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.65",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "weaponType": "melee",
+    "range": 3,
+    "damageType": "cut",
+    "ammoFamily": "none",
+    "tags": "2.1, Weapon, Whip, Template",
+    "r21": {
+     "profile": "whip",
+     "grip": "hilt",
+     "damage": 2,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": false,
+      "focus": false,
+      "blaze": false,
+      "artifact": false,
+      "smashing": false
+     },
+     "weight": 0.0
+    }
+   },
+   "folder": "8384e6e8728986d6",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "weapons-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "ff4e177ddda49690",
+   "name": "Bludgeon (profile)",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>A generic Bludgeon built from the 2.1 profile. Rename it and add Material and Mods (pp.64–66).</p><p><strong>Haft · Bludgeon · Physique + Beast Shrine · 1 m</strong></p><p><strong>Profile:</strong> Strike: A Critical Strike can be used to hammer into armor: if the Part targeted has Soak, reduce the target's Soak by 2 instead of just 1.</p><p>At base, all weapons deal 2 Damage (p.33).</p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.65",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "weaponType": "melee",
+    "range": 1,
+    "damageType": "impact",
+    "ammoFamily": "none",
+    "tags": "2.1, Weapon, Bludgeon, Template",
+    "r21": {
+     "profile": "bludgeon",
+     "grip": "haft",
+     "damage": 2,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": false,
+      "focus": false,
+      "blaze": false,
+      "artifact": false,
+      "smashing": false
+     },
+     "weight": 0.0
+    }
+   },
+   "folder": "8384e6e8728986d6",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "weapons-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "4ccbd3cd9a4e881b",
+   "name": "Cleaver (profile)",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>A generic Cleaver built from the 2.1 profile. Rename it and add Material and Mods (pp.64–66).</p><p><strong>Haft · Cleaver · Physique + Beast Shrine · 1 m</strong></p><p><strong>Profile:</strong> Versatile: Cleavers are often also used for chopping wood. Using a Cleaver for a Primeval Mind Check adds +1.</p><p>At base, all weapons deal 2 Damage (p.33).</p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.65",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "weaponType": "melee",
+    "range": 1,
+    "damageType": "cut",
+    "ammoFamily": "none",
+    "tags": "2.1, Weapon, Cleaver, Template",
+    "r21": {
+     "profile": "cleaver",
+     "grip": "haft",
+     "damage": 2,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": false,
+      "focus": false,
+      "blaze": false,
+      "artifact": false,
+      "smashing": false
+     },
+     "weight": 0.0
+    }
+   },
+   "folder": "8384e6e8728986d6",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "weapons-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "82a0ca4345f33253",
+   "name": "Polearm (profile)",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>A generic Polearm built from the 2.1 profile. Rename it and add Material and Mods (pp.64–66).</p><p><strong>Haft · Polearm · Physique + Beast Shrine · 3 m</strong></p><p><strong>Profile:</strong> Innately have farther effective range.</p><p>At base, all weapons deal 2 Damage (p.33).</p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.65",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "weaponType": "melee",
+    "range": 3,
+    "damageType": "cut",
+    "ammoFamily": "none",
+    "tags": "2.1, Weapon, Polearm, Template",
+    "r21": {
+     "profile": "polearm",
+     "grip": "haft",
+     "damage": 2,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": false,
+      "focus": false,
+      "blaze": false,
+      "artifact": false,
+      "smashing": false
+     },
+     "weight": 0.0
+    }
+   },
+   "folder": "8384e6e8728986d6",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "weapons-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "a13487e30b262ab4",
+   "name": "Launcher (profile)",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>A generic Launcher built from the 2.1 profile. Rename it and add Material and Mods (pp.64–66).</p><p><strong>Haft · Launcher · Motorics + Hand/Eye Coordination · 20 m</strong></p><p><strong>Profile:</strong> Anything used to throw items, such as slingshots, slings, slingstaffs, and so on.</p><p><strong>Rate</strong> 1 · <strong>Capacity</strong> —</p><p>At base, all weapons deal 2 Damage (p.33).</p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.65",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "weaponType": "ranged",
+    "range": 20,
+    "damageType": "cut",
+    "ammoFamily": "launcher",
+    "tags": "2.1, Weapon, Launcher, Template",
+    "r21": {
+     "profile": "launcher",
+     "grip": "haft",
+     "damage": 2,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": false,
+      "focus": false,
+      "blaze": false,
+      "artifact": false,
+      "smashing": false
+     },
+     "weight": 0.0
+    }
+   },
+   "folder": "8384e6e8728986d6",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "weapons-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "f4afb8c58fe9b234",
+   "name": "Bow (profile)",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>A generic Bow built from the 2.1 profile. Rename it and add Material and Mods (pp.64–66).</p><p><strong>Riser · Bow · Motorics + Hand/Eye Coordination · 250 m</strong></p><p><strong>Profile:</strong> Requires Body 2. Either longbows or short bows or self bows used to launch arrows at distant targets. Requires Arrows as ammunition.</p><p><strong>Rate</strong> 1 · <strong>Capacity</strong> —</p><p>At base, all weapons deal 2 Damage (p.33).</p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.65",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "weaponType": "ranged",
+    "range": 250,
+    "damageType": "cut",
+    "ammoFamily": "bow",
+    "tags": "2.1, Weapon, Bow, Template",
+    "r21": {
+     "profile": "bow",
+     "grip": "riser",
+     "damage": 2,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": false,
+      "focus": false,
+      "blaze": false,
+      "artifact": false,
+      "smashing": false
+     },
+     "weight": 0.0
+    }
+   },
+   "folder": "8384e6e8728986d6",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "weapons-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "79fdca4f2ea882ef",
+   "name": "Crossbow (profile)",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>A generic Crossbow built from the 2.1 profile. Rename it and add Material and Mods (pp.64–66).</p><p><strong>Stock · Crossbow · Motorics + Hand/Eye Coordination · 125 m</strong></p><p><strong>Profile:</strong> Largely replaced by Guns in modern Hingsajagra, crossbow has its place as a means of unloading bolts filled with payloads as well as packing power silently. A favored weapon of assassins and hitmen. Requires Bolts as ammunition.</p><p><strong>Rate</strong> 1 · <strong>Capacity</strong> —</p><p>At base, all weapons deal 2 Damage (p.33).</p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.65",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "weaponType": "ranged",
+    "range": 125,
+    "damageType": "cut",
+    "ammoFamily": "crossbow",
+    "tags": "2.1, Weapon, Crossbow, Template",
+    "r21": {
+     "profile": "crossbow",
+     "grip": "stock",
+     "damage": 2,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": false,
+      "focus": false,
+      "blaze": false,
+      "artifact": false,
+      "smashing": false
+     },
+     "weight": 0.0
+    }
+   },
+   "folder": "8384e6e8728986d6",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "weapons-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "1c65dd2c941d3e5f",
+   "name": "Handgun (profile)",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>A generic Handgun built from the 2.1 profile. Rename it and add Material and Mods (pp.64–66).</p><p><strong>Stock · Handgun · Motorics + Hand/Eye Coordination · 30 m</strong></p><p><strong>Profile:</strong> The most common weapon in modern Hingsajagra. Pistols, dragoons, and revolvers all fall in this category. Needs short bullets as ammo. Revolvers count by the bullet, while modern handguns work with 12 round magazines.</p><p><strong>Rate</strong> 1 · <strong>Capacity</strong> —</p><p>At base, all weapons deal 2 Damage (p.33).</p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.65",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "weaponType": "ranged",
+    "range": 30,
+    "damageType": "cut",
+    "ammoFamily": "gun",
+    "tags": "2.1, Weapon, Handgun, Template",
+    "r21": {
+     "profile": "handgun",
+     "grip": "stock",
+     "damage": 2,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": false,
+      "focus": false,
+      "blaze": false,
+      "artifact": false,
+      "smashing": false
+     },
+     "weight": 0.0
+    }
+   },
+   "folder": "8384e6e8728986d6",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "weapons-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "dca3d5586e3f396a",
+   "name": "Longgun (profile)",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>A generic Longgun built from the 2.1 profile. Rename it and add Material and Mods (pp.64–66).</p><p><strong>Stock · Longgun · Motorics + Hand/Eye Coordination · 400 m</strong></p><p><strong>Profile:</strong> The most dangerous weapon in modern Hingsajagra and perhaps the most common among militaries, paramilitaries, and mercenary outfits. Needs appropriate long gun bullets to shoot, and often uses magazines. Reloading replaces magazines.</p><p><strong>Rate</strong> 1 · <strong>Capacity</strong> —</p><p>At base, all weapons deal 2 Damage (p.33).</p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.65",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "weaponType": "ranged",
+    "range": 400,
+    "damageType": "cut",
+    "ammoFamily": "gun",
+    "tags": "2.1, Weapon, Longgun, Template",
+    "r21": {
+     "profile": "longgun",
+     "grip": "stock",
+     "damage": 2,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": false,
+      "focus": false,
+      "blaze": false,
+      "artifact": false,
+      "smashing": false
+     },
+     "weight": 0.0
+    }
+   },
+   "folder": "8384e6e8728986d6",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "weapons-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "fdd064e2286b03f9",
+   "name": "Rusting Machete",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>Carried by HaeCo hirelings.</p><p><strong>Hilt · Saber · Physique + Beast Shrine · 1 m</strong></p><p><strong>Profile:</strong> Chop: a Critical Opening can be used to chop through a Limb, dealing +1 Damage.</p><p>At base, all weapons deal 2 Damage (p.33).</p><p><em>Catalog note: Printed rider: \"on wound, 1-in-6 chance of inflicting Flesh Wound than Dire Wound.\" The profile is not printed; recorded as a Saber.</em></p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.122",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "weaponType": "melee",
+    "range": 1,
+    "damageType": "cut",
+    "ammoFamily": "none",
+    "tags": "2.1, Weapon, Saber",
+    "r21": {
+     "profile": "saber",
+     "grip": "hilt",
+     "damage": 2,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": false,
+      "focus": false,
+      "blaze": false,
+      "artifact": false,
+      "smashing": false
+     },
+     "weight": 0.0
+    }
+   },
+   "folder": "08f8686829fad770",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "weapons-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "68104391d2dcbb03",
+   "name": "Adamant Longjian",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>Carried by HaeCo Sword Cultivators.</p><p><strong>Hilt · Sword · Physique or Motorics + Beast Shrine · 1 m</strong></p><p><strong>Profile:</strong> Swords are some of the most common weapons in the Trichiliocosm.</p><p>At base, all weapons deal 2 Damage (p.33).</p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.122",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "weaponType": "melee",
+    "range": 1,
+    "damageType": "cut",
+    "ammoFamily": "none",
+    "tags": "2.1, Weapon, Sword",
+    "r21": {
+     "profile": "sword",
+     "grip": "hilt",
+     "damage": 2,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": false,
+      "focus": false,
+      "blaze": false,
+      "artifact": false,
+      "smashing": false
+     },
+     "weight": 0.0
+    }
+   },
+   "folder": "08f8686829fad770",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "weapons-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "08643ba6a6de07c3",
+   "name": "M8 Rifle",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>Carried by HaeCo Gun Cultivators: \"40 shots per magazine, Burst 4\".</p><p><strong>Stock · Longgun · Motorics + Hand/Eye Coordination · 400 m</strong></p><p><strong>Profile:</strong> The most dangerous weapon in modern Hingsajagra and perhaps the most common among militaries, paramilitaries, and mercenary outfits. Needs appropriate long gun bullets to shoot, and often uses magazines. Reloading replaces magazines.</p><p><strong>Mods:</strong> AUTO</p><p><strong>Rate</strong> 4 · <strong>Capacity</strong> 40</p><p>At base, all weapons deal 2 Damage (p.33).</p><p><em>Catalog note: Burst 4 is recorded as Rate 4 with AUTO.</em></p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.122",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "weaponType": "ranged",
+    "range": 400,
+    "damageType": "cut",
+    "ammoFamily": "gun",
+    "tags": "2.1, Weapon, Longgun, AUTO",
+    "r21": {
+     "profile": "longgun",
+     "grip": "stock",
+     "damage": 2,
+     "range": 0,
+     "rate": 4,
+     "capacity": 40,
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": true,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": false,
+      "focus": false,
+      "blaze": false,
+      "artifact": false,
+      "smashing": false
+     },
+     "weight": 0.0
+    }
+   },
+   "folder": "08f8686829fad770",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "weapons-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "0a79824fe3f25647",
+   "name": "Cosmosian Greatstaff",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>Carried in both hands by the Astrologian: \"+2 dice to all Cast Magick Checks.\"</p><p><strong>Haft · Bludgeon · Physique + Beast Shrine · 1 m</strong></p><p><strong>Profile:</strong> Strike: A Critical Strike can be used to hammer into armor: if the Part targeted has Soak, reduce the target's Soak by 2 instead of just 1.</p><p><strong>Mods:</strong> DOUBLEHAND</p><p>At base, all weapons deal 2 Damage (p.33).</p><p><em>Catalog note: Profile not printed; recorded as a two-handed Bludgeon. Add its +2 casting dice in the Cast dialog.</em></p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.122",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "weaponType": "melee",
+    "range": 1,
+    "damageType": "impact",
+    "ammoFamily": "none",
+    "tags": "2.1, Weapon, Bludgeon, DOUBLEHAND",
+    "r21": {
+     "profile": "bludgeon",
+     "grip": "haft",
+     "damage": 2,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": true,
+      "focus": false,
+      "blaze": false,
+      "artifact": false,
+      "smashing": false
+     },
+     "weight": 0.0
+    }
+   },
+   "folder": "08f8686829fad770",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "weapons-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "74fdc498faf464d3",
+   "name": "Anti-Bullet Adamant Tower Shield",
+   "type": "gear",
+   "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+   "system": {
+    "description": "<p>Carried in the left hand by HaeCo Sword Cultivators.</p><p><strong>Acts as FULL COVER against ranged attacks.</strong></p><p>Weight not printed.</p><p><em>Catalog note: Held in a hand (set the Gear Slot to Left Hand when equipping). Full Cover makes a full-on ranged attack impossible without weakening the cover first (p.33).</em></p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.122",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "tags": "2.1, Gear",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.0
+    }
+   },
+   "effects": [],
+   "folder": "7cbc96d9a6bbb24b",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "weapons-21"
+     }
+    }
+   }
+  }
+ ]
+}

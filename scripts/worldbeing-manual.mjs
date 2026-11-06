@@ -5,7 +5,7 @@ export function manualItemSource(item){
  if(source.system){for(const key of ['equipped','active'])if(key in source.system)source.system[key]=false;for(const key of ['paidCarry','paidMeridians','paidArdor'])if(key in source.system)source.system[key]=0;}
  return source;
 }
-export async function browseManualItems(){const {openLibrary}=await import('./browser.mjs?v=0.1.51');openLibrary();}
+export async function browseManualItems(){const {openLibrary}=await import('./browser.mjs?v=0.2.14');openLibrary();}
 export async function dropManualItem(event){
  event.preventDefault();if(this.busy)return;rememberManual(this);this.busy=true;
  try{

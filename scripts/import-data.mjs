@@ -1,8 +1,9 @@
-import {titleCase,paragraphText} from "./import-format.mjs?v=0.1.51";
-import {splitBookText} from './import-boundaries.mjs?v=0.1.51';
-import {bookEntries} from "./book-text.mjs?v=0.1.51";
-import {LICENSE_CHOICES} from './licenses.mjs?v=0.1.51';
-import {MODIFIER_CHOICES} from './modifiers.mjs?v=0.1.51';
+import {titleCase,paragraphText} from "./import-format.mjs?v=0.2.14";
+import {splitBookText} from './import-boundaries.mjs?v=0.2.14';
+import {bookEntries} from "./book-text.mjs?v=0.2.14";
+import {LICENSE_CHOICES} from './licenses.mjs?v=0.2.14';
+import {MODIFIER_CHOICES} from './modifiers.mjs?v=0.2.14';
+import {isRawJobText,jobParts,jobDescription} from './job-text.mjs?v=0.2.14';
 export const IMPORT_TYPES={weapon:'Weapon',fashion:'Fashion',gear:'Gear',accessory:'Accessory',ammunition:'Ammo',job:'Job',license:'License',technique:'Technick',magick:'Magick',trait:'Trait',weaponMod:'Weapon Mod',gambit:'World Being Gambit',salvage:'Salvage'};
 const aliases={'world being gambit':'gambit',gambits:'gambit',salvages:'salvage',armor:'fashion',armour:'fashion',technick:'technique',technicks:'technique',techniques:'technique',magicks:'magick',jobs:'job',licenses:'license',weapons:'weapon',ammo:'ammunition','weapon mod':'weaponMod',weaponmod:'weaponMod'};
 export function importType(value){const key=String(value??'').trim();return Object.hasOwn(IMPORT_TYPES,key)?key:Object.hasOwn(aliases,key.toLowerCase())?aliases[key.toLowerCase()]:key.toLowerCase();}
@@ -36,7 +37,11 @@ export function textItems(text,chosenType){
   if(type==='job'||type==='license') {
    const stats={};for(const key of ['vio','dia','grc','sav','wrd','spi',...(type==='license'?['sidhi']:[])]){const match=block.match(new RegExp(`\\b${key}\\s*[:=]?\\s*(\\d+)`,'i'));if(match)stats[key]=Number(match[1]);}
    item.system[type==='job'?'cultivations':'prerequisites']=stats;
-   if(type==='job'){if(/job of the mind/i.test(block))item.system.category='mind';else if(/job of the body/i.test(block))item.system.category='body';if(Object.keys(stats).length<6)warnings.push('Some Job Cultivations were not found; supply all six ratings.');}
+   if(type==='job'){
+    // Book-format Jobs (no Name:/Type: labels): Cultivation stars or numbers go to the Details tab and the
+    // Description keeps the tagline plus the starting loadout, instead of the whole stat block.
+    if(!named&&!typed&&isRawJobText(block)){const parts=jobParts(name,block);if(parts?.cultivations){Object.assign(stats,parts.cultivations);item.system.cultivations=stats;}item.system.description=jobDescription(name,block,{withLoadout:true});warnings[0]='Cultivations and the starting loadout were read from the book text; drop the starting items onto the Job\'s Details tab to grant them.';}
+    if(/job of the mind/i.test(block))item.system.category='mind';else if(/job of the body/i.test(block))item.system.category='body';if(Object.keys(stats).length<6)warnings.push('Some Job Cultivations were not found; supply all six ratings.');}
    else {const sect=lines.find(l=>/^sect\s*:/i.test(l))?.replace(/^sect\s*:\s*/i,'');const match=Object.entries(LICENSE_CHOICES).find(([key,label])=>key.toLowerCase()===sect?.toLowerCase()||label.toLowerCase()===sect?.toLowerCase());if(match)item.system.sect=match[0];else if(sect)item.system.sect=sect;else warnings.push('Supply a Sect before importing this License.');}
   }
   if(type==='weapon') {item.system.properties={};const tags=lines.find(l=>/^(properties|modifiers)\s*:/i.test(l));if(tags)for(const key of Object.keys(MODIFIER_CHOICES))if(new RegExp(`\\b${key}\\b`,'i').test(tags))item.system.properties[key]=true;}

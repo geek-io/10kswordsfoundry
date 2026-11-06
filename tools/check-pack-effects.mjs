@@ -3,7 +3,7 @@ import {readFile} from 'node:fs/promises';
 import {resolve,join} from 'node:path';
 import vm from 'node:vm';
 import assert from 'node:assert/strict';
-const app='C:/Program Files/Foundry Virtual Tabletop/resources/app';
+const app=process.env.FOUNDRY_APP??'C:/Program Files/Foundry Virtual Tabletop/resources/app';
 const require=createRequire(join(app,'package.json'));
 const {ClassicLevel}=require('classic-level');
 // Exercise the installed server's actual embedded collection reader against disk,
@@ -13,9 +13,10 @@ const begin=code.indexOf('fields.EmbeddedCollectionField.prototype.expandEmbedde
 const end=code.indexOf(',fields.EmbeddedCollectionField.prototype._dbWrite',begin);
 const warnings=[];
 const expand=vm.runInNewContext(`(${code.slice(begin,end)})`,{global:{logger:{warn:m=>warnings.push(m)}},LevelDatabase:{formatKey:(...parts)=>parts.join('.')}});
-const packRoot=process.argv[2]??'packs';
+const packRoot=process.env.PACK_ROOT??process.argv[2]??'packs';
+const only=(process.env.PACK_NAMES??'').split(',').filter(Boolean);
 let count=0;
-for(const name of JSON.parse(await readFile('system.json','utf8')).packs.map(pack=>pack.name)){
+for(const name of JSON.parse(await readFile('system.json','utf8')).packs.map(pack=>pack.name).filter(name=>!only.length||only.includes(name))){
  const source=JSON.parse(await readFile(`data/${name}.json`,'utf8'));
  const database=new ClassicLevel(resolve(packRoot,name),{keyEncoding:'utf8',valueEncoding:'json'});
  await database.open();
@@ -30,6 +31,6 @@ for(const name of JSON.parse(await readFile('system.json','utf8')).packs.map(pac
  }finally{await database.close();}
 }
 assert.equal(warnings.length,0,warnings.join('\n'));
-assert.ok(count>=44);
-console.log(`Foundry server embedded reader loaded ${count} complete effects from ${packRoot}, including Adamance's actual change record.`);
+if(!only.length||only.includes('grimoire-traits'))assert.ok(count>=44);
+console.log(`Foundry server embedded reader loaded ${count} complete effects from ${packRoot}.`);
 

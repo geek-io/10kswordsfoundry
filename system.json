@@ -1,8 +1,8 @@
 {
   "id": "10kswordsfoundry",
   "title": "10,000 Swords Against Heaven",
-  "description": "A Foundry VTT v14 game system for 10,000 Swords Against Heaven, based on rules version 2.0.3.",
-  "version": "0.1.51",
+  "description": "A Foundry VTT v14 game system for 10,000 Swords Against Heaven, based on rules version 2.0.3, with an opt-in 2.1 (Red Kalpa Manuscript) ruleset for testing.",
+  "version": "0.2.14",
   "compatibility": {
     "minimum": "14",
     "verified": "14.367",
@@ -14,11 +14,12 @@
     }
   ],
   "esmodules": [
-    "scripts/entry-0.1.51.mjs"
+    "scripts/entry-0.2.14.mjs"
   ],
   "styles": [
     "styles/system.css",
-    "styles/polish.css"
+    "styles/polish.css",
+    "styles/rules21.css"
   ],
   "languages": [
     {
@@ -111,10 +112,21 @@
         "htmlFields": [
           "description"
         ]
+      },
+      "asset": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "barang": {
+        "htmlFields": [
+          "description"
+        ]
       }
     }
   },
   "primaryTokenAttribute": "health",
+  "socket": true,
   "grid": {
     "distance": 1,
     "units": "m"
@@ -207,11 +219,110 @@
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       }
+    },
+    {
+      "name": "sects-21",
+      "label": "2.1 Sects",
+      "path": "packs/sects-21",
+      "type": "Item",
+      "system": "10kswordsfoundry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "sect-gear-21",
+      "label": "2.1 Sect Gear",
+      "path": "packs/sect-gear-21",
+      "type": "Item",
+      "system": "10kswordsfoundry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "weapons-21",
+      "label": "2.1 Weapons",
+      "path": "packs/weapons-21",
+      "type": "Item",
+      "system": "10kswordsfoundry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "armor-21",
+      "label": "2.1 Armor",
+      "path": "packs/armor-21",
+      "type": "Item",
+      "system": "10kswordsfoundry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "consumables-21",
+      "label": "2.1 Consumables",
+      "path": "packs/consumables-21",
+      "type": "Item",
+      "system": "10kswordsfoundry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "accessories-21",
+      "label": "2.1 Accessories",
+      "path": "packs/accessories-21",
+      "type": "Item",
+      "system": "10kswordsfoundry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "ammunition-21",
+      "label": "2.1 Ammunition",
+      "path": "packs/ammunition-21",
+      "type": "Item",
+      "system": "10kswordsfoundry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "assets-21",
+      "label": "2.1 Assets",
+      "path": "packs/assets-21",
+      "type": "Item",
+      "system": "10kswordsfoundry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "barang-21",
+      "label": "2.1 Barang",
+      "path": "packs/barang-21",
+      "type": "Item",
+      "system": "10kswordsfoundry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     }
   ],
   "url": "https://github.com/geek-io/10kswordsfoundry",
   "manifest": "https://github.com/geek-io/10kswordsfoundry/releases/latest/download/system.json",
-  "download": "https://github.com/geek-io/10kswordsfoundry/releases/download/v0.1.51/10kswordsfoundry-0.1.51.zip",
+  "download": "https://github.com/geek-io/10kswordsfoundry/releases/download/v0.2.14/10kswordsfoundry-0.2.14.zip",
   "bugs": "https://github.com/geek-io/10kswordsfoundry/issues",
-  "changelog": "https://github.com/geek-io/10kswordsfoundry/releases/tag/v0.1.51"
+  "changelog": "https://github.com/geek-io/10kswordsfoundry/releases/tag/v0.2.14"
 }

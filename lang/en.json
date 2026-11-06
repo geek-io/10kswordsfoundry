@@ -18,7 +18,9 @@
       "accessory": "Accessory",
       "ammunition": "Ammo",
       "gambit": "World Being Gambit",
-      "salvage": "Salvage"
+      "salvage": "Salvage",
+      "asset": "Asset",
+      "barang": "Barang"
     }
   }
 }

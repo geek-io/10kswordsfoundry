@@ -1,0 +1,494 @@
+{
+ "folders": [
+  {
+   "_id": "978d294fef8e45cd",
+   "name": "Elixirs",
+   "folder": null,
+   "type": "Item",
+   "sorting": "a",
+   "sort": 0,
+   "color": null
+  },
+  {
+   "_id": "b1f8d6e91398ac25",
+   "name": "Fangshi Concoctions",
+   "folder": null,
+   "type": "Item",
+   "sorting": "a",
+   "sort": 100000,
+   "color": null
+  }
+ ],
+ "items": [
+  {
+   "_id": "fe94530d60880514",
+   "name": "ELIXIR Healing Pill",
+   "type": "gear",
+   "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>Thaumaturgicals. Difficult to come by. Hoarded by Cultivators, who face violence on a daily basis. Extremely rare and with a supply controlled by professional Fangshi.</p><p><strong>Consume to immediately heal 1 Damage.</strong></p><p>0.25 kg</p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.31",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "tags": "2.1, Consumable",
+    "consumable": {
+     "enabled": true,
+     "apCost": 0,
+     "health": 1,
+     "burntArdor": 0,
+     "morale": 0,
+     "allHealth": false,
+     "allBurntArdor": false
+    },
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.25
+    }
+   },
+   "folder": "978d294fef8e45cd",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "consumables-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "f96d3327c18acf54",
+   "name": "Healing Pill",
+   "type": "gear",
+   "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>Refined by a Fangshi with PILL REFINEMENT (Internal Elixir ✦; Project: Demand 2, Duration 1 day, Goal 8, Limit 4, in an alchemy laboratory or refinery).</p><p><strong>When ingested, heal 2 Health from a damaged Part.</strong></p><p>0.01 kg</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.147",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "tags": "2.1, Consumable, Fangshi, Deluxe",
+    "consumable": {
+     "enabled": true,
+     "apCost": 0,
+     "health": 2,
+     "burntArdor": 0,
+     "morale": 0,
+     "allHealth": false,
+     "allBurntArdor": false
+    },
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.01
+    }
+   },
+   "folder": "b1f8d6e91398ac25",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "consumables-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "39837df654e8f3ca",
+   "name": "Antidote Pill",
+   "type": "gear",
+   "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>Refined by a Fangshi with PILL REFINEMENT (Internal Elixir ✦).</p><p><strong>When ingested, immediately removes an ongoing poison from one's system.</strong></p><p>0.01 kg</p><p><em>Catalog note: Removing the poison is resolved by the table.</em></p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.147",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "tags": "2.1, Consumable, Fangshi, Deluxe",
+    "consumable": {
+     "enabled": true,
+     "apCost": 0,
+     "health": 0,
+     "burntArdor": 0,
+     "morale": 0,
+     "allHealth": false,
+     "allBurntArdor": false
+    },
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.01
+    }
+   },
+   "folder": "b1f8d6e91398ac25",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "consumables-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "033981f8f2daa5ae",
+   "name": "Fulfilness Pill",
+   "type": "gear",
+   "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>Refined by a Fangshi with PILL REFINEMENT (Internal Elixir ✦).</p><p><strong>When ingested, immediately removes the need for food for [INTERNAL ELIXIR] days.</strong></p><p>0.01 kg</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.147",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "tags": "2.1, Consumable, Fangshi, Deluxe",
+    "consumable": {
+     "enabled": true,
+     "apCost": 0,
+     "health": 0,
+     "burntArdor": 0,
+     "morale": 0,
+     "allHealth": false,
+     "allBurntArdor": false
+    },
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.01
+    }
+   },
+   "folder": "b1f8d6e91398ac25",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "consumables-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "ec921df858801d58",
+   "name": "Fireball Pill",
+   "type": "gear",
+   "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>Refined by a Fangshi with PILL REFINEMENT (Internal Elixir ✦).</p><p><strong>Can be set on fire. It turns into a floating fireball that orbits the user for up to [INTERNAL ELIXIR] minutes.</strong></p><p>0.01 kg</p><p><em>Catalog note: Printed as a second FULFILNESS PILL; named here by its effect. PILL BULLET can throw pills like a LAUNCHER.</em></p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.147",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "tags": "2.1, Consumable, Fangshi, Deluxe",
+    "consumable": {
+     "enabled": true,
+     "apCost": 0,
+     "health": 0,
+     "burntArdor": 0,
+     "morale": 0,
+     "allHealth": false,
+     "allBurntArdor": false
+    },
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.01
+    }
+   },
+   "folder": "b1f8d6e91398ac25",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "consumables-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "dc730b79e28ab3c6",
+   "name": "Chakra Elixir",
+   "type": "gear",
+   "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>Crafted by a Fangshi with ELIXIR CRAFTING (Internal Elixir ✦✦✦; Project: Demand 3, Duration 3 hours, Goal 12, Limit 6, at least 1,000mag and spirit herbs).</p><p><strong>Ingesting this immediately restores 2 burnt Flame.</strong></p><p>0.5 kg</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.148",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "tags": "2.1, Consumable, Fangshi, Prestige",
+    "consumable": {
+     "enabled": true,
+     "apCost": 0,
+     "health": 0,
+     "burntArdor": 2,
+     "morale": 0,
+     "allHealth": false,
+     "allBurntArdor": false
+    },
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.5
+    }
+   },
+   "folder": "b1f8d6e91398ac25",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "consumables-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "18caf3787b780abe",
+   "name": "Disguise Elixir",
+   "type": "gear",
+   "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>Crafted by a Fangshi with ELIXIR CRAFTING (Internal Elixir ✦✦✦).</p><p><strong>Ingesting this immediately changes one part about the ingester's face or voice. Someone who knows her before or is exceptionally observant can still see through it.</strong></p><p>0.5 kg</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.148",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "tags": "2.1, Consumable, Fangshi, Prestige",
+    "consumable": {
+     "enabled": true,
+     "apCost": 0,
+     "health": 0,
+     "burntArdor": 0,
+     "morale": 0,
+     "allHealth": false,
+     "allBurntArdor": false
+    },
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.5
+    }
+   },
+   "folder": "b1f8d6e91398ac25",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "consumables-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "a00d40415ed21ebc",
+   "name": "Thunderbolt Elixir",
+   "type": "gear",
+   "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>Crafted by a Fangshi with ELIXIR CRAFTING (Internal Elixir ✦✦✦).</p><p><strong>Ingesting this grants the user +1 WIT and +1 MOT for 24 hours. This effect does not stack. The ingester then suffers 3 piercing damage to the torso.</strong></p><p>0.5 kg</p><p><em>Catalog note: The Core bonus and the damage are applied by the table.</em></p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.148",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "tags": "2.1, Consumable, Fangshi, Prestige",
+    "consumable": {
+     "enabled": true,
+     "apCost": 0,
+     "health": 0,
+     "burntArdor": 0,
+     "morale": 0,
+     "allHealth": false,
+     "allBurntArdor": false
+    },
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.5
+    }
+   },
+   "folder": "b1f8d6e91398ac25",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "consumables-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "7a1747ce83558050",
+   "name": "Inferno Elixir",
+   "type": "gear",
+   "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>Crafted by a Fangshi with ELIXIR CRAFTING (Internal Elixir ✦✦✦).</p><p><strong>After ingesting, for 3 hours, the drinker becomes immune to fire and can control and produce flame from her hands. This allows her to set people aflame as well as deal 2 piercing damage if she attacks with these flames that can be fired up to 10m from her.</strong></p><p>0.5 kg</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.148",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "tags": "2.1, Consumable, Fangshi, Prestige",
+    "consumable": {
+     "enabled": true,
+     "apCost": 0,
+     "health": 0,
+     "burntArdor": 0,
+     "morale": 0,
+     "allHealth": false,
+     "allBurntArdor": false
+    },
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.5
+    }
+   },
+   "folder": "b1f8d6e91398ac25",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "consumables-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "f14921e41db91e2f",
+   "name": "Five Dragons Pill",
+   "type": "gear",
+   "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>Crafted by a Fangshi with FIVE DRAGONS PILL (Internal Elixir ✦✦✦✦✦; Project: Demand 5, Duration 5 hours, Goal 12, Limit 6; needs a Dragon Tooth, Dragon Eye and Dragon Tongue and 10,000mag).</p><p><strong>The ingester takes 3 piercing damage to her Head. Then she can manipulate, control, and shape earth, fire, lightning or water within 20m that she can see. This cannot be larger than a waterfall nor a large 5 meter wide and 20 meter tall pillar. If used to attack, it deals [crafter's INTERNAL ELIXIR] piercing damage along with any other additional environmental effect.</strong></p><p>0.5 kg</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.149",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "tags": "2.1, Consumable, Fangshi, Prestige",
+    "consumable": {
+     "enabled": true,
+     "apCost": 0,
+     "health": 0,
+     "burntArdor": 0,
+     "morale": 0,
+     "allHealth": false,
+     "allBurntArdor": false
+    },
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.5
+    }
+   },
+   "folder": "b1f8d6e91398ac25",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "consumables-21"
+     }
+    }
+   }
+  }
+ ]
+}

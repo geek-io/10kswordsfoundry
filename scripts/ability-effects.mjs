@@ -1,5 +1,5 @@
-import {queueEquipment} from './equipment.mjs?v=0.1.51';
-import {escapeHTML} from './resolution.mjs?v=0.1.51';
+import {queueEquipment} from './equipment.mjs?v=0.2.14';
+import {escapeHTML} from './resolution.mjs?v=0.2.14';
 const KEYS=new Set(['system.attackBonus','system.defenseBonus','system.checkBonus','system.movement']);
 export function abilityEffectData(actor,item,index,ability,name){return {source:`${actor.uuid}:${item.id}:${index}`,name,key:ability.effectKey,value:ability.effectValue??0};}
 export function effectControls(ability){

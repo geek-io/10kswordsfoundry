@@ -1,0 +1,818 @@
+{
+ "folders": [
+  {
+   "_id": "6bd037803bee1b63",
+   "name": "Head",
+   "folder": null,
+   "type": "Item",
+   "sorting": "a",
+   "sort": 0,
+   "color": null
+  },
+  {
+   "_id": "59ce81fc5a8abf7d",
+   "name": "Torso",
+   "folder": null,
+   "type": "Item",
+   "sorting": "a",
+   "sort": 100000,
+   "color": null
+  },
+  {
+   "_id": "8eed1c720412563d",
+   "name": "Arms",
+   "folder": null,
+   "type": "Item",
+   "sorting": "a",
+   "sort": 200000,
+   "color": null
+  },
+  {
+   "_id": "05be9360e5251ac1",
+   "name": "Legs",
+   "folder": null,
+   "type": "Item",
+   "sorting": "a",
+   "sort": 300000,
+   "color": null
+  },
+  {
+   "_id": "938f66b092737b73",
+   "name": "Heed Us, O Mighty Fury (one-shot)",
+   "folder": null,
+   "type": "Item",
+   "sorting": "a",
+   "sort": 400000,
+   "color": null
+  }
+ ],
+ "items": [
+  {
+   "_id": "677080f837dbb929",
+   "name": "YEI Three Head Crown",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p>Yellow Earth Industrial creates helmets for use to strengthen the mind but also to supply clearsight to their workers. Mercs have found that these Crown-model helmets helped them shoot better as well.</p><p><strong>2 Soak. +2 Morale. Ignore Light Cover with ranged weapon KILL THE BUDDHA.</strong></p><p><strong>Soak:</strong> Head 2</p><p>1 kg</p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.33",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "fashion",
+    "tags": "2.1, Armor",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 2
+     },
+     "morale": 2,
+     "weight": 1
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "effects": [],
+   "folder": "6bd037803bee1b63",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "armor-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "1bd5dabd255b3a58",
+   "name": "VATAC Adamant Ballistic Helm \"Kongo\"",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p>Distributed through VAJRA TACTICAL in Hingsajagra, the MORTAR standard issue Adamant Ballistic Breastplate has become the iconic military gear across the Trichiliocosm, particularly with heavy infantry, special operations, riot-control, and counter-revolution units. The newest and most widespread version of the MORTAR standard issue—the KONGO model—is known for its fearsome Wisdom King aesthetic, blending the \"dharma protector\" into the brutalist blackrock, ceramic, and heavensilk material.</p><p><strong>5 Helmet Soak. -2 WIT.</strong></p><p><strong>Soak:</strong> Head 5</p><p>5 kg</p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.34",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "fashion",
+    "tags": "2.1, Armor",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 5
+     },
+     "morale": 0,
+     "weight": 5
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "effects": [
+    {
+     "_id": "58efd9bad50188d4",
+     "name": "Kongo Helm: -2 Wits",
+     "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+     "transfer": true,
+     "disabled": false,
+     "description": "<p>Rules 2.1 (Red Kalpa Manuscript), p.34. Applies while equipped.</p>",
+     "system": {
+      "changes": [
+       {
+        "key": "system.cores.wit",
+        "type": "add",
+        "value": "-2",
+        "phase": "initial",
+        "priority": 20
+       }
+      ]
+     }
+    }
+   ],
+   "folder": "6bd037803bee1b63",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "armor-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "0105f32167707b56",
+   "name": "Puterijasa Adept Cowl",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p>A large cowl that creates, with the Robes, the iconic look of an Adept, the harnesser and sorcerer of the intramaterial sciences.</p><p><strong>+1 MND, +1 HRT.</strong></p><p>Weight not printed.</p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.34",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "fashion",
+    "tags": "2.1, Armor",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.0
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "effects": [
+    {
+     "_id": "8d0bec2f00b7370c",
+     "name": "Adept Cowl: +1 Mind and Heart",
+     "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+     "transfer": true,
+     "disabled": false,
+     "description": "<p>Rules 2.1 (Red Kalpa Manuscript), p.34. Applies while equipped.</p>",
+     "system": {
+      "changes": [
+       {
+        "key": "system.cores.mnd",
+        "type": "add",
+        "value": "1",
+        "phase": "initial",
+        "priority": 20
+       },
+       {
+        "key": "system.cores.spi",
+        "type": "add",
+        "value": "1",
+        "phase": "initial",
+        "priority": 20
+       }
+      ]
+     }
+    }
+   ],
+   "folder": "6bd037803bee1b63",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "armor-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "7ad673077819695f",
+   "name": "Heavenly Silk Vest",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p>The most common form of armor in the modern Mahakalpa. A vest made of interwoven heavenly silk vest that has stopping power even against bullets and is largely light enough to be able to not weight down the wearer. Many different companies sell their own versions.</p><p><strong>TORSO 2; R ARM 2; L ARM 2</strong></p><p><strong>Soak:</strong> Torso 2, Right Arm 2, Left Arm 2</p><p>2 kg</p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.34",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "fashion",
+    "tags": "2.1, Armor",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 2,
+      "larm": 2,
+      "torso": 2,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 2
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "effects": [],
+   "folder": "59ce81fc5a8abf7d",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "armor-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "d126b7570a9f68bc",
+   "name": "VATAC Adamant Ballistic Breastplate \"Kongo\"",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p>Distributed through VAJRA TACTICAL in Hingsajagra, the MORTAR standard issue Adamant Ballistic Breastplate has become the iconic military gear across the Trichiliocosm, particularly with heavy infantry, special operations, riot-control, and counter-revolution units. The newest and most widespread version of the MORTAR standard issue—the KONGO model—is known for its fearsome Wisdom King aesthetic, blending the \"dharma protector\" into the brutalist blackrock, ceramic, and heavensilk material.</p><p><strong>5 Torso Soak. -2 MOT.</strong></p><p><strong>Soak:</strong> Torso 5</p><p>10 kg</p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.68",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "fashion",
+    "tags": "2.1, Armor",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 5,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 10
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "effects": [
+    {
+     "_id": "e5afd3b6119e605b",
+     "name": "Kongo: -2 Motorics",
+     "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+     "transfer": true,
+     "disabled": false,
+     "description": "<p>Rules 2.1 (Red Kalpa Manuscript), p.34. Applies while equipped.</p>",
+     "system": {
+      "changes": [
+       {
+        "key": "system.cores.mot",
+        "type": "add",
+        "value": "-2",
+        "phase": "initial",
+        "priority": 20
+       }
+      ]
+     }
+    }
+   ],
+   "folder": "59ce81fc5a8abf7d",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "armor-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "4f1dca21fb091828",
+   "name": "Official's Coat",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p>A coat and blazer common to diplomats of all kinds. Many companies make their own version, many of them include subtle marketing techniques.</p><p><strong>TORSO 1 Soak; LIMBS 1 Soak; +1 SPIT IN THE FACE OF GOD</strong></p><p><strong>Soak:</strong> Torso 1, Right Arm 1, Left Arm 1, Right Leg 1, Left Leg 1</p><p>Weight not printed.</p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.34",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "fashion",
+    "tags": "2.1, Armor",
+    "r21": {
+     "coverage": {
+      "rleg": 1,
+      "lleg": 1,
+      "rarm": 1,
+      "larm": 1,
+      "torso": 1,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.0
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "effects": [
+    {
+     "_id": "cfd079442f22b90e",
+     "name": "Official's Coat: +1 Spit In The Face Of God",
+     "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+     "transfer": true,
+     "disabled": false,
+     "description": "<p>Rules 2.1 (Red Kalpa Manuscript), p.34. Applies while equipped.</p>",
+     "system": {
+      "changes": [
+       {
+        "key": "system.skills.spitInTheFace",
+        "type": "add",
+        "value": "1",
+        "phase": "initial",
+        "priority": 20
+       }
+      ]
+     }
+    }
+   ],
+   "folder": "59ce81fc5a8abf7d",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "armor-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "3b1ead50301f48b5",
+   "name": "Puterijasa Adept Robes",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p>Raiments that strengthen and multiply the strength of an Adept's Magick casting ability, intramaterially resonant threads woven into sutras lining their robes.</p><p><strong>+1 to all Casting checks.</strong></p><p>Weight not printed.</p><p><em>Catalog note: Add the +1 in the Cast dialog; Magick bonus dice are set per Magick.</em></p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.34",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "fashion",
+    "tags": "2.1, Armor",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.0
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "effects": [],
+   "folder": "59ce81fc5a8abf7d",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "armor-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "3f2bafaa1dd805e1",
+   "name": "YEI Heavy Duty Gloves",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p>Forearm covering heavy duty aramid gloves with steel meshes and impact padding.</p><p><strong>ARMS: 1 Soak</strong></p><p><strong>Soak:</strong> Right Arm 1, Left Arm 1</p><p>1 kg</p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.34",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "fashion",
+    "tags": "2.1, Armor",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 1,
+      "larm": 1,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 1
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "effects": [],
+   "folder": "8eed1c720412563d",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "armor-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "a53fddd2be9ccc0d",
+   "name": "SSA Red Eye Ring",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p>A ring with a tiny life-giving ruby. The Cultivation Womb reacts favorably with a rubyʼs interiority. A little help can go a long way.</p><p><strong>The Arm this is on has +2 HP.</strong></p><p>Weight not printed.</p><p><em>Catalog note: Set to the right arm by default.</em></p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.34",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "fashion",
+    "tags": "2.1, Armor",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.0
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "effects": [
+    {
+     "_id": "3a09b04ff1af60eb",
+     "name": "Red Eye Ring: Right Arm +2 HP",
+     "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+     "transfer": true,
+     "disabled": false,
+     "description": "<p>Rules 2.1 (Red Kalpa Manuscript), p.34. Applies while equipped. Change the key to system.parts.larm.hpBonus if worn on the left hand.</p>",
+     "system": {
+      "changes": [
+       {
+        "key": "system.parts.rarm.hpBonus",
+        "type": "add",
+        "value": "2",
+        "phase": "initial",
+        "priority": 20
+       }
+      ]
+     }
+    }
+   ],
+   "folder": "8eed1c720412563d",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "armor-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "48b36e550220472f",
+   "name": "VATAC Adamant Divine Gauntlets \"Kongo\"",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p>Distributed through VAJRA TACTICAL in Hingsajagra, the MORTAR standard issue Adamant Ballistic Breastplate has become the iconic military gear across the Trichiliocosm, particularly with heavy infantry, special operations, riot-control, and counter-revolution units. The newest and most widespread version of the MORTAR standard issue—the KONGO model—is known for its fearsome Wisdom King aesthetic, blending the \"dharma protector\" into the brutalist blackrock, ceramic, and heavensilk material.</p><p><strong>5 A Soak. -2 MOT.</strong></p><p><strong>Soak:</strong> Right Arm 5, Left Arm 5</p><p>10 kg</p><p><em>Catalog note: Printed \"5 A Soak\"; recorded as 5 Soak on each arm.</em></p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.34",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "fashion",
+    "tags": "2.1, Armor",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 5,
+      "larm": 5,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 10
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "effects": [
+    {
+     "_id": "d2d85c063eb16ef0",
+     "name": "Kongo Gauntlets: -2 Motorics",
+     "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+     "transfer": true,
+     "disabled": false,
+     "description": "<p>Rules 2.1 (Red Kalpa Manuscript), p.34. Applies while equipped.</p>",
+     "system": {
+      "changes": [
+       {
+        "key": "system.cores.mot",
+        "type": "add",
+        "value": "-2",
+        "phase": "initial",
+        "priority": 20
+       }
+      ]
+     }
+    }
+   ],
+   "folder": "8eed1c720412563d",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "armor-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "3a01df87d17a1661",
+   "name": "Silkspeaker Legs",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p>Trousers worthy of a diplomatic representative of interstar unions.</p><p><strong>R LEG 1; L LEG 1; +1 SPIT IN THE FACE OF GOD</strong></p><p><strong>Soak:</strong> Right Leg 1, Left Leg 1</p><p>1 kg</p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.34",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "fashion",
+    "tags": "2.1, Armor",
+    "r21": {
+     "coverage": {
+      "rleg": 1,
+      "lleg": 1,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 1
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "effects": [
+    {
+     "_id": "4157d58dce188916",
+     "name": "Silkspeaker Legs: +1 Spit In The Face Of God",
+     "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+     "transfer": true,
+     "disabled": false,
+     "description": "<p>Rules 2.1 (Red Kalpa Manuscript), p.34. Applies while equipped.</p>",
+     "system": {
+      "changes": [
+       {
+        "key": "system.skills.spitInTheFace",
+        "type": "add",
+        "value": "1",
+        "phase": "initial",
+        "priority": 20
+       }
+      ]
+     }
+    }
+   ],
+   "folder": "05be9360e5251ac1",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "armor-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "2419b68f431a9ce5",
+   "name": "YEI Worker Bottoms",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p>Heavy duty working pants and boots for wading through dangerous Sidhi fallout.</p><p><strong>3 Soak for both Legs.</strong></p><p><strong>Soak:</strong> Right Leg 3, Left Leg 3</p><p>2 kg</p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.34",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "fashion",
+    "tags": "2.1, Armor",
+    "r21": {
+     "coverage": {
+      "rleg": 3,
+      "lleg": 3,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 2
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "effects": [],
+   "folder": "05be9360e5251ac1",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "armor-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "d8393b3dc1fb17cf",
+   "name": "VATAC Adamant Ballistic Greaves \"Kongo\"",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p>Distributed through VAJRA TACTICAL in Hingsajagra, the MORTAR standard issue Adamant Ballistic line has become the iconic military gear across the Trichiliocosm, particularly with heavy infantry, special operations, riot-control, and counter-revolution units. The newest and most widespread version of the MORTAR standard issue—the KONGO model—is known for its fearsome Wisdom King aesthetic, blending the \"dharma protector\" into the brutalist blackrock, ceramic, and heavensilk material.</p><p><strong>5 Legs soak; -1m/s movement.</strong></p><p><strong>Soak:</strong> Right Leg 5, Left Leg 5</p><p>5 kg</p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.34",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "fashion",
+    "tags": "2.1, Armor",
+    "r21": {
+     "coverage": {
+      "rleg": 5,
+      "lleg": 5,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 5
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "effects": [
+    {
+     "_id": "2aca3c483d05b958",
+     "name": "Kongo Greaves: -1 m/s movement",
+     "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+     "transfer": true,
+     "disabled": false,
+     "description": "<p>Rules 2.1 (Red Kalpa Manuscript), p.35. Applies while equipped.</p>",
+     "system": {
+      "changes": [
+       {
+        "key": "system.moveBonus",
+        "type": "add",
+        "value": "-1",
+        "phase": "initial",
+        "priority": 20
+       }
+      ]
+     }
+    }
+   ],
+   "folder": "05be9360e5251ac1",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "armor-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "86f1ccfc9f24d47c",
+   "name": "Baopu Adamant Full Body Suit",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p>Worn by HaeCo Sword and Gun Cultivators.</p><p><strong>ALL PARTS 3 FLESH SOAK 2 DIRE SOAK</strong></p><p><strong>Soak:</strong> Right Leg 3, Left Leg 3, Right Arm 3, Left Arm 3, Torso 3, Head 3</p><p>Weight not printed.</p><p><em>Catalog note: Flesh/Dire Soak is not defined by the 2.1 damage rules; recorded as 3 Soak per Part.</em></p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.122",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "fashion",
+    "tags": "2.1, Armor",
+    "r21": {
+     "coverage": {
+      "rleg": 3,
+      "lleg": 3,
+      "rarm": 3,
+      "larm": 3,
+      "torso": 3,
+      "head": 3
+     },
+     "morale": 0,
+     "weight": 0.0
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "effects": [],
+   "folder": "938f66b092737b73",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "armor-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "64315db3c2155c16",
+   "name": "TD-E21 Battlemage Raiments",
+   "type": "fashion",
+   "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+   "system": {
+    "description": "<p>Worn by the Astrologian.</p><p><strong>TORSO, HEAD, LIMBS: 1 FLESH SOAK 1 DIRE SOAK. While worn, can Counter when Casting Magick in Kill The Buddha. +2 Morale.</strong></p><p><strong>Soak:</strong> Right Leg 1, Left Leg 1, Right Arm 1, Left Arm 1, Torso 1, Head 1</p><p>Weight not printed.</p><p><em>Catalog note: Flesh/Dire Soak is recorded as 1 Soak per Part.</em></p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.122",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "fashion",
+    "tags": "2.1, Armor",
+    "r21": {
+     "coverage": {
+      "rleg": 1,
+      "lleg": 1,
+      "rarm": 1,
+      "larm": 1,
+      "torso": 1,
+      "head": 1
+     },
+     "morale": 2,
+     "weight": 0.0
+    },
+    "armor": 0,
+    "ardor": 0
+   },
+   "effects": [],
+   "folder": "938f66b092737b73",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "armor-21"
+     }
+    }
+   }
+  }
+ ]
+}

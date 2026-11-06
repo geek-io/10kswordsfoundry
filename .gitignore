@@ -11,6 +11,8 @@ __pycache__/
 !.env.example
 .DS_Store
 Thumbs.db
+/tools/release.cmd
+/tools/build-compendiums.cmd
 
 # LevelDB runtime locks and diagnostic logs (numeric .log files contain data).
 /packs/**/LOCK

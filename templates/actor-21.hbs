@@ -1,0 +1,141 @@
+<section class="sheet-body rules-21">
+<header class="character-header">
+  <div class="character-logo"><img src="systems/10kswordsfoundry/assets/character-logo.png" alt="1 Sword Against Heaven"></div>
+  <div class="character-heading">
+    <button class="portrait-picker" type="button" data-action="choosePortrait" aria-label="Choose character portrait" title="Choose character portrait" {{#unless editable}}disabled{{/unless}}>
+      <img class="character-portrait" src="{{actor.img}}" alt="Portrait of {{actor.name}}">
+    </button>
+    <label class="character-name">Name <input name="name" value="{{actor.name}}" {{#unless editable}}disabled{{/unless}}></label>
+    <span class="rules-badge" title="The GM selects the ruleset in Game Settings → Rules version">Rules 2.1 · testing</span>
+  </div>
+</header>
+<nav class="swords-nav" aria-label="Character sections"><button type="button" data-action="sheetPanel" data-panel="overview">Overview</button><button type="button" data-action="sheetPanel" data-panel="combat">Combat</button><button type="button" data-action="sheetPanel" data-panel="inventory">Inventory</button><button type="button" data-action="sheetPanel" data-panel="identity">Identity</button><button type="button" data-action="sheetPanel" data-panel="notes">Notes</button><button type="button" data-action="sheetPanel" data-panel="effects">Effects</button></nav>
+{{#if canLinkWanderer}}<section data-panel="overview"><button type="button" data-action="linkWanderer">Sync with sidebar</button></section>{{/if}}
+
+<fieldset data-panel="overview" class="r21-cores" {{#unless editable}}disabled{{/unless}}><legend>Cores</legend>
+  <div class="r21-core-grid">{{#each coreRows}}<div class="r21-core" data-tooltip="{{text}}">
+    <button type="button" class="r21-roll" data-action="check21" data-core="{{key}}" aria-label="Roll {{label}}">{{label}} <small>{{abbr}}</small></button>
+    <input type="number" min="0" step="1" name="system.cores.{{key}}" value="{{base}}" aria-label="{{label}} rating">
+    {{#if modified}}<small class="r21-effective">effective {{value}}</small>{{/if}}
+    <button type="button" class="r21-advance" data-action="advance21" data-kind="core" data-key="{{key}}" title="Raise for {{cost}} XP">+ {{cost}} XP</button>
+  </div>{{/each}}</div>
+  <p class="hint">Checks roll Core + Cultivation against Demand 1 (routine) to 6+ (p.5). Ties in opposed Checks reroll.</p>
+</fieldset>
+
+<fieldset data-panel="overview" {{#unless editable}}disabled{{/unless}}><legend>Speed, Movement &amp; Carry</legend>
+  <div class="r21-stats">
+    <span><strong>Speed {{speed}}</strong><small>Physique + Wits + Peripheral Oracle + Stillness · your place in a Sword: lowest Speed declares first; anyone faster may Cut-In (Alpha p.4)</small></span>
+    <span><strong>Basic Move {{movement21.basic}} m/s</strong><small>Physique + Motorics · {{movement21.perCut}} m in a {{movement21.cutSeconds}}-second Cut · Swim {{movement21.swim}} m/s (Alpha p.14)</small></span>
+    <label>Other carried (kg)<input type="number" min="0" step="0.1" name="system.carriedKg" value="{{system.carriedKg}}"></label>
+    <span><strong>Carrying {{carriedTotal}} / {{carryLimit}} kg</strong><small>Items {{itemKg}} kg + other · limit 10 kg + Physique × 10</small></span>
+  </div>
+  {{#each movement21.notes}}<p class="capacity-warning">{{this}}</p>{{/each}}
+  <div class="grid"><label>Speed bonus<input type="number" step="1" name="system.speedBonus" value="{{system.speedBonus}}"></label><label>Movement bonus (m/s)<input type="number" step="1" name="system.moveBonus" value="{{system.moveBonus}}"></label></div>
+  <p class="hint">Move at any point in a Cut and split it up. Standing still for a task: moving away cancels it. Moving while Casting: -2 to the Casting pool. In KILL THE BUDDHA you move only with Quick Openings, and can be Countered (Alpha p.4).</p>
+</fieldset>
+
+<fieldset data-panel="overview" class="r21-skills" {{#unless editable}}disabled{{/unless}}><legend>Cultivations</legend>
+  <ul class="r21-skill-list"><li class="r21-skill-head" aria-hidden="true"><span></span><span></span><span></span><span></span><span>XP to<br>Advance</span></li><li class="r21-skill-head" aria-hidden="true"><span></span><span></span><span></span><span></span><span>XP to<br>Advance</span></li>{{#each skillRows}}<li data-tooltip="{{text}} (p.{{page}})">
+    <button type="button" class="r21-roll" data-action="check21" data-skill="{{key}}">{{label}}</button>
+    <span class="r21-stars" aria-hidden="true">{{stars}}</span>
+    <input type="number" min="0" max="5" step="1" name="system.skills.{{key}}" value="{{base}}" aria-label="{{label}} Stars">
+    {{#if modified}}<small class="r21-effective">effective {{value}}</small>{{/if}}
+    <small class="r21-core-hint">{{coreAbbr}}</small>
+    {{#unless maxed}}<button type="button" class="r21-advance" data-action="advance21" data-kind="cultivation" data-key="{{key}}" title="Raise for {{cost}} XP">+ {{cost}}</button>{{/unless}}
+  </li>{{/each}}</ul>
+</fieldset>
+
+<section data-panel="overview"><h2>Esoteric Cultivations</h2><p class="hint">Job and Sect Cultivations, such as a Martial Art or Occult Science (p.77).</p>
+  <ul class="inventory">{{#each esotericRows}}<li class="r21-row r21-row-eso"><input name="system.esoteric.{{index}}.name" value="{{name}}" placeholder="Cultivation name" aria-label="Esoteric Cultivation name"><input type="number" min="0" max="5" step="1" name="system.esoteric.{{index}}.value" value="{{value}}" aria-label="Stars"><select name="system.esoteric.{{index}}.core" aria-label="Usual Core">{{selectOptions coreChoices selected=core}}</select><button type="button" data-action="check21" data-skill="eso:{{index}}" data-core="{{core}}">Roll</button><button type="button" data-action="removeRow21" data-list="esoteric" data-index="{{index}}">Remove</button></li>{{else}}<li>No Esoteric Cultivations yet.</li>{{/each}}</ul>
+  <button type="button" data-action="addRow21" data-list="esoteric" {{#unless editable}}disabled{{/unless}}>Add Esoteric Cultivation</button>
+</section>
+
+<section data-panel="overview" class="r21-barang"><h2>Barang</h2><p class="hint">The insect-like aperture at the heart of a Cultivation Womb. Ingest one to Cultivate its Sect's Esoteric Techniques; ejecting it keeps what you have Cultivated. A new Sect License needs that Sect's Barang ingested (Alpha pp.5, 50–51). Drag one in from the 2.1 Barang compendium.</p>
+  <ul class="inventory">{{#each barangRows21}}<li data-item-id="{{id}}"><span><strong>{{name}}</strong><small>{{#if sect}}{{sect}} · {{/if}}{{cultivation}}{{#if weapons}} · {{weapons}}{{/if}}{{#if ingested}} · <strong>Ingested</strong>{{/if}}</small></span><button type="button" data-action="editItem" data-item-id="{{id}}">Edit</button>{{#if ingested}}<button type="button" data-action="ejectBarang21" data-item-id="{{id}}" {{#unless ../editable}}disabled{{/unless}}>Eject</button>{{else}}<button type="button" data-action="ingestBarang21" data-item-id="{{id}}" {{#unless ../editable}}disabled{{/unless}}>Ingest</button>{{/if}}<button type="button" data-action="removeEquipment" data-item-id="{{id}}" {{#unless ../editable}}disabled{{/unless}}>Remove</button></li>{{else}}<li>No Barang yet.</li>{{/each}}</ul>
+</section>
+
+<section data-panel="combat" class="r21-ktb"><h2>KILL THE BUDDHA</h2>
+  <div class="action-controls"><button type="button" data-action="ktb21">KILL THE BUDDHA</button><button type="button" data-action="randomPart21">Random Part (d6)</button></div>
+  <ul class="inventory">{{#each weaponRows21}}<li data-item-id="{{id}}"><span><strong>{{name}}</strong><small>{{profile}} · {{damage}} damage · {{#if ranged}}range {{range}} m · Rate {{rate}}{{else}}reach {{range}} m{{/if}}</small></span><button type="button" data-action="ktb21" data-item-id="{{id}}">KILL THE BUDDHA</button></li>{{else}}<li>Equip a weapon, or KILL THE BUDDHA with an Empty Hand.</li>{{/each}}</ul>
+  <p class="hint">Each die is an Opening: 1 Whiff, 2–3 Quick, 4–5 Solid, 6 Perfect. Dice of 4+ still count as Strikes for the Shoot Demand and random hit locations.</p>
+</section>
+
+<fieldset data-panel="combat" class="r21-body" {{#unless editable}}disabled{{/unless}}><legend>Body</legend>
+  <div class="action-controls"><button type="button" data-action="damage21">Apply damage</button><button type="button" data-action="stun21">Stun Check</button>{{#if anyDisabled}}<button type="button" data-action="incap21">Incapacitation Check (1 Morale)</button>{{/if}}<button type="button" data-action="repairSoak21">Repair armor</button></div>
+  <ul class="r21-parts">{{#each partRows}}<li class="r21-part r21-part-{{tone}}">
+    <span class="r21-part-name"><strong>{{label}}</strong><small>{{status}} · HP {{hp}} / {{max}}{{#if soakMax}} · Soak {{soak}} / {{soakMax}}{{/if}}</small>{{#if healing}}<small>{{healing}}</small>{{/if}}</span>
+    <span class="r21-part-track">{{#each boxes}}<button type="button" class="r21-hp {{#if cleave}}cleave{{/if}} {{#if taken}}taken{{/if}}" data-action="setPart21" data-part="{{../key}}" data-value="{{value}}" aria-pressed="{{taken}}" title="{{#if cleave}}Cleave track{{else}}Health{{/if}}: {{value}} damage">{{#if taken}}✖{{else}}◻{{/if}}</button>{{/each}}</span>
+    <label>Soak<input type="number" min="0" step="1" name="system.parts.{{key}}.soakBase" value="{{soakBase}}" aria-label="{{label}} base Soak"></label>
+    <label>HP bonus<input type="number" step="1" name="system.parts.{{key}}.hpBonus" value="{{hpBonus}}" aria-label="{{label}} HP bonus"></label>
+    <button type="button" data-action="damage21" data-part="{{key}}">Damage</button>
+  </li>{{/each}}</ul>
+  <p class="hint">Parts have 3 + Physique HP. At 0 a Part is Disabled, usable again only once fully healed; at the negative of half its maximum (rounded down) it is Cleaved and needs thaumaturgical healing or a wrought limb (Alpha pp.10–11). Damage into an armored Part removes Soak first (p.38). Equipped armor adds its coverage to Soak. Damage heals 1 per X days, X being the Part's current damage, doubled without rest and two meals (pp.14, 31).</p>
+</fieldset>
+
+<fieldset data-panel="combat" {{#unless editable}}disabled{{/unless}}><legend>Morale</legend>
+  <div class="r21-morale">{{#each morale.boxes}}<button type="button" class="r21-morale-box {{#if filled}}filled{{/if}}" data-action="setMorale21" data-value="{{value}}" aria-pressed="{{filled}}" title="Set Morale to {{value}}">{{#if filled}}◆{{else}}◇{{/if}}</button>{{/each}}<span>{{morale.value}} / {{morale.max}}</span></div>
+  {{#if morale.shattered}}<p class="capacity-warning"><strong>Shattered.</strong> Withdraw, break down, abandon the objective, or seek safety (p.40).</p>{{/if}}
+  <div class="grid"><label>Morale bonus<input type="number" step="1" name="system.moraleBonus" value="{{system.moraleBonus}}"></label></div>
+  <p class="hint">Maximum = Heart + Stillness, plus equipped gear. Refreshes 1 per week (p.18).</p>
+</fieldset>
+
+<fieldset data-panel="combat" {{#unless editable}}disabled{{/unless}}><legend>Conditions</legend>
+  <div class="condition-grid">{{#each conditionRows21}}<label class="condition-entry"><span><input type="checkbox" name="system.conditions21.{{key}}" {{checked active}}> {{label}}</span><small>{{text}} (p.{{page}})</small></label>{{/each}}</div>
+  <div class="grid"><label>Fatigue penalty<input type="number" min="0" step="1" name="system.fatigue" value="{{system.fatigue}}"></label></div>
+</fieldset>
+
+<section data-panel="combat"><h2>Magick Casting</h2>
+  {{#if castingName}}<p><strong>Casting {{castingName}}:</strong> {{castingCharges}} Charges held. <button type="button" data-action="abandonCast21">Abandon casting</button></p>{{/if}}
+  <ul class="inventory">{{#each magickRows21}}<li data-item-id="{{id}}"><span><strong>{{name}}</strong><small>Potency {{potency}} · Burn {{burn}} ✹{{#if castTime}} · Cast {{castTime}}{{/if}}{{#if charges}} · {{charges}} Charges{{/if}}</small></span><button type="button" data-action="editItem" data-item-id="{{id}}">Edit</button><button type="button" data-action="cast21" data-item-id="{{id}}">Cast</button></li>{{else}}<li>No Magicks yet.</li>{{/each}}</ul>
+  <p class="hint">Each Strike adds a Charge; at Potency the Magick unleashes and burns its Flame (p.50).</p>
+</section>
+
+<section data-panel="combat" class="r21-technicks"><h2>Technicks</h2>
+  <ul class="inventory">{{#each technickRows21}}<li data-item-id="{{id}}" class="{{#unless ready}}r21-blocked{{/unless}}"><span><strong>{{name}}</strong><small>Needs {{needs}}{{#if weapon}} · {{weapon}}{{/if}}{{#if license}} · License {{license}}{{/if}}{{#if installed}} · <strong>Installed ({{paid}} ❂)</strong>{{/if}}</small>{{#if problem}}<small class="r21-warning">{{problem}}</small>{{/if}}</span><button type="button" data-action="editItem" data-item-id="{{id}}">Edit</button>{{#if installed}}<button type="button" data-action="release21" data-item-id="{{id}}">Release</button>{{else}}<button type="button" data-action="activate21" data-item-id="{{id}}" {{#unless ready}}disabled{{/unless}}>{{action}}</button>{{/if}}</li>{{else}}<li>No Technicks yet. Drag them in from the 2.1 Sects compendium.</li>{{/each}}</ul>
+  <p class="hint">✹ is burnt when the Technick activates; ❂ stays installed until you Release it. A Technick needs its License: the Esoteric Cultivation at the printed Stars. Meridians: {{meridians21.used}} / {{meridians21.open}} (2 + Sidhi Stage){{#if meridians21.over}} — <strong class="r21-warning">more Magicks and Technicks than open Meridians</strong>{{/if}}. Esoteric Techniques: {{techniqueCount21}} / {{techniqueLimit21}}{{#if techniqueOver21}} — <strong class="r21-warning">over the Sidhi Realm limit</strong>{{/if}} (p.52).</p>
+</section>
+
+<fieldset data-panel="combat" {{#unless editable}}disabled{{/unless}}><legend>Flame</legend><div class="grid"><label>Maximum Flame<input name="system.ardor.max" value="{{system.ardor.max}}" type="number" min="{{ardorMinimumMax}}" step="1"></label><label>Burnt Flame<input name="system.ardor.burnt" value="{{system.ardor.burnt}}" type="number" min="0" step="1" max="{{ardorBurntLimit}}"></label><label>Installed Flame<input name="system.ardor.installed" value="{{system.ardor.installed}}" type="number" min="0" step="1" max="{{ardorInstalledLimit}}"></label><label>Scorch<input name="system.scorch" value="{{system.scorch}}" type="number" min="0" step="1"></label></div>{{#if flame21.scorch}}<p class="capacity-warning"><strong>Scorch {{flame21.scorch}}:</strong> -{{flame21.scorch}} to all Checks. Recovering burnt Flame or releasing installed Flame clears Scorch first (Alpha p.52).</p>{{/if}}<div class="ardor-track">{{#each ardorSymbols}}<span class="resource-symbol {{state}}" title="{{label}}">{{symbol}}</span>{{/each}}<small>✹ Available · dim ✹ Burnt · ❂ Installed</small></div>
+  <p class="hint">A Cultivator generally has 2 + Sidhi Stage Flame ({{flame21.max}} at your Stage). Burnt Flame returns 1 per week; installed Flame stays until you uninstall it (Alpha p.51). Spending past 0 Flame is Scorch: -1 to all Checks per point, and a Deviation Check each time it grows (Alpha p.52).{{#if flame21.differs}} <button type="button" data-action="setFlameMax21">Set maximum to {{flame21.max}}</button> <small>The maximum is shared with the 2.0.3 sheet (Ardor).</small>{{/if}}</p></fieldset>
+
+{{#if isWorldBeing}}<section data-panel="combat"><h2>Gambits</h2><button type="button" data-action="addNew" data-item-type="gambit">Add New</button><button type="button" data-action="autoSort" data-item-type="gambit">Auto-sort</button><ul class="inventory">{{#each gambitItems}}<li data-item-id="{{id}}"><span>{{name}}</span><button type="button" data-action="editItem" data-item-id="{{id}}">Edit</button></li>{{/each}}</ul></section>{{/if}}
+
+<fieldset data-panel="identity" class="job-drop-zone" data-drop-zone="job"><legend>Job</legend>
+{{#if jobItem}}<div class="job-entry" data-item-id="{{jobItem.id}}" data-rarity="{{jobItem.system.rarity}}"><strong>{{jobItem.name}}</strong><button type="button" data-action="editItem" data-item-id="{{jobItem.id}}">Edit</button></div>{{else}}<p>Drop a Job here</p>{{/if}}
+</fieldset>
+
+<fieldset data-panel="identity" {{#unless editable}}disabled{{/unless}}><legend>Culture &amp; Alignment</legend><div class="grid"><label>Culture<input name="system.culture" value="{{system.culture}}"></label><label>Alignment<input name="system.alignment" value="{{system.alignment}}"></label></div></fieldset>
+
+<section data-panel="identity"><h2>Attachments</h2><p class="hint">Short, punchy statements. Held 1 · Firm 2 · Heart 3 (pp.40–41). Social Defense: +2/+4/+6 when one opposes the influence (p.48).</p>
+  <ul class="inventory">{{#each attachmentRows}}<li class="r21-row r21-row-attachment"><input name="system.attachments.{{index}}.text" value="{{text}}" placeholder="I repay those who sheltered me." aria-label="Attachment"><select name="system.attachments.{{index}}.strength" aria-label="Strength">{{selectOptions ../strengthChoices selected=strength}}</select><button type="button" data-action="removeRow21" data-list="attachments" data-index="{{index}}">Remove</button></li>{{else}}<li>No Attachments yet.</li>{{/each}}</ul>
+  <button type="button" data-action="addRow21" data-list="attachments" {{#unless editable}}disabled{{/unless}}>Add Attachment</button>
+  <button type="button" data-action="cgm21">Change God's Mind</button>
+  <div class="grid r21-disposition"><label>Disposition toward the Wanderers<select name="system.disposition21" {{#unless editable}}disabled{{/unless}}>{{selectOptions dispositionChoices21 selected=system.disposition21}}</select></label><button type="button" data-action="rollDisposition21" {{#unless editable}}disabled{{/unless}}>Roll 2d6</button></div>
+  <p class="hint">Target a token (T), then Change God's Mind: Face + an approach against Heart + Stillness; the target's owner or the GM defends from the chat card (pp.19–23).</p>
+</section>
+
+<section data-panel="identity"><h2>Assets</h2><p class="hint">Assets establish something materially true, with its benefits and burdens (Alpha pp.44–48). Mountain Frame, Anvil Head, Spring-Tendon Legs, Hummingbird Pulse and Sleepless Soul apply automatically; other benefits are adjudicated at the table. Drag Assets in from the 2.1 Assets compendium; a new Star costs 4 × the new Asset rating in XP (Alpha p.5).</p>
+  <ul class="inventory">{{#each assetItems21}}<li data-item-id="{{id}}"><span><strong>{{name}}</strong> <span class="r21-stars">{{starText}}</span><small>{{#if code}}[{{code}}] {{range}}{{/if}}{{#if detail}} · {{detail}}{{/if}}{{#if page}} · p.{{page}}{{/if}}</small></span><button type="button" data-action="editItem" data-item-id="{{id}}">Edit</button>{{#if canRaise}}<button type="button" class="r21-advance" data-action="raiseAsset21" data-item-id="{{id}}" title="Raise for {{cost}} XP" {{#unless ../editable}}disabled{{/unless}}>+ ✦ {{cost}} XP</button>{{/if}}<button type="button" data-action="removeEquipment" data-item-id="{{id}}" {{#unless ../editable}}disabled{{/unless}}>Remove</button></li>{{else}}<li>No Assets yet.</li>{{/each}}</ul>
+  <button type="button" data-action="addNew" data-item-type="asset" {{#unless editable}}disabled{{/unless}}>Add New Asset</button>
+  {{#if assetRows.length}}<h3>Older Asset list</h3><p class="hint">These rows become Asset items when the GM next loads the world.</p><ul class="inventory">{{#each assetRows}}<li class="r21-row r21-row-asset"><select name="system.assets.{{index}}.key" aria-label="Asset">{{selectOptions ../assetChoices selected=key}}</select><input name="system.assets.{{index}}.name" value="{{name}}" placeholder="Detail (creditor, limb, organization…)" aria-label="Asset detail"><input type="number" min="0" max="5" step="1" name="system.assets.{{index}}.stars" value="{{stars}}" aria-label="Stars"><input name="system.assets.{{index}}.notes" value="{{notes}}" placeholder="Notes" aria-label="Asset notes">{{#if info.page}}<small>p.{{info.page}}</small>{{/if}}<button type="button" data-action="removeRow21" data-list="assets" data-index="{{index}}">Remove</button></li>{{/each}}</ul>{{/if}}
+</section>
+
+<fieldset data-panel="identity" {{#unless editable}}disabled{{/unless}}><legend>Sidhi Progression &amp; Funds</legend><div class="grid"><label>XP<input name="system.xp" value="{{system.xp}}" type="number" min="0" step="1"></label><label>Sidhi Stage<input name="system.sidhi" value="{{system.sidhi}}" type="number" min="0" step="1" data-tooltip="Flame 2 + Stage; Meridians 2 + Stage (p.52)"></label><label>Sidhi Realm<select name="system.sidhiRealm">{{selectOptions realmChoices21 selected=system.sidhiRealm}}</select></label><label>Carried Mag<input name="system.mag" value="{{system.mag}}" type="number" min="0" step="1"></label><label>Savings (Mag)<input name="system.savings" value="{{system.savings}}" type="number" min="0" step="1"></label></div>
+  <p class="hint">Core star: 5 × new rating XP. Cultivation star: 3 × new rating XP (max 5). Asset: 4 × new Asset rating XP. Sect License: 10 XP, and the Sect's Barang must be ingested (Alpha p.5).</p></fieldset>
+
+<section data-panel="identity"><h2>Traits</h2><p class="hint">Grimoire Traits come from the 2.0.3 catalog.</p><button type="button" data-action="addNew" data-item-type="trait">Add New</button><button type="button" data-action="autoSort" data-item-type="trait">Auto-sort</button><ul class="inventory">{{#each traitItems}}<li data-item-id="{{id}}"><span>{{name}} · Level {{system.level}}</span><button type="button" data-action="editItem" data-item-id="{{id}}">Edit</button><button type="button" data-action="toggleTrait" data-item-id="{{id}}">{{#if traitEnabled}}Deactivate{{else}}Activate{{/if}}</button></li>{{else}}<li>No Traits yet.</li>{{/each}}</ul></section>
+
+<section data-panel="inventory"><h2>Gear Slots</h2><div class="grid">{{#each gearSlots}}<span><strong>{{label}}</strong>: {{names}}</span>{{/each}}</div>{{#if unassignedWeapons}}<p class="capacity-warning">Assign a free hand or unequip: {{unassignedWeapons}}</p>{{/if}}</section>
+<section data-panel="inventory"><h2>Licenses</h2><button type="button" data-action="addNew" data-item-type="license">Add New</button><button type="button" data-action="autoSort" data-item-type="license">Auto-sort</button><p class="hint">2.0 License prerequisites are read against the matching Cores (VIO→Physique, GRC→Motorics, DIA→Mind, SAV→Wits, WRD→Face, SPI→Heart).</p><ul class="inventory license-list">
+{{#each licenses}}<li data-rarity="{{system.rarity}}" class="license-entry {{#unless qualified}}unqualified{{/unless}}" data-item-id="{{id}}"><span><strong>{{name}}</strong><small>{{sect}} · {{status}}</small></span><button type="button" data-action="editItem" data-item-id="{{id}}">Edit</button><button type="button" data-action="toggleLicense" data-item-id="{{id}}" {{#unless ../editable}}disabled{{/unless}}>{{#if equipped}}Unequip{{else}}Equip{{/if}}</button></li>{{else}}<li>Drop a License onto the sheet</li>{{/each}}
+</ul></section>
+<section data-panel="inventory"><h2>Armor &amp; Fashion</h2><button type="button" data-action="addNew" data-item-type="fashion">Add New</button><button type="button" data-action="autoSort" data-item-type="fashion">Auto-sort</button><ul class="inventory">
+{{#each fashions}}<li data-item-id="{{id}}" data-rarity="{{system.rarity}}"><span><strong>{{name}}</strong> · {{#if system.equipped}}Equipped{{else}}Unequipped{{/if}}</span><button type="button" data-action="editItem" data-item-id="{{id}}">Edit</button><button type="button" data-action="toggleEquipment" data-item-id="{{id}}" {{#unless ../editable}}disabled{{/unless}}>{{#if system.equipped}}Unequip{{else}}Equip{{/if}}</button><button type="button" data-action="removeEquipment" data-item-id="{{id}}" {{#unless ../editable}}disabled{{/unless}}>Remove</button></li>{{else}}<li>No armor or Fashion yet.</li>{{/each}}
+</ul></section>
+{{#each abilityGroups}}<section data-panel="inventory"><h2>{{label}}</h2><button type="button" data-action="addNew" data-item-type="{{type}}">Add New</button><button type="button" data-action="autoSort" data-item-type="{{type}}">Auto-sort</button><ul class="inventory">{{#each items}}<li data-item-id="{{id}}" data-rarity="{{system.rarity}}"><span><strong>{{name}}</strong></span><button type="button" data-action="editItem" data-item-id="{{id}}">Edit</button><button type="button" data-action="removeEquipment" data-item-id="{{id}}" {{#unless ../../editable}}disabled{{/unless}}>Remove</button></li>{{else}}<li>No abilities yet.</li>{{/each}}</ul></section>{{/each}}
+<section data-panel="inventory"><h2>Salvage</h2><button type="button" data-action="addNew" data-item-type="salvage">Add New</button><button type="button" data-action="autoSort" data-item-type="salvage">Auto-sort</button><ul class="inventory">{{#each salvageItems}}<li data-item-id="{{id}}"><span>{{name}} × {{system.quantity}}</span><button type="button" data-action="editItem" data-item-id="{{id}}">Edit</button><button type="button" data-action="removeEquipment" data-item-id="{{id}}">Remove</button></li>{{/each}}</ul></section>
+{{#each inventoryGroups}}<section data-panel="inventory"><h2>{{label}}</h2><div class="section-tools"><button type="button" data-action="addNew" data-item-type="{{type}}">Add New</button><button type="button" data-action="autoSort" data-item-type="{{type}}">Auto-sort</button></div><ul class="inventory">{{#each items}}<li data-item-id="{{id}}" data-rarity="{{system.rarity}}"><span>{{name}} {{#if system.quantity}}× {{system.quantity}}{{/if}}</span><button type="button" data-action="editItem" data-item-id="{{id}}">Edit</button>{{#if canConsume}}<button type="button" data-action="useConsumable21" data-item-id="{{id}}">Use</button>{{/if}}{{#if equippable}}<button type="button" data-action="toggleEquipment" data-item-id="{{id}}">{{#if system.equipped}}Unequip{{else}}Equip{{/if}}</button>{{/if}}<button type="button" data-action="removeEquipment" data-item-id="{{id}}">Remove</button></li>{{else}}<li>No items yet.</li>{{/each}}</ul></section>{{/each}}
+
+<section data-panel="notes"><h2>Notes</h2>{{#if editable}}<prose-mirror name="system.notes" value="{{notesEditor}}" data-document-uuid="{{actor.uuid}}">{{{notesHTML}}}</prose-mirror>{{else}}<div class="rich-content">{{{notesHTML}}}</div>{{/if}}</section>
+<section data-panel="effects"><h2>Active Effects</h2>{{#if editable}}<button type="button" data-action="createEffect">Add Effect</button>{{/if}}<ul class="inventory">{{#each effects}}<li><span>{{name}} · {{status}}<small class="effect-source">Source: {{source}}</small>{{#if changes}}<small class="effect-changes">{{changes}}</small>{{/if}}{{#if suppressed}}<small class="effect-source">Activate or equip the source item to apply this effect.</small>{{/if}}</span><button type="button" data-action="editEffect" data-effect-id="{{id}}" data-effect-item-id="{{itemId}}">Edit</button>{{#if ../editable}}<button type="button" data-action="toggleEffect" data-effect-id="{{id}}" data-effect-item-id="{{itemId}}">{{#if disabled}}Enable{{else}}Disable{{/if}}</button><button type="button" data-action="removeEffect" data-effect-id="{{id}}" data-effect-item-id="{{itemId}}">Remove</button>{{/if}}</li>{{/each}}</ul></section>
+</section>

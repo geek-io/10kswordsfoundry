@@ -1,7 +1,8 @@
-import {conditionStats,injuryChanges} from "./conditions.mjs?v=0.1.51";
-import { equipmentEffectSuppressed } from "./effects.mjs?v=0.1.51";
-import { modifierProfile } from "./modifiers.mjs?v=0.1.51";
-import {resolveEffectValue} from './effect-values.mjs?v=0.1.51';
+import {conditionStats,injuryChanges} from "./conditions.mjs?v=0.2.14";
+import { equipmentEffectSuppressed } from "./effects.mjs?v=0.2.14";
+import { modifierProfile } from "./modifiers.mjs?v=0.2.14";
+import {derive21} from './rules21.mjs?v=0.2.14';
+import {resolveEffectValue} from './effect-values.mjs?v=0.2.14';
 export class SwordsActiveEffect extends foundry.documents.ActiveEffect {
   static applyChange(target,change,options={}){
     try{return super.applyChange(target,{...change,value:resolveEffectValue(change.value,change.effect,target)},options);}
@@ -52,5 +53,7 @@ export class SwordsActor extends foundry.documents.Actor {
       .reduce((sum,item)=>sum+modifierProfile(item.system).movement,0);
     this.system.movement=Math.max(0,this.system.movement+penalty);
     Object.assign(this.system,conditionStats(this.system));
+    // Rules 2.1 derived values; computed for every actor but displayed only when 2.1 is selected.
+    try{this.system.r21=derive21(this.system,this.items.contents);}catch(error){console.warn("10,000 Swords | 2.1 derived data failed.",error);}
   }
 }

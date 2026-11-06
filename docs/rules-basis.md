@@ -1,6 +1,6 @@
 # Rules basis
 
-The user designated **10,000 Swords Against Heaven 2.0.3** by JK Saavedra as the current rules authority, until a replacement is supplied.
+The user designated **10,000 Swords Against Heaven 2.0.3** by JK Saavedra as the current rules authority, until a replacement is supplied. From 0.2.1, a GM-selected **2.1** ruleset is available for testing; see [rules-basis-2.1.md](rules-basis-2.1.md). 2.0.3 remains the default and is unchanged.
 
 - Source: `C:/Users/drago/Downloads/10,000 SWORDS AGAINST HEAVEN 2.0.3 (1).pdf`
 - Length: 263 PDF pages. References here use PDF page numbers.

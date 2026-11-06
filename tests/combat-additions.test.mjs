@@ -16,7 +16,7 @@ test('repeated Name records and mixed book market types preserve independent bod
  assert.deepEqual(rows.map(r=>r.item.type),['fashion','magick','gear']);assert.equal(rows[0].item.system.armor,3);assert.equal(rows[2].item.system.magCost,10);
 });
 test('item types have unique bundled SVG defaults while custom artwork is preserved',()=>{
- assert.equal(new Set(Object.values(ITEM_ICONS)).size,13);
+ assert.equal(new Set(Object.values(ITEM_ICONS)).size,15);
  for(const [type,path] of Object.entries(ITEM_ICONS)){assert.equal(defaultItemIcon(type,'icons/svg/item-bag.svg'),path);assert.match(readFileSync(path.replace('systems/10kswordsfoundry/',''),'utf8'),/<svg/);}
  assert.equal(defaultItemIcon('weapon','custom/weapon.webp'),'custom/weapon.webp');
 });
