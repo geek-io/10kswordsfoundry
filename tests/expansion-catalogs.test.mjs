@@ -11,7 +11,7 @@ test('complete World Being table and Sect equipment retain rules, folder hierarc
  const numbers=traits.items.map(i=>Number(i.system.tags.match(/3d6 (\d+)/)[1]));assert.deepEqual(numbers,Array.from({length:16},(_,i)=>i+3));
  for(const pack of [traits,equipment,jobs]){
   assert.equal(new Set(pack.items.map(i=>i._id)).size,pack.items.length);
-  for(const i of pack.items){assert.ok(pack.folders.some(f=>f._id===i.folder));assert.match(i.system.source,/Rules 2.0.3, p\.\d+/);assert.ok(i.system.description.length>50);}
+  for(const i of pack.items){assert.ok(pack.folders.some(f=>f._id===i.folder));assert.match(i.system.source,/Rules 2.0.3, p\.\d+/);assert.ok(i.system.description.length>(pack===jobs?15:50));} // Job Descriptions hold the tagline; Cultivations and loadout are on Details (0.2.14)
   for(const f of pack.folders)if(f.folder)assert.ok(pack.folders.some(p=>p._id===f.folder));
  }
  assert.equal(equipment.items.filter(i=>i.type==='fashion').length,15);

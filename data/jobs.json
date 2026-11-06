@@ -54,7 +54,7 @@
       "img": "systems/10kswordsfoundry/assets/icons/job.svg",
       "folder": "d77b86d8082e76c4",
       "system": {
-        "description": "<p>Laborer Toil to earn the right to live. VIO✦✦✦✦DIA✦GRC✦SAV✦✦✦WRD✦✦SPI✦✦ [R HAND] Workhammer (Bludgeon) [FASHION] Working Class Clothes (+1 Armor. +1 to all Checks dealing with courage, bravery, or staying steadfast. All forced movement are reduced by 1.) [TRAIT] Adamance (+1 Max Health)</p>",
+        "description": "<p>Toil to earn the right to live.</p>",
         "source": "Rules 2.0.3, p.42",
         "category": "body",
         "cultivations": {
@@ -80,7 +80,7 @@
               "properties": {
                 "crushing": true
               },
-              "description": "<p>Laborer Toil to earn the right to live. VIO✦✦✦✦DIA✦GRC✦SAV✦✦✦WRD✦✦SPI✦✦ [R HAND] Workhammer (Bludgeon) [FASHION] Working Class Clothes (+1 Armor. +1 to all Checks dealing with courage, bravery, or staying steadfast. All forced movement are reduced by 1.) [TRAIT] Adamance (+1 Max Health)</p>",
+              "description": "<p>Bludgeon.</p>",
               "source": "Rules 2.0.3, p.42; Laborer Job",
               "gearSlot": "right",
               "equipped": false,
@@ -155,7 +155,7 @@
       "img": "systems/10kswordsfoundry/assets/icons/job.svg",
       "folder": "d77b86d8082e76c4",
       "system": {
-        "description": "<p>Pugilist Monk of the sweet science. VIO✦✦DIA✦✦GRC✦SAV✦✦✦✦WRD✦✦SPI✦✦✦ [FASHION] Scrapperʼs Guard (2 Armor. Gain +1 on all melee attacks when adjacent against 2+ hostiles.) Trait: Asceticʼs Meditation (+1 DEF against Magick-based Attacks)</p>",
+        "description": "<p>Monk of the sweet science.</p>",
         "source": "Rules 2.0.3, p.42",
         "category": "body",
         "cultivations": {
@@ -232,7 +232,7 @@
       "img": "systems/10kswordsfoundry/assets/icons/job.svg",
       "folder": "d77b86d8082e76c4",
       "system": {
-        "description": "<p>Bodyguard Protector of the client. VIO✦✦✦✦DIA✦GRC✦✦✦SAV✦✦WRD✦SPI✦✦ [R HAND] HaeCo Foldblade (Concealable Sword) [L HAND] HaeCo Foldshield (Concealable Shield Bludgeon) [FASHION] Scrapperʼs Guard (2 Armor. Gain +1 on all melee attacks when adjacent against 2+ hostiles.) [TRAIT] Beast Shrine (Once per day, you may lose 1 Health to gain +1 dice to all VIO Checks for 10 minutes. During this time, suffer -1 dice to all DIA Checks. You must act on instinct.)</p>",
+        "description": "<p>Protector of the client.</p>",
         "source": "Rules 2.0.3, p.42",
         "category": "body",
         "cultivations": {
@@ -258,7 +258,7 @@
               "properties": {
                 "concealable": true
               },
-              "description": "<p>Bodyguard Protector of the client. VIO✦✦✦✦DIA✦GRC✦✦✦SAV✦✦WRD✦SPI✦✦ [R HAND] HaeCo Foldblade (Concealable Sword) [L HAND] HaeCo Foldshield (Concealable Shield Bludgeon) [FASHION] Scrapperʼs Guard (2 Armor. Gain +1 on all melee attacks when adjacent against 2+ hostiles.) [TRAIT] Beast Shrine (Once per day, you may lose 1 Health to gain +1 dice to all VIO Checks for 10 minutes. During this time, suffer -1 dice to all DIA Checks. You must act on instinct.)</p>",
+              "description": "<p>Concealable Sword.</p>",
               "source": "Rules 2.0.3, p.42; Bodyguard Job",
               "gearSlot": "right",
               "equipped": false,
@@ -284,7 +284,7 @@
                 "concealable": true,
                 "shield": true
               },
-              "description": "<p>Bodyguard Protector of the client. VIO✦✦✦✦DIA✦GRC✦✦✦SAV✦✦WRD✦SPI✦✦ [R HAND] HaeCo Foldblade (Concealable Sword) [L HAND] HaeCo Foldshield (Concealable Shield Bludgeon) [FASHION] Scrapperʼs Guard (2 Armor. Gain +1 on all melee attacks when adjacent against 2+ hostiles.) [TRAIT] Beast Shrine (Once per day, you may lose 1 Health to gain +1 dice to all VIO Checks for 10 minutes. During this time, suffer -1 dice to all DIA Checks. You must act on instinct.)</p>",
+              "description": "<p>Concealable Shield Bludgeon.</p>",
               "source": "Rules 2.0.3, p.42; Bodyguard Job",
               "gearSlot": "left",
               "equipped": false,
@@ -366,7 +366,7 @@
       "img": "systems/10kswordsfoundry/assets/icons/job.svg",
       "folder": "d77b86d8082e76c4",
       "system": {
-        "description": "<p>Hunter Prowl and kill. VIO✦✦DIA✦✦GRC✦✦✦✦SAV✦✦✦WRD✦SPI✦ [R + L HAND] REVIKEYA Longbow k640 (Bow, 12 Arrows) [FASHION] Hunterʼs Garb (As an Action, mark an entity that can be seen as the wearerʼs mark. The wearer deals +1 ATK against their mark.) [TRAIT] Operatic Athleticism (+1 dice to any GRC Check to leap, vault, climb, or maneuver and to any movement-based performance. You can recreate any motion you have performed before.)</p>",
+        "description": "<p>Prowl and kill.</p>",
         "source": "Rules 2.0.3, p.42",
         "category": "body",
         "cultivations": {
@@ -390,7 +390,7 @@
               "weaponType": "ranged",
               "ammoFamily": "none",
               "properties": {},
-              "description": "<p>Hunter Prowl and kill. VIO✦✦DIA✦✦GRC✦✦✦✦SAV✦✦✦WRD✦SPI✦ [R + L HAND] REVIKEYA Longbow k640 (Bow, 12 Arrows) [FASHION] Hunterʼs Garb (As an Action, mark an entity that can be seen as the wearerʼs mark. The wearer deals +1 ATK against their mark.) [TRAIT] Operatic Athleticism (+1 dice to any GRC Check to leap, vault, climb, or maneuver and to any movement-based performance. You can recreate any motion you have performed before.)</p>",
+              "description": "<p>Bow, 12 Arrows.</p>",
               "source": "Rules 2.0.3, p.42; Hunter Job",
               "gearSlot": "both",
               "equipped": false,
@@ -488,7 +488,7 @@
       "img": "systems/10kswordsfoundry/assets/icons/job.svg",
       "folder": "d77b86d8082e76c4",
       "system": {
-        "description": "<p>Assassin Hunt down discreetly. VIO✦✦✦DIA✦✦GRC✦✦✦✦SAV✦WRD✦✦SPI✦ [R HAND] EXDEAD Sutra-Knife [NIMBLE DAGGER] [L HAND] EXDEAD Sutra-Knife [NIMBLE DAGGER] [FASHION] Rogue Garb (+1 MOV while worn. +1 to all attempts at stealth and Larceny. +1 ATK vs someone unsuspecting.) [TRAIT] Beautiful (+1 to any Check that leverages your appearance to persuade, charm, or influence. You cannot remain unnoticed in a crowd—people remember your face)</p>",
+        "description": "<p>Hunt down discreetly.</p>",
         "source": "Rules 2.0.3, p.42",
         "category": "body",
         "cultivations": {
@@ -514,7 +514,7 @@
               "properties": {
                 "concealable": true
               },
-              "description": "<p>Assassin Hunt down discreetly. VIO✦✦✦DIA✦✦GRC✦✦✦✦SAV✦WRD✦✦SPI✦ [R HAND] EXDEAD Sutra-Knife [NIMBLE DAGGER] [L HAND] EXDEAD Sutra-Knife [NIMBLE DAGGER] [FASHION] Rogue Garb (+1 MOV while worn. +1 to all attempts at stealth and Larceny. +1 ATK vs someone unsuspecting.) [TRAIT] Beautiful (+1 to any Check that leverages your appearance to persuade, charm, or influence. You cannot remain unnoticed in a crowd—people remember your face)</p>",
+              "description": "<p>Nimble Dagger.</p>",
               "source": "Rules 2.0.3, p.42; Assassin Job",
               "gearSlot": "right",
               "equipped": false,
@@ -539,7 +539,7 @@
               "properties": {
                 "concealable": true
               },
-              "description": "<p>Assassin Hunt down discreetly. VIO✦✦✦DIA✦✦GRC✦✦✦✦SAV✦WRD✦✦SPI✦ [R HAND] EXDEAD Sutra-Knife [NIMBLE DAGGER] [L HAND] EXDEAD Sutra-Knife [NIMBLE DAGGER] [FASHION] Rogue Garb (+1 MOV while worn. +1 to all attempts at stealth and Larceny. +1 ATK vs someone unsuspecting.) [TRAIT] Beautiful (+1 to any Check that leverages your appearance to persuade, charm, or influence. You cannot remain unnoticed in a crowd—people remember your face)</p>",
+              "description": "<p>Nimble Dagger.</p>",
               "source": "Rules 2.0.3, p.42; Assassin Job",
               "gearSlot": "left",
               "equipped": false,
@@ -635,7 +635,7 @@
       "img": "systems/10kswordsfoundry/assets/icons/job.svg",
       "folder": "530e558a4d9ef398",
       "system": {
-        "description": "<p>Scholar Educate and be educated. VIO✦DIA✦✦✦✦GRC✦✦SAV✦✦WRD✦SPI✦✦✦ [R HAND] Book (Bludgeon) [FASHION] Savant Robes (+2 Ardor; all attempts to deduce, analyze, or research something gain +2). [TRAIT] High Revolutionist (+1 die to DIA Checks analyzing social structures (Pessimism of the Intellect). Add +1 die to SPI Checks resisting coercion or despair (Optimism of the Will). However, suffer -1 dice when attempting to carouse or chill with others: all your theory is scaring off the studs and the huzz.)</p>",
+        "description": "<p>Educate and be educated.</p>",
         "source": "Rules 2.0.3, p.43",
         "category": "mind",
         "cultivations": {
@@ -661,7 +661,7 @@
               "properties": {
                 "crushing": true
               },
-              "description": "<p>Scholar Educate and be educated. VIO✦DIA✦✦✦✦GRC✦✦SAV✦✦WRD✦SPI✦✦✦ [R HAND] Book (Bludgeon) [FASHION] Savant Robes (+2 Ardor; all attempts to deduce, analyze, or research something gain +2). [TRAIT] High Revolutionist (+1 die to DIA Checks analyzing social structures (Pessimism of the Intellect). Add +1 die to SPI Checks resisting coercion or despair (Optimism of the Will). However, suffer -1 dice when attempting to carouse or chill with others: all your theory is scaring off the studs and the huzz.)</p>",
+              "description": "<p>Bludgeon.</p>",
               "source": "Rules 2.0.3, p.43; Scholar Job",
               "gearSlot": "right",
               "equipped": false,
@@ -774,7 +774,7 @@
       "img": "systems/10kswordsfoundry/assets/icons/job.svg",
       "folder": "530e558a4d9ef398",
       "system": {
-        "description": "<p>Cryptomancer Become digital devils. VIO✦DIA✦✦✦GRC✦✦SAV✦✦✦✦WRD✦SPI✦✦ [R HAND] HaeCo Pistol (Keen Gun, 10 Bullets) [FASHION] Occultist Vesture (+1 Ardor. Can burn or install Health in place of Ardor. +1 SPI.) [TRAIT] Chills (When hidden threat, ambush, or supernatural presence lurks within [Level x 10]m, you feel it as a cold rush down your spine, like someone walking over your grave. You may then focus and ask the world one question: &quot;What is the nature of the danger?&quot;)</p>",
+        "description": "<p>Become digital devils.</p>",
         "source": "Rules 2.0.3, p.43",
         "category": "mind",
         "cultivations": {
@@ -798,7 +798,7 @@
               "weaponType": "ranged",
               "ammoFamily": "none",
               "properties": {},
-              "description": "<p>Cryptomancer Become digital devils. VIO✦DIA✦✦✦GRC✦✦SAV✦✦✦✦WRD✦SPI✦✦ [R HAND] HaeCo Pistol (Keen Gun, 10 Bullets) [FASHION] Occultist Vesture (+1 Ardor. Can burn or install Health in place of Ardor. +1 SPI.) [TRAIT] Chills (When hidden threat, ambush, or supernatural presence lurks within [Level x 10]m, you feel it as a cold rush down your spine, like someone walking over your grave. You may then focus and ask the world one question: &quot;What is the nature of the danger?&quot;)</p>",
+              "description": "<p>Keen Gun, 10 Bullets.</p>",
               "source": "Rules 2.0.3, p.43; Cryptomancer Job",
               "gearSlot": "right",
               "equipped": false,
@@ -878,7 +878,7 @@
       "img": "systems/10kswordsfoundry/assets/icons/job.svg",
       "folder": "530e558a4d9ef398",
       "system": {
-        "description": "<p>Occultist Touch the skin of God. VIO✦DIA✦✦GRC✦SAV✦✦WRD✦✦✦SPI✦✦✦✦ [R HAND] PuJaEso Occult Keris (OCCULT RITUAL DAGGER, Returns immediately after being thrown) [FASHION] Occultist Vesture (+1 Ardor. Can burn or install Health in place of Ardor. +1 SPI.) [TRAIT] Third Eye (You perceive Spirits, Ghosts, and Subtle Entities as readily as you perceive the living. They are always visible to you—shimmering, translucent, sometimes screaming silently. +1 to all Checks dealing with ghosts and spirits.)</p>",
+        "description": "<p>Touch the skin of God.</p>",
         "source": "Rules 2.0.3, p.43",
         "category": "mind",
         "cultivations": {
@@ -905,7 +905,7 @@
                 "concealable": true,
                 "ritual": true
               },
-              "description": "<p>Occultist Touch the skin of God. VIO✦DIA✦✦GRC✦SAV✦✦WRD✦✦✦SPI✦✦✦✦ [R HAND] PuJaEso Occult Keris (OCCULT RITUAL DAGGER, Returns immediately after being thrown) [FASHION] Occultist Vesture (+1 Ardor. Can burn or install Health in place of Ardor. +1 SPI.) [TRAIT] Third Eye (You perceive Spirits, Ghosts, and Subtle Entities as readily as you perceive the living. They are always visible to you—shimmering, translucent, sometimes screaming silently. +1 to all Checks dealing with ghosts and spirits.)</p>",
+              "description": "<p>OCCULT RITUAL DAGGER, Returns immediately after being thrown.</p>",
               "source": "Rules 2.0.3, p.43; Occultist Job",
               "gearSlot": "right",
               "equipped": false,
@@ -1001,7 +1001,7 @@
       "img": "systems/10kswordsfoundry/assets/icons/job.svg",
       "folder": "530e558a4d9ef398",
       "system": {
-        "description": "<p>Investigator Unravel the world. VIO✦DIA✦✦✦✦GRC✦✦✦SAV✦✦WRD✦✦SPI✦ [R HAND] TMNI Reaper ([FEROCIOUS] [SABER]) [FASHION] Hunterʼs Garb (1 Armor. As an Action, mark an entity that can be seen as the wearerʼs mark. The wearer deals +1 ATK against their mark.) [TRAIT] Dialectician (If you spend a full exchange (about 5 minutes) debating or persuading with logic, add +1 to your DIA pool. )</p>",
+        "description": "<p>Unravel the world.</p>",
         "source": "Rules 2.0.3, p.43",
         "category": "mind",
         "cultivations": {
@@ -1027,7 +1027,7 @@
               "properties": {
                 "ferocious": true
               },
-              "description": "<p>Investigator Unravel the world. VIO✦DIA✦✦✦✦GRC✦✦✦SAV✦✦WRD✦✦SPI✦ [R HAND] TMNI Reaper ([FEROCIOUS] [SABER]) [FASHION] Hunterʼs Garb (1 Armor. As an Action, mark an entity that can be seen as the wearerʼs mark. The wearer deals +1 ATK against their mark.) [TRAIT] Dialectician (If you spend a full exchange (about 5 minutes) debating or persuading with logic, add +1 to your DIA pool. )</p>",
+              "description": "<p>Ferocious Saber.</p>",
               "source": "Rules 2.0.3, p.43; Investigator Job",
               "gearSlot": "right",
               "equipped": false,
@@ -1102,7 +1102,7 @@
       "img": "systems/10kswordsfoundry/assets/icons/job.svg",
       "folder": "530e558a4d9ef398",
       "system": {
-        "description": "<p>Mechanist Build a better world. VIO✦✦DIA✦✦✦✦GRC✦✦SAV✦✦✦WRD✦SPI✦ [R HAND] Engineering Hammer (Noetic Bludgeon) [FASHION] Working Class Clothes (+1 Armor. +1 to all Checks dealing with courage, bravery, or staying steadfast. All forced movement are reduced by 1.) [TRAIT] Machinism (+1 dice to any Check to inspect, repair, modify, or sabotage technology.)</p>",
+        "description": "<p>Build a better world.</p>",
         "source": "Rules 2.0.3, p.43",
         "category": "mind",
         "cultivations": {
@@ -1128,7 +1128,7 @@
               "properties": {
                 "crushing": true
               },
-              "description": "<p>Mechanist Build a better world. VIO✦✦DIA✦✦✦✦GRC✦✦SAV✦✦✦WRD✦SPI✦ [R HAND] Engineering Hammer (Noetic Bludgeon) [FASHION] Working Class Clothes (+1 Armor. +1 to all Checks dealing with courage, bravery, or staying steadfast. All forced movement are reduced by 1.) [TRAIT] Machinism (+1 dice to any Check to inspect, repair, modify, or sabotage technology.)</p>",
+              "description": "<p>Noetic Bludgeon.</p>",
               "source": "Rules 2.0.3, p.43; Mechanist Job",
               "gearSlot": "right",
               "equipped": false,
@@ -1204,7 +1204,7 @@
       "img": "systems/10kswordsfoundry/assets/icons/job.svg",
       "folder": "530e558a4d9ef398",
       "system": {
-        "description": "<p>Diplomat Connect the world. VIO✦DIA✦GRC✦✦SAV✦✦WRD✦✦✦✦SPI✦✦✦ [R HAND] IN-ELIX Silksteel Ribbons (LYRIC WORN CONCEALABLE WHIP) [L HAND] IN-ELIX Silksteel Ribbons (LYRIC WORN CONCEALABLE WHIP) [FASHION] HW Silver Tongue Diplomacy Attire (+1 to all attempts to gain Leverage; +1 to all attempts to carouse or maneuver through high-culture locations; Can attempt to persuade someone through just looks or touch.) [TRAIT] Fist-Sized Muscle (Add +1 die to any WRD or SPI Check where you express truthfully. Add +1 when performing for an audience of at least 5 people).</p>",
+        "description": "<p>Connect the world.</p>",
         "source": "Rules 2.0.3, p.43",
         "category": "mind",
         "cultivations": {
@@ -1231,7 +1231,7 @@
                 "worn": true,
                 "concealable": true
               },
-              "description": "<p>Diplomat Connect the world. VIO✦DIA✦GRC✦✦SAV✦✦WRD✦✦✦✦SPI✦✦✦ [R HAND] IN-ELIX Silksteel Ribbons (LYRIC WORN CONCEALABLE WHIP) [L HAND] IN-ELIX Silksteel Ribbons (LYRIC WORN CONCEALABLE WHIP) [FASHION] HW Silver Tongue Diplomacy Attire (+1 to all attempts to gain Leverage; +1 to all attempts to carouse or maneuver through high-culture locations; Can attempt to persuade someone through just looks or touch.) [TRAIT] Fist-Sized Muscle (Add +1 die to any WRD or SPI Check where you express truthfully. Add +1 when performing for an audience of at least 5 people).</p>",
+              "description": "<p>Lyric Worn Concealable Whip.</p>",
               "source": "Rules 2.0.3, p.43; Diplomat Job",
               "gearSlot": "right",
               "equipped": false,
@@ -1257,7 +1257,7 @@
                 "worn": true,
                 "concealable": true
               },
-              "description": "<p>Diplomat Connect the world. VIO✦DIA✦GRC✦✦SAV✦✦WRD✦✦✦✦SPI✦✦✦ [R HAND] IN-ELIX Silksteel Ribbons (LYRIC WORN CONCEALABLE WHIP) [L HAND] IN-ELIX Silksteel Ribbons (LYRIC WORN CONCEALABLE WHIP) [FASHION] HW Silver Tongue Diplomacy Attire (+1 to all attempts to gain Leverage; +1 to all attempts to carouse or maneuver through high-culture locations; Can attempt to persuade someone through just looks or touch.) [TRAIT] Fist-Sized Muscle (Add +1 die to any WRD or SPI Check where you express truthfully. Add +1 when performing for an audience of at least 5 people).</p>",
+              "description": "<p>Lyric Worn Concealable Whip.</p>",
               "source": "Rules 2.0.3, p.43; Diplomat Job",
               "gearSlot": "left",
               "equipped": false,

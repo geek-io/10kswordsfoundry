@@ -6,6 +6,8 @@ export function activatePanel(sheet,panel) {
  let current='overview';
  for(const child of body?.children??[]) {
   if(child.matches('header,nav')) continue;
+  // Rules 2.1 templates name their panel explicitly; 2.0 templates keep heading-based placement.
+  if(child.dataset?.panel){current=child.dataset.panel;child.hidden=current!==panel;continue;}
   const heading=child.querySelector('legend,h2')?.textContent.trim();
   if(sheet.document.documentName==='Actor') {
    if(heading) current=['Traits','Job','Identity','Cultivation & Travel'].includes(heading)?'identity':['Gambits','Special Abilities','Conditions & Actions','Readied Combat Items','Health Sutra','Health, Armor & Ardor','AP & Ardor','Armor'].includes(heading)?'combat':['Weapons','Gear','Accessories','Ammo','Weapon Mods','Salvage','Gear Slots','Licenses','Fashion','Gear & Abilities','Magicks','Technicks'].includes(heading)?'inventory':heading==='Notes'?'notes':heading==='Active Effects'?'effects':'overview';
@@ -17,4 +19,4 @@ export function activatePanel(sheet,panel) {
  }
 }
 export function sheetPanel(event,target){activatePanel(this,target.dataset.panel);}
-export async function openCompendium(){const {openLibrary}=await import('./browser.mjs?v=0.1.51');return openLibrary();}
+export async function openCompendium(){const {openLibrary}=await import('./browser.mjs?v=0.2.14');return openLibrary();}

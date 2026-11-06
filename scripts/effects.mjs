@@ -1,4 +1,5 @@
-import { EQUIPMENT_TYPES } from "./equipment.mjs?v=0.1.51";
+import { EQUIPMENT_TYPES } from "./equipment.mjs?v=0.2.14";
+import { CORES, CULTIVATIONS_21, PARTS } from "./rules21.mjs?v=0.2.14";
 export function equipmentEffectSuppressed(item) {
   if(item.type==='trait')return item.system.active===false;
   return EQUIPMENT_TYPES.includes(item.type) && !item.system.equipped;
@@ -44,6 +45,11 @@ export const EFFECT_VARIABLES={
  "system.cultivations.vio":"Violence (VIO)","system.cultivations.dia":"Dialectics (DIA)","system.cultivations.grc":"Grace (GRC)","system.cultivations.sav":"Savvy (SAV)","system.cultivations.wrd":"Word (WRD)","system.cultivations.spi":"Spirit (SPI)",
  "system.health.max":"Maximum Health","system.armor.max":"Maximum Armor","system.ardor.max":"Maximum Ardor","system.movement":"Movement","system.checkBonus":"All checks bonus","system.attackBonus":"Attack bonus","system.defenseBonus":"Defense bonus","system.meridians":"Open Meridians","system.carry":"Carry capacity","system.sidhi":"Sidhi Stage"
 };
+// Rules 2.1 variables (PDF pp.5, 10, 31, 39, 77–85). Listed after the 2.0.3 variables.
+for(const [key,core] of Object.entries(CORES)) EFFECT_VARIABLES[`system.cores.${key}`]=`2.1 Core · ${core.label}`;
+for(const [key,skill] of Object.entries(CULTIVATIONS_21)) EFFECT_VARIABLES[`system.skills.${key}`]=`2.1 Cultivation · ${skill.label}`;
+for(const [key,part] of Object.entries(PARTS)){EFFECT_VARIABLES[`system.parts.${key}.hpBonus`]=`2.1 ${part.label} HP bonus`;EFFECT_VARIABLES[`system.parts.${key}.soakBase`]=`2.1 ${part.label} Soak`;}
+Object.assign(EFFECT_VARIABLES,{"system.moraleBonus":"2.1 Morale maximum bonus","system.speedBonus":"2.1 Speed bonus","system.moveBonus":"2.1 Movement bonus (m/s)"});
 export async function configureEffect(effect) { return effect.sheet.render({force:true}); }
 // Enhance the native editor instead of introducing another configuration window.
 export function effectVariableOptions(current='') {

@@ -15,3 +15,4 @@ Icons by Lorc from [Game-icons.net](https://game-icons.net/), licensed under [CC
 - weaponMod: [cog](https://game-icons.net/1x1/lorc/cog.html)
 - gambit: [poker-hand](https://game-icons.net/1x1/lorc/poker-hand.html)
 - salvage: [swap-bag](https://game-icons.net/1x1/lorc/swap-bag.html)
+- asset and barang: original artwork made for this system (stacked coins with a star; a burrowing insect).

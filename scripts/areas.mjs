@@ -50,6 +50,47 @@ export async function placeAbilityArea({sheet,actor,name,shape,size,range=0}){
   if(canvas.scene!==scene)throw Error('The scene changed. Use the ability again.');
   const targets=areaTargets(region,canvas.tokens.placeables,level);
   canvas.tokens.setTargets(targets,{mode:'replace'});
-  return {sceneId:scene.id,targetIds:targets,shapes:region.toObject().shapes};
+  const shapes=region.toObject().shapes;
+  // Keep the area on the scene so everyone can see what it covers (removed when the combat ends, or by deleting the Region).
+  try{await persistAbilityArea({scene,name,shapes,levels:level?[level]:[],actor});}
+  catch(error){ui.notifications.warn(`The area could not be kept on the scene: ${error.message}`);}
+  return {sceneId:scene.id,targetIds:targets,shapes};
  }finally{if(!wasMinimized)await sheet.maximize?.();}
+}
+
+const SYSTEM='10kswordsfoundry',SOCKET=`system.${SYSTEM}`;
+/** Region data for an ability area that stays visible to everyone. */
+export function abilityAreaRegion({name,shapes,levels=[],color,userId,actorUuid='',combatId=null}){
+ const V=globalThis.CONST?.REGION_VISIBILITY,O=globalThis.CONST?.DOCUMENT_OWNERSHIP_LEVELS;
+ const ownership={default:O?.OBSERVER??2};if(userId)ownership[userId]=O?.OWNER??3;
+ return {name:`${name} (area)`,color,shapes,levels,visibility:V?.ALWAYS??2,highlightMode:'coverage',displayMeasurements:true,hidden:false,locked:false,ownership,
+  flags:{[SYSTEM]:{abilityArea:{actorUuid,combatId,userId:userId??null}}}};
+}
+/** Creates the persistent area Region directly, or through the active GM when this user cannot create Regions. */
+export async function persistAbilityArea({scene,name,shapes,levels,actor}){
+ if(!scene||!shapes?.length)return null;
+ const combat=globalThis.game?.combats?.find?.(c=>c.started&&c.scene?.id===scene.id)??null;
+ const data=abilityAreaRegion({name,shapes,levels,color:game.user.color?.css??game.user.color,userId:game.user.id,actorUuid:actor?.uuid??'',combatId:combat?.id??null});
+ const RegionClass=globalThis.CONFIG?.Region?.documentClass;
+ const allowed=game.user.isGM||(RegionClass?new RegionClass(data,{parent:scene}).canUserModify(game.user,'create'):false);
+ if(allowed)return scene.createEmbeddedDocuments('Region',[data]);
+ if(!game.users?.activeGM)throw Error('a GM must be connected to keep it on the scene');
+ game.socket.emit(SOCKET,{action:'area-create',sceneId:scene.id,data,userId:game.user.id});
+ return null;
+}
+export function registerAbilityAreas(){
+ game.socket?.on(SOCKET,async message=>{
+  if(message?.action!=='area-create'||!game.user.isActiveGM)return;
+  const scene=game.scenes.get(message.sceneId);if(!scene)return;
+  const data=foundry.utils.deepClone(message.data);
+  if(!data?.flags?.[SYSTEM]?.abilityArea)return;
+  data.behaviors=[];data.ownership={default:CONST.DOCUMENT_OWNERSHIP_LEVELS.OBSERVER,[message.userId]:CONST.DOCUMENT_OWNERSHIP_LEVELS.OWNER};
+  await scene.createEmbeddedDocuments('Region',[data]);
+ });
+ // When a combat ends, the active GM removes the areas placed during it.
+ Hooks.on('deleteCombat',async combat=>{
+  if(!game.user.isActiveGM||!combat.scene)return;
+  const ids=combat.scene.regions.filter(r=>r.getFlag(SYSTEM,'abilityArea')?.combatId===combat.id).map(r=>r.id);
+  if(ids.length)await combat.scene.deleteEmbeddedDocuments('Region',ids);
+ });
 }

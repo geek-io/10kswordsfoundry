@@ -27,7 +27,7 @@ await checkModule(resolve("scripts/browser.mjs"));
 await checkModule(resolve("scripts/importer.mjs"));
 await checkModule(resolve("scripts/item-creator.mjs"));
 for(const font of ["Inter-Variable.ttf","Inter-OFL.txt"]) await access(`assets/fonts/${font}`);
-for (const path of [...manifest.esmodules, ...manifest.styles, ...manifest.languages.map(l => l.path), "templates/actor.hbs", "templates/item.hbs"]) await access(path);
+for (const path of [...manifest.esmodules, ...manifest.styles, ...manifest.languages.map(l => l.path), "templates/actor.hbs", "templates/actor-21.hbs", "templates/item.hbs"]) await access(path);
 for (const path of manifest.languages.map(l => l.path)) JSON.parse(await readFile(path, "utf8"));
 for (const file of await readdir("scripts")) if (file.endsWith(".mjs")) execFileSync(process.execPath, ["--check", `scripts/${file}`]);
 console.log("Manifest references, JSON, versions, and JavaScript syntax passed. Foundry runtime testing remains required.");

@@ -1,35 +1,40 @@
-import {WEAPON_REQUIREMENTS} from './special-abilities.mjs?v=0.1.51';
-import {animationContext,playItemAnimation} from './animations.mjs?v=0.1.51';
-import {useConsumable} from './consumables.mjs?v=0.1.51';
-import {CULTIVATION_DETAILS} from './cultivations.mjs?v=0.1.51';
-import {grantSnapshot} from './job-grants.mjs?v=0.1.51';
-import {defaultItemIcon} from './item-icons.mjs?v=0.1.51';
-import {abilityView,isAbility,isInternalized} from './ability-state.mjs?v=0.1.51';
-import {armorTrack} from './health.mjs?v=0.1.51';
-import {inflictedConditions,resolveOngoing} from './mod-conditions.mjs?v=0.1.51';
-import {useAbility,resourceSymbols,AREA_SHAPES} from "./abilities.mjs?v=0.1.51";
-import {RANKS,licenseIdentity,licenseLabel} from "./licenses.mjs?v=0.1.51";
-import {RARITIES} from "./rarity.mjs?v=0.1.51";
-import {interruptAttack} from "./interrupt.mjs?v=0.1.51";
-import {activatePanel,sheetPanel,openCompendium} from "./sheet-navigation.mjs?v=0.1.51";
-import {resolveDefense,recentAttacks,escapeHTML} from "./resolution.mjs?v=0.1.51";
-import {CONDITIONS,assertAction,restChanges} from "./conditions.mjs?v=0.1.51";
-import { sixesHTML, requireFreeHand, wieldedWeapons, tagBonus, inSamadhi, enterSamadhi } from "./roll-support.mjs?v=0.1.51";
-import { attackCultivation, combatModifiers } from "./combat.mjs?v=0.1.51";
-import { healthSutra } from "./health.mjs?v=0.1.51";
-import { createEffect, editEffect, toggleEffect, removeEffect, effectRows } from "./effects.mjs?v=0.1.51";
-import { editorValue, enriched } from "./rich-text.mjs?v=0.1.51";
-import { slotSummary } from "./slots.mjs?v=0.1.51";
-import { AMMO_CHOICES, AMMO_FAMILIES } from "./ammunition.mjs?v=0.1.51";
-import { MODIFIER_CHOICES, modifierProfile, AFFINITIES } from "./modifiers.mjs?v=0.1.51";
-import { UPGRADE_CHOICES, weaponDetails, validateWeapon, installMod } from "./weapons.mjs?v=0.1.51";
-import { LICENSE_CHOICES, LICENSE_DENIED, qualifiesForLicense } from "./licenses.mjs?v=0.1.51";
-import { applyJobToActor } from "./jobs.mjs?v=0.1.51";
-import { CULTIVATIONS, checkFormula, summarizeCheck } from "./rules.mjs?v=0.1.51";
+import {WEAPON_REQUIREMENTS} from './special-abilities.mjs?v=0.2.14';
+import {animationContext,playItemAnimation} from './animations.mjs?v=0.2.14';
+import {useConsumable} from './consumables.mjs?v=0.2.14';
+import {CULTIVATION_DETAILS} from './cultivations.mjs?v=0.2.14';
+import {grantSnapshot} from './job-grants.mjs?v=0.2.14';
+import {defaultItemIcon} from './item-icons.mjs?v=0.2.14';
+import {abilityView,isAbility,isInternalized} from './ability-state.mjs?v=0.2.14';
+import {armorTrack} from './health.mjs?v=0.2.14';
+import {inflictedConditions,resolveOngoing} from './mod-conditions.mjs?v=0.2.14';
+import {useAbility,resourceSymbols,AREA_SHAPES} from "./abilities.mjs?v=0.2.14";
+import {RANKS,licenseIdentity,licenseLabel} from "./licenses.mjs?v=0.2.14";
+import {RARITIES} from "./rarity.mjs?v=0.2.14";
+import {interruptAttack} from "./interrupt.mjs?v=0.2.14";
+import {activatePanel,sheetPanel,openCompendium} from "./sheet-navigation.mjs?v=0.2.14";
+import {resolveDefense,recentAttacks,escapeHTML} from "./resolution.mjs?v=0.2.14";
+import {CONDITIONS,assertAction,restChanges} from "./conditions.mjs?v=0.2.14";
+import { sixesHTML, requireFreeHand, wieldedWeapons, tagBonus, inSamadhi, enterSamadhi } from "./roll-support.mjs?v=0.2.14";
+import { attackCultivation, combatModifiers } from "./combat.mjs?v=0.2.14";
+import { healthSutra } from "./health.mjs?v=0.2.14";
+import { createEffect, editEffect, toggleEffect, removeEffect, effectRows } from "./effects.mjs?v=0.2.14";
+import { editorValue, enriched } from "./rich-text.mjs?v=0.2.14";
+import { slotSummary } from "./slots.mjs?v=0.2.14";
+import { AMMO_CHOICES, AMMO_FAMILIES } from "./ammunition.mjs?v=0.2.14";
+import { MODIFIER_CHOICES, modifierProfile, AFFINITIES } from "./modifiers.mjs?v=0.2.14";
+import { UPGRADE_CHOICES, weaponDetails, validateWeapon, installMod } from "./weapons.mjs?v=0.2.14";
+import { LICENSE_CHOICES, LICENSE_DENIED, qualifiesForLicense } from "./licenses.mjs?v=0.2.14";
+import { applyJobToActor } from "./jobs.mjs?v=0.2.14";
+import { CULTIVATIONS, checkFormula, summarizeCheck } from "./rules.mjs?v=0.2.14";
 
-import { boundedResources, resourceLimits } from "./resources.mjs?v=0.1.51";
+import { boundedResources, resourceLimits } from "./resources.mjs?v=0.2.14";
 
-import { preserveAndLinkWanderer } from "./token-linking.mjs?v=0.1.51";
+import { preserveAndLinkWanderer } from "./token-linking.mjs?v=0.2.14";
+import { usesRules21 } from "./rules-version.mjs?v=0.2.14";
+import { ACTIONS_21, ACTOR_TEMPLATE_21, prepareActor21, normalizeLists21, assetChoices } from "./sheet21.mjs?v=0.2.14";
+import { CORES, PARTS, PROFILES, GRIPS, WEAPON_MODS_21, qualifiesForLicense21 } from "./rules21.mjs?v=0.2.14";
+// 2.0.3 keeps its established License check; 2.1 maps the same prerequisites onto Cores.
+const licenseQualified = (system, license) => usesRules21() ? qualifiesForLicense21(system, license) : qualifiesForLicense(system, license);
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 
@@ -43,10 +48,16 @@ export class SwordsActorSheet extends HandlebarsApplicationMixin(foundry.applica
 
     form: { submitOnChange: true, closeOnSubmit: false },
 
-    actions: {useConsumable,toggleTraitEffect:SwordsActorSheet.toggleTraitEffect,toggleTrait:SwordsActorSheet.toggleTrait,addNew:SwordsActorSheet.addNew,autoSort:SwordsActorSheet.autoSort,resolveOngoing,interrupt:interruptAttack,sheetPanel,openCompendium, rest:SwordsActorSheet.rest, spendAction:SwordsActorSheet.spendAction, refreshActions:SwordsActorSheet.refreshActions, defense:SwordsActorSheet.defense, cast:useAbility,useAbility, endSamadhi:SwordsActorSheet.endSamadhi, attack: SwordsActorSheet.attack, setHealth: SwordsActorSheet.setHealth,setArmor:SwordsActorSheet.setArmor, check: SwordsActorSheet.rollCheck, editItem: SwordsActorSheet.editItem, linkWanderer: SwordsActorSheet.linkWanderer, choosePortrait: SwordsActorSheet.choosePortrait, toggleLicense: SwordsActorSheet.toggleLicense, toggleEquipment: SwordsActorSheet.toggleEquipment, removeEquipment: SwordsActorSheet.removeEquipment, createEffect, editEffect, toggleEffect, removeEffect }
+    actions: {useConsumable,toggleTraitEffect:SwordsActorSheet.toggleTraitEffect,toggleTrait:SwordsActorSheet.toggleTrait,addNew:SwordsActorSheet.addNew,autoSort:SwordsActorSheet.autoSort,resolveOngoing,interrupt:interruptAttack,sheetPanel,openCompendium, rest:SwordsActorSheet.rest, spendAction:SwordsActorSheet.spendAction, refreshActions:SwordsActorSheet.refreshActions, defense:SwordsActorSheet.defense, cast:useAbility,useAbility, endSamadhi:SwordsActorSheet.endSamadhi, attack: SwordsActorSheet.attack, setHealth: SwordsActorSheet.setHealth,setArmor:SwordsActorSheet.setArmor, check: SwordsActorSheet.rollCheck, editItem: SwordsActorSheet.editItem, linkWanderer: SwordsActorSheet.linkWanderer, choosePortrait: SwordsActorSheet.choosePortrait, toggleLicense: SwordsActorSheet.toggleLicense, toggleEquipment: SwordsActorSheet.toggleEquipment, removeEquipment: SwordsActorSheet.removeEquipment, createEffect, editEffect, toggleEffect, removeEffect, ...ACTIONS_21 }
   };
 
   static PARTS = { main: { template: "systems/10kswordsfoundry/templates/actor.hbs" } };
+
+  _configureRenderParts(options) {
+    const parts = super._configureRenderParts(options);
+    if (usesRules21() && parts.main) parts.main = {...parts.main, template: ACTOR_TEMPLATE_21};
+    return parts;
+  }
 
   async _onDropItem(event, item) {
     if (!this.isEditable) return null;
@@ -60,7 +71,7 @@ export class SwordsActorSheet extends HandlebarsApplicationMixin(foundry.applica
     await this.submit();
     try {
       if (item.type === "job") return await applyJobToActor(this.document, item.toObject(),{origin:item.parent?.documentName==='Actor'?item.flags?.['10kswordsfoundry']?.jobOrigin??item.uuid:item.uuid});
-      if (item.type === "license" && !qualifiesForLicense(this.document.system, item.system)) {
+      if (item.type === "license" && !licenseQualified(this.document.system, item.system)) {
         ui.notifications.warn(LICENSE_DENIED);
         return null;
       }
@@ -85,7 +96,7 @@ export class SwordsActorSheet extends HandlebarsApplicationMixin(foundry.applica
     for(const resource of ['health','armor','ardor']) for(const key of Object.keys(source[resource]??{})) if(source[resource][key]!==this.document.system[resource][key]) effective.push(`${resource} ${key}: ${this.document.system[resource][key]}`);
     for(const key of ['movement','checkBonus','attackBonus','defenseBonus']) if(source[key]!==this.document.system[key]) effective.push(`${key}: ${this.document.system[key]}`);
 
-    return Object.assign(context, {
+    Object.assign(context, {
 
       armorTrack:armorTrack(this.document.system.armor),
       specialAttackRows:sorted.filter(i=>i.type==='technique'||['fashion','weapon'].includes(i.type)&&i.system.equipped).flatMap(i=>(i.system.specialAttacks??[]).map((a,index)=>({...a,itemId:i.id,itemName:i.name,index,actionLabel:a.mode==='automatic'?'Activate':a.mode==='check'?'Check':'Attack'})).filter(a=>i.type!=='technique'||(a.activation?!isInternalized(i):!(i.system.installArdor>0)||isInternalized(i)))),
@@ -121,6 +132,9 @@ export class SwordsActorSheet extends HandlebarsApplicationMixin(foundry.applica
       ardorMinimumMax: source.ardor.burnt + source.ardor.installed
 
     });
+    // Rules 2.1 adds its own context after the shared inventory, effects and notes context.
+    if (usesRules21()) Object.assign(context, prepareActor21(this.document, context));
+    return context;
 
   }
 
@@ -213,6 +227,7 @@ export class SwordsActorSheet extends HandlebarsApplicationMixin(foundry.applica
   _processFormData(event, form, formData) {
 
     const data = super._processFormData(event, form, formData);
+    normalizeLists21(data.system, this.document.toObject?.().system ?? this.document.system);
 
     const system = foundry.utils.mergeObject(this.document.system.toObject(), data.system ?? {}, { inplace: false });
 
@@ -290,7 +305,7 @@ export class SwordsActorSheet extends HandlebarsApplicationMixin(foundry.applica
     await this.submit();
     const item = this.document.items.get(target.dataset.itemId);
     if (item?.type !== "license") return;
-    if (!item.system.equipped && !qualifiesForLicense(this.document.system, item.system)) {
+    if (!item.system.equipped && !licenseQualified(this.document.system, item.system)) {
       ui.notifications.warn(LICENSE_DENIED);
       return;
     }
@@ -715,7 +730,10 @@ export class SwordsItemSheet extends HandlebarsApplicationMixin(foundry.applicat
     return Object.assign(await super._prepareContext(options), {
       abilityModes:{attack:'Attack',check:'Check',automatic:'Automatic (no roll)'},targetEffectChoices:{'':'None','system.attackBonus':'Attack dice','system.defenseBonus':'Defense dice','system.checkBonus':'All check dice','system.movement':'Movement'},
       weaponRequirements:WEAPON_REQUIREMENTS,hasSpecialAttacks:['fashion','technique','weapon'].includes(this.document.type),specialAttacks:this.document.system.specialAttacks??[],damageChoices:{cut:'Cut',impact:'Impact',burn:'Burn',trauma:'Trauma',ruination:'Ruination'},
-      item: this.document, system:this.document.type==='license'?{...system,...licenseIdentity(system)}:system, rankChoices:RANKS,areaChoices:AREA_SHAPES, poolChoices:CULTIVATIONS, isConsumableGear:this.document.type==='gear',isGear:['gear','salvage'].includes(this.document.type),isGambit:this.document.type==='gambit',isTrait:this.document.type==='trait',showRarity:!['trait','job','technique','magick','license','gambit'].includes(this.document.type),isAbility:['magick','technique'].includes(this.document.type),isMagick:this.document.type==='magick', rarityChoices:RARITIES,
+      rules21:usesRules21(), flameWord:usesRules21()?'Flame':'Ardor', profileChoices21:{'':'Use 2.0 weapon type',...Object.fromEntries(Object.entries(PROFILES).filter(([key])=>key!=='empty').map(([key,p])=>[key,`${p.label}${p.ranged?` · ${p.range} m`:` · reach ${p.range} m`}`]))}, gripChoices21:{'':'—',...Object.fromEntries(Object.entries(GRIPS).map(([key,g])=>[key,`${g.label} (${g.mods} mods)`]))},
+      weaponMods21:Object.entries(WEAPON_MODS_21).map(([key,label])=>({key,label,checked:!!system.r21?.mods?.[key]})), coreChoices21:Object.fromEntries(Object.entries(CORES).map(([key,c])=>[key,c.label])),
+      coverage21:Object.entries(PARTS).map(([key,p])=>({key,label:p.label,value:system.r21?.coverage?.[key]??0})), hasArmor21:['fashion','accessory','gear','armor','salvage'].includes(this.document.type),
+      item: this.document, system:this.document.type==='license'?{...system,...licenseIdentity(system)}:system, rankChoices:RANKS,areaChoices:AREA_SHAPES, poolChoices:CULTIVATIONS, isConsumableGear:this.document.type==='gear',isGear:['gear','salvage'].includes(this.document.type),isGambit:this.document.type==='gambit',isTrait:this.document.type==='trait',isAsset:this.document.type==='asset',isBarang:this.document.type==='barang',assetChoices21:assetChoices(),showRarity:!['trait','job','technique','magick','license','gambit','asset','barang'].includes(this.document.type),isAbility:['magick','technique'].includes(this.document.type),isMagick:this.document.type==='magick', rarityChoices:RARITIES,
       descriptionEditor:foundry.utils.cleanHTML(editorValue(system.description)), descriptionHTML:await enriched(system.description,this.document), effects:effectRows(this.document),
       gearSlotChoices:this.document.type==='weapon'?{carry:'Auto hand',right:'Right Hand',left:'Left Hand',both:'Both Hands'}:{carry:'Carry',right:'Right Hand',left:'Left Hand',both:'Both Hands',fashion:'Fashion'},
       showGearSlot:['weapon','gear','armor'].includes(this.document.type),
@@ -749,5 +767,5 @@ export class SwordsItemSheet extends HandlebarsApplicationMixin(foundry.applicat
 
 }
 
-import { queueEquipment, changeEquipment, EQUIPMENT_TYPES, attackBonus, useWeapon, addEquipment } from "./equipment.mjs?v=0.1.51";
+import { queueEquipment, changeEquipment, EQUIPMENT_TYPES, attackBonus, useWeapon, addEquipment } from "./equipment.mjs?v=0.2.14";
 

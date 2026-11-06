@@ -1,0 +1,171 @@
+{
+ "folders": [
+  {
+   "_id": "1dcac31e58dee417",
+   "name": "Ammunition",
+   "folder": null,
+   "type": "Item",
+   "sorting": "a",
+   "sort": 0,
+   "color": null
+  }
+ ],
+ "items": [
+  {
+   "_id": "fef2e903461d87be",
+   "name": "Quiver of Arrows",
+   "type": "ammunition",
+   "img": "systems/10kswordsfoundry/assets/icons/ammunition.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>Bows require Arrows as ammunition (p.65). Discovery grants 2 quivers worth of 15 arrows (p.8).</p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.8",
+    "rarity": "common",
+    "quantity": 15,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "ammoType": "arrow",
+    "tags": "2.1, Ammunition",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0
+    }
+   },
+   "folder": "1dcac31e58dee417",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "ammunition-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "a82618c1c9534448",
+   "name": "Quiver of Bolts",
+   "type": "ammunition",
+   "img": "systems/10kswordsfoundry/assets/icons/ammunition.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>Crossbows require Bolts as ammunition (p.65). Discovery grants 2 quivers worth of 15 bolts (p.8).</p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.8",
+    "rarity": "common",
+    "quantity": 15,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "ammoType": "bolt",
+    "tags": "2.1, Ammunition",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0
+    }
+   },
+   "folder": "1dcac31e58dee417",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "ammunition-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "9f0447678799d053",
+   "name": "Handgun Magazine (Short Bullets)",
+   "type": "ammunition",
+   "img": "systems/10kswordsfoundry/assets/icons/ammunition.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>Handguns need short bullets. Modern handguns work with 12 round magazines; revolvers count by the bullet.</p><p><em>Catalog note: MORTAR Parabellum 9mm prints 15 rounds; adjust the quantity for that pistol.</em></p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.65",
+    "rarity": "common",
+    "quantity": 12,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "ammoType": "bullet",
+    "tags": "2.1, Ammunition",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0
+    }
+   },
+   "folder": "1dcac31e58dee417",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "ammunition-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "87db8afff7aadb35",
+   "name": "Longgun Magazine (Long Gun Bullets)",
+   "type": "ammunition",
+   "img": "systems/10kswordsfoundry/assets/icons/ammunition.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>Longguns need appropriate long gun bullets and often use magazines. Reloading replaces magazines. The TD-7 Ruyi holds 30 rounds.</p><p><em>Catalog note: The 2.0 ammo families group handgun and longgun bullets together as Gun.</em></p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.68",
+    "rarity": "common",
+    "quantity": 30,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "ammoType": "bullet",
+    "tags": "2.1, Ammunition",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0
+    }
+   },
+   "folder": "1dcac31e58dee417",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "ammunition-21"
+     }
+    }
+   }
+  }
+ ]
+}

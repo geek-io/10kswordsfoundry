@@ -1,20 +1,23 @@
-import { modifierProfile } from "./modifiers.mjs?v=0.1.51";
+import { modifierProfile } from "./modifiers.mjs?v=0.2.14";
+import { usesRules21 } from "./rules-version.mjs?v=0.2.14";
+// 2.1: armor covers Parts (p.66), so Fashion no longer shares one slot; DOUBLEHAND/GREAT/COLOSSAL need both hands.
+const hands = system => usesRules21() && ["doublehand","great","colossal"].some(key => system?.r21?.mods?.[key]) ? 2 : modifierProfile(system).hands;
 const PHYSICAL=['weapon','fashion','gear','accessory','ammunition','armor','salvage'];
 export function occupiedSlots(item) {
   if (!item?.system?.equipped || ["magick","technique","license"].includes(item.type)) return [];
-  if (item.type==='fashion') return ['fashion'];
+  if (item.type==='fashion') return usesRules21() ? [] : ['fashion'];
   if (item.type==='accessory'||item.type==='ammunition') return [];
   let slot=item.system.gearSlot??'carry';
-  if(item.type==='weapon' && slot!=='carry' && modifierProfile(item.system).hands===2) slot='both';
+  if(item.type==='weapon' && slot!=='carry' && hands(item.system)===2) slot='both';
   return slot==='both'?['left','right']:['left','right','fashion'].includes(slot)?[slot]:[];
 }
 export function assignSlot(next,items,id) {
   if(!next.system.equipped) return;
   if(next.type==='weapon' && next.system.gearSlot==='fashion') throw new Error('Weapons must use a hand slot.');
-  if(next.type==='weapon' && modifierProfile(next.system).hands===2) next.system.gearSlot='both';
+  if(next.type==='weapon' && hands(next.system)===2) next.system.gearSlot='both';
   if(next.type==='weapon' && ['carry',undefined].includes(next.system.gearSlot)) {
     const occupied=new Set(items.filter(item=>item._id!==id).flatMap(occupiedSlots));
-    next.system.gearSlot=modifierProfile(next.system).hands===2?'both':!occupied.has('right')?'right':'left';
+    next.system.gearSlot=hands(next.system)===2?'both':!occupied.has('right')?'right':'left';
   }
   const wanted=occupiedSlots(next);
   const conflicts=items.filter(item=>item._id!==id && occupiedSlots(item).some(slot=>wanted.includes(slot)));

@@ -1,0 +1,91 @@
+{
+ "folders": [
+  {
+   "_id": "5864d8d6198f4c9c",
+   "name": "Accessories",
+   "folder": null,
+   "type": "Item",
+   "sorting": "a",
+   "sort": 0,
+   "color": null
+  }
+ ],
+ "items": [
+  {
+   "_id": "03654d61557be5b2",
+   "name": "Clean Black Necktie",
+   "type": "accessory",
+   "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
+   "system": {
+    "description": "<p>A surprisingly spotless and clean necktie. Perhaps to remind you of who you are.</p><p><strong>REMINDS YOU YOU'RE A DETECTIVE. +2 MORALE.</strong></p><p>Weight not printed.</p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.35",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "tags": "2.1, Accessory",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 2,
+     "weight": 0.0
+    }
+   },
+   "effects": [],
+   "folder": "5864d8d6198f4c9c",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "accessories-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "0a18c34d2ca37d0c",
+   "name": "Puterijasa Featherstep Clogs",
+   "type": "accessory",
+   "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
+   "system": {
+    "description": "<p>A pair of clogs with intramaterial featherstepping Sidhi.</p><p><strong>The wearer can jump up to double their movement speed and does not suffer fall damage. Also as long as she has 20kg or less in her carrying capacity, she is considered as being half her weight so she can walk upon treacherous or fragile surfaces.</strong></p><p>Weight not printed.</p>",
+    "source": "Rules 2.1 (Red Kalpa Manuscript), p.35",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "gearSlot": "carry",
+    "tags": "2.1, Accessory",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.0
+    }
+   },
+   "effects": [],
+   "folder": "5864d8d6198f4c9c",
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "accessories-21"
+     }
+    }
+   }
+  }
+ ]
+}

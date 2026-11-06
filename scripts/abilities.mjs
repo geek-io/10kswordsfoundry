@@ -1,18 +1,19 @@
-import {magickAreaSize} from './fashion-effects.mjs?v=0.1.51';
-import {abilityArea,placeAbilityArea,AREA_SHAPES} from './areas.mjs?v=0.1.51';
-export {AREA_SHAPES} from './areas.mjs?v=0.1.51';
-import {eligibleWeapon,specialAttackProfile,WEAPON_REQUIREMENTS} from './special-abilities.mjs?v=0.1.51';
-import {useWeapon} from './equipment.mjs?v=0.1.51';
-import {animationContext,playItemAnimation} from './animations.mjs?v=0.1.51';
-import {effectControls,abilityEffectData} from './ability-effects.mjs?v=0.1.51';
-import {isInternalized,installationChanges} from './ability-state.mjs?v=0.1.51';
-import {CULTIVATIONS,checkFormula,summarizeCheck} from './rules.mjs?v=0.1.51';
-import {assertAction} from './conditions.mjs?v=0.1.51';
-import {requireFreeHand,inSamadhi,enterSamadhi,sixesHTML} from './roll-support.mjs?v=0.1.51';
-import {occupiedSlots} from './slots.mjs?v=0.1.51';
-import {queueEquipment} from './equipment.mjs?v=0.1.51';
-import {healthSutra} from './health.mjs?v=0.1.51';
-import {escapeHTML as esc} from './resolution.mjs?v=0.1.51';
+import {magickAreaSize} from './fashion-effects.mjs?v=0.2.14';
+import {abilityArea,placeAbilityArea,AREA_SHAPES} from './areas.mjs?v=0.2.14';
+export {AREA_SHAPES} from './areas.mjs?v=0.2.14';
+import {eligibleWeapon,specialAttackProfile,WEAPON_REQUIREMENTS} from './special-abilities.mjs?v=0.2.14';
+import {useWeapon} from './equipment.mjs?v=0.2.14';
+import {saveChanges} from './save-changes.mjs?v=0.2.14';
+import {animationContext,playItemAnimation} from './animations.mjs?v=0.2.14';
+import {effectControls,abilityEffectData} from './ability-effects.mjs?v=0.2.14';
+import {isInternalized,installationChanges} from './ability-state.mjs?v=0.2.14';
+import {CULTIVATIONS,checkFormula,summarizeCheck} from './rules.mjs?v=0.2.14';
+import {assertAction} from './conditions.mjs?v=0.2.14';
+import {requireFreeHand,inSamadhi,enterSamadhi,sixesHTML} from './roll-support.mjs?v=0.2.14';
+import {occupiedSlots} from './slots.mjs?v=0.2.14';
+import {queueEquipment} from './equipment.mjs?v=0.2.14';
+import {healthSutra} from './health.mjs?v=0.2.14';
+import {escapeHTML as esc} from './resolution.mjs?v=0.2.14';
 
 const select=(name,choices,value)=>`<select name="${name}">${Object.entries(choices).map(([key,label])=>`<option value="${esc(key)}" ${key===value?'selected':''}>${esc(label)}</option>`).join('')}</select>`;
 export function abilityCosts(source,item) {
@@ -92,7 +93,7 @@ export async function useAbility(event,target) {
     costs.items=installationChanges(actor.toObject(),current.id,0);restore.items=actor.toObject().items;
    }
    if(!input.attack&&!input.check){
-    if(!await actor.update(costs))throw new Error('Ability costs could not be saved.');
+    if(!await saveChanges(actor,costs))throw new Error('Ability costs could not be saved.');
     let animationMessage;
     try{animationMessage=await foundry.documents.ChatMessage.create({speaker:foundry.documents.ChatMessage.getSpeaker({actor}),content:`<p>${esc(abilityName)} used. Spent ${useSystem.apCost??1} ✦; burnt ${useSystem.burnArdor??0} ✹; installed ${useSystem.installArdor??0} ❂.</p>${enhancementNote}${specialNote}${effectControls(useSystem)}`,flags:{'10kswordsfoundry':{animationHandled:true,...(special?{abilityEffect:abilityEffectData(actor,item,specialIndex,useSystem,abilityName)}:{})}}});}
     catch(error){if(!await actor.update(restore))throw new Error('Chat failed and ability costs could not be restored. Check AP and Ardor.');throw error;}
@@ -106,7 +107,7 @@ export async function useAbility(event,target) {
    const summary=summarizeCheck(results,input.attack?1:input.demand);
    const damage=attackData?.profile.damage??currentSystem.damageType??'impact';
    const profile={damage,ignoresArmor:['burn','trauma','ruination'].includes(damage),armorPerWound:1,extraWounds:enhancement?(current.system.enhancement.extraWounds??0):0,criticalExtra:0,fivePlusExtra:0,keys:[],...(attackData?.profile??{})};
-   if(!await actor.update(costs))throw new Error('Ability costs could not be saved.');
+   if(!await saveChanges(actor,costs))throw new Error('Ability costs could not be saved.');
    let animationMessage;
    try {
     animationMessage=await roll.toMessage({speaker:foundry.documents.ChatMessage.getSpeaker({actor}),flags:{'10kswordsfoundry':{animationHandled:true,...(input.attack?{attack:{name:abilityName,actorUuid:actor.uuid,results,profile,defensePool:input.defensePool,area:{shape:input.shape,size:input.size,...placedArea}}}:{}),...(special?{abilityEffect:abilityEffectData(actor,item,specialIndex,useSystem,abilityName)}:{})}},flavor:`${esc(abilityName)} · ${CULTIVATIONS[input.attackPool]}: ${summary.strikes} Strikes. ${sixesHTML(summary.sixes)}. Pool: ${pool}.<p>${input.attack?`Attack vs ${CULTIVATIONS[input.defensePool]}; ${damage} damage. Resolve using linked Defense.`:`Demand ${input.demand}: ${summary.success?'Success':'Failure'}.`}</p><p>${AREA_SHAPES[input.shape]}${input.shape==='none'?'':` · ${input.size} m`}. Spent ${useSystem.apCost??1} ✦; burnt ${useSystem.burnArdor??0} ✹; installed ${useSystem.installArdor??0} ❂.</p>${useSystem.convertStrikes?'<p>For resolution, all dice showing 4+ become 6s. The dice display shows the original roll.</p>':profile.allCritical?'<p>All Strikes count as Critical Strikes for Defense.</p>':''}${enhancementNote}${specialNote}${effectControls(useSystem)}`},{messageMode:game.settings.get('core','messageMode')});

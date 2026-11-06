@@ -40,3 +40,25 @@ test('native placement cancels cleanly, limits range and restores sheet; confirm
  canvas.regions.placeRegion=async()=>{throw Error('placement failed');};
  await assert.rejects(placeAbilityArea(args),/placement failed/);assert.equal(max,3);
 });
+test('a confirmed area stays on the scene as a Region visible to everyone, tagged with the running combat',async()=>{
+ const actor={uuid:'Actor.a'},source={id:'a',actor,center:{x:0,y:0},document:{level:'floor',elevation:0}};
+ let created=null,warned='';
+ globalThis.CONST={REGION_VISIBILITY:{ALWAYS:2},DOCUMENT_OWNERSHIP_LEVELS:{OBSERVER:2,OWNER:3}};
+ const scene={id:'scene',async createEmbeddedDocuments(type,data){created={type,data};return data;}};
+ globalThis.game={user:{id:'u1',isGM:true,color:{css:'#ff0000'}},combats:[{started:true,scene,id:'c1'}]};
+ globalThis.ui={notifications:{info(){},warn(m){warned=m;}}};
+ globalThis.canvas={ready:true,scene,level:{id:'floor'},dimensions:{distancePixels:100},tokens:{placeables:[source],setTargets(){}},regions:{async placeRegion(data){return {testPoint:()=>true,toObject:()=>data};}}};
+ await placeAbilityArea({actor,sheet:{},name:'Scathe',shape:'circle',size:2,range:0});
+ assert.equal(warned,'');
+ assert.equal(created.type,'Region');
+ const region=created.data[0];
+ assert.equal(region.name,'Scathe (area)');
+ assert.equal(region.visibility,2);
+ assert.equal(region.shapes[0].radius,200);
+ assert.deepEqual(region.ownership,{default:2,u1:3});
+ assert.deepEqual(region.flags['10kswordsfoundry'].abilityArea,{actorUuid:'Actor.a',combatId:'c1',userId:'u1'});
+ globalThis.game.user.isGM=false;game.users={activeGM:null};
+ await placeAbilityArea({actor,sheet:{},name:'Scathe',shape:'circle',size:2,range:0});
+ assert.match(warned,/GM must be connected/);
+ delete globalThis.CONST;
+});

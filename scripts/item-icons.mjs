@@ -1,4 +1,4 @@
-export const ITEM_ICONS=Object.fromEntries(['weapon','fashion','license','technique','magick','gear','accessory','ammunition','job','trait','weaponMod','gambit','salvage'].map(type=>[type,`systems/10kswordsfoundry/assets/icons/${type}.svg`]));
+export const ITEM_ICONS=Object.fromEntries(['weapon','fashion','license','technique','magick','gear','accessory','ammunition','job','trait','weaponMod','gambit','salvage','asset','barang'].map(type=>[type,`systems/10kswordsfoundry/assets/icons/${type}.svg`]));
 export function defaultItemIcon(type,img){return !img||['icons/svg/item-bag.svg','icons/svg/mystery-man.svg'].includes(img)?ITEM_ICONS[type]??img:img;}
 export function setItemIcon(document,data){const img=defaultItemIcon(data.type??document.type,data.img);if(img&&img!==data.img)document.updateSource({img});}
 export async function migrateItemIcons(){

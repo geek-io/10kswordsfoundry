@@ -1,14 +1,181 @@
 # 10,000 Swords Against Heaven for Foundry VTT
 
-A Foundry VTT v14 game system for *10,000 Swords Against Heaven*, based on rules version 2.0.3.
+A Foundry VTT v14 game system for *10,000 Swords Against Heaven*, based on rules version 2.0.3, with an opt-in **2.1 (2.1 Alpha)** ruleset in testing.
 
 - System by: Geek IO Dev Team
 
 ![This Is 1 Sword Against Heaven](assets/character-logo.png)  
 
+
 [Official 10K Swords Discord Link](https://discord.gg/k8fHKrNP)  
 [Official Geek IO Discord Link](https://www.geek-io.net/discord)  
 
+All my work is always free, but a little bit of help is always appreciated!  
+<a href="https://patreon.com/geekioshow"><img src="assets/Patreon-Logo.png" alt="All my work is always free, but a little bit of help is always appreciated" width="240"></a>
+
+# v 0.2.14
+
+**Fixes from table testing (both rulesets).** No rules changed.
+
+- **Free special attacks work.** A Special Ability, Technick or Magick that costs 0 AP and no Ardor/Flame no longer fails with "Ability costs could not be saved."
+- **Arrow keys move the selected token** one grid space (diagonals by holding two arrows; Shift rotates, as with WASD). With nothing selected the arrow keys still pan the map. Players can change or clear these keys under Configure Controls, in the system section.
+- **Job descriptions are tidy.** The Jobs compendium kept the whole book block (Cultivations, loadout and traits) in the Description, and every starting weapon copied that whole block too. A Job's Description now holds its tagline; its Cultivations and starting items are on the Details tab, and each starting item gets its own note (for example "Keen Gun, 10 Bullets"). Jobs and starting items already in the world and on characters are tidied once when the GM loads the world; a Job with no starting items dropped on it keeps its loadout as a short list.
+- **Job text import:** pasting a Job straight from the book (with ✦ ratings) now fills the six Cultivations and keeps the Description to the tagline and a starting-loadout list.
+
+# v 0.2.13
+
+**2.1 rules: the 2.1 Alpha and the playtest Sects.** The 2.0.3 rules are unchanged.
+
+- **Three new Sects** in the 2.1 compendiums: **Imma** (healing White Sorcery), **Jyotisha** (Astral star magick) and **Zhongkui** (Spirit Binding exorcists), each with its Magicks, Technicks, gear and Barang. 2.1 Sects now holds 211 Technicks and Magicks across 16 Sects; 2.1 Sect Gear has 41 items; 2.1 Barang has 16.
+- **Sect Cultivations renamed:** Devil Tiger Blade → Demon Body, Liver Eating → Devil Beast, Heaven Raving Dragon → Sky Dragon, Eskaton Magick → Black Sorcery, Sun Piercing Killing Wind → Solar Bow, Dog Laughs At God → Vajra Fist, Fire Lancing → Red Gun, Techgnosticism → Techgnosis, The Immortal Science → Immortal Science, Great Sage Style → Sage Body. Characters that already have the old names keep working: Licenses, formulas and casting accept both.
+- **Updated Sect entries:** new Technicks and Magicks for Asuri, Aswang, Eskatonian, Fangshi and Wukong; several renamed or no longer printed; new costs and text where the playtest Sects changed them; gear changes such as the Huojianqiang (Rate 15), Hermetic Robes and Revolt Suit. Details are in `docs/sect-catalog-2.1.md`.
+- **Fangshi pills and elixirs** in 2.1 Consumables: Healing Pill (heals 2), Antidote, Fulfilness and Fireball Pills, Chakra Elixir (2 burnt Flame), Disguise, Thunderbolt and Inferno Elixirs, and the Five Dragons Pill.
+- **Basic Move** = Physique + Motorics m/s, replacing Walk/Run/Sprint. The sheet shows how far that is in a 3-second Cut and swimming at half.
+- **Cleaved** at the negative of half a Part's maximum HP (rounded down), so a 5 HP Part is Cleaved at -2. The damage track is shorter to match.
+- **Scorch:** a Technick or Magick can now go past 0 Flame after a confirmation. Each point of Scorch is -1 to all Checks and triggers a Deviation Check (Physique + Adamance + Sidhi Stage vs 3 + Scorch); a failure rolls the d6 Deviation table on the chat card. Recovering or releasing Flame clears Scorch first. The Flame box shows Scorch.
+- **Samadhi:** a new condition giving +2 to all Checks and ignoring dice penalties. Rolling Strikes equal to the Demand + 3 on a Check (Flow) switches it on.
+- **Suppression Fire:** a firing mode for ranged weapons of Rate 15 or more. It posts the Heart + Stillness vs Demand 3 test for everyone in the 3 m area instead of rolling Openings.
+- **New conditions:** Burning (-2 to all Checks, 2 damage to a random Part every 3 seconds), Suppressed, Samadhi. Juggled characters also cannot Counter.
+- **Smaller changes:** "Moving while Casting (-2)" in the Cast dialog; the Combat tracker's Interject is now **Cut-In**; Technick cards describe the Self-Flame for the Flame spent; adding a Sect Technick or Magick without that Sect's Barang ingested shows a reminder (a new Sect License needs it); page references point to the Alpha.
+
+# v 0.2.12
+
+- **Renames:** Voice is now **Face**, Spirit is now **Heart**, and Ardor is now **Flame** on the 2.1 sheet, rolls, chat cards and 2.1 compendiums. Sect formulas written with the old names (such as [VOICE x 5]) still work. The 2.0.3 sheet still says Ardor.
+- **Assets are items.** Drag them from the new **2.1 Assets** compendium (all 35 d36 Assets with their full text) onto the Identity tab. Each Asset shows its Stars and a "+ ✦" button that spends 4 × the new Star in XP. Mountain Frame, Anvil Head, Spring-Tendon Legs, Hummingbird Pulse and Sleepless Soul still apply automatically. Rows from the old Asset list are turned into Asset items when the GM next loads the world.
+- **Barang are items.** The new **2.1 Barang** compendium has each Sect's Barang. The Overview tab lists your Barang with **Ingest** and **Eject**. Ingesting one ejects any other and can add its Sect's Esoteric Cultivation at ✦✦; ejecting keeps everything you have Cultivated.
+- **Body Part HP = 3 + Physique**, calculated automatically. HP bonuses and Assets still add on top.
+- **KILL THE BUDDHA Openings:** 1 = Whiff, 2–3 = Quick, 4–5 = Solid, 6 = Perfect. Dice of 4+ still count as Strikes for the Shoot Demand and random hit locations.
+- **From the spoiler manuscript:**
+  - Flame is generally 2 + Sidhi Stage. The Flame box shows that number and offers a button to set it.
+  - Meridians are 2 + Sidhi Stage. The Technicks list warns when you hold more Magicks and Technicks than open Meridians.
+  - ARTIFACT weapons now deal +1 damage.
+  - World Being Gambits give one predetermined Opening per die (Quick, Quick, Solid, Perfect, repeating).
+  - The 2.1 Weapons, Armor and Accessories compendiums follow the new Panoply. The TD-7 Ruyi is now Rate 30 and the Parabellum 9mm Rate 10. The Kongo Breastplate is -2 Motorics. The YEI Crown has 2 Soak. The Official's Coat covers all limbs. New items: MORTAR AT-CR Cudgel, Kongo Helm and Gauntlets, YEI Worker Bottoms, Puterijasa Adept Cowl and Robes, and Featherstep Clogs.
+- **2.1 Sects** now come from the second Sect spoilers: 171 Technicks and Magicks across 13 Sects (new: **Houyi** and **Techgnostic**), with the printed cost and text changes. Some entries were dropped (Aegis) or renamed (Self-Sacrificing Sage). **2.1 Sect Gear** adds the Houyi Tonggong, the Vipassanadhanu Garb and the Techgnostic COMP.
+
+# v 0.2.11
+
+**Area templates stay on the scene** (both 2.0.3 and 2.1).
+
+- After you place the area of a Magick, Technick or Special Ability, it now stays on the map as a shaded Region with its measurements, so everyone can see who it covers. Before, it vanished as soon as it was placed.
+- The area is visible to everyone. Its owner and the GM can move or delete it on the Regions layer.
+- Areas placed during a combat encounter are removed automatically when that encounter ends. Areas placed outside combat stay until you delete them.
+- Players who aren't allowed to create Regions have their area created by the connected GM.
+
+# v 0.2.10
+
+**Easier-to-see 6s** in both rulesets.
+
+- **2.0.3:** in the dice tooltip of every Check and attack, each 6 (Perfect Strike) is now a bold white number on a bright magenta chip with a glow, instead of green text. Strikes of 4 and 5 keep their blue.
+- **2.1:** 6s (Perfect Openings) on KILL THE BUDDHA, Check and casting cards, and the Perfect count, use the same bold magenta chip instead of dark green.
+
+# v 0.2.9
+
+**2.1 sheet layout.** The Cultivations column heading now reads "XP to" over "Advance" on two lines, right-aligned above the XP buttons.
+
+# v 0.2.8
+
+**2.1 sheet layout.**
+
+- The **Cultivations** heading is centered in its box.
+- Each Cultivation column has an **XP to Advance** heading above the buttons that raise a Cultivation and show its XP cost.
+
+# v 0.2.7
+
+**2.1 Change God's Mind**: social influence, Social Defense, Disposition and Persistence (pp.39–52; 2.1 rules only).
+
+- **Change God's Mind.** Target a token and click **Change God's Mind** in the Attachments section. Say what you want, what you ask for (Favor, Risk, Ruin, implanting, strengthening or weakening an Attachment, or Inflaming an emotion) and your approach: Cult of Personality, Bleeding Heart, Weapon of Critique, Spit In The Face Of God, Aesthetic Glossolalia, Thews and Sinews (all Voice), Threatening (Physique + Beast Shrine), the written word or gestures alone (pp.42–43, 47, 49–50).
+- **Modifiers.** −3 when you can't leverage an Attachment as strong as the request needs (Held for a Favor, Firm for a Risk, Heart for a Ruin), the target's **Disposition** (−6 to +4), **mob** size (−1 to −5), a **material shift** (+4) or a **shaky** Attachment (+3) (pp.42–52).
+- **Defend.** The target's owner or the GM clicks **Defend** on the card, marks which of the target's own Attachments oppose or align with the request, and rolls Spirit + Stillness with **Social Defense** (+2/+4/+6 opposing, −1/−2/−3 aligned, equal ones cancel). Gestures alone give the defender +3; a mob can defend with half its pool as static Strikes. Ties go to the defender (pp.43, 48, 50).
+- **Persistence.** A convinced target can spend 1/2/3 Morale (Favor/Risk/Ruin) to reject it; refusing an action also needs a different Attachment at least as strong as the one leveraged (pp.48–49). Morale is deducted from the sheet.
+- **Disposition.** Every 2.1 sheet has a Disposition toward the Wanderers, with **Roll 2d6** for strangers; it fills in the Change God's Mind dialog automatically (pp.46–47).
+- The card reminds you that threats always leave a negative Held Attachment, that strengthening Attachments is a weekly or monthly Social Project, and gives written pieces their reading Demand.
+
+# v 0.2.6
+
+**2.1 KILL THE BUDDHA exchange**: everyone's Openings resolved together on one chat card (2.1 rules only; 2.0.3 attacks are unchanged).
+
+- **Start an exchange.** Every 2.1 KILL THE BUDDHA card has **Start KILL THE BUDDHA exchange** and, when one is open, **Join open exchange**. A defender who clicks **Respond: KILL THE BUDDHA** on the attacker's card joins its exchange automatically.
+- **Speed Tiers.** The card shows each combatant's Quick, Solid, Perfect and Whiff Openings. Quick Openings act first, then Solid, then Perfect; the GM clicks **Next tier**, and unused Openings of the finished tier are lost (p.23). Someone who joins late loses the Openings of tiers that have already passed (Interruption, p.27).
+- **Act.** Commit an Opening to a maneuver, optionally aimed at another combatant. The dialog lists what each rank allows (pp.24–25).
+- **Counter.** Counter any maneuver of the current tier with an Opening of equal or higher rank (p.26). A **Greater Counter** (Solid vs Quick, Perfect vs Solid) grants a Quick Opening and an **Overwhelming Counter** (Perfect vs Quick) a Minor or Solid one, usable at once and open to Counter-against-Counter (p.27).
+- **Fuse and Sidhi.** Fuse two equal Openings into the next rank, at most one extra Perfect (p.25); Cultivators can note burning 1 Sidhi to raise an Opening or turn a Whiff into a Quick (p.26).
+- **Apply damage** on any maneuver that still lands opens the target's damage dialog with the attacker's weapon damage and CRUSHING; Quick strikes default to the Torso.
+- Players' actions are applied by the connected GM, so a GM needs to be online.
+
+# v 0.2.5
+
+**2.1 Swords, Cuts and Speed** in Foundry's Combat tracker (2.1 rules only; 2.0.3 combat is unchanged).
+
+- **The Sword.** In 2.1 worlds the Combat tracker shows a Sword panel. The GM clicks **Set Sword** to name the temporal anchor ("The skyship crashes into the spire"), the number of Cuts (4 by default; 6 or 8 for longer scenes) and how long each Cut lasts (3, 6 or 12 seconds for violence; minutes for debates) (pp.6–7).
+- **Cuts.** Each Round is one Cut. The panel shows the Cuts from the flat start to the sharp tip, and each new Cut posts a chat note. When the last Cut passes, chat announces that the Sword has ended and the anchor comes to pass, so the GM can decide whether a new Sword is needed.
+- **Speed order.** Initiative is the character's Speed (Physique + Wits + Peripheral Oracle + Stillness) with no roll, and the **lowest Speed declares and acts first** (p.10). Speeds reset at the start of every Cut.
+- **Interject.** Right-click a faster combatant who hasn't acted yet and choose **Interject now (2.1)** to give up their place and act right away, before the slower actor whose turn it is (p.10). The GM or the combatant's owner can do this.
+
+# v 0.2.4
+
+**2.1 Technick activation** on the 2.1 sheet's Combat tab (2.1 rules only; 2.0.3 Technicks are unchanged).
+
+- **Technicks list.** Every Technick shows its Needs (✹ burn, ❂ install), weapon requirement and License, and why it can't be used yet if something is missing.
+- **License check.** A Technick needs its Esoteric Cultivation at the printed Stars (e.g. Devil Tiger Blade ✦✦). Add the Cultivation under Esoteric Cultivations; the Activate button unlocks once the Stars are high enough.
+- **Weapon check.** Requirements like SWORDS or SABERS, POLEARM OR DAGGER, EMPTY HAND, [AUTO] weapon, GREAT/COLOSSAL or "needs ammo" are checked against your equipped weapons and free hands.
+- **Activate and Install.** ✹ Technicks burn their Ardor when activated. ❂ Technicks install their Ardor and stay installed until you click **Release**, which returns it. Activation checks your available Ardor first; "✹ [X]" Technicks ask how much extra to burn.
+- **Formulas worked out.** Sect formulas such as [3 x DEVIL TIGER BLADE] or [VOICE x 5] are calculated for your character in the dialog and on the chat card.
+- **Areas, targets and attacks.** You can place an area to target everyone inside, the card lists targets with Apply damage buttons, and **Then roll KILL THE BUDDHA** (ticked for weapon Technicks) follows straight into the attack.
+- **Sidhi Deviation** (p.18) is a new 2.1 condition: every Cultivation counts as 1 and Magicks and Technicks can't be used.
+- **Sidhi Realm** (Identity tab): Desire, Form or Formless. The Technicks list counts your Magicks and Technicks against the Realm's limit of 8, 16 or 32 (pp.100–101).
+
+# v 0.2.3
+
+**2.1 targeting and damage from the chat card** (2.1 rules only; 2.0.3 attacks are unchanged).
+
+- **KILL THE BUDDHA reads your targets.** Target tokens (T) before attacking. The dialog lists them and fills in the distance from your token, so Firefight range penalties apply automatically (pp.29–30). You can still change the distance by hand.
+- **Reach and range warnings.** The chat card shows each target's distance and flags melee targets beyond the weapon's Reach and ranged targets beyond the weapon's range (pp.22, 64–67).
+- **Respond: KILL THE BUDDHA.** The defender's owner (or the GM) clicks this on the attacker's card to roll their own KILL THE BUDDHA, already aimed back at the attacker (p.22).
+- **Apply damage.** The GM or the target's owner clicks this to damage the target's Part. The dialog starts with the weapon's damage, the called or Ambush Part (or the first random hit location from Burst/Full Auto) and CRUSHING, then removes Soak before HP and reports Disabled/Cleaved consequences as before (pp.31–38).
+- **Area Magicks.** When a 2.1 Magick unleashes and has an area (Shape and Size, or "3 m burst"-style text in its description), you place the area on the scene and the tokens inside become targets. The cast card lists them with Apply damage buttons (p.98).
+
+# v 0.2.2
+
+- **2.1 Weapons:** the listed Panoply, one blank weapon per profile, and the one-shot's weapons and tower shield.
+- **2.1 Armor:** head, torso, arm, and leg armor with per-Part Soak. Kongo, Official's Coat, Silkspeaker Legs, and Red Eye Ring changes apply as Active Effects.
+- **2.1 Consumables, Accessories, and Ammunition:** healing pills and elixirs, the Clean Black Necktie, and quivers and magazines.
+- Under 2.1, several armor pieces can be worn at once, and DOUBLEHAND, GREAT, and COLOSSAL weapons take both hands.
+- The 2.1 sheet adds up item weights for Carry (p.63), and **Use** on a consumable heals the chosen Part and restores burnt Ardor and Morale.
+- Equipping a License under 2.1 now uses the Core prerequisites consistently.
+- Build the compendiums with `node tools/build-packs.mjs` before packaging or opening Foundry.
+
+# v 0.2.1
+
+**Rules 2.1 switch.** The GM chooses the ruleset in **Game Settings → Configure Settings → System → Rules version**. **2.0.3** stays the default and is unchanged. **2.1 (Red Kalpa Manuscript)** is for testing. Switching keeps both sets of character data; nothing is converted or deleted. See [Rules basis 2.1](docs/rules-basis-2.1.md) for page references and open questions.
+
+Rules changed for 2.1:
+
+- **Cores replace Cultivations (p.5):** Violence → Physique, Grace → Motorics, Dialectics → Mind, Savvy → Wits, Word → Voice; Spirit stays.
+- **Checks are Core + Cultivation (p.5)** against Demand 1–6+. Excess Strikes are reported, and an established Fact adds +4 (p.61).
+- **30 Cultivations (pp.77–85)** rated 0–5 Stars, plus Esoteric (Job and Sect) Cultivations.
+- **Sidhi Progression (p.9):** Advance buttons spend XP: a Core costs 5 × the new rating, a Cultivation 3 × the new rating (maximum 5).
+- **Speed (p.10)** = Physique + Wits + Peripheral Oracle + Stillness. **Movement (p.12):** Walk 2, Run Motorics + 2, Sprint Motorics + 4, Swim Physique + Thews and Sinews (all m/s). **Carry Limit (p.63)** = 10 kg + Physique × 10.
+- **KILL THE BUDDHA (pp.22–38)** replaces the attack and Defense rolls. Each 4 is a Quick Opening, 5 a Solid Opening, 6 a Perfect Opening, and 1–3 a Whiff. Chat shows Openings, damage, and reminders for timing, Counters and fusing Openings.
+- **Firefight (pp.29–30):** range penalties from 0 to -5 and beyond, -4 past weapon range; Shoot, Burst (+Rate dice), and Full Auto (+Rate × 3 dice) with random hit locations and ammo.
+- **Situational modifiers (pp.13, 33–36):** cover, height, unstable terrain, impaired senses, low light, water/mud, Juggled targets, Ambush, and static Openings for simple World Beings.
+- **Body Parts replace the Health Sutra (pp.31–32):** Head, Torso, arms and legs, each with 3 HP. A Part is Disabled at 0 and Cleaved at negative its maximum. Torso Disabled is -4 to all Checks.
+- **Soak (pp.38, 66–69):** equipped armor covers Parts; damage removes Soak first; CRUSHING costs 2 Soak per point. **Repair armor** restores lost Soak.
+- **Stun and Incapacitation Checks (pp.31–32)**, and per-Part **healing time (pp.14, 31)**.
+- **Morale (pp.39–40)** = Spirit + Stillness plus gear, with a Shattered warning at 0.
+- **Attachments (pp.40–41)** with Held, Firm, and Heart strengths, and **Assets (pp.86–96)** from the d36 table. Mountain Frame, Anvil Head, Spring-Tendon Legs, Hummingbird Pulse, and Sleepless Soul apply automatically.
+- **Conditions (pp.13–14, 34–35, 63):** Bleeding, Stunned, Knocked Down, Juggled, Encumbered, Drunk, and a Fatigue penalty.
+- **Weapons (pp.64–68)** gain Grip, Profile, base damage 2 (Empty Hand 1), Rate, Capacity, and the 2.1 modifiers (AUTO, CRUSHING, FEROCIOUS X, GREAT, COLOSSAL, DOUBLEHAND, FOCUS, BLAZE, ARTIFACT, SMASHING, SHIELD X).
+- **Magick casting (pp.98–99):** every Strike becomes a Charge; at the Magick's Potency it unleashes and burns its Ardor. Changing Magick abandons Charges.
+- **Funds (pp.55–56):** Carried Mag and Savings.
+- License prerequisites use the matching Cores in 2.1.
+
+**New 2.1 compendiums** from the 2.1 Sect spoilers (book pp.128–187). See [2.1 sect catalog](docs/sect-catalog-2.1.md).
+
+- **2.1 Sects:** 123 Technicks and Magicks from 11 Sects, organized by Sect and License Stars. Each lists its Esoteric Cultivation License, NEEDS, and full text. Ardor costs come from NEEDS, and Magicks are ready for 2.1 casting with Potency, Cast Time, Core, and Cultivation.
+- **2.1 Sect Gear:** 27 Sect weapons and armor pieces with 2.1 Grip, Profile, mods, Rate, weight, per-Part Soak, Morale, and Ardor. Movement bonuses apply as Active Effects.
+
+The 2.0.3 compendiums are unchanged. Social, investigation, project, poison, and ailment rules are not automated yet.
 
 # v 0.1.51
 

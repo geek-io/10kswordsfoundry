@@ -1,0 +1,431 @@
+{
+ "folders": [
+  {
+   "_id": "61ab1e2a5a43aaba",
+   "name": "Sect Barang",
+   "folder": null,
+   "type": "Item",
+   "sorting": "a",
+   "sort": 0,
+   "color": null
+  }
+ ],
+ "items": [
+  {
+   "_id": "4a73b3ebfe91b481",
+   "name": "Six-Armed Asura Spider",
+   "type": "barang",
+   "img": "systems/10kswordsfoundry/assets/icons/barang.svg",
+   "folder": "61ab1e2a5a43aaba",
+   "sort": 0,
+   "effects": [],
+   "system": {
+    "description": "<p><em>The demonic SIX-ARMED ASURA SPIDER burrows and establishes a burning brimstone heartweb into a Cultivator.</em></p><p><strong>Sect:</strong> Asuri · <strong>Esoteric Cultivation:</strong> Demon Body</p><p>The Asuri cultivate the DEMON BODY: the offensive, wrath-focused sister of the calmer, defensive SAGE BODY. It includes technicks that take advantage of a body tuned to commit as much violence as possible.</p><p>Ingesting a Barang awakens the first stage of Sidhi Cultivation and lets the Cultivator learn the Sect's Esoteric Techniques. At Wanderer Discovery, ingest one Sect's Barang, gain its Cultivation at ✦✦ and learn 2 Licenses you qualify for. Ejecting a Barang keeps every Magick and Technick already Cultivated. A new Sect License needs the appropriate Barang to be ingested (2.1 Alpha pp.5, 50–51).</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.130",
+    "tags": "2.1, Barang, Asuri",
+    "sect": "Asuri",
+    "cultivation": "Demon Body",
+    "weapons": "",
+    "ingested": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "barang21": {
+      "sect": "Asuri",
+      "sourcePage": 130
+     }
+    }
+   }
+  },
+  {
+   "_id": "617dfc69b077ad7c",
+   "name": "Devil's Centipede",
+   "type": "barang",
+   "img": "systems/10kswordsfoundry/assets/icons/barang.svg",
+   "folder": "61ab1e2a5a43aaba",
+   "sort": 1000,
+   "effects": [],
+   "system": {
+    "description": "<p><em>The Devil's Centipede is one of the most well known of Barang, but paradoxically, the rarest to actually see in real life.</em></p><p><strong>Sect:</strong> Aswang · <strong>Esoteric Cultivation:</strong> Devil Beast</p><p>DEVIL BEAST is a martial art with some magick aspects that manipulate shadows, emphasize stealth, buffet footsteps, and allow for apportation through shadows. It can be used when engaging in violence with a Dagger, Empty Hand, or Sword.</p><p>Ingesting a Barang awakens the first stage of Sidhi Cultivation and lets the Cultivator learn the Sect's Esoteric Techniques. At Wanderer Discovery, ingest one Sect's Barang, gain its Cultivation at ✦✦ and learn 2 Licenses you qualify for. Ejecting a Barang keeps every Magick and Technick already Cultivated. A new Sect License needs the appropriate Barang to be ingested (2.1 Alpha pp.5, 50–51).</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.134",
+    "tags": "2.1, Barang, Aswang",
+    "sect": "Aswang",
+    "cultivation": "Devil Beast",
+    "weapons": "Dagger, Empty Hand, Sword",
+    "ingested": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "barang21": {
+      "sect": "Aswang",
+      "sourcePage": 134
+     }
+    }
+   }
+  },
+  {
+   "_id": "b0d39ac6d4bea2ca",
+   "name": "Sky Dancing Wyrm",
+   "type": "barang",
+   "img": "systems/10kswordsfoundry/assets/icons/barang.svg",
+   "folder": "61ab1e2a5a43aaba",
+   "sort": 2000,
+   "effects": [],
+   "system": {
+    "description": "<p><em>The Dracontines are issued the Barang SKY DANCING WYRM, which grants the Sidhic License to practice Dragon Dances Across Heavens Technicks and Gear.</em></p><p><strong>Sect:</strong> Dracontine · <strong>Esoteric Cultivation:</strong> Sky Dragon</p><p>SKY DRAGON can be used when engaging in violence with Daggers and Polearms to deliver rushing and jagged piercing blows, mimicking the flight of the Dragons.</p><p>Ingesting a Barang awakens the first stage of Sidhi Cultivation and lets the Cultivator learn the Sect's Esoteric Techniques. At Wanderer Discovery, ingest one Sect's Barang, gain its Cultivation at ✦✦ and learn 2 Licenses you qualify for. Ejecting a Barang keeps every Magick and Technick already Cultivated. A new Sect License needs the appropriate Barang to be ingested (2.1 Alpha pp.5, 50–51).</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.138",
+    "tags": "2.1, Barang, Dracontine",
+    "sect": "Dracontine",
+    "cultivation": "Sky Dragon",
+    "weapons": "Daggers, Polearms",
+    "ingested": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "barang21": {
+      "sect": "Dracontine",
+      "sourcePage": 138
+     }
+    }
+   }
+  },
+  {
+   "_id": "f0e620d0fb37c980",
+   "name": "Eskaton Satanworm",
+   "type": "barang",
+   "img": "systems/10kswordsfoundry/assets/icons/barang.svg",
+   "folder": "61ab1e2a5a43aaba",
+   "sort": 3000,
+   "effects": [],
+   "system": {
+    "description": "<p><em>The ESKATON SATANWORM is a writhing black caterpillar-like worm that burrows deep into one's heart and sets one on the path of destruction.</em></p><p><strong>Sect:</strong> Eskatonian · <strong>Esoteric Cultivation:</strong> Black Sorcery</p><p>BLACK SORCERY is focused on bringing about the end through dynamism and its negation.</p><p>Ingesting a Barang awakens the first stage of Sidhi Cultivation and lets the Cultivator learn the Sect's Esoteric Techniques. At Wanderer Discovery, ingest one Sect's Barang, gain its Cultivation at ✦✦ and learn 2 Licenses you qualify for. Ejecting a Barang keeps every Magick and Technick already Cultivated. A new Sect License needs the appropriate Barang to be ingested (2.1 Alpha pp.5, 50–51).</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.142",
+    "tags": "2.1, Barang, Eskatonian",
+    "sect": "Eskatonian",
+    "cultivation": "Black Sorcery",
+    "weapons": "Casting Black Sorcery Magicks",
+    "ingested": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "barang21": {
+      "sect": "Eskatonian",
+      "sourcePage": 142
+     }
+    }
+   }
+  },
+  {
+   "_id": "3e3a4b1d9495402f",
+   "name": "Spring and Autumn Cicada",
+   "type": "barang",
+   "img": "systems/10kswordsfoundry/assets/icons/barang.svg",
+   "folder": "61ab1e2a5a43aaba",
+   "sort": 4000,
+   "effects": [],
+   "system": {
+    "description": "<p><em>The SPRING AND AUTUMN CICADA represents the longlasting nature of the Fangshi and the goal of Immortality.</em></p><p><strong>Sect:</strong> Fangshi · <strong>Esoteric Cultivation:</strong> Internal Elixir</p><p>INTERNAL ELIXIR is the perfection of both Inner and Outer Alchemies. It can be used for Checks concerning pills and pill-making, elixirs, concoction making, medicine, and outer alchemy.</p><p>Ingesting a Barang awakens the first stage of Sidhi Cultivation and lets the Cultivator learn the Sect's Esoteric Techniques. At Wanderer Discovery, ingest one Sect's Barang, gain its Cultivation at ✦✦ and learn 2 Licenses you qualify for. Ejecting a Barang keeps every Magick and Technick already Cultivated. A new Sect License needs the appropriate Barang to be ingested (2.1 Alpha pp.5, 50–51).</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.146",
+    "tags": "2.1, Barang, Fangshi",
+    "sect": "Fangshi",
+    "cultivation": "Internal Elixir",
+    "weapons": "Pills, elixirs, medicine and outer alchemy",
+    "ingested": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "barang21": {
+      "sect": "Fangshi",
+      "sourcePage": 146
+     }
+    }
+   }
+  },
+  {
+   "_id": "2bd05ca7919e5e3a",
+   "name": "Three-Toed Crow Monarch",
+   "type": "barang",
+   "img": "systems/10kswordsfoundry/assets/icons/barang.svg",
+   "folder": "61ab1e2a5a43aaba",
+   "sort": 5000,
+   "effects": [],
+   "system": {
+    "description": "<p><em>The Three-Toed Crow Monarch is a butterfly that looks like a crow or a raven. It bestows the ancient Licenses for wielding and expressing the Killing Wind.</em></p><p><strong>Sect:</strong> Houyi · <strong>Esoteric Cultivation:</strong> Solar Bow</p><p>SOLAR BOW: masters of killing from afar and making sure they are never found. This Cultivation can be used when committing violence with bows, crossbows, launchers, longguns, and handguns.</p><p>Ingesting a Barang awakens the first stage of Sidhi Cultivation and lets the Cultivator learn the Sect's Esoteric Techniques. At Wanderer Discovery, ingest one Sect's Barang, gain its Cultivation at ✦✦ and learn 2 Licenses you qualify for. Ejecting a Barang keeps every Magick and Technick already Cultivated. A new Sect License needs the appropriate Barang to be ingested (2.1 Alpha pp.5, 50–51).</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.150",
+    "tags": "2.1, Barang, Houyi",
+    "sect": "Houyi",
+    "cultivation": "Solar Bow",
+    "weapons": "Bows, Crossbows, Launchers, Longguns, Handguns",
+    "ingested": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "barang21": {
+      "sect": "Houyi",
+      "sourcePage": 150
+     }
+    }
+   }
+  },
+  {
+   "_id": "85d191f3e97cfd08",
+   "name": "White Butterfly",
+   "type": "barang",
+   "img": "systems/10kswordsfoundry/assets/icons/barang.svg",
+   "folder": "61ab1e2a5a43aaba",
+   "sort": 6000,
+   "effects": [],
+   "system": {
+    "description": "<p><em>The WHITE BUTTERFLY has wings constantly in every state of flapping, and an aperture that delivers sublative acid that lets it burrow through a body to activate one's Cultivation Womb.</em></p><p><strong>Sect:</strong> Imma · <strong>Esoteric Cultivation:</strong> White Sorcery</p><p>Immanents cultivate WHITE SORCERY: healing through the target's innate healing capacity mixed with the philosophy of Sublation. Healing is not restoration, but rather, the movement toward the next state.</p><p>Ingesting a Barang awakens the first stage of Sidhi Cultivation and lets the Cultivator learn the Sect's Esoteric Techniques. At Wanderer Discovery, ingest one Sect's Barang, gain its Cultivation at ✦✦ and learn 2 Licenses you qualify for. Ejecting a Barang keeps every Magick and Technick already Cultivated. A new Sect License needs the appropriate Barang to be ingested (2.1 Alpha pp.5, 50–51).</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.154",
+    "tags": "2.1, Barang, Imma",
+    "sect": "Imma",
+    "cultivation": "White Sorcery",
+    "weapons": "Healing Magick",
+    "ingested": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "barang21": {
+      "sect": "Imma",
+      "sourcePage": 154
+     }
+    }
+   }
+  },
+  {
+   "_id": "a82a7f21976b2be6",
+   "name": "Golden Starfly",
+   "type": "barang",
+   "img": "systems/10kswordsfoundry/assets/icons/barang.svg",
+   "folder": "61ab1e2a5a43aaba",
+   "sort": 7000,
+   "effects": [],
+   "system": {
+    "description": "<p><em>The GOLDEN STARFLY is a beautiful fly made of starlight, with a firefly-like light that emits starfire.</em></p><p><strong>Sect:</strong> Jyotisha · <strong>Esoteric Cultivation:</strong> Astral</p><p>Jyotisha perform ASTRAL Cultivation: the absorption of Sidhi from the stars and its alchemization into intramaterial effects, to manipulate fate, destiny, timespace, and gravity.</p><p>Ingesting a Barang awakens the first stage of Sidhi Cultivation and lets the Cultivator learn the Sect's Esoteric Techniques. At Wanderer Discovery, ingest one Sect's Barang, gain its Cultivation at ✦✦ and learn 2 Licenses you qualify for. Ejecting a Barang keeps every Magick and Technick already Cultivated. A new Sect License needs the appropriate Barang to be ingested (2.1 Alpha pp.5, 50–51).</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.158",
+    "tags": "2.1, Barang, Jyotisha",
+    "sect": "Jyotisha",
+    "cultivation": "Astral",
+    "weapons": "Astral Magick",
+    "ingested": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "barang21": {
+      "sect": "Jyotisha",
+      "sourcePage": 158
+     }
+    }
+   }
+  },
+  {
+   "_id": "89c75e9685a4cae3",
+   "name": "Revenant Soulworm",
+   "type": "barang",
+   "img": "systems/10kswordsfoundry/assets/icons/barang.svg",
+   "folder": "61ab1e2a5a43aaba",
+   "sort": 8000,
+   "effects": [],
+   "system": {
+    "description": "<p><em>As the REVENANT SOULWORM burrows into a nascent Katalonan it turns the Cultivator into a chrysalis for a better world.</em></p><p><strong>Sect:</strong> Katalonan · <strong>Esoteric Cultivation:</strong> Divine Communion</p><p>DIVINE COMMUNION is the Cultivation used when interacting with the Numina directly, through speech or ritual.</p><p>Ingesting a Barang awakens the first stage of Sidhi Cultivation and lets the Cultivator learn the Sect's Esoteric Techniques. At Wanderer Discovery, ingest one Sect's Barang, gain its Cultivation at ✦✦ and learn 2 Licenses you qualify for. Ejecting a Barang keeps every Magick and Technick already Cultivated. A new Sect License needs the appropriate Barang to be ingested (2.1 Alpha pp.5, 50–51).</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.162",
+    "tags": "2.1, Barang, Katalonan",
+    "sect": "Katalonan",
+    "cultivation": "Divine Communion",
+    "weapons": "Interacting with the Numina",
+    "ingested": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "barang21": {
+      "sect": "Katalonan",
+      "sourcePage": 162
+     }
+    }
+   }
+  },
+  {
+   "_id": "d495edd12b64b2ae",
+   "name": "Monk Bee",
+   "type": "barang",
+   "img": "systems/10kswordsfoundry/assets/icons/barang.svg",
+   "folder": "61ab1e2a5a43aaba",
+   "sort": 9000,
+   "effects": [],
+   "system": {
+    "description": "<p><em>Our barang is the Monk Bee. Swallow it. It converts all sin into holiness. The more sinful you are, the holier you are.</em></p><p><strong>Sect:</strong> Mendicant · <strong>Esoteric Cultivation:</strong> Vajra Fist</p><p>VAJRA FIST is the most effective fist art, and thus the most common in the Trichiliocosm.</p><p>Ingesting a Barang awakens the first stage of Sidhi Cultivation and lets the Cultivator learn the Sect's Esoteric Techniques. At Wanderer Discovery, ingest one Sect's Barang, gain its Cultivation at ✦✦ and learn 2 Licenses you qualify for. Ejecting a Barang keeps every Magick and Technick already Cultivated. A new Sect License needs the appropriate Barang to be ingested (2.1 Alpha pp.5, 50–51).</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.166",
+    "tags": "2.1, Barang, Mendicant",
+    "sect": "Mendicant",
+    "cultivation": "Vajra Fist",
+    "weapons": "Empty Hand",
+    "ingested": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "barang21": {
+      "sect": "Mendicant",
+      "sourcePage": 166
+     }
+    }
+   }
+  },
+  {
+   "_id": "b5d402fda9c8ce4e",
+   "name": "Red God Drake",
+   "type": "barang",
+   "img": "systems/10kswordsfoundry/assets/icons/barang.svg",
+   "folder": "61ab1e2a5a43aaba",
+   "sort": 10000,
+   "effects": [],
+   "system": {
+    "description": "<p><em>The RED GOD DRAKE is a scaly serpent-like Barang that burrows in and turns into a magatama-like heart, emitting heat.</em></p><p><strong>Sect:</strong> Nezha · <strong>Esoteric Cultivation:</strong> Red Gun</p><p>RED GUN is the art of wielding the gun in explosive ways, in ways a gun is not meant to be used: meant to supercharge normal gunner units in the battlefield.</p><p>Ingesting a Barang awakens the first stage of Sidhi Cultivation and lets the Cultivator learn the Sect's Esoteric Techniques. At Wanderer Discovery, ingest one Sect's Barang, gain its Cultivation at ✦✦ and learn 2 Licenses you qualify for. Ejecting a Barang keeps every Magick and Technick already Cultivated. A new Sect License needs the appropriate Barang to be ingested (2.1 Alpha pp.5, 50–51).</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.170",
+    "tags": "2.1, Barang, Nezha",
+    "sect": "Nezha",
+    "cultivation": "Red Gun",
+    "weapons": "Guns",
+    "ingested": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "barang21": {
+      "sect": "Nezha",
+      "sourcePage": 170
+     }
+    }
+   }
+  },
+  {
+   "_id": "f7893a25084f7515",
+   "name": "Dialectical Swordmoth",
+   "type": "barang",
+   "img": "systems/10kswordsfoundry/assets/icons/barang.svg",
+   "folder": "61ab1e2a5a43aaba",
+   "sort": 11000,
+   "effects": [],
+   "system": {
+    "description": "<p><em>The Dialectical Swordmoth is a moth with bladed wings that cut through the esophagus. It opens the Mind to the traumatizing understanding of real immanent contradiction.</em></p><p><strong>Sect:</strong> Sword Dialectician · <strong>Esoteric Cultivation:</strong> Sword Dialectics</p><p>SWORD DIALECTICS: the deepest truths of Sword Dialectics are opaque to those that cannot have their heads torn asunder by the truth of Dialectics and the immanent movement of all things through contradiction and struggle.</p><p>Ingesting a Barang awakens the first stage of Sidhi Cultivation and lets the Cultivator learn the Sect's Esoteric Techniques. At Wanderer Discovery, ingest one Sect's Barang, gain its Cultivation at ✦✦ and learn 2 Licenses you qualify for. Ejecting a Barang keeps every Magick and Technick already Cultivated. A new Sect License needs the appropriate Barang to be ingested (2.1 Alpha pp.5, 50–51).</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.174",
+    "tags": "2.1, Barang, Sword Dialectician",
+    "sect": "Sword Dialectician",
+    "cultivation": "Sword Dialectics",
+    "weapons": "Swords, Sabers",
+    "ingested": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "barang21": {
+      "sect": "Sword Dialectician",
+      "sourcePage": 174
+     }
+    }
+   }
+  },
+  {
+   "_id": "2f62a6a0b2317a13",
+   "name": "Digiworm",
+   "type": "barang",
+   "img": "systems/10kswordsfoundry/assets/icons/barang.svg",
+   "folder": "61ab1e2a5a43aaba",
+   "sort": 12000,
+   "effects": [],
+   "system": {
+    "description": "<p><em>The DIGIWORM is a reticulated worm that whizzes and whirrs as it traipses the world.</em></p><p><strong>Sect:</strong> Techgnostic · <strong>Esoteric Cultivation:</strong> Techgnosis</p><p>TECHGNOSIS is the Magick of Information and Data: digital sorcery. It is used when performing TECHGNOSTIC MAGICK.</p><p>Ingesting a Barang awakens the first stage of Sidhi Cultivation and lets the Cultivator learn the Sect's Esoteric Techniques. At Wanderer Discovery, ingest one Sect's Barang, gain its Cultivation at ✦✦ and learn 2 Licenses you qualify for. Ejecting a Barang keeps every Magick and Technick already Cultivated. A new Sect License needs the appropriate Barang to be ingested (2.1 Alpha pp.5, 50–51).</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.178",
+    "tags": "2.1, Barang, Techgnostic",
+    "sect": "Techgnostic",
+    "cultivation": "Techgnosis",
+    "weapons": "Performing Techgnostic Magick",
+    "ingested": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "barang21": {
+      "sect": "Techgnostic",
+      "sourcePage": 178
+     }
+    }
+   }
+  },
+  {
+   "_id": "a9c2c6987a103099",
+   "name": "God Obliterating Devil Ant",
+   "type": "barang",
+   "img": "systems/10kswordsfoundry/assets/icons/barang.svg",
+   "folder": "61ab1e2a5a43aaba",
+   "sort": 13000,
+   "effects": [],
+   "system": {
+    "description": "<p><em>Our Barang is the GOD OBLITERATING DEVIL ANT, which we have stolen from Heaven. Let it burrow into your skin. Let it lead you to the creation of a new universe.</em></p><p><strong>Sect:</strong> Ultramystic · <strong>Esoteric Cultivation:</strong> Immortal Science</p><p>IMMORTAL SCIENCE: the revolutionary scientific communism that destroys bourgeois science and false consciousness.</p><p>Ingesting a Barang awakens the first stage of Sidhi Cultivation and lets the Cultivator learn the Sect's Esoteric Techniques. At Wanderer Discovery, ingest one Sect's Barang, gain its Cultivation at ✦✦ and learn 2 Licenses you qualify for. Ejecting a Barang keeps every Magick and Technick already Cultivated. A new Sect License needs the appropriate Barang to be ingested (2.1 Alpha pp.5, 50–51).</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.182",
+    "tags": "2.1, Barang, Ultramystic",
+    "sect": "Ultramystic",
+    "cultivation": "Immortal Science",
+    "weapons": "The patient Struggle of Revolution",
+    "ingested": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "barang21": {
+      "sect": "Ultramystic",
+      "sourcePage": 182
+     }
+    }
+   }
+  },
+  {
+   "_id": "5f61c5f22a53f174",
+   "name": "Immortal Gold Cicada",
+   "type": "barang",
+   "img": "systems/10kswordsfoundry/assets/icons/barang.svg",
+   "folder": "61ab1e2a5a43aaba",
+   "sort": 14000,
+   "effects": [],
+   "system": {
+    "description": "<p><em>The IMMORTAL GOLD CICADA grants the ambitious hubris and Buddha-potential of its namesake.</em></p><p><strong>Sect:</strong> Wukong · <strong>Esoteric Cultivation:</strong> Sage Body</p><p>SAGE BODY cultivates the body to strengthen it completely and wakes the nascent Sidhi within the body without the need for just Sidhi Absorption.</p><p>Ingesting a Barang awakens the first stage of Sidhi Cultivation and lets the Cultivator learn the Sect's Esoteric Techniques. At Wanderer Discovery, ingest one Sect's Barang, gain its Cultivation at ✦✦ and learn 2 Licenses you qualify for. Ejecting a Barang keeps every Magick and Technick already Cultivated. A new Sect License needs the appropriate Barang to be ingested (2.1 Alpha pp.5, 50–51).</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.186",
+    "tags": "2.1, Barang, Wukong",
+    "sect": "Wukong",
+    "cultivation": "Sage Body",
+    "weapons": "",
+    "ingested": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "barang21": {
+      "sect": "Wukong",
+      "sourcePage": 186
+     }
+    }
+   }
+  },
+  {
+   "_id": "2c02dd30a297a16a",
+   "name": "Soul Weaving Worm",
+   "type": "barang",
+   "img": "systems/10kswordsfoundry/assets/icons/barang.svg",
+   "folder": "61ab1e2a5a43aaba",
+   "sort": 15000,
+   "effects": [],
+   "system": {
+    "description": "<p><em>The SOUL WEAVING WORM travels across the spine to weave a demon king shrine to subjugate demons.</em></p><p><strong>Sect:</strong> Zhongkui · <strong>Esoteric Cultivation:</strong> Spirit Binding</p><p>SPIRIT BINDING is the art of exorcism: calling, subjugating, binding, and driving out INTRA-INT entities.</p><p>Ingesting a Barang awakens the first stage of Sidhi Cultivation and lets the Cultivator learn the Sect's Esoteric Techniques. At Wanderer Discovery, ingest one Sect's Barang, gain its Cultivation at ✦✦ and learn 2 Licenses you qualify for. Ejecting a Barang keeps every Magick and Technick already Cultivated. A new Sect License needs the appropriate Barang to be ingested (2.1 Alpha pp.5, 50–51).</p>",
+    "source": "Rules 2.1 (2.1 playtest Sects), p.190",
+    "tags": "2.1, Barang, Zhongkui",
+    "sect": "Zhongkui",
+    "cultivation": "Spirit Binding",
+    "weapons": "Exorcism and binding INTRA-INTs",
+    "ingested": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "barang21": {
+      "sect": "Zhongkui",
+      "sourcePage": 190
+     }
+    }
+   }
+  }
+ ]
+}

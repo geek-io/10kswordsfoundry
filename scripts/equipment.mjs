@@ -1,8 +1,10 @@
-import {qualifiesForLicense,LICENSE_DENIED} from "./licenses.mjs?v=0.1.51";
-import { itemCosts, assignSlot } from "./slots.mjs?v=0.1.51";
-import { selectedAmmo } from "./ammunition.mjs?v=0.1.51";
-import { fashionResources } from "./fashion.mjs?v=0.1.51";
-import {isAbility,isInternalized,refundInstallation} from './ability-state.mjs?v=0.1.51';
+import {qualifiesForLicense,LICENSE_DENIED} from "./licenses.mjs?v=0.2.14";
+import {usesRules21} from "./rules-version.mjs?v=0.2.14";
+import {qualifiesForLicense21} from "./rules21.mjs?v=0.2.14";
+import { itemCosts, assignSlot } from "./slots.mjs?v=0.2.14";
+import { selectedAmmo } from "./ammunition.mjs?v=0.2.14";
+import { fashionResources } from "./fashion.mjs?v=0.2.14";
+import {isAbility,isInternalized,refundInstallation} from './ability-state.mjs?v=0.2.14';
 
 export const EQUIPMENT_TYPES = ["salvage", "license", "fashion", "gear", "technique", "magick", "weapon", "accessory", "ammunition", "armor"];
 const whole = value => {
@@ -44,7 +46,7 @@ export function changeEquipment(actor, itemId, changes = {}, {remove=false, togg
       if(!isInternalized(previous))throw new Error('Use Internalize or Activate on the sheet to spend this ability’s costs.');
       refundInstallation(source.system,previous);next.system.equipped=false;next.system.paidArdor=0;
     }else if (toggle) next.system.equipped = !previous.system.equipped;
-    if(!remove&&next.type==="license"&&next.system.equipped&&!qualifiesForLicense(actor.system,next.system))throw new Error(LICENSE_DENIED);
+    if(!remove&&next.type==="license"&&next.system.equipped&&!(usesRules21()?qualifiesForLicense21(actor.system,next.system):qualifiesForLicense(actor.system,next.system)))throw new Error(LICENSE_DENIED);
     if (!remove) assignSlot(next,source.items,itemId);
     const oldItems=structuredClone(source.items);
     if(previous.type==='fashion') Object.assign(source.system,fashionResources(source.system,previous.system,remove?null:next.system));
@@ -94,7 +96,7 @@ export function useWeapon(actor, weaponId, action, ammoId="", amount=1) {
     }
   });
 }
-import { weaponDetails, validateWeapon, ammoAfterUse } from "./weapons.mjs?v=0.1.51";
+import { weaponDetails, validateWeapon, ammoAfterUse } from "./weapons.mjs?v=0.2.14";
 
 export function reconcileCosts(source,oldItems,{allowOverage=false}={}) {
   const beforeCarry=source.system.carry-(source.system.carryOverage??0);
