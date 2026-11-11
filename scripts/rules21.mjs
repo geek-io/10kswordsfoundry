@@ -58,41 +58,46 @@ export const MAX_STARS = 5;
 
 // Alpha pp.44–48 (RK pp.45–49, older edition pp.86–96): d36 starting Assets. [5][5] is absent from the rules.
 export const ASSETS_21 = Object.freeze({
-  debt: {code: "11", label: "Debt", min: 1, max: 5, page: 44},
-  capital: {code: "12", label: "Capital", min: 1, max: 5, page: 44},
-  jadeComplexion: {code: "13", label: "Jade Complexion Beauty", min: 1, max: 5, page: 44},
-  wroughtLimb: {code: "14", label: "Wrought Limb", min: 1, max: 4, page: 44},
-  standing: {code: "15", label: "Standing", min: 1, max: 5, page: 45},
-  reputation: {code: "16", label: "Reputation", min: 1, max: 5, page: 45},
-  loomAccess: {code: "21", label: "Loom Access", min: 1, max: 4, page: 45},
-  mountainFrame: {code: "22", label: "Mountain Frame", min: 1, max: 3, page: 45},
-  ghostEar: {code: "23", label: "Ghost Ear", min: 1, max: 3, page: 45},
-  patron: {code: "24", label: "Patron", min: 1, max: 5, page: 46},
-  intraIntBond: {code: "25", label: "Intra-Int Bond", min: 3, max: 3, page: 46},
-  hollowConscience: {code: "26", label: "Hollow Conscience", min: 1, max: 3, page: 46},
-  sheerStoneHeart: {code: "31", label: "Sheer Stone Heart", min: 1, max: 3, page: 46},
-  longCon: {code: "32", label: "Long Con", min: 1, max: 3, page: 46},
-  rawNerve: {code: "33", label: "Raw Nerve", min: 1, max: 3, page: 46},
-  narcissus: {code: "34", label: "Narcissus", min: 1, max: 3, page: 47},
-  wallflower: {code: "35", label: "Wallflower", min: 1, max: 3, page: 47},
-  karmicAgent: {code: "36", label: "Karmic Agent", min: 1, max: 3, page: 47},
-  anvilHead: {code: "41", label: "Anvil Head", min: 1, max: 3, page: 47},
-  springTendonLegs: {code: "42", label: "Spring-Tendon Legs", min: 1, max: 3, page: 47},
-  pythonGrip: {code: "43", label: "Python Grip", min: 1, max: 3, page: 47},
-  beastlyClaws: {code: "44", label: "Beastly Claws", min: 1, max: 3, page: 47},
-  venomGlands: {code: "45", label: "Venom Glands", min: 1, max: 3, page: 47},
-  hummingbirdPulse: {code: "46", label: "Hummingbird Pulse", min: 1, max: 3, page: 47},
-  thirdEyeOpen: {code: "51", label: "Third Eye Open", min: 1, max: 1, page: 47},
-  spineTerminalPort: {code: "52", label: "Spine Terminal Port", min: 2, max: 2, page: 47},
-  tacticianSoul: {code: "53", label: "Tactician Soul", min: 2, max: 2, page: 47},
-  compartmentalMind: {code: "54", label: "Compartmental Mind", min: 1, max: 3, page: 48},
-  adamantWill: {code: "56", label: "Adamant Will", min: 1, max: 3, page: 48},
-  archivalMemory: {code: "61", label: "Archival Memory", min: 1, max: 3, page: 48},
-  sleeplessSoul: {code: "62", label: "Sleepless Soul", min: 1, max: 5, page: 48},
-  gutterTongue: {code: "63", label: "Gutter Tongue", min: 1, max: 3, page: 48},
-  armory: {code: "64", label: "Armory", min: 1, max: 3, page: 48},
-  cargoLineSlot: {code: "65", label: "Cargo Line Slot", min: 1, max: 5, page: 48},
-  reincarnationInsurance: {code: "66", label: "Reincarnation Insurance", min: 2, max: 5, page: 48},
+  debt: {code: "11", label: "Debt", min: 1, max: 5, page: 189},
+  capital: {code: "12", label: "Capital", min: 1, max: 5, page: 189},
+  jadeComplexion: {code: "13", label: "Jade Complexion Beauty", min: 1, max: 5, page: 190},
+  wroughtLimb: {code: "14", label: "Wrought Limb", min: 1, max: 5, page: 190},
+  standing: {code: "15", label: "Standing", min: 1, max: 5, page: 190},
+  reputation: {code: "16", label: "Reputation", min: 1, max: 5, page: 190},
+  loomAccess: {code: "21", label: "Loom Access", min: 2, max: 5, page: 191},
+  mountainFrame: {code: "22", label: "Mountain Frame", min: 1, max: 3, page: 191},
+  ghostEar: {code: "23", label: "Ghost Ear", min: 1, max: 3, page: 191},
+  patron: {code: "24", label: "Patron", min: 1, max: 5, page: 192},
+  intraIntBond: {code: "25", label: "Intra-Int Bond", min: 3, max: 3, page: 192},
+  hollowConscience: {code: "26", label: "Hollow Conscience", min: 1, max: 3, page: 192},
+  sheerStoneHeart: {code: "31", label: "Sheer Stone Heart", min: 1, max: 3, page: 192},
+  intriguist: {code: "32", label: "Intriguist", min: 1, max: 3, page: 192},
+  rawNerve: {code: "33", label: "Raw Nerve", min: 1, max: 3, page: 193},
+  narcissus: {code: "34", label: "Narcissus", min: 1, max: 3, page: 193},
+  wallflower: {code: "35", label: "Wallflower", min: 1, max: 3, page: 193},
+  ironHand: {code: "36", label: "Iron Hand", min: 1, max: 3, page: 193},
+  anvilHead: {code: "41", label: "Anvil Head", min: 1, max: 3, page: 193},
+  springTendonLegs: {code: "42", label: "Spring-Tendon Legs", min: 1, max: 3, page: 193},
+  pythonGrip: {code: "43", label: "Python Grip", min: 1, max: 3, page: 193},
+  beastlyClaws: {code: "44", label: "Beastly Claws", min: 1, max: 3, page: 193},
+  venomGlands: {code: "45", label: "Venom Glands", min: 1, max: 3, page: 194},
+  hummingbirdPulse: {code: "46", label: "Hummingbird Pulse", min: 1, max: 3, page: 194},
+  thirdEyeOpen: {code: "51", label: "Third Eye Open", min: 1, max: 1, page: 194},
+  spineTerminalPort: {code: "52", label: "Spine Terminal Port", min: 2, max: 2, page: 194},
+  tacticianSoul: {code: "53", label: "Tactician Soul", min: 2, max: 2, page: 194},
+  shadowPersonality: {code: "54", label: "Shadow Personality", min: 1, max: 3, page: 194},
+  adamantWill: {code: "55", label: "Adamant Will", min: 1, max: 3, page: 194},
+  archivalMemory: {code: "56", label: "Archival Memory", min: 1, max: 3, page: 194},
+  sleeplessSoul: {code: "61", label: "Sleepless Soul", min: 1, max: 5, page: 195},
+  gutterTongue: {code: "62", label: "Gutter Tongue", min: 1, max: 3, page: 195},
+  armory: {code: "63", label: "Armory", min: 1, max: 3, page: 195},
+  cargoLineSlot: {code: "64", label: "Cargo Line Slot", min: 1, max: 5, page: 195},
+  kin: {code: "65", label: "Kin", min: 1, max: 5, page: 196},
+  reincarnationInsurance: {code: "66", label: "Reincarnation Insurance", min: 2, max: 5, page: 196},
+  // No longer printed in the 2.1 book (2.1 Alpha, pp.46-48); kept so Assets already on characters stay valid.
+  longCon: {code: "", label: "Long Con", min: 1, max: 3, page: null, legacy: true},
+  karmicAgent: {code: "", label: "Karmic Agent", min: 1, max: 3, page: null, legacy: true},
+  compartmentalMind: {code: "", label: "Compartmental Mind", min: 1, max: 3, page: null, legacy: true},
   custom: {code: "", label: "Custom / other", min: 0, max: 5, page: null}
 });
 
@@ -342,52 +347,82 @@ export function firingMode(mode, {rate = 1, auto = false, distance = null} = {})
   throw new Error("Unknown firing mode.");
 }
 
-// pp.64–66: Grips, Profiles and Modifiers.
+// Book pp.170–172: Grips, Profiles and Modifiers. Damage is a Core plus the Profile's bonus (Empty Hand deals 1).
 export const GRIPS = Object.freeze({hilt: {label: "Hilt", mods: 2}, haft: {label: "Haft", mods: 3}, riser: {label: "Riser", mods: 3}, stock: {label: "Stock", mods: 2}});
 export const PROFILES = Object.freeze({
   empty: {label: "Empty Hand", grip: null, core: "phy", skill: "beastShrine", range: 1, ranged: false, damage: 1, note: "Deals 1 damage; usually needed to establish Control."},
-  dagger: {label: "Dagger", grip: "hilt", core: "phy", skill: "beastShrine", range: 1, ranged: false, note: "Perfect Opening: Stab any Part, ignoring Soak."},
-  saber: {label: "Saber", grip: "hilt", core: "phy", skill: "beastShrine", range: 1, ranged: false, note: "Chop: a Perfect Opening chops through a Limb for +1 damage."},
-  sword: {label: "Sword", grip: "hilt", core: "phy", altCore: "mot", skill: "beastShrine", range: 1, ranged: false, note: "Physique or Motorics + Beast Shrine."},
-  whip: {label: "Whip", grip: "hilt", core: "mot", skill: "thewsSinews", range: 3, ranged: false, note: "Farther reach, harder to wield."},
-  bludgeon: {label: "Bludgeon", grip: "haft", core: "phy", skill: "beastShrine", range: 1, ranged: false, note: "Perfect Opening against a Soaked Part removes 2 Soak instead of 1."},
-  cleaver: {label: "Cleaver", grip: "haft", core: "phy", skill: "beastShrine", range: 1, ranged: false, note: "Versatile: +1 to Primeval Mind Checks."},
-  polearm: {label: "Polearm", grip: "haft", core: "phy", skill: "beastShrine", range: 3, ranged: false, note: "Farther effective reach."},
-  launcher: {label: "Launcher", grip: "haft", core: "mot", skill: "handEye", range: 20, ranged: true, note: "Slings, slingshots, slingstaffs."},
-  bow: {label: "Bow", grip: "riser", core: "mot", skill: "handEye", range: 250, ranged: true, note: "Requires Arrows; Rate 1."},
-  crossbow: {label: "Crossbow", grip: "stock", core: "mot", skill: "handEye", range: 125, ranged: true, note: "Requires Bolts; silent."},
-  handgun: {label: "Handgun", grip: "stock", core: "mot", skill: "handEye", range: 30, ranged: true, note: "Short bullets; revolvers by the bullet, 12-round magazines."},
-  longgun: {label: "Longgun", grip: "stock", core: "mot", skill: "handEye", range: 400, ranged: true, note: "Long gun bullets; magazines."}
+  dagger: {label: "Dagger", grip: "hilt", core: "mot", skill: "beastShrine", range: 1, ranged: false, dmgCore: "mot", dmgAdd: 0, note: "On a KILL, deal piercing damage to the Torso."},
+  saber: {label: "Saber", grip: "hilt", core: "phy", skill: "beastShrine", range: 1, ranged: false, dmgCore: "phy", dmgAdd: 1, note: "+1 damage against Limbs."},
+  sword: {label: "Sword", grip: "hilt", core: "phy", altCore: "mot", skill: "beastShrine", range: 1, ranged: false, dmgCore: "used", dmgAdd: 0, note: "Physique or Motorics + Beast Shrine; damage uses the same Core."},
+  whip: {label: "Whip", grip: "hilt", core: "mot", skill: "thewsSinews", range: 3, ranged: false, dmgCore: "phy", dmgAdd: 0, note: "Farther reach, harder to wield."},
+  bludgeon: {label: "Bludgeon", grip: "haft", core: "phy", skill: "beastShrine", range: 1, ranged: false, dmgCore: "phy", dmgAdd: 0, crushing: true, note: "Innate CRUSHING: soaking 1 damage costs 2 Soak."},
+  cleaver: {label: "Cleaver", grip: "haft", core: "phy", skill: "beastShrine", range: 1, ranged: false, dmgCore: "phy", dmgAdd: 2, note: "+1 damage when chopping wood."},
+  polearm: {label: "Polearm", grip: "haft", core: "phy", skill: "beastShrine", range: 3, ranged: false, dmgCore: "phy", dmgAdd: 0, note: "3 m reach."},
+  launcher: {label: "Launcher", grip: "haft", core: "mot", skill: "handEye", range: 20, ranged: true, dmgCore: "mot", dmgAdd: 0, note: "Slings, slingshots, slingstaffs."},
+  bow: {label: "Bow", grip: "riser", core: "mot", skill: "handEye", range: 250, ranged: true, dmgCore: "mot", dmgAdd: 1, note: "Needs Physique 2+; requires Arrows."},
+  crossbow: {label: "Crossbow", grip: "stock", core: "mot", skill: "handEye", range: 125, ranged: true, dmgCore: "mot", dmgAdd: 1, note: "Requires Bolts; silent."},
+  handgun: {label: "Handgun", grip: "stock", core: "mot", skill: "handEye", range: 30, ranged: true, dmgCore: "mot", dmgAdd: 1, note: "Short bullets; revolvers by the bullet, 12-round magazines."},
+  longgun: {label: "Longgun", grip: "stock", core: "mot", skill: "handEye", range: 400, ranged: true, dmgCore: "mot", dmgAdd: 2, note: "Always DOUBLEHAND; long gun bullets and magazines."}
 });
 export const WEAPON_MODS_21 = Object.freeze({
-  auto: "AUTO — Burst and Full Auto",
+  auto: "AUTO — Suppression Fire; each Shoot uses 3 bullets",
   crushing: "CRUSHING — 2 Soak per damage soaked",
   great: "GREAT — two hands, -1 violence Checks, +1 damage",
   colossal: "COLOSSAL — two hands, -1 violence Checks, +2 damage, Knockback",
   doublehand: "DOUBLEHAND — requires both hands",
   focus: "FOCUS — replaces Mudras",
-  blaze: "BLAZE — 2-in-6 chance to set the Part on fire",
+  blaze: "BLAZE — 2-in-6 chance of Burning the target",
   artifact: "ARTIFACT — +1 damage, double Durability, +2 to Kill The Buddha",
-  smashing: "SMASHING — triple damage against Durability"
+  smashing: "SMASHING — triple damage against Durability",
+  piercing: "PIERCING — damage ignores Soak",
+  lacerating: "LACERATING — damage starts Bleeding in that Part",
+  precise: "PRECISE — Kill The Buddha rerolls 1s, once",
+  shock: "SHOCK — 1-in-6 chance of Stunning on contact",
+  worn: "WORN — cannot be removed or disabled; no need to Ready",
+  concealable: "CONCEALABLE — easily hidden",
+  holy: "HOLY — +1 damage against INTRA-INTs",
+  noetic: "NOETIC — damage goes to Morale instead of a Part",
+  ritual: "RITUAL — +1 to Casting Checks while in one hand",
+  almighty: "ALMIGHTY — damage cannot be lessened; Unblockable",
+  thundering: "THUNDERING — heard up to 1 km",
+  toxic: "TOXIC — delivers a Poison on any wound (three doses)"
 });
+const CORE_ABBR = {phy: "PHYS", mot: "MOT"};
 
-/** Profile and modifiers for a weapon's 2.1 data; unconfigured weapons fall back to their 2.0 melee/ranged type. */
-export function weaponProfile21(weapon) {
+/** Profile and modifiers for a weapon's 2.1 data; unconfigured weapons fall back to their 2.0 melee/ranged type.
+ *  Pass the wielder's Cores (and the Core rolled, for Swords) to get the book's damage: Core + Profile bonus (book p.170). */
+export function weaponProfile21(weapon, {cores = null, core = null} = {}) {
   const r21 = weapon?.r21 ?? {};
   const fallback = weapon?.weaponType === "ranged" ? "handgun" : "sword";
   const key = PROFILES[r21.profile] ? r21.profile : (weapon ? fallback : "empty");
   const base = PROFILES[key], mods = r21.mods ?? {};
-  let bonus = 0, damage = key === "empty" ? 1 : Math.max(0, int(r21.damage ?? 2) || 2);
+  const dmgCore = base.dmgCore === "used" ? (["phy", "mot"].includes(core) ? core : base.core) : base.dmgCore;
+  // Extra damage: the item's bonus, plus anything above the old flat base of 2 on weapons made before 0.2.15.
+  let extra = int(r21.damageBonus) + Math.max(0, int(r21.damage ?? 2) - 2);
+  let bonus = 0;
   const notes = [base.note];
-  if (mods.great) { bonus -= 1; damage += 1; }
-  if (mods.colossal) { bonus -= 1; damage += 2; notes.push("COLOSSAL: Knockback up to Physique or Knockdown."); }
-  if (mods.artifact) { bonus += 2; damage += 1; } // RK p.32: ARTIFACT also deals +1 damage.
+  if (mods.great) { bonus -= 1; extra += 1; }
+  if (mods.colossal) { bonus -= 1; extra += 2; notes.push("COLOSSAL: Knockback up to Physique or Knockdown."); }
+  if (mods.artifact) { bonus += 2; extra += 1; }
+  const crushing = !!mods.crushing || !!base.crushing;
   if (mods.crushing) notes.push("CRUSHING: soaking 1 damage costs 2 Soak.");
-  if (mods.blaze) notes.push("BLAZE: 2-in-6 chance to set the struck Part on fire.");
+  if (mods.blaze) notes.push("BLAZE: 2-in-6 chance of Burning the target.");
+  if (mods.piercing) notes.push("PIERCING: damage ignores Soak.");
+  if (mods.lacerating) notes.push("LACERATING: damage starts Bleeding in that Part.");
+  if (mods.precise) notes.push("PRECISE: 1s are rerolled once.");
+  if (mods.shock) notes.push("SHOCK: 1-in-6 chance of Stunning on contact.");
+  if (mods.holy) notes.push("HOLY: +1 damage against INTRA-INTs.");
+  if (mods.noetic) notes.push("NOETIC: damage goes to Morale instead of a Part.");
+  if (mods.almighty) notes.push("ALMIGHTY: damage cannot be lessened and is Unblockable.");
+  if (mods.toxic) notes.push("TOXIC: delivers a Poison on any wound.");
   if (int(r21.ferocious) > 0) notes.push(`FEROCIOUS ${int(r21.ferocious)}: each 6 adds a die, up to ${int(r21.ferocious)}.`);
+  const coreDamage = key === "empty" ? 1 : (cores ? Math.max(0, int(cores[dmgCore])) + int(base.dmgAdd) : 2);
+  const damage = Math.max(0, coreDamage + extra);
+  const add = int(base.dmgAdd) + extra;
+  const damageText = key === "empty" ? (extra ? `1 + ${extra}` : "1") : `${base.dmgCore === "used" ? "PHYS/MOT" : CORE_ABBR[dmgCore]}${add ? ` + ${add}` : ""}`;
   const range = int(r21.range) > 0 ? int(r21.range) : base.range;
   return {key, label: base.label, core: base.core, altCore: base.altCore ?? null, skill: base.skill, range, ranged: base.ranged,
-    bonus, damage, rate: Math.max(1, int(r21.rate) || 1), auto: !!mods.auto, crushing: !!mods.crushing,
+    bonus, damage, damageText, rate: Math.max(1, int(r21.rate) || 1), auto: !!mods.auto, crushing, piercing: !!mods.piercing, precise: !!mods.precise,
     ferocious: Math.max(0, int(r21.ferocious)), notes: notes.filter(Boolean)};
 }
 
@@ -404,8 +439,8 @@ export function advancementCost(kind, currentRating) {
   throw new Error("Unknown advancement.");
 }
 
-/** Alpha p.10: Suppression Fire needs a ranged weapon with a Rate of 15 or higher. */
-export const canSuppress = profile => !!profile?.ranged && int(profile.rate) >= 15;
+/** Book p.93: Suppression Fire needs a ranged weapon with AUTO (the Alpha's Rate 15+ still qualifies). */
+export const canSuppress = profile => !!profile?.ranged && (!!profile.auto || int(profile.rate) >= 15);
 
 /** p.31: Heart + Adamance vs 2 + Disabled Parts, costing 1 Morale. */
 export const incapacitationDemand = disabledParts => 2 + Math.max(0, int(disabledParts));

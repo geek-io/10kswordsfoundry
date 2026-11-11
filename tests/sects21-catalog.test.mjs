@@ -96,7 +96,8 @@ test("2.1 Assets: the 35 d36 Assets as Asset items with their Star ranges", () =
 
 test("2.1 Barang: one per Sect with its Esoteric Cultivation", () => {
   const {folders, items} = load("barang-21");
-  const sects = load("sects-21").folders.filter(folder => !folder.folder).map(folder => folder.name);
+  const preview = new Set(load("sects-21").items.filter(item => item.flags["10kswordsfoundry"].sect21.preview).map(item => item.folder));
+  const sects = load("sects-21").folders.filter(folder => !folder.folder && !preview.has(folder._id)).map(folder => folder.name);
   assert.deepEqual(items.map(item => item.system.sect), sects);
   for (const item of items) {
     assert.equal(item.type, "barang");
@@ -105,5 +106,5 @@ test("2.1 Barang: one per Sect with its Esoteric Cultivation", () => {
     assert.ok(folders.some(folder => folder._id === item.folder));
   }
   const cultivations = Object.fromEntries(items.map(item => [item.system.sect, item.system.cultivation]));
-  for (const item of load("sects-21").items) assert.equal(item.flags["10kswordsfoundry"].sect21.cultivation, cultivations[item.system.sect], item.name);
+  for (const item of load("sects-21").items.filter(item => !item.flags["10kswordsfoundry"].sect21.preview)) assert.equal(item.flags["10kswordsfoundry"].sect21.cultivation, cultivations[item.system.sect], item.name);
 });

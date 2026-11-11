@@ -1,7 +1,7 @@
 // Rules 2.1 structured scenes: a SWORD of Cuts tied to a temporal anchor (pp.6–7), and Speed order (p.10).
 // Foundry's Combat tracker carries the scene: each Round is one Cut; initiative is Speed, lowest declares first.
-import {usesRules21} from "./rules-version.mjs?v=0.2.14";
-import {escapeHTML} from "./resolution.mjs?v=0.2.14";
+import {usesRules21} from "./rules-version.mjs?v=0.2.16";
+import {escapeHTML} from "./resolution.mjs?v=0.2.16";
 
 const SYSTEM = "10kswordsfoundry";
 const int = value => Math.trunc(Number(value) || 0);

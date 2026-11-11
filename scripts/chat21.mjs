@@ -1,7 +1,7 @@
 // Rules 2.1 chat card actions: a targeted defender responds with KILL THE BUDDHA, or damage is applied to a target's Part.
-import {killTheBuddha, damagePart} from "./roll21.mjs?v=0.2.14";
-import {PARTS} from "./rules21.mjs?v=0.2.14";
-import {joinExchangeFor21} from "./exchange21.mjs?v=0.2.14";
+import {killTheBuddha, damagePart} from "./roll21.mjs?v=0.2.16";
+import {PARTS} from "./rules21.mjs?v=0.2.16";
+import {joinExchangeFor21} from "./exchange21.mjs?v=0.2.16";
 
 const SYSTEM = "10kswordsfoundry";
 const resolveUuid = uuid => uuid ? globalThis.fromUuid?.(uuid) ?? null : null;
@@ -21,7 +21,7 @@ export function chatTargets21(message) {
 export function damageDefaults21(data) {
   const part = PARTS[data.part] ? data.part : (data.randomKeys ?? []).find(key => PARTS[key]) ?? "";
   const amount = Number.isSafeInteger(data.damage) && data.damage > 0 ? data.damage : 2;
-  return {part, amount, crushing: !!data.crushing, hint: data.randomParts?.length ? `Random hit locations: ${data.randomParts.join(", ")}.` : ""};
+  return {part, amount, crushing: !!data.crushing, ignoreSoak: !!data.piercing, hint: data.randomParts?.length ? `Random hit locations: ${data.randomParts.join(", ")}.` : ""};
 }
 
 async function targetActor(target, resolve) {

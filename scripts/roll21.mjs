@@ -1,13 +1,13 @@
 // Rules 2.1 roll workflows: Core + Cultivation Checks, KILL THE BUDDHA, Magick Charges, Stun and Incapacitation.
 import {CORES, CULTIVATIONS_21, PARTS, PART_KEYS, ATTACHMENT_STRENGTHS, checkFormula21, openings, fusionOptions, staticOpenings,
   rangePenalty, firingMode, weaponProfile21, stateModifiers, addCharges, assetStars, incapacitationDemand, partFromD6,
-  applyPartDamage, partState, targetReach, openingRank, sectCultivationNames21, withoutPenalties, entersFlow, canSuppress, spendFlame21} from "./rules21.mjs?v=0.2.14";
-import {confirmScorch21, deviationCheck21} from "./scorch21.mjs?v=0.2.14";
-import {escapeHTML} from "./resolution.mjs?v=0.2.14";
-import {occupiedSlots} from "./slots.mjs?v=0.2.14";
-import {useWeapon} from "./equipment.mjs?v=0.2.14";
-import {actingToken, collectTargets} from "./targeting21.mjs?v=0.2.14";
-import {abilityArea, placeAbilityArea} from "./areas.mjs?v=0.2.14";
+  applyPartDamage, partState, targetReach, openingRank, sectCultivationNames21, withoutPenalties, entersFlow, canSuppress, spendFlame21} from "./rules21.mjs?v=0.2.16";
+import {confirmScorch21, deviationCheck21} from "./scorch21.mjs?v=0.2.16";
+import {escapeHTML} from "./resolution.mjs?v=0.2.16";
+import {occupiedSlots} from "./slots.mjs?v=0.2.16";
+import {useWeapon} from "./equipment.mjs?v=0.2.16";
+import {actingToken, collectTargets} from "./targeting21.mjs?v=0.2.16";
+import {abilityArea, placeAbilityArea} from "./areas.mjs?v=0.2.16";
 
 const SYSTEM = "10kswordsfoundry";
 const DialogV2 = () => foundry.applications.api.DialogV2;
@@ -215,7 +215,7 @@ export async function killTheBuddha(actor, {weaponId = "", targets: chosenTarget
   if (system.conditions21?.juggled) throw new Error("Juggled: you have no Openings in this KILL THE BUDDHA (p.35).");
   const weapons = (actor.items?.contents ?? []).filter(item => item.type === "weapon" && item.system.equipped);
   const chosen = weapons.find(weapon => weapon.id === weaponId) ?? null;
-  const preview = weaponProfile21(chosen?.system ?? null);
+  const preview = weaponProfile21(chosen?.system ?? null, {cores: system.cores});
   const ammo = (actor.items?.contents ?? []).filter(item => item.type === "ammunition").map(item => `<option value="${item.id}">${escapeHTML(item.name)} (${item.system.quantity})</option>`).join("");
   const source = chosenSource ?? actingToken(actor);
   const aimed = collectTargets(actor, {source, tokens: chosenTargets});
@@ -259,7 +259,7 @@ export async function killTheBuddha(actor, {weaponId = "", targets: chosenTarget
   if (!CORES[input.core] || !Number.isSafeInteger(input.adjustment)) throw new Error("Choose a Core and whole-number adjustments.");
   const weapon = input.weaponId ? actor.items.get(input.weaponId) : null;
   if (input.weaponId && (weapon?.type !== "weapon" || !weapon.system.equipped)) throw new Error("Equip this weapon before attacking.");
-  const profile = weaponProfile21(weapon?.system ?? null);
+  const profile = weaponProfile21(weapon?.system ?? null, {cores: system.cores, core: input.core});
   if (input.mode === "suppress" && profile.ranged) return suppressionFire(actor, weapon, profile, input);
   const mods = [];
   if (profile.bonus) mods.push({label: "Weapon modifiers (GREAT/COLOSSAL/ARTIFACT)", value: profile.bonus});
@@ -268,7 +268,7 @@ export async function killTheBuddha(actor, {weaponId = "", targets: chosenTarget
     fire = firingMode(input.mode, {rate: profile.rate, auto: profile.auto, distance: input.distance});
     if (input.mode === "shoot") {
       if (!Number.isSafeInteger(input.shots) || input.shots < 1 || input.shots > profile.rate) throw new Error(`Shots must be between 1 and the weapon's Rate (${profile.rate}).`);
-      fire.shots = input.shots;
+      fire.shots = input.shots * (profile.auto ? 3 : 1); // book p.171: every Shoot with an AUTO weapon uses 3 bullets
     }
     if (fire.dice) mods.push({label: fire.label, value: fire.dice});
     const range = rangePenalty(input.distance === "" ? NaN : input.distance, profile.range);
@@ -291,6 +291,13 @@ export async function killTheBuddha(actor, {weaponId = "", targets: chosenTarget
       results = []; formula = "static"; counts = staticOpenings(pool);
     } else {
       ({roll, formula, results} = await evaluate(pool));
+      if (profile.precise) { // book p.171: PRECISE rerolls 1s, once
+        const ones = results.filter(value => value === 1).length;
+        if (ones) {
+          const again = activeResults(await new foundry.dice.Roll(`${ones}d6`).evaluate());
+          results = [...results.filter(value => value !== 1), ...again]; mods.push({label: `PRECISE rerolled ${ones} die${ones === 1 ? "" : "s"} (${again.join(", ")})`, value: 0});
+        }
+      }
       if (profile.ferocious) {
         const extra = await ferociousDice(results.filter(value => value === 6).length, profile.ferocious);
         if (extra.length) { results = [...results, ...extra]; mods.push({label: `FEROCIOUS extra dice (${extra.join(", ")})`, value: 0}); }
@@ -309,8 +316,8 @@ export async function killTheBuddha(actor, {weaponId = "", targets: chosenTarget
     const html = `<h3>KILL THE BUDDHA · ${escapeHTML(weapon?.name ?? "Empty Hand")}</h3>
       <div class="r21-openings"><span class="r21-open quick">${counts.quick} Quick</span><span class="r21-open solid">${counts.solid} Solid</span><span class="r21-open perfect">${counts.perfect} Perfect</span><span class="r21-open whiff">${counts.whiff} Whiff</span></div>
       ${input.static ? `<p>Gambit Openings: one per die of pool ${pool}, in the sequence Quick → Quick → Solid → Perfect.</p>` : openingDiceHTML(results)}
-      <p>Pool ${pool}: ${CORES[input.core].abbr} ${coreValue} + ${escapeHTML(rating.label)} ${rating.value}. ${input.static ? "" : formula}</p>${partsHTML([...mods.filter(mod => mod.value || mod.label.startsWith("FEROCIOUS")), ...state.parts])}
-      <p><strong>${profile.label}</strong>: ${damage} damage per damaging Opening${profile.ranged ? ` · Range ${profile.range} m · Rate ${profile.rate} · ${fire.label}, ${fire.shots} shot(s)` : ` · Reach ${profile.range} m`}.</p>
+      <p>Pool ${pool}: ${CORES[input.core].abbr} ${coreValue} + ${escapeHTML(rating.label)} ${rating.value}. ${input.static ? "" : formula}</p>${partsHTML([...mods.filter(mod => mod.value || mod.label.startsWith("FEROCIOUS") || mod.label.startsWith("PRECISE")), ...state.parts])}
+      <p><strong>${profile.label}</strong>: ${damage} damage (${profile.damageText}) per damaging Opening${profile.piercing ? " · PIERCING, ignores Soak" : ""}${profile.ranged ? ` · Range ${profile.range} m · Rate ${profile.rate} · ${fire.label}, ${fire.shots} shot(s)` : ` · Reach ${profile.range} m`}.</p>
       ${profile.notes.map(note => `<p class="hint">${escapeHTML(note)}</p>`).join("")}
       ${input.ambush ? `<p><strong>Ambush:</strong> each Strike deals ${damage} damage to ${escapeHTML(PARTS[input.part]?.label ?? "the Part named before the Ambush")} immediately.</p>` : ""}
       ${random.length ? `<p><strong>Random hit locations</strong> (every Strike must deal damage, no aiming): ${random.map(escapeHTML).join(", ")}.</p>` : ""}
@@ -320,7 +327,7 @@ export async function killTheBuddha(actor, {weaponId = "", targets: chosenTarget
       <li>Fuse two equal Openings into the next rank: up to ${fusion.quickToSolid} Quick→Solid, ${fusion.solidToPerfect} Solid→Perfect (p.25). Cultivators may burn 1 Sidhi to upgrade an Opening or turn a Whiff into a Quick (p.26).</li>
       </ul></details>${targetsHTML(targets)}`;
     const message = await post(actor, roll, html, {[SYSTEM]: {ktb: {...counts, weapon: weapon?.name ?? "Empty Hand", damage, pool, randomParts: random, randomKeys,
-      targets, attackerToken: source?.document?.uuid ?? "", attacker: actor.uuid ?? "", crushing: profile.crushing, part: input.part}}});
+      targets, attackerToken: source?.document?.uuid ?? "", attacker: actor.uuid ?? "", crushing: profile.crushing, piercing: profile.piercing, part: input.part}}});
     return message;
   };
   const shots = profile.ranged ? fire.shots ?? 1 : 0;
@@ -330,14 +337,14 @@ export async function killTheBuddha(actor, {weaponId = "", targets: chosenTarget
 
 /** Alpha p.10: Suppression Fire. No Openings are rolled; everyone in the marked 3 m wide area tests their nerve. */
 async function suppressionFire(actor, weapon, profile, input) {
-  if (!canSuppress(profile)) throw new Error(`Suppression Fire needs a ranged weapon with a Rate of 15 or higher (${weapon?.name ?? "this weapon"} has Rate ${profile.rate}).`);
+  if (!canSuppress(profile)) throw new Error(`Suppression Fire needs a ranged weapon with the AUTO mod (${weapon?.name ?? "this weapon"} does not have it).`);
   const targets = collectTargets(actor);
   const perform = async () => foundry.documents.ChatMessage.create({speaker: foundry.documents.ChatMessage.getSpeaker({actor}),
     content: `<section class="r21-chat"><h3>Suppression Fire · ${escapeHTML(weapon.name)}</h3>
       <p>Marks a 3 m wide area, up to the weapon's range (${profile.range} m). ${profile.rate} rounds spent.</p>
       <ul class="r21-mods"><li>Everyone inside makes a <strong>Heart + Stillness Check vs Demand 3</strong>.</li>
       <li>Failure: duck into cover or run out of the area and become <strong>Suppressed</strong> (no other action for 3 seconds or until the Cut ends).</li>
-      <li>Success: may run out of the area with Movement left this Cut; otherwise take ${profile.damage} weapon damage to four random Parts.</li></ul>
+      <li>Success: may run out of the area with Movement left this Cut; otherwise take ${profile.damage} weapon damage to four random Parts.</li><li>Afterwards the suppressor must reload (book p.93).</li></ul>
       ${targetsHTML(targets, {respond: false})}</section>`,
     flags: {[SYSTEM]: {suppression21: {weapon: weapon.name, damage: profile.damage, targets}}}});
   return useWeapon(actor, weapon.id, () => perform(), input.ammoId ?? "", Math.max(1, profile.rate));

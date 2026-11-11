@@ -1,10 +1,10 @@
-import {qualifiesForLicense,LICENSE_DENIED} from "./licenses.mjs?v=0.2.14";
-import {usesRules21} from "./rules-version.mjs?v=0.2.14";
-import {qualifiesForLicense21} from "./rules21.mjs?v=0.2.14";
-import { itemCosts, assignSlot } from "./slots.mjs?v=0.2.14";
-import { selectedAmmo } from "./ammunition.mjs?v=0.2.14";
-import { fashionResources } from "./fashion.mjs?v=0.2.14";
-import {isAbility,isInternalized,refundInstallation} from './ability-state.mjs?v=0.2.14';
+import {qualifiesForLicense,LICENSE_DENIED} from "./licenses.mjs?v=0.2.16";
+import {usesRules21} from "./rules-version.mjs?v=0.2.16";
+import {qualifiesForLicense21} from "./rules21.mjs?v=0.2.16";
+import { itemCosts, assignSlot } from "./slots.mjs?v=0.2.16";
+import { selectedAmmo } from "./ammunition.mjs?v=0.2.16";
+import { fashionResources } from "./fashion.mjs?v=0.2.16";
+import {isAbility,isInternalized,refundInstallation} from './ability-state.mjs?v=0.2.16';
 
 export const EQUIPMENT_TYPES = ["salvage", "license", "fashion", "gear", "technique", "magick", "weapon", "accessory", "ammunition", "armor"];
 const whole = value => {
@@ -96,7 +96,7 @@ export function useWeapon(actor, weaponId, action, ammoId="", amount=1) {
     }
   });
 }
-import { weaponDetails, validateWeapon, ammoAfterUse } from "./weapons.mjs?v=0.2.14";
+import { weaponDetails, validateWeapon, ammoAfterUse } from "./weapons.mjs?v=0.2.16";
 
 export function reconcileCosts(source,oldItems,{allowOverage=false}={}) {
   const beforeCarry=source.system.carry-(source.system.carryOverage??0);

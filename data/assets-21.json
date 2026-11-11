@@ -47,7 +47,7 @@
   },
   {
    "_id": "c260e7ba3fc8bdab",
-   "name": "[6] Memory & Means",
+   "name": "[6] Means & Kin",
    "folder": null,
    "type": "Item",
    "sorting": "m",
@@ -57,7 +57,7 @@
  ],
  "items": [
   {
-   "_id": "b88f7e9d963bc499",
+   "_id": "ff8bad7da8b20371",
    "name": "Debt",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
@@ -65,8 +65,8 @@
    "sort": 1000,
    "effects": [],
    "system": {
-    "description": "<p><strong>[1][1] Debt</strong> · ✦–✦✦✦✦✦</p><p>You owe, and because you owe, you were lent. Name your creditor and what you borrowed against. Stars set the creditor and the principal:</p><ul><li>✦ a landlord or neighbor (100 mag, a strip),</li><li>✦✦ a pawn-shrine, Tong or mutual aid fund (300 mag)</li><li>✦✦✦ a bank or Sect-corp lender (1,000 mag, a slab)</li><li>✦✦✦✦ a Caishen &amp; Co. credit house (3,000 mag)</li><li>✦✦✦✦✦ a rebirth-collateralized instrument (10,000 mag, a chunk).</li></ul><p>You begin holding the principal as Funds, or as what it bought: a tool, tuition, a skeiner, a bribe. Debt is a Firm Attachment: \"I owe [Creditor].\" The creditor can leverage it in CHANGE GOD'S MIND as a Patron would. Each month, pay a tenth of the principal. Miss two in a row and the Debt gains a Star as it is refinanced, and the creditor sends collectors scaled to its rating. Repaying the full principal clears the Debt. Past ✦✦✦✦✦ the creditor seizes: an Asset, your gear, or you. Under a rebirth-collateralized instrument, your Sidhi belongs to the creditor when you die, and you do not come back.</p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.44",
+    "description": "<p><strong>[1][1] Debt</strong> · ✦–✦✦✦✦✦</p><p>You owe, and because you owe, you were lent. Name your creditor and what you borrowed. You get that Item/ Gear/License/whatever it may be.</p><p>Stars set the creditor and the principal:</p><ul><li>✦ a landlord or neighbor (100 mag, a strip)</li><li>✦✦ a pawn-shrine, Tong or mutual aid fund (300 mag)</li><li>✦✦✦ a bank or Sect-corp lender (1,000 mag, a slab)</li><li>✦✦✦✦ a Caishen &amp; Co. credit house (3,000 mag)</li><li>✦✦✦✦✦ a rebirth-collateralized instrument (10,000 mag, a chunk).</li></ul><p>You begin holding the principal as Funds, or as what it bought: a tool, tuition, a skeiner, a bribe.</p><p>Debt is a Firm Attachment: \"I owe [Creditor].\" The creditor can leverage it in CHANGE GOD'S MIND as a Patron would. Each month, pay a tenth of the principal. Miss two in a row and the Debt gains a Star as it is refinanced, and the creditor sends collectors scaled to its rating. Repaying the full principal clears the Debt. Past ✦✦✦✦✦ the creditor seizes: an Asset, your gear, or you. Under a rebirth-collateralized instrument, your Sidhi belongs to the creditor when you die, and you do not come back.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.189",
     "tags": "2.1, Asset, [1][1]",
     "key": "debt",
     "stars": 1,
@@ -78,13 +78,13 @@
       "code": "11",
       "minStars": 1,
       "maxStars": 5,
-      "sourcePage": 44
+      "sourcePage": 189
      }
     }
    }
   },
   {
-   "_id": "d529b3184c4f7a51",
+   "_id": "7f5d5d6e3b104116",
    "name": "Capital",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
@@ -92,8 +92,8 @@
    "sort": 2000,
    "effects": [],
    "system": {
-    "description": "<p><strong>[1][2] Capital</strong> · ✦–✦✦✦✦✦</p><p>You own or hold a share in something that makes money from someone's labor. Name it.</p><ul><li>✦ a stall, a tool or a trike, worked by you and your family,</li><li>✦✦ a shop with a few hands</li><li>✦✦✦ a small manufactory or a trade fleet</li><li>✦✦✦✦ a firm with a contract inside an Orbital Heaven or a Grand Sect</li><li>✦✦✦✦✦ shares in a Grand Sect itself. Each month it yields strips equal to Stars squared (1, 4, 9, 16, 25), after upkeep.</li></ul><p>Add +Stars dice to Plutomancy and Organizing Checks about running it. You count as Petty-Bourgeois or higher. Capital is a contradiction you have to live with. Those who work for you or live under your rents are your class enemies by position: take -[STARS] dice to starting Disposition rolls among workers who know what you own, and revolutionary Alignments may treat you as a target. It needs managing (upkeep, tribute to the comprador bureau, strikes, competitors, fire). A Material Shift for the people who work it, such as a lost contract or a seized shop, becomes yours. Each time it is seized, bought out or burned, lose a Star.</p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.44",
+    "description": "<p><strong>[1][2] Capital</strong> · ✦–✦✦✦✦✦</p><p>You own or hold a share in something that makes money from someone's labor. Name it.</p><ul><li>✦ a stall, a tool or a trike, worked by you and your family,</li><li>✦✦ a shop with a few hands</li><li>✦✦✦ a small manufactory or a trade fleet</li><li>✦✦✦✦ a firm with a contract inside an Orbital Heaven or a Grand Sect</li><li>✦✦✦✦✦ shares in a Grand Sect itself.</li></ul><p>Each month it yields strips equal to Stars squared (1, 4, 9, 16, 25), after upkeep.</p><p>Add +Stars dice to Plutomancy and Organizing Checks about running it. You count as Petty-Bourgeois or higher.</p><p>Capital is a contradiction you have to live with. Those who work for you or live under your rents are your class enemies by position: take - [STARS] dice to starting Disposition rolls among workers who know what you own, and revolutionary Alignments may treat you as a target. It needs managing (upkeep, tribute to the comprador bureau, strikes, competitors, fire). A Material Shift for the people who work it, such as a lost contract or a seized shop, becomes yours. Each time it is seized, bought out or burned, lose a Star.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.189",
     "tags": "2.1, Asset, [1][2]",
     "key": "capital",
     "stars": 1,
@@ -105,13 +105,13 @@
       "code": "12",
       "minStars": 1,
       "maxStars": 5,
-      "sourcePage": 44
+      "sourcePage": 189
      }
     }
    }
   },
   {
-   "_id": "8829d5c9612379c2",
+   "_id": "61c01fae8e492ad4",
    "name": "Jade Complexion Beauty",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
@@ -120,7 +120,7 @@
    "effects": [],
    "system": {
     "description": "<p><strong>[1][3] Jade Complexion Beauty</strong> · ✦–✦✦✦✦✦</p><p>You possess absolutely mesmerizing beauty. Almost inhuman, elfin, and at certain angles, uncanny. When trying to influence someone socially, the Intercessor must give you extra dice to your dice pool equal to the Stars in this Asset.</p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.44",
+    "source": "Rules 2.1 (2.1 player-facing book), p.190",
     "tags": "2.1, Asset, [1][3]",
     "key": "jadeComplexion",
     "stars": 1,
@@ -132,13 +132,13 @@
       "code": "13",
       "minStars": 1,
       "maxStars": 5,
-      "sourcePage": 44
+      "sourcePage": 190
      }
     }
    }
   },
   {
-   "_id": "266682c3a43ebf75",
+   "_id": "b78923a8e02af6ab",
    "name": "Wrought Limb",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
@@ -146,8 +146,8 @@
    "sort": 4000,
    "effects": [],
    "system": {
-    "description": "<p><strong>[1][4] Wrought Limb</strong> · ✦–✦✦✦✦</p><p>One Limb is manufactured. Choose what it is. At ✦ it is crude (-1 die to fine-motor Checks with it) ✦✦ serviceable ✦✦✦ fine (+1 die to Checks that lean on it) ✦✦✦✦ integrated, with a built-in tool or weapon of your choice. This Weapon starts out as a mundane weapon, using the Weapon Crafting Rules. Its Health Levels work normally, but Wounds to it don't bleed, Stun, or hurt. It doesn't heal; it is repaired with Mind + Manual Labor at Demand 2/3/4 for Flesh/Dire/Mortal. A Cleaved Wrought Limb is broken, not gone, and can be rebuilt. It needs parts, power, and upkeep (Funds). It can be jammed or seized by Cybernetic Haruspex or the Marionette Virus, and its fabrication leaves a trail.</p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.44",
+    "description": "<p><strong>[1][4] Wrought Limb</strong> · ✦–✦✦✦✦✦</p><p>One Limb is manufactured. Choose what it is. At ✦ it is crude (-1 die to fine-motor Checks with it) ✦✦ serviceable ✦✦✦ fine (+1 die to Checks that lean on it) ✦✦✦✦ integrated, with a built-in tool or weapon of your choice. This Weapon starts out as a mundane weapon, using the Weapon Crafting Rules.</p><p>Its Health Levels work normally, but Wounds to it don't bleed, Stun, or hurt. It doesn't heal; it must be repaired.</p><p>It needs parts, power, and upkeep. It can be jammed or seized by Cybernetic Haruspex or the Marionette Virus, and its fabrication leaves a trail.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.190",
     "tags": "2.1, Asset, [1][4]",
     "key": "wroughtLimb",
     "stars": 1,
@@ -158,14 +158,14 @@
      "asset21": {
       "code": "14",
       "minStars": 1,
-      "maxStars": 4,
-      "sourcePage": 44
+      "maxStars": 5,
+      "sourcePage": 190
      }
     }
    }
   },
   {
-   "_id": "d88073c69537cf88",
+   "_id": "788e940bc7e7c6e7",
    "name": "Standing",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
@@ -173,8 +173,8 @@
    "sort": 5000,
    "effects": [],
    "system": {
-    "description": "<p><strong>[1][5] Standing</strong> · ✦–✦✦✦✦✦</p><p>Name the organization: a Party branch, union local, Sect hall, guild, mutual aid society, corporate department.</p><ul><li>✦ is a member in good standing</li><li>✦✦ a steward or cell lead</li><li>✦✦✦ a branch committee</li><li>✦✦✦✦ a regional body</li><li>✦✦✦✦✦ the central apparatus.</li></ul><p>Within the organization and its friends, you can ask for lodging, a vouch, a meeting, or an hour of someone's time without a Check, up to what it could plausibly give at that rating. Add Standing in dice to Organizing Checks run through it as well as influencing others in your organization if relevant. Standing means duty and discipline. The Intercessor may assign work, summon you, or demand self-criticism. Defying the organization lowers Standing, and its enemies treat you as its agent. Most Sects aren't revolutionary, so Standing in a bourgeois body counts too.</p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.44",
+    "description": "<p><strong>[1][5] Standing</strong> · ✦–✦✦✦✦✦</p><p>Name the organization: a Party branch, union local, Sect hall, guild, mutual aid society, corporate department.</p><ul><li>✦ is a member in good standing</li><li>✦✦ a steward or cell lead</li><li>✦✦✦ a branch committee</li><li>✦✦✦✦ a regional body</li><li>✦✦✦✦✦ the central apparatus.</li></ul><p>Within the organization and its friends, you can ask for lodging, a vouch, a meeting, or an hour of someone's time without a Check, up to what it could plausibly give at that rating. Add Standing in dice to Organizing Checks run through it as well as influencing others in your organization if relevant.</p><p>Standing means duty and discipline. The Intercessor may assign work, summon you, or demand self-criticism. Defying the organization lowers Standing, and its enemies treat you as its agent. Most Sects aren't revolutionary, so Standing in a bourgeois body counts too.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.190",
     "tags": "2.1, Asset, [1][5]",
     "key": "standing",
     "stars": 1,
@@ -186,13 +186,13 @@
       "code": "15",
       "minStars": 1,
       "maxStars": 5,
-      "sourcePage": 44
+      "sourcePage": 190
      }
     }
    }
   },
   {
-   "_id": "192e292abbd4247d",
+   "_id": "237baf4a2b331d65",
    "name": "Reputation",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
@@ -200,8 +200,8 @@
    "sort": 6000,
    "effects": [],
    "system": {
-    "description": "<p><strong>[1][6] Reputation</strong> · ✦–✦✦✦✦✦</p><p>Decide what the Reputation says about you (admired, feared, infamous) and for which deed. The rating sets the audience:</p><ul><li>✦ a workplace or block</li><li>✦✦ a district</li><li>✦✦✦ a city</li><li>✦✦✦✦ a megacity or a whole Sect</li><li>✦✦✦✦✦ a sphere.</li></ul><p>Among people who know it, add Stars to the starting Disposition roll if the Reputation is good, or subtract if it's bad. You cannot go unrecognized. You take -Stars dice to Shadow Praxis and Espionage against anyone who knows you, and the Name draws rivals, informers, and bounty-hunters.</p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.45",
+    "description": "<p><strong>[1][6] Reputation</strong> · ✦–✦✦✦✦✦</p><p>Decide what the Reputation says about you (admired, feared, infamous) and for which deed. The rating defines who's heard of you: ✦ a workplace or block ✦✦ a district ✦✦✦ a city ✦✦✦✦ a Sphere ✦✦✦✦✦ a celestial sector</p><p>Among people who know it, add Stars to the starting Disposition roll if the Reputation is good, or subtract if it's bad. You cannot go unrecognized. You take -Stars dice to Shadow Praxis and Espionage against anyone who knows you, and the Name draws rivals, informers, and bounty-hunters.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.190",
     "tags": "2.1, Asset, [1][6]",
     "key": "reputation",
     "stars": 1,
@@ -213,13 +213,13 @@
       "code": "16",
       "minStars": 1,
       "maxStars": 5,
-      "sourcePage": 45
+      "sourcePage": 190
      }
     }
    }
   },
   {
-   "_id": "3bbe24516a7d3945",
+   "_id": "6bc5dbe40d8617c6",
    "name": "Loom Access",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
@@ -227,26 +227,26 @@
    "sort": 1000,
    "effects": [],
    "system": {
-    "description": "<p><strong>[2][1] Loom Access</strong> · ✦–✦✦✦✦</p><p>Gossamer Looms make everything in the Trichiliocosm, and the Celestial Bourgeoisie hold them at monopoly. You have a way to use one.</p><ul><li>✦ a pay-per-use flash-loom stall whose keeper owes you or likes you</li><li>✦✦ a shared bootleg Gossamer Loom run by your kin, union or cell</li><li>✦✦✦ a hacked Loom of your own</li><li>✦✦✦✦ a full Gossamer Loom able to make armor, vehicles and walls.</li></ul><p>You can flash-fab any item whose Akashic Imprint (blueprint) you hold, paying only for the raw Magnetite instead of retail price; the Intercessor sets it, roughly half. Small items take seconds, armor and weapons minutes to hours, structures days. MORTAR blueprints are downloadable from the Intrajala, so most gear is within reach. Add [Stars] dice to Machine Physics Checks made to repair or modify what you fabricate. DEVRENDRA logs every Imprint you pull through the Intrajala, and what you fabricate carries the blueprint's sponsor graphics, so an item says where its Imprint came from. The Celestial Bourgeoisie treat an unlicensed Mat-Fab as theft, and most Mat-Fab makers are at least partly owned by Renge-Koenig. It needs Magnetite upkeep (Funds) and a safe space, and a landlord, a corporation or the Bureau can seize it.</p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.45",
+    "description": "<p><strong>[2][1] Loom Access</strong> · ✦✦–✦✦✦✦✦</p><p>Gossamer Looms make everything in the Trichiliocosm, and the Celestial Bourgeoisie hold them at monopoly. You have a way to use one.</p><ul><li>✦✦ a pay-per-use flash-loom stall whose keeper owes you or likes you</li><li>✦✦✦ a shared bootleg Gossamer Loom run by your kin, union or cell</li><li>✦✦✦✦ a hacked Loom of your own</li><li>✦✦✦✦✦ a full Gossamer Loom able to make armor, vehicles and walls.</li></ul><p>You can flash-fab any item whose Akashic Imprint (blueprint) you hold, paying only for the raw Magnetite instead of retail price; the Intercessor sets it, roughly half. Small items take seconds, armor and weapons minutes to hours, structures days. MORTAR blueprints are downloadable from the Intrajala, so most gear is within reach. Add [Stars] dice to Machine Physics Checks made to repair or modify what you fabricate.</p><p>DEVRENDRA logs every Imprint you pull through the Intrajala, and what you fabricate carries the blueprint's sponsor graphics, so an item says where its Imprint came from. The Celestial Bourgeoisie treat an unlicensed Mat-Fab as theft, and most Mat-Fab makers are at least partly owned by Renge-Koenig. It needs Magnetite upkeep (Funds) and a safe space, and a landlord, a corporation or the Bureau can seize it.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.191",
     "tags": "2.1, Asset, [2][1]",
     "key": "loomAccess",
-    "stars": 1,
+    "stars": 2,
     "detail": ""
    },
    "flags": {
     "10kswordsfoundry": {
      "asset21": {
       "code": "21",
-      "minStars": 1,
-      "maxStars": 4,
-      "sourcePage": 45
+      "minStars": 2,
+      "maxStars": 5,
+      "sourcePage": 191
      }
     }
    }
   },
   {
-   "_id": "5612811076b8e52a",
+   "_id": "20eed918fd391d8c",
    "name": "Mountain Frame",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
@@ -254,8 +254,8 @@
    "sort": 2000,
    "effects": [],
    "system": {
-    "description": "<p><strong>[2][2] Mountain Frame</strong> · ✦–✦✦✦</p><p>You are physically enormous for your people. Your Torso gains 1 Health Level at ✦, your Limbs too at ✦✦, and every Part at ✦✦✦. Add Stars dice to Physique Checks to lift, haul, or resist Knockback and Control. You are a bigger target and a bigger shadow. You take -[STARS] dice to Shadow Praxis Checks, and Cover penalties against you are reduced by 1. Clothes, armor, bunks, doors, and skeiner cockpits must be fabricated or modified for you.</p><p><em>Applied automatically on the 2.1 sheet.</em></p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.45",
+    "description": "<p><strong>[2][2] Mountain Frame</strong> · ✦–✦✦✦</p><p>You are physically enormous for your people. Your Torso gains +1 HP at ✦, your Limbs too at ✦✦, and every Part at ✦✦✦. Add Stars dice to Physique Checks to lift, haul, or resist Knockback and Control.</p><p>You are a bigger target and a bigger shadow. You take -[STARS] dice to Shadow Praxis Checks, and Cover penalties against you are reduced by 1. Clothes, armor, bunks, doors, and skeiner cockpits must be fabricated or modified for you.</p><p><em>Applied automatically on the 2.1 sheet.</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.191",
     "tags": "2.1, Asset, [2][2]",
     "key": "mountainFrame",
     "stars": 1,
@@ -267,13 +267,13 @@
       "code": "22",
       "minStars": 1,
       "maxStars": 3,
-      "sourcePage": 45
+      "sourcePage": 191
      }
     }
    }
   },
   {
-   "_id": "2d63682f1d2e80fc",
+   "_id": "21376534f8244e33",
    "name": "Ghost Ear",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
@@ -281,8 +281,8 @@
    "sort": 3000,
    "effects": [],
    "system": {
-    "description": "<p><strong>[2][3] Ghost Ear</strong> · ✦–✦✦✦</p><p>The dead speak to you. Ghosts are informational imprints that Sidhi rebuilds into hazy apparitions, and you hear them without Susurration's training. Add Stars dice to Susurration Checks.</p><ul><li>✦ You notice a haunting, its mood and its rough direction, without a Check.</li><li>✦✦ You catch the words and images an imprint keeps repeating.</li><li>✦✦✦ You can speak with the INTRA-INT of a recently deceased (within the year) and learn what the dead person knew, but only what the imprint kept: it repeats and does not learn.</li></ul><p>Hearing is not compulsion. You cannot command or exorcise what you hear. You cannot turn it off. In a place of mass death or labor (a factory floor, a battlefield, a tenement fire) you take -[STARS] dice to Stillness Checks and lose 1 Morale the first time you enter. Sleep in such places fails without an anxiolytic or deafened ears. The dead want things, and some will attach to you: the Intercessor may give you a ghost's Attachment as a Held one. Exorcists and Sidhic scanners read you as a haunted body.</p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.45",
+    "description": "<p><strong>[2][3] Ghost Ear</strong> · ✦–✦✦✦</p><p>The dead speak to you. Ghosts are informational imprints that Sidhi rebuilds into hazy apparitions, and you hear them without Susurration's training. Add Stars dice to Susurration Checks.</p><ul><li>✦ You notice a haunting, its mood and its rough direction, without a Check.</li><li>✦✦ You catch the words and images an imprint keeps repeating.</li><li>✦✦✦ You can speak with the INTRA-INT of a recently deceased (within the year) and learn what the dead person knew, but only what the imprint kept:</li></ul><p>it repeats and does not learn.</p><p>Hearing is not compulsion. You cannot command or exorcise what you hear. You cannot turn it off. In a place of mass death or labor (a factory floor, a battlefield, a tenement fire) you take -[STARS] dice to Stillness Checks and lose 1 Morale the first time you enter. Sleep in such places fails without an anxiolytic or deafened ears. The dead want things, and some will attach to you: the Intercessor may give you a ghost's Attachment as a Held one. Exorcists and Sidhic scanners read you as a haunted body.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.191",
     "tags": "2.1, Asset, [2][3]",
     "key": "ghostEar",
     "stars": 1,
@@ -294,13 +294,13 @@
       "code": "23",
       "minStars": 1,
       "maxStars": 3,
-      "sourcePage": 45
+      "sourcePage": 191
      }
     }
    }
   },
   {
-   "_id": "97e4b1ec1400e12d",
+   "_id": "bd7b9b9e09ea1f57",
    "name": "Patron",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
@@ -308,8 +308,8 @@
    "sort": 4000,
    "effects": [],
    "system": {
-    "description": "<p><strong>[2][4] Patron</strong> · ✦–✦✦✦✦✦</p><p>A powerful backer.</p><ul><li>✦ is a local boss or landlord</li><li>✦✦ a district magnate or Sect elder</li><li>✦✦✦ a regional comprador or bureau chief</li><li>✦✦✦✦ Heavenly Bourgeoisie in an Orbital Heaven</li><li>✦✦✦✦✦ an agent of one of the Five Grand Sects.</li></ul><p>They can supply an introduction, legal cover, money, or an intervention, scaled to Stars, but for every ask or favor, the Patron gets another hold over you, and can use that hold as a (Held/Firm/Heart for 1/2/3+ hold) Attachment to persuade you. You also gain a Firm Attachment to them. Their enemies are yours, and they withdraw if you embarrass them. For a Wanderer with a revolutionary Alignment, a bourgeois Patron is a contradiction the table has to live with.</p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.45",
+    "description": "<p><strong>[2][4] Patron</strong> · ✦–✦✦✦✦✦</p><p>You have a powerful backer. At ✦ it is a local boss or landlord</p><ul><li>✦✦ a district magnate or Sect elder</li><li>✦✦✦ a regional comprador or bureau chief</li><li>✦✦✦✦ Heavenly Bourgeoisie in an Orbital Heaven</li><li>✦✦✦✦✦ an agent of one of the Five Grand Sects.</li></ul><p>They can supply an introduction, legal cover, money, or an intervention, scaled to Stars, but for every ask or favor, the Patron gets another hold over you, and can use that hold as a (Held/Firm/Heart for 1/2/3+ hold) Attachment to persuade you. You also gain a Firm Attachment to them. Their enemies are yours, and they withdraw if you embarrass them. For a Cultivator with a revolutionary Alignment, a bourgeois Patron is a contradiction the table has to live with.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.192",
     "tags": "2.1, Asset, [2][4]",
     "key": "patron",
     "stars": 1,
@@ -321,13 +321,13 @@
       "code": "24",
       "minStars": 1,
       "maxStars": 5,
-      "sourcePage": 45
+      "sourcePage": 192
      }
     }
    }
   },
   {
-   "_id": "b2aec43841cb07b3",
+   "_id": "ab81b28d8c5bda92",
    "name": "Intra-Int Bond",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
@@ -335,8 +335,8 @@
    "sort": 5000,
    "effects": [],
    "system": {
-    "description": "<p><strong>[2][5] Intra-Int Bond</strong> · ✦✦✦</p><p>A miniature and relatively young Intramaterial Intelligence has imprinted upon you or otherwise established some sort of bond with you. They are loyal to you and more importantly can grant you knowledge based on where they’re from. When you first choose this, decide what kind of information the Intra-Int holds. This cannot be too specific or esoteric, but enough to help you. An Intra-Int can also work as a machine mind possessing any terminals or readers or PA devices you have, automating processes for you. You can have multiple Intra-Int Bonds. They generally are friendly to you and hold a Firm Attachment to you. But as they are Intelligent they can develop their own will and thoughts…</p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.46",
+    "description": "<p><strong>[2][5] Intra-Int Bond</strong> · ✦✦✦</p><p>A miniature and relatively young Intramaterial Intelligence has imprinted upon you or otherwise established some sort of bond with you. They are loyal to you and more importantly can grant you knowledge based on where they’re from.</p><p>When you first choose this, decide what kind of information the Intra-Int holds. This cannot be too specific or esoteric, but enough to help you. An Intra-Int can also work as a machine mind possessing any terminals or readers or PA devices you have, automating processes for you.</p><p>You can have multiple Intra-Int Bonds. They generally are friendly to you and hold a Firm Attachment to you. But as they are Intelligent they can develop their own will and thoughts…</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.192",
     "tags": "2.1, Asset, [2][5]",
     "key": "intraIntBond",
     "stars": 3,
@@ -348,13 +348,13 @@
       "code": "25",
       "minStars": 3,
       "maxStars": 3,
-      "sourcePage": 46
+      "sourcePage": 192
      }
     }
    }
   },
   {
-   "_id": "bce5e51138150811",
+   "_id": "039460793914dc3b",
    "name": "Hollow Conscience",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
@@ -362,8 +362,8 @@
    "sort": 6000,
    "effects": [],
    "system": {
-    "description": "<p><strong>[2][6] Hollow Conscience</strong> · ✦–✦✦✦</p><p>Rules and promises and attachment to important people are concepts and ideas alien to your sociopathic mind. Add +[STARS] dice to Spit In The Face Of God Checks made to deceive. Leverage built on your guilt, shame or duty counts one Strength lower. Provocation makes you reckless: when insulted or cornered, the Intercessor may call a Heart + Stillness Check at Demand 1 + Stars, and on a failure you act rashly.</p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.46",
+    "description": "<p><strong>[2][6] Hollow Conscience</strong> · ✦–✦✦✦</p><p>Rules and promises and attachment to important people are concepts and ideas alien to your sociopathic mind. Add +[STARS] dice to SPIT IN THE FACE OF GOD Checks made to deceive. Leverage built on your guilt, shame or duty counts one Strength lower. Provocation makes you reckless: when insulted or cornered, the Intercessor may call a HRT + STILLNESS Check at Demand 1 + STARS, and on a failure you act rashly. You also suffer no Morale loss when you kill someone.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.192",
     "tags": "2.1, Asset, [2][6]",
     "key": "hollowConscience",
     "stars": 1,
@@ -375,13 +375,13 @@
       "code": "26",
       "minStars": 1,
       "maxStars": 3,
-      "sourcePage": 46
+      "sourcePage": 192
      }
     }
    }
   },
   {
-   "_id": "b713300f035035e6",
+   "_id": "e5adfa2982a829ad",
    "name": "Sheer Stone Heart",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
@@ -389,8 +389,8 @@
    "sort": 1000,
    "effects": [],
    "system": {
-    "description": "<p><strong>[3][1] Sheer Stone Heart</strong> · ✦–✦✦✦</p><p>A high functioning psychopath, fear and guilt glance off of your steel and stone heart. Add +[STARS] dice to Threatening Checks as well as in social defense against Threaten and fear-based Inflame attempts. You cannot hold a Heart Attachment toward a person, so no Heart-level Persistence for people, and strangers’ starting Disposition rolls suffer -[Stars] penalty.</p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.46",
+    "description": "<p><strong>[3][1] Sheer Stone Heart</strong> · ✦–✦✦✦</p><p>A high functioning psychopath, fear and guilt glance off of your steel and stone heart.</p><p>Add +[STARS] dice to Threatening Checks as well as in social defense against Threaten and fear-based Inflame attempts. You cannot hold a Heart Attachment toward a person, so no Heart-level Persistence for people, and strangers’ starting Disposition rolls suffer -[Stars] penalty.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.192",
     "tags": "2.1, Asset, [3][1]",
     "key": "sheerStoneHeart",
     "stars": 1,
@@ -402,24 +402,24 @@
       "code": "31",
       "minStars": 1,
       "maxStars": 3,
-      "sourcePage": 46
+      "sourcePage": 192
      }
     }
    }
   },
   {
-   "_id": "b3695cb767b5a284",
-   "name": "Long Con",
+   "_id": "e1016cae73d7d94d",
+   "name": "Intriguist",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
    "folder": "f77ae29eb0d9c605",
    "sort": 2000,
    "effects": [],
    "system": {
-    "description": "<p><strong>[3][2] Long Con</strong> · ✦–✦✦✦</p><p>You play the long game. +[STARS] dice to every Check in a Social Project, and anyone trying to learn your Attachments takes -[STARS] dice to the attempt. If your scheme is exposed, every target drops one Disposition level and gains a negative Held Attachment against you.</p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.46",
+    "description": "<p><strong>[3][2] Intriguist</strong> · ✦–✦✦✦</p><p>You play the long game. +[STARS] dice to every Check in a Social Project, and anyone trying to learn your Attachments takes -[STARS] dice to the attempt. If your scheme is exposed, every target drops one Disposition level and gains a negative Held Attachment against you.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.192",
     "tags": "2.1, Asset, [3][2]",
-    "key": "longCon",
+    "key": "intriguist",
     "stars": 1,
     "detail": ""
    },
@@ -429,13 +429,13 @@
       "code": "32",
       "minStars": 1,
       "maxStars": 3,
-      "sourcePage": 46
+      "sourcePage": 192
      }
     }
    }
   },
   {
-   "_id": "9b7b20825f394398",
+   "_id": "e9ce70ec77a6d3a3",
    "name": "Raw Nerve",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
@@ -444,7 +444,7 @@
    "effects": [],
    "system": {
     "description": "<p><strong>[3][3] Raw Nerve</strong> · ✦–✦✦✦</p><p>You feel everything at full volume, no filters. People sometimes feel you’re too much. Your neurons can’t help it. +[STARS] dice to Bleeding Heart Checks. Betrayal, abandonment or rejection reduces your Morale by [STARS], and any Attachment you hold toward a person is immediately Firm, but it’s more difficult to establish connection with people, needing a week like a normal Firm Attachment. They cannot begin as Held.</p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.46",
+    "source": "Rules 2.1 (2.1 player-facing book), p.193",
     "tags": "2.1, Asset, [3][3]",
     "key": "rawNerve",
     "stars": 1,
@@ -456,13 +456,13 @@
       "code": "33",
       "minStars": 1,
       "maxStars": 3,
-      "sourcePage": 46
+      "sourcePage": 193
      }
     }
    }
   },
   {
-   "_id": "df6ac4c24d4b4acc",
+   "_id": "b04bc832520532d0",
    "name": "Narcissus",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
@@ -471,7 +471,7 @@
    "effects": [],
    "system": {
     "description": "<p><strong>[3][4] Narcissus</strong> · ✦–✦✦✦</p><p>You thrive on an audience. Reduce the Mob penalty on your Checks by [STARS], and +[STARS] dice to Cult of Personality. You hold a Firm Attachment “I am exceptional” that cannot be removed. Criticism that challenges reduces your Morale by [STARS], and flatterers get Firm leverage while you take -[STARS] to Social Defense against them.</p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.46",
+    "source": "Rules 2.1 (2.1 player-facing book), p.193",
     "tags": "2.1, Asset, [3][4]",
     "key": "narcissus",
     "stars": 1,
@@ -483,13 +483,13 @@
       "code": "34",
       "minStars": 1,
       "maxStars": 3,
-      "sourcePage": 46
+      "sourcePage": 193
      }
     }
    }
   },
   {
-   "_id": "4d400f1b2bb2558b",
+   "_id": "915e88ee4b194a92",
    "name": "Wallflower",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
@@ -498,7 +498,7 @@
    "effects": [],
    "system": {
     "description": "<p><strong>[3][5] Wallflower</strong> · ✦–✦✦✦</p><p>You watch the room before you speak. You’d rather not talk if you don’t need to. +[STARS] dice to Observation-based reading of others and to Written Social Engineering. Take -[STARS] dice to Face-based Checks before strangers or any Mob of Size 2+, and public humiliation reduces your Morale by [STARS].</p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.46",
+    "source": "Rules 2.1 (2.1 player-facing book), p.193",
     "tags": "2.1, Asset, [3][5]",
     "key": "wallflower",
     "stars": 1,
@@ -510,24 +510,24 @@
       "code": "35",
       "minStars": 1,
       "maxStars": 3,
-      "sourcePage": 46
+      "sourcePage": 193
      }
     }
    }
   },
   {
-   "_id": "7db8615d639e0da3",
-   "name": "Karmic Agent",
+   "_id": "b753e09ab4de008a",
+   "name": "Iron Hand",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
    "folder": "f77ae29eb0d9c605",
    "sort": 6000,
    "effects": [],
    "system": {
-    "description": "<p><strong>[3][6] Karmic Agent</strong> · ✦–✦✦✦</p><p>You are an iron ledger and your principles don’t bend. +[STARS] to the Social Defense bonus when an Attachment opposes the goal. Weakening one of your Attachments takes double the time, and watching a rule or principle you hold be broken costs you [STARS] Morale.</p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.46",
+    "description": "<p><strong>[3][6] Iron Hand</strong> · ✦–✦✦✦</p><p>You are an iron ledger and your principles don’t bend. +[STARS] to the Social Defense bonus when an Attachment opposes the goal. Weakening one of your Attachments takes double the time, and watching a rule or principle you hold be broken costs you [STARS] Morale.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.193",
     "tags": "2.1, Asset, [3][6]",
-    "key": "karmicAgent",
+    "key": "ironHand",
     "stars": 1,
     "detail": ""
    },
@@ -537,13 +537,13 @@
       "code": "36",
       "minStars": 1,
       "maxStars": 3,
-      "sourcePage": 46
+      "sourcePage": 193
      }
     }
    }
   },
   {
-   "_id": "aaf8d2520f7d0236",
+   "_id": "ab67725f25256886",
    "name": "Anvil Head",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
@@ -551,8 +551,8 @@
    "sort": 1000,
    "effects": [],
    "system": {
-    "description": "<p><strong>[4][1] Anvil Head</strong> · ✦–✦✦✦</p><p>Your head is thick bone. +[STARS] dice to Stun Resistance Checks, and your Head gains 1 HP at ✦✦ and 2 HP at ✦✦✦. The dense skull dulls what you sense: -[STARS] dice to Peripheral Oracle Checks, and helmets must be custom-fabricated for you.</p><p><em>Applied automatically on the 2.1 sheet.</em></p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.46",
+    "description": "<p><strong>[4][1] Anvil Head</strong> · ✦–✦✦✦</p><p>Your head is thick bone. +[STARS] dice to Stun Resistance Checks, and your Head gains 1 HP at ✦✦ and 2 HP at ✦✦✦. When you deal damage with your head, you don't suffer damage with it and you also deal +1 damage and [SMASHING]. The dense skull dulls what you sense: -[STARS] dice to Peripheral Oracle Checks, and helmets must be custom-fabricated for you.</p><p><em>Applied automatically on the 2.1 sheet.</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.193",
     "tags": "2.1, Asset, [4][1]",
     "key": "anvilHead",
     "stars": 1,
@@ -564,13 +564,13 @@
       "code": "41",
       "minStars": 1,
       "maxStars": 3,
-      "sourcePage": 46
+      "sourcePage": 193
      }
     }
    }
   },
   {
-   "_id": "fd01807008d817d8",
+   "_id": "3c87d36ccdd32d62",
    "name": "Spring-Tendon Legs",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
@@ -578,8 +578,8 @@
    "sort": 2000,
    "effects": [],
    "system": {
-    "description": "<p><strong>[4][2] Spring-Tendon Legs</strong> · ✦–✦✦✦</p><p>Your tendons are tuned for the leap. +[STARS] to all movement speed, and you can leap up or across gaps of 2m per Star without a Check. You land hard: take +1 damage from Falling and Knockback collisions, and your hops are loud, so -[STARS] dice to Shadow Praxis.</p><p><em>Applied automatically on the 2.1 sheet.</em></p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.46",
+    "description": "<p><strong>[4][2] Spring-Tendon Legs</strong> · ✦–✦✦✦</p><p>Your tendons are tuned for the leap. +[STARS] to BASIC MOVE, and you can leap up or across gaps of 2m per Star without a Check. You land hard: take +1 damage from Falling and Knockback collisions, and your hops are loud, so -[STARS] dice to Shadow Praxis.</p><p><em>Applied automatically on the 2.1 sheet.</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.193",
     "tags": "2.1, Asset, [4][2]",
     "key": "springTendonLegs",
     "stars": 1,
@@ -591,13 +591,13 @@
       "code": "42",
       "minStars": 1,
       "maxStars": 3,
-      "sourcePage": 46
+      "sourcePage": 193
      }
     }
    }
   },
   {
-   "_id": "779f2f8ef57c279e",
+   "_id": "b4a5ebc81e31f170",
    "name": "Python Grip",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
@@ -605,8 +605,8 @@
    "sort": 3000,
    "effects": [],
    "system": {
-    "description": "<p><strong>[4][3] Python Grip</strong> · ✦–✦✦✦</p><p>Your hands are vises. At ✦ you establish Control of a Limb with a Minor Opening, at ✦✦ the Torso with a Major Opening, and at ✦✦✦ anyone you Control needs one Rank higher to break free or a Greater Counter to resist being Controlled. Holding a Control occupies you: while you hold one, take -2 dice to everything except Checks against that person.</p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.47",
+    "description": "<p><strong>[4][3] Python Grip</strong> · ✦–✦✦✦</p><p>Your hands are vises. At ✦ you establish Control of a Limb with a Quick Maneuver, at ✦✦ the Torso with a Solid Maneuver, and at ✦✦✦ anyone you Control can only break free with a Perfect Maneuver. Holding a Control occupies you: while you hold one, take -2 dice to everything except Checks against that person.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.193",
     "tags": "2.1, Asset, [4][3]",
     "key": "pythonGrip",
     "stars": 1,
@@ -618,13 +618,13 @@
       "code": "43",
       "minStars": 1,
       "maxStars": 3,
-      "sourcePage": 47
+      "sourcePage": 193
      }
     }
    }
   },
   {
-   "_id": "69b609889cc3c949",
+   "_id": "440d0f2559a9ef8c",
    "name": "Beastly Claws",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
@@ -632,8 +632,8 @@
    "sort": 4000,
    "effects": [],
    "system": {
-    "description": "<p><strong>[4][4] Beastly Claws</strong> · ✦–✦✦✦</p><p>Choose claws, horns, tusks or fangs. Your Empty Hand deals +1 damage, like a weapon. At ✦✦ you no longer need a free hand to establish Control, and at ✦✦✦ your Critical Openings deal +1 damage to any Part you Control. Your hands are weapons, not tools: -[STARS] dice to fine-motor Checks, and you cannot hide or surrender them.</p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.47",
+    "description": "<p><strong>[4][4] Beastly Claws</strong> · ✦–✦✦✦</p><p>Choose claws, horns, tusks or fangs. Your Empty Hand deals +1 damage, like a weapon. At ✦✦ you no longer need a free hand to establish Control, and at ✦✦✦ your Perfect Maneuvers deal +1 damage to any Part you Control. Your hands are weapons, not tools: - [STARS] dice to fine-motor Checks, and you cannot hide or surrender them.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.193",
     "tags": "2.1, Asset, [4][4]",
     "key": "beastlyClaws",
     "stars": 1,
@@ -645,13 +645,13 @@
       "code": "44",
       "minStars": 1,
       "maxStars": 3,
-      "sourcePage": 47
+      "sourcePage": 193
      }
     }
    }
   },
   {
-   "_id": "ce37deeb1a9cb6d9",
+   "_id": "cdc681ea4114829f",
    "name": "Venom Glands",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
@@ -660,7 +660,7 @@
    "effects": [],
    "system": {
     "description": "<p><strong>[4][5] Venom Glands</strong> · ✦–✦✦✦</p><p>Fangs, a spur, a stinger or a spitting gland make a poison. Choose its effect and Delivery. When you deal damage with it, you may apply a Poison with Potency equal to Stars, after which the gland is spent for a day. It needs feeding (an extra meal per STAR each day), and Sidhic scanners and Succor and Triage Checks can trace the venom back to you.</p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.47",
+    "source": "Rules 2.1 (2.1 player-facing book), p.194",
     "tags": "2.1, Asset, [4][5]",
     "key": "venomGlands",
     "stars": 1,
@@ -672,13 +672,13 @@
       "code": "45",
       "minStars": 1,
       "maxStars": 3,
-      "sourcePage": 47
+      "sourcePage": 194
      }
     }
    }
   },
   {
-   "_id": "90b9f3b4f896513a",
+   "_id": "9ebe7af2a562a20e",
    "name": "Hummingbird Pulse",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
@@ -686,8 +686,8 @@
    "sort": 6000,
    "effects": [],
    "system": {
-    "description": "<p><strong>[4][6] Hummingbird Pulse</strong> · ✦–✦✦✦</p><p>Fast-twitch muscle and a racing heart. +[STARS] to your Speed. Your metabolism is a furnace: eat one extra meal per Star each day or suffer -[STARS] dice to all Checks, and Stillness Checks to stay still or hold a pose take -[STARS].</p><p><em>Applied automatically on the 2.1 sheet.</em></p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.47",
+    "description": "<p><strong>[4][6] Hummingbird Pulse</strong> · ✦–✦✦✦</p><p>Fast-twitch muscle and a racing heart. +[STARS] to your Speed. Your metabolism is a furnace: eat one extra meal per Star each day or suffer -[STARS] dice to all Checks, and Stillness Checks to stay still, stay silent, or hold a pose take - [STARS].</p><p><em>Applied automatically on the 2.1 sheet.</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.194",
     "tags": "2.1, Asset, [4][6]",
     "key": "hummingbirdPulse",
     "stars": 1,
@@ -699,13 +699,13 @@
       "code": "46",
       "minStars": 1,
       "maxStars": 3,
-      "sourcePage": 47
+      "sourcePage": 194
      }
     }
    }
   },
   {
-   "_id": "19de370778b94aef",
+   "_id": "e3853f6c23f7dc7c",
    "name": "Third Eye Open",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
@@ -714,7 +714,7 @@
    "effects": [],
    "system": {
     "description": "<p><strong>[5][1] Third Eye Open</strong> · ✦</p><p>You can see Sidhi and Intramaterial anomaly. You can see all INTRA-INT even in their non-physical subtle bodies. +2 to all Geomancy Checks.</p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.47",
+    "source": "Rules 2.1 (2.1 player-facing book), p.194",
     "tags": "2.1, Asset, [5][1]",
     "key": "thirdEyeOpen",
     "stars": 1,
@@ -726,13 +726,13 @@
       "code": "51",
       "minStars": 1,
       "maxStars": 1,
-      "sourcePage": 47
+      "sourcePage": 194
      }
     }
    }
   },
   {
-   "_id": "d4c8b3aecb68ef40",
+   "_id": "80e181d6b373a9be",
    "name": "Spine Terminal Port",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
@@ -741,7 +741,7 @@
    "effects": [],
    "system": {
     "description": "<p><strong>[5][2] Spine Terminal Port</strong> · ✦✦</p><p>A jack at the base of the skull, by the spine. +2 dice to Cybernetic Haruspex Checks to hack terminals, drones and other prosthetics, as well as to Chronicle Checks made over the Intrajala. The port is also a door: anyone hacking you gains +2 dice and can seize your implants, and DEVRENDRA logs every session.</p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.47",
+    "source": "Rules 2.1 (2.1 player-facing book), p.194",
     "tags": "2.1, Asset, [5][2]",
     "key": "spineTerminalPort",
     "stars": 2,
@@ -753,13 +753,13 @@
       "code": "52",
       "minStars": 2,
       "maxStars": 2,
-      "sourcePage": 47
+      "sourcePage": 194
      }
     }
    }
   },
   {
-   "_id": "a4dbaf855bc01996",
+   "_id": "4e44cb90241e7b47",
    "name": "Tactician Soul",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
@@ -767,8 +767,8 @@
    "sort": 3000,
    "effects": [],
    "system": {
-    "description": "<p><strong>[5][3] Tactician Soul</strong> · ✦✦</p><p>You have an innate tendency for tactics. +[STARS] dice to Concrete Analysis and Peripheral Oracle Checks made to find openings, cover or choke points before you KILL THE BUDDHA. You plan for everything and improvise poorly: take -2 dice to any Check made when Ambushed or with no time to look.</p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.47",
+    "description": "<p><strong>[5][3] Tactician Soul</strong> · ✦✦</p><p>You have an innate tendency for tactics. +2 dice to Concrete Analysis and Peripheral Oracle Checks made to find openings, cover or choke points, such as in a KILL THE BUDDHA. You plan for everything and improvise poorly: take -2 dice to any Check made when Ambushed or with no time to look.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.194",
     "tags": "2.1, Asset, [5][3]",
     "key": "tacticianSoul",
     "stars": 2,
@@ -780,24 +780,24 @@
       "code": "53",
       "minStars": 2,
       "maxStars": 2,
-      "sourcePage": 47
+      "sourcePage": 194
      }
     }
    }
   },
   {
-   "_id": "0b8801d38caf89ef",
-   "name": "Compartmental Mind",
+   "_id": "3707ab70f9c5f08d",
+   "name": "Shadow Personality",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
    "folder": "e684dcf7c05b858d",
    "sort": 4000,
    "effects": [],
    "system": {
-    "description": "<p><strong>[5][4] Compartmental Mind</strong> · ✦–✦✦✦</p><p>Choose a cover persona with its own name, habits and one Held Attachment. +[STARS] dice to Shadow Praxis and Espionage while in it, and anyone who gleans your Attachments through Interaction learns the persona’s first. Living two lives wears anyone out, though: if the persona is publicly exposed you lose [STARS + 1] Morale, and you take -[STARS] dice to Heart + Stillness against anyone who knows both of your lives.</p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.47",
+    "description": "<p><strong>[5][4] Shadow Personality</strong> · ✦–✦✦✦</p><p>Choose a cover persona with its own name, habits and one Held Attachment. +[STARS] dice to Shadow Praxis and Espionage while in it, and anyone who gleans your Attachments through Interaction learns the persona’s first. Living two lives wears anyone out, though: if the persona is publicly exposed you lose [STARS + 1] Morale, and you take - [STARS] dice to Heart + Stillness against anyone who knows both of your lives.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.194",
     "tags": "2.1, Asset, [5][4]",
-    "key": "compartmentalMind",
+    "key": "shadowPersonality",
     "stars": 1,
     "detail": ""
    },
@@ -807,24 +807,51 @@
       "code": "54",
       "minStars": 1,
       "maxStars": 3,
-      "sourcePage": 47
+      "sourcePage": 194
      }
     }
    }
   },
   {
-   "_id": "86d3a59cae9212cc",
+   "_id": "338ed271f1a1fc7c",
    "name": "Adamant Will",
+   "type": "asset",
+   "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
+   "folder": "e684dcf7c05b858d",
+   "sort": 5000,
+   "effects": [],
+   "system": {
+    "description": "<p><strong>[5][5] Adamant Will</strong> · ✦–✦✦✦</p><p>+[STARS] dice to Heart + Stillness Checks against mind-clouding Magick and drugs, and at ✦✦✦ Persistence against Risk and Ruin costs 1 less Morale. Your will heals slowly: Morale refreshes at half the usual rate.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.194",
+    "tags": "2.1, Asset, [5][5]",
+    "key": "adamantWill",
+    "stars": 1,
+    "detail": ""
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "asset21": {
+      "code": "55",
+      "minStars": 1,
+      "maxStars": 3,
+      "sourcePage": 194
+     }
+    }
+   }
+  },
+  {
+   "_id": "6b9dc5cae560142d",
+   "name": "Archival Memory",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
    "folder": "e684dcf7c05b858d",
    "sort": 6000,
    "effects": [],
    "system": {
-    "description": "<p><strong>[5][6] Adamant Will</strong> · ✦–✦✦✦</p><p>+[STARS] dice to Heart + Stillness Checks against mind-clouding Magick and drugs, and at ✦✦✦ Persistence against Risk and Ruin costs 1 less Morale. Your will heals slowly: Morale refreshes at half the usual rate.</p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.47",
+    "description": "<p><strong>[5][6] Archival Memory</strong> · ✦–✦✦✦</p><p>+[STARS] dice to Chronicle Checks. At ✦✦ you recall any text, face, route or scene you witnessed exactly, and at ✦✦✦ you can replay a scene, even something you only glimpsed. You cannot forget: any Morale you lose to humiliation, betrayal or horror costs +1, since it replays.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.194",
     "tags": "2.1, Asset, [5][6]",
-    "key": "adamantWill",
+    "key": "archivalMemory",
     "stars": 1,
     "detail": ""
    },
@@ -834,24 +861,24 @@
       "code": "56",
       "minStars": 1,
       "maxStars": 3,
-      "sourcePage": 47
+      "sourcePage": 194
      }
     }
    }
   },
   {
-   "_id": "980a84565031a8ee",
-   "name": "Archival Memory",
+   "_id": "0c69ca1b6f0238f7",
+   "name": "Sleepless Soul",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
    "folder": "c260e7ba3fc8bdab",
    "sort": 1000,
    "effects": [],
    "system": {
-    "description": "<p><strong>[6][1] Archival Memory</strong> · ✦–✦✦✦</p><p>+[STARS] dice to Chronicle Checks. At ✦✦ you recall any text, face, route or scene you witnessed exactly, and at ✦✦✦ you can replay a scene, even something you only glimpsed. You cannot forget: any Morale you lose to humiliation, betrayal or horror costs +1, since it replays.</p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.47",
+    "description": "<p><strong>[6][1] Sleepless Soul</strong> · ✦–✦✦✦✦✦</p><p>You only need to rest a few hours a night. Ignore Fatigue penalties up to [STARS]. +[STARS] dice to Stillness Checks to stay awake, hold a watch, or endure boredom or hunger of mind. Your body keeps the debt: after [STARS] days without proper rest you collapse for a full day.</p><p><em>Applied automatically on the 2.1 sheet.</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.195",
     "tags": "2.1, Asset, [6][1]",
-    "key": "archivalMemory",
+    "key": "sleeplessSoul",
     "stars": 1,
     "detail": ""
    },
@@ -860,25 +887,25 @@
      "asset21": {
       "code": "61",
       "minStars": 1,
-      "maxStars": 3,
-      "sourcePage": 47
+      "maxStars": 5,
+      "sourcePage": 195
      }
     }
    }
   },
   {
-   "_id": "44c353f8e97b6bc7",
-   "name": "Sleepless Soul",
+   "_id": "af216aaf0232479d",
+   "name": "Gutter Tongue",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
    "folder": "c260e7ba3fc8bdab",
    "sort": 2000,
    "effects": [],
    "system": {
-    "description": "<p><strong>[6][2] Sleepless Soul</strong> · ✦–✦✦✦✦✦</p><p>You only need to rest a few hours a night. Ignore Fatigue penalties up to [STARS]. +[STARS] dice to Stillness Checks to stay awake, hold a watch, or endure boredom or hunger of mind. Your body keeps the debt: after [STARS] days without proper rest you collapse for a full day.</p><p><em>Applied automatically on the 2.1 sheet.</em></p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.47",
+    "description": "<p><strong>[6][2] Gutter Tongue</strong> · ✦–✦✦✦</p><ul><li>✦ is the city’s dialects, ✦✦ every trade pidgin of the Orbital Heavens, and ✦✦✦ dead and ritual tongues.</li></ul><p>+[STARS] dice to Spit In The Face Of God and Pavement Sutra Checks where language matters, and you read sutras and Intrajala text others cannot. Your accent says where you’ve been: -[STARS] dice to Shadow Praxis and Espionage when posing as a local.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.195",
     "tags": "2.1, Asset, [6][2]",
-    "key": "sleeplessSoul",
+    "key": "gutterTongue",
     "stars": 1,
     "detail": ""
    },
@@ -887,25 +914,25 @@
      "asset21": {
       "code": "62",
       "minStars": 1,
-      "maxStars": 5,
-      "sourcePage": 47
+      "maxStars": 3,
+      "sourcePage": 195
      }
     }
    }
   },
   {
-   "_id": "a49dd7ee2db58bcf",
-   "name": "Gutter Tongue",
+   "_id": "e4f3c6e25e7b4db1",
+   "name": "Armory",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
    "folder": "c260e7ba3fc8bdab",
    "sort": 3000,
    "effects": [],
    "system": {
-    "description": "<p><strong>[6][3] Gutter Tongue</strong> · ✦–✦✦✦</p><ul><li>✦ is the city’s dialects, ✦✦ every trade pidgin of the Orbital Heavens, and ✦✦✦ dead and ritual tongues. +[STARS] dice to Spit In The Face Of God and Pavement Sutra Checks where language matters, and you read sutras and Intrajala text others cannot. Your accent says where you’ve been:</li></ul><p>-[STARS] dice to Shadow Praxis and Espionage when posing as a local.</p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.47",
+    "description": "<p><strong>[6][3] Armory</strong> · ✦–✦✦✦</p><p>A hidden store of weapons, armor and ammunition. ✦ is a footlocker, ✦✦ a room, ✦✦✦ a depot. You can draw gear worth ✦ a strip, ✦✦ 300 mag, or ✦✦✦ a slab. Serials and sponsor graphics tie each piece to its maker, large stockpiles draw the Bureau, and if the cache is found you lose it.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.195",
     "tags": "2.1, Asset, [6][3]",
-    "key": "gutterTongue",
+    "key": "armory",
     "stars": 1,
     "detail": ""
    },
@@ -915,24 +942,24 @@
       "code": "63",
       "minStars": 1,
       "maxStars": 3,
-      "sourcePage": 47
+      "sourcePage": 195
      }
     }
    }
   },
   {
-   "_id": "54d45f386cfab8d7",
-   "name": "Armory",
+   "_id": "8907a6e61ca0e5fa",
+   "name": "Cargo Line Slot",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
    "folder": "c260e7ba3fc8bdab",
    "sort": 4000,
    "effects": [],
    "system": {
-    "description": "<p><strong>[6][4] Armory</strong> · ✦–✦✦✦</p><p>A hidden store of weapons, armor and ammunition.</p><ul><li>✦ is a footlocker, ✦✦ a room, ✦✦✦ a depot. You can draw gear worth ✦ a strip, ✦✦ 300 mag, or</li><li>✦✦✦ a slab. Serials and sponsor graphics tie each piece to its maker, large stockpiles draw the Bureau, and if the cache is found you lose it.</li></ul>",
-    "source": "Rules 2.1 (2.1 Alpha), p.47",
+    "description": "<p><strong>[6][4] Cargo Line Slot</strong> · ✦–✦✦✦✦✦</p><p>A standing place on a cargo line between Hingsajagra and an Orbital Heaven or Sphere. You and [STARS] tons of cargo travel free, you pass inspections without a Check up to what your manifest covers, and +[STARS] dice to Pulitika Checks with port officials. Tolls, schedules and manifest audits bind you, any contraband gets charged to your slot, and the line’s owners can cancel it.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.195",
     "tags": "2.1, Asset, [6][4]",
-    "key": "armory",
+    "key": "cargoLineSlot",
     "stars": 1,
     "detail": ""
    },
@@ -941,25 +968,25 @@
      "asset21": {
       "code": "64",
       "minStars": 1,
-      "maxStars": 3,
-      "sourcePage": 47
+      "maxStars": 5,
+      "sourcePage": 195
      }
     }
    }
   },
   {
-   "_id": "db849d7a47270f34",
-   "name": "Cargo Line Slot",
+   "_id": "8c1f531703270dc8",
+   "name": "Kin",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
    "folder": "c260e7ba3fc8bdab",
    "sort": 5000,
    "effects": [],
    "system": {
-    "description": "<p><strong>[6][5] Cargo Line Slot</strong> · ✦–✦✦✦✦✦</p><p>A standing place on a cargo line between Hingsajagra and an Orbital Heaven or Sphere. You and [STARS] tons of cargo travel free, you pass inspections without a Check up to what your manifest covers, and +[STARS] dice to Pulitika Checks with port officials. Tolls, schedules and manifest audits bind you, any contraband gets charged to your slot, and the line’s owners can cancel it.</p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.48",
+    "description": "<p><strong>[6][5] Kin</strong> · ✦–✦✦✦✦✦</p><p>Name who they are, what they are: a household, a clan, a found family. These are your people.</p><ul><li>✦ a household of a dozen · ✦✦ an extended clan across a district · ✦✦✦ a lineage with a hall, a name and a graveyard · ✦✦✦✦ a clan with branches in an Orbital Heaven · ✦✦✦✦✦ a Great Clan.</li></ul><p>Among kin you never pay for a bed, a meal, or a vouch; add [STARS] dice to Organizing through them and to starting Disposition with anyone who knows the name. They will hide you, raise a whip-round, lend hands, and arrange a meeting. But community is to be inconvenienced. You are expected to attend the funerals, fund the household ([STARS x 10]♄ a month or lose a Star), take your side in the feud you inherit, answer when the young ones need work. Your kin are also the first thing an enemy takes — the Intercessor may hold them as leverage. Disgracing the name costs [STARS] Morale and a Star until you make it right.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.196",
     "tags": "2.1, Asset, [6][5]",
-    "key": "cargoLineSlot",
+    "key": "kin",
     "stars": 1,
     "detail": ""
    },
@@ -969,13 +996,13 @@
       "code": "65",
       "minStars": 1,
       "maxStars": 5,
-      "sourcePage": 48
+      "sourcePage": 196
      }
     }
    }
   },
   {
-   "_id": "9156b063b5afb11a",
+   "_id": "4ab5af64852ab991",
    "name": "Reincarnation Insurance",
    "type": "asset",
    "img": "systems/10kswordsfoundry/assets/icons/asset.svg",
@@ -983,8 +1010,8 @@
    "sort": 6000,
    "effects": [],
    "system": {
-    "description": "<p><strong>[6][6] Reincarnation Insurance</strong> · ✦✦–✦✦✦✦✦</p><p>A policy with a Sect-corp insurer (Caishen &amp; Co. writes the most) that rebuilds your Sidhic Akashic Imprint into a new body a month after you die. At ✦✦ you return stripped of all Assets, at ✦✦✦ you lose one Asset, and at ✦✦✦✦ you keep everything but wake Shattered at 0 Morale. At the highest premium of this insurance, ✦✦✦✦✦, you keep everything. Pay premiums monthly in Funds ([STARS] MAG strips). The insurer holds a Firm Attachment on you, may deny a claim for deaths it excludes, and using the policy ends it. Additionally, the insurer can decide whether yo broke any clauses in the written contract and use your Imprint to train new machine minds or put your consciousness into a worker robot for [STARS] decades.</p>",
-    "source": "Rules 2.1 (2.1 Alpha), p.48",
+    "description": "<p><strong>[6][6] Reincarnation Insurance</strong> · ✦✦–✦✦✦✦✦</p><p>A policy with a Sect-corp insurer (Caishen &amp; Co. writes the most) or someone that has stolen an Embryo Machine (like the Party) that rebuilds and/or transfers your Akashic Imprint to a new body after a month. At ✦✦ you return stripped of all Assets, at ✦✦✦ you lose one Asset, and at ✦✦✦✦ you keep everything but wake Shattered at 0 Morale. At the highest premium of this insurance, ✦✦✦✦✦, you keep everything. Pay premiums monthly: [STARS x 500]♄ per month. You hold a Firm Attachment to the insurer, may deny a claim for deaths it excludes, and using the policy ends it. Additionally, the insurer can decide whether you broke any clauses in the written contract and use your Imprint to train new machine minds or put your consciousness into a worker robot for [STARS] decades.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.196",
     "tags": "2.1, Asset, [6][6]",
     "key": "reincarnationInsurance",
     "stars": 2,
@@ -996,7 +1023,7 @@
       "code": "66",
       "minStars": 2,
       "maxStars": 5,
-      "sourcePage": 48
+      "sourcePage": 196
      }
     }
    }

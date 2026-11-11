@@ -1,6 +1,6 @@
 // Rules 2.1 Assets and Barang as Items (2026-11 test run). Assets: Alpha pp.44–48; Barang: Alpha pp.50–51 and the playtest Sects.
-import {ASSETS_21, advancementCost, sectCultivationNames21} from "./rules21.mjs?v=0.2.14";
-import {escapeHTML} from "./resolution.mjs?v=0.2.14";
+import {ASSETS_21, advancementCost, sectCultivationNames21} from "./rules21.mjs?v=0.2.16";
+import {escapeHTML} from "./resolution.mjs?v=0.2.16";
 
 const SYSTEM = "10kswordsfoundry";
 const int = value => Math.trunc(Number(value) || 0);

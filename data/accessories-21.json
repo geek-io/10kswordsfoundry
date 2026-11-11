@@ -5,24 +5,24 @@
    "name": "Accessories",
    "folder": null,
    "type": "Item",
-   "sorting": "a",
+   "sorting": "m",
    "sort": 0,
    "color": null
   }
  ],
  "items": [
   {
-   "_id": "03654d61557be5b2",
-   "name": "Clean Black Necktie",
+   "_id": "a478e919c1152e39",
+   "name": "SSA Red Eye Ring",
    "type": "accessory",
    "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
    "system": {
-    "description": "<p>A surprisingly spotless and clean necktie. Perhaps to remind you of who you are.</p><p><strong>REMINDS YOU YOU'RE A DETECTIVE. +2 MORALE.</strong></p><p>Weight not printed.</p>",
-    "source": "Rules 2.1 (Red Kalpa Manuscript), p.35",
+    "description": "<p>A ring with a tiny life-giving ruby. The Cultivation Womb reacts favorably with a ruby's interiority. A little help can go a long way.</p><p><strong>Common Accessory · 0.5 kg · 500 ♄</strong> · d6: 1</p><p><strong>Wearing Arm: +1 HP.</strong></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.165",
     "rarity": "common",
     "quantity": 1,
     "slots": 1,
-    "magCost": 0,
+    "magCost": 500,
     "equipped": false,
     "gearSlot": "carry",
     "tags": "2.1, Accessory",
@@ -35,12 +35,267 @@
       "torso": 0,
       "head": 0
      },
-     "morale": 2,
-     "weight": 0.0
+     "morale": 0,
+     "weight": 0.5
+    }
+   },
+   "effects": [
+    {
+     "_id": "258df9038c62cde7",
+     "name": "SSA Red Eye Ring: +1 HP (right arm)",
+     "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+     "transfer": true,
+     "disabled": false,
+     "description": "<p>Rules 2.1 (2.1 player-facing book), p.165. Applies while equipped. Edit the effect key to system.parts.larm.hpBonus for the left arm.</p>",
+     "system": {
+      "changes": [
+       {
+        "key": "system.parts.rarm.hpBonus",
+        "type": "add",
+        "value": "1",
+        "phase": "initial",
+        "priority": 20
+       }
+      ]
+     }
+    }
+   ],
+   "folder": "5864d8d6198f4c9c",
+   "sort": 0,
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "accessories-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "6347ec4a69c0a868",
+   "name": "AWW Thaumaturgical Choker",
+   "type": "accessory",
+   "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
+   "system": {
+    "description": "<p>A choker made of practical esoteric knowledges. Thaumaturgicals are blends of Classic Science and Esoteric Science.</p><p><strong>Uncommon Accessory · 0.25 kg · 800 ♄</strong> · d6: 2</p><p><strong>+1 max Flame.</strong></p><p><em>Catalog note: Raise Maximum Flame by 1 on the sheet while it is worn.</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.165",
+    "rarity": "uncommon",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 800,
+    "equipped": false,
+    "gearSlot": "carry",
+    "tags": "2.1, Accessory",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.25
     }
    },
    "effects": [],
    "folder": "5864d8d6198f4c9c",
+   "sort": 1000,
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "accessories-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "e7a848dfc16a59cf",
+   "name": "Exdead Soul Integrity Earring",
+   "type": "accessory",
+   "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
+   "system": {
+    "description": "<p>\"ABANDON ALL HESITATION. THE ONLY BEAST HERE IS YOU.\"</p><p><strong>Enhanced Accessory · 0.1 kg · 200 ♄</strong> · d6: 3</p><p><strong>Gain +1 max Morale.</strong></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.165",
+    "rarity": "enhanced",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 200,
+    "equipped": false,
+    "gearSlot": "carry",
+    "tags": "2.1, Accessory",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 1,
+     "weight": 0.1
+    }
+   },
+   "effects": [],
+   "folder": "5864d8d6198f4c9c",
+   "sort": 2000,
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "accessories-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "fdc6acc7138f65e0",
+   "name": "Demon God Prayer Beads",
+   "type": "accessory",
+   "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
+   "system": {
+    "description": "<p>Mala with the heart bead being the face of a Wrathful Buddha. Can there ever be succor when Nonviolence is also Violence?</p><p><strong>Rare Accessory · 0.3 kg · 200 ♄</strong> · d6: 4</p><p><strong>+1 to Empty Hand damage.</strong></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.165",
+    "rarity": "rare",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 200,
+    "equipped": false,
+    "gearSlot": "carry",
+    "tags": "2.1, Accessory",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.3
+    }
+   },
+   "effects": [],
+   "folder": "5864d8d6198f4c9c",
+   "sort": 3000,
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "accessories-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "435c456960e6aa3f",
+   "name": "Devrendra Data Veil",
+   "type": "accessory",
+   "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
+   "system": {
+    "description": "<p>DEVRENDRA Thaumaturgicals have found a way to privatize even the face of a person, though of course your data still belongs to them. This ice-wall creates holoprojections to effectively create black box censorships around one's face while wearing the data veil.</p><p><strong>Deluxe Accessory · 0.25 kg · 2,000 ♄</strong> · d6: 5</p><p><strong>Obfuscates the face with a veil, shimmering it with a digital cover. Hides identity.</strong></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.165",
+    "rarity": "deluxe",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 2000,
+    "equipped": false,
+    "gearSlot": "carry",
+    "tags": "2.1, Accessory",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.25
+    }
+   },
+   "effects": [],
+   "folder": "5864d8d6198f4c9c",
+   "sort": 4000,
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "accessories-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "fa3c5f6a5a2decff",
+   "name": "SSA Angel Arm Prosthetic",
+   "type": "accessory",
+   "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
+   "system": {
+    "description": "<p>There are 108,000,000 Angels and there are 666,666,666 Demons. Angels are servants of the Gods and are powered by Magicite and Sidhi. The most powerful angels are powered by exploding stars. TECHNICALLY A HALF TRUTH // ANGELS ARE UNKNOWABLE ARTIFICIAL CONSCIOUSNESSES. AUTOMATA MADE WITH NEUTRON STAR CARAPACES AND SUPERNOVA HEARTS. THEY SERVED A GOD ONCE. AN IMPOSSIBLY VAST COSMIC COMMUNIST CIVILIZATION THAT CAELAFORMED THE UNIVERSE 108 KALPAS AGO.</p><p><strong>Prestige Accessory · 3 kg · 12,000 ♄</strong> · d6: 6</p><p><strong>Replaces one Arm and can work as a WROUGHT ARM. +1 to KILL THE BUDDHA Checks with a weapon held in that Hand.</strong></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.165",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 12000,
+    "equipped": false,
+    "gearSlot": "carry",
+    "tags": "2.1, Accessory",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 3
+    }
+   },
+   "effects": [],
+   "folder": "5864d8d6198f4c9c",
+   "sort": 5000,
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "accessories-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "03654d61557be5b2",
+   "name": "Clean Black Necktie",
+   "type": "accessory",
+   "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
+   "system": {
+    "description": "<p>A surprisingly spotless and clean necktie. Perhaps to remind you of who you are.</p><p><strong>Common Accessory · 0.05 kg · 2 ♄</strong></p><p>+1 MORALE</p><p><em>Catalog note: The card on p.187 is headed \"YEI Heavy Duty Gloves\"; its text is the necktie.</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.187",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 2,
+    "equipped": false,
+    "gearSlot": "carry",
+    "tags": "2.1, Accessory, Accessory",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 1,
+     "weight": 0.05
+    }
+   },
+   "effects": [],
+   "folder": "5864d8d6198f4c9c",
+   "sort": 6000,
    "flags": {
     "10kswordsfoundry": {
      "rules21": {
@@ -55,15 +310,15 @@
    "type": "accessory",
    "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
    "system": {
-    "description": "<p>A pair of clogs with intramaterial featherstepping Sidhi.</p><p><strong>The wearer can jump up to double their movement speed and does not suffer fall damage. Also as long as she has 20kg or less in her carrying capacity, she is considered as being half her weight so she can walk upon treacherous or fragile surfaces.</strong></p><p>Weight not printed.</p>",
-    "source": "Rules 2.1 (Red Kalpa Manuscript), p.35",
-    "rarity": "common",
+    "description": "<p>A pair of clogs with intramaterial featherstepping Sidhi.</p><p><strong>Uncommon Accessory · 1 kg · 400 ♄</strong></p><p>Jump up to double your Move; take no falling damage; while carrying 20kg or less you count as half your weight on fragile surfaces.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.187",
+    "rarity": "uncommon",
     "quantity": 1,
     "slots": 1,
-    "magCost": 0,
+    "magCost": 400,
     "equipped": false,
     "gearSlot": "carry",
-    "tags": "2.1, Accessory",
+    "tags": "2.1, Accessory, Accessory",
     "r21": {
      "coverage": {
       "rleg": 0,
@@ -74,11 +329,188 @@
       "head": 0
      },
      "morale": 0,
-     "weight": 0.0
+     "weight": 1
     }
    },
    "effects": [],
    "folder": "5864d8d6198f4c9c",
+   "sort": 7000,
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "accessories-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "912fd35f1264bd93",
+   "name": "VATAC Adamant Ballistic Boots \"Kongo\"",
+   "type": "accessory",
+   "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
+   "system": {
+    "description": "<p>The KONGO model is known for its fearsome Wisdom King aesthetic, blending the \"dharma protector\" into the brutalist blackrock, ceramic, and heavensilk material</p><p><strong>Rare Accessory · 3 kg · 3,000 ♄</strong></p><p>Dealing damage with the Legs deal +1 damage.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.187",
+    "rarity": "rare",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 3000,
+    "equipped": false,
+    "gearSlot": "carry",
+    "tags": "2.1, Accessory, Accessory",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 3
+    }
+   },
+   "effects": [],
+   "folder": "5864d8d6198f4c9c",
+   "sort": 8000,
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "accessories-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "529b95a236ecd088",
+   "name": "AWW \"Genji\" Boots",
+   "type": "accessory",
+   "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
+   "system": {
+    "description": "<p>Beautiful silk-like high boots of pure white, almost ivory.</p><p><strong>Rare Accessory · 1 kg · 5,600 ♄</strong></p><p>+1 BASIC MOVE. The wearer can move across vertical surfaces, though she cannot stand or stay still upon them.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.187",
+    "rarity": "rare",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 5600,
+    "equipped": false,
+    "gearSlot": "carry",
+    "tags": "2.1, Accessory, Accessory",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 1
+    }
+   },
+   "effects": [
+    {
+     "_id": "823174b82cc04415",
+     "name": "Genji Boots: +1 Basic Move",
+     "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
+     "transfer": true,
+     "disabled": false,
+     "description": "<p>Rules 2.1 (2.1 player-facing book), p.187. Applies while equipped.</p>",
+     "system": {
+      "changes": [
+       {
+        "key": "system.moveBonus",
+        "type": "add",
+        "value": "1",
+        "phase": "initial",
+        "priority": 20
+       }
+      ]
+     }
+    }
+   ],
+   "folder": "5864d8d6198f4c9c",
+   "sort": 9000,
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "accessories-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "621c902fd6229107",
+   "name": "Exdead Mind-Silk Boots",
+   "type": "accessory",
+   "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
+   "system": {
+    "description": "<p>Boots made with impossible to make Mind-Silk, woven from the lingering Esoteric Mind-Patterns of ancient INTRA-INTs.</p><p><strong>Rare Accessory · 1 kg · 23,000 ♄</strong></p><p>The wearer's footsteps make no sound.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.187",
+    "rarity": "rare",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 23000,
+    "equipped": false,
+    "gearSlot": "carry",
+    "tags": "2.1, Accessory, Accessory",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 1
+    }
+   },
+   "effects": [],
+   "folder": "5864d8d6198f4c9c",
+   "sort": 10000,
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "accessories-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "3a4fec9bb60a43e3",
+   "name": "HDF \"Mingwang\" Sabatons",
+   "type": "accessory",
+   "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
+   "system": {
+    "description": "<p>Sabatons of burning black steel, gleaming like porcelain. There are Dragon Deities in the near heavens who breathed vajra like flamethrowers. Their vajra was captured by Shennin Orbital Heaven Expeditionaries and researched to create this armor.</p><p><strong>Rare Accessory · 8 kg · 23,000 ♄</strong></p><p>The wearer may walk through fire, acid, blades, and other hazardous terrain without catching fire or taking damage; the flames bend away from the sabatons.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.187",
+    "rarity": "rare",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 23000,
+    "equipped": false,
+    "gearSlot": "carry",
+    "tags": "2.1, Accessory, Accessory",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 8
+    }
+   },
+   "effects": [],
+   "folder": "5864d8d6198f4c9c",
+   "sort": 11000,
    "flags": {
     "10kswordsfoundry": {
      "rules21": {

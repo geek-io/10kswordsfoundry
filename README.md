@@ -1,6 +1,6 @@
 # 10,000 Swords Against Heaven for Foundry VTT
 
-A Foundry VTT v14 game system for *10,000 Swords Against Heaven*, based on rules version 2.0.3, with an opt-in **2.1 (2.1 Alpha)** ruleset in testing.
+A Foundry VTT v14 game system for *10,000 Swords Against Heaven*, based on rules version 2.0.3, with an opt-in **2.1 (2.1 player-facing book)** ruleset in testing.
 
 - System by: Geek IO Dev Team
 
@@ -12,6 +12,16 @@ A Foundry VTT v14 game system for *10,000 Swords Against Heaven*, based on rules
 
 All my work is always free, but a little bit of help is always appreciated!  
 <a href="https://patreon.com/geekioshow"><img src="assets/Patreon-Logo.png" alt="All my work is always free, but a little bit of help is always appreciated" width="240"></a>
+
+# v 0.2.16
+
+**The 2.1 player-facing book, in the compendiums.** The 2.1 ruleset's compendiums are now built from the full 187-page player-facing book, and three new compendiums join them. The 2.0.3 rules are unchanged.
+
+- **New: 2.1 Cultivator Discovery.** Character creation from the book, drag-and-drop: the **Classes** (3d6 — Lumpenproletariat through Heavenly Bourgeoisie), **Alignments** (2d6 — Fascism through Communism), **Cultures** (d66, 36 of them), **Truths** (d66) and **Perversions** (d66), plus a **Names** syllable table (roll 2d6 twice). Each entry carries its roll and its full book text.
+- **New: 2.1 Market Goods.** The market's **Salvage, Tools, Esotery and Talismans** (book pp.166–169), each a rollable d6 set.
+- **New: 2.1 World Beings.** For the Intercessor: the **Traits** (3d6, 16 of them), **Gambits** (2d6), nine **Templates** (Brigand, Soldier, Elite Guard, Diplomat, Sorcerer, Alchemist, Beast, Goblin, Earthly Dragon or Devil) with their full stat blocks, and the **Inhabitants** (d66) and **Material** (2d6) discovery tables.
+- **Every 2.1 item and Sect compendium refreshed to the book.** 2.1 Weapons, Armor, Accessories, Ammunition, Consumables, Assets, Barang, Sects and Sect Gear now cite the player-facing book's pages, with the book's final names, stats and text.
+- **Sapphire Star preview.** The seventeenth Sect is in the roster as a flavor-only entry (Dual Cultivation, Sorcerous Diplomacy). The book introduces it but does not yet print its Technicks, Magicks, License or Barang; it will be filled in when the book does.
 
 # v 0.2.14
 

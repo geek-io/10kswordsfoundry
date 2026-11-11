@@ -1,19 +1,19 @@
-import {magickAreaSize} from './fashion-effects.mjs?v=0.2.14';
-import {abilityArea,placeAbilityArea,AREA_SHAPES} from './areas.mjs?v=0.2.14';
-export {AREA_SHAPES} from './areas.mjs?v=0.2.14';
-import {eligibleWeapon,specialAttackProfile,WEAPON_REQUIREMENTS} from './special-abilities.mjs?v=0.2.14';
-import {useWeapon} from './equipment.mjs?v=0.2.14';
-import {saveChanges} from './save-changes.mjs?v=0.2.14';
-import {animationContext,playItemAnimation} from './animations.mjs?v=0.2.14';
-import {effectControls,abilityEffectData} from './ability-effects.mjs?v=0.2.14';
-import {isInternalized,installationChanges} from './ability-state.mjs?v=0.2.14';
-import {CULTIVATIONS,checkFormula,summarizeCheck} from './rules.mjs?v=0.2.14';
-import {assertAction} from './conditions.mjs?v=0.2.14';
-import {requireFreeHand,inSamadhi,enterSamadhi,sixesHTML} from './roll-support.mjs?v=0.2.14';
-import {occupiedSlots} from './slots.mjs?v=0.2.14';
-import {queueEquipment} from './equipment.mjs?v=0.2.14';
-import {healthSutra} from './health.mjs?v=0.2.14';
-import {escapeHTML as esc} from './resolution.mjs?v=0.2.14';
+import {magickAreaSize} from './fashion-effects.mjs?v=0.2.16';
+import {abilityArea,placeAbilityArea,AREA_SHAPES} from './areas.mjs?v=0.2.16';
+export {AREA_SHAPES} from './areas.mjs?v=0.2.16';
+import {eligibleWeapon,specialAttackProfile,WEAPON_REQUIREMENTS} from './special-abilities.mjs?v=0.2.16';
+import {useWeapon} from './equipment.mjs?v=0.2.16';
+import {saveChanges} from './save-changes.mjs?v=0.2.16';
+import {animationContext,playItemAnimation} from './animations.mjs?v=0.2.16';
+import {effectControls,abilityEffectData} from './ability-effects.mjs?v=0.2.16';
+import {isInternalized,installationChanges} from './ability-state.mjs?v=0.2.16';
+import {CULTIVATIONS,checkFormula,summarizeCheck} from './rules.mjs?v=0.2.16';
+import {assertAction} from './conditions.mjs?v=0.2.16';
+import {requireFreeHand,inSamadhi,enterSamadhi,sixesHTML} from './roll-support.mjs?v=0.2.16';
+import {occupiedSlots} from './slots.mjs?v=0.2.16';
+import {queueEquipment} from './equipment.mjs?v=0.2.16';
+import {healthSutra} from './health.mjs?v=0.2.16';
+import {escapeHTML as esc} from './resolution.mjs?v=0.2.16';
 
 const select=(name,choices,value)=>`<select name="${name}">${Object.entries(choices).map(([key,label])=>`<option value="${esc(key)}" ${key===value?'selected':''}>${esc(label)}</option>`).join('')}</select>`;
 export function abilityCosts(source,item) {

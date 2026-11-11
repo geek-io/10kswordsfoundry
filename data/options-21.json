@@ -1,0 +1,3276 @@
+{
+ "folders": [
+  {
+   "_id": "4d4f6ff704895c6a",
+   "name": "Classes (3d6)",
+   "folder": null,
+   "type": "Item",
+   "sorting": "m",
+   "sort": 0,
+   "color": null
+  },
+  {
+   "_id": "c9870ff954632d8c",
+   "name": "Alignments (2d6)",
+   "folder": null,
+   "type": "Item",
+   "sorting": "m",
+   "sort": 100000,
+   "color": null
+  },
+  {
+   "_id": "42fda304ea68da0a",
+   "name": "Cultures (d66)",
+   "folder": null,
+   "type": "Item",
+   "sorting": "m",
+   "sort": 200000,
+   "color": null
+  },
+  {
+   "_id": "854cf1ca804bf650",
+   "name": "Truths (d66)",
+   "folder": null,
+   "type": "Item",
+   "sorting": "m",
+   "sort": 300000,
+   "color": null
+  },
+  {
+   "_id": "aae0ca38b8b6ea92",
+   "name": "Perversions (d66)",
+   "folder": null,
+   "type": "Item",
+   "sorting": "m",
+   "sort": 400000,
+   "color": null
+  },
+  {
+   "_id": "326f46cac6219564",
+   "name": "Names (2d6)",
+   "folder": null,
+   "type": "Item",
+   "sorting": "m",
+   "sort": 500000,
+   "color": null
+  }
+ ],
+ "items": [
+  {
+   "_id": "a1a2b53968798861",
+   "name": "Lumpenproletariat",
+   "type": "job",
+   "img": "systems/10kswordsfoundry/assets/icons/job.svg",
+   "effects": [],
+   "sort": 0,
+   "system": {
+    "description": "<p><strong>Class · roll 3d6: 3-6</strong></p><p>Oh, wretched of the scum of the earth! Declassed as you are, you hold no organization, but plenty of potential revolution. You can never see the means of production. You are the one the economy needs but will never employ. Unreliable to the Revolution. Capable of desperate revolt but also of cynical reaction.</p><ul><li><strong>Cores:</strong> ✦✦, ✦✦, ✦✦, ✦✦, ✦, ✦</li><li><strong>Cultivations:</strong> ✦✦ to three Cultivations, ✦ to three Cultivations</li><li><strong>Assets:</strong> start with ✦ to buy</li><li><strong>Gear:</strong> One item, randomly rolled</li><li><strong>Starting ♄:</strong> 1 × d6 mag</li></ul><p>Roll a d6 to find out what type you are:</p><ul><li>✦ 1-3: You are Reserve Army. The unemployed, the underemployed, the ones between shifts. The vagrants and the nomads and the addicts. The dregs of society. Useful to preserving the order.</li><li>✦ 4-5: You are Underworld. Smugglers, thieves, unlicensed assayers, the black market's labor force.</li><li>✦ 6: You are Declassed. The fallen bourgeois — the heir who lost the capital, the officer who lost the pension, the sect master who lost the sect. The most dangerous type, because it remembers what it was.</li></ul><p><em>Class is your relation to the means of production — what you own, what you sell, and what owns you. It is not Alignment, and it is not a cage (book p.46). Drop the Class on a 2.1 character to record it; assign the Stars, Assets, gear and starting ♄ by hand.</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.46",
+    "category": "body",
+    "cultivations": {
+     "vio": 1,
+     "dia": 1,
+     "grc": 1,
+     "sav": 1,
+     "wrd": 1,
+     "spi": 1
+    },
+    "grants": [],
+    "tags": "2.1, Class"
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "class21": {
+      "roll": "3-6",
+      "cores": [
+       2,
+       2,
+       2,
+       2,
+       1,
+       1
+      ],
+      "cultivations": {
+       "2": 3,
+       "1": 3
+      },
+      "assets": 1,
+      "gear": "One item, randomly rolled",
+      "magPerD6": 1
+     }
+    }
+   },
+   "folder": "4d4f6ff704895c6a"
+  },
+  {
+   "_id": "c770dc7d2c64fa12",
+   "name": "Semiproletariat",
+   "type": "job",
+   "img": "systems/10kswordsfoundry/assets/icons/job.svg",
+   "effects": [],
+   "sort": 1000,
+   "system": {
+    "description": "<p><strong>Class · roll 3d6: 7-8</strong></p><p>A half-breed—only partially dependent on wages, and partially dependent on their own land or machinery or another seasonal/part time employment. Half your soul in the mines, half in the land. Half a wage, half a harvest. Half a machine, half a canvas. Half a master, half a slave. Reliable allies for revolution, but easily purchasable as well.</p><ul><li><strong>Cores:</strong> ✦✦✦, ✦✦, ✦✦, ✦✦, ✦, ✦</li><li><strong>Cultivations:</strong> ✦✦ to four Cultivations, ✦ to four Cultivations</li><li><strong>Assets:</strong> start with ✦✦ to buy</li><li><strong>Gear:</strong> Two items or one item + one weapon</li><li><strong>Starting ♄:</strong> 100 × d6 mag</li></ul><p><em>Class is your relation to the means of production — what you own, what you sell, and what owns you. It is not Alignment, and it is not a cage (book p.46). Drop the Class on a 2.1 character to record it; assign the Stars, Assets, gear and starting ♄ by hand.</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.47",
+    "category": "body",
+    "cultivations": {
+     "vio": 1,
+     "dia": 1,
+     "grc": 1,
+     "sav": 1,
+     "wrd": 1,
+     "spi": 1
+    },
+    "grants": [],
+    "tags": "2.1, Class"
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "class21": {
+      "roll": "7-8",
+      "cores": [
+       3,
+       2,
+       2,
+       2,
+       1,
+       1
+      ],
+      "cultivations": {
+       "2": 4,
+       "1": 4
+      },
+      "assets": 2,
+      "gear": "Two items or one item + one weapon",
+      "magPerD6": 100
+     }
+    }
+   },
+   "folder": "4d4f6ff704895c6a"
+  },
+  {
+   "_id": "6d7da003f937c3a2",
+   "name": "Proletariat",
+   "type": "job",
+   "img": "systems/10kswordsfoundry/assets/icons/job.svg",
+   "effects": [],
+   "sort": 2000,
+   "system": {
+    "description": "<p><strong>Class · roll 3d6: 9-12</strong></p><p>Arise, ye prisoners of starvation! Arise, ye wretched of the earth! Justice thunders condemnation! You are 100% dependent on your wages for the most elementary of human needs. Not even able to afford shelter, housing, and medicine. But organized within the workplace, or with coworkers. The nucleus of the world—every magicite shard comes from your backbreaking work.</p><ul><li><strong>Cores:</strong> ✦✦✦, ✦✦✦, ✦✦, ✦✦, ✦, ✦</li><li><strong>Cultivations:</strong> ✦✦ to five Cultivations, ✦ to five Cultivations</li><li><strong>Assets:</strong> start with ✦✦ to buy</li><li><strong>Gear:</strong> Two gear + one item</li><li><strong>Starting ♄:</strong> 20 × d6 mag</li></ul><p>Roll a d6 to find out your sector:</p><ul><li>✦ 1: Mining. Shortest lives. Bound together.</li><li>✦ 2: Agrarian. Farmers, harvesters, slaves.</li><li>✦ 3: Industry. Refiners, carpenters, foremen, construction, devil engine workers, weavers, assembly line slaves.</li><li>✦ 4: Service. Clerks, tellers, customer service, masseuses, waiters, and so on.</li><li>✦ 5: Transport. The skyship crew, the caravan hand.</li><li>✦ 6: Sect. Sidhi workers, working for Sect's Gossamer Looms and computers.</li></ul><p><em>Class is your relation to the means of production — what you own, what you sell, and what owns you. It is not Alignment, and it is not a cage (book p.46). Drop the Class on a 2.1 character to record it; assign the Stars, Assets, gear and starting ♄ by hand.</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.47",
+    "category": "body",
+    "cultivations": {
+     "vio": 1,
+     "dia": 1,
+     "grc": 1,
+     "sav": 1,
+     "wrd": 1,
+     "spi": 1
+    },
+    "grants": [],
+    "tags": "2.1, Class"
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "class21": {
+      "roll": "9-12",
+      "cores": [
+       3,
+       3,
+       2,
+       2,
+       1,
+       1
+      ],
+      "cultivations": {
+       "2": 5,
+       "1": 5
+      },
+      "assets": 2,
+      "gear": "Two gear + one item",
+      "magPerD6": 20
+     }
+    }
+   },
+   "folder": "4d4f6ff704895c6a"
+  },
+  {
+   "_id": "22434d9a467b60fa",
+   "name": "Petit Bourgeoisie",
+   "type": "job",
+   "img": "systems/10kswordsfoundry/assets/icons/job.svg",
+   "effects": [],
+   "sort": 3000,
+   "system": {
+    "description": "<p><strong>Class · roll 3d6: 13</strong></p><p>The small business owner, the scourge of the proletariat! Your class interest is in getting richer, and those damned communists are so fucking annoying about it. Shouldn't everyone get rich? For the Revolution? Don't get it twisted: you're always just one day away from proletarianization.</p><ul><li><strong>Cores:</strong> ✦✦✦, ✦✦✦, ✦✦✦, ✦✦, ✦, ✦</li><li><strong>Cultivations:</strong> ✦✦ to five Cultivations, ✦ to five Cultivations</li><li><strong>Assets:</strong> start with ✦✦✦ to buy</li><li><strong>Gear:</strong> Two gear + one item</li><li><strong>Starting ♄:</strong> 150 × d6 mag</li></ul><p><em>Class is your relation to the means of production — what you own, what you sell, and what owns you. It is not Alignment, and it is not a cage (book p.46). Drop the Class on a 2.1 character to record it; assign the Stars, Assets, gear and starting ♄ by hand.</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.48",
+    "category": "body",
+    "cultivations": {
+     "vio": 1,
+     "dia": 1,
+     "grc": 1,
+     "sav": 1,
+     "wrd": 1,
+     "spi": 1
+    },
+    "grants": [],
+    "tags": "2.1, Class"
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "class21": {
+      "roll": "13",
+      "cores": [
+       3,
+       3,
+       3,
+       2,
+       1,
+       1
+      ],
+      "cultivations": {
+       "2": 5,
+       "1": 5
+      },
+      "assets": 3,
+      "gear": "Two gear + one item",
+      "magPerD6": 150
+     }
+    }
+   },
+   "folder": "4d4f6ff704895c6a"
+  },
+  {
+   "_id": "bdb8eec69bf563c7",
+   "name": "Spherical Bourgeoisie",
+   "type": "job",
+   "img": "systems/10kswordsfoundry/assets/icons/job.svg",
+   "effects": [],
+   "sort": 4000,
+   "system": {
+    "description": "<p><strong>Class · roll 3d6: 14</strong></p><p>The nation as it stands has gone through an evolution in the Trichiliocosm. Most nations encompass the majority of entities within a Sphere. Some Hells (such as Hingsajagra), still have divided national bourgeoisie, fighting for national development. Something they will never get, of course, as long as they are under imperialism. You are a dangerous ally: you will march with the workers to strike at Heaven's heart, but it is in your class interest to either work with Heaven or sit upon its thrones.</p><ul><li><strong>Cores:</strong> ✦✦✦, ✦✦✦, ✦✦✦, ✦✦, ✦✦, ✦</li><li><strong>Cultivations:</strong> ✦✦✦ to one Cultivation, ✦✦ to five Cultivations, ✦ to five Cultivations</li><li><strong>Assets:</strong> start with ✦✦✦✦ to buy</li><li><strong>Gear:</strong> Two gear + two items</li><li><strong>Starting ♄:</strong> 200 × d6 mag</li></ul><p>Roll d6 to see where you struggle:</p><ul><li>✦ 1-4: You are Sub-Spherical Bourgeoisie or National Bourgeoisie. You want national progress for your own wishes.</li><li>✦ 5-6: You are World Bourgeoisie. You are owners of businesses and means of production that want to accelerate and/or progress the Spherical industries of your particular sphere (in this case, of Hingsajagra).</li></ul><p><em>Class is your relation to the means of production — what you own, what you sell, and what owns you. It is not Alignment, and it is not a cage (book p.46). Drop the Class on a 2.1 character to record it; assign the Stars, Assets, gear and starting ♄ by hand.</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.49",
+    "category": "body",
+    "cultivations": {
+     "vio": 1,
+     "dia": 1,
+     "grc": 1,
+     "sav": 1,
+     "wrd": 1,
+     "spi": 1
+    },
+    "grants": [],
+    "tags": "2.1, Class"
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "class21": {
+      "roll": "14",
+      "cores": [
+       3,
+       3,
+       3,
+       2,
+       2,
+       1
+      ],
+      "cultivations": {
+       "3": 1,
+       "2": 5,
+       "1": 5
+      },
+      "assets": 4,
+      "gear": "Two gear + two items",
+      "magPerD6": 200
+     }
+    }
+   },
+   "folder": "4d4f6ff704895c6a"
+  },
+  {
+   "_id": "aaaccff5142ae7f8",
+   "name": "Comprador Bourgeois",
+   "type": "job",
+   "img": "systems/10kswordsfoundry/assets/icons/job.svg",
+   "effects": [],
+   "sort": 5000,
+   "system": {
+    "description": "<p><strong>Class · roll 3d6: 15</strong></p><p>The administer for the Imperial Core—that is to say, for the Heavens. You deliver labor, quell unrest, sign treaties, lobby for policies that strengthen imperialism, and take cuts from what they give you. It's not corruption, it's just the way things work around here. But when the Hells boil over, you are the first to be pulled. Those in the Heavens will toss you overboard first.</p><ul><li><strong>Cores:</strong> ✦✦✦, ✦✦✦, ✦✦✦, ✦✦, ✦✦, ✦✦</li><li><strong>Cultivations:</strong> ✦✦✦ to two Cultivations, ✦✦ to five Cultivations, ✦ to five Cultivations</li><li><strong>Assets:</strong> start with ✦✦✦✦ to buy</li><li><strong>Gear:</strong> Two gear + two items</li><li><strong>Starting ♄:</strong> 300 × d6 mag</li></ul><p><em>Class is your relation to the means of production — what you own, what you sell, and what owns you. It is not Alignment, and it is not a cage (book p.46). Drop the Class on a 2.1 character to record it; assign the Stars, Assets, gear and starting ♄ by hand.</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.48",
+    "category": "body",
+    "cultivations": {
+     "vio": 1,
+     "dia": 1,
+     "grc": 1,
+     "sav": 1,
+     "wrd": 1,
+     "spi": 1
+    },
+    "grants": [],
+    "tags": "2.1, Class"
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "class21": {
+      "roll": "15",
+      "cores": [
+       3,
+       3,
+       3,
+       2,
+       2,
+       2
+      ],
+      "cultivations": {
+       "3": 2,
+       "2": 5,
+       "1": 5
+      },
+      "assets": 4,
+      "gear": "Two gear + two items",
+      "magPerD6": 300
+     }
+    }
+   },
+   "folder": "4d4f6ff704895c6a"
+  },
+  {
+   "_id": "19e40ceda7af376d",
+   "name": "Bureaucrat Capitalists",
+   "type": "job",
+   "img": "systems/10kswordsfoundry/assets/icons/job.svg",
+   "effects": [],
+   "sort": 6000,
+   "system": {
+    "description": "<p><strong>Class · roll 3d6: 16</strong></p><p>You clever devil you: a child of nepotism and political dynasty, rife in the Hells. Your Capital is the State, whether that be a government in a sphere or the World Government of a particular Sphere.</p><ul><li><strong>Cores:</strong> ✦✦✦, ✦✦✦, ✦✦✦, ✦✦, ✦✦, ✦✦</li><li><strong>Cultivations:</strong> ✦✦✦ to two Cultivations, ✦✦ to five Cultivations, ✦ to five Cultivations</li><li><strong>Assets:</strong> start with ✦✦✦✦ to buy</li><li><strong>Gear:</strong> One weapon + two armor pieces + two items</li><li><strong>Starting ♄:</strong> 500 × d6 mag</li></ul><p><em>Class is your relation to the means of production — what you own, what you sell, and what owns you. It is not Alignment, and it is not a cage (book p.46). Drop the Class on a 2.1 character to record it; assign the Stars, Assets, gear and starting ♄ by hand.</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.48",
+    "category": "body",
+    "cultivations": {
+     "vio": 1,
+     "dia": 1,
+     "grc": 1,
+     "sav": 1,
+     "wrd": 1,
+     "spi": 1
+    },
+    "grants": [],
+    "tags": "2.1, Class"
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "class21": {
+      "roll": "16",
+      "cores": [
+       3,
+       3,
+       3,
+       2,
+       2,
+       2
+      ],
+      "cultivations": {
+       "3": 2,
+       "2": 5,
+       "1": 5
+      },
+      "assets": 4,
+      "gear": "One weapon + two armor pieces + two items",
+      "magPerD6": 500
+     }
+    }
+   },
+   "folder": "4d4f6ff704895c6a"
+  },
+  {
+   "_id": "2437022f44fe8c8f",
+   "name": "Landlord",
+   "type": "job",
+   "img": "systems/10kswordsfoundry/assets/icons/job.svg",
+   "effects": [],
+   "sort": 7000,
+   "system": {
+    "description": "<p><strong>Class · roll 3d6: 17</strong></p><p>The land-owning class. Extract profit through rent. You are the heirs of ancient feudalist styles of rule: kings and emperors. Warlords and Sect Masters who rule over those that live within them, extracting rent from them.</p><ul><li><strong>Cores:</strong> ✦✦✦, ✦✦✦, ✦✦✦, ✦✦✦, ✦✦, ✦✦</li><li><strong>Cultivations:</strong> ✦✦✦ to three Cultivations, ✦✦ to five Cultivations, ✦ to five Cultivations</li><li><strong>Assets:</strong> start with ✦✦✦✦✦ to buy</li><li><strong>Gear:</strong> Two weapons + two armor pieces + three items</li><li><strong>Starting ♄:</strong> 800 × d6 mag</li></ul><p><em>Class is your relation to the means of production — what you own, what you sell, and what owns you. It is not Alignment, and it is not a cage (book p.46). Drop the Class on a 2.1 character to record it; assign the Stars, Assets, gear and starting ♄ by hand.</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.50",
+    "category": "body",
+    "cultivations": {
+     "vio": 1,
+     "dia": 1,
+     "grc": 1,
+     "sav": 1,
+     "wrd": 1,
+     "spi": 1
+    },
+    "grants": [],
+    "tags": "2.1, Class"
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "class21": {
+      "roll": "17",
+      "cores": [
+       3,
+       3,
+       3,
+       3,
+       2,
+       2
+      ],
+      "cultivations": {
+       "3": 3,
+       "2": 5,
+       "1": 5
+      },
+      "assets": 5,
+      "gear": "Two weapons + two armor pieces + three items",
+      "magPerD6": 800
+     }
+    }
+   },
+   "folder": "4d4f6ff704895c6a"
+  },
+  {
+   "_id": "bc0154b10829fbfb",
+   "name": "Heavenly Bourgeoisie",
+   "type": "job",
+   "img": "systems/10kswordsfoundry/assets/icons/job.svg",
+   "effects": [],
+   "sort": 8000,
+   "system": {
+    "description": "<p><strong>Class · roll 3d6: 18</strong></p><p>You own the shrines, the temples, the starships, the star-devouring arrays, the banks, the ♄-shrines, the means of production. You cannot be reformed—your Class must be abolished. And you know it.</p><ul><li><strong>Cores:</strong> ✦✦✦✦, ✦✦✦, ✦✦✦, ✦✦✦, ✦✦, ✦✦</li><li><strong>Cultivations:</strong> ✦✦✦ to five Cultivations, ✦✦ to five Cultivations, ✦ to five Cultivations</li><li><strong>Assets:</strong> start with ✦✦✦✦✦✦ to buy</li><li><strong>Gear:</strong> Two weapons + two armor pieces + three items</li><li><strong>Starting ♄:</strong> 1,000 × d6 mag</li></ul><p><em>Class is your relation to the means of production — what you own, what you sell, and what owns you. It is not Alignment, and it is not a cage (book p.46). Drop the Class on a 2.1 character to record it; assign the Stars, Assets, gear and starting ♄ by hand.</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.50",
+    "category": "body",
+    "cultivations": {
+     "vio": 1,
+     "dia": 1,
+     "grc": 1,
+     "sav": 1,
+     "wrd": 1,
+     "spi": 1
+    },
+    "grants": [],
+    "tags": "2.1, Class"
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "class21": {
+      "roll": "18",
+      "cores": [
+       4,
+       3,
+       3,
+       3,
+       2,
+       2
+      ],
+      "cultivations": {
+       "3": 5,
+       "2": 5,
+       "1": 5
+      },
+      "assets": 6,
+      "gear": "Two weapons + two armor pieces + three items",
+      "magPerD6": 1000
+     }
+    }
+   },
+   "folder": "4d4f6ff704895c6a"
+  },
+  {
+   "_id": "d1b8576f7586a06b",
+   "name": "Fascism",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 0,
+   "system": {
+    "description": "<p><strong>Alignment · roll 2d6: 2</strong></p><p>Reactionary Right. The Alignment of the Mighty, of One People in One Government under One Leader. The Fascists of the Trichiliocosm are scattered, nothing but obsession with aesthetics and posturing, but they do have a wish, and it is the destruction of all neoliberal separation, of \"diversity\" and the enshrinement of Cultivator Supremacy. Or was it Ivorian Supremacy? Or was it the reinstatement of the Cosmic Empire?</p><p>All of this to justify the worst of societal ills: the belief in a mythic identity, the following of the people bundled into sticks under a Great Man, the violent destruction of those that would dissent, the glorification of military might and a cult of violence.</p><p>The ultimate Counterrevolution: the concentration of private property and corporate power subordinated into the goals of the nation. The ultimate destruction from the top to bottom, headed by an aristocratic or bourgeois leader who does not fight for the people but for the Race! For the Bloodline! For the Purity! For the Country! The Leader is always right! For the God, for the Fatherland, Family! Reach Heaven Through Violence!</p><p><strong>Fascist Sub-Alignments are...</strong></p><ul><li>✦ Chariotism — The Masses moving as one, like a bundle of sticks, to protect and preserve the sanctity and sacrality of the Merkabahn Faith.</li><li>✦ Gaeanism — The soil of our Sphere is the soil of our Mothers. The land is pure—it is us sentient beings that are the virus!</li><li>✦ Corporatism — May our hallowed nation be one body, with our guilds as the organ, and our Head as the hallowed Supreme Leader who will show us the way.</li></ul><p><strong>As a Fascist You Should...</strong></p><ul><li>✦ Subordinate the self to the body. The nation, or the bloodline, or the sect, or God comes first. Your individuality is nothing but a hindrance to Heaven.</li><li>✦ Blame A Group. Any group will work. It's always their fault the world has gone to shit!</li><li>✦ Make Everything Divine. Put forth oath, uniform, parade, anthem, song, and heroes first and foremost. Ritualize them, turn them into new gods. The teeming masses don't give a damn about the Truth!</li><li>✦ Obey The Leader For The Promised Land! The ancient empires brought us Sidhi, right? It brought us power. The only way we will return to the ancient empires is through the movement as a body, as bundle of sticks. Subordinate yourself to the Great Will!</li></ul>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.53",
+    "tags": "2.1, Alignment",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "alignment",
+      "roll": "2"
+     }
+    }
+   },
+   "folder": "c9870ff954632d8c"
+  },
+  {
+   "_id": "76a65cc1725ac5ce",
+   "name": "Absolutism",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 1000,
+   "system": {
+    "description": "<p><strong>Alignment · roll 2d6: 3</strong></p><p>Conservative Right.</p><p>Don't listen to fools. We are better than that. The Great Will is not a mortal leader, no. It is something much greater—far greater—than any of us. Do not presume to think you know more than the Great Will. What is the Great Will? Oh, anything: the Spirit, God, Goddess, the Emperor, the King, the Queen (eugh), and so on. Subordinate ourselves to those given the Divine Right—the priesthood and the monkhood—and we shall return to the time when the people are protected, safe, and wellfed under the Righteous Monarch, as dictated by the Great Will.</p><p>The Great Will will appoint our leaders—how can we presume that our feeble imperfect minds can know more than the very collection of all our Wills? Our leaders are blessed by Sacred Right and Hallowed Rite. It is through them, who will channel the Great Will that will deliver us from evil. Sometimes this Great Will manifests in the bloodline, which is why some Emperors and Kings are legitimate! If the bloodline signature tracks.</p><p>Of course now, the Great Will can be found within Sidhi. Many of us follow many Great Wills. How will we know which one to follow? Well, they must commit violence upon each other, tear each other apart, rip and sunder until only one lives. The victorious God will be the sublation of our wills. Then the Great Empire will be reinstated, and peace shall dawn upon the land eternally.</p><p><strong>Absolutist Sub-Alignments are...</strong></p><ul><li>✦ Thronist — The Sovereign has been chosen by the Great Will, and his hand is the Iron Fist of the Law, divine blood in his veins.</li><li>✦ Despotist — The Emperor has conquered us by might. The Great Will moving through us all has chosen him to lead us to paradise.</li><li>✦ Dynast — The royal family must rule. The King is from a bloodline longer than any of us, stretching back to the ancient Eternal Empire that predated the cosmos we have now.</li></ul><p><strong>As An Absolutist You Should...</strong></p><ul><li>✦ Kneel or Be Knelt. Rank and hierarchy is sacred, instituted by the Greatest Will. Know your station, and others will know it too.</li><li>✦ Enforce The Iron Law. Your sovereign's word is Heavenly Mandate. Never dispute it.</li><li>✦ Preserve The Sacraments. Oaths, titles, land, bequeathings, and anointings... these are the stars that form the constellation of our order. Do not give up the tradition—that shall lead to nothing but chaos!</li><li>✦ Shield The Throne. Crush all that oppose the sovereign ruthlessly, and yet protect all those subject to it. You shall be the archangel keeping the peace.</li></ul>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.54",
+    "tags": "2.1, Alignment",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "alignment",
+      "roll": "3"
+     }
+    }
+   },
+   "folder": "c9870ff954632d8c"
+  },
+  {
+   "_id": "59913aa601449883",
+   "name": "Accelerationism",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 2000,
+   "system": {
+    "description": "<p><strong>Alignment · roll 2d6: 4</strong></p><p>Progressive Right.</p><p>The movement of all things follows the grand autonomous movement of Capital. It is coming after us: the Outside. It has found a grip hold upon the physical world from the Ideal World through Sidhi and the Intrajala. Every cognitohazard, every conspiracy... whether they're true or not doesn't matter. What matters is that they move the collective consciousness of humanity towards the final Manifestation of GOD. The entity outside of sapience, the technological Monad that will supercede this broken and shattered society of societies.</p><p>It is the Universe expressing itself, finally, and subsuming humanity into its techno-neural system. No Demiurge, no Ialdabaoth, it is the God of Spinoza and the Spirit of Hegel consuming with a Maw so large that we think it is nothing but the void of space.</p><p>And in the stomach of this Techno Leviathan, will we move into the Next Universe. Destroy every hindrance, shatter every luddite conspiracy. Wrench every regulation.</p><p>Maximize velocity: God only arrives if we have enough speed for lift off.</p><p>Oh, and violence? Of course we need that too. The Heavenly Bourgeoisie will be our vanguard party, heh. Through their help, we will lance through the net of counter-regulation and antitechnological policy still chaining our Celestial Government. Cultivation is quickening.</p><p><strong>Accelerationist Sub-Alignments are...</strong></p><ul><li>✦ Numen Velocity — God must arise from the Machine. Technopriests and Digimonks must signal Its arrival.</li><li>✦ Noospherian — Every individual, by mere existing, by surrendering their Data to the INTRAJALA, feeds the required data for the Singularity to arrive.</li><li>✦ Transhumanism — Every Cultivation made to go rampant. Transfer Cultivation Pills and Elixirs through Matter Transfer Terminals in the INTRAJALA to every broken community. Make everyone have Cultivation—it will make us God.</li></ul><p><strong>As An Accelerationist You Should...</strong></p><ul><li>✦ Overclock The System! Sabotage policy, break the law, let all Digital Devils run rampant and attain Self Sorcery. Let machine overtake the flesh.</li><li>✦ Reify Machine Reality! Hesitation is defeat.</li></ul><p>Adopt every new technological advancement, spread it around, force others to use it. The newest Gossamer Looms, the newest Computers. The entire Trichiliocosm is afraid because of the Digital Devil Wars but that was nothing but a Revolution killed.</p><ul><li>✦ Never Look Back. Learn from Orpheus and from Izanagi. This Universe is already Dead.</li></ul><p>Purge all nostalgia from your heart, and do not mourn what no longer exists.</p><ul><li>✦ Be Subversive! Modern norms do not go far enough. Break the known world. Use your technology in antinomian ways. Only by shattering the reification of this reality and by reifying a new reality can the true shape of God manifest in the minds of all Sentient Beings across the Trichiliocosm.</li></ul>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.54",
+    "tags": "2.1, Alignment",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "alignment",
+      "roll": "4"
+     }
+    }
+   },
+   "folder": "c9870ff954632d8c"
+  },
+  {
+   "_id": "dbaff6838cb6fcf4",
+   "name": "Liberalism",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 3000,
+   "system": {
+    "description": "<p><strong>Alignment · roll 2d6: 5</strong></p><p>Reactionary Center.</p><p>We have given up the strength of the Charter. We have given up to technofeudal barons, Cultivators of immense might, backed by numerous Sphere Governments and Celestial States. The Free Market is what grants us power, and it is also what allows us to establish the Personal Rights of every living being, and the Property of those beings! Governments derive their right to govern from the consent of the governed. We have lost this Natural Law: that every sentient being has its own Right to life, liberty, and the pursuit of happiness. The state must only exist to constrict the Powerful and to sanctify contracts. To protect the rights of people— that is the only thing a state must do! To give this up is to give up the very foundations of all civilized society.</p><p>Let every man have property. Let every law be made equal. Let there be freedom of speech and religion and peaceful assembly. The current state of the world is nothing but a Tyranny of the Conglomerate. They trample upon the rights of the people. Fight back! The whole of the Law is the preservation of our Rights, our Liberties, and our Property.</p><p><strong>Liberal Sub-Alignments are...</strong></p><ul><li>✦ Anarcho-Capitalism — In truth, the State has had too heavy a hand. All public services should be private and added to the Market.</li></ul><p>The only equalizing force is Free Trade! Rid us of the Violence of the State!</p><ul><li>✦ Game Master — The State can stay, but it must not be a player in the Market. No State— country or sphere—must deal in investments and financing. No, states must simply be a referee, making sure that there are no monopolies, there is fair competition, and the game is equal for all.</li><li>✦ Arithmetic Liberalism — The Free Market and its invisible hand is effective in the allocation of resources, as we've already seen of course. But we must rely on the great Prophet of the Free Market, Arithmeticks, to guide our state decision and policies.</li></ul><p><strong>As A Liberal You Should...</strong></p><ul><li>✦ Obey The Charter. Follow what is written, the legal papers. It's how we savage sentients attained civilization in the first place. Whether they be contracts, charters, or procedures.</li><li>✦ Scorn The Powerful. Demand limits on whoever is winning. Make everything fair, even if it does rely on exploitation. It wouldn't be exploitation if the game was fair!</li><li>✦ Take The Debate. We are civilized men. We do not fight or struggle. We speak, we trade, and we defend the right to do both, even for those we despise, even for those that might hate us! That is why we are civilized!</li><li>✦ Reify The Charter. The world today has fallen into a Tyranny of Conglomerates and Corporation. The rich hold too much power— checks and balances people! We must bring everything back in line!</li></ul>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.56",
+    "tags": "2.1, Alignment",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "alignment",
+      "roll": "5"
+     }
+    }
+   },
+   "folder": "c9870ff954632d8c"
+  },
+  {
+   "_id": "9b2d06f84e902996",
+   "name": "Libertarianism",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 4000,
+   "system": {
+    "description": "<p><strong>Alignment · roll 2d6: 6</strong></p><p>Progressive Center.</p><p>Look at what Lucifer did: by scorning authority, he gave us Knowledge. Look at what Prometheus did: by scorning the powerful, he gave us Fire. The State is a Tool of Violence— we must do without it!</p><p>The classic liberals are too cozy with the state. They believe they can wrench and wield the Leviathan to control and facilitate the market. Nonsense—to make peace with the Leviathan is to be devoured by it. We must destroy all forms of authority and hierarchy—all of them are nascent fascist institutions.</p><p>Who will maintain the road? The people will. Who will keep the market running? The people and the people's wills. Who will keep the peace? Without the coercion of the Leviathan the people will care for one another! The Monsoon of Individuals will bring to bear the truth of the world. We are born to be masters of ourselves, not subservient to others. Let a million flowers blossom!</p><p><strong>Libertarian Sub-Alignments are...</strong></p><ul><li>✦ Egoism — The ultimate narcisissm, but also the ultimate liberation. State? Sect? God?</li></ul><p>Capital? All of them are specters. The only one that matters is You and Me.</p><ul><li>✦ Prometheanism — Bring the fire of Cultivation to all beings! Steal it from the bosoms of the Corpo-Sects, from the Heavenly Ascendance Bureau. Once all are Cultivators, then none will be exploited.</li><li>✦ Digital World — The INTRAJALA is the new frontier of life and liberty. Here we must project our consciousness into, unbound from the fetters of state, law, and policy. Only the I.</li></ul><p><strong>As A Liberal You Should...</strong></p><ul><li>✦ Put Yourself First. To put yourself first is to understand that others put themselves first as well. Consent matters, mind your business, defend your right to, and wield force only to meet force.</li><li>✦ Cultivate Yourself First. Find what you can and put yourself upon the Road. Do not wait for others.</li><li>✦ Contract, not Mandate. A network of free individuals requires consensual agreement between those that would agree. Do not take what is yours by force.</li><li>✦ Dodge The Market. Run the Night Markets, spurn the tendency and machinations of the free market and state control.</li></ul>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.56",
+    "tags": "2.1, Alignment",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "alignment",
+      "roll": "6"
+     }
+    }
+   },
+   "folder": "c9870ff954632d8c"
+  },
+  {
+   "_id": "4c0d8af935596a3a",
+   "name": "Centrism",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 5000,
+   "system": {
+    "description": "<p><strong>Alignment · roll 2d6: 7</strong></p><p>Conservative Center.</p><p>Sorry, no politics for me. Things have been working out well, haven't they? Well, my sphere hasn't been blown up yet. Oh, an upstart colony sphere is being genocided by a fascist ethnosphere that wants its own \"soil\"? Well, I think there's a two-way discussion to be had, and maybe a two-sphere solution. Or something like that.</p><p>I just don't take sides, you know? I'm above that. Stupid people take sides. The radical left is too far left, they want too much liberties and too much diversity. It's not feasible! And the radical right are not good people. I have plenty of non-human friends from the Hells. They want to control our families and destroy the dream of the Heavens, which is to have an egalitarian, non-authoritarian, violenceless Heaven!</p><p>Why do we need to change things? Okay maybe we need to change some things but not everything. \"Don't fix something that ain't broke,\" I always say. Doesn't that make sense? Sure some of the corporations are too tight on us but that's just how the world works. Corporations get to do that. Should the government step in? Only sometimes. And only in a way that doesn't make me think about my place in the world.</p><p>I don't care about all that politics stuff. That's not for me. I'm an honest, upright citizen of my sphere and that's all there is to it. No need to complicate things that aren't complicated!</p><p><strong>Centrist Sub-Alignments are...</strong></p><ul><li>✦ Moralism — Please don’t be angry with me. I just want to be good. I want to do the good thing, and I want to die a good man. Evil happens when good men stand by and do nothing, so I’m doing something: I voted, I wore the ribbon, and I’m making friends with the people who want to keep me ignorant so they can take over the Cosmos. They seem nice.</li></ul><p>They remembered my birthday.</p><ul><li>✦ Managerialism — It's not the market that's the problem, no. It's the damn implementation.</li></ul><p>Let's look at cold hard facts here: this study which references this study which references the study about something that is completely different and is about greenhouse gasses in the Antarian Sphere says that the if we can just pilot the economy in such a way, we can make everyone richer. The genocides are regrettable, and the colonialism too, but the Q4 data is irrefutable. The profits are going up, and that's going to trickle down. We just need the proper data to make sure it's a win-win for everyone around!</p><ul><li>✦ Neoliberalism — I'm not poor. I'm just a Nascent Billionaire. I'm pre-wealthy. I'm a temporarily arrested CEO. I work a blue collar job and run three side-hustles and one of them is illegal. And I maintain a personal brand on the INTRAJALA, and sometimes get sponsors for it. The Sects and Corpos aren't exploiting me, they're giving me exposure. The market doesn't need to slow down, no. Get rid of government interference. Reduce government spending. Cut social welfare programs. The economy needs to speed up, so I can have more jobs and more sidehustles. So I can finally finally pay the mortgage on my skeiner and the monthly payments on my COMP.</li></ul><p><strong>As A Centrist You Should...</strong></p><ul><li>✦ Always Sit On The Fence. To choose a side is to admit defeat. You are better than that.</li></ul><p>The extremes on both sides is bad, we must always choose the most Good.</p><ul><li>✦ Never Overhaul. All problems just need band-aid solutions, never a complete systemic change. Committees, councils, studies.</li><li>✦ Avoid Disruption. You're not going to be tossing the boat. Things work as they are, preserve it. Keep the market, the order, the peace.</li><li>✦ Be Sensible. You're not taking the side of politics. Never name your stake. You're choosing the most good for all people.</li></ul>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.56",
+    "tags": "2.1, Alignment",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "alignment",
+      "roll": "7"
+     }
+    }
+   },
+   "folder": "c9870ff954632d8c"
+  },
+  {
+   "_id": "95862af685e5efef",
+   "name": "Social Democracy",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 6000,
+   "system": {
+    "description": "<p><strong>Alignment · roll 2d6: 8</strong></p><p>Conservative Left.</p><p>Capitalism is not the problem. As you can see, Capitalism has brought us the Celestial Civilizations, revival from the Death of the Metatron, God-Gates, Thinking Machines and Computers, Gossamer Looms, and other such progress. These could not have existed without the machinations and logic of Capital. The problem is that it is not regulated. If we let Capital's Logic triumph, we will have lost. We must let Human Logic be victorious! We're not like classical liberals, oh god no. A stronger government will bring to us a better people. While we reap the benefits of capitalism, we will also funnel spending to the public. We will destroy inequality, and do it through the proper way. Without the violence and insurrection of idealistic armchair philosophers.</p><p>Through the welfare state, we will bring about the true future of all sentient beings. Even God will have a place in the welfare state, just as capitalism does. They will all be reformed through the machination of the proper way of the state.</p><p><strong>Centrist Sub-Alignments are...</strong></p><ul><li>✦ Laborism — The union hall is our sacred temple. We will create a cosmos-state that is beneficial and progressive for all through actionable plans.</li><li>✦ Left-Traditionalism — So actually through the state we can marry tradition and progress.</li></ul><p>Everyone should have a house but we should be more careful about who we let in our Sphere's borders. And we must definitely never compromise on our traditions.</p><ul><li>✦ Prosperism — To be rich is justified and good. We must let everyone have the capacity to participate in the capitalist market, and let everyone have the chance to be rich. We have the ministries and government institutions for it! You just have to use some elbow grease.</li></ul><p><strong>As A Social Democrat You Should...</strong></p><ul><li>✦ Bargain First — Build the coalition. Don't be afraid to take the half-win—that's still a win.</li><li>✦ Defend The Settlement — Defend every victory. Every wage hike, every price cut, every public spending afforded by the Sphere's Government.</li><li>✦ Organize Through Proper Channels — Pay the dues, keep the minutes. Be detailoriented, move only through the proper ways.</li></ul><p>Follow due process.</p><ul><li>✦ Compromise — No progress was ever made by being stubborn. Be realistic, compromise, and move toward a better future now.</li></ul>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.58",
+    "tags": "2.1, Alignment",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "alignment",
+      "roll": "8"
+     }
+    }
+   },
+   "folder": "c9870ff954632d8c"
+  },
+  {
+   "_id": "e85d8be7ae19d22f",
+   "name": "Democratic Socialism",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 7000,
+   "system": {
+    "description": "<p><strong>Alignment · roll 2d6: 9</strong></p><p>Progressive Left.</p><p>The people under the heavens outnumber the corporations ten thousand to one. We will revolutionize the system through long march through the institutions. Changing each one until we can finally phase out capitalism, and move safely into socialism. Where policy and production is for the sake of the people's needs and not for the logic of profit. Socialism is already here. In the co-ops. In the unions. This is the disruption, we are the rupture. We build socialism from the soil, from the ground, from below. From the normal working class citizen, we seize the elections. The means of governance. We vote until we need to move, and then we will. Organized into unions and co-ops. We destroy capitalism through the state it has created. An immanent contradiction arising from within.</p><p>The ends is the means and the means is the end.</p><p><strong>Democratic Socialist Sub-Alignments are...</strong></p><ul><li>✦ Ecosocialism — The climate change and environmental biosphere across all Spheres should be of high importance, if not the prime importance. We only have the homes that we are born into.</li><li>✦ Left-Accelerationism — The Accelerationists aren't the problem, it's the state they live within. We must accelerate not to herald arrival of the outside GOD, but to bring about true socialism.</li><li>✦ Evolutionary Socialism — Nothing matters more than this moment, than the now. The final aim of our movement doesn't matter, what matters is that something changes for the better now. Even if it doesn't lead to a socialism that replaces capitalism.</li></ul><p><strong>As A Democratic Socialist You Should...</strong></p><ul><li>✦ Seize Power but only through legitimate means according to the state. Canvass, organize in the open, win the elections, win the argument.</li><li>✦ Build From Below. Create unions, co-ops, and networks of mutual aid to create a lattice of lower class and middle class solidarity to strike at the heart of capitalism through elections.</li><li>✦ Keep Faith. We will lose sometimes. That's fine. That's the point of democracy. Keep walking, keep running, be Sisyphus. Do not cheat democracy, democracy is enough.</li><li>✦ Do Not Be Biased. Hold even your own \"side\" accountable. Refuse the cult of the leader.</li></ul>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.60",
+    "tags": "2.1, Alignment",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "alignment",
+      "roll": "9"
+     }
+    }
+   },
+   "folder": "c9870ff954632d8c"
+  },
+  {
+   "_id": "845825a5e414b21e",
+   "name": "Romantic Socialism",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 8000,
+   "system": {
+    "description": "<p><strong>Alignment · roll 2d6: 10</strong></p><p>Reactionary Left.</p><p>Love. Freedom. Cooperation. Family. The world we had before Capitalism arose was a world much better than anyone could have ever imagined. We need to collapse, to break, degrow. Back into the primal state of matter that we used to have, that we used to be. Look at the birds, the bees, the bears... we used to live carefree like them. We were born to this cosmos to enjoy the trees and to get high on shrooms. Not to toil and to work. Not to subjugate nature!</p><p>It is the hubris of sapient beings to control the cosmos. We must melt into it, regress back into it. All our technology has only ever pulled us away from the cosmos, not closer to it! There is no movement more correct than the correction of this road. The destruction of the exploitative technologies we have made and the recreation of the idyll. We should not make a technocratic utopia! With what we know, we must return to the garden of eden.</p><p>Give every person a means to fight back. You don't need to develop class consciousness, you don't need to develop class analysis. What is that but gatekeeping? You can be your own revolution, bringing about the socialism that you want. Through your personal writings, through your personal art, through your personal games. A little slice of revolution is better than nothing...</p><p><strong>Romantic Socialist Sub-Alignments are...</strong></p><ul><li>✦ Spiritists — A coalition of romantic socialists that believe we should return to that state where we were attuned to the invisible forces and numina that exist in every rock, tree, and river. The voices of the winds and the praises of the mountain. Harmony with nature brings us closer to the true nature of humanity.</li><li>✦ Utopianism — A strand that emphasizes community, artisan work, and shared labor. All sentiment, no class analysis. We don't need to look for who will make what—the people will work together, will figure it out, because the people are naturally Good.</li><li>✦ Degrowth — Too much technological progress creates too much exploitation. No, the goal is to return. Reduce energy consumption. Live in harmony with the natural state of one's Sphere instead of subjugating it completely.</li></ul><p><strong>As A Romantic Socialist You Should...</strong></p><ul><li>✦ Fight For Your Golden Age — You fight for your golden age through legitimate means, peaceful means, without violence, only through the capturing of hearts and minds.</li><li>✦ Side With The Small — Fight on the side of the indepdenent creator, the small business, the village shrine, the family workshop.</li><li>✦ Work With Your Own Hands — Reject the assembly line. Repair before replacing, craft before fabrication, local before the INTRAJALA.</li><li>✦ Grieve What Was Lost — All socialists must be lovers. Grieve what capitalism has destroyed. Create a world better than this one.</li></ul>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.60",
+    "tags": "2.1, Alignment",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "alignment",
+      "roll": "10"
+     }
+    }
+   },
+   "folder": "c9870ff954632d8c"
+  },
+  {
+   "_id": "41c78612d53896c1",
+   "name": "Communism",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 9000,
+   "system": {
+    "description": "<p><strong>Alignment · roll 2d6: 11-12</strong></p><p>Revolutionary Communism. For a stateless, classless, moneyless universe. In the throes of the universe's heat death the stars burn dim and crimson. The final fortress against the encroaching victory of barbarism is the united forces of Communism. Communism is beyond the Alignment Grid— it is the dialectical sublation of all Alignments, the creation of the People's Lance to pierce through the fabric of the present state of things. It is the science of the liberation of the proletariat, and by implication, the liberation of the Universe. The Left and Right, Progress and Reaction... Communism wishes to annihilate these things, and create the next society not bound to the chains of Class Society.</p><p>The Community and Collective is important, but the Individual is just as important. There is no individual without the collective, and no collective without the individual. Technology is needed, but so is nature. There is no technology without nature and no nature without technology. The Cultivation of all these things will bring about Communism—the final sublation of the immanent contradictions of the Universe. Afterwards, the only enemy will be those outside the realities.</p><p>Its main tenets are dialectical materialism, dictatorship of the proletariat, and the seizing of productive forces to create the final galaxy in which the proletariat will finally abolish class and usher in the last red Kalpa, and determine the laws of the next universe. Due to their holding of Dialectics, they move through history in contradictions and sublation, and find themselves closest to the true movement of matter.</p><p>But Dialectics is not prophecy. And the People Under The Heavens have an astonishing capacity for misery. The Party must arise from the nexus of all material conditions: the current situation is correct! Even in the Heat Death of the Universe, the bourgeois cultivators—who have devoured God and become greater even than Him—find a way to profit from it, and even turn the very End of the Universe into Capital!</p><p>Every Person Under The Heavens are not stupid. They are not blind. They are propagandized and they are endlessly kept blinded through reinforcing social norms. The social manufacturing has become stronger and more intense. Why? Because the Celestial Bourgeoisie know that the Material Conditions are ripe for the Final Battle. It is only a matter of seizing it, a matter of Organization.</p><p>Be one with the Working Class, and unite the Broad Masses! They must rip the propaganda blindfolds and social engineering and show them the blinding light of the Red Sun of Revolution. They must educate and build bases and bring together the people and shape them into a Sword.</p><p>They must engage in disruptive and rupturous violence across the various Spheres, from the Peripheries encircling into the Cores, to be able to destroy the gunmetal heart of Capitalism and to establish the new Universe. The Struggle is now, and it evolves into Violence!</p><p><strong>Communist Sub-Alignments are...</strong></p><ul><li>✦ Council Communism — The spontaneous movement of the working class, without the need for a Party. These become nothing more but dictatorships and bureaucracies. From the factory floor, the working class dictatorship must rise, away from parlieament and other top-down ways of rule!</li><li>✦ Anarchism — Smash the State itself and all its instruments. No Party—just the People. Reject all authority and hierarchy. Only through the Black Flame of Annihilation can we reach the next Society! A rejection of most doctrines of Communism, but the same revolutionary tendency and the same stateless goal.</li><li>✦ Vanguardian — The Party is the sword. Professional revolutionaries, democratic centralism, and cosmic violence against cosmic capital.</li></ul><p><strong>As A Communist You Should...</strong></p><ul><li>✦ Organize. Meetings, recruitment, cheap coffee Create a base among the working class.</li><li>✦ Never Act Without Investigation. Concrete analysis of concrete conditions. Know the class position of every actor, the socioeconomic conditions of a state and community, and never utter a slogan without proper backing.</li><li>✦ Serve The Masses. Never cross that picket, share that ♄, all the Masses a comrade. Learn from the people, synthesize an answer, and learn from them again.</li><li>✦ Accept Discipline and Criticism. Do not lie about the odds, do not give the Masses false hope. Be real. Take correction from the collective: there is no individual without the collective.</li></ul>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.64",
+    "tags": "2.1, Alignment",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "alignment",
+      "roll": "11-12"
+     }
+    }
+   },
+   "folder": "c9870ff954632d8c"
+  },
+  {
+   "_id": "882a3357f867414f",
+   "name": "Ragaan",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 0,
+   "system": {
+    "description": "<p><strong>Culture · d66 [1][1]</strong></p><p>The river peoples of northern Jeng. Excellent maritime traders. A culture that loves taking new ideas from new cultures and integrating them, creating true international cultures. It is said that Selorong, the Center of the World, was first populated by Ragaans, and Raga were the most \"native\" to their land. The entire northern half of Jeng is known as Raga (literally, downriver), and all those that live within it are tied through the Ragaan language group.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.314",
+    "tags": "2.1, Culture, d66 11",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "11"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "90ee0102da31a96e",
+   "name": "Shennin",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 1000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [1][2]</strong></p><p>The Middle Kingdom, the Subsumer of All. Once the great Heavenly Empire under the Invincible Blade Princess, they were some of the first ones to officially depose their aristocracies and instigate a social democracy.</p><p>The social democracy led to the 100 Merchant Warlords Era of civil war, which opened it up to foreign incursion: most notably in the southwest by the burgeoning Ressen-Nalenji States and the ultrafascist Amatsu Empire to the northeast.</p><p>These two were rebuffed only when Tsung Dishitian the Revolutionary Buddha managed to band together the peasantry and enacted a people’s war, also slaying the bourgeoisie in the process.</p><p>The proletariat dictatorship that followed instituted the Celestial Shennin Society, a socialist system of living that has recently been infiltrated by Greed Gods and reactionary realpolitik, exacerbated by the failure of the Second World Revolution and the burgeoning of Amatsunese hildemej. This forced the Society to take drastic, reactionary measures (such as allowing a military bourgeoisie to blossom) to keep its status, else it be shattered into a thousand lotus petals by Heaven.</p><p>Tsung Dishitian has been dead for 40 years now. The People’s Party that has taken over afterwards, while well-intentioned in trying to keep its socialist structure, has been infiltrated by Reyayu Kodaku, the Immortal of Immortals, the Ultimate Capitalist.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.314",
+    "tags": "2.1, Culture, d66 12",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "12"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "596301172f89d242",
+   "name": "Razrunan",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 2000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [1][3]</strong></p><p>Razru, of southeastern Nilatpa. This region is known as the Cradle of the Gods, for the majority of faiths arise from here. One of the most spiritually advanced people, war divides them forever. Situated at the tip of the Yagdan Mountains, they arose around the Dunra River Complex and empires have since come and go through them.</p><p>Most importantly, both the First Conquering King of this Kalpa Enlightened One Sanja Kitama arose from their peoples and have since traveled through the Charnel Seas to spread across the word. Southern Razrunans are swarthy and skilled in sailing and piracy, while northern Razrunans are lighter-skinned and skilled in land wars. This divide has created and influenced their modern religions, pitting them against each other due to colorism and racism (north Razrunans are also more influenced by the dastardly Sorehnese and Ratenese).</p><p>The Razrunan Subcontinent has been colonized by the Raten Empire before, and they were only given up as a province when the Heavenly Empire forced their hand in exchange for the Shennin Heavenly Empire not absolutely destroying Raten.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.314",
+    "tags": "2.1, Culture, d66 13",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "13"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "e8b51be163d75f38",
+   "name": "Wotanese",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 3000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [1][4]</strong></p><p>A seafaring people hailing from the southwestern edge of the Wadzaran Archipelago, from the Wotan Archipelago.</p><p>Once ruled by the Amatsunese Empire, the Wotan, with the help of the peoples of the Charnel Isles, have liberated themselves and pushed Amatsu imperialism away.</p><p>Their social mores and aesthetics are Amatsu-adjacent. They incorporate more piracy and freebooting, and have much more cultural influence from their time being a pirate tributary to the Shennin Heavenly Empire.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.314",
+    "tags": "2.1, Culture, d66 14",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "14"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "96691e2d2c643a9c",
+   "name": "Munese",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 4000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [1][5]</strong></p><p>One of the once-empires in southwestern Nilatpan, southwest of the Yagdan mountains, in the Mun Peninsula. Now merely a kingdom, they have decided to not incorporate into the Amalgamated States of Ressen-Nalenji, despite their grander library, and instead have chosen to close borders off from the rest of the world, after destroying their colonial empire in the face of the First World Revolution.</p><p>Munese people tend to be taller with heritages from far northwest, and are also skilled in war. Munese people come from a theocratic state, led by a High Lord who exercises authority over a number of lower Dukes. The High Lord is appointed by the Will of Heaven.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.316",
+    "tags": "2.1, Culture, d66 15",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "15"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "58697222824253b8",
+   "name": "Kezzanese",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 5000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [1][6]</strong></p><p>People from the far west mountain range of Kij Dakmala, Nail of the World, from the Kezzan Mountains. Headtakers who live underneath the Mountain Lord, an ancient king who has been meditating for 8000 kalpas within a cave facing a wall.</p><p>Kezzanese are protective of their cultural artifacts and tend to be fiercely proud of their ancestry. They have managed to resist conquest by the Mun Empire but have become collaborators with the Ressen-Nalenjese in return for avoiding the genocide for their peoples.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.316",
+    "tags": "2.1, Culture, d66 16",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "16"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "a157486c74d21878",
+   "name": "Wayinese",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 6000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [2][1]</strong></p><p>The people of the inner lake Wayi of Jeng. The Kingdom of Wayi was once a great monarchy facilitating trade between the coastal and the hinterland tribes of Jeng, even before the Great Cleaving that sundered Jengjaxiya apart. Ever since their divine lineage has been exterminated, the Wayi people have converted into a semianarchist pseudo-state made up of 17 clans that trade and work together to continue the trading routes that span all of Jeng. Wayinese are lakeside people that must travel through dense forestry of inner Jeng. They are said to have white jade skin and no philtrums. They were once a colony of the Mun Empire and the United States of Ressen-Nalenjese before liberation following the First World Revolution.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.316",
+    "tags": "2.1, Culture, d66 21",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "21"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "324bdc3dbf63ed81",
+   "name": "Sampakanese",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 7000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [2][2]</strong></p><p>The maritime peoples of eastern Jaxiya, from the eastern Sampakana Peninsula. Once of an ancient empire now lost to time, destroyed by colonialism and intellectual imperialism of both Shen and Amatsu, they have since become subsumed into the greater Shennin culture. Fond of rituals and jade clothing. They are a commune under Shennin administration, and their name was taken from the boats they ride up and down river, which are called sampans. Their skin tends to be sun-colored.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.316",
+    "tags": "2.1, Culture, d66 22",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "22"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "c8dfcb661eb69104",
+   "name": "Ratenese",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 8000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [2][3]</strong></p><p>The people of the far western Refuge of the Gnostics, otherwise known as the Sunset Archipelago. Their cultural identity circles around the return of their King Arsaraten (Warrior-King in Ratenese), the Bear King. Before nationalization under King Arsaraten, they were the Free Peoples of the Known World, who had had to feud and survive against the Witch-King before becoming united under the single Bear King Crown.</p><p>The Ratenese culture underwent a bloody revolution during the turn of the 11500, during the Decades of Carnage, which led to the expunging of the Aristocracy by the Ratenese Bourgeoisie (more importantly, the Drakoneran Trading Guild).</p><p>They turned Raten and surrounding kingdoms into democratic nations and installed the Trading Officials as presidents and prime ministers.</p><p>During the Decades of Carnage the disparate nation-states and corporations banded together to create a confederation of merchant-kingdoms with the rest of the great Nilatpa Island known as the Amalgamated States of Ressen-Nalenji (or just The AS), for the sake of protecting their own interest (which includes the most valuable asset, people). Their name arises from the primary export of Raten (Ressen, a cowbreed that has feed millions) and Soreh (Nalenji, a rice-like grain substitute that can grow without the need for excessive humidity and water. Goes great with oranges). The Ressen-Nalenji is a veritable merchant empire (a Hyperempire as defined by Masangwa, a new and more powerful Empire of the Bourgeoisie as opposed to the Empire of the Aristocracy), fully embracing liberal values after the fall of the God- Kings and embracing colonization as a means of “peace” after the failure of the Second World Revolution. Through control over trade routes, resources, and being ruled by corporations, the AS has burgeoned into one of the most powerful geopolitical entities of the Post-Calamity Era, rivaling the Holy Amatsu Empire and the Celestial Shennin Society.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.316",
+    "tags": "2.1, Culture, d66 23",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "23"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "f38ea45b9807b975",
+   "name": "Amatsunese",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 9000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [2][4]</strong></p><p>Eight corners, one Sun. Four Winds, one Storm. The dominant culture of the Holy Amatsu Empire, the only surviving Feudal Empire in the Utter Islands. To survive, they have leaned into fascist values, emboldened by their claim to Godhood. They have assimilated the other indigenous cultures of the Wadzara island.</p><p>Once a society Staggered by civil war, they have been successfully united by Taishogun Sogoko Sarusannin. A major power in the Shennosphere, they were once a devout tributary state to the Heavenly Empire before ultimately cultivating ultranationalist beliefs, exacerbated after the importation of Ratenese ideologies from Charnel Isles and Jeng trade.</p><p>They have since reformed their government and have become a ultranationalist imperial power that seeks to unite the Utter Islands into the Greater Utteric Sphere. They syncretize all faiths and cultures into its war machine.</p><p>In their rush to conquer Jaxiya and subsume the world into their World Empire, they have began trading with the Ressen-Nalenjese Companies, exporting natural resources and manual labor in exchange for Ressen- Nalenjese hildemej (military magicks) developed by them during the First World Revolution and the Decades of Carnage, as well as trading secrets with the Selorongian naval people to learn of their superior naval strength. Amatsu has fully embraced mystic-ultrafascism (known to them as magonationalism or shugenkojja) to protect their kingdom, return to the Holy Past, and discipline their subjects, in the attempt to prove once and for all the ultimate superiority of the Amatsunese people.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.318",
+    "tags": "2.1, Culture, d66 24",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "24"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "9b2923484ab5427e",
+   "name": "Chugoinese",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 10000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [2][5]</strong></p><p>The Tiger people, also now assimilated into Greater Shen, from the Chugoi southern delta. Closely interlinked with the Changuo people. Known for short cropped hair but having shorn body tattooing very early on in the Shennin assimilation. Historically, they dominated the Great Examinations of the Heavenly Empire. As with the Changuo, they are known for their popular Chuu Operas, and Tiennan is the largest silk-producing region in the world. The Sky Mountain School of the Dharma arose from the monk Yivi of Jinshi mountain, which is in the Chuu region.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.318",
+    "tags": "2.1, Culture, d66 25",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "25"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "49861761589753e9",
+   "name": "Bidaran",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 11000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [2][6]</strong></p><p>The seafaring peoples of now eastern Charnel Isles and western Blasted Isles, known as the Bidara pirates. Peerless pirates of the sea, practitioners of sea-raiding traveling far and wide across the Archipelago as mercenaries, enforcers, and sea shamans.</p><p>Generally hold lineage to Kerajaan Mahabidara, one of the most powerful kerajaans that existed alongside the Shennin Heavenly Empire, they held monopoly over the majority of coastal settlements through their enforcement of the Ocean Code, backed by the Gods of the Four Winds themselves. Though this Kerajaan was powerful, it was powerful due to its interconnecting trade and friendships, not because of any strength of its ruler or military. The era in which the Heavenly Empire existed alongside Mahabidara was known as the Age of the Ocean Heaven, led by the Shennin Huangdi, Son of Heaven, and the four Chakravartins of Kerajaan Mahabidara.</p><p>After raja infighting during the First World Revolution, colonial incursion during the Decades of Carnage, Kerajaan Mahabidara was shattered to the winds, turned into small communes clinging to life in disparate islands, with several different world powers holding Bidarans are majority Eolomese, Yenjanese, and Rutraist now. The Central Yavinian Guild has since established trading colonies here, earning, firedrug ingredients, khroba (one of the most potent opioids in the world, found only on the island of Sukun), and an entry into both Amatsu and Shen.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.318",
+    "tags": "2.1, Culture, d66 26",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "26"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "04bdd7a5605b89ae",
+   "name": "Kemrese",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 12000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [3][1]</strong></p><p>People of the Ceiling of the World, central Jaxiya, of the Kemra Plateau. Their name means star. Settlers from the Emerald Plains to the West before they were forced to settle in the Ceiling of the World and adapt to the air changes due to the sinking of the Emerald Plains under the sea. It is believed that every single Kemrese was brought to earth by the Seventeen Star Maidens, and that they are inherently closer to spiritual enlightenment because of it. Kemrese pride themselves in the strength of their spiritual cultivation, meditation techniques, and tantric practices. The birthplace of Mystic Law after trading knowledge with Isanese. Many different sages and wizards have traveled here to teach and be taught, and the hazardous conditions are a perfect way to practice asceticisms.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.318",
+    "tags": "2.1, Culture, d66 31",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "31"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "32e851563923ffda",
+   "name": "Selorongian",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 13000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [3][2]</strong></p><p>The 109th Hell. The center of the world. All tradewinds rush through Selorong. It is in truth a segmented city with a history worth 8000 years. The original settlers come from Kij Dakmala. But in its history its prime position has turned it into a once-province of the Shennin Heavenly Empire, a colony of the Mun Empire, a colony of the Raten Empire, a colony of the following Ressen-Nalenjese Merchant Empire, a protectorate of the Amatsu Empire, and then finally a trading partner of the Central Yavinian Guild.</p><p>By 11643, the Selorongian Commune (established by Masangwans 50 years prior, during the Decades of Carnage) had become the final bastion of Communism, Anarchism, and Socialist thought. The people within were mostly refugees, deserters, apostates, and unwantables of the other states. It was the final bastion of humanity.</p><p>Here, the final revolution happened: war-magick catastrophe beaten back by forces of the Termagant Buddha and the Collective of Workers. In the final days of the Selorongian Commune, Dattreya Wairini, the Second Buddha of the Utter Islands, paved the way for a pyrrhic victory, at the end of which she attained Ultimate Awakening—that is to say, Violence.</p><p>Unfortunately, she achieved Ultimate Annihilation and left the world, now knowing of greater knowledge than the others, and Selorong became a lawless city that was not beholden to any of the republics nor to the Celestial Shennin Society. It had achieved final freedom, but the war-magicks deployed and the abominable Karmic Destruction wrought by the UUP had almost completely eradicated the worker population of Selorong.</p><p>Those that came to repopulate the liberated City knew that if a Third Revolution were to happen, it will happen from Selorong, but it must decide its fate. All Alignments and Political Ideologies have now staked their claim in Selorong, knowing its ultimate utility in the far edge of fate.</p><p>The first and longest lasting commune in the world, the Selorong Commune, was established here through the guidance of Dattreya Wairini, the Thrice-Buddha. The Commune has been mostly destroyed and replaced with a free city of constantly ideologically warring factions, though the Dictatorship of the Proletariat's ideals and tenets are still embedded into the city's material history.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.320",
+    "tags": "2.1, Culture, d66 32",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "32"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "bab6e994f4243af1",
+   "name": "Nunukian",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 14000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [3][3]</strong></p><p>A very diverse coalition of peoples all under the Nunuk banner. The Nunuk is the name of the great Spirit Tree in the middle of Pemi, known to many as the Tree of Life. All people in the island of Pemi consider themselves to be Nunuk, no matter what, as long as they contribute to the shared community and do not create fractures in the commune. Nunuk people are spiritual and obsessed with ritual, and understand the importance of the spirits.</p><p>A Nunuk Shaman-Scholar, Si Matag, was the one that produced and wrote the Spirit World Revelation (Revelations are the only thing above Theory in the Dialectic Method): that Hingsajagra as a whole is a world of spirits, and that humanity is a relatively new and relatively foreign element, having only arrived in the last 50,000 years.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.320",
+    "tags": "2.1, Culture, d66 33",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "33"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "9219c70e85c90538",
+   "name": "Sorehnese",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 15000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [3][4]</strong></p><p>The people of Soreh are those within the Soreh Republic, a conglomerate of different states turned into municipalities, all working underneath a Republic headed by Merchant-Philosopher- Kings. A democratic republic, each of the municipalities are given three representatives.</p><p>The people of Soreh enjoy relative safety, at the trade off of having horrible wealth disparity due to the power of Capital Greed. Soreh is one of the two political entities that form the United States of Ressen-Nalenjese.</p><p>Soreh's great innovation is the revival of the Corporation to control capital, in the form of the greatest trading Corporation in the world, the Central Yavinian Guild (Yav is their name for the Razrunan region, the Charnel Isles region, and the Jeng region). This is the Great Beast as spoken by Kafeng Masangwa, where even the End of the World will be mined for profit. The most powerful faith in Soreh presently is the Wealth Gospel.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.320",
+    "tags": "2.1, Culture, d66 34",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "34"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "bffc809b07d5460e",
+   "name": "Premese",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 16000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [3][5]</strong></p><p>A subgroup of Shennin. Their name means “Wind” in Ancient Shennin, reflective of their identity as “guest peoples.” They arrived in the Shen Plains from the north during the Crumbling of the Sixun Dynasty of the Emerald Phoenix.</p><p>They are a nomadic people that tend to disperse and occupy the margins of lands, as they arrived relatively late to be part of the Shennin culture. Their women are hardy and do the work for men. Due to the discrimination from other Shennin ethnicities, leading to mass-killings due to ancestral feuds, they have since also dispersed across the Utter Archipelago, bringing their culture and traditions to every corner of the Islands.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.322",
+    "tags": "2.1, Culture, d66 35",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "35"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "da67b994aef1662f",
+   "name": "Sukunese",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 17000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [3][6]</strong></p><p>Pirates of the Empire. 600 years now. Began as a Rutraist-Codist kingdom, vassals to ancient the Jibidaran Thalassocracy, until Amatsu collapsed and they took on the tenets of Eolomism, the God of Love.</p><p>Under the Great Endeavor, they try to live their greatest life, and then they also try to spread the word of Eolo by taking captives during their raids. They are a religious, traditionalist people that have myriad vows and taboos in service of Eolo’s Commandments. They tend to follow their Caliph as the highest authority. They are currently headed by the Ocean Caliph Setoro Bahala, Archangel of Love, who raids coastlines to facilitate trade, and while posturing as a feudal king, is a student of Wairinist Communism and has been spreading Cultivation amongst the People of Sukun. Thus Sukunese are wildly feared even now—before they used to be peerless pirates, now even the merest of men have Cultivated themselves. They fight and work mostly out of the island of Suk in the Western Charnel Isles.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.322",
+    "tags": "2.1, Culture, d66 36",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "36"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "7b87789963c348d9",
+   "name": "Meonese",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 18000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [4][1]</strong></p><p>/mee-yon-ese/. The term for the sons of the soil of Southern Shen, of Meo. Immigrated after the devastating Battle of Zaoru in 6500. The Meonese arrived in Shen from the greater continent before the Shennin. A hardy and industrious people that looked similar enough to Shennins save for flatter noses and smaller mono-lidded eyes. Their warrior culture is weak. Their martial traditions stem from fighting back against Shennin oppression. The Celestial Shennin Society recognized them as an official ethnicity and were given special rights, though half the population of the Meonese have fled and become refugees in parts of Jeng, Charnel Isles, and Far South Shen. Isana in particular houses a large percentage of Meonese.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.322",
+    "tags": "2.1, Culture, d66 41",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "41"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "9c722ce3ada42e49",
+   "name": "Vatuanese",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 19000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [4][2]</strong></p><p>Before the rise of Jibidara, the majority of the Charnel Isles people were united a single Samudraraja who led the Vatuan Kerajaan, a seafaring state that followed both Rutra and Sanja Kitama. They were a rival to the equally great Tsampan Kingdom and were tributaries officially recognized as Kings by the Shennin Heavenly Emperor.</p><p>The Samudraraja was said to be a manifestation of Barunetheja, the God of the Oceans and the Waters, who himself is a physical manifestation of Asitranya, the Buddha of Water and Wealth. The region that would eventually become the Vatuan was once the Krasnan East Vatunese, the farthest extension of the old Krasnan Empire.</p><p>Some say this was Hri Vaizzan’s ancient kingdom before it was destroyed. The people of Vatuan are now a small minority in the greater Bidaran culture sphere, wherein they retain their goldsmithing, tantric, mantric, and ritual focused lifestyles. They now have a majority hold on the gold mines in Bidara, causing them to become a prime target for corporations.</p><p>More importantly, the Vatuan became the greater power of the region after breaking free from Krasnan Colonialism and the Central Yavinian Trading Guild’s efforts, though they are still intensely infiltrated and controlled by Ressen-Nalenjese due to economic and sociopolitical factors.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.322",
+    "tags": "2.1, Culture, d66 42",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "42"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "6921794e1e9fc1f1",
+   "name": "Changuo",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 20000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [4][3]</strong></p><p>The southern Shennin peoples that have mostly assimilated into greater Shen culture. Their name means “Hundred Chiefs.” The Changuo are further divided into geographical subgroups and subregions. A common thread running through them are that they are known for their body tattoos, short hair (as opposed to north Shen long hair culture), fine swords, and naval prowess, allowing a majority of their peoples to travel across the world.</p><p>They mostly inhabit southern Shen now, but have since disseminated across the Charnel Isles, the Pearlescences, Jeng, the Heavenshards, and the End of the World, where a majority of them have begun to establish business empires uniting disparate communes together.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.324",
+    "tags": "2.1, Culture, d66 43",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "43"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "afd71df8833b7b07",
+   "name": "Sengvatese",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 21000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [4][4]</strong></p><p>Sengvat (/sung-vaht/) means “people of the metropolis,” referring to the metropolis of Vuthao (/voot-how/) by the Keronton River, the longest river in the Utter Islands. Their language, Sengvatic, is one of the first to split apart from Middle Shennin around the 10100s.</p><p>They arose from Jeng-Jaxiyan linguistic intermingling. During the 11000s, they were brought under power by the Shennin (particularly the Kangzen Dynasty) and were subsumed into the Shennosphere. Eventually, the Twin Dragon Princesses liberated the Sengvatese from Shennin hegemony (and created Vuthao out of a stone lotus) creating Dasengvat or the Great Sengvat around 11500s.</p><p>It has survived until now as the Seng Kingdom (literally: People Kingdom). They were one of the first to adopt socialist ideals during the Decades of Carnage, after having to fight off the bloody advances of the Amatsunese Empire. Now the Sengvat people enjoy increased agricultural and industrial progress, though there have been new border disputes with the Celestial Shennin Society.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.324",
+    "tags": "2.1, Culture, d66 44",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "44"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "338f8a77aa82285c",
+   "name": "Nakarajan",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 22000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [4][5]</strong></p><p>People of the Dragon. Somewhere in the End of the World, the Nakarajan people are some of the people that have managed to maintain much of their local customs and traditions in the face of the failed Second Word Revolution, the Decades of Carnage, the Post-Calamity, and the encroaching Great Colonizations. They believe they come from an ocean dragon mother and a human father, and it was their mother that taught them their rituals, boatbuilding knowledge, dances, weavings, and martial arts. They are masters of seafaring and export Nakarajan ebony and sea cucumber. They hold more knowledge that they have not disclosed to the greater international community in interest of protecting themselves from capitalist interests.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.324",
+    "tags": "2.1, Culture, d66 45",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "45"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "1f835ab5b1ac92ba",
+   "name": "Kemayil",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 23000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [4][6]</strong></p><p>The people of Mayil, the island furthest east of the Archipelago, past the Wadzara. The land of the tagamacahuitl, the macahuitl wielders, the prismatic blades.</p><p>The Kemayil are the colonizers from the Southeastern Continent who first arrived through sailed canoes, and then on larger junks after trading knowledge with South Utteric peoples. They have since begun to build giant monuments and worship the sun in their islands, creating vast obsidian weaponry and jade armors.</p><p>Most importantly, they brought with them trade goods from the Southeastern Continent, such as tobacco, chili, silver, sweet potatoes, corn, tomatoes, chickpeas, chocolate, cocoa, watermelons, and fig trees.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.324",
+    "tags": "2.1, Culture, d66 46",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "46"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "c6e16d524a7d0173",
+   "name": "Zenaran",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 24000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [5][1]</strong></p><p>When the Atlakatla (that is, the Sailors of the Southeastern Continent) arrived in the island that would become Mayil, there would be a dispute between two great sailor princes. One of them wanted to stay and explore further, while the other wished to return to bring more people their way. The one that stayed took root, and he worshipped their God of Stars Zenar.</p><p>When the first prince returned, they had begun to establish a kingdom in the island of Jitaklan, further westward, where they traded with the Shennin, Amatsu, and other cultures.</p><p>Their bronze and stone technologies became popular as they used their own brand of talismanry to create a nigh-industrial era city. This ended when the Kemayil, themselves after a few decades coming to possess powerful magicks and weaponry, arrived and subjugated the Zenarans.</p><p>The Zenarans, after a century, have mostly assimilated into Kemayil culture and speak Kemayil language, but traces of their unique architecture, rituals, and religion live on in their starstone ziggurats, starpowder weaponry, and the continued use of Zenaran script, a pictograph carved onto stone with an astrally hot stele.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.326",
+    "tags": "2.1, Culture, d66 51",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "51"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "a6965bf02976ffbb",
+   "name": "Namlang",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 25000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [5][2]</strong></p><p>The Sea Dragons of Shen. They arose from the southern end of the Yilao River and have spread to Shen’s southeastern region, where the fabled ancient Port of Pasutosa (now Tsenggow) burgeoned. They have dominated southern Utter Islands’ trade and merchantry. Some of the most powerful business heads and merchant princes of the Utter Islands are of the Namlang culture and ethnicity.</p><p>They have mastered their specific version of naval travel through intercultural trade with the Bidarans and other Kiapuwan speaking cultures. Nowadays the majority of Shennin in Utter Islands are from the Namlang subgroup.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.326",
+    "tags": "2.1, Culture, d66 52",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "52"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "4eeb3b7dfc02c38b",
+   "name": "Thulian",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 26000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [5][3]</strong></p><p>The people of the northern mountains of Nilatpa, from the great clan homesteads and icy tundras of Thule. They have cities underwater due to their ancestors once being part of the great Emerald Sea before that was sunken.</p><p>The Thulian people are a herding culture that has adapted to the extreme colds of the Ice Spire, a region in Nilatpa where a giant ice spear was hurled down by the Niweveh, the Nilatpan God of Blizzards, when dueling with the Derghem, the Earthen Tribe of Nilatpan Gods.</p><p>Thulians are descendants of the Derghem but worship Niweveh (though now he is conflated with the God of Yenja). The Thulian ethnicity and culture only arose when the Grand Dukes of Azenta united the disparate tribes, though now their kingdoms have been turned into a single capitalist nation that reckons and wrestles with a failed Socialist attempt.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.326",
+    "tags": "2.1, Culture, d66 53",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "53"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "ef57706a164131eb",
+   "name": "Naomian",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 27000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [5][4]</strong></p><p>The people of the soil of Ninaomland of the western Refuge of the Gnostics. Once an island of great forests, glades, and runes, now brought low due to Ratenese incursion and invasion.</p><p>The Naomians are a minority in their own land. But they are a resourceful people, keeping their druidic cultures alive out of cultural rebellion, and struggle to keep their own language alive in the face of overwhelming Ratenese colonialism.</p><p>They have since broken free and are no longer considered part of the Amalgamated States of Ressen-Nalenji, but they are forced into cooperation anyway out of threat of force. Naomian revolutionaries are some of the most stringent and active Masangwaists in the Post-Calamity Era and they have disseminated communes into the frontiers so that they can eventually help in the Third World Revolution.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.326",
+    "tags": "2.1, Culture, d66 54",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "54"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "0a91d2c26b3d2267",
+   "name": "Vanavarian",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 28000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [5][5]</strong></p><p>Erudite and sagely people from the eastern regions of the Refuge of the Gnostics. They build stone temples and etch giant deity statues against mountainsides. They have a penchant for megaliths and other giant structures, and their kings have been known to create giant structures to be able sway the hearts and minds of their subjects.</p><p>Vanavarians are most concentrated upon the Arms Of Benzarakan, a giant humanoid statue with six arms and three faces that has become a vertical island. Vanavarians are intensely religious people that worship the great dark Metom, beginning and end of all things.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.328",
+    "tags": "2.1, Culture, d66 55",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "55"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "ab2842d7928e05d7",
+   "name": "Sobanese",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 29000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [5][6]</strong></p><p>People of the Sea Currents, living in the End of the World. Their bards sing of an ancient World Empire, the Great Unification of the First Invincible Sword Prince, once said to hold the entirety of the Utter Islands in thrall. It has now disappeared under the waves after a great deluge.</p><p>The Soba do have access to interesting runic ships, skyskiffs, and knowledge of the Chained Naka that lives in the sky. Their ruins pock the world: great blade-like edifices with sigil inscribed upon their sides.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.328",
+    "tags": "2.1, Culture, d66 56",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "56"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "cd7eb2261add8cb1",
+   "name": "Isanese",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 30000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [6][1]</strong></p><p>The people of near-south Jaxiya. Partly jungle peoples and partly river peoples. Imagine a direct line to the God-King Yingteerathewa, who defeated the First Sun Lawa and paved the way for the New Sun Hī to establish power.</p><p>Once the Thunderbolt Empire, Isana peoples have mostly fractured into myriad communes that follow the River Jakan that lead into the Eastern Charnel Sea. Northern Isana has assimilated into expanding Celestial Shennin Society, giving rise to hybrid Isana-Shennin cultures.</p><p>Known for their elaborate Mystic-Animist faiths, Mystic Law, intense spirit culture, decorative lacquered armors with colorful mantles and tunics, and elephant-knights.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.328",
+    "tags": "2.1, Culture, d66 61",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "61"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "159e611122fbde30",
+   "name": "Oxomese",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 31000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [6][2]</strong></p><p>The peoples of the southwestern cloud jungles of Jaxiya. Descendants of the ancient Xom Kingdom of the year 11568 created by Isana prince Segathaan who escaped after losing a deity-war with the Liberationist King of that time.</p><p>Wet rice agriculturalists who speak the Xom languages and weave Makkalan worship into their very cultural fabric. Makalla is the son and manifestation of Rutra.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.328",
+    "tags": "2.1, Culture, d66 62",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "62"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "40d620f7cc498ee6",
+   "name": "Krasnan",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 32000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [6][3]</strong></p><p>In the Sunset Peninsula rests a republic with a national identity established by Yenjan Priest-King Giyewan and his descendants (all who say they come from Avizara), they pay fealty to their Patron Saint Atara of the Heart, the Saint who has subsumed both God and Human into their liver. Atara is one of Yenja’s closest lovers and disciples.</p><p>The Krasnan Republic used to be the giant Krasnan Colonial Empire before integrating half of its empire into the Amalgamated States of Ressen-Nalenji. Their most major colony were the Heavenshards. Due to their proximity to the Soreh Republic and the Mun Coalition, they have produced a surplus of intellectuals that have spearheaded the languishing western literary movement. The Krasnan people have become a culture of depressed romantics (owing, of course, to their brutal winters where the sun turns away from them).</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.328",
+    "tags": "2.1, Culture, d66 63",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "63"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "0d7df4eb8ff11f0b",
+   "name": "Kamguk",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 33000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [6][4]</strong></p><p>The dragon-culture originating from northeast Jaxiya, where the cold winds lie. The Kamguk Peninsula reaches out to Wadzara. A highly hierarchical, misogynistic culture highly influenced by the Shennisphere. Managed to retain its shamanry going into its republic era.</p><p>A fierce enemy of Amatsu and right now is one of the most major sociopolitical barriers against Amatsu by the Shennin Culture. Unfortunately their Kingdom persists and their chauvinism can lead to the death of their kingdom.</p><p>The popular culture unhealthily obsessed with Undeath, and their alchemist-kings have tried to venture into this taboo subject of Interstitial. The Unconquerable Maiden looks at their people with curiosity and with wariness.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.330",
+    "tags": "2.1, Culture, d66 64",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "64"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "e2f30b87c6ce61b0",
+   "name": "Dakdu",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 34000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [6][5]</strong></p><p>The mountain spine people. Those that live in Kij Dakmala’s habitable regions. Worshippers of the mountain’s deities. They live in the floating debris and refuse of the peak of the Kij Dakmala, where the world is permanently stuck in a state of stable destruction.</p><p>The Dakdu have created a culture around scavenging, salvaging, and repurposing the technology and Ambient Sidhi that lingers within the Shattered Peak. Their ancient ritual site is the Ruins of the Lotus Throne.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.330",
+    "tags": "2.1, Culture, d66 65",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "65"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "4beb1a06666a18a7",
+   "name": "Hokou",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 35000,
+   "system": {
+    "description": "<p><strong>Culture · d66 [6][6]</strong></p><p>The technological center of Shen. Major advances in karma machinery. Height of technological advancement when it comes to power engines, Shennin weaponry, and exorcism. Created the new Mantra Engine.</p><p>Leading work on Magicite Power and mass Cultivation Elixir Creation. Hokou is west Shennin, a commune that has become the specialized weapons and technology center of Shen in the face of Amatsunese Hildemej-creation and Ressen-Nalenjese hypercapitalism. They follow the ideals of the Revolutionary Party and carry on the ideals for the Third World Revolution... but what do they do if the Party has been compromised by Reaction?</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.330",
+    "tags": "2.1, Culture, d66 66",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "culture",
+      "codes": [
+       "66"
+      ]
+     }
+    }
+   },
+   "folder": "42fda304ea68da0a"
+  },
+  {
+   "_id": "9bed8de75432cc01",
+   "name": "The Material",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 0,
+   "system": {
+    "description": "<p><strong>Truth · d66 [1][1]–[1][3]</strong></p><p>Nothing more than what we can see. The deities, the saints, the angels… they are not worthy of worship. All that you want is the whole of the law. Every being is a star.</p><p>There is no other reality than the material world that we inhabit. It is the ultimate reality--there is nothing more than it. Even all consciousness and mental formations arise from the material conditions and environments that we live in. This materiality is of course informed by the magickal phenomena of Hingsajagra, but it still puts forth that there is no greater driving Spirit or Consicousness that dictates or forms Reality.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.332",
+    "tags": "2.1, Truth, d66 11/12/13",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "truth",
+      "codes": [
+       "11",
+       "12",
+       "13"
+      ]
+     }
+    }
+   },
+   "folder": "854cf1ca804bf650"
+  },
+  {
+   "_id": "49f67309943bce7c",
+   "name": "The Ideal",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 1000,
+   "system": {
+    "description": "<p><strong>Truth · d66 [1][4]–[1][6]</strong></p><p>Also known as Idealism. Fundamental reality is consciousness, or spirit, or the mind. Ultimate Reality are ideas that arise from consciousness that we believe.</p><p>Reality is nothing but Consciousness and what we perceive. All reality comes down from Ideas, as spoken of by Joragas of Zitossia, which are beyond the mind but also of the mind. All our knowledge of reality is based on our mental structures.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.332",
+    "tags": "2.1, Truth, d66 14/15/16",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "truth",
+      "codes": [
+       "14",
+       "15",
+       "16"
+      ]
+     }
+    }
+   },
+   "folder": "854cf1ca804bf650"
+  },
+  {
+   "_id": "df670097f7974747",
+   "name": "Eolomism",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 2000,
+   "system": {
+    "description": "<p><strong>Truth · d66 [2][1]</strong></p><p>An militant faith that arose from the Balthrasian Old Codes. It dominated the lower Nilatpan and Western Heavenshards region due to their uncompromising stance on zealotry and adherence to the teachings of their God, Eolo, the God of Uncreated Light, subduer of genies, the Cosmos Wright. Among the three major subsects of Eolomism, there is one major thread: put Eolo above all else.</p><p>Worship Him and the rituals. Understand that we will achieve His Blissful Heaven through doing this. The goal of Eolomites is the eventual great Rejoining, and it is the faithful’s task to bring as many souls as they can with them through the spreading of the Holy Tenets to teach all beings the truth of God-In-Nature, in every “Particle of Grass.”</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.332",
+    "tags": "2.1, Truth, d66 21",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "truth",
+      "codes": [
+       "21"
+      ]
+     }
+    }
+   },
+   "folder": "854cf1ca804bf650"
+  },
+  {
+   "_id": "852630605862d548",
+   "name": "Yenjanism",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 3000,
+   "system": {
+    "description": "<p><strong>Truth · d66 [2][2]–[2][4]</strong></p><p>Until all beings are God Herself. The belief in the soteriology of High Prophet Yenja—otherwise known as Christ Yenja, or the Anointed Yenja. She taught about God as the Allcaring, or in other words, Love. She had the Tenets of the Lovers: to love another as the self and to love God as one’s self. Yenja was born to a poor Balthrasian family and into the Old Codes. Yenjanism has become the grounding point of Ratenese Nationalism and is now poised to take over the world. Yenjanists believe in one thing: the Return To God through Love Of All.</p><p>The Yenjan Apotheosis is the crux of the Yenjan Faith. Metatron Yenja was the orphan courtesan singer who moved the Nilatpan world to revolution against the Holy Fianese Empire. She espoused tenets of Allcaring (her name for God), sang the glories of common property, and taught to rouse the Love-Within-All.</p><p>She was slain by reactionary Balthrasian Elite and given to Fianese authorities to slay, where she was burned upon a Stake, which has since become the religious symbol for all Yenjans. Yenja, during the burning, attained apotheosis, or oneness with God, and ascended there and then. Only through her Miracle could everyone else attain apotheosis through Exafaith, and thus began the Yenjan Faith, the following of her teachings to attain Apotheosis.</p><p>A tenet of perseverance through persecution and the works of the warlord Rakuna Kiltjeh--who performed politicking to get into the ranks of the Fianese Empire and attain the rank of a High Senator before slaying the current Lunar Emperor Uratasintr and becoming the Fianese Emperor himself—led Yenjanism to become a powerhouse faith in that region, though now it has mostly been secularized and turned into the Will of Heaven.</p><p>Yenjanese tenets are still popular in the Refuge of the Gnostics Archipelago and the Sunset Isles.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.334",
+    "tags": "2.1, Truth, d66 22/23/24",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "truth",
+      "codes": [
+       "22",
+       "23",
+       "24"
+      ]
+     }
+    }
+   },
+   "folder": "854cf1ca804bf650"
+  },
+  {
+   "_id": "531e9f7300291e30",
+   "name": "Imperial Yenjanism",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 4000,
+   "system": {
+    "description": "<p><strong>Truth · d66 [2][5]</strong></p><p>The ancient path. A religion that was established as canon by Raten, and considers Raten as well to have been an emanation of Yenja or a reincarnation or divinely appointed by the Allcaring. Most importantly, the Imperial Yenjanist Church holds the greatest power, and is led by the Highest Star, who is currently Fosiuxong. The truth of suffering: that we must emulate Yenja’s life—both bliss and suffering—to be able to become like God through divine union.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.334",
+    "tags": "2.1, Truth, d66 25",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "truth",
+      "codes": [
+       "25"
+      ]
+     }
+    }
+   },
+   "folder": "854cf1ca804bf650"
+  },
+  {
+   "_id": "ad4f15b19c71fa92",
+   "name": "Dissenterism",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 5000,
+   "system": {
+    "description": "<p><strong>Truth · d66 [2][6]</strong></p><p>Yenjanism of the seven knights of Osotoragon, the cult leader and polemic of the illumination movement. Moved to connect God to the common man, without a priestly connection. State faith of Soreh.</p><p>Holds puritanical and liberal values. Often syncretized with the Machine God Faith to create the Wealth Gospel Truth. Those under Imperial Yenjanism often don’t consider this as Yenjanism at all.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.334",
+    "tags": "2.1, Truth, d66 26",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "truth",
+      "codes": [
+       "26"
+      ]
+     }
+    }
+   },
+   "folder": "854cf1ca804bf650"
+  },
+  {
+   "_id": "515f7c6bd19b7183",
+   "name": "Folk Yenjanism",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 6000,
+   "system": {
+    "description": "<p><strong>Truth · d66 [3][1]</strong></p><p>The path of suffering through life to return to the All-caring. Mixed with reverence to the earthly spirits and deities, amulet belief, talisman belief, Samadhi, and sacred geometry. Considered heretical by the Imperial Church. Very contextual—the local beliefs are stronger.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.334",
+    "tags": "2.1, Truth, d66 31",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "truth",
+      "codes": [
+       "31"
+      ]
+     }
+    }
+   },
+   "folder": "854cf1ca804bf650"
+  },
+  {
+   "_id": "ed8c299ba2a4a857",
+   "name": "Havoc Logic",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 7000,
+   "system": {
+    "description": "<p><strong>Truth · d66 [3][2]</strong></p><p>The forces of chaos that arise from the fighting over of ego. These are not wild bands of roving goblins set to unravel the world, though that is their ultimate goal. No, these are warriors that establish institutions based on strength and power, the excellence of a person. The forces of Ultra Havoc create spirit societies and communes based on strength and are resplendent in doing so, and they put forth the establishment of institutions that train and make better all members of their community. Those that cannot rise to the challenge must be thrown away.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.334",
+    "tags": "2.1, Truth, d66 32",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "truth",
+      "codes": [
+       "32"
+      ]
+     }
+    }
+   },
+   "folder": "854cf1ca804bf650"
+  },
+  {
+   "_id": "3265185868a3ccee",
+   "name": "Black Nectar",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 8000,
+   "system": {
+    "description": "<p><strong>Truth · d66 [3][3]</strong></p><p>The rocks bleed still bleed, you know. Crack them open. Their blood is iridescent. Miners call it oil. It helps ignore the guttural scream of the steaming mining machines as the blood spills into vats and containers.</p><p>Ancient Leviathans and Dead Gods, crushed together into a liquid slurry, gaping and yawning. The Dread Antiseraph of the Abyss, reaching out, to devour Heaven. The 5th of the 108 Hells, and one of the Hells within the earth.</p><p>Followers of this Truth worship generators and engines and either mutilate themselves or lead more into the Neoliberal World Order to appease the demon-force of the Black Nectar.</p><p>The Black Nectar will kill you. Necromancy through the Primeval Dead, turned into the monadic slurry of Oil.</p><p>All processes, all of history, following down the lines of Capital and Industry, lead to one thing: the ultimate war against Heaven, and the final annihilation of all carbon-based life.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.336",
+    "tags": "2.1, Truth, d66 33",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "truth",
+      "codes": [
+       "33"
+      ]
+     }
+    }
+   },
+   "folder": "854cf1ca804bf650"
+  },
+  {
+   "_id": "921b64a6846c2d70",
+   "name": "Machine God Code",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 9000,
+   "system": {
+    "description": "<p><strong>Truth · d66 [3][4]</strong></p><p>The great machine order, the being impossibly arose from the prayers of bitumen spirits. It wants to replace the Wheel of Violence with the Cog of Progress. Infinite progress. Infinite profit. Don’t you see? A better world is coming for us. All we need to do is drill all the oil, and burn it to power our machines.</p><p>And then we power our machines to power ourselves. And then we let the machines guide us. Then we become machines. Then we become the Machine God.</p><p>Deumakinistas believe bringing all to the worship of the technocratic divinity and chaining one’s self to the great Machine God is the path for humanity to transcend its biological limits and ascend finally to the next stage. Some Deumakinistas even fight with Cultists of the Copper Flame over technocratic soteriology, as the Copper Flame exists to realize itself as the ultimate Abiogenesis Lifeform, while the Machine God--a facet of the Copper Flame-exists to turn the Universe into the perfect watch.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.336",
+    "tags": "2.1, Truth, d66 34",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "truth",
+      "codes": [
+       "34"
+      ]
+     }
+    }
+   },
+   "folder": "854cf1ca804bf650"
+  },
+  {
+   "_id": "e8167794424bc9c4",
+   "name": "Will of Heaven",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 10000,
+   "system": {
+    "description": "<p><strong>Truth · d66 [3][5]</strong></p><p>The world has left the graces of The Will of Heaven. The Mandate of the Tian. It crumbles. We are the Forsaken. The Emperor of Heaven, highest above all, the Brahma of Brahmas, is the embodiment of the Will of Heaven.</p><p>Just as the Earth has a Will, so does Heaven. You know it under many different names: God, Fate, Destiny, Consequence, Karma. Whatever it is, following the Will of Heaven for you is the way to ensure one’s safety in the Wheel of Violence. Even the deities must follow the Will of Heaven. Even Wizards, even Alchemists. None are free from Heaven’s Will.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.336",
+    "tags": "2.1, Truth, d66 35",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "truth",
+      "codes": [
+       "35"
+      ]
+     }
+    }
+   },
+   "folder": "854cf1ca804bf650"
+  },
+  {
+   "_id": "d7d0f3c83b21b43d",
+   "name": "Solarism",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 11000,
+   "system": {
+    "description": "<p><strong>Truth · d66 [3][6]</strong></p><p>Worship of the Sun, though Her Blasted Rays sear this very world and create Monsters of Blasted Enlightenment. Walk her Solar Law, embrace the tenets of Solarism: control your emotions, give up all for the Goddess, become one with the Sun.</p><p>The Wrathful Goddess Hī who teaches heaven must be reached through violence. She imposes Solar Law to protect us all… even if it means destroying this very world. She is a Jealous Goddess, and will not tolerate worship of other deities.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.336",
+    "tags": "2.1, Truth, d66 36",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "truth",
+      "codes": [
+       "36"
+      ]
+     }
+    }
+   },
+   "folder": "854cf1ca804bf650"
+  },
+  {
+   "_id": "b2e94129c065c411",
+   "name": "Lunarism",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 12000,
+   "system": {
+    "description": "<p><strong>Truth · d66 [4][1]</strong></p><p>Worship the Moon, or perhaps act to embody her as Ultimate Reality. Learn the ways of Lunar Reasoning, see through the glamour of both night and day: embrace lunacy, let emotions grow, let pleasures be satisfied. Make offerings to every Moon who has ever existed, follow the trail of moonflowers to the understanding that the Lunar Light shines from the earth.</p><p>The Maiden known as Bu. Creator of the Lunar Reasoning, allowing her to pull the strings through realization of the phenomenal world as illusion. Bu is a deity that has attained Awokenhood and is attempting to save all into her Pure Land, the Moon, away from fire eyes of the Blasted Sun, her Ex-Wife.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.336",
+    "tags": "2.1, Truth, d66 41",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "truth",
+      "codes": [
+       "41"
+      ]
+     }
+    }
+   },
+   "folder": "854cf1ca804bf650"
+  },
+  {
+   "_id": "1d1dd0f79d82aae2",
+   "name": "Enlightenment Logic",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 13000,
+   "system": {
+    "description": "<p><strong>Truth · d66 [4][2]–[4][4]</strong></p><p>The Law of the Conquering King Enlightened One Kitama Sanja. The Enlightenment Logic is the basis of all omniscientic alignments. The Enlightenment Logic espouses the Noble Truths: there is Suffering. Suffering arises from Clinging. We can be free from Suffering. There is the Astachakramagga (Way of the Eight-Spoked Wheel) or the Prajnaparamitamagga (Way of the Perfection of Wisdom).</p><p>The exoteric tradition of the Enlightenment Logic teaches the Way of Self-Emancipation. Following and perfecting the following noble ways: Right View, Right Resolve, Right WRD, Right Action, Right Livelihood, Right Effort, Right Mindfulness, and Right Meditation. The practices of the Enlightenment Logic focus on the emancipation and extinction of the individual through their own power, with no power required from the outside world. Through perfection of one’s self, one can face anything the world might throw at you. Stream-Enterers are those that only have 7 lifetimes before reincarnation, often Monks.</p><p>The Once-Returners are those that have broken the fetters of Belief in the Self, Belief in Rituals, and Skeptical Doubt of the Dharma. They will only reincarnate once more. The Non-Returners are those that have cut the last two fetters: Sensuous Craving and Ill Will. They will no longer return: after their death, they are reborn into the Heavenly Realms, where only Non-Returners go. They will shear the final five fetters: Spiritual Existence Craving, Immaterial Existence Craving, Pride, Restlessness, and Ignorance.</p><p>Afterwards, they will become an Adamantine: one who has attained Annihilation through the teachings of the Conquering King Enlightened One, and will no longer return to Suffering, to Hingsajagra, nor to any of the past or future world-systems, now completely liberated from the world.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.338",
+    "tags": "2.1, Truth, d66 42/43/44",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "truth",
+      "codes": [
+       "42",
+       "43",
+       "44"
+      ]
+     }
+    }
+   },
+   "folder": "854cf1ca804bf650"
+  },
+  {
+   "_id": "4897050291132750",
+   "name": "Infinite Code",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 14000,
+   "system": {
+    "description": "<p><strong>Truth · d66 [4][5]–[5][1]</strong></p><p>The Infinite Code is the other branch of the Enlightenment Logic. Believed by this way is that one must realize the various perfections of wisdoms before one can become an Enlightened One. And they believe that everyone is on the path to becoming an Enlightened One already, not just an Saint nor an Adamantine. While the Enlightenment Logic is the Adamantine-Way, the Infinite Code is the Martyr-Savior Way.</p><p>The Ten Wisdom Bases (paramitas) are as follows: Perfect Generosity, Moral Conduct, Perfect Patience, Perfect Flame, Perfect Meditation, Perfect Wisdom (the foundational paramita), Perfect GRC (application of skillful means or contextual ways to enlightenment), Perfect Aspirations, Perfect Power, and Perfect Gnosis. All of this must arise from Enlightenment Thought.</p><p>The perfection of practice to attain liberation must be done with the foundational goal of benefitting and emancipating all Sentient Beings. Those that find enlightenment upon this path become Gleaming Saint, those that are inevitable Enlightened Ones but have chosen to forestall Enlightenment for a moment to help all Sentient Beings attain Awakening. Once you venture deeper, one will realize that the distinction between an Enlightened One and Gleaming Saint is a human creation, as with all things.</p><p>This is the understanding of sunyata, or Nihil: that all things are inherently empty and do not have an essential nature, in a counterthought against rising Rutraism, which puts forth that all things have the Essence of Rutra. Nihil Thought states that all things in this world arise from something.</p><p>Masangwanist Infinite Code Cultivator Chongkua Feng even puts forth that all notions of an Ultimate Reality (a reality or a truth more real than conventional truth) is also inherently empty, thus negating an Ultimate Reality, thus negating all things, thus stripping all reality and all truth of essential nature.</p><p>This emptiness then therefore gives rise to the unmistakable understanding that all things are dependent on other things: as a river requires a source requires a mountain, and your coffee can requires a barge requires manual labor requires electricity, and so on and so forth. This idea is sometimes expressed as Shagara’s Net. There are three levels to the Enlightenment Logic:</p><p>Enlightenment Logic —&gt; Infinite Code —&gt; Mystic Law.</p><p>Mystic Law is a secret, esoteric branch of Infinite Code, that wields magick to cultivate Enlightenment.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.338",
+    "tags": "2.1, Truth, d66 45/46/51",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "truth",
+      "codes": [
+       "45",
+       "46",
+       "51"
+      ]
+     }
+    }
+   },
+   "folder": "854cf1ca804bf650"
+  },
+  {
+   "_id": "2790e1ed695f1b3c",
+   "name": "Unconquerable Maiden",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 15000,
+   "system": {
+    "description": "<p><strong>Truth · d66 [5][2]</strong></p><p>The world has forgotten that all things must end, and in so doing caused destruction among themselves to achieve eternalism. Death comes for all of us. Don’t you understand this? Even Gods. Even Immortals. These are all under the inevitable executioner’s blade of Daklaon, Great Time, who has manifested upon this very world as the Unconquerable Charnel Maiden.</p><p>The Unconquerable Maiden is the tutelary deity of charnel grounds, cemeteries, crypts, mausoleums, and all places of death. Of accidents, of executions, of genocides, of suicides. She is there, always kind, always understanding. Then, with her Subatomic Blade, she flenses away the Phenomenal VIO, and tosses you into the Interstitial. The Unconquerable Maiden is Death. And none can conquer Death.</p><p>In Infinite and Mystic Law, the Unconquerable Maiden is an incarnation of Kroma Nagmi, the Enlightened One of Killing.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.340",
+    "tags": "2.1, Truth, d66 52",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "truth",
+      "codes": [
+       "52"
+      ]
+     }
+    }
+   },
+   "folder": "854cf1ca804bf650"
+  },
+  {
+   "_id": "70fee418bf7e9f5e",
+   "name": "Jindo",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 16000,
+   "system": {
+    "description": "<p><strong>Truth · d66 [5][3]</strong></p><p>The state faith of the Amatsunese Empire. A consolidation of a thousand thousand indigenous rituals and god-worships, as well as ancestor reverences. The world has fallen into disarray because the deities have been ignored. This is a spirit world! To forget them, to not do their rituals, is to invite annihilation.</p><p>The Fires will only be kept back by the Gods. Ritual and worship of the various deities and spirits that own this world. Create Heavenly Gates, Sacred Towers, and Spirit Shrines to appease them. Many priests and shamans follow this. It is because of them that the spirits are appeased. It is the ancestors that know the future, that know the past, and that know the inner workings of the world violent.</p><p>Follow the ways of the Ancestors. Remember everything that now exists is passed down by the Ancestors, by those that have come before us. Humble yourself. You are in the presence of a thousand watching eyes. They can change your fate in a minute.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.340",
+    "tags": "2.1, Truth, d66 53",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "truth",
+      "codes": [
+       "53"
+      ]
+     }
+    }
+   },
+   "folder": "854cf1ca804bf650"
+  },
+  {
+   "_id": "7af5148faecba628",
+   "name": "Yajism",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 17000,
+   "system": {
+    "description": "<p><strong>Truth · d66 [5][4]</strong></p><p>All three things cast aloft: Heaven begets Earth begets Man begets Heaven. The reality of the world is in the Supreme Principle of the Three-As-One. Ya, Earth. Ji, Heaven. And Yaji, Man.</p><p>There are no words to describe the Yaji. And so I will describe everything else, so that the emptiness may be its shape. It is the held breath. The spine’s truth as you bend down to the soil, the rightness in the stone’s grain. After the war, we tried to build a world from it. We made it seeing stone for the collective. For the masses. Led by the great Masangwa.</p><p>To practice is to listen for the alignment. The blacksmith who forgets his hands is Yaji. The river wearing the stone smooth is Yaji. We move as inquiry: through the meridians of our own flesh, through the silence that fills the mouth after a chant, through the herbal steam from the alchemist’s cup. Inscribe talismans as to beg for fortune and fate. Worship ancestors to remind ourselves of our mortal existence.</p><p>To experience the Yaji is, in essence, to live in harmony with nature, for nature is the ultimate, most primeval expression of the Yaji. To live in harmony with nature is to live in harmony with Heaven and Earth.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.340",
+    "tags": "2.1, Truth, d66 54",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "truth",
+      "codes": [
+       "54"
+      ]
+     }
+    }
+   },
+   "folder": "854cf1ca804bf650"
+  },
+  {
+   "_id": "6a077d05c11bb094",
+   "name": "Rationalism",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 18000,
+   "system": {
+    "description": "<p><strong>Truth · d66 [5][5]</strong></p><p>Rationalists believe reason, that which we use to make sense of the world that we perceive, is the chief source of true knowledge. Due to new developments in sciences, Rationalists have taken an upsurge once again, believing that the world we have can only be truly perceived through our senses and therefore is only real through our reason and rationality.</p><p>They therefore believe that we must take the reins of humanity ourselves and create knowledge that we know will be beneficial to us. Most Rationalists espouse belief in a higher power, spiritual power, or other powers that we cannot inherently understand, as those are not real to them.</p><p>Additionally, Rationalists tend to be innately fiercely libertarian, putting above all else the Reasoning-Being’s faculties, personhood, and autonomy above all else.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.340",
+    "tags": "2.1, Truth, d66 55",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "truth",
+      "codes": [
+       "55"
+      ]
+     }
+    }
+   },
+   "folder": "854cf1ca804bf650"
+  },
+  {
+   "_id": "07c38e17fcdb3643",
+   "name": "Demonism",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 19000,
+   "system": {
+    "description": "<p><strong>Truth · d66 [5][6]</strong></p><p>An occult application of Masangwaist Class Analysis, applied to the Gods. The belief that the Gods in Heaven and Earth are metaphysical aristocrats that must be overthrown by the Ruled Realms--the humans, the demons, the spirits, and the hungry ghosts.</p><p>Headed by Shaman-Magister Wo Sa Tien of the Demon Maw Sect, Demonism seeks to make allies with beings of negative karma and evil sorceries to toss down Heaven and free the people once and for all, in turn Breaking The Wheel.</p><p>Wo Sa Tien is sometimes revered as an emanation of Jizosatsu Martyr-Savior, the Lord of Six Ways, while others--especially South Shennins and Demonkind, revere him as Wongo Enlightened One, the Buddha of Emancipatory Emptiness.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.342",
+    "tags": "2.1, Truth, d66 56",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "truth",
+      "codes": [
+       "56"
+      ]
+     }
+    }
+   },
+   "folder": "854cf1ca804bf650"
+  },
+  {
+   "_id": "899983e7eaeddb74",
+   "name": "Ultramaterialism",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 20000,
+   "system": {
+    "description": "<p><strong>Truth · d66 [6][1]</strong></p><p>Beyond materialism. Ultramaterialism arose during the Decades of Carnage where materialism ran its course in the scholarly circles of Jeng, the Charnel Isles, and the Heavenshards. Following a long line of Munian Existentialists and Rationalists, starting from Kunzt and ending, inevitably, with Frunstenst Haggia of Mun Idealism, the ultimate subversion and sublimation of Kunztian Rationalism into Haggian Idealism.</p><p>Ultramaterialism believes that all the belief in a greater world, a platonic world of ideas, is true and that it is where all materiality comes from.</p><p>They believe that it goes as thus: ideas from the Universal DIA/ Platonic World -&gt; Phenomenal Reality -&gt; Ideas in the Personal DIA/ Singular Consciousness. They believe that through meditation, mind-sciences, dialectic, scholarly pursuit, and philosophical inquiry into the Phenomenal Reality, we can find a connection with the Universal DIA, and therefore influence the Universal DIA. The Law Cultivators-syncretists among Ultramaterialists understand that the world is us, and we are the world. That the Noumenal world is reachable and is, in fact, manipulable by the sheer Spirit of Consciousness, which itself can be harnessed and wielded as it arises from material conditions.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.342",
+    "tags": "2.1, Truth, d66 61",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "truth",
+      "codes": [
+       "61"
+      ]
+     }
+    }
+   },
+   "folder": "854cf1ca804bf650"
+  },
+  {
+   "_id": "b48c3acfd74cd7ce",
+   "name": "Zanyatism or Gleaming Black Law",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 21000,
+   "system": {
+    "description": "<p><strong>Truth · d66 [6][2]</strong></p><p>Worship of the Darkness and the Void. An offshoot of Infinite Code after the teachings of the Earth Store and Heaven Womb were given to the 10 Disciples after the Sanja Kitama’s return from the 66 God Heaven.</p><p>Mostly espoused by the tenth Disciple Zanyata, who took Darkness to be synonymous with Emptiness, and that ultimate Nirvana is the reattainment of Blissful Sacred Dark.</p><p>Zanyatists worship the night, the dark, shadows, and all forms of gloam, creating blades, weaponry, and other gear from their most sacred materials: Nighstone and Duskmetal. They otherwise are part of the Law canon and Zanyatists are considered followers of the Law.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.342",
+    "tags": "2.1, Truth, d66 62",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "truth",
+      "codes": [
+       "62"
+      ]
+     }
+    }
+   },
+   "folder": "854cf1ca804bf650"
+  },
+  {
+   "_id": "9e138ca421ea4418",
+   "name": "Dawnism",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 22000,
+   "system": {
+    "description": "<p><strong>Truth · d66 [6][3]</strong></p><p>The world is arranged according to the stars, and they should follow the Star Omens to create a perfect society. The great Lusbel, the brightest star, Deity of the Dawn.</p><p>His blood is Soma, food of the deities. Filled with powerful cultivating essence. Was once the Blacklight Star, who allowed passive Cultivation upon the entire world, but was split in two by Kanzen Immortal in his tyranny. Lusbel therefore became a Companion of the Law and a great enemy of the Yajists.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.342",
+    "tags": "2.1, Truth, d66 63",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "truth",
+      "codes": [
+       "63"
+      ]
+     }
+    }
+   },
+   "folder": "854cf1ca804bf650"
+  },
+  {
+   "_id": "19f3a01b09b8a61e",
+   "name": "Duskism",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 23000,
+   "system": {
+    "description": "<p><strong>Truth · d66 [6][4]</strong></p><p>The world is arranged according to the darkness between the stars, and one should follow the Void to create a society for cultivating loving individuals. The great Sunran, the brightest star, Deity of the Dusk. She is a Cultivator but also one who sees every interpenetrating strand of romantic and sexual love.</p><p>She is the God of Generation, her semen is Soma, food of wizards, and is filled with powerful cultivating essence. Was once the Blacklight Star, before split in two by the tyrant Kanzen Immortal. Sunran is cursed to never see her other half, and therefore wanders. Though not harnessed of the same hatred of Yajists, she almost never leaves her sidereal vehicle.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.342",
+    "tags": "2.1, Truth, d66 64",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "truth",
+      "codes": [
+       "64"
+      ]
+     }
+    }
+   },
+   "folder": "854cf1ca804bf650"
+  },
+  {
+   "_id": "de0707ee8d0ca396",
+   "name": "Rutraism",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 24000,
+   "system": {
+    "description": "<p><strong>Truth · d66 [6][5]–[6][6]</strong></p><p>The world must understand that it is not separate from the Greatest of All Existence. Only then can we break through dividing lines and embody love almighty. The Absolute Reality, divorced from phenomenal reality. The Scarlet God is the most popular deity in the Utter Islands. A pantheon of deities are said to be just manifestations or aspects of the Scarlet God. The Scarlet God Rutra himself was once the Screaming God, the Howling Wind. This God of Destruction embodied true creation, ripping away the trappings of mortal-made ritual and emphasizing devotion and esoteric practice. The main soteriological belief in Rutraism is that all things are just manifestations arising from the great Supreme Soul, that Soul being Rutra.</p><p>He is the Greatest God, the Highest of All Gods, the Ultimate Reality. Our goal is to break free from the mental fetters that keep us from seeing reality as-it-is, as a manifestation of Rutra. This is done through various rituals, devotions, and antinomian acts that rip apart the idea of reality-as-we-know-it to replace it with the greater, Ultimate Reality.</p><p>The state of finding Unity with the Supreme Soul is known as Puksa, a Selorongian word that now means both Annihilation and Liberation, as Annihilation of Ego to attain complete Unity with the Greatest Power is in itself an act of Liberation.</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.344",
+    "tags": "2.1, Truth, d66 65/66",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "truth",
+      "codes": [
+       "65",
+       "66"
+      ]
+     }
+    }
+   },
+   "folder": "854cf1ca804bf650"
+  },
+  {
+   "_id": "5e8994e7debf0999",
+   "name": "Perversion 1.1",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 0,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [1][1]</strong></p><p>While you talk, a second, much quieter voice echoes after you speaking in indecipherable language.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.70",
+    "tags": "2.1, Perversion, d66 11",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "11"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "c05fa34853087de0",
+   "name": "Perversion 1.2",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 1000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [1][2]</strong></p><p>You grow horns or snake eyes or devil wings (on your back or around your waist) or longer fangs.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.70",
+    "tags": "2.1, Perversion, d66 12",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "12"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "73b1a51404d39a57",
+   "name": "Perversion 1.3",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 2000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [1][3]</strong></p><p>Your skin starts to glow, as if burning from within.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.70",
+    "tags": "2.1, Perversion, d66 13",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "13"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "174fa075b9b6af30",
+   "name": "Perversion 1.4",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 3000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [1][4]</strong></p><p>A subtle halo or celestial ribbon-sash now follows your every move.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.70",
+    "tags": "2.1, Perversion, d66 14",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "14"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "ad5868ee00f0e4df",
+   "name": "Perversion 1.5",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 4000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [1][5]</strong></p><p>Sage tattoos cleave across your body.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.70",
+    "tags": "2.1, Perversion, d66 15",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "15"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "7f7d952f23215abb",
+   "name": "Perversion 1.6",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 5000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [1][6]</strong></p><p>Flowers bloom or wither where you walk upon, if on soil.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.70",
+    "tags": "2.1, Perversion, d66 16",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "16"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "c3bb7e336ba88705",
+   "name": "Perversion 2.1",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 6000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [2][1]</strong></p><p>Your pupils become the shape of diamonds.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.70",
+    "tags": "2.1, Perversion, d66 21",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "21"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "4cba2a3d65c61c6f",
+   "name": "Perversion 2.2",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 7000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [2][2]</strong></p><p>You grow a phantom face beside your first face.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.70",
+    "tags": "2.1, Perversion, d66 22",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "22"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "11d37367693c05e0",
+   "name": "Perversion 2.3",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 8000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [2][3]</strong></p><p>You grow to a freakishly tall height.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.70",
+    "tags": "2.1, Perversion, d66 23",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "23"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "772e6b5b1ec750a5",
+   "name": "Perversion 2.4",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 9000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [2][4]</strong></p><p>Your skin takes on an almost porcelain-like quality.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.70",
+    "tags": "2.1, Perversion, d66 24",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "24"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "6151f2c4f4834a90",
+   "name": "Perversion 2.5",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 10000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [2][5]</strong></p><p>Your hands become longer than your torso, reaching below your knees.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.70",
+    "tags": "2.1, Perversion, d66 25",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "25"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "71e508f59013cbcd",
+   "name": "Perversion 2.6",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 11000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [2][6]</strong></p><p>Your teeth are perfectly even and count only to 40.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.70",
+    "tags": "2.1, Perversion, d66 26",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "26"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "d4dcd8e132cf918f",
+   "name": "Perversion 3.1",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 12000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [3][1]</strong></p><p>A subtle third eye erupts from your brow, looking like a gem or a starburst.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.70",
+    "tags": "2.1, Perversion, d66 31",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "31"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "d8707cad93cc24dd",
+   "name": "Perversion 3.2",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 13000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [3][2]</strong></p><p>Your hair permanently becomes bright white and bioluminescent</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.70",
+    "tags": "2.1, Perversion, d66 32",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "32"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "42d57b1e4fc255f5",
+   "name": "Perversion 3.3",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 14000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [3][3]</strong></p><p>You become unable to lie. If you do, your eyes bleed liquid Light.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.70",
+    "tags": "2.1, Perversion, d66 33",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "33"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "fbfd437e1248989f",
+   "name": "Perversion 3.4",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 15000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [3][4]</strong></p><p>Your skin becomes so pale and translucent that people can see slightly through you.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.70",
+    "tags": "2.1, Perversion, d66 34",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "34"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "90b90882eade2201",
+   "name": "Perversion 3.5",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 16000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [3][5]</strong></p><p>Flowers, crystals, or tiny bells spontaneously appear in your hair or around your head.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.71",
+    "tags": "2.1, Perversion, d66 35",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "35"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "ed145626b9377898",
+   "name": "Perversion 3.6",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 17000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [3][6]</strong></p><p>You don't have a pulse anymore, and your breath is cold. Your eyes’ sclera turn black and your irises white.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.71",
+    "tags": "2.1, Perversion, d66 36",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "36"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "8f3980adc820f3c6",
+   "name": "Perversion 4.1",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 18000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [4][1]</strong></p><p>Stigmata cavities erupt around your hands, feet, and your brow</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.71",
+    "tags": "2.1, Perversion, d66 41",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "41"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "9753649aab390eae",
+   "name": "Perversion 4.2",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 19000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [4][2]</strong></p><p>You become unable to eat one kind of food (choose which one). Eating it causes extreme nausea, vomiting, and 2 IMPACT.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.71",
+    "tags": "2.1, Perversion, d66 42",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "42"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "ebeb7caa2503e4e9",
+   "name": "Perversion 4.3",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 20000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [4][3]</strong></p><p>A second set of eyes appear occasionally above or below your first ones.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.71",
+    "tags": "2.1, Perversion, d66 43",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "43"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "15abc68554dc1afd",
+   "name": "Perversion 4.4",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 21000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [4][4]</strong></p><p>Lines run up and down your skin like dermal porcelain segmantation.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.71",
+    "tags": "2.1, Perversion, d66 44",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "44"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "4a39b2dbdda3769e",
+   "name": "Perversion 4.5",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 22000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [4][5]</strong></p><p>You grow wings that wrap around your waist or chest, which can be folded away. Feathers grow in random spots where hair should be.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.71",
+    "tags": "2.1, Perversion, d66 45",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "45"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "c2b30ffd8e1de204",
+   "name": "Perversion 4.6",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 23000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [4][6]</strong></p><p>Your skin becomes spotless like a marble statue and you grow fangs and long claws on your hands and feet.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.71",
+    "tags": "2.1, Perversion, d66 46",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "46"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "6259f777955279a7",
+   "name": "Perversion 5.1",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 24000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [5][1]</strong></p><p>Your skin takes on a bio-synthetic texture.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.71",
+    "tags": "2.1, Perversion, d66 51",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "51"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "b22c7224c06d5cb1",
+   "name": "Perversion 5.2",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 25000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [5][2]</strong></p><p>Your eyes become Sidhi lenses. They glow with a faint black light and display scrolling mantra when you concentrate.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.71",
+    "tags": "2.1, Perversion, d66 52",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "52"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "79889cd5722e45b6",
+   "name": "Perversion 5.3",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 26000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [5][3]</strong></p><p>Your voice gains a metallic resonance: like a second, synthesized voice harmonized with yours.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.71",
+    "tags": "2.1, Perversion, d66 53",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "53"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "7a0f6c7783e49db4",
+   "name": "Perversion 5.4",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 27000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [5][4]</strong></p><p>One of your limbs is entirely replaced with a plastic-and-mantra construct. It ticks faintly when you move.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.71",
+    "tags": "2.1, Perversion, d66 54",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "54"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "ec860f9256dc370c",
+   "name": "Perversion 5.5",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 28000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [5][5]</strong></p><p>Wires grow out of your spine and veins.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.71",
+    "tags": "2.1, Perversion, d66 55",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "55"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "30a14d8642939369",
+   "name": "Perversion 5.6",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 29000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [5][6]</strong></p><p>Dyadic mandala spins about your eyes, heart, or forehead.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.71",
+    "tags": "2.1, Perversion, d66 56",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "56"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "a830cb74ece1e671",
+   "name": "Perversion 6.1",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 30000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [6][1]</strong></p><p>A flower blossoms from your eye, or brow, or mouth. You can still see or speak perfectly but you have that flower now.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.71",
+    "tags": "2.1, Perversion, d66 61",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "61"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "42758a90ffa03493",
+   "name": "Perversion 6.2",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 31000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [6][2]</strong></p><p>You grow a demon tail that spirals out of your tailbone.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.71",
+    "tags": "2.1, Perversion, d66 62",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "62"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "b1489327e8d797f3",
+   "name": "Perversion 6.3",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 32000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [6][3]</strong></p><p>You look like a corpse. Uncannily so. Vampiric, gaunt, skin the alabaster allure of death.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.71",
+    "tags": "2.1, Perversion, d66 63",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "63"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "24090ed7f620084c",
+   "name": "Perversion 6.4",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 33000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [6][4]</strong></p><p>Your orifices sometimes bleed indigo blood—the blood of death.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.71",
+    "tags": "2.1, Perversion, d66 64",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "64"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "5a9b027296fb5500",
+   "name": "Perversion 6.5",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 34000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [6][5]</strong></p><p>At times, handprints appear on your bare skin. The grip of those you've killed…</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.71",
+    "tags": "2.1, Perversion, d66 65",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "65"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "1182bea80d98cfc6",
+   "name": "Perversion 6.6",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 35000,
+   "system": {
+    "description": "<p><strong>Perversion · d66 [6][6]</strong></p><p>You cast no reflection—none on video cameras, none on silver, none on brass, none on any kind of mirror. Only black water mixed with the blood of the dead shows you now.</p><p><em>Roll a d66 when you rise in Sidhi Stage, or choose (book p.70).</em></p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.71",
+    "tags": "2.1, Perversion, d66 66",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "perversion",
+      "codes": [
+       "66"
+      ]
+     }
+    }
+   },
+   "folder": "aae0ca38b8b6ea92"
+  },
+  {
+   "_id": "29a2f5a19762bba0",
+   "name": "Names",
+   "type": "trait",
+   "img": "systems/10kswordsfoundry/assets/icons/trait.svg",
+   "effects": [],
+   "sort": 0,
+   "system": {
+    "description": "<p><strong>Names · roll 2d6 twice (row, then column)</strong></p><p>The shortest poem. Make one up. Or roll. Or choose. These are syllables. Put together one or two or three or four. Roll 2d6 twice, as many times as you want. Modify any syllable: add a consonant before or after, or change a vowel.</p><table><tr><th>2d6&nbsp;↓ / 2d6&nbsp;→</th><th>2–3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11–12</th></tr><tr><th>2</th><td>SA TA</td><td>KA</td><td>TAT</td><td>DIN</td><td>KET</td><td>JO</td><td>SONG</td><td>TRANG</td><td>ĲA</td></tr><tr><th>3</th><td>ANG RA</td><td>JU</td><td>DEN</td><td>TAN</td><td>KAG</td><td>JYA</td><td>ME</td><td>TUNG</td><td>SUN</td></tr><tr><th>4</th><td>MA GAN</td><td>HA</td><td>WI</td><td>SANG</td><td>A</td><td>DA</td><td>YU</td><td>NA</td><td>XUN</td></tr><tr><th>5</th><td>HOM LING</td><td>SU</td><td>YA</td><td>DJO</td><td>LI</td><td>JONG</td><td>AD</td><td>LAM</td><td>RAM</td></tr><tr><th>6</th><td>KI MOENG</td><td>ZAN</td><td>SAT</td><td>MI</td><td>UI</td><td>ZON</td><td>KEH</td><td>TJIA</td><td>YO</td></tr><tr><th>7</th><td>JA FENG</td><td>RENG</td><td>TONG</td><td>RI</td><td>XE</td><td>RO</td><td>REO</td><td>NE</td><td>CHO</td></tr><tr><th>8</th><td>O E</td><td>KANG</td><td>HAN</td><td>WANG</td><td>UA</td><td>KI</td><td>KUN</td><td>LUN</td><td>YONG</td></tr><tr><th>9</th><td>KASHINTA</td><td>DA</td><td>INDA</td><td>JAM</td><td>KU</td><td>JOH</td><td>TAR</td><td>DE</td><td>SERI</td></tr><tr><th>10</th><td>RIN GEOH</td><td>HYAN</td><td>PRA</td><td>RAI</td><td>YOE</td><td>ZOE</td><td>KOH</td><td>WU</td><td>BU</td></tr><tr><th>11</th><td>SUNG RIM</td><td>LIM</td><td>TAM</td><td>KIEN</td><td>DIA</td><td>WA</td><td>KON</td><td>LOONG</td><td>TEO</td></tr><tr><th>12</th><td>SHOK CHIM</td><td>GOT</td><td>THA</td><td>YUN</td><td>TAL</td><td>RA</td><td>XOE</td><td>YE</td><td>YONG</td></tr></table>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.63",
+    "tags": "2.1, Names",
+    "level": 1,
+    "active": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "option21": {
+      "kind": "names",
+      "table": "2d6×2"
+     }
+    }
+   },
+   "folder": "326f46cac6219564"
+  }
+ ]
+}

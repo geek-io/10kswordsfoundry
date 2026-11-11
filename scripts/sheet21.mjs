@@ -1,12 +1,12 @@
 // Rules 2.1 character sheet context and actions. Used only when the GM selects the 2.1 ruleset.
 import {CORES, CULTIVATIONS_21, ASSETS_21, PARTS, PART_KEYS, CONDITIONS_21, ATTACHMENT_STRENGTHS, MAX_STARS,
-  derive21, advancementCost, healingDays, weaponProfile21, qualifiesForLicense21, SIDHI_REALMS, abilityLimit21, recoverFlame21, cleaveDepth} from "./rules21.mjs?v=0.2.14";
-import {rollCheck21, killTheBuddha, castMagick21, stunCheck, incapacitationCheck, randomPart, damagePart} from "./roll21.mjs?v=0.2.14";
-import {escapeHTML} from "./resolution.mjs?v=0.2.14";
-import {activateTechnick21, releaseTechnick21, technickRows21} from "./technick21.mjs?v=0.2.14";
-import {changeGodsMind21, rollDisposition21} from "./social21.mjs?v=0.2.14";
-import {DISPOSITIONS21} from "./social-rules21.mjs?v=0.2.14";
-import {assetRows21, barangRows21, raiseAsset21, ingestBarang21, ejectBarang21} from "./assets21.mjs?v=0.2.14";
+  derive21, advancementCost, healingDays, weaponProfile21, qualifiesForLicense21, SIDHI_REALMS, abilityLimit21, recoverFlame21, cleaveDepth} from "./rules21.mjs?v=0.2.16";
+import {rollCheck21, killTheBuddha, castMagick21, stunCheck, incapacitationCheck, randomPart, damagePart} from "./roll21.mjs?v=0.2.16";
+import {escapeHTML} from "./resolution.mjs?v=0.2.16";
+import {activateTechnick21, releaseTechnick21, technickRows21} from "./technick21.mjs?v=0.2.16";
+import {changeGodsMind21, rollDisposition21} from "./social21.mjs?v=0.2.16";
+import {DISPOSITIONS21} from "./social-rules21.mjs?v=0.2.16";
+import {assetRows21, barangRows21, raiseAsset21, ingestBarang21, ejectBarang21} from "./assets21.mjs?v=0.2.16";
 
 export const ACTOR_TEMPLATE_21 = "systems/10kswordsfoundry/templates/actor-21.hbs";
 const int = value => Math.trunc(Number(value) || 0);
@@ -57,8 +57,8 @@ export function prepareActor21(document, context) {
     flame21: {max: flameMax, stored: int(source.ardor?.max), differs: int(source.ardor?.max) !== flameMax, scorch: int(source.scorch)},
     meridians21: {open: meridians, used: abilityCount, over: abilityCount > meridians},
     weaponRows21: (document.items?.contents ?? []).filter(item => item.type === "weapon" && item.system.equipped).map(item => {
-      const profile = weaponProfile21(item.system);
-      return {id: item.id, name: item.name, profile: profile.label, damage: profile.damage, range: profile.range, ranged: profile.ranged, rate: profile.rate};
+      const profile = weaponProfile21(item.system, {cores: document.system?.cores});
+      return {id: item.id, name: item.name, profile: profile.label, damage: `${profile.damage} (${profile.damageText})`, range: profile.range, ranged: profile.ranged, rate: profile.rate};
     }),
     magickRows21: magicks.map(item => ({id: item.id, name: item.name, potency: Math.max(1, int(item.system.r21?.potency) || 1), burn: int(item.system.burnArdor),
       charges: item.id === source.casting?.itemId ? int(source.casting?.charges) : 0, castTime: item.system.r21?.castTime ?? ""})),

@@ -1,5 +1,5 @@
-import { EQUIPMENT_TYPES } from "./equipment.mjs?v=0.2.14";
-import { CORES, CULTIVATIONS_21, PARTS } from "./rules21.mjs?v=0.2.14";
+import { EQUIPMENT_TYPES } from "./equipment.mjs?v=0.2.16";
+import { CORES, CULTIVATIONS_21, PARTS } from "./rules21.mjs?v=0.2.16";
 export function equipmentEffectSuppressed(item) {
   if(item.type==='trait')return item.system.active===false;
   return EQUIPMENT_TYPES.includes(item.type) && !item.system.equipped;

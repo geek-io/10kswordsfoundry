@@ -1,5 +1,5 @@
 // GM-selected rules version. 2.0.3 stays the default; 2.1 is opt-in for testing.
-import {RULES_SETTING, RULES_CHOICES} from "./rules21.mjs?v=0.2.14";
+import {RULES_SETTING, RULES_CHOICES} from "./rules21.mjs?v=0.2.16";
 
 const SYSTEM = "10kswordsfoundry";
 
