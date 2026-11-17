@@ -1,54 +1,56 @@
-import re, json
-from xml.etree import ElementTree as ET
-import sys, subprocess
-# Usage: python parse.py <2.1 sect spoilers (playtest sects, 64 pages).pdf>  (needs poppler's pdftotext)
-PDF=sys.argv[1]; SRC='bbox.html'
-subprocess.run(['pdftotext','-bbox-layout',PDF,SRC],check=True)
-s=open(SRC).read(); s=re.sub(r'<!DOCTYPE[^>]*>','',s).replace('xmlns="http://www.w3.org/1999/xhtml"','')
-root=ET.fromstring(s)
-SECTS=[(1,'Asuri'),(5,'Aswang'),(9,'Dracontine'),(13,'Eskatonian'),(17,'Fangshi'),(21,'Houyi'),(25,'Imma'),(29,'Jyotisha'),(33,'Katalonan'),(37,'Mendicant'),(41,'Nezha'),(45,'Sword Dialectician'),(49,'Techgnostic'),(53,'Ultramystic'),(57,'Wukong'),(61,'Zhongkui')]
-INTRO={1,5,9,13,17,21,25,29,33,37,41,45,49,53,57,61}
+# Parse the Sect chapter of the 2.1 player-facing book (187 PDF pages of two-page spreads, 2026-11-11) into raw entries.
+# Usage: python parse.py <10,000 SWORDS AGAINST HEAVEN 2.1 player-facing.pdf> [first=102] [last=133]  -> raw.json (needs poppler's pdftotext)
+# Then: python build.py  -> parsed.json;  python gen.py <out dir>/  -> sects-21.json, sect-gear-21.json
+import sys,re,json
+import os
+sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
+from cols import extract
+PDF=sys.argv[1]; FIRST=int(sys.argv[2]) if len(sys.argv)>2 else 102; LAST=int(sys.argv[3]) if len(sys.argv)>3 else 133
+SECTS=[(224,'Asuri'),(228,'Aswang'),(232,'Bidadari'),(236,'Dracontine'),(240,'Eskatonian'),(244,'Fangshi'),(248,'Houyi'),(252,'Imma'),(256,'Jyotisha'),(260,'Katalonan'),(264,'Luciferian'),(268,'Mendicant'),(272,'Metomian'),(276,'Nezha'),(280,'Sapphire Star'),(284,'Sword Dialectician'),(288,'Techgnostic'),(292,'Ultramystic'),(296,'Wukong'),(300,'Zhongkui')]
 def sect_of(p): return [n for s0,n in SECTS if s0<=p][-1]
-TYPE=re.compile(r'^(TECHNICK|Technick|GEAR|Gear|MAGICK|Magick)$')
-lines=[]; bid=0; bookpage={}
-for pi,page in enumerate(root.iter('page'),1):
-    W=float(page.get('width')); blocks=[]
-    for b in page.iter('block'):
-        x=float(b.get('xMin'));y=float(b.get('yMin'));x2=float(b.get('xMax'))
-        ls=[' '.join(w.text or '' for w in l.iter('word')) for l in b.iter('line')]
-        blocks.append((0 if (x+x2)/2<W/2 else 1,y,ls))
-    blocks.sort(key=lambda t:(t[0],t[1]))
-    for col,y,ls in blocks:
-        bid+=1
-        txt=' '.join(ls)
-        if re.fullmatch(r'\d{3}( \d{3})?',txt.strip()): bookpage.setdefault(pi,int(txt.split()[0])); continue
-        for i,l in enumerate(ls): lines.append(dict(p=pi,b=bid,i=i,t=l.strip()))
-# fill book pages
-for pi in range(1,65):
-    if pi not in bookpage:
-        prev=[bookpage[q] for q in bookpage if q<pi]; bookpage[pi]=(max(prev)+1) if prev else 128
-isupper=lambda t: bool(re.search(r'[A-Z]',t)) and t==t.upper() and not re.search(r'[a-z]',t)
-starts=[]
-for k,L in enumerate(lines):
-    if TYPE.match(L['t']):
-        # title: preceding lines in same block, else previous block (if short uppercase)
-        j=k-1; title=[]
-        if j>=0 and lines[j]['b']==L['b']:
-            while j>=0 and lines[j]['b']==L['b'] and isupper(lines[j]['t']): title.insert(0,lines[j]['t']); j-=1
-        else:
-            b=lines[j]['b']
-            while j>=0 and lines[j]['b']==b: title.insert(0,lines[j]['t']); j-=1
-        starts.append((j+1,k,' '.join(title)))
+TYPE=re.compile(r'^(technick|magick|gear)$',re.I)
+CAPS=re.compile(r"^[A-Z0-9][A-Z0-9 '’,\-:.!&/]{2,}$")
+LIC=re.compile(r'^(//\s*)?licen[sc]e_?\b',re.I)
+pages=extract(PDF,FIRST,LAST,10)
 entries=[]
-for n,(ts,k,title) in enumerate(starts):
-    end=starts[n+1][0] if n+1<len(starts) else len(lines)
-    body=[L for L in lines[k+1:end] if L['p'] not in INTRO]
-    # stop body at sect change
-    p0=lines[k]['p']; body=[L for L in body if sect_of(L['p'])==sect_of(p0)]
-    entries.append(dict(title=title,type=lines[k]['t'].lower().replace('technick','technick'),pdfpage=p0,page=bookpage[p0],sect=sect_of(p0),lines=[L['t'] for L in body]))
+for p in range(FIRST,LAST+1):
+    for ci,(sx,rows) in enumerate(pages[p]):
+        # book page: left half or right half of the spread
+        book=None
+        rows=[r for r in rows if not re.fullmatch(r'\d{3}( ¦ \d{3})?',r.strip())]
+        i=0;cur=None
+        def is_title(k):
+            parts=[x.strip() for x in rows[k].split('¦')]
+            head=parts[0]
+            m=re.match(r"^([A-Z0-9][A-Z0-9 '’,\-:.!&/]{2,}?) (TECHNICK|Technick|technick|MAGICK|Magick|magick|GEAR|Gear|gear)$",head)
+            if m and len(parts)==1: parts=[m.group(1),m.group(2)]; head=m.group(1)
+            if not CAPS.match(head) or LIC.match(head) or head.lower().startswith('needs'): return None
+            if head.endswith('.') and not head.endswith('SOMERSAUL.T'): return None
+            if re.match(r'^(MANTRA|MUDRA|CHECK|CHARGE TIME|EFFECT|CAST)\b',head): return None
+            typ=None
+            if len(parts)>1 and TYPE.match(parts[-1]): typ=parts[-1].lower()
+            # title may wrap onto a second caps row
+            j=k+1; title=head
+            if typ is None and j<len(rows):
+                nxt=[x.strip() for x in rows[j].split('¦')]
+                if TYPE.match(nxt[0]): typ=nxt[0].lower(); j+=1
+                elif CAPS.match(nxt[0]) and not LIC.match(nxt[0]) and len(nxt)>1 and TYPE.match(nxt[-1]): title+=' '+nxt[0]; typ=nxt[-1].lower(); j+=1
+                elif CAPS.match(nxt[0]) and j+1<len(rows) and TYPE.match(rows[j+1].strip()): title+=' '+nxt[0]; typ=rows[j+1].strip().lower(); j+=2
+            if typ is None and cur is not None and not any(LIC.match(l.strip()) for l in cur['lines']): return None
+            if typ is None:
+                # accept an untyped caps title only if a license row follows before the next typed title
+                for q in range(k+1,min(k+16,len(rows))):
+                    if LIC.match(rows[q].strip()): typ='technick?'; break
+                    if CAPS.match(rows[q].split('¦')[0].strip()) and q>k+1: break
+                if typ is None: return None
+            return title,typ,j
+        while i<len(rows):
+            t=is_title(i)
+            if t:
+                cur=dict(sect=sect_of(p),page=p,col=ci,x=sx,title=t[0],type=t[1],lines=[]); entries.append(cur); i=t[2]; continue
+            if cur is not None: cur['lines'].append(rows[i])
+            i+=1
 json.dump(entries,open('raw.json','w'),indent=1,ensure_ascii=False)
-if False:
-  for e in entries:
-    t=' / '.join(e['lines']); lic=re.search(r'licen[sc]e\s*(?:/\s*)?([A-Z][A-Z \-\']+?)\s*(✦+)',t,re.I); nd=re.search(r'needs\s*(?:/\s*)?([^/]*)',t,re.I)
-    print(f"{e['page']} {e['sect'][:6]:6} {e['type'][:4]:4} {e['title'][:34]:34} | {lic.group(1)+' '+str(len(lic.group(2))) if lic else '??LIC'} | {nd.group(1).strip()[:30] if nd else '-'} | {len(e['lines'])}")
-print(len(entries),'entries')
+print(len(entries))
+import collections
+print(collections.Counter(e['sect'] for e in entries))

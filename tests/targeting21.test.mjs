@@ -94,7 +94,8 @@ test("Apply damage from the card prefills the weapon damage and called Part", as
   messages.length = 0; prompts.length = 0;
   const foe = makeActor("Foe");
   const data = {damage: 3, part: "rarm", crushing: false, targets: [{tokenUuid: "t", actorUuid: "a", name: "Foe"}]};
-  assert.deepEqual(damageDefaults21({damage: 0, randomKeys: ["torso"], randomParts: ["Torso"]}), {part: "torso", amount: 2, crushing: false, hint: "Random hit locations: Torso."});
+  assert.deepEqual(damageDefaults21({damage: 0, randomKeys: ["torso"], randomParts: ["Torso"]}), {part: "torso", amount: 2, crushing: false, ignoreSoak: false, visceral: false, hint: "Random hit locations: Torso."});
+  assert.deepEqual(damageDefaults21({damage: 4, part: "head", crushing: true, piercing: true, visceral: true}), {part: "head", amount: 4, crushing: true, ignoreSoak: true, visceral: true, hint: ""});
   formValues = {part: "rarm", amount: 3, crushing: false, ignoreSoak: false};
   await runChatAction21(data, "damage", 0, {resolve: async uuid => uuid === "t" ? {actor: foe} : null});
   assert.match(prompts[0].content, /value="rarm" selected/);

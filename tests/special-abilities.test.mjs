@@ -30,6 +30,14 @@ test('Passive modifiers apply once per source, update instead of stacking, remov
  await applyAbilityEffect(data,[actor],true);assert.equal(actor.effects.contents.length,0);
  actor.isOwner=false;await assert.rejects(applyAbilityEffect(data,[actor]),/GM/);
 });
+test('Technicks can grant a temporary Core increase (2.1, 2026-11-15)',async()=>{
+ const actor={uuid:'Actor.self',isOwner:true,effects:{contents:[]},async createEmbeddedDocuments(type,rows){for(const row of rows){const effect={...row,id:'effect',getFlag:()=>row.flags['10kswordsfoundry'].abilitySource,async update(data){Object.assign(this,data);}};this.effects.contents.push(effect);}},async deleteEmbeddedDocuments(){this.effects.contents=[];}};
+ const data={source:'Actor.self:technick:0',name:'Vajra Surge',key:'system.cores.phy',value:2};
+ await applyAbilityEffect(data,[actor]);
+ assert.equal(actor.effects.contents.length,1);
+ assert.deepEqual(actor.effects.contents[0].system.changes[0],{key:'system.cores.phy',type:'add',value:2});
+ await assert.rejects(applyAbilityEffect({...data,key:'system.cores.zzz'},[actor]),/Invalid ability modifier/);
+});
 test('Automatic weapon ability uses zero AP, installs Ardor and posts its effect without rolling',async()=>{
  const {useAbility}=await import('../scripts/abilities.mjs');let messages=[],warnings=[];
  const ability={name:'Killing Intent',mode:'automatic',hostile:false,apCost:0,burnArdor:0,installArdor:1,description:'Affects eligible enemies within 3m; check attack targets.',effectKey:'system.attackBonus',effectValue:-3};

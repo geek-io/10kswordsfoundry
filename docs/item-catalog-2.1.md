@@ -11,6 +11,34 @@ Source: the Red Kalpa Manuscript, 53-page edition (0.2.12 onward): "Fetishism of
 | **2.1 Ammunition** (`ammunition-21`) | Ammunition | Arrows (15), Bolts (15), Handgun magazine (12), Longgun magazine (30) |
 | **2.1 Assets** (`assets-21`) | [1] … [6] by the first d36 die | All 35 d36 Assets as Asset items, at their lowest Stars |
 
+## Re-imported in 0.2.33 from the 2.1 rulebook (303 pp)
+
+Source: `10,000 SWORDS AGAINST HEAVEN 2.1 -compressed.pdf` (303 pages, PDF page = book page): Items in the Market pp.186–191, Gear Weapons pp.192–195, Weapon List pp.196–201, Armor pp.202–206, Accessories p.207. Generator: `python tools/items21/gen_rulebook.py <book.pdf> data/`. Everything below this section describes earlier imports.
+
+| Compendium | Items now |
+| --- | --- |
+| **2.1 Weapons** | 43 listed weapons (pp.196–201), 13 profile templates (12 Profiles + Shield), 4 one-shot weapons |
+| **2.1 Armor** | 24 pieces (6 each for Head, Torso, Arms, Legs) and 2 one-shot suits |
+| **2.1 Accessories** | 6 market accessories (p.187) and 6 worn accessories (p.207) |
+| **2.1 Consumables** | 6 market consumables (p.186) and 9 Fangshi concoctions (carried over) |
+| **2.1 Ammunition** | 4 bundles, 6 special ammunition types (p.193), HDF Dragon Fire Meteor (p.201) |
+| **2.1 Market Goods** | 6 each of Salvage, Tools, Esotery, Talismans (pp.188–191) |
+
+**2.1 Assets (0.2.34):** re-imported from pp.211–218 with `python tools/assets21/gen_rulebook.py <book.pdf> data/`. The same 36 Assets and ids; ten texts changed (Debt, Capital, Wrought Limb, Loom Access, Patron, Anvil Head, Python Grip, Beastly Claws, Hummingbird Pulse, Armory). Hummingbird Pulse is ✦✦✦ only.
+
+Readings recorded rather than invented:
+
+1. **Pages 196–197** (Empty Hands, Daggers, Sabers, Swords) have no text layer. Their twelve cards were typed in from the page images.
+2. **Soak** is one per printed shield glyph; "—" is none. Arm pieces cover one arm and are recorded on the right arm.
+3. **Mods without a switch** stay as tags and are applied at the table: the Affinities RAZOR, ESOTERIC, PSIONIC (p.195: use another Core for the Check and damage), VISCERAL (+1 damage against Parts without Soak), REACH, and SHIELD on the HaeCo Riot Shield (not in the p.194 list; the earlier reading is kept).
+4. **Categories printed against their list** are recorded by the list they are in: Ka Parashurma (Cleaver), AWW Jadesteel Sleeves (Whip), TMNI Sikarom (Bow), HDF Miniature Arblast and EXK Vampire Hunter (Crossbow).
+5. **"-2 SPEED" (Kongo Helm) and "+2 Speed" (Genji Visor)** are applied as printed to the Speed modifier. Whether a plus is faster or slower is still an open question.
+6. **Ammunition types** use the closest type the system has: Freezeshot is a Bullet, Blunt Bolt a Bolt, Slingshot the launcher crush type. Their extra effects are in the description. Bundles (15 arrows, 15 bolts, 12 pistol bullets, 32 rifle bullets) carry the weight and price of the full count.
+7. **MA Reaping Teppōkatana** prints its price as "330MAG".
+8. **Official's Coat** prints its description twice and no effect.
+9. **Sky Dance** is printed as a "Prestige Esotery" in the Talismans list. Mosesian Spring is d6 4 and Rend d6 5.
+10. **Carried over unchanged:** the Heed Us one-shot gear and tower shield (Red Kalpa Manuscript p.122) and the Fangshi concoctions (playtest Sects pp.147–149). The new book prints the concoctions inside the Fangshi Technicks (pp.244–247); they have not been re-read.
+
 ## What is configured
 
 - **Weapons:** 2.1 Grip, Profile, Material, weight, Rate, Capacity and mods; base damage 2 (ARTIFACT adds +1). Ranged weapons have an ammo family, so pick an ammo stack on the weapon before KILLING THE BUDDHA. The **Weapon Profiles** folder has one blank weapon per profile (Dagger … Longgun) to rename and customize.

@@ -4,12 +4,12 @@ Repository: https://github.com/geek-io/10kswordsfoundry
 
 ## Prepared release
 
-Version: **0.1.51**. GitHub release tag: **v0.1.51**.
+Version: **0.2.40**. GitHub release tag: **v0.2.40**.
 
 Upload these files from `dist/` as assets of the same GitHub release:
 
 - `system.json` — standalone Foundry manifest.
-- `10kswordsfoundry-0.1.51.zip` — complete installable system.
+- `10kswordsfoundry-0.2.40.zip` — complete installable system.
 - `SHA256SUMS.txt` — checksums for the two files above.
 
 Use the supplied ZIP, not GitHub's automatically generated Source code archive. The supplied ZIP contains one `10kswordsfoundry/` folder with `system.json` and all runtime assets, including compiled compendiums, embedded effects, fonts, and the catalog data needed by repairs.
@@ -17,7 +17,7 @@ Use the supplied ZIP, not GitHub's automatically generated Source code archive. 
 ## Your publishing steps
 
 1. Commit and push the prepared project yourself. Include `system.json`, `package.json`, `README.md`, `LICENSE`, and the `scripts`, `templates`, `styles`, `lang`, `assets`, `data`, `packs`, `docs`, `tools`, and `tests` directories. Generated release assets in `dist/` are intentionally ignored; attach them to the release instead.
-2. In GitHub, create a release with tag **v0.1.51**, targeting the commit you intend to ship.
+2. In GitHub, create a release with tag **v0.2.40**, targeting the commit you intend to ship.
 3. Attach all three files above. Add your release notes, then publish as a normal release and mark it as Latest. A draft or prerelease will not serve the intended latest-release install channel.
 4. Confirm both URLs below download publicly without signing in. They will not exist until you publish the release.
 5. In Foundry Setup → Game Systems → Install System, paste the manifest URL below. Existing manifest-installed copies will use that same stable URL for update checks.
@@ -28,7 +28,7 @@ Stable installation/update manifest:
 
 Pinned ZIP for this release:
 
-`https://github.com/geek-io/10kswordsfoundry/releases/download/v0.1.51/10kswordsfoundry-0.1.51.zip`
+`https://github.com/geek-io/10kswordsfoundry/releases/download/v0.2.40/10kswordsfoundry-0.2.40.zip`
 
 An existing manually installed copy may need one manual replacement with this prepared package, or installation via the manifest URL, to acquire the update metadata. Back up world data before upgrading.
 
@@ -36,7 +36,7 @@ An existing manually installed copy may need one manual replacement with this pr
 
 Every release ZIP ships all complete compiled compendiums, including their folders and embedded Active Effects, alongside the supporting catalog data. This also applies to any compendiums added later. Players do not need a separate compendium download.
 
-The current packs are Non-Sect Items, Grimoire Traits, Sect Licenses, Sect Technicks, Sect Magicks, World Being Traits, Sect Fashion & Gear, and Jobs. The packager includes the entire `packs/` and `data/` directories; keep these in each release rather than shipping only changed entries or source catalogs.
+The release carries twenty packs: the eight Rules 2.0.3 packs (Non-Sect Items, Grimoire Traits, Sect Licenses, Sect Technicks, Sect Magicks, World Being Traits, Sect Fashion & Gear, Jobs) and the twelve Rules 2.1 packs (Sects, Sect Gear, Weapons, Armor, Accessories, Ammunition, Consumables, Market Goods, Assets, Barang, Cultivator Discovery, World Beings). The packager includes the entire `packs/` and `data/` directories; keep these in each release rather than shipping only changed entries or source catalogs.
 
 ## Preparing later releases
 

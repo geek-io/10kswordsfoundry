@@ -4,11 +4,54 @@ Source (0.2.13 onward): user-supplied `10ksah_2_1_playtest_sects.pdf`, the 2.1 p
 
 | Compendium | Contents | Folders |
 | --- | --- | --- |
-| **2.1 Sects** (`sects-21`) | 143 Technicks and 68 Magicks from 16 Sects | Sect → Sect Cultivation ✦ … ✦✦✦✦✦ |
-| **2.1 Sect Gear** (`sect-gear-21`) | 14 weapons, 20 armor/Fashion pieces, 7 accessories and talismans | Sect → Weapons / Armor & Fashion / Accessories |
-| **2.1 Barang** (`barang-21`) | One Barang per Sect (16) | Sect Barang |
+| **2.1 Sects** (`sects-21`) | 149 Technicks and 66 Magicks from 18 Sects | Sect → Sect Cultivation ✦ … ✦✦✦✦✦ |
+| **2.1 Sect Gear** (`sect-gear-21`) | 16 weapons, 20 armor/Fashion pieces, 8 accessories and talismans | Sect → Weapons / Armor & Fashion / Accessories |
+| **2.1 Barang** (`barang-21`) | One Barang per Sect (18) | Sect Barang |
 
-Sects, their Sect Cultivations and Barang: Asuri (Demon Body; Six-Armed Asura Spider), Aswang (Devil Beast; Devil's Centipede), Dracontine (Sky Dragon; Sky Dancing Wyrm), Eskatonian (Black Sorcery; Eskaton Satanworm), Fangshi (Internal Elixir; Spring and Autumn Cicada), Houyi (Solar Bow; Three-Toed Crow Monarch), **Imma** (White Sorcery; White Butterfly), **Jyotisha** (Astral; Golden Starfly), Katalonan (Divine Communion; Revenant Soulworm), Mendicant (Vajra Fist; Monk Bee), Nezha (Red Gun; Red God Drake), Sword Dialectician (Sword Dialectics; Dialectical Swordmoth), Techgnostic (Techgnosis; Digiworm), Ultramystic (Immortal Science; God Obliterating Devil Ant), Wukong (Sage Body; Immortal Gold Cicada), **Zhongkui** (Spirit Binding; Soul Weaving Worm).
+Sects, their Sect Cultivations and Barang: Asuri (Demon Body; Six-Armed Asura Spider), Aswang (Devil Beast; Devil's Centipede), Dracontine (Sky Dragon; Sky Dancing Wyrm), Eskatonian (Black Sorcery; Eskaton Satanworm), Fangshi (Internal Elixir; Spring and Autumn Cicada), Houyi (Solar Bow; Three-Toed Crow Monarch), **Imma** (White Sorcery; White Butterfly), **Jyotisha** (Astral; Golden Starfly), Katalonan (Divine Communion; Revenant Soulworm), Mendicant (Vajra Fist; Monk Bee), Nezha (Red Gun; Red God Drake), Sword Dialectician (Sword Dialectics; Dialectical Swordmoth), Techgnostic (Techgnosis; Digiworm), Ultramystic (Immortal Science; God Obliterating Devil Ant), Wukong (Sage Body; Immortal Gold Cicada), Zhongkui (Spirit Binding; Soul Weaving Worm), **Bidadari** (Sound Law; Golden Dawn Cricket), **Sapphire Star** (Dual Cultivation; Sapphire Silkworm).
+
+## Sect Gear re-imported in 0.2.32 from the 2.1 rulebook (303 pp)
+
+Source: the same 303-page book, Sect chapter pp.224–303. The 41 parsed gear entries become **44 items** (Interlocking Dragonsteel is four pieces; the Dharma Robe statblock is printed inside the Five Thunder Japamala entry). Generator: `tools/sects21/gen_gear.py <out>/ scripts/rules21.mjs`, table `tools/sects21/gear21.py`.
+
+What changed against the earlier book:
+
+- **Soak** is printed as shield glyphs. Recorded as one Soak per glyph on each Part the piece covers. "—" is no Soak (Hermetic Robes, Star-Stitched Robes, Shrine Raiments, Apsara's Flowing Hagoromo).
+- **ARTIFACT** is not printed on any Sect weapon. **FEROCIOUS** carries a number (Kalikhadga 3; Mahadirga Knife, Areindama, Tonggong, Atardar's Fang 2).
+- **Removed:** Sword Runner Jacket, Sword Runner Trousers. **New:** Personal Vajra, Adamantite Shell (Metomian, p.275).
+- **Renamed:** Techgnostic COMP (666 PTM) → Techgnostic COMP (id kept).
+
+Readings recorded rather than invented:
+
+1. **White Robes** and **Revolt Suit** print one glyph and no Parts. They keep the Parts the earlier book named (Torso + arms; every Part).
+2. **Arm Piece / Legs / Leg Piece** with two glyphs (Dragonsteel Gauntlet and Greaves, Cloud Walking Boots) are 2 Soak on each limb.
+3. **Golden Chainmail Shirt** prints Torso Soak as [SAGE BODY]. The catalog leaves it at 0 with a note to set it by hand.
+4. **Adamantite Shell** prints "500 KG PRESTIGE BLUDGEON" with no weapon statblock; it is an automaton. Listed as an accessory with weight 0.
+5. **Plenipotentiary's Sapphire Vestments** print "ZHONGKUI PRESTIGE" in the statblock; treated as a misprint.
+6. **MORPH**, **VISCERAL**, **LYRICAL** and un-numbered **REACH** are not defined in the rules and stay as tags. REACH 3 (Personal Vajra) and the Drum's 12 m set the item's Range.
+7. **Hermetic Robes** and **Vipassanadhanu Garb** print no weight (0 kg).
+8. **Kalikhadga** keeps its earlier handling of GREAT (+1 damage, two hands, no -1).
+
+## Re-imported in 0.2.31 from the 2.1 rulebook (303 pp)
+
+Source: user-supplied `10,000 SWORDS AGAINST HEAVEN 2.1 -compressed.pdf` (303 single pages, received 2026-11-16), Sects on book pp.224–303 (PDF page = book page). **2.1 Sects** now holds 175 Technicks and 67 Magicks from 20 Sects; **2.1 Barang** holds 20. Sect Gear is still the earlier import.
+
+- **Sects and start pages:** Asuri 224, Aswang 228, Bidadari 232, Dracontine 236, Eskatonian 240, Fangshi 244, Houyi 248, Imma 252, Jyotisha 256, Katalonan 260, Luciferian 264, Mendicant 268, Metomian 272, Nezha 276, Sapphire Star 280, Sword Dialectician 284, Techgnostic 288, Ultramystic 292, Wukong 296, Zhongkui 300.
+- **New Sects:** Luciferian (Consummate Lie; Liar's Devil Cricket; 13 Technicks and the Magick House Rule Mudra) and Metomian (Black Mace, used with Bludgeons and Whips; Black Orb Beetle; 12 Technicks). Chakra Rod and Adamantine Noose print a weapon inside the Technick; it stays in the description.
+- **New entries:** Shell Shedding Technique, Slow the Heavenly Wheel, Emptiness Sealing Acupoint Strike, Empu Sword Possibility, Akasha Palimpsest.
+- **Removed (not printed):** Lightness Technique, Hold the Heavenly Wheel, Emptiness Sealing Palm, Adamantite Body.
+- **Costs and requirements changed (26):** Asuri's Wrath ✹; Aswang Fang, Demon Claw, Flickering Shade Technique and Throatwork now also allow EMPTY HAND; Battle Beat Resonance ❂❂ and Celestial Road Meter ❂ (an instrument in one hand or her voice; Steel Song Meditation no longer required); Steel Song Meditation needs an instrument or voice; Devil Beast Body ❂...; Dialectical Citipati ✹✹✹; Divine Sword Proletariat ✹; Flux no longer needs Blare; Grasping Lion Maw ✹...; Ing Kung Dharani adds a Sidhi Stage from the caster; Live Hand Method ❂❂❂; Mountain Breaking Thunder; Pluck of Many ❂❂❂❂; Principle of Slashing ❂❂; Samadhi Fire ❂; Self-Furnace —; Self-Sacrificing Sage ❂; Six Demon Cutting Sword ✹ with a melee weapon; Solace ❂❂; Spiteful Disembowelment of Seraphim ✹✹✹✹ with no maneuver; Stealing Heaven Fire ✹✹; Threefold Hell Lotus Superposition Slash ✹....
+- **Stars changed:** Celestial Heaven Shooter ✦✦, Hell Ripped Through with Exit Wounds ✦✦✦✦, Pluck of Many ✦✦✦✦✦.
+- **Magicks:** the book no longer prints a separate cast time on most Magicks, so those fields are empty; Charge Times changed on Shock 12, Scathe 10, Carve 3, Self Altar: Claw 4, Stop the Heavenly Wheel 20, Throne 12 (Ritual: 1 minute), Ing Kung Dharani 33 (Ritual: 8 hours).
+- **Transcription decisions:** wrapped NEEDS rows are joined (nine entries); a decorative page text running through Samadhi Fire is removed; Metomian Puppetry Array's "Ardor" is written as Flame; Scour's "ESKATON SORCERY" as Black Sorcery; the Techgnostic intro is not an entry; On Earth We're Briefly Gorgeous is printed as a Technick but has a Mantra, Mudra and Charge Time, so it is a Magick (as before); Twin Lotus Technique installs one Flame of the caster's (the target installs their own).
+- **Alternative costs** ("✹ or ✹✹", "✹✹/✹✹✹/✹✹✹✹", "❂/❂❂/❂❂❂") store the cheapest option: Phantom Arrow Multiplication 1, Empu Sword Possibility 2, Butterfly Eyes Discipline 1.
+
+## New in 0.2.18: Bidadari and Sapphire Star (player-facing book, `New_Sects.pdf`)
+
+Two Sects from the 2.1 player-facing book join the compendiums. Their build intermediates are not in the repo, so they are injected into the committed catalogs by `tools/sects21/newsects.py` (idempotent) rather than `gen.py`.
+
+- **Bidadari** (Sound Law; book pp.230–233). Bard-diplomats who cultivate the Sound Law, wiring the Microcosmic Orbit to the "celestial chorus." 12 Technicks: Orchestral Revival Technique, Sound Bubble Echo Technique, Steel Song Meditation (grants KILL THE BUDDHA Maneuvers off FAC + Sound Law), Celestial Road Meter, Battle Beat Resonance, Singing Soul Method, High Melody, Let Sorrow Name the Moons, Miraculous Song of the Multitude, High Pacification, Akashic Resonant Note, and the ✦✦✦✦✦ capstone Mountain Breaking Thunder. Gear: **Apsara's Flowing Hagoromo** (arm-ribbon Fashion, no printed Soak) and **Benzaiten's Drum** (a Godskin Bludgeon on a Haft; ARTIFACT, THUNDERING, PIERCING, LYRICAL; 12 m sonic range in its ability text). Barang: **Golden Dawn Cricket**.
+- **Sapphire Star** (Dual Cultivation; book pp.270–273). The Heavenly Ascendance Bureau's mediator-spies; replaces the flavor-only 0.2.16 preview. 12 Technicks (Silkworm Burrows the Heart, Unraveling Silks Method, Twin Lotus Technique, Two Hands One Seal, Silk Moth Flutters Her Wings, Phoenix First Impression, Self-Tying Knot, Almony Across the Heavens, Nightingale's Sorrowful Eyes, Twin Headed Butterfly Technique, Butterfly Eyes Discipline, Two Cinnabar Fields Union) and 2 Magicks (**Sapphire Silk Lattice**, Charge 8; **On Earth We're Briefly Gorgeous**, Charge 18 — printed under a Technick heading but a Magick by its Mantra/Mudra/Check). Gear: **Plenipotentiary's Sapphire Vestments** (Torso/Arms armor). Barang: **Sapphire Silkworm**. The second listed road, Sorcerous Diplomacy, is named on the intro but prints no abilities yet.
 
 ## What changed in the playtest Sects
 
@@ -51,6 +94,10 @@ Effects such as Openings granted, Counters, Knockback, auras, summons and condit
 16. **Man of Steel Meditation** prints [VOICE x 5]; the catalog uses [FACE x 5]. Both names evaluate.
 17. **The Alpha's Cultivation list (p.56)** names three Sect Cultivations differently (Asuri "Devil Body", Aswang "Shadow Beast", Mendicant "Empty Mind"). The catalog uses the names the Licenses print.
 18. **Fangshi crafted items.** The pills and elixirs that Pill Refinement, Elixir Crafting and Five Dragons Pill make are in **2.1 Consumables**; the fourth Pill Refinement result is printed as a second "Fulfilness Pill" and is named Fireball Pill there.
+19. **Sapphire Star cultivation (0.2.18).** Every ability is licensed `DUAL`; recorded under **Dual Cultivation**. The Sect's second road, Sorcerous Diplomacy, is named on the intro spread but prints no abilities, so it is not added.
+20. **On Earth We're Briefly Gorgeous (0.2.18)** prints under a Technick heading but carries a Mantra, Mudra, Check and Charge Time; filed as a Magick (like GRAV).
+21. **Plenipotentiary's Sapphire Vestments (0.2.18)** is printed under a `ZHONGKUI PRESTIGE` statblock tag — a book layout error; it is a Sapphire Star / Dual item (License DUAL ✦✦✦✦✦) and filed under Sapphire Star. Its Soak is a shield icon on Torso and both Arms with no number; recorded as 1 Soak each — confirm at the table.
+22. **New weapon mods (0.2.18).** THUNDERING and WORN are now in the 2.1 model and are set where printed (the Benzaiten Drum sets ARTIFACT, THUNDERING, PIERCING); LYRICAL stays description-only. Every 2.1 weapon was normalised to the current 21-key `WEAPON_MODS_21` set.
 
 ## Rebuilding
 
@@ -68,3 +115,9 @@ node tools/build-packs.mjs
 ```
 
 `gear.py` holds the hand-checked weapon and armor statblocks; `tools/assets21/gen.py` builds the Asset catalog from the Alpha and holds the Barang entries.
+
+The two player-facing-book Sects added in 0.2.18 (Bidadari, Sapphire Star) are not in the `raw.json`/`parsed.json` pipeline. They live in `tools/sects21/newsects.py`, which injects them into the committed `sects-21`, `sect-gear-21` and `barang-21` catalogs (idempotent — it also strips the old Sapphire Star preview and normalises every weapon to the current 21-key `WEAPON_MODS_21`). Run it after `gen.py`:
+
+```
+python tools/sects21/newsects.py
+```

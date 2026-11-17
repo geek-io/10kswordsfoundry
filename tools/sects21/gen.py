@@ -2,10 +2,11 @@ import json, re, html, hashlib, sys
 OUT = sys.argv[1] if len(sys.argv) > 1 else ''
 from build import join, uid, title_case, SECT_CULT, magick_fields
 from gear import GEAR
-parsed = json.load(open('parsed.json')); raw = {e['title']: e for e in json.load(open('raw.json'))}
-SRC = '2.1 playtest Sects'
+parsed = json.load(open('parsed.json')); raw = {e['title']: e for e in parsed['gears']}
+SRC = '2.1 player-facing book'
 PARTS = ['rleg','lleg','rarm','larm','torso','head']
-WMODS = ['auto','crushing','great','colossal','doublehand','focus','blaze','artifact','smashing']
+WMODS = ['auto','crushing','great','colossal','doublehand','focus','blaze','artifact','smashing','piercing','lacerating','precise','holy','noetic','ritual','shock','concealable']
+NEWMODS = {'piercing','lacerating','precise','holy','noetic','ritual','shock','concealable'}  # mods defined by the 2.1 book (p.171-172)
 PROFILE_RANGE = {'dagger':1,'saber':1,'sword':1,'whip':3,'bludgeon':1,'cleaver':1,'polearm':3,'launcher':20,'bow':250,'crossbow':125,'handgun':30,'longgun':400}
 esc = lambda t: html.escape(t, quote=False)
 def folder(name, parent, sort, pack='sects21'):
@@ -36,6 +37,23 @@ for si, sect in enumerate(sect_order):
         items.append({'_id': uid('sect21', sect, a['title']), 'name': name, 'type': a['type'], 'img': f"systems/10kswordsfoundry/assets/icons/{'magick' if a['type']=='magick' else 'technique'}.svg",
             'system': sys, 'folder': sub[a['stars']], 'sort': order * 1000, 'effects': [],
             'flags': {'10kswordsfoundry': {'sect21': {'sourcePage': a['page'], 'cultivation': SECT_CULT[sect], 'stars': a['stars'], 'needs': a['needs'], 'weaponRequirement': weapon, 'license': a['license']}}}})
+# ---------- Sapphire Star (preview; book p.266 / PDF p.134) — a teaser spread with no printed abilities yet ----------
+# SUPERSEDED (0.2.18): New_Sects.pdf (pp.270-273) prints the full Sapphire Star, and adds the Bidadari Sect.
+# Both are injected into the committed catalogs by tools/sects21/newsects.py, which also removes this preview.
+ss = folder('Sapphire Star', None, len(sect_order) * 100000); folders.append(ss)
+ss_desc = ('<p><em>Link the disparate hells to strike at the heavens.</em></p>'
+           '<p><strong>Supreme Mediator and Council.</strong> A sect that trains the greatest and the best of the '
+           'diplomats in the Trichiliocosm. They are not just the best at gaining knowledge from state enemies, but also '
+           'at mending ties, facilitating oaths, binding promises, and catching others in the lie…</p>'
+           '<p><strong>Cultivations:</strong> Dual Cultivation ✦ · Sorcerous Diplomacy ✦</p>'
+           '<p><em>Preview only — the player-facing book introduces this Sect but does not yet print its Technicks, '
+           'Magicks, License mechanics or Barang. Added so the roster is complete; it will be filled in when the book does.</em></p>')
+items.append({'_id': uid('sect21', 'Sapphire Star', 'preview'), 'name': 'Sapphire Star (Preview)', 'type': 'trait',
+    'img': 'systems/10kswordsfoundry/assets/icons/magick.svg',
+    'system': {'description': ss_desc, 'source': f'Rules 2.1 ({SRC}), p.266',
+               'tags': 'Sapphire Star, Dual Cultivation, Sorcerous Diplomacy, Preview, 2.1', 'level': 1, 'active': False},
+    'folder': ss['_id'], 'sort': 0, 'effects': [],
+    'flags': {'10kswordsfoundry': {'sect21': {'preview': True, 'cultivation': 'Dual Cultivation / Sorcerous Diplomacy', 'sourcePage': 266}}}})
 json.dump({'folders': folders, 'items': items}, open(OUT + 'sects-21.json', 'w'), indent=1, ensure_ascii=False)
 # ---------- 2.1 Sect Gear ----------
 gfolders, gitems = [], []
@@ -48,13 +66,13 @@ for si, sect in enumerate(sect_order):
             f = folder(label, top['_id'], len(kinds) * 100000, 'gear21'); gfolders.append(f); kinds[k] = f['_id']
     for order, g in enumerate(mine):
         entry = raw[g['entry']]; text = join(entry['lines'])
-        lic_entry = raw[g.get('license_from', g['entry'])]; lt = re.sub(r'//\s*(license|needs)_', r'\1', join(lic_entry['lines']))
-        m = re.search(r"(?i)licen[sc]e\s+([A-Z][A-Z' \-]+?)\s*(✦+)\s*(.*?)(?=\s+\d+(\.\d+)?\s*KG|\s+N/A|\s+PRESTIGE|\s+[A-Z]+ PRESTIGE|$)", lt)
-        lic = f"{title_case(m.group(1))} {m.group(2)}" if m else ''
-        lic_text = re.sub(r'^needs .*? (?=The )', '', m.group(3)).strip() if m else ''
-        lic_text = re.sub(r'\s+A$', '', lic_text)
+        lic_entry = raw[g.get('license_from', g['entry'])]; g['page'] = entry['page']
+        lic = f"{lic_entry['license']} {stars(lic_entry['stars'])}"
+        lt = join(lic_entry['lines'])
+        m = re.search(r"\s+(?:\d+(?:\.\d+)?\s*KG|◼|HOUYI PRESTIGE)", lt)
+        lic_text = (lt[:m.start()] if m else lt).strip()
         if g.get('license_text'): lic_text = g['license_text']
-        flavor = lt[:m.start()].strip().lstrip('.') if m else ''
+        flavor = lic_entry['flavor']
         if g.get('start') is None: body = g.get('text', '')
         else:
             start = text.index(g['start']); end = text.index(g['end'], start) if g.get('end') else len(text)
@@ -72,8 +90,8 @@ for si, sect in enumerate(sect_order):
         if g['kind'] == 'weapon':
             prof = g['profile']; ranged = prof in ('launcher','bow','crossbow','handgun','longgun')
             base.update({'gearSlot': 'carry', 'weaponType': 'ranged' if ranged else 'melee', 'range': PROFILE_RANGE[prof], 'damageType': 'impact' if prof == 'bludgeon' else 'cut',
-                'r21': {'profile': prof, 'grip': g['grip'], 'damage': g.get('damage', 2), 'range': 0, 'rate': g.get('rate', 1), 'capacity': g.get('capacity', 0),
-                        'ferocious': g.get('ferocious', 0), 'shield': 0, 'mods': {k: k in g.get('set_mods', []) for k in WMODS}, 'weight': g['weight']}})
+                'r21': {'profile': prof, 'grip': g['grip'], 'damage': 2, 'damageBonus': g.get('bonus', 0), 'range': 0, 'rate': g.get('rate', 1), 'capacity': g.get('capacity', 0),
+                        'ferocious': g.get('ferocious', 0), 'shield': 0, 'mods': {k: k in g.get('set_mods', []) or (k in NEWMODS and k.upper() in g.get('mods', [])) for k in WMODS}, 'weight': g['weight']}})
             typ, img = 'weapon', 'weapon'
         else:
             base.update({'gearSlot': 'fashion' if g['kind'] == 'fashion' else 'carry',

@@ -1,8 +1,8 @@
 // Rules 2.1 KILL THE BUDDHA exchange card: everyone's Openings in one chat card, resolved tier by tier (pp.23–28).
 // The active GM writes the card; players' actions reach the GM through the system socket.
-import {newExchange21, applyOperation21, landing21, RANK, RANK_LABEL, TIERS} from "./exchange-state21.mjs?v=0.2.14";
-import {damagePart} from "./roll21.mjs?v=0.2.14";
-import {escapeHTML} from "./resolution.mjs?v=0.2.14";
+import {newExchange21, applyOperation21, landing21, RANK, RANK_LABEL, TIERS} from "./exchange-state21.mjs?v=0.2.40";
+import {damagePart} from "./roll21.mjs?v=0.2.40";
+import {escapeHTML} from "./resolution.mjs?v=0.2.40";
 
 const SYSTEM = "10kswordsfoundry";
 const SOCKET = `system.${SYSTEM}`;
@@ -13,7 +13,7 @@ export function rollFromMessage21(message) {
   const ktb = message?.getFlag?.(SYSTEM, "ktb") ?? message?.flags?.[SYSTEM]?.ktb;
   if (!ktb) throw new Error("That is not a KILL THE BUDDHA roll.");
   return {key: ktb.attacker || message.id, name: message.speaker?.alias || message.alias || "Combatant", actorUuid: ktb.attacker ?? "", tokenUuid: ktb.attackerToken ?? "",
-    quick: ktb.quick, solid: ktb.solid, perfect: ktb.perfect, whiff: ktb.whiff, damage: ktb.damage, weapon: ktb.weapon ?? "", crushing: !!ktb.crushing};
+    quick: ktb.quick, solid: ktb.solid, perfect: ktb.perfect, whiff: ktb.whiff, damage: ktb.damage, weapon: ktb.weapon ?? "", crushing: !!ktb.crushing, piercing: !!ktb.piercing, visceral: !!ktb.visceral};
 }
 
 const button = (action, label, data = {}) => `<button type="button" data-x21="${action}" ${Object.entries(data).map(([key, value]) => `data-${key}="${escapeHTML(String(value))}"`).join(" ")}>${label}</button>`;
@@ -149,7 +149,7 @@ async function onAction(message, action, data) {
     if (!victim) throw new Error(`${target?.name ?? "The target"} is no longer available.`);
     if (!victim.isOwner && !game.user.isGM) throw new Error(`A GM or the owner of ${target.name} must apply this damage.`);
     const torso = entry.rank === "quick" ? "torso" : "";
-    return damagePart(victim, "", {part: torso, amount: attacker.damage, crushing: attacker.crushing,
+    return damagePart(victim, "", {part: torso, amount: attacker.damage, crushing: attacker.crushing, ignoreSoak: !!attacker.piercing, visceral: !!attacker.visceral,
       hint: `${attacker.name}'s ${RANK_LABEL[entry.rank]} maneuver: ${entry.text || "strike"}. Quick strikes hit the Torso; Solid a Limb or Torso; Perfect any Part (pp.24–25).`});
   }
   return null;

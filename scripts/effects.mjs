@@ -1,5 +1,5 @@
-import { EQUIPMENT_TYPES } from "./equipment.mjs?v=0.2.14";
-import { CORES, CULTIVATIONS_21, PARTS } from "./rules21.mjs?v=0.2.14";
+import { EQUIPMENT_TYPES } from "./equipment.mjs?v=0.2.40";
+import { CORES, CULTIVATIONS_21, PARTS } from "./rules21.mjs?v=0.2.40";
 export function equipmentEffectSuppressed(item) {
   if(item.type==='trait')return item.system.active===false;
   return EQUIPMENT_TYPES.includes(item.type) && !item.system.equipped;
@@ -49,7 +49,7 @@ export const EFFECT_VARIABLES={
 for(const [key,core] of Object.entries(CORES)) EFFECT_VARIABLES[`system.cores.${key}`]=`2.1 Core · ${core.label}`;
 for(const [key,skill] of Object.entries(CULTIVATIONS_21)) EFFECT_VARIABLES[`system.skills.${key}`]=`2.1 Cultivation · ${skill.label}`;
 for(const [key,part] of Object.entries(PARTS)){EFFECT_VARIABLES[`system.parts.${key}.hpBonus`]=`2.1 ${part.label} HP bonus`;EFFECT_VARIABLES[`system.parts.${key}.soakBase`]=`2.1 ${part.label} Soak`;}
-Object.assign(EFFECT_VARIABLES,{"system.moraleBonus":"2.1 Morale maximum bonus","system.speedBonus":"2.1 Speed bonus","system.moveBonus":"2.1 Movement bonus (m/s)"});
+Object.assign(EFFECT_VARIABLES,{"system.moraleBonus":"2.1 Morale maximum bonus","system.speedBonus":"2.1 Speed modifier (Ticks Recovery)","system.moveBonus":"2.1 Movement bonus (m/s)"});
 export async function configureEffect(effect) { return effect.sheet.render({force:true}); }
 // Enhance the native editor instead of introducing another configuration window.
 export function effectVariableOptions(current='') {

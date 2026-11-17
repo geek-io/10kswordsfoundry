@@ -1,8 +1,8 @@
 {
   "id": "10kswordsfoundry",
   "title": "10,000 Swords Against Heaven",
-  "description": "A Foundry VTT v14 game system for 10,000 Swords Against Heaven, based on rules version 2.0.3, with an opt-in 2.1 (Red Kalpa Manuscript) ruleset for testing.",
-  "version": "0.2.14",
+  "description": "A Foundry VTT v14 game system for 10,000 Swords Against Heaven, based on rules version 2.0.3, with an opt-in 2.1 (2.1 player-facing book) ruleset in testing.",
+  "version": "0.2.40",
   "compatibility": {
     "minimum": "14",
     "verified": "14.367",
@@ -14,7 +14,7 @@
     }
   ],
   "esmodules": [
-    "scripts/entry-0.2.14.mjs"
+    "scripts/entry-0.2.40.mjs"
   ],
   "styles": [
     "styles/system.css",
@@ -318,11 +318,44 @@
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       }
+    },
+    {
+      "name": "goods-21",
+      "label": "2.1 Market Goods",
+      "path": "packs/goods-21",
+      "type": "Item",
+      "system": "10kswordsfoundry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "options-21",
+      "label": "2.1 Cultivator Discovery",
+      "path": "packs/options-21",
+      "type": "Item",
+      "system": "10kswordsfoundry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "worldbeings-21",
+      "label": "2.1 World Beings",
+      "path": "packs/worldbeings-21",
+      "type": "Item",
+      "system": "10kswordsfoundry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     }
   ],
   "url": "https://github.com/geek-io/10kswordsfoundry",
   "manifest": "https://github.com/geek-io/10kswordsfoundry/releases/latest/download/system.json",
-  "download": "https://github.com/geek-io/10kswordsfoundry/releases/download/v0.2.14/10kswordsfoundry-0.2.14.zip",
+  "download": "https://github.com/geek-io/10kswordsfoundry/releases/download/v0.2.40/10kswordsfoundry-0.2.40.zip",
   "bugs": "https://github.com/geek-io/10kswordsfoundry/issues",
-  "changelog": "https://github.com/geek-io/10kswordsfoundry/releases/tag/v0.2.14"
+  "changelog": "https://github.com/geek-io/10kswordsfoundry/releases/tag/v0.2.40"
 }

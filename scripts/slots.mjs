@@ -1,5 +1,5 @@
-import { modifierProfile } from "./modifiers.mjs?v=0.2.14";
-import { usesRules21 } from "./rules-version.mjs?v=0.2.14";
+import { modifierProfile } from "./modifiers.mjs?v=0.2.40";
+import { usesRules21 } from "./rules-version.mjs?v=0.2.40";
 // 2.1: armor covers Parts (p.66), so Fashion no longer shares one slot; DOUBLEHAND/GREAT/COLOSSAL need both hands.
 const hands = system => usesRules21() && ["doublehand","great","colossal"].some(key => system?.r21?.mods?.[key]) ? 2 : modifierProfile(system).hands;
 const PHYSICAL=['weapon','fashion','gear','accessory','ammunition','armor','salvage'];

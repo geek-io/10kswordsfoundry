@@ -1,11 +1,11 @@
 // Rules 2.1 CHANGE GOD'S MIND workflow (pp.39–52): the initiator rolls, the target's owner (or the GM) defends,
 // and a convinced target may spend Morale on Persistence.
 import {PURPOSES21, APPROACHES21, DISPOSITIONS21, MOB_SIZES21, STRENGTH_LABEL, influenceModifiers21, socialDefense21, attachmentRoles21,
-  influenceSucceeds21, mobDefense21, writtenDemand21, persistence21, dispositionFromRoll21} from "./social-rules21.mjs?v=0.2.14";
-import {CORES, CULTIVATIONS_21} from "./rules21.mjs?v=0.2.14";
-import {evaluate21, diceHTML21, partsHTML21, post21, stateFor21, blockedByState21, skillRating} from "./roll21.mjs?v=0.2.14";
-import {collectTargets} from "./targeting21.mjs?v=0.2.14";
-import {escapeHTML} from "./resolution.mjs?v=0.2.14";
+  influenceSucceeds21, mobDefense21, writtenDemand21, persistence21, dispositionFromRoll21} from "./social-rules21.mjs?v=0.2.40";
+import {CORES, CULTIVATIONS_21} from "./rules21.mjs?v=0.2.40";
+import {evaluate21, diceHTML21, partsHTML21, post21, stateFor21, blockedByState21, skillRating} from "./roll21.mjs?v=0.2.40";
+import {collectTargets} from "./targeting21.mjs?v=0.2.40";
+import {escapeHTML} from "./resolution.mjs?v=0.2.40";
 
 const SYSTEM = "10kswordsfoundry";
 const int = value => Math.trunc(Number(value) || 0);

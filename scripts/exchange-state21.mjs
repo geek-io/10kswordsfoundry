@@ -36,7 +36,7 @@ export function addParticipant21(state, roll) {
     open[tier] = 0;
   }
   next.participants.push({key: roll.key, name: String(roll.name ?? "Combatant"), actorUuid: roll.actorUuid ?? "", tokenUuid: roll.tokenUuid ?? "",
-    weapon: roll.weapon ?? "", damage: int(roll.damage) || 1, crushing: !!roll.crushing, open, bonus: {quick: 0, solid: 0}, fusedPerfect: 0, sidhiBurnt: 0});
+    weapon: roll.weapon ?? "", damage: int(roll.damage) || 1, crushing: !!roll.crushing, piercing: !!roll.piercing, open, bonus: {quick: 0, solid: 0}, fusedPerfect: 0, sidhiBurnt: 0});
   next.log.push(`${roll.name} joins at the ${RANK_LABEL[next.tier]} tier${lost.length ? `, losing ${lost.join(" and ")} Opening(s)` : ""}.`);
   return next;
 }

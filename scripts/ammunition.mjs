@@ -8,6 +8,27 @@ export const AMMO = {
 };
 export const AMMO_CHOICES=Object.fromEntries(Object.entries(AMMO).map(([key,value])=>[key,value.label]));
 export const AMMO_FAMILIES={none:"No ammo / legacy field",launcher:"Launcher",bow:"Bow",crossbow:"Crossbow",gun:"Gun",custom:"Any ammo"};
+/** A short ammo readout for a ranged weapon: the loaded magazine, a linked stack, or the family pool the actor carries.
+ *  Returns {count, label, kind} or null when the weapon tracks no ammo. Pure (no Foundry calls beyond item reads). */
+export function ammoSummary21(actor, weapon) {
+  const sys = weapon?.system ?? {};
+  const items = actor?.items?.contents ?? [];
+  const get = id => items.find(item => item.id === id || item._id === id) ?? null;
+  const n = value => (Number.isFinite(Number(value)) ? Math.trunc(Number(value)) : 0);
+  if (sys.ammo?.type?.trim()) return {count: n(sys.ammo.quantity), label: sys.ammo.type.trim(), kind: "magazine"};
+  if (sys.ammoId) {
+    const stack = get(sys.ammoId);
+    if (stack?.type === "ammunition") return {count: n(stack.system?.quantity), label: stack.name, kind: "stack"};
+  }
+  const family = sys.ammoFamily;
+  if (family && !["none", undefined].includes(family)) {
+    const stacks = items.filter(item => item.type === "ammunition"
+      && (family === "custom" || (AMMO[item.system?.ammoType] ?? AMMO.custom).family === family || (AMMO[item.system?.ammoType] ?? AMMO.custom).family === "custom"));
+    if (stacks.length) return {count: stacks.reduce((sum, item) => sum + n(item.system?.quantity), 0), label: `${AMMO_FAMILIES[family] ?? family} ammo`, kind: "family"};
+  }
+  return null;
+}
+
 export function selectedAmmo(actor, weapon, override="") {
   const id=override || weapon.system.ammoId;
   if (!id) {

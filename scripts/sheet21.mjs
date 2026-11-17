@@ -1,12 +1,13 @@
 // Rules 2.1 character sheet context and actions. Used only when the GM selects the 2.1 ruleset.
 import {CORES, CULTIVATIONS_21, ASSETS_21, PARTS, PART_KEYS, CONDITIONS_21, ATTACHMENT_STRENGTHS, MAX_STARS,
-  derive21, advancementCost, healingDays, weaponProfile21, qualifiesForLicense21, SIDHI_REALMS, abilityLimit21, recoverFlame21, cleaveDepth} from "./rules21.mjs?v=0.2.14";
-import {rollCheck21, killTheBuddha, castMagick21, stunCheck, incapacitationCheck, randomPart, damagePart} from "./roll21.mjs?v=0.2.14";
-import {escapeHTML} from "./resolution.mjs?v=0.2.14";
-import {activateTechnick21, releaseTechnick21, technickRows21} from "./technick21.mjs?v=0.2.14";
-import {changeGodsMind21, rollDisposition21} from "./social21.mjs?v=0.2.14";
-import {DISPOSITIONS21} from "./social-rules21.mjs?v=0.2.14";
-import {assetRows21, barangRows21, raiseAsset21, ingestBarang21, ejectBarang21} from "./assets21.mjs?v=0.2.14";
+  derive21, advancementCost, healingDays, weaponProfile21, qualifiesForLicense21, SIDHI_REALMS, abilityLimit21, recoverFlame21, cleaveDepth, PROFILES, morphOptions21} from "./rules21.mjs?v=0.2.40";
+import {rollCheck21, killTheBuddha, findOpening21, castMagick21, stunCheck, incapacitationCheck, randomPart, damagePart} from "./roll21.mjs?v=0.2.40";
+import {escapeHTML} from "./resolution.mjs?v=0.2.40";
+import {activateTechnick21, releaseTechnick21, technickRows21} from "./technick21.mjs?v=0.2.40";
+import {changeGodsMind21, rollDisposition21} from "./social21.mjs?v=0.2.40";
+import {DISPOSITIONS21} from "./social-rules21.mjs?v=0.2.40";
+import {assetRows21, barangRows21, raiseAsset21, ingestBarang21, ejectBarang21} from "./assets21.mjs?v=0.2.40";
+import {ammoSummary21} from "./ammunition.mjs?v=0.2.40";
 
 export const ACTOR_TEMPLATE_21 = "systems/10kswordsfoundry/templates/actor-21.hbs";
 const int = value => Math.trunc(Number(value) || 0);
@@ -27,14 +28,15 @@ export function prepareActor21(document, context) {
   const flameMax = derived.flameMax ?? 2 + int(source.sidhi), meridians = derived.meridians ?? 2 + int(source.sidhi);
   return {
     rules21: true,
-    coreRows: Object.entries(CORES).map(([key, core]) => ({key, ...core, base: source.cores?.[key] ?? 1, value: system.cores?.[key] ?? 1,
+    coreRows: Object.entries(CORES).map(([key, core]) => ({key, ...core, icon: `systems/10kswordsfoundry/assets/cultivations/${core.from}.png`, base: source.cores?.[key] ?? 1, value: system.cores?.[key] ?? 1,
       modified: (source.cores?.[key] ?? 1) !== (system.cores?.[key] ?? 1), cost: cost("core", source.cores?.[key] ?? 1)})),
     skillRows: Object.entries(CULTIVATIONS_21).map(([key, skill]) => {
       const base = source.skills?.[key] ?? 0;
       return {key, ...skill, coreAbbr: CORES[skill.core].abbr, base, value: system.skills?.[key] ?? 0, modified: base !== (system.skills?.[key] ?? 0),
         stars: "✦".repeat(Math.max(0, Math.min(MAX_STARS, base))), cost: cost("cultivation", base), maxed: base >= MAX_STARS};
     }),
-    esotericRows: (source.esoteric ?? []).map((entry, index) => ({...entry, index, coreChoices: Object.fromEntries(Object.entries(CORES).map(([key, core]) => [key, core.label]))})),
+    esotericRows: (source.esoteric ?? []).map((entry, index) => ({...entry, index, cost: cost("cultivation", int(entry.value)), maxed: int(entry.value) >= MAX_STARS,
+      coreChoices: Object.fromEntries(Object.entries(CORES).map(([key, core]) => [key, core.label]))})),
     coreChoices: Object.fromEntries(Object.entries(CORES).map(([key, core]) => [key, core.label])),
     partRows: PART_KEYS.map(key => {
       const part = derived.parts[key], stored = source.parts?.[key] ?? {};
@@ -46,7 +48,7 @@ export function prepareActor21(document, context) {
     anyDisabled: derived.disabled.length > 0,
     morale: {value: source.morale?.value ?? 0, max: derived.moraleMax, shattered: derived.shattered,
       boxes: Array.from({length: Math.max(derived.moraleMax, source.morale?.value ?? 0)}, (_, index) => ({value: index + 1, filled: index < (source.morale?.value ?? 0)}))},
-    speed: derived.speed, movement21: derived.movement, carryLimit: derived.carryLimit, itemKg: derived.itemKg, carriedTotal: derived.carriedKg,
+    speed: derived.speed, ticks21: derived.ticks, movement21: derived.movement, carryLimit: derived.carryLimit, itemKg: derived.itemKg, carriedTotal: derived.carriedKg,
     conditionRows21: Object.entries(CONDITIONS_21).map(([key, condition]) => ({key, ...condition, active: !!source.conditions21?.[key]})),
     attachmentRows: (source.attachments ?? []).map((entry, index) => ({...entry, index})),
     strengthChoices: ATTACHMENT_STRENGTHS,
@@ -57,8 +59,10 @@ export function prepareActor21(document, context) {
     flame21: {max: flameMax, stored: int(source.ardor?.max), differs: int(source.ardor?.max) !== flameMax, scorch: int(source.scorch)},
     meridians21: {open: meridians, used: abilityCount, over: abilityCount > meridians},
     weaponRows21: (document.items?.contents ?? []).filter(item => item.type === "weapon" && item.system.equipped).map(item => {
-      const profile = weaponProfile21(item.system);
-      return {id: item.id, name: item.name, profile: profile.label, damage: profile.damage, range: profile.range, ranged: profile.ranged, rate: profile.rate};
+      const profile = weaponProfile21(item.system, {cores: document.system?.cores});
+      const ammo = profile.ranged ? ammoSummary21(document, item) : null;
+      return {id: item.id, name: item.name, profile: profile.label, damage: `${profile.damage} (${profile.damageText})`, range: profile.range, ranged: profile.ranged, rate: profile.rate,
+        ammo: ammo ? `${ammo.count} ${ammo.label}` : null, ammoOut: ammo ? ammo.count <= 0 : false, morph: profile.morph.length > 0};
     }),
     magickRows21: magicks.map(item => ({id: item.id, name: item.name, potency: Math.max(1, int(item.system.r21?.potency) || 1), burn: int(item.system.burnArdor),
       charges: item.id === source.casting?.itemId ? int(source.casting?.charges) : 0, castTime: item.system.r21?.castTime ?? ""})),
@@ -131,9 +135,36 @@ const guard = async (sheet, task) => {
   catch (error) { ui.notifications.warn(error.message); return null; }
 };
 
+const AMMO_FAMILY_21 = {launcher: "launcher", bow: "bow", crossbow: "crossbow", handgun: "gun", longgun: "gun"};
+/** The item changes for a MORPH into another Profile (p.194): Profile, its Grip when it has one, and the ranged fields that follow it. */
+export function morphChanges21(key) {
+  const profile = PROFILES[key];
+  if (!profile || key === "empty") throw new Error("Choose a Profile to morph into.");
+  return {"system.r21.profile": key, ...(profile.grip ? {"system.r21.grip": profile.grip} : {}), "system.weaponType": profile.ranged ? "ranged" : "melee",
+    "system.ammoFamily": AMMO_FAMILY_21[key] ?? "none"};
+}
+/** p.194 MORPH X: as an Action, the weapon morphs to or back from X Profile. */
+export async function morphWeapon21(actor, item) {
+  if (item?.type !== "weapon") throw new Error("Choose a weapon.");
+  const options = morphOptions21(item.system.r21);
+  if (!options.length) throw new Error(`${item.name} has no MORPH Profile set.`);
+  let key = options[0];
+  if (options.length > 1) {
+    key = await foundry.applications.api.DialogV2.prompt({window: {title: `Morph ${item.name}`},
+      content: `<label>Morph into<select name="profile">${options.map(option => `<option value="${option}">${escapeHTML(PROFILES[option].label)}</option>`).join("")}</select></label><p class="hint">MORPH takes an Action (2.1 p.194).</p>`,
+      ok: {label: "Morph", callback: (event, button) => button.form.elements.profile.value}, rejectClose: false});
+    if (!key) return null;
+  }
+  await item.update(morphChanges21(key));
+  return foundry.documents.ChatMessage.create({speaker: foundry.documents.ChatMessage.getSpeaker({actor}),
+    content: `<section class="r21-chat"><p><strong>${escapeHTML(actor.name)}</strong> morphs <strong>${escapeHTML(item.name)}</strong> into a ${escapeHTML(PROFILES[key].label)} (MORPH, an Action; 2.1 p.194).</p></section>`});
+}
+
 export const ACTIONS_21 = {
+  morph21(event, target) { return guard(this, () => morphWeapon21(this.document, this.document.items.get(target.dataset.itemId))); },
   check21(event, target) { return guard(this, () => rollCheck21(this.document, {core: target.dataset.core ?? CULTIVATIONS_21[target.dataset.skill]?.core ?? "phy", skill: target.dataset.skill ?? ""})); },
   ktb21(event, target) { return guard(this, () => killTheBuddha(this.document, {weaponId: target.dataset.itemId ?? ""})); },
+  opening21(event, target) { return guard(this, () => findOpening21(this.document, {maneuver: target.dataset.maneuver ?? "", weaponId: target.dataset.itemId ?? ""})); },
   cgm21() { return guard(this, () => changeGodsMind21(this.document)); },
   rollDisposition21() { return guard(this, () => rollDisposition21(this.document)); },
   activate21(event, target) { return guard(this, () => activateTechnick21(this.document, this.document.items.get(target.dataset.itemId), {sheet: this})); },
@@ -202,6 +233,21 @@ export const ACTIONS_21 = {
         rejectClose: false});
       if (!ok) return null;
       return this.document.update({[`system.${group}.${key}`]: next, "system.xp": source.xp - xp});
+    });
+  },
+  advanceEso21(event, target) {
+    return guard(this, async () => {
+      const index = int(target.dataset.index), source = this.document.toObject().system;
+      const list = source.esoteric ?? [], entry = list[index];
+      if (!entry) return null;
+      const {next, xp} = advancementCost("cultivation", int(entry.value));
+      const label = entry.name || "Esoteric Cultivation";
+      if (int(source.xp) < xp) throw new Error(`${label} ${next} costs ${xp} XP; you have ${int(source.xp)}.`);
+      const ok = await foundry.applications.api.DialogV2.confirm({window: {title: "Sidhi Progression"},
+        content: `<p>Spend <strong>${xp} XP</strong> to raise ${escapeHTML(label)} to ${next}?</p><p class="hint">A new Cultivation star costs 3 × the new rating and must make sense in the fiction; otherwise it takes that many weeks of training. (p.9)</p>`,
+        rejectClose: false});
+      if (!ok) return null;
+      return this.document.update({[`system.esoteric.${index}.value`]: next, "system.xp": int(source.xp) - xp});
     });
   }
 };

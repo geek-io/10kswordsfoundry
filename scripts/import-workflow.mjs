@@ -1,10 +1,10 @@
-import {parseImport} from './import-data.mjs?v=0.2.14';
-import {validateImport} from './importer.mjs?v=0.2.14';
-import {checkedFolder} from './import-folders.mjs?v=0.2.14';
-import {parseWorldBeings} from './worldbeing-import.mjs?v=0.2.14';
-import {previewWorldBeings} from './worldbeing-sources.mjs?v=0.2.14';
-import {clearLibraryCache} from './library-service.mjs?v=0.2.14';
-import {reconcileCosts} from './equipment.mjs?v=0.2.14';
+import {parseImport} from './import-data.mjs?v=0.2.40';
+import {validateImport} from './importer.mjs?v=0.2.40';
+import {checkedFolder} from './import-folders.mjs?v=0.2.40';
+import {parseWorldBeings} from './worldbeing-import.mjs?v=0.2.40';
+import {previewWorldBeings} from './worldbeing-sources.mjs?v=0.2.40';
+import {clearLibraryCache} from './library-service.mjs?v=0.2.40';
+import {reconcileCosts} from './equipment.mjs?v=0.2.40';
 export function rememberImport(app){
  const fields=app.element?.elements;if(!fields)return;
  const state=app.importDrafts[app.tab]??={format:'text',type:'trait',content:'',review:'',notes:[],names:[]};

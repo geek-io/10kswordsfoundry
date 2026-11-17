@@ -1,6 +1,6 @@
-// Rules 2.1 Assets and Barang as Items (2026-11 test run). Assets: Alpha pp.44–48; Barang: Alpha pp.50–51 and the playtest Sects.
-import {ASSETS_21, advancementCost, sectCultivationNames21} from "./rules21.mjs?v=0.2.14";
-import {escapeHTML} from "./resolution.mjs?v=0.2.14";
+// Rules 2.1 Assets and Barang as Items (2026-11 test run). Assets: 2.1 rulebook pp.211–218 (earlier: Alpha pp.44–48); Barang: Alpha pp.50–51 and the playtest Sects.
+import {ASSETS_21, advancementCost, sectCultivationNames21} from "./rules21.mjs?v=0.2.40";
+import {escapeHTML} from "./resolution.mjs?v=0.2.40";
 
 const SYSTEM = "10kswordsfoundry";
 const int = value => Math.trunc(Number(value) || 0);
@@ -12,7 +12,7 @@ export function assetItemData(row) {
   const label = row?.key === "custom" || !ASSETS_21[row?.key] ? (row?.name || "Asset") : info.label;
   return {name: label, type: "asset", img: "systems/10kswordsfoundry/assets/icons/asset.svg",
     system: {key: ASSETS_21[row?.key] ? row.key : "custom", stars: Math.max(0, Math.min(5, int(row?.stars))), detail: row?.key === "custom" ? "" : String(row?.name ?? ""),
-      description: row?.notes ? `<p>${escapeHTML(row.notes)}</p>` : "", source: info.page ? `Rules 2.1 (2.1 Alpha), p.${info.page}` : "", tags: "2.1, Asset"}};
+      description: row?.notes ? `<p>${escapeHTML(row.notes)}</p>` : "", source: info.page ? `Rules 2.1 (2.1 rulebook), p.${info.page}` : "", tags: "2.1, Asset"}};
 }
 
 /** Sheet rows for Asset items, with the XP cost of the next Star (4 × new Star, RK p.3). */

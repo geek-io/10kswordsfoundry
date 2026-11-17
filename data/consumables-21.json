@@ -1,11 +1,11 @@
 {
  "folders": [
   {
-   "_id": "978d294fef8e45cd",
-   "name": "Elixirs",
+   "_id": "3a1d540274479e6f",
+   "name": "Consumables",
    "folder": null,
    "type": "Item",
-   "sorting": "a",
+   "sorting": "m",
    "sort": 0,
    "color": null
   },
@@ -14,7 +14,7 @@
    "name": "Fangshi Concoctions",
    "folder": null,
    "type": "Item",
-   "sorting": "a",
+   "sorting": "m",
    "sort": 100000,
    "color": null
   }
@@ -22,29 +22,19 @@
  "items": [
   {
    "_id": "fe94530d60880514",
-   "name": "ELIXIR Healing Pill",
+   "name": "ELIXIR Potion",
    "type": "gear",
    "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
-   "effects": [],
    "system": {
-    "description": "<p>Thaumaturgicals. Difficult to come by. Hoarded by Cultivators, who face violence on a daily basis. Extremely rare and with a supply controlled by professional Fangshi.</p><p><strong>Consume to immediately heal 1 Damage.</strong></p><p>0.25 kg</p>",
-    "source": "Rules 2.1 (Red Kalpa Manuscript), p.31",
+    "description": "<p>Thaumaturgicals. Difficult to come by. Hoarded by Cultivators, who face violence on a daily basis. Extremely rare, with a supply controlled by professional Fangshi.</p><p><strong>Common Consumable · 0.25 kg · 50 ♄</strong> · d6: 1</p><p><strong>Heal 1 HP from a random Part.</strong></p><p><em>Catalog note: Use asks which Part to heal; roll the Part at random.</em></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.186",
     "rarity": "common",
     "quantity": 1,
     "slots": 1,
-    "magCost": 0,
+    "magCost": 50,
     "equipped": false,
     "gearSlot": "carry",
     "tags": "2.1, Consumable",
-    "consumable": {
-     "enabled": true,
-     "apCost": 0,
-     "health": 1,
-     "burntArdor": 0,
-     "morale": 0,
-     "allHealth": false,
-     "allBurntArdor": false
-    },
     "r21": {
      "coverage": {
       "rleg": 0,
@@ -56,9 +46,260 @@
      },
      "morale": 0,
      "weight": 0.25
+    },
+    "consumable": {
+     "enabled": true,
+     "apCost": 0,
+     "health": 1,
+     "burntArdor": 0,
+     "morale": 0,
+     "allHealth": false,
+     "allBurntArdor": false
     }
    },
-   "folder": "978d294fef8e45cd",
+   "effects": [],
+   "folder": "3a1d540274479e6f",
+   "sort": 0,
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "consumables-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "828574010b8e6e11",
+   "name": "Gussio Thunderbolt Latte",
+   "type": "gear",
+   "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+   "system": {
+    "description": "<p>A super strong latte that ejects energizing Sidhi into a mortal's nervous system, ensuring wakefulness.</p><p><strong>Common Consumable · 0.3 kg · 10 ♄</strong> · d6: 2</p><p><strong>For 1 hour: +1 MOT; immune to Sleep and Stun. Suffer 1 true damage to a random Part.</strong></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.186",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 10,
+    "equipped": false,
+    "gearSlot": "carry",
+    "tags": "2.1, Consumable",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.3
+    },
+    "consumable": {
+     "enabled": false,
+     "apCost": 0,
+     "health": 0,
+     "burntArdor": 0,
+     "morale": 0,
+     "allHealth": false,
+     "allBurntArdor": false
+    }
+   },
+   "effects": [],
+   "folder": "3a1d540274479e6f",
+   "sort": 1000,
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "consumables-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "e15749c47025871c",
+   "name": "ELIXIR Magnesium Pill",
+   "type": "gear",
+   "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+   "system": {
+    "description": "<p>People drink this when they feel like they need a quick pick me up. An up and coming product in ELIXIR. Lets people control themselves more. Gives mortals better volition. Self-control. Morale.</p><p><strong>Uncommon Consumable · 0.25 kg · 500 ♄</strong> · d6: 3</p><p><strong>Heal 1 Morale.</strong></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.186",
+    "rarity": "uncommon",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 500,
+    "equipped": false,
+    "gearSlot": "carry",
+    "tags": "2.1, Consumable",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.25
+    },
+    "consumable": {
+     "enabled": true,
+     "apCost": 0,
+     "health": 0,
+     "burntArdor": 0,
+     "morale": 1,
+     "allHealth": false,
+     "allBurntArdor": false
+    }
+   },
+   "effects": [],
+   "folder": "3a1d540274479e6f",
+   "sort": 2000,
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "consumables-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "afaed2603ae37845",
+   "name": "ELIXIR Chakra Pill",
+   "type": "gear",
+   "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+   "system": {
+    "description": "<p>The recipe for this Chakra Pill was only found when the Divine Mountain Sect's only temple on Mount Aratan was burnt down.</p><p><strong>Enhanced Consumable · 0.25 kg · 1,000 ♄</strong> · d6: 4</p><p><strong>Recover 1 burnt Flame.</strong></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.186",
+    "rarity": "enhanced",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 1000,
+    "equipped": false,
+    "gearSlot": "carry",
+    "tags": "2.1, Consumable",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.25
+    },
+    "consumable": {
+     "enabled": true,
+     "apCost": 0,
+     "health": 0,
+     "burntArdor": 1,
+     "morale": 0,
+     "allHealth": false,
+     "allBurntArdor": false
+    }
+   },
+   "effects": [],
+   "folder": "3a1d540274479e6f",
+   "sort": 3000,
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "consumables-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "4ae523457842214d",
+   "name": "ELIXIR Asura Stim",
+   "type": "gear",
+   "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+   "system": {
+    "description": "<p>Drinking this sends one into a violent frenzy. Asura are another name for Devils, the oppressed earthbound superhumans thrown down by the Deities. In modern folklore, they are depicted as black-skinned, red-eyed, war-obsessed freaks.</p><p><strong>Deluxe Consumable · 0.25 kg · 1,000,000 ♄</strong> · d6: 5</p><p><strong>Suffer 3 true Damage to a random Part. +1 to to all outgoing Damage for 30 minutes.</strong></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.186",
+    "rarity": "deluxe",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 1000000,
+    "equipped": false,
+    "gearSlot": "carry",
+    "tags": "2.1, Consumable",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.25
+    },
+    "consumable": {
+     "enabled": false,
+     "apCost": 0,
+     "health": 0,
+     "burntArdor": 0,
+     "morale": 0,
+     "allHealth": false,
+     "allBurntArdor": false
+    }
+   },
+   "effects": [],
+   "folder": "3a1d540274479e6f",
+   "sort": 4000,
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "consumables-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "69d6efb2c551f8a2",
+   "name": "ELIXIR Soma",
+   "type": "gear",
+   "img": "systems/10kswordsfoundry/assets/icons/gear.svg",
+   "system": {
+    "description": "<p>Soma is the food of the gods in old Razrunan folklore. Soma is said to have the \"Essence of True-Rest\" distilled within. Alchemizing one requires high level thaumaturgicals or external alchemy cauldrons fired by Samadhi Flames. Rare to make, even among the Immortals of the Orbital Heaven.</p><p><strong>Prestige Consumable · 0.5 kg · 3,000,000 ♄</strong> · d6: 6</p><p><strong>Restore all HP to every Part and recover all burnt Flame.</strong></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.186",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 3000000,
+    "equipped": false,
+    "gearSlot": "carry",
+    "tags": "2.1, Consumable",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.5
+    },
+    "consumable": {
+     "enabled": true,
+     "apCost": 0,
+     "health": 0,
+     "burntArdor": 0,
+     "morale": 0,
+     "allHealth": true,
+     "allBurntArdor": true
+    }
+   },
+   "effects": [],
+   "folder": "3a1d540274479e6f",
+   "sort": 5000,
    "flags": {
     "10kswordsfoundry": {
      "rules21": {
@@ -105,6 +346,7 @@
      "weight": 0.01
     }
    },
+   "sort": 0,
    "folder": "b1f8d6e91398ac25",
    "flags": {
     "10kswordsfoundry": {
@@ -152,6 +394,7 @@
      "weight": 0.01
     }
    },
+   "sort": 1000,
    "folder": "b1f8d6e91398ac25",
    "flags": {
     "10kswordsfoundry": {
@@ -199,6 +442,7 @@
      "weight": 0.01
     }
    },
+   "sort": 2000,
    "folder": "b1f8d6e91398ac25",
    "flags": {
     "10kswordsfoundry": {
@@ -246,6 +490,7 @@
      "weight": 0.01
     }
    },
+   "sort": 3000,
    "folder": "b1f8d6e91398ac25",
    "flags": {
     "10kswordsfoundry": {
@@ -293,6 +538,7 @@
      "weight": 0.5
     }
    },
+   "sort": 4000,
    "folder": "b1f8d6e91398ac25",
    "flags": {
     "10kswordsfoundry": {
@@ -340,6 +586,7 @@
      "weight": 0.5
     }
    },
+   "sort": 5000,
    "folder": "b1f8d6e91398ac25",
    "flags": {
     "10kswordsfoundry": {
@@ -387,6 +634,7 @@
      "weight": 0.5
     }
    },
+   "sort": 6000,
    "folder": "b1f8d6e91398ac25",
    "flags": {
     "10kswordsfoundry": {
@@ -434,6 +682,7 @@
      "weight": 0.5
     }
    },
+   "sort": 7000,
    "folder": "b1f8d6e91398ac25",
    "flags": {
     "10kswordsfoundry": {
@@ -481,6 +730,7 @@
      "weight": 0.5
     }
    },
+   "sort": 8000,
    "folder": "b1f8d6e91398ac25",
    "flags": {
     "10kswordsfoundry": {
