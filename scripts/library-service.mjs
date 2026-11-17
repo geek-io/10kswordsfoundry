@@ -1,4 +1,5 @@
 export function searchableItem(item){const s=item.system??{};return {tags:s.tags??'',sect:s.sect??'',sidhi:s.sidhi??s.prerequisites?.sidhi??'',rank:s.rank??'',rarity:s.rarity??'',description:String(s.description??'').replace(/<[^>]*>/g,' ')};}
+import {usesRules21,isLegacyPack20} from './rules-version.mjs?v=0.2.40';
 const cache=new Map();
 export function clearLibraryCache(){cache.clear();}
 export async function libraryEntries() {
@@ -6,6 +7,8 @@ export async function libraryEntries() {
  const failures=[];
  for(const pack of game.packs) {
   if(pack.documentName!=="Item"||!pack.visible) continue;
+  // Rules 2.1 worlds do not list the 2.0.3 catalogs.
+  if(usesRules21()&&isLegacyPack20(pack)) continue;
   try {
    let index=cache.get(pack.collection);
    if(!index) {index=await pack.getIndex({fields:["type","system.tags","system.sect","system.sidhi","system.prerequisites.sidhi","system.rank","system.rarity","system.description"]});cache.set(pack.collection,index);}

@@ -38,6 +38,8 @@ for si, sect in enumerate(sect_order):
             'system': sys, 'folder': sub[a['stars']], 'sort': order * 1000, 'effects': [],
             'flags': {'10kswordsfoundry': {'sect21': {'sourcePage': a['page'], 'cultivation': SECT_CULT[sect], 'stars': a['stars'], 'needs': a['needs'], 'weaponRequirement': weapon, 'license': a['license']}}}})
 # ---------- Sapphire Star (preview; book p.266 / PDF p.134) — a teaser spread with no printed abilities yet ----------
+# SUPERSEDED (0.2.18): New_Sects.pdf (pp.270-273) prints the full Sapphire Star, and adds the Bidadari Sect.
+# Both are injected into the committed catalogs by tools/sects21/newsects.py, which also removes this preview.
 ss = folder('Sapphire Star', None, len(sect_order) * 100000); folders.append(ss)
 ss_desc = ('<p><em>Link the disparate hells to strike at the heavens.</em></p>'
            '<p><strong>Supreme Mediator and Council.</strong> A sect that trains the greatest and the best of the '

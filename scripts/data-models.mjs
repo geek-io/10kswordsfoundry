@@ -1,9 +1,9 @@
-import {RARITIES} from "./rarity.mjs?v=0.2.16";
-import {CONDITIONS} from "./conditions.mjs?v=0.2.16";
-import { MODIFIER_CHOICES } from "./modifiers.mjs?v=0.2.16";
-import { AMMO_CHOICES, AMMO_FAMILIES } from "./ammunition.mjs?v=0.2.16";
-import { LICENSE_CHOICES, RANKS, licenseIdentity } from "./licenses.mjs?v=0.2.16";
-import { CORE_KEYS, CULTIVATION_KEYS_21, PART_KEYS, CONDITIONS_21, ASSETS_21, PROFILES, GRIPS, WEAPON_MODS_21, SIDHI_REALMS } from "./rules21.mjs?v=0.2.16";
+import {RARITIES} from "./rarity.mjs?v=0.2.40";
+import {CONDITIONS} from "./conditions.mjs?v=0.2.40";
+import { MODIFIER_CHOICES } from "./modifiers.mjs?v=0.2.40";
+import { AMMO_CHOICES, AMMO_FAMILIES } from "./ammunition.mjs?v=0.2.40";
+import { LICENSE_CHOICES, RANKS, licenseIdentity } from "./licenses.mjs?v=0.2.40";
+import { CORE_KEYS, CULTIVATION_KEYS_21, PART_KEYS, CONDITIONS_21, ASSETS_21, PROFILES, GRIPS, WEAPON_MODS_21, SIDHI_REALMS, ARMOR_MOD_KEYS, AFFINITY_KEYS, GRADE_KEYS } from "./rules21.mjs?v=0.2.40";
 const { NumberField, StringField, SchemaField, BooleanField, ArrayField, ObjectField, HTMLField } = foundry.data.fields;
 const integer = (initial = 0, extra = {}) => new NumberField({ required: true, nullable: false, integer: true, min: 0, initial, ...extra });
 const text = () => new StringField({ required: true, nullable: false, initial: "" });
@@ -26,12 +26,12 @@ const actor21Fields = () => ({
   sidhiRealm:new StringField({required:true,nullable:false,initial:"desire",choices:Object.keys(SIDHI_REALMS)}),
   disposition21:new StringField({required:true,nullable:false,initial:"neutral",choices:["violent","hostile","neutral","friendly","enthusiastic"]})
 });
-const armor21Fields = () => new SchemaField({coverage:new SchemaField(Object.fromEntries(PART_KEYS.map(key=>[key,integer(0)]))),morale:signedInt(),weight:kilograms()});
-const weapon21Fields = () => new SchemaField({profile:new StringField({required:true,nullable:false,initial:"",blank:true,choices:["",...Object.keys(PROFILES)]}),grip:new StringField({required:true,nullable:false,initial:"",blank:true,choices:["",...Object.keys(GRIPS)]}),damage:integer(2),damageBonus:integer(0),range:integer(0),rate:integer(1),capacity:integer(0),ferocious:integer(0),shield:integer(0),mods:new SchemaField(Object.fromEntries(Object.keys(WEAPON_MODS_21).map(key=>[key,new BooleanField({initial:false})]))),weight:kilograms()});
+const armor21Fields = () => new SchemaField({coverage:new SchemaField(Object.fromEntries(PART_KEYS.map(key=>[key,integer(0)]))),morale:signedInt(),weight:kilograms(),mod:new StringField({required:true,nullable:false,initial:"",blank:true,choices:["",...ARMOR_MOD_KEYS]})});
+const weapon21Fields = () => new SchemaField({profile:new StringField({required:true,nullable:false,initial:"",blank:true,choices:["",...Object.keys(PROFILES)]}),grip:new StringField({required:true,nullable:false,initial:"",blank:true,choices:["",...Object.keys(GRIPS)]}),damage:integer(2),damageBonus:integer(0),range:integer(0),rate:integer(1),capacity:integer(0),ferocious:integer(0),shield:integer(0),reach:integer(0),affinity:new StringField({required:true,nullable:false,initial:"",blank:true,choices:["",...AFFINITY_KEYS]}),grade:new StringField({required:true,nullable:false,initial:"",blank:true,choices:["",...GRADE_KEYS]}),morph:text(),mods:new SchemaField(Object.fromEntries(Object.keys(WEAPON_MODS_21).map(key=>[key,new BooleanField({initial:false})]))),weight:kilograms()});
 const magick21Fields = () => new SchemaField({potency:integer(1),castTime:text(),core:new StringField({required:true,nullable:false,initial:"spi",choices:CORE_KEYS}),skill:text(),bonus:signedInt()});
 
 const areaFields=()=>({areaShape:new StringField({initial:"none",choices:["none","circle","cone","ray"]}),areaSize:integer(),areaRange:integer()});
-const specialAttacks=()=>new ArrayField(new SchemaField({...areaFields(),name:new StringField({initial:'Special Ability',required:true,nullable:false,blank:false}),description:html(),activation:new BooleanField({initial:false}),variableBurn:new BooleanField({initial:false}),releaseInstallation:new BooleanField({initial:false}),addSidhi:new BooleanField({initial:false}),convertStrikes:new BooleanField({initial:false}),weaponRequirement:new StringField({initial:'',blank:true,choices:['','any','heavy','ranged','blade','sword','gun','gunPolearm']}),inheritWeaponDamage:new BooleanField({initial:false}),modifiers:text(),range:integer(),fivePlusExtra:integer(),criticalExtra:integer(),allCritical:new BooleanField({initial:false}),uninterruptible:new BooleanField({initial:false}),mode:new StringField({initial:'attack',choices:['attack','check','automatic']}),hostile:new BooleanField({initial:true}),effectKey:new StringField({initial:'',blank:true,choices:['','system.attackBonus','system.defenseBonus','system.checkBonus','system.movement']}),effectValue:integer(0,{min:undefined}),apCost:integer(1),burnArdor:integer(),installArdor:integer(),bonus:integer(0,{min:undefined}),attackPool:new StringField({initial:'vio',choices:['vio','dia','grc','sav','wrd','spi']}),defensePool:new StringField({initial:'grc',choices:['vio','dia','grc','sav','wrd','spi']}),damageType:new StringField({initial:'impact',choices:['cut','impact','burn','trauma','ruination']})}),{initial:[]});
+const specialAttacks=()=>new ArrayField(new SchemaField({...areaFields(),name:new StringField({initial:'Special Ability',required:true,nullable:false,blank:false}),description:html(),activation:new BooleanField({initial:false}),variableBurn:new BooleanField({initial:false}),releaseInstallation:new BooleanField({initial:false}),addSidhi:new BooleanField({initial:false}),convertStrikes:new BooleanField({initial:false}),weaponRequirement:new StringField({initial:'',blank:true,choices:['','any','heavy','ranged','blade','sword','gun','gunPolearm']}),inheritWeaponDamage:new BooleanField({initial:false}),modifiers:text(),range:integer(),fivePlusExtra:integer(),criticalExtra:integer(),allCritical:new BooleanField({initial:false}),uninterruptible:new BooleanField({initial:false}),mode:new StringField({initial:'attack',choices:['attack','check','automatic']}),hostile:new BooleanField({initial:true}),effectKey:new StringField({initial:'',blank:true,choices:['','system.attackBonus','system.defenseBonus','system.checkBonus','system.movement','system.cores.phy','system.cores.mot','system.cores.mnd','system.cores.wit','system.cores.voc','system.cores.spi']}),effectValue:integer(0,{min:undefined}),apCost:integer(1),burnArdor:integer(),installArdor:integer(),bonus:integer(0,{min:undefined}),attackPool:new StringField({initial:'vio',choices:['vio','dia','grc','sav','wrd','spi']}),defensePool:new StringField({initial:'grc',choices:['vio','dia','grc','sav','wrd','spi']}),damageType:new StringField({initial:'impact',choices:['cut','impact','burn','trauma','ruination']})}),{initial:[]});
 
 export class SwordsActorData extends foundry.abstract.TypeDataModel {
   static defineSchema() {
@@ -130,7 +130,7 @@ export class SwordsLicenseData extends SwordsItemData {
     };
   }
 }
-import { UPGRADE_CHOICES, weaponDetails } from "./weapons.mjs?v=0.2.16";
+import { UPGRADE_CHOICES, weaponDetails } from "./weapons.mjs?v=0.2.40";
 
 export class SwordsAmmoData extends SwordsEquipmentData {
   static defineSchema() {return {...super.defineSchema(),ammoType:new StringField({required:true,nullable:false,initial:"bullet",choices:Object.keys(AMMO_CHOICES)})};}

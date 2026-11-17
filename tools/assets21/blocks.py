@@ -9,14 +9,16 @@ def page_blocks(pdf, page):
         lines = [' '.join(html.unescape(w) for w in re.findall(r'<word[^>]*>(.*?)</word>', l)) for l in re.findall(r'<line[^>]*>(.*?)</line>', m.group(5), re.S)]
         out.append({'x': float(m.group(1)), 'y': float(m.group(2)), 'x2': float(m.group(3)), 'y2': float(m.group(4)), 'lines': lines})
     return out
-def assets(pdf, pages=range(95, 100), columns=(33, 219, 453, 638)):
+def assets(pdf, pages=range(95, 100), columns=(33, 219, 453, 638), ymax=560, book=None):
+    """book: page -> book page for single-page PDFs (the 2.1 rulebook); default is the spread arithmetic of the player-facing book."""
+    book = book or (lambda page, c: 2 * page - 2 + (1 if c >= 2 else 0))
     found, order = {}, []
     last = None
     for page in pages:
         blocks = page_blocks(pdf, page)
         col = lambda b: max(i for i, c in enumerate(columns) if b['x'] >= c - 25) if b['x'] >= columns[0] - 25 else 0
         for c in range(len(columns)):
-            items = sorted([b for b in blocks if col(b) == c and b['y'] < 560], key=lambda b: (b['y'], b['x']))
+            items = sorted([b for b in blocks if col(b) == c and b['y'] < ymax], key=lambda b: (b['y'], b['x']))
             # split blocks that glue a Star range and a name together
             flat = []
             for b in items:
@@ -46,11 +48,11 @@ def assets(pdf, pages=range(95, 100), columns=(33, 219, 453, 638)):
                 key = owner['code'] if owner else last
                 if key is None: continue
                 if owner and key not in found:
-                    found[key] = {'code': key, 'name': owner['name'], 'stars': owner['stars'], 'page': owner['page'], 'book': 2 * owner['page'] - 2 + (1 if c >= 2 else 0), 'blocks': []}; order.append(key)
+                    found[key] = {'code': key, 'name': owner['name'], 'stars': owner['stars'], 'page': owner['page'], 'book': book(owner['page'], c), 'blocks': []}; order.append(key)
                 found[key]['blocks'].append(keep)
             for h in heads:
                 if h['code'] not in found:
-                    found[h['code']] = {'code': h['code'], 'name': h['name'], 'stars': h['stars'], 'page': h['page'], 'book': 2 * h['page'] - 2 + (1 if c >= 2 else 0), 'blocks': []}; order.append(h['code'])
+                    found[h['code']] = {'code': h['code'], 'name': h['name'], 'stars': h['stars'], 'page': h['page'], 'book': book(h['page'], c), 'blocks': []}; order.append(h['code'])
             if heads: last = heads[-1]['code']
     return [found[k] for k in order]
 if __name__ == '__main__':

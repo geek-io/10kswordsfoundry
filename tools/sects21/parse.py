@@ -6,7 +6,7 @@ import os
 sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
 from cols import extract
 PDF=sys.argv[1]; FIRST=int(sys.argv[2]) if len(sys.argv)>2 else 102; LAST=int(sys.argv[3]) if len(sys.argv)>3 else 133
-SECTS=[(102,'Asuri'),(104,'Aswang'),(106,'Dracontine'),(108,'Eskatonian'),(110,'Fangshi'),(112,'Houyi'),(114,'Imma'),(116,'Jyotisha'),(118,'Katalonan'),(120,'Mendicant'),(122,'Nezha'),(124,'Sword Dialectician'),(126,'Techgnostic'),(128,'Ultramystic'),(130,'Wukong'),(132,'Zhongkui')]
+SECTS=[(224,'Asuri'),(228,'Aswang'),(232,'Bidadari'),(236,'Dracontine'),(240,'Eskatonian'),(244,'Fangshi'),(248,'Houyi'),(252,'Imma'),(256,'Jyotisha'),(260,'Katalonan'),(264,'Luciferian'),(268,'Mendicant'),(272,'Metomian'),(276,'Nezha'),(280,'Sapphire Star'),(284,'Sword Dialectician'),(288,'Techgnostic'),(292,'Ultramystic'),(296,'Wukong'),(300,'Zhongkui')]
 def sect_of(p): return [n for s0,n in SECTS if s0<=p][-1]
 TYPE=re.compile(r'^(technick|magick|gear)$',re.I)
 CAPS=re.compile(r"^[A-Z0-9][A-Z0-9 '’,\-:.!&/]{2,}$")
@@ -22,7 +22,7 @@ for p in range(FIRST,LAST+1):
         def is_title(k):
             parts=[x.strip() for x in rows[k].split('¦')]
             head=parts[0]
-            m=re.match(r"^([A-Z0-9][A-Z0-9 '’,\-:.!&/]{2,}?) (TECHNICK|Technick|MAGICK|Magick|GEAR|Gear)$",head)
+            m=re.match(r"^([A-Z0-9][A-Z0-9 '’,\-:.!&/]{2,}?) (TECHNICK|Technick|technick|MAGICK|Magick|magick|GEAR|Gear|gear)$",head)
             if m and len(parts)==1: parts=[m.group(1),m.group(2)]; head=m.group(1)
             if not CAPS.match(head) or LIC.match(head) or head.lower().startswith('needs'): return None
             if head.endswith('.') and not head.endswith('SOMERSAUL.T'): return None

@@ -47,7 +47,7 @@ function makeActor(items = [], extra = {}) {
 }
 
 test("playtest Sects renamed every Sect Cultivation; the older names still license Technicks and fill formulas", () => {
-  assert.equal(Object.keys(SECT_CULTIVATIONS_21).length, 16);
+  assert.equal(Object.keys(SECT_CULTIVATIONS_21).length, 20);
   assert.deepEqual(sectCultivationNames21("devil tiger blade"), ["Demon Body", "Devil Tiger Blade", "Devil Body"]);
   const system = {cores: {}, skills: {}, esoteric: [{name: "Devil Tiger Blade", value: 3}, {name: "Great Sage Style", value: 2}]};
   assert.equal(namedRating21(system, "DEMON BODY"), 3);
@@ -99,7 +99,7 @@ test("Suppression Fire needs Rate 15+, rolls no Openings and spends a Rate of am
   assert.equal(canSuppress(weaponProfile21(pistol.system)), false);
   const actor = makeActor([gun, pistol]);
   formValues = {weaponId: "g2", core: "mot", skill: "handEye", adjustment: 0, distance: "", mode: "suppress", shots: 1, demand: 1, ammoId: "", cover: 0, height: 0, unstable: 0, part: ""};
-  await assert.rejects(() => killTheBuddha(actor), /Rate of 15 or higher/);
+  await assert.rejects(() => killTheBuddha(actor), /needs a ranged weapon with the AUTO mod \(Pistol does not have it\)/);
 });
 
 test("casting while moving costs 2 dice; unleashing past 0 Flame goes into Scorch with a Deviation Check", async () => {

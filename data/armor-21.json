@@ -53,8 +53,8 @@
    "type": "fashion",
    "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
    "system": {
-    "description": "<p>Yellow Earth Industrial creates helmets for use to strengthen the mind but also to supply clearsight to their workers. Mercs have found that these Crown-model helmets helped them shoot better as well.</p><p><strong>Uncommon Head Piece · 1 kg · 100 ♄</strong></p><p><strong>Soak:</strong> Head 2</p><p>+1 Morale; your ranged attacks ignore Light Cover.</p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.181",
+    "description": "<p>Yellow Earth Industrial creates helmets for use to strengthen the mind but also to supply clearsight to their workers. Mercs have found that these Crown-model helmets helped them shoot better as well.</p><p><strong>Uncommon Head Piece · 1 kg · 100 ♄</strong></p><p><strong>Soak:</strong> —</p><p>+1 Morale; your ranged attacks ignore Light Cover.</p><p><em>Catalog note: No Soak (printed \"—\"). Ignoring Light Cover with ranged attacks is applied in the roll dialog.</em></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.203",
     "rarity": "uncommon",
     "quantity": 1,
     "slots": 1,
@@ -69,7 +69,7 @@
       "rarm": 0,
       "larm": 0,
       "torso": 0,
-      "head": 2
+      "head": 0
      },
      "morale": 1,
      "weight": 1
@@ -94,12 +94,12 @@
    "type": "fashion",
    "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
    "system": {
-    "description": "<p>A large cowl that creates, with the Robes, the iconic look of an Adept, the harnesser and sorcerer of the intramaterial sciences.</p><p><strong>Rare Head Piece · 1 kg · 1,600 ♄</strong></p><p><strong>Soak:</strong> —</p><p>+1 to all CAST MAGICK Checks. In a KILL THE BUDDHA, you can STEP to avoid damage.</p><p><em>Catalog note: Add the +1 in the Cast dialog.</em></p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.181",
+    "description": "<p>A large cowl that creates, with the Robes, the iconic look of an Adept, the harnesser and sorcerer of the intramaterial sciences.</p><p><strong>Rare Head Piece · 1 kg · 160,000 ♄</strong></p><p><strong>Soak:</strong> —</p><p>+1 to all CAST MAGICK Checks. In a KILL THE BUDDHA, you can STEP to avoid damage.</p><p><em>Catalog note: No Soak (printed \"—\"). Add the +1 in the Cast dialog.</em></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.203",
     "rarity": "rare",
     "quantity": 1,
     "slots": 1,
-    "magCost": 1600,
+    "magCost": 160000,
     "equipped": false,
     "gearSlot": "fashion",
     "tags": "2.1, Armor, Head Piece",
@@ -135,8 +135,8 @@
    "type": "fashion",
    "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
    "system": {
-    "description": "<p>A headwrap and wide-brimmed straw hat, some/ Just enough to finish the construction job.</p><p><strong>Common Head Piece · 0.3 kg · 30 ♄</strong></p><p><strong>Soak:</strong> Head 1</p><p>+1 MANUAL LABOR</p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.181",
+    "description": "<p>A headwrap and wide-brimmed straw hat, some/ Just enough to finish the construction job.</p><p><strong>Common Head Piece · 0.3 kg · 30 ♄</strong></p><p><strong>Soak:</strong> —</p><p>+1 MANUAL LABOR</p><p><em>Catalog note: No Soak (printed \"—\").</em></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.203",
     "rarity": "common",
     "quantity": 1,
     "slots": 1,
@@ -151,7 +151,7 @@
       "rarm": 0,
       "larm": 0,
       "torso": 0,
-      "head": 1
+      "head": 0
      },
      "morale": 0,
      "weight": 0.3
@@ -166,7 +166,7 @@
      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
      "transfer": true,
      "disabled": false,
-     "description": "<p>Rules 2.1 (2.1 player-facing book), p.181. Applies while equipped.</p>",
+     "description": "<p>Rules 2.1 (2.1 rulebook), p.203. Applies while equipped.</p>",
      "system": {
       "changes": [
        {
@@ -196,8 +196,8 @@
    "type": "fashion",
    "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
    "system": {
-    "description": "<p>The newest and most widespread version of the MORTAR standard issue—the KONGO model—is known for its fearsome Wisdom King aesthetic, blending the \"dharma protector\" into the brutalist blackrock, ceramic, and heavensilk material. You cannot be made to look away..</p><p><strong>Uncommon Head Piece · 6 kg · 900 ♄</strong></p><p><strong>Soak:</strong> Head 6</p><p>-2 SPEED</p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.181",
+    "description": "<p>The newest and most widespread version of the MORTAR standard issue—the KONGO model—is known for its fearsome Wisdom King aesthetic, blending the \"dharma protector\" into the brutalist blackrock, ceramic, and heavensilk material. You cannot be made to look away..</p><p><strong>Uncommon Head Piece · 6 kg · 900 ♄</strong></p><p><strong>Soak:</strong> Head 2</p><p>-2 SPEED</p><p><em>Catalog note: \"-2 SPEED\" is applied as printed to the Speed modifier.</em></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.203",
     "rarity": "uncommon",
     "quantity": 1,
     "slots": 1,
@@ -212,7 +212,7 @@
       "rarm": 0,
       "larm": 0,
       "torso": 0,
-      "head": 6
+      "head": 2
      },
      "morale": 0,
      "weight": 6
@@ -227,7 +227,7 @@
      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
      "transfer": true,
      "disabled": false,
-     "description": "<p>Rules 2.1 (2.1 player-facing book), p.181. Applies while equipped.</p>",
+     "description": "<p>Rules 2.1 (2.1 rulebook), p.203. Applies while equipped.</p>",
      "system": {
       "changes": [
        {
@@ -257,12 +257,12 @@
    "type": "fashion",
    "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
    "system": {
-    "description": "<p>From the GENJI-Series of fashion-armors, combining Gothic sensibilities with Oriental Zen aesthetics.</p><p><strong>Rare Head Piece · 0.5 kg · 5,000 ♄</strong></p><p><strong>Soak:</strong> Head 2</p><p>Darkness and low light impose no penalty on you. +2 Speed.</p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.181",
+    "description": "<p>From the GENJI-Series of fashion-armors, combining Gothic sensibilities with Oriental Zen aesthetics.</p><p><strong>Rare Head Piece · 0.5 kg · 300,000 ♄</strong></p><p><strong>Soak:</strong> Head 1</p><p>Darkness and low light impose no penalty on you. +2 Speed.</p><p><em>Catalog note: \"+2 Speed\" is applied as printed to the Speed modifier.</em></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.203",
     "rarity": "rare",
     "quantity": 1,
     "slots": 1,
-    "magCost": 5000,
+    "magCost": 300000,
     "equipped": false,
     "gearSlot": "fashion",
     "tags": "2.1, Armor, Head Piece",
@@ -273,7 +273,7 @@
       "rarm": 0,
       "larm": 0,
       "torso": 0,
-      "head": 2
+      "head": 1
      },
      "morale": 0,
      "weight": 0.5
@@ -288,7 +288,7 @@
      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
      "transfer": true,
      "disabled": false,
-     "description": "<p>Rules 2.1 (2.1 player-facing book), p.181. Applies while equipped.</p>",
+     "description": "<p>Rules 2.1 (2.1 rulebook), p.203. Applies while equipped.</p>",
      "system": {
       "changes": [
        {
@@ -318,12 +318,12 @@
    "type": "fashion",
    "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
    "system": {
-    "description": "<p>One of the most iconic armor-fashions from the HDF. Wearing it turns one into a Wisdom King. Dragonsteel that covers the whole head, with a mask depicting a Tathagata in Wrathful Visage.</p><p><strong>Rare Head Piece · 7 kg · 30,000 ♄</strong></p><p><strong>Soak:</strong> Head 6</p><p>+2 to all Threatening attempts. All attempts to KILL THE BUDDHA by those of a lower Sidhi than the wearer must suffer 1 Morale Loss or suffer -2 to their KILL THE BUDDHA Check.</p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.181",
+    "description": "<p>One of the most iconic armor-fashions from the HDF. Wearing it turns one into a Wisdom King. Dragonsteel that covers the whole head, with a mask depicting a Tathagata in Wrathful Visage.</p><p><strong>Rare Head Piece · 7 kg · 500,000 ♄</strong></p><p><strong>Soak:</strong> Head 3</p><p>+2 to all Threatening attempts. All attempts to KILL THE BUDDHA by those of a lower Sidhi than the wearer must suffer 1 Morale Loss or suffer -2 to their KILL THE BUDDHA Check.</p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.203",
     "rarity": "rare",
     "quantity": 1,
     "slots": 1,
-    "magCost": 30000,
+    "magCost": 500000,
     "equipped": false,
     "gearSlot": "fashion",
     "tags": "2.1, Armor, Head Piece",
@@ -334,7 +334,7 @@
       "rarm": 0,
       "larm": 0,
       "torso": 0,
-      "head": 6
+      "head": 3
      },
      "morale": 0,
      "weight": 7
@@ -359,12 +359,12 @@
    "type": "fashion",
    "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
    "system": {
-    "description": "<p>The most common form of armor in the modern Mahakalpa. A vest made of interwoven heavenly silk vest that has stopping power even against bullets and is largely light enough to be able to not weight down the wearer. Many different companies sell their own versions.</p><p><strong>Uncommon Torso Piece · 2 kg · 340 ♄</strong></p><p><strong>Soak:</strong> Torso 2</p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.184",
+    "description": "<p>The most common form of armor in the modern Mahakalpa. A vest made of interwoven heavenly silk vest that has stopping power even against bullets and is largely light enough to be able to not weight down the wearer. Many different companies sell their own versions.</p><p><strong>Uncommon Torso Piece · 2 kg · 399 ♄</strong></p><p><strong>Soak:</strong> Torso 1</p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.204",
     "rarity": "uncommon",
     "quantity": 1,
     "slots": 1,
-    "magCost": 340,
+    "magCost": 399,
     "equipped": false,
     "gearSlot": "fashion",
     "tags": "2.1, Armor, Torso Piece",
@@ -374,7 +374,7 @@
       "lleg": 0,
       "rarm": 0,
       "larm": 0,
-      "torso": 2,
+      "torso": 1,
       "head": 0
      },
      "morale": 0,
@@ -400,12 +400,12 @@
    "type": "fashion",
    "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
    "system": {
-    "description": "<p>A coat and blazer common to diplomats of all kinds. Many companies make their own version, many of them include subtle marketing techniques.</p><p><strong>Uncommon Torso Piece · 2 kg · 220 ♄</strong></p><p><strong>Soak:</strong> Torso 1</p><p><em>Catalog note: The flavor box repeats the Heavenly Silk Vest's text; the coat's own description is printed in its rules box. The earlier +1 Spit In The Face Of God is no longer printed.</em></p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.184",
+    "description": "<p>A coat and blazer common to diplomats of all kinds. Many companies make their own version, many of them include subtle marketing techniques.</p><p><strong>Uncommon Torso Piece · 2 kg · 299 ♄</strong></p><p><strong>Soak:</strong> Torso 1</p><p><em>Catalog note: The rules box repeats the coat's description; no effect is printed.</em></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.204",
     "rarity": "uncommon",
     "quantity": 1,
     "slots": 1,
-    "magCost": 220,
+    "magCost": 299,
     "equipped": false,
     "gearSlot": "fashion",
     "tags": "2.1, Armor, Torso Piece",
@@ -441,12 +441,12 @@
    "type": "fashion",
    "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
    "system": {
-    "description": "<p>A coat and cloak with that blends into natural environments. For hunting across the spheres.</p><p><strong>Common Torso Piece · 1.5 kg · 90 ♄</strong></p><p><strong>Soak:</strong> Torso 1</p><p>+1 PRIMEVAL MIND</p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.184",
+    "description": "<p>A coat and cloak with that blends into natural environments. For hunting across the spheres.</p><p><strong>Common Torso Piece · 1.5 kg · 45 ♄</strong></p><p><strong>Soak:</strong> Torso 1</p><p>+1 PRIMEVAL MIND</p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.204",
     "rarity": "common",
     "quantity": 1,
     "slots": 1,
-    "magCost": 90,
+    "magCost": 45,
     "equipped": false,
     "gearSlot": "fashion",
     "tags": "2.1, Armor, Torso Piece",
@@ -472,7 +472,7 @@
      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
      "transfer": true,
      "disabled": false,
-     "description": "<p>Rules 2.1 (2.1 player-facing book), p.184. Applies while equipped.</p>",
+     "description": "<p>Rules 2.1 (2.1 rulebook), p.204. Applies while equipped.</p>",
      "system": {
       "changes": [
        {
@@ -502,12 +502,12 @@
    "type": "fashion",
    "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
    "system": {
-    "description": "<p>Distributed through VAJRA TACTICAL in Hingsajagra, the MORTAR standard issue Adamant Ballistic Breastplate has become the iconic military gear across the Trichiliocosm, particularly with heavy infantry, special operations, riotcontrol, and counter-revolution units.</p><p><strong>Rare Torso Piece · 10 kg · 3,400 ♄</strong></p><p><strong>Soak:</strong> Torso 5</p><p>-1 Basic Move. All KNOCKBACK suffered by the wearer is reduced by 1m, to a minimum of 1m.</p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.184",
+    "description": "<p>Distributed through VAJRA TACTICAL in Hingsajagra, the MORTAR standard issue Adamant Ballistic Breastplate has become the iconic military gear across the Trichiliocosm, particularly with heavy infantry, special operations, riotcontrol, and counter-revolution units.</p><p><strong>Rare Torso Piece · 10 kg · 240,000 ♄</strong></p><p><strong>Soak:</strong> Torso 2</p><p>-1 Basic Move. All KNOCKBACK suffered by the wearer is reduced by 1m, to a minimum of 1m.</p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.204",
     "rarity": "rare",
     "quantity": 1,
     "slots": 1,
-    "magCost": 3400,
+    "magCost": 240000,
     "equipped": false,
     "gearSlot": "fashion",
     "tags": "2.1, Armor, Torso Piece",
@@ -517,7 +517,7 @@
       "lleg": 0,
       "rarm": 0,
       "larm": 0,
-      "torso": 5,
+      "torso": 2,
       "head": 0
      },
      "morale": 0,
@@ -533,7 +533,7 @@
      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
      "transfer": true,
      "disabled": false,
-     "description": "<p>Rules 2.1 (2.1 player-facing book), p.184. Applies while equipped.</p>",
+     "description": "<p>Rules 2.1 (2.1 rulebook), p.204. Applies while equipped.</p>",
      "system": {
       "changes": [
        {
@@ -563,12 +563,12 @@
    "type": "fashion",
    "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
    "system": {
-    "description": "<p>A suit from the GENJI-Series of fashion-armors. A skin tight suit woven with Numenweave. Provides protection without getting in the way</p><p><strong>Rare Torso Piece · 1.5 kg · 6,000 ♄</strong></p><p><strong>Soak:</strong> Torso 3</p><p>The wearer cannot be Stunned.</p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.184",
+    "description": "<p>A suit from the GENJI-Series of fashion-armors. A skin tight suit woven with Numenweave. Provides protection without getting in the way</p><p><strong>Rare Torso Piece · 1.5 kg · 300,000 ♄</strong></p><p><strong>Soak:</strong> Torso 2</p><p>The wearer cannot be Stunned.</p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.204",
     "rarity": "rare",
     "quantity": 1,
     "slots": 1,
-    "magCost": 6000,
+    "magCost": 300000,
     "equipped": false,
     "gearSlot": "fashion",
     "tags": "2.1, Armor, Torso Piece",
@@ -578,7 +578,7 @@
       "lleg": 0,
       "rarm": 0,
       "larm": 0,
-      "torso": 3,
+      "torso": 2,
       "head": 0
      },
      "morale": 0,
@@ -604,12 +604,12 @@
    "type": "fashion",
    "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
    "system": {
-    "description": "<p>Heavy plated armor, mix of golds and porcelains and steels. Shaped into the likeness of the lower half of the Wrathful Bodhisattvas. Excessively intricate hagoromo made of interlocking bone lamellae—human femurs, beast ribs, saintscapulae—each acid-etched with the name of a Wrathful Buddha.</p><p><strong>Rare Torso Piece · 13 kg · 40,000 ♄</strong></p><p><strong>Soak:</strong> Torso 6</p><p>+1 ADAMANCE; -1 BLEEDING HEART. When getting damaged, the bone hagoromo rattles; allies within 3m have a 1-in-6 chance of healing 1 Morale.</p><p><em>Catalog note: Printed as a \"Rare Head Piece\" in the Torso list.</em></p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.184",
+    "description": "<p>Heavy plated armor, mix of golds and porcelains and steels. Shaped into the likeness of the lower half of the Wrathful Bodhisattvas. Excessively intricate hagoromo made of interlocking bone lamellae—human femurs, beast ribs, saintscapulae—each acid-etched with the name of a Wrathful Buddha.</p><p><strong>Rare Torso Piece · 13 kg · 899,999 ♄</strong></p><p><strong>Soak:</strong> Torso 3</p><p>+1 ADAMANCE; -1 BLEEDING HEART. When getting damaged, the bone hagoromo rattles; allies within 3m have a 1-in-6 chance of healing 1 Morale.</p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.204",
     "rarity": "rare",
     "quantity": 1,
     "slots": 1,
-    "magCost": 40000,
+    "magCost": 899999,
     "equipped": false,
     "gearSlot": "fashion",
     "tags": "2.1, Armor, Torso Piece",
@@ -619,7 +619,7 @@
       "lleg": 0,
       "rarm": 0,
       "larm": 0,
-      "torso": 6,
+      "torso": 3,
       "head": 0
      },
      "morale": 0,
@@ -635,7 +635,7 @@
      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
      "transfer": true,
      "disabled": false,
-     "description": "<p>Rules 2.1 (2.1 player-facing book), p.184. Applies while equipped.</p>",
+     "description": "<p>Rules 2.1 (2.1 rulebook), p.204. Applies while equipped.</p>",
      "system": {
       "changes": [
        {
@@ -672,8 +672,8 @@
    "type": "fashion",
    "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
    "system": {
-    "description": "<p>Forearm covering heavy duty aramid gloves with steel meshes and impact padding.</p><p><strong>Common Arm Piece · 1.5 kg · 45 ♄</strong></p><p><strong>Soak:</strong> Right Arm 1</p><p>2-in-6 chance of neagating being disarmed.</p><p><em>Catalog note: Each Arm piece covers a single arm; the Soak is recorded on the right arm. Change the Soak fields on the item for a left-arm piece.</em></p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.185",
+    "description": "<p>Forearm covering heavy duty aramid gloves with steel meshes and impact padding.</p><p><strong>Common Arm Piece · 1.5 kg · 45 ♄</strong></p><p><strong>Soak:</strong> Right Arm 1</p><p>2-in-6 chance of negating being disarmed.</p><p><em>Catalog note: Each Arm piece covers a single arm; the Soak is recorded on the right arm. Change the Soak fields on the item for a left-arm piece.</em></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.205",
     "rarity": "common",
     "quantity": 1,
     "slots": 1,
@@ -713,8 +713,8 @@
    "type": "fashion",
    "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
    "system": {
-    "description": "<p>Black wraps threaded through with talismans to the Sword Buddha.</p><p><strong>Uncommon Arm Piece · 1.5 kg · 820 ♄</strong></p><p><strong>Soak:</strong> —</p><p>While worn, DAGGERS, SABERS, and SWORDS gain LACERATING.</p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.185",
+    "description": "<p>Black wraps threaded through with talismans to the Sword Buddha.</p><p><strong>Uncommon Arm Piece · 1.5 kg · 820 ♄</strong></p><p><strong>Soak:</strong> —</p><p>While worn, DAGGERS, SABERS, and SWORDS gain LACERATING.</p><p><em>Catalog note: No Soak (printed \"—\").</em></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.205",
     "rarity": "uncommon",
     "quantity": 1,
     "slots": 1,
@@ -754,12 +754,12 @@
    "type": "fashion",
    "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
    "system": {
-    "description": "<p>Carved from dead Sky Dancers. The bones intertwine with your fingers.</p><p><strong>Rare Arm Piece · 1 kg · 3,600 ♄</strong></p><p><strong>Soak:</strong> Right Arm 1</p><p>Control the wearer establishes on a Limb can only be broken free with a Solid Maneuver instead of a Quick one.</p><p><em>Catalog note: Each Arm piece covers a single arm; the Soak is recorded on the right arm. Change the Soak fields on the item for a left-arm piece.</em></p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.185",
+    "description": "<p>Carved from dead Sky Dancers. The bones intertwine with your fingers.</p><p><strong>Rare Arm Piece · 1 kg · 110,000 ♄</strong></p><p><strong>Soak:</strong> Right Arm 1</p><p>Any attempt to break free from Control from this gauntlet suffers -2.</p><p><em>Catalog note: Each Arm piece covers a single arm; the Soak is recorded on the right arm. Change the Soak fields on the item for a left-arm piece.</em></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.205",
     "rarity": "rare",
     "quantity": 1,
     "slots": 1,
-    "magCost": 3600,
+    "magCost": 110000,
     "equipped": false,
     "gearSlot": "fashion",
     "tags": "2.1, Armor, Arm Piece",
@@ -795,12 +795,12 @@
    "type": "fashion",
    "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
    "system": {
-    "description": "<p>The KONGO model is known for its fearsome Wisdom King aesthetic, blending the \"dharma protector\" into the brutalist blackrock, ceramic, and heavensilk material.</p><p><strong>Rare Arm Piece · 10 kg · 3,600 ♄</strong></p><p><strong>Soak:</strong> Right Arm 5</p><p>-1 MANUAL LABOR; -1 BLEEDING HEART; +1 EMPTY HAND damage and also grants Empty Hand [CRUSHING].</p><p><em>Catalog note: Each Arm piece covers a single arm; the Soak is recorded on the right arm. Change the Soak fields on the item for a left-arm piece. The +1 Empty Hand damage and CRUSHING are applied at the table.</em></p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.185",
+    "description": "<p>The KONGO model is known for its fearsome Wisdom King aesthetic, blending the \"dharma protector\" into the brutalist blackrock, ceramic, and heavensilk material.</p><p><strong>Rare Arm Piece · 10 kg · 360,000 ♄</strong></p><p><strong>Soak:</strong> Right Arm 2</p><p>-1 MANUAL LABOR; -1 BLEEDING HEART; +1 EMPTY HAND damage and also grants Empty Hand [CRUSHING].</p><p><em>Catalog note: Each Arm piece covers a single arm; the Soak is recorded on the right arm. Change the Soak fields on the item for a left-arm piece. The +1 Empty Hand damage and CRUSHING are applied at the table.</em></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.205",
     "rarity": "rare",
     "quantity": 1,
     "slots": 1,
-    "magCost": 3600,
+    "magCost": 360000,
     "equipped": false,
     "gearSlot": "fashion",
     "tags": "2.1, Armor, Arm Piece",
@@ -808,7 +808,7 @@
      "coverage": {
       "rleg": 0,
       "lleg": 0,
-      "rarm": 5,
+      "rarm": 2,
       "larm": 0,
       "torso": 0,
       "head": 0
@@ -826,7 +826,7 @@
      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
      "transfer": true,
      "disabled": false,
-     "description": "<p>Rules 2.1 (2.1 player-facing book), p.185. Applies while equipped.</p>",
+     "description": "<p>Rules 2.1 (2.1 rulebook), p.205. Applies while equipped.</p>",
      "system": {
       "changes": [
        {
@@ -863,12 +863,12 @@
    "type": "fashion",
    "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
    "system": {
-    "description": "<p>Loose flowing sleeves that explode into a hagoromo that responds to the Mind flows.</p><p><strong>Rare Arm Piece · 0.5 kg · 4,000 ♄</strong></p><p><strong>Soak:</strong> Right Arm 2</p><p>Your arms cannot be Controlled.</p><p><em>Catalog note: Each Arm piece covers a single arm; the Soak is recorded on the right arm. Change the Soak fields on the item for a left-arm piece.</em></p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.185",
+    "description": "<p>Loose flowing sleeves that explode into a hagoromo that responds to the Mind flows.</p><p><strong>Rare Arm Piece · 0.5 kg · 400,000 ♄</strong></p><p><strong>Soak:</strong> Right Arm 2</p><p>Your arms cannot be Controlled.</p><p><em>Catalog note: Each Arm piece covers a single arm; the Soak is recorded on the right arm. Change the Soak fields on the item for a left-arm piece.</em></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.205",
     "rarity": "rare",
     "quantity": 1,
     "slots": 1,
-    "magCost": 4000,
+    "magCost": 400000,
     "equipped": false,
     "gearSlot": "fashion",
     "tags": "2.1, Armor, Arm Piece",
@@ -904,12 +904,12 @@
    "type": "fashion",
    "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
    "system": {
-    "description": "<p>Heavy, scallop-shaped gauntlets that wrap around into the likeness of a Wrathful Enlightened One's clenched fist.</p><p><strong>Rare Arm Piece · 8 kg · 25,000 ♄</strong></p><p><strong>Soak:</strong> Right Arm 6</p><p>All knockback the wearer inflicts gains +3m.</p><p><em>Catalog note: Each Arm piece covers a single arm; the Soak is recorded on the right arm. Change the Soak fields on the item for a left-arm piece.</em></p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.185",
+    "description": "<p>Heavy, scallop-shaped gauntlets that wrap around into the likeness of a Wrathful Enlightened One's clenched fist.</p><p><strong>Rare Arm Piece · 8 kg · 899,999 ♄</strong></p><p><strong>Soak:</strong> Right Arm 3</p><p>All knockback the wearer inflicts gains +3m.</p><p><em>Catalog note: Each Arm piece covers a single arm; the Soak is recorded on the right arm. Change the Soak fields on the item for a left-arm piece.</em></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.205",
     "rarity": "rare",
     "quantity": 1,
     "slots": 1,
-    "magCost": 25000,
+    "magCost": 899999,
     "equipped": false,
     "gearSlot": "fashion",
     "tags": "2.1, Armor, Arm Piece",
@@ -917,7 +917,7 @@
      "coverage": {
       "rleg": 0,
       "lleg": 0,
-      "rarm": 6,
+      "rarm": 3,
       "larm": 0,
       "torso": 0,
       "head": 0
@@ -946,7 +946,7 @@
    "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
    "system": {
     "description": "<p>Heavy duty working pants and boots for wading through dangerous Sidhi fallout.</p><p><strong>Common Leg Piece · 1.5 kg · 50 ♄</strong></p><p><strong>Soak:</strong> Right Leg 1, Left Leg 1</p><p>The wearer ignores the penalties for mud, knee-deep water, and unstable ground.</p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.186",
+    "source": "Rules 2.1 (2.1 rulebook), p.206",
     "rarity": "common",
     "quantity": 1,
     "slots": 1,
@@ -986,8 +986,8 @@
    "type": "fashion",
    "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
    "system": {
-    "description": "<p>Trousers worthy of a diplomatic representative of interstar unions.</p><p><strong>Uncommon Leg Piece · 2 kg · 220 ♄</strong></p><p><strong>Soak:</strong> Right Leg 1, Left Leg 1</p><p>Speaking no longer takes a Quick Maneuver. +1 to SPIT IN THE FACE OF GOD Checks.</p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.186",
+    "description": "<p>Trousers worthy of a diplomatic representative of interstar unions.</p><p><strong>Uncommon Leg Piece · 2 kg · 220 ♄</strong></p><p><strong>Soak:</strong> Right Leg 1, Left Leg 1</p><p>+1 to SPIT IN THE FACE OF GOD Checks.</p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.206",
     "rarity": "uncommon",
     "quantity": 1,
     "slots": 1,
@@ -1017,7 +1017,7 @@
      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
      "transfer": true,
      "disabled": false,
-     "description": "<p>Rules 2.1 (2.1 player-facing book), p.186. Applies while equipped.</p>",
+     "description": "<p>Rules 2.1 (2.1 rulebook), p.206. Applies while equipped.</p>",
      "system": {
       "changes": [
        {
@@ -1048,7 +1048,7 @@
    "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
    "system": {
     "description": "<p>Scarf-like skirt-wrap blossoming into harem pants, high boots, open-toed sandals, or running shoes.</p><p><strong>Uncommon Leg Piece · 1 kg · 340 ♄</strong></p><p><strong>Soak:</strong> Right Leg 1, Left Leg 1</p><p>+1 Basic Move</p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.186",
+    "source": "Rules 2.1 (2.1 rulebook), p.206",
     "rarity": "uncommon",
     "quantity": 1,
     "slots": 1,
@@ -1078,7 +1078,7 @@
      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
      "transfer": true,
      "disabled": false,
-     "description": "<p>Rules 2.1 (2.1 player-facing book), p.186. Applies while equipped.</p>",
+     "description": "<p>Rules 2.1 (2.1 rulebook), p.206. Applies while equipped.</p>",
      "system": {
       "changes": [
        {
@@ -1108,19 +1108,19 @@
    "type": "fashion",
    "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
    "system": {
-    "description": "<p>The KONGO model is known for its fearsome Wisdom King aesthetic, blending the \"dharma protector\" into the brutalist blackrock, ceramic, and heavensilk material.</p><p><strong>Rare Leg Piece · 5 kg · 2,400 ♄</strong></p><p><strong>Soak:</strong> Right Leg 5, Left Leg 5</p><p>The wearer becomes immune to mundane means of KNOCKDOWN.</p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.186",
+    "description": "<p>The KONGO model is known for its fearsome Wisdom King aesthetic, blending the \"dharma protector\" into the brutalist blackrock, ceramic, and heavensilk material.</p><p><strong>Rare Leg Piece · 5 kg · 240,000 ♄</strong></p><p><strong>Soak:</strong> Right Leg 2, Left Leg 2</p><p>The wearer becomes immune to mundane means of KNOCKDOWN.</p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.206",
     "rarity": "rare",
     "quantity": 1,
     "slots": 1,
-    "magCost": 2400,
+    "magCost": 240000,
     "equipped": false,
     "gearSlot": "fashion",
     "tags": "2.1, Armor, Leg Piece",
     "r21": {
      "coverage": {
-      "rleg": 5,
-      "lleg": 5,
+      "rleg": 2,
+      "lleg": 2,
       "rarm": 0,
       "larm": 0,
       "torso": 0,
@@ -1149,19 +1149,19 @@
    "type": "fashion",
    "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
    "system": {
-    "description": "<p>Skin tight lower pants that move and blend in the light, providing protection without penalty</p><p><strong>Rare Leg Piece · 1.5 kg · 5,000 ♄</strong></p><p><strong>Soak:</strong> Right Leg 3, Left Leg 3</p><p>+1 die on Checks to balance, climb, or keep your feet.</p><p><em>Catalog note: Printed as a \"Rare Torso Piece\" in the Legs list.</em></p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.186",
+    "description": "<p>Skin tight lower pants that move and blend in the light, providing protection without penalty.</p><p><strong>Rare Leg Piece · 1.5 kg · 500,000 ♄</strong></p><p><strong>Soak:</strong> Right Leg 1, Left Leg 1</p><p>+1 dice on Checks to balance, climb, or keep your feet. Gain 1 free Dodge in a KILL THE BUDDHA.</p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.206",
     "rarity": "rare",
     "quantity": 1,
     "slots": 1,
-    "magCost": 5000,
+    "magCost": 500000,
     "equipped": false,
     "gearSlot": "fashion",
     "tags": "2.1, Armor, Leg Piece",
     "r21": {
      "coverage": {
-      "rleg": 3,
-      "lleg": 3,
+      "rleg": 1,
+      "lleg": 1,
       "rarm": 0,
       "larm": 0,
       "torso": 0,
@@ -1190,19 +1190,19 @@
    "type": "fashion",
    "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
    "system": {
-    "description": "<p>Heavy plated greaves, mix of golds and porcelains and steels. Shaped into the likeness of the lower half of the Wrathful Bodhisattvas.</p><p><strong>Rare Leg Piece · 10 kg · 23,000 ♄</strong></p><p><strong>Soak:</strong> Right Leg 6, Left Leg 6</p><p>-2 BASIC MOVE. IMMUNE TO KNOCKBACK.</p><p><em>Catalog note: Printed as a \"Rare Head Piece\" in the Legs list.</em></p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.186",
+    "description": "<p>Heavy plated greaves, mix of golds and porcelains and steels. Shaped into the likeness of the lower half of the Wrathful Bodhisattvas.</p><p><strong>Rare Leg Piece · 10 kg · 699,999 ♄</strong></p><p><strong>Soak:</strong> Right Leg 3, Left Leg 3</p><p>-2 BASIC MOVE. IMMUNE TO KNOCKBACK.</p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.206",
     "rarity": "rare",
     "quantity": 1,
     "slots": 1,
-    "magCost": 23000,
+    "magCost": 699999,
     "equipped": false,
     "gearSlot": "fashion",
     "tags": "2.1, Armor, Leg Piece",
     "r21": {
      "coverage": {
-      "rleg": 6,
-      "lleg": 6,
+      "rleg": 3,
+      "lleg": 3,
       "rarm": 0,
       "larm": 0,
       "torso": 0,
@@ -1221,7 +1221,7 @@
      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
      "transfer": true,
      "disabled": false,
-     "description": "<p>Rules 2.1 (2.1 player-facing book), p.186. Applies while equipped.</p>",
+     "description": "<p>Rules 2.1 (2.1 rulebook), p.206. Applies while equipped.</p>",
      "system": {
       "changes": [
        {

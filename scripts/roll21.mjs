@@ -1,15 +1,20 @@
 // Rules 2.1 roll workflows: Core + Cultivation Checks, KILL THE BUDDHA, Magick Charges, Stun and Incapacitation.
 import {CORES, CULTIVATIONS_21, PARTS, PART_KEYS, ATTACHMENT_STRENGTHS, checkFormula21, openings, fusionOptions, staticOpenings,
   rangePenalty, firingMode, weaponProfile21, stateModifiers, addCharges, assetStars, incapacitationDemand, partFromD6,
-  applyPartDamage, partState, targetReach, openingRank, sectCultivationNames21, withoutPenalties, entersFlow, canSuppress, spendFlame21} from "./rules21.mjs?v=0.2.16";
-import {confirmScorch21, deviationCheck21} from "./scorch21.mjs?v=0.2.16";
-import {escapeHTML} from "./resolution.mjs?v=0.2.16";
-import {occupiedSlots} from "./slots.mjs?v=0.2.16";
-import {useWeapon} from "./equipment.mjs?v=0.2.16";
-import {actingToken, collectTargets} from "./targeting21.mjs?v=0.2.16";
-import {abilityArea, placeAbilityArea} from "./areas.mjs?v=0.2.16";
+  applyPartDamage, partState, targetReach, openingRank, sectCultivationNames21, withoutPenalties, entersFlow, canSuppress, spendFlame21,
+  DAMAGE_TYPES_21, DAMAGE_TYPE_KEYS, damageOptions21, ARMOR_MODS_21, MANEUVERS_21, MANEUVER_KEYS, maneuverOutcome21, ticksSpeed21, flurryReadyDelay21,
+  COVER_21, coverHits21, aimBonus21, outOfRange21, goesWide21, halvedPool21, visceralBonus21, strikeOptions21, strikePlan21} from "./rules21.mjs?v=0.2.40";
+import {confirmScorch21, deviationCheck21} from "./scorch21.mjs?v=0.2.40";
+import {escapeHTML} from "./resolution.mjs?v=0.2.40";
+import {occupiedSlots} from "./slots.mjs?v=0.2.40";
+import {useWeapon} from "./equipment.mjs?v=0.2.40";
+import {actingToken, collectTargets} from "./targeting21.mjs?v=0.2.40";
+import {ammoSummary21} from "./ammunition.mjs?v=0.2.40";
+import {abilityArea, placeAbilityArea} from "./areas.mjs?v=0.2.40";
 
 const SYSTEM = "10kswordsfoundry";
+/** Which KILL THE BUDDHA engine the world uses: "openings" (default, the Quick/Solid/Perfect exchange) or "strikes" (the 2.1 Block/Dodge rewrite). */
+const ktbEngine21 = () => { try { return globalThis.game?.settings?.get(SYSTEM, "ktbEngine21") ?? "openings"; } catch { return "openings"; } };
 const DialogV2 = () => foundry.applications.api.DialogV2;
 const int = value => Math.trunc(Number(value) || 0);
 const signed = value => `${value >= 0 ? "+" : ""}${value}`;
@@ -62,7 +67,7 @@ function blockedByState(actor) {
 }
 
 function stateFor(actor, core) {
-  return stateModifiers(actor.system, {core, disabledTorso: !!actor.system.r21?.parts?.torso?.disabled});
+  return stateModifiers(actor.system, {core, disabledTorso: !!actor.system.r21?.parts?.torso?.disabled, encumbrance: actor.system.r21?.movement?.encumbrance});
 }
 
 async function evaluate(pool) {
@@ -72,15 +77,180 @@ async function evaluate(pool) {
   return {roll, formula, results: activeResults(roll)};
 }
 
-const diceHTML = results => `<div class="r21-dice">${results.toSorted((a, b) => b - a).map(value => `<span class="r21-die r21-die-${value === 6 ? "perfect" : value === 5 ? "solid" : value === 4 ? "quick" : "whiff"}">${value}</span>`).join("")}</div>`;
-/** KILL THE BUDDHA dice coloured by Opening rank: 1 Whiff, 2–3 Quick, 4–5 Solid, 6 Perfect. */
+const diceHTML = results => `<div class="r21-dice">${results.toSorted((a, b) => b - a).map(value => `<span class="r21-die r21-die-${value === 6 ? "solid" : value >= 4 ? "quick" : "whiff"}">${value}</span>`).join("")}</div>`;
+/** KILL THE BUDDHA dice coloured by Opening rank: 1–3 Whiff, 4–5 Quick, 6 Solid (Perfects come only from fusing two Solids). */
 const openingDiceHTML = results => `<div class="r21-dice">${results.toSorted((a, b) => b - a).map(value => `<span class="r21-die r21-die-${openingRank(value)}" title="${openingRank(value)[0].toUpperCase()}${openingRank(value).slice(1)}">${value}</span>`).join("")}</div>`;
 /** Target rows with chat actions; buttons are wired by chat21.mjs. */
-export function targetsHTML(targets, {respond = true} = {}) {
+export function targetsHTML(targets, {respond = true, spend = false} = {}) {
   if (!targets?.length) return "";
-  return `<div class="r21-targets"><h4>Targets</h4><ul>${targets.map((target, index) => `<li><span class="r21-target-name">${escapeHTML(target.name)}${target.label ? ` · ${escapeHTML(target.label)}` : ""}${target.warning ? ` <strong class="r21-warning">${escapeHTML(target.warning)}</strong>` : ""}</span><span class="r21-target-actions">${respond ? `<button type="button" data-r21-action="respond" data-target="${index}">Respond: KILL THE BUDDHA</button>` : ""}<button type="button" data-r21-action="damage" data-target="${index}">Apply damage</button></span></li>`).join("")}</ul><p class="hint">A GM or the target's owner uses these buttons.</p></div>`;
+  return `<div class="r21-targets"><h4>Targets</h4><ul>${targets.map((target, index) => `<li><span class="r21-target-name">${escapeHTML(target.name)}${target.label ? ` · ${escapeHTML(target.label)}` : ""}${target.warning ? ` <strong class="r21-warning">${escapeHTML(target.warning)}</strong>` : ""}</span><span class="r21-target-actions">${respond ? `<button type="button" data-r21-action="respond" data-target="${index}">Respond: KILL THE BUDDHA</button>` : ""}${spend ? `<button type="button" data-r21-action="spend" data-target="${index}">Spend Strikes</button>` : ""}<button type="button" data-r21-action="damage" data-target="${index}">Apply damage</button></span></li>`).join("")}</ul><p class="hint">A GM or the target's owner uses these buttons.</p></div>`;
 }
 const partsHTML = parts => parts.length ? `<ul class="r21-mods">${parts.map(part => `<li>${escapeHTML(part.label)}: ${signed(part.value)}</li>`).join("")}</ul>` : "";
+
+/** Defender rows for the Strikes engine: each defender Blocks or Dodges. Wired by chat21.mjs. */
+function strikesTargetsHTML(targets) {
+  if (!targets?.length) return `<p class="hint">Target tokens (T) first so the defender can Block or Dodge from this card.</p>`;
+  return `<div class="r21-targets"><h4>Defenders</h4><ul>${targets.map((target, index) => `<li><span class="r21-target-name">${escapeHTML(target.name)}${target.label ? ` · ${escapeHTML(target.label)}` : ""}${target.warning ? ` <strong class="r21-warning">${escapeHTML(target.warning)}</strong>` : ""}</span><span class="r21-target-actions"><button type="button" data-r21-action="block" data-target="${index}">Block (your Weapon Check)</button><button type="button" data-r21-action="dodge" data-target="${index}">Dodge (Motorics + Thews And Sinews)</button></span></li>`).join("")}</ul><p class="hint">A GM or the defender's owner rolls the defense.</p></div>`;
+}
+
+/** Strikes engine: a defender Blocks (Physique + Beast Shrine) or Dodges (Motorics + Thews And Sinews). Their Strikes
+ *  cancel the attacker's; any leftover land and are posted with an Apply-damage button on the defender. */
+export async function resolveDefenseStrikes21(data, kind, defender, defenderToken) {
+  blockedByState(defender);
+  const system = defender.system;
+  const block = kind === "block";
+  if (block && data.unblockable) throw new Error("This attack is UNBLOCKABLE: Dodge instead.");
+  // 2.1 book p.117: Block is the defender's own WEAPON CHECK; Dodge is Motorics + Thews And Sinews.
+  const held = (defender.items?.contents ?? []).filter(item => item.type === "weapon" && item.system.equipped);
+  const defWeapon = held.find(item => !weaponProfile21(item.system).ranged) ?? held[0] ?? null;
+  const defProfile = weaponProfile21(defWeapon?.system ?? null, {cores: system.cores});
+  const core = block ? defProfile.core : "mot", skill = block ? defProfile.skill : "thewsSinews";
+  const label = block ? `Block · ${defWeapon?.name ?? "Empty Hand"}` : "Dodge";
+  const rating = skillRating(system, skill), state = stateFor(defender, core);
+  const weaponBonus = block ? int(defProfile.bonus) : 0;
+  const pool = int(system.cores?.[core]) + rating.value + weaponBonus + state.total + int(system.checkBonus) + int(system.defenseBonus);
+  // The target of an Ambush (p.124) and anyone attacked while Casting Magick (p.119) rolls a halved pool, rounded down.
+  const casting = int(system.casting?.charges) > 0, halved = !!data.ambush || casting;
+  const rolled = halved ? halvedPool21(pool) : pool;
+  const {roll, formula, results} = await evaluate(rolled);
+  const defStrikes = results.filter(value => value >= 4).length, attackerStrikes = Math.max(0, int(data.strikes));
+  // Whoever wins the Conflict Check deals weapon damage, even the Defender; a Tie deals none.
+  const margin = attackerStrikes - defStrikes, net = Math.abs(margin), defenderWins = margin < 0;
+  const defenderTarget = {name: defender.name, tokenUuid: defenderToken?.document?.uuid ?? defenderToken?.uuid ?? "", actorUuid: defender.uuid ?? ""};
+  const attackerTarget = {name: data.attackerName || "the attacker", tokenUuid: data.attackerToken ?? "", actorUuid: data.attacker ?? ""};
+  const loser = defenderWins ? attackerTarget : defenderTarget;
+  const damage = defenderWins ? defProfile.damage : int(data.damage), damageText = defenderWins ? defProfile.damageText : data.damageText;
+  const single = defenderWins ? (defProfile.ranged && !defProfile.auto) : !!data.singleEffect;
+  const buys = [net >= 1 ? "HIT — a Random or Controlled Part, or Knockback 2 m (1)" : "", net >= 2 ? "BODY HIT — the Torso (2)" : "", net >= 3 ? "CALLED HIT — a Limb (3)" : "", net >= 4 ? "HEAD HIT — the Head (4)" : ""].filter(Boolean).join(" · ");
+  const verdict = margin === 0
+    ? `<p class="r21-result"><strong>Tie.</strong> ${defStrikes} Strike${defStrikes === 1 ? "" : "s"} cancel all ${attackerStrikes} — no damage. The attacker may Flurry.</p>`
+    : `<p class="r21-result ${defenderWins ? "success" : "failure"}"><strong>${escapeHTML(defenderWins ? defender.name : attackerTarget.name)} wins by ${net} Strike${net === 1 ? "" : "s"}</strong> — attacker ${attackerStrikes} vs ${escapeHTML(label)} ${defStrikes}.${defenderWins ? " The Defender deals the damage." : ""}</p>
+       <p>Spend them: ${buys}. <strong>${damage} damage</strong> (${escapeHTML(damageText)}) per damaging Strike; choose the type when you apply it.${single ? ` Ranged without AUTO: buy one effect only — the other ${Math.max(0, net - 1)} Strike${net - 1 === 1 ? "" : "s"} add that much damage.` : ""}</p>`;
+  // Cover (p.122): each instance of ranged damage has a 2-in-6 (Light) or 4-in-6 (Heavy) chance of hitting the cover instead.
+  let coverHTML = "";
+  if (!defenderWins && net > 0 && data.ranged && COVER_21[data.cover]) {
+    const spec = COVER_21[data.cover], count = single ? 1 : net;
+    const faces = activeResults(await new foundry.dice.Roll(`${count}d6`).evaluate()), hits = coverHits21(faces, data.cover);
+    coverHTML = `<p><strong>${spec.label}</strong> (${spec.chance}-in-6 per instance of ranged damage): ${faces.map((value, index) => `<span class="r21-die r21-die-${hits[index] ? "whiff" : "quick"}">${value}</span> ${hits[index] ? "hits the cover" : "gets through"}`).join(" · ")}.${count > 1 ? " Use them in order, one per instance of damage bought." : ""} ${spec.parts} Body Part${spec.parts === 1 ? "" : "s"} cannot be hit, following the fiction.</p>`;
+  }
+  // FLURRY (p.117): the Winner — or the Attacker on a Tie — may KILL THE BUDDHA again next Tick, up to MOT times;
+  // each continuation adds 2 to the RECOVERY afterwards. A winning Defender starts their own count.
+  const speed = defenderWins ? (int(system.r21?.ticks?.recovery) || ticksSpeed21(system.cores?.wit, system.cores?.mnd, defProfile.spd)) : Math.max(0, int(data.attackerSpeed));
+  const mot = defenderWins ? Math.max(0, int(system.cores?.mot)) : Math.max(0, int(data.attackerMot));
+  const flurry = defenderWins ? 0 : Math.max(0, int(data.flurry));
+  const canFlurry = flurry < mot;
+  const readyDelay = flurryReadyDelay21(speed, flurry);
+  const presser = defenderWins ? defender.name : attackerTarget.name;
+  const flurryHTML = `<p class="hint">Flurry (${escapeHTML(presser)}): pressed ${flurry} of ${mot} (MOT). Stop now and the next READY lands <strong>${readyDelay}</strong> Tick${readyDelay === 1 ? "" : "s"} after the Tick acted on (Recovery ${speed} + 2 × ${flurry}).${canFlurry ? "" : " No Flurry left."}</p>${canFlurry ? `<p><button type="button" data-r21-action="flurry" data-target="0">Flurry — ${escapeHTML(presser)} KILLS THE BUDDHA again</button></p>` : ""}`;
+  const html = `<h3>${escapeHTML(label)} · ${escapeHTML(defender.name)}</h3>
+    <p>Pool ${pool}: ${CORES[core].abbr} ${int(system.cores?.[core])} + ${escapeHTML(rating.label)} ${rating.value}${weaponBonus ? ` ${signed(weaponBonus)} weapon` : ""}${halved ? ` — <strong>halved to ${rolled}</strong> (${data.ambush ? "Ambushed" : "attacked while Casting Magick"})` : ""}. ${formula}</p>${diceHTML(results)}${verdict}${coverHTML}${margin === 0 ? "" : targetsHTML([loser], {respond: false, spend: true})}${flurryHTML}`;
+  const winner = defenderWins
+    ? {attacker: defender.uuid ?? "", attackerToken: defenderTarget.tokenUuid, attackerName: defender.name, defenderToken: data.attackerToken ?? "", weaponId: defWeapon?.id ?? "",
+       weapon: defWeapon?.name ?? "Empty Hand", crushing: defProfile.crushing, piercing: defProfile.piercing, visceral: defProfile.visceral, part: "", randomParts: [], randomKeys: []}
+    : {attacker: data.attacker, attackerToken: data.attackerToken, attackerName: data.attackerName ?? "", defenderToken: defenderTarget.tokenUuid, weaponId: data.weaponId ?? "",
+       weapon: data.weapon, crushing: data.crushing, piercing: data.piercing, visceral: !!data.visceral, part: data.part, randomParts: data.randomParts, randomKeys: data.randomKeys};
+  const flags = {[SYSTEM]: {ktbStrikes: {strikes: net, damage, damageText, single, targets: [loser], ...winner, flurry, attackerSpeed: speed, attackerMot: mot}}};
+  return post(defender, roll, html, flags);
+}
+
+/** Target rows for a Find-an-Opening maneuver: each target Resists with the maneuver's opposed pool. */
+function maneuverTargetsHTML(targets, resistLabel) {
+  if (!targets?.length) return `<p class="hint">Target tokens (T) first so the target can Resist from this card.</p>`;
+  return `<div class="r21-targets"><h4>Targets</h4><ul>${targets.map((target, index) => `<li><span class="r21-target-name">${escapeHTML(target.name)}${target.label ? ` · ${escapeHTML(target.label)}` : ""}</span><span class="r21-target-actions"><button type="button" data-r21-action="resist" data-target="${index}">Resist (${escapeHTML(resistLabel)})</button></span></li>`).join("")}</ul><p class="hint">A GM or the target's owner Resists.</p></div>`;
+}
+
+const maneuverResistLabel = spec => `${CORES[spec.defCore].abbr} + ${escapeHTML(CULTIVATIONS_21[spec.defSkill]?.label ?? spec.defSkill)}`;
+
+/** KTB 2.1 "Finding an Opening": the 7 example maneuvers. A contested Check; the target Resists from the card. */
+export async function findOpening21(actor, {maneuver: chosenManeuver = "", weaponId = "", targets: chosenTargets, source: chosenSource} = {}) {
+  blockedByState(actor);
+  const system = actor.system;
+  const weapons = (actor.items?.contents ?? []).filter(item => item.type === "weapon" && item.system.equipped);
+  const source = chosenSource ?? actingToken(actor);
+  const aimed = collectTargets(actor, {source, tokens: chosenTargets});
+  const aimedHTML = aimed.length ? `<p class="hint">Targets: ${aimed.map(t => escapeHTML(t.name)).join(", ")}.</p>` : `<p class="hint">No targets. Target tokens (T) first so they can Resist from the chat card.</p>`;
+  const maneuverOptions = MANEUVER_KEYS.map(key => `<option value="${key}" ${key === chosenManeuver ? "selected" : ""}>${escapeHTML(MANEUVERS_21[key].label)}</option>`).join("");
+  const weaponOptions = `<option value="">Empty Hand</option>${weapons.map(w => `<option value="${w.id}" ${w.id === weaponId ? "selected" : ""}>${escapeHTML(w.name)}</option>`).join("")}`;
+  const input = await DialogV2().prompt({
+    classes: ["swords-attack-dialog"], window: {title: "Find an Opening"},
+    content: `<label>Maneuver<select name="maneuver">${maneuverOptions}</select></label>
+      <label>Weapon (Onslaught / Volley)<select name="weaponId">${weaponOptions}</select></label>
+      <label>Bonus / penalty dice<input name="adjustment" type="number" step="1" value="0"></label>
+      <label>Volley: extra Ammo dice ([AUTO], 0–3)<input name="autoAmmo" type="number" min="0" max="3" step="1" value="0"></label>
+      ${aimedHTML}<p class="hint">A contested Check — the target Resists from the chat card. Onslaught and Volley roll the WEAPON pool; the others use the maneuver's listed Core + Cultivation.</p>`,
+    ok: {label: "Roll", callback: (event, button) => {
+      const f = button.form.elements;
+      return {maneuver: f.maneuver.value, weaponId: f.weaponId.value, adjustment: Number(f.adjustment.value), autoAmmo: Number(f.autoAmmo.value)};
+    }}, rejectClose: false
+  });
+  if (!input) return null;
+  const spec = MANEUVERS_21[input.maneuver];
+  if (!spec) throw new Error("Choose a maneuver.");
+  if (!Number.isSafeInteger(input.adjustment)) throw new Error("Adjustments must be whole numbers.");
+
+  let atkCore, atkSkill, atkLabel, weapon = null, ammoShots = 0;
+  const mods = [];
+  if (spec.weapon) {
+    weapon = input.weaponId ? actor.items.get(input.weaponId) : null;
+    if (input.weaponId && (weapon?.type !== "weapon" || !weapon.system.equipped)) throw new Error("Equip this weapon before the maneuver.");
+    const profile = weaponProfile21(weapon?.system ?? null, {cores: system.cores});
+    if (spec.range === "melee" && profile.ranged) throw new Error(`${spec.label} is a melee maneuver; ${profile.label} is a ranged weapon.`);
+    if (spec.range === "ranged" && !profile.ranged) throw new Error(`${spec.label} is a ranged maneuver; equip a ranged weapon.`);
+    atkCore = profile.core; atkSkill = profile.skill; atkLabel = `${escapeHTML(weapon?.name ?? "Empty Hand")} · ${profile.label}`;
+    if (profile.bonus) mods.push({label: "Weapon modifiers", value: profile.bonus});
+    if (spec.auto) { const n = Math.max(0, Math.min(3, int(input.autoAmmo))); if (n) mods.push({label: `[AUTO] extra Ammo (${n})`, value: n}); ammoShots = n; }
+  } else {
+    atkCore = spec.atkCore; atkSkill = spec.atkSkill;
+    atkLabel = spec.emptyHand ? "Empty Hand" : `${CORES[atkCore].abbr} + ${escapeHTML(CULTIVATIONS_21[atkSkill]?.label ?? atkSkill)}`;
+  }
+  const state = stateFor(actor, atkCore);
+  if (input.adjustment) mods.push({label: "Adjustment", value: input.adjustment});
+  if (state.ignorePenalties) mods.splice(0, mods.length, ...withoutPenalties(mods, true));
+  const rating = skillRating(system, atkSkill), coreValue = int(system.cores?.[atkCore]);
+  const pool = coreValue + rating.value + mods.reduce((sum, mod) => sum + mod.value, 0) + state.total + int(system.checkBonus) + int(system.attackBonus);
+
+  const perform = async () => {
+    const {roll, formula, results} = await evaluate(pool);
+    const strikes = results.filter(value => value >= 4).length;
+    const targets = aimed.map(target => ({name: target.name, tokenUuid: target.tokenUuid, actorUuid: target.actorUuid, label: target.label}));
+    const html = `<h3>Find an Opening · ${escapeHTML(spec.label)}</h3>
+      <p class="r21-result"><strong>${strikes} Strike${strikes === 1 ? "" : "s"}</strong> · ${atkLabel}.</p>
+      ${diceHTML(results)}
+      <p>Pool ${pool}: ${CORES[atkCore].abbr} ${coreValue} + ${escapeHTML(rating.label)} ${rating.value}. ${formula}</p>${partsHTML([...mods.filter(mod => mod.value), ...state.parts])}
+      <p class="hint">${escapeHTML(spec.text)}</p>
+      ${spec.needsControl ? `<p class="hint">Requires a Part already Controlled (seize one with Control first).</p>` : ""}
+      ${maneuverTargetsHTML(targets, maneuverResistLabel(spec))}`;
+    return post(actor, roll, html, {[SYSTEM]: {ktbManeuver21: {maneuver: input.maneuver, strikes, targets,
+      attacker: actor.uuid ?? "", attackerToken: source?.document?.uuid ?? "", physique: int(system.cores?.phy)}}});
+  };
+  if (weapon && spec.weapon && spec.ammo) return useWeapon(actor, weapon.id, () => perform(), "", Math.max(1, int(spec.ammo) + ammoShots));
+  return perform();
+}
+
+/** The target Resists a Find-an-Opening maneuver: roll the opposed pool, resolve, and apply conditions. */
+export async function resolveManeuver21(data, defender, defenderToken) {
+  blockedByState(defender);
+  const spec = MANEUVERS_21[data.maneuver];
+  if (!spec) throw new Error("Unknown maneuver.");
+  const system = defender.system;
+  const rating = skillRating(system, spec.defSkill), state = stateFor(defender, spec.defCore);
+  const pool = int(system.cores?.[spec.defCore]) + rating.value + state.total + int(system.checkBonus) + int(system.defenseBonus);
+  const {roll, formula, results} = await evaluate(pool);
+  const defStrikes = results.filter(value => value >= 4).length, atkStrikes = Math.max(0, int(data.strikes));
+  const outcome = maneuverOutcome21(data.maneuver, atkStrikes, defStrikes, {physique: int(data.physique)});
+  const landed = outcome.applyToDefender === "control" || outcome.margin > 0;
+  let note = "";
+  if (spec.needsControl && !system.conditions21?.control) note += `<p class="hint">${escapeHTML(defender.name)} has no Controlled Part — this maneuver needs one first.</p>`;
+  if (outcome.applyToDefender && defender.isOwner) {
+    try { await defender.update({[`system.conditions21.${outcome.applyToDefender}`]: true}); }
+    catch (error) { note += `<p class="hint">Could not set the condition automatically: ${escapeHTML(error.message)}</p>`; }
+  }
+  const resultClass = outcome.margin > 0 ? "failure" : outcome.margin < 0 ? "success" : "";
+  const html = `<h3>Resist · ${escapeHTML(spec.label)} · ${escapeHTML(defender.name)}</h3>
+    <p>Pool ${pool}: ${CORES[spec.defCore].abbr} ${int(system.cores?.[spec.defCore])} + ${escapeHTML(rating.label)} ${rating.value}. ${formula}</p>${diceHTML(results)}
+    <p class="r21-result ${resultClass}"><strong>${atkStrikes} attacker vs ${defStrikes} defender</strong> — ${escapeHTML(outcome.summary)}</p>${note}`;
+  return post(defender, roll, html, {});
+}
 
 async function post(actor, roll, html, flags = {}) {
   return roll.toMessage({speaker: foundry.documents.ChatMessage.getSpeaker({actor}), flavor: `<section class="r21-chat">${html}</section>`, flags},
@@ -189,12 +359,19 @@ export async function castMagick21(actor, magick, {sheet = null} = {}) {
   return message;
 }
 
+/** Dice So Nice: animate a roll that is shown through custom HTML rather than its own chat card (bonus dice: Ferocious, Precise).
+ *  A no-op when Dice So Nice is not installed. Guarded so it never blocks the roll. */
+async function animate3d(roll) {
+  try { await globalThis.game?.dice3d?.showForRoll?.(roll, globalThis.game?.user, true); } catch { /* DSN optional */ }
+}
+
 async function ferociousDice(sixes, limit) {
   const extra = [];
   let pending = sixes;
   while (pending > 0 && extra.length < limit) {
     const count = Math.min(pending, limit - extra.length);
     const roll = await new foundry.dice.Roll(`${count}d6`).evaluate();
+    await animate3d(roll);
     const values = activeResults(roll);
     extra.push(...values);
     pending = values.filter(value => value === 6).length;
@@ -209,7 +386,7 @@ async function randomParts(count) {
 }
 
 /** pp.22–38: KILL THE BUDDHA — the attack check, rolled by every participant. */
-export async function killTheBuddha(actor, {weaponId = "", targets: chosenTargets, source: chosenSource} = {}) {
+export async function killTheBuddha(actor, {weaponId = "", targets: chosenTargets, source: chosenSource, flurry = 0} = {}) {
   blockedByState(actor);
   const system = actor.system;
   if (system.conditions21?.juggled) throw new Error("Juggled: you have no Openings in this KILL THE BUDDHA (p.35).");
@@ -221,37 +398,49 @@ export async function killTheBuddha(actor, {weaponId = "", targets: chosenTarget
   const aimed = collectTargets(actor, {source, tokens: chosenTargets});
   const measured = aimed.find(target => target.distance !== null)?.distance;
   const aimedHTML = aimed.length ? `<p class="hint">Targets: ${aimed.map(target => `${escapeHTML(target.name)}${target.distance !== null ? ` (${target.distance} m)` : ""}`).join(", ")}${source ? "" : " · select your own token to measure distance"}.</p>` : `<p class="hint">No targets. Target tokens (T) first to measure distance and apply damage from the chat card.</p>`;
-  const select = (name, options) => `<select name="${name}">${options.map(([value, label]) => `<option value="${value}">${label}</option>`).join("")}</select>`;
+  const select = (name, options, chosenValue = null) => `<select name="${name}">${options.map(([value, label]) => `<option value="${value}" ${chosenValue !== null && value === chosenValue ? "selected" : ""}>${label}</option>`).join("")}</select>`;
+  // Strikes engine: the 2.1 book's Firefight (Aim, cover per damage instance, out of range goes wide) replaces the dice penalties.
+  const strikesEngine = ktbEngine21() === "strikes", motorics = Math.max(0, int(system.cores?.mot));
+  const targetTokens = (chosenTargets ?? [...(globalThis.game?.user?.targets ?? [])]).filter(token => token?.actor && token !== source);
+  // A lone target behind a Shield, COVER or WALL weapon starts with that cover selected.
+  const carried = targetTokens.length === 1 ? (targetTokens[0].actor.items?.contents ?? []).filter(item => item.type === "weapon" && item.system.equipped).map(item => weaponProfile21(item.system).cover) : [];
+  const defaultCover = carried.includes("heavy") ? "heavy" : carried.includes("light") ? "light" : "";
   const input = await DialogV2().prompt({
     classes: ["swords-attack-dialog"], position: {width: 620, height: 700}, window: {title: "KILL THE BUDDHA", resizable: true},
     content: `<fieldset class="attack-group"><legend>Weapon &amp; pool</legend><div class="attack-fields">
-      <label>Weapon<select name="weaponId"><option value="">Empty Hand (1 damage)</option>${weapons.map(weapon => `<option value="${weapon.id}" ${weapon.id === chosen?.id ? "selected" : ""}>${escapeHTML(weapon.name)} · ${weaponProfile21(weapon.system).label}</option>`).join("")}</select></label>
+      <label>Weapon<select name="weaponId"><option value="">Empty Hand (PHYS damage)</option>${weapons.map(weapon => {
+        const wp = weaponProfile21(weapon.system); const wa = wp.ranged ? ammoSummary21(actor, weapon) : null;
+        return `<option value="${weapon.id}" ${weapon.id === chosen?.id ? "selected" : ""}>${escapeHTML(weapon.name)} · ${wp.label}${wa ? ` · ⦾ ${wa.count} ${escapeHTML(wa.label)}` : ""}</option>`;
+      }).join("")}</select></label>
       <label>Core<select name="core">${coreOptions(preview.core)}</select></label>
       <label>Cultivation<select name="skill">${skillOptions(system, preview.skill)}</select></label>
       <label>Bonus / penalty dice<input name="adjustment" type="number" step="1" value="0"></label></div>
       ${aimedHTML}<p class="hint">Physique + Beast Shrine to strike or parry; Motorics + Beast Shrine to move or dodge; Motorics + Hand-Eye Coordination to shoot (p.22).</p></fieldset>
-      <fieldset class="attack-group"><legend>Ranged (Firefight, p.29)</legend><div class="attack-fields">
+      <fieldset class="attack-group"><legend>${strikesEngine ? "Ranged (Firefight, 2.1 p.119)" : "Ranged (Firefight, p.29)"}</legend><div class="attack-fields">
       <label>Distance (m)<input name="distance" type="number" min="0" step="any" value="${measured ?? ""}"></label>
       <label>Firing mode${select("mode", [["shoot", "Shoot"], ["burst", "Burst (+Rate dice)"], ["full", "Full Auto (+Rate×3 dice)"], ["suppress", "Suppression Fire (Rate 15+, Alpha p.10)"]])}</label>
       <label>Shots (Shoot, up to Rate)<input name="shots" type="number" min="1" step="1" value="1"></label>
       <label>Shoot Demand (+1 damage when exceeded)<input name="demand" type="number" min="1" step="1" value="1"></label>
       <label>Ammo<select name="ammoId"><option value="">Use weapon selection</option>${ammo}</select></label>
-      <label>Cover (ranged only)${select("cover", [["0", "None"], ["-2", "Light cover (-2)"], ["-4", "Heavy cover (-4)"]])}</label></div></fieldset>
+      ${strikesEngine ? `<label>Ticks spent Aiming (+1 die each, max MOT ${motorics}; no moving)<input name="aim" type="number" min="0" max="${motorics}" step="1" value="0"></label>
+      <label>Target's cover (ranged only)${select("cover", [["", "None"], ["light", "Light — 2-in-6 per damage instance hits cover"], ["heavy", "Heavy — 4-in-6 per damage instance hits cover"], ["full", "Full — no attack until it is removed"]], defaultCover)}</label>`
+        : `<label>Cover (ranged only)${select("cover", [["0", "None"], ["-2", "Light cover (-2)"], ["-4", "Heavy cover (-4)"]])}</label>`}</div>
+      ${strikesEngine ? `<p class="hint">Beyond the weapon's range a shot has a 4-in-6 chance of going wide. Reloading takes an Action, or is free outside a KILL THE BUDDHA.</p>` : ""}</fieldset>
       <fieldset class="attack-group"><legend>Situation (pp.13, 33–35)</legend><div class="attack-fields">
-      <label>Height${select("height", [["0", "Level"], ["-1", "Steps / gentle slope (-1)"], ["-2", "Spiral steps / steep slope (-2)"], ["-3", "Unclimbable / ladder (-3)"]])}</label>
+      <label>Height${strikesEngine ? select("height", [["0", "Level, or below the target"], ["1", "At least 1 m above the target (+1)"]]) : select("height", [["0", "Level"], ["-1", "Steps / gentle slope (-1)"], ["-2", "Spiral steps / steep slope (-2)"], ["-3", "Unclimbable / ladder (-3)"]])}</label>
       <label>Unstable terrain${select("unstable", [["0", "Stable"], ["-1", "Unstable (-1)"], ["-2", "Very unstable (-2)"], ["-3", "Treacherous (-3)"]])}</label></div>
       <div class="attack-options">
       <label class="attack-option"><input type="checkbox" name="impaired"> Impaired senses (-2)</label>
       <label class="attack-option"><input type="checkbox" name="lowLight"> Low light (-2 to anything that needs sight)</label>
       <label class="attack-option"><input type="checkbox" name="mud"> Knee-deep water or mud (-2)</label>
       <label class="attack-option"><input type="checkbox" name="juggledTarget"> Target is Juggled (+2)</label>
-      <label class="attack-option"><input type="checkbox" name="ambush"> Ambush: Strikes damage one Part (p.36)</label>
+      <label class="attack-option"><input type="checkbox" name="ambush"> ${strikesEngine ? "Ambush: the target's pool is halved (2.1 p.124)" : "Ambush: Strikes damage one Part (p.36)"}</label>
       ${actor.type === "npc" ? '<label class="attack-option"><input type="checkbox" name="static"> Gambits: predetermined Openings, Quick → Quick → Solid → Perfect per die (p.17)</label>' : ""}
       </div><label>Ambush / called Part${select("part", [["", "—"], ...PART_KEYS.map(key => [key, PARTS[key].label])])}</label></fieldset>`,
     ok: {label: "KILL THE BUDDHA", callback: (event, button) => {
       const f = button.form.elements, num = name => Number(f.namedItem(name)?.value ?? 0), on = name => f.namedItem(name)?.checked ?? false;
       return {weaponId: f.weaponId.value, core: f.core.value, skill: f.skill.value, adjustment: num("adjustment"), distance: f.distance.value, mode: f.mode.value,
-        shots: num("shots"), demand: num("demand"), ammoId: f.ammoId.value, cover: num("cover"), height: num("height"), unstable: num("unstable"),
+        shots: num("shots"), demand: num("demand"), ammoId: f.ammoId.value, cover: strikesEngine ? f.cover.value : num("cover"), aim: num("aim"), height: num("height"), unstable: num("unstable"),
         impaired: on("impaired"), lowLight: on("lowLight"), mud: on("mud"), juggledTarget: on("juggledTarget"), ambush: on("ambush"), static: on("static"), part: f.part.value};
     }}, rejectClose: false
   });
@@ -271,12 +460,19 @@ export async function killTheBuddha(actor, {weaponId = "", targets: chosenTarget
       fire.shots = input.shots * (profile.auto ? 3 : 1); // book p.171: every Shoot with an AUTO weapon uses 3 bullets
     }
     if (fire.dice) mods.push({label: fire.label, value: fire.dice});
-    const range = rangePenalty(input.distance === "" ? NaN : input.distance, profile.range);
-    if (range.value) mods.push({label: `Range ${range.label}`, value: range.value});
-    if (input.cover) mods.push({label: "Cover", value: input.cover});
+    if (strikesEngine) {
+      if (input.cover === "full") throw new Error("Full Cover: a full-on attack is impossible until the cover is weakened or removed (2.1 p.122).");
+      if (!Number.isSafeInteger(input.aim) || input.aim < 0) throw new Error("Ticks spent Aiming must be a whole number, 0 or more.");
+      const aim = aimBonus21(input.aim, motorics);
+      if (aim) mods.push({label: `Aim (${aim} Tick${aim === 1 ? "" : "s"})`, value: aim});
+    } else {
+      const range = rangePenalty(input.distance === "" ? NaN : input.distance, profile.range);
+      if (range.value) mods.push({label: `Range ${range.label}`, value: range.value});
+      if (input.cover) mods.push({label: "Cover", value: input.cover});
+    }
   }
   for (const [key, label, value] of [["impaired", "Impaired senses", -2], ["lowLight", "Low light", -2], ["mud", "Water or mud", -2], ["juggledTarget", "Target Juggled", 2]]) if (input[key]) mods.push({label, value});
-  if (input.height) mods.push({label: "Height", value: input.height});
+  if (input.height) mods.push({label: input.height > 0 ? "Above the target" : "Height", value: input.height});
   if (input.unstable) mods.push({label: "Unstable terrain", value: input.unstable});
   if (input.adjustment) mods.push({label: "Adjustment", value: input.adjustment});
   const state = stateFor(actor, input.core);
@@ -294,7 +490,9 @@ export async function killTheBuddha(actor, {weaponId = "", targets: chosenTarget
       if (profile.precise) { // book p.171: PRECISE rerolls 1s, once
         const ones = results.filter(value => value === 1).length;
         if (ones) {
-          const again = activeResults(await new foundry.dice.Roll(`${ones}d6`).evaluate());
+          const reroll = await new foundry.dice.Roll(`${ones}d6`).evaluate();
+          await animate3d(reroll);
+          const again = activeResults(reroll);
           results = [...results.filter(value => value !== 1), ...again]; mods.push({label: `PRECISE rerolled ${ones} die${ones === 1 ? "" : "s"} (${again.join(", ")})`, value: 0});
         }
       }
@@ -313,6 +511,31 @@ export async function killTheBuddha(actor, {weaponId = "", targets: chosenTarget
       const reach = targetReach(profile, distance);
       return {...target, distance: reach.distance, label: reach.label, warning: reach.warning};
     });
+    if (ktbEngine21() === "strikes") {
+      // 2.1 Strikes engine: the defender Blocks or Dodges; their Strikes cancel the attacker's, leftovers buy damage.
+      let landed = counts.strikes, firefightHTML = "";
+      if (profile.ranged && outOfRange21(input.distance, profile.range)) {
+        const face = int(activeResults(await new foundry.dice.Roll("1d6").evaluate())[0]), wide = goesWide21(face);
+        if (wide) landed = 0;
+        firefightHTML += `<p class="r21-result ${wide ? "failure" : "success"}"><strong>Out of range</strong> (${escapeHTML(String(input.distance))} m; range ${profile.range} m): d6 = ${face} — ${wide ? "the shot goes wide. No Strikes land" : "still on target"} (4-in-6 to go wide).</p>`;
+      }
+      const cover = profile.ranged && COVER_21[input.cover] ? input.cover : "";
+      if (cover) firefightHTML += `<p class="hint">${COVER_21[cover].label}: ${escapeHTML(COVER_21[cover].text)} Rolled when the defender resolves.</p>`;
+      if (input.ambush) firefightHTML += `<p class="hint">Ambush: the target's KILL THE BUDDHA pool is halved, rounded down.</p>`;
+      const sHtml = `<h3>KILL THE BUDDHA — Strikes · ${escapeHTML(weapon?.name ?? "Empty Hand")}${int(flurry) > 0 ? ` · Flurry ${int(flurry)}` : ""}</h3>
+      <p class="r21-result"><strong>${landed} Strike${landed === 1 ? "" : "s"}</strong> to cancel and spend.${int(flurry) > 0 ? ` <span class="hint">Anticipated Action — flurry ${int(flurry)} of ${Math.max(0, int(system.cores?.mot))}.</span>` : ""}</p>
+      ${input.static ? "" : openingDiceHTML(results)}${firefightHTML}
+      <p>Pool ${pool}: ${CORES[input.core].abbr} ${coreValue} + ${escapeHTML(rating.label)} ${rating.value}. ${input.static ? "" : formula}</p>${partsHTML([...mods.filter(mod => mod.value || mod.label.startsWith("FEROCIOUS") || mod.label.startsWith("PRECISE")), ...state.parts])}
+      <p><strong>${profile.label}</strong>: ${damage} damage (${profile.damageText}) per damaging Strike${profile.piercing ? " · PIERCING, ignores Soak" : ""}${profile.ranged ? ` · Range ${profile.range} m · Rate ${profile.rate} · ${fire.label}, ${fire.shots} shot(s)` : ` · Reach ${profile.range} m`}.</p>
+      ${profile.notes.map(note => `<p class="hint">${escapeHTML(note)}</p>`).join("")}
+      <details open><summary>Resolving Strikes</summary><p>Each Defender Strike cancels one attacker Strike. Leftover Strikes buy: <strong>1</strong> = a Random or Controlled Part, or Knockback 2 m · <strong>2</strong> = the Torso · <strong>3</strong> = a Limb · <strong>4</strong> = the Head. You may spend per Strike (2 Strikes = the Torso once, or a Random Part twice). Choose the damage type when you apply damage.</p></details>
+      ${random.length ? `<p><strong>Random hit locations</strong>: ${random.map(escapeHTML).join(", ")}.</p>` : ""}${strikesTargetsHTML(targets)}`;
+      return post(actor, roll, sHtml, {[SYSTEM]: {ktbStrikes: {strikes: landed, ranged: !!profile.ranged, cover, ambush: !!input.ambush, damage, damageText: profile.damageText, weapon: weapon?.name ?? "Empty Hand",
+        crushing: profile.crushing, piercing: profile.piercing, visceral: profile.visceral, part: input.part, randomParts: random, randomKeys, targets,
+        attacker: actor.uuid ?? "", attackerToken: source?.document?.uuid ?? "", attackerName: actor.name ?? "", flurry: int(flurry), weaponId: input.weaponId ?? "",
+        attackerSpeed: int(system.r21?.ticks?.recovery) || ticksSpeed21(system.cores?.wit, system.cores?.mnd, profile.spd), attackerMot: Math.max(0, int(system.cores?.mot)),
+        singleEffect: !!profile.ranged && !profile.auto, unblockable: !!profile.unblockable}}});
+    }
     const html = `<h3>KILL THE BUDDHA · ${escapeHTML(weapon?.name ?? "Empty Hand")}</h3>
       <div class="r21-openings"><span class="r21-open quick">${counts.quick} Quick</span><span class="r21-open solid">${counts.solid} Solid</span><span class="r21-open perfect">${counts.perfect} Perfect</span><span class="r21-open whiff">${counts.whiff} Whiff</span></div>
       ${input.static ? `<p>Gambit Openings: one per die of pool ${pool}, in the sequence Quick → Quick → Solid → Perfect.</p>` : openingDiceHTML(results)}
@@ -322,12 +545,12 @@ export async function killTheBuddha(actor, {weaponId = "", targets: chosenTarget
       ${input.ambush ? `<p><strong>Ambush:</strong> each Strike deals ${damage} damage to ${escapeHTML(PARTS[input.part]?.label ?? "the Part named before the Ambush")} immediately.</p>` : ""}
       ${random.length ? `<p><strong>Random hit locations</strong> (every Strike must deal damage, no aiming): ${random.map(escapeHTML).join(", ")}.</p>` : ""}
       <details><summary>Resolving Openings</summary><ul>
-      <li>Each die is an Opening: 1 Whiff, 2–3 Quick, 4–5 Solid, 6 Perfect. Quick Openings resolve first, then Solid, then Perfect (p.10).</li>
+      <li>Each die is an Opening: 1–3 Whiff, 4–5 Quick, 6 Solid. No die rolls a Perfect — Perfects come only from fusing two Solids. Quick Openings resolve first, then Solid, then Perfect (p.10).</li>
       <li>Counter with an Opening of equal or greater rank; Solid vs Quick or Perfect vs Solid is a Greater Counter (+Quick); Perfect vs Quick is an Overwhelming Counter (+Solid) (pp.26–27).</li>
       <li>Fuse two equal Openings into the next rank: up to ${fusion.quickToSolid} Quick→Solid, ${fusion.solidToPerfect} Solid→Perfect (p.25). Cultivators may burn 1 Sidhi to upgrade an Opening or turn a Whiff into a Quick (p.26).</li>
       </ul></details>${targetsHTML(targets)}`;
     const message = await post(actor, roll, html, {[SYSTEM]: {ktb: {...counts, weapon: weapon?.name ?? "Empty Hand", damage, pool, randomParts: random, randomKeys,
-      targets, attackerToken: source?.document?.uuid ?? "", attacker: actor.uuid ?? "", crushing: profile.crushing, piercing: profile.piercing, part: input.part}}});
+      targets, attackerToken: source?.document?.uuid ?? "", attacker: actor.uuid ?? "", crushing: profile.crushing, piercing: profile.piercing, visceral: profile.visceral, part: input.part}}});
     return message;
   };
   const shots = profile.ranged ? fire.shots ?? 1 : 0;
@@ -350,10 +573,10 @@ async function suppressionFire(actor, weapon, profile, input) {
   return useWeapon(actor, weapon.id, () => perform(), input.ammoId ?? "", Math.max(1, profile.rate));
 }
 
-/** p.14: Head damage forces a Stun Check (Heart + Stillness). Anvil Head adds dice (p.48). */
+/** 2.1 book p.121: any damage to the Head forces a Stun Check (Heart + Stillness). Anvil Head adds dice. */
 export async function stunCheck(actor) {
   const system = actor.system, assets = system.r21?.assets ?? system.assets;
-  const input = await DialogV2().prompt({window: {title: "Stun Check"}, content: `<p>Heart + Stillness${assetStars(assets, "anvilHead") ? ` + Anvil Head ${assetStars(assets, "anvilHead")}` : ""}. The manuscript gives no Demand; the Intercessor sets it.</p><label>Demand<input name="demand" type="number" min="1" step="1" value="1"></label>`,
+  const input = await DialogV2().prompt({window: {title: "Stun Check"}, content: `<p>Heart + Stillness${assetStars(assets, "anvilHead") ? ` + Anvil Head ${assetStars(assets, "anvilHead")}` : ""}. The book gives no Demand (p.121); the Intercessor sets it.</p><label>Demand<input name="demand" type="number" min="1" step="1" value="1"></label>`,
     ok: {label: "Roll", callback: (event, button) => Number(button.form.elements.demand.value)}, rejectClose: false});
   if (!input) return null;
   if (!Number.isSafeInteger(input) || input < 1) throw new Error("Demand must be a positive whole number.");
@@ -361,7 +584,7 @@ export async function stunCheck(actor) {
   const {roll, results} = await evaluate(pool);
   const strikes = results.filter(value => value >= 4).length, success = strikes >= input;
   if (!success) await actor.update({"system.conditions21.stunned": true});
-  return post(actor, roll, `<h3>Stun Check</h3><p class="r21-result ${success ? "success" : "failure"}"><strong>${strikes} Strikes</strong> vs Demand ${input} — ${success ? "keeps their head" : "Stunned: cannot do anything for 3 seconds"}</p>${diceHTML(results)}`);
+  return post(actor, roll, `<h3>Stun Check</h3><p class="r21-result ${success ? "success" : "failure"}"><strong>${strikes} Strikes</strong> vs Demand ${input} — ${success ? "keeps their head" : "Stunned: cannot do anything for 6 seconds"}</p>${diceHTML(results)}`);
 }
 
 /** p.14: spend 1 Morale; Heart + Adamance vs 2 + Disabled Parts to keep fighting. */
@@ -369,13 +592,13 @@ export async function incapacitationCheck(actor) {
   const system = actor.system, source = actor.toObject().system;
   if (int(source.morale?.value) < 1) throw new Error("No Morale remains to spend on an Incapacitation Check.");
   const disabled = disabledParts(actor), demand = incapacitationDemand(disabled.length);
-  const ok = await DialogV2().confirm({window: {title: "Keep fighting?"}, content: `<p>Spend 1 Morale to roll Heart + Adamance against Demand ${demand} (2 + ${disabled.length} Disabled Parts)?</p>`, rejectClose: false});
+  const ok = await DialogV2().confirm({window: {title: "Morale Check · keep fighting?"}, content: `<p>Spend 1 Morale to roll Heart + Adamance against Demand ${demand} (2 + ${disabled.length} Disabled Parts)?</p><p class="hint">Made when a Part is Disabled and the fight goes on (p.120), and at this table after losing Head HP.</p>`, rejectClose: false});
   if (!ok) return null;
   await actor.update({"system.morale.value": int(source.morale.value) - 1});
   const pool = int(system.cores?.spi) + int(system.skills?.adamance) + stateFor(actor, "spi").total;
   const {roll, results} = await evaluate(pool);
   const strikes = results.filter(value => value >= 4).length, success = strikes >= demand;
-  return post(actor, roll, `<h3>Incapacitation Check</h3><p class="r21-result ${success ? "success" : "failure"}"><strong>${strikes} Strikes</strong> vs Demand ${demand} — ${success ? "keeps fighting" : "succumbs to pain"}</p>${diceHTML(results)}<p>Spent 1 Morale. A Cultivator who spends Morale this way may enter Samadhi for 3 seconds (Alpha p.53).</p>`);
+  return post(actor, roll, `<h3>Morale Check · Incapacitation</h3><p class="r21-result ${success ? "success" : "failure"}"><strong>${strikes} Strikes</strong> vs Demand ${demand} — ${success ? "keeps fighting" : "succumbs to pain"}</p>${diceHTML(results)}<p>Spent 1 Morale. A Cultivator who spends Morale this way may enter Samadhi for 3 seconds (Alpha p.53).</p>`);
 }
 
 /** p.31 hit location table. */
@@ -386,27 +609,100 @@ export async function randomPart(actor) {
 }
 
 /** pp.31–34, 38, 66: damage removes Soak first, then HP; reports Disabled/Cleaved consequences. */
-export async function damagePart(actor, partKey, {part: defaultPart = "", amount = 2, crushing = false, ignoreSoak = false, hint = ""} = {}) {
+export async function damagePart(actor, partKey, {part: defaultPart = "", amount = 2, crushing = false, ignoreSoak = false, visceral = false, hint = ""} = {}) {
   const parts = actor.system.r21?.parts ?? {};
   const selected = PARTS[partKey] ? partKey : defaultPart;
   const input = await DialogV2().prompt({window: {title: `Apply damage · ${actor.name ?? "Target"}`},
     content: `${hint ? `<p class="hint">${escapeHTML(hint)}</p>` : ""}<label>Part<select name="part">${PART_KEYS.map(key => `<option value="${key}" ${key === selected ? "selected" : ""}>${PARTS[key].label} (HP ${parts[key]?.hp ?? "?"}, Soak ${parts[key]?.soak ?? 0})</option>`).join("")}</select></label>
       <label>Damage<input name="amount" type="number" min="1" step="1" value="${Math.max(1, int(amount) || 2)}"></label>
+      <label>Damage type (2.1)<select name="dtype"><option value="">— (use the boxes below)</option>${DAMAGE_TYPE_KEYS.map(key => `<option value="${key}">${DAMAGE_TYPES_21[key].label} — ${escapeHTML(DAMAGE_TYPES_21[key].text)}</option>`).join("")}</select></label>
       <label><input type="checkbox" name="crushing" ${crushing ? "checked" : ""}> CRUSHING / Bludgeon Perfect: 2 Soak per damage</label>
-      <label><input type="checkbox" name="ignoreSoak" ${ignoreSoak ? "checked" : ""}> Ignores Soak (e.g. Dagger Perfect Opening)</label>`,
-    ok: {label: "Apply", callback: (event, button) => ({part: button.form.elements.part.value, amount: Number(button.form.elements.amount.value), crushing: button.form.elements.crushing.checked, ignoreSoak: button.form.elements.ignoreSoak.checked})},
+      <label><input type="checkbox" name="ignoreSoak" ${ignoreSoak ? "checked" : ""}> Ignores Soak (e.g. Dagger Perfect Opening)</label>
+      <label><input type="checkbox" name="visceral" ${visceral ? "checked" : ""}> VISCERAL: +1 damage if the Part has no Soak (2.1 p.194)</label>`,
+    ok: {label: "Apply", callback: (event, button) => ({part: button.form.elements.part.value, amount: Number(button.form.elements.amount.value), dtype: button.form.elements.dtype?.value ?? "", crushing: button.form.elements.crushing.checked, ignoreSoak: button.form.elements.ignoreSoak.checked, visceral: button.form.elements.visceral?.checked ?? false})},
     rejectClose: false});
   if (!input) return null;
   if (!PARTS[input.part] || !Number.isSafeInteger(input.amount) || input.amount < 1) throw new Error("Choose a Part and a positive whole amount of damage.");
-  const derived = parts[input.part], source = actor.toObject().system.parts[input.part];
-  const result = applyPartDamage({max: derived.max, damage: source.damage, soak: derived.soak}, input.amount, input);
-  await actor.update({[`system.parts.${input.part}.damage`]: result.after.damage, [`system.parts.${input.part}.soakLost`]: int(source.soakLost) + result.soakLoss});
-  return postDamage(actor, input.part, result);
+  const applied = await applyDamage21(actor, input.part, input.amount, input);
+  return postDamage(actor, input.part, applied.result, applied.typeLabel, applied.visceral ? "VISCERAL: +1 damage, the Part had no Soak." : "");
+}
+
+/** Applies damage to one Part without asking: Soak first, then HP, with the chosen 2.1 damage type. Returns what happened. */
+export async function applyDamage21(actor, part, amount, {dtype = "", crushing = false, ignoreSoak = false, visceral = false} = {}) {
+  const derived = actor.system.r21?.parts?.[part], source = actor.toObject().system.parts[part];
+  if (!derived || !source) throw new Error("That Part is not on this character.");
+  // A chosen 2.1 damage type overrides the crushing/ignore-Soak boxes; otherwise keep the old behaviour.
+  const type = DAMAGE_TYPES_21[dtype] ? damageOptions21(dtype) : null;
+  const dealt = Math.max(1, int(amount)) + visceralBonus21(visceral, derived.soak);
+  const result = applyPartDamage({max: derived.max, damage: source.damage, soak: derived.soak}, dealt, type ?? {crushing, ignoreSoak});
+  const changes = {[`system.parts.${part}.damage`]: result.after.damage,
+    [`system.parts.${part}.soakLost`]: int(source.soakLost) + result.soakLoss + (type ? int(type.reduceSoak) : 0)};
+  if (type?.bleeds && result.hpLoss > 0) changes["system.conditions21.bleeding"] = true;
+  await actor.update(changes);
+  return {result, dealt, typeLabel: type ? DAMAGE_TYPES_21[dtype].label : "", visceral: dealt > Math.max(1, int(amount))};
+}
+
+/** Buttons for the two Checks that follow lost Head HP; chat21.mjs wires them through the message's headHit21 flag. */
+export const headChecksHTML21 = () => `<p class="r21-head-checks"><button type="button" data-r21-check="stun">Stun Check</button><button type="button" data-r21-check="morale">Morale Check (1 Morale)</button></p><p class="hint">A GM or the character's owner rolls these.</p>`;
+
+/**
+ * Spend the Strikes won in a KILL THE BUDDHA (2.1 book p.117). The Winner picks effects up to the Strikes won; each
+ * damaging effect deals the weapon's damage to the loser, random Parts are rolled, and one card reports the lot.
+ */
+export async function spendStrikes21(loser, data) {
+  const strikes = Math.max(0, int(data.strikes)), damage = Math.max(1, int(data.damage) || 1), single = !!data.single;
+  if (strikes < 1) throw new Error("No Strikes were won on this card.");
+  const options = strikeOptions21(strikes), slots = single ? 1 : Math.min(strikes, 8), parts = loser.system.r21?.parts ?? {};
+  const optionHTML = first => `${first ? "" : `<option value="">— nothing more</option>`}${options.map(option => `<option value="${option.value}" data-cost="${option.cost}">${escapeHTML(option.label)}</option>`).join("")}`;
+  const input = await DialogV2().prompt({window: {title: `Spend Strikes · ${data.attackerName || "Winner"} → ${loser.name ?? "Target"}`},
+    content: `<p><strong>${strikes} Strike${strikes === 1 ? "" : "s"}</strong> to spend; each damaging effect deals <strong>${damage}</strong> (${escapeHTML(data.damageText ?? "weapon damage")}).</p>
+      <p class="hint">HIT 1 · KNOCKBACK 1 · BODY HIT 2 · CALLED HIT 3 · HEAD HIT 4 (p.117).${single ? " Ranged without AUTO: one effect only; every Strike left over is +1 damage." : " Buy as many as the Strikes allow."} If the card rolled Cover, leave out the instances that hit the cover.</p>
+      ${Array.from({length: slots}, (_, index) => `<label>Effect ${slots > 1 ? index + 1 : ""}<select name="pick${index}" data-strike-pick>${optionHTML(index === 0)}</select></label>`).join("")}
+      <p data-strikes-left class="hint"></p>
+      <label>Damage type<select name="dtype"><option value="">— as the weapon (boxes below)</option>${DAMAGE_TYPE_KEYS.map(key => `<option value="${key}">${DAMAGE_TYPES_21[key].label} — ${escapeHTML(DAMAGE_TYPES_21[key].text)}</option>`).join("")}</select></label>
+      <label><input type="checkbox" name="crushing" ${data.crushing ? "checked" : ""}> CRUSHING: 2 Soak per damage</label>
+      <label><input type="checkbox" name="ignoreSoak" ${data.piercing ? "checked" : ""}> Ignores Soak</label>
+      <label><input type="checkbox" name="visceral" ${data.visceral ? "checked" : ""}> VISCERAL: +1 damage if the Part has no Soak</label>
+      <p class="hint">${PART_KEYS.map(key => `${PARTS[key].label}: HP ${parts[key]?.hp ?? "?"}, Soak ${parts[key]?.soak ?? 0}`).join(" · ")}</p>`,
+    render: (event, shown) => {
+      try {
+        const root = shown?.element ?? shown, left = root?.querySelector?.("[data-strikes-left]"), picks = [...(root?.querySelectorAll?.("[data-strike-pick]") ?? [])];
+        if (!left) return;
+        const update = () => { const spent = picks.reduce((sum, pick) => sum + int(pick.selectedOptions?.[0]?.dataset?.cost), 0); left.textContent = spent > strikes ? `${spent} of ${strikes} Strikes: ${spent - strikes} too many.` : `${spent} of ${strikes} Strikes spent${single && spent ? `; +${strikes - spent} damage` : `; ${strikes - spent} left`}.`; };
+        for (const pick of picks) pick.addEventListener("change", update);
+        update();
+      } catch { /* the counter is a convenience; the choice is checked again on Apply */ }
+    },
+    ok: {label: "Apply", callback: (event, button) => { const fields = button.form.elements; return {picks: Array.from({length: slots}, (_, index) => fields[`pick${index}`]?.value ?? ""), dtype: fields.dtype?.value ?? "", crushing: !!fields.crushing?.checked, ignoreSoak: !!fields.ignoreSoak?.checked, visceral: !!fields.visceral?.checked}; }},
+    rejectClose: false});
+  if (!input) return null;
+  const plan = strikePlan21(strikes, input.picks, {single});
+  if (!plan.ok) throw new Error(plan.error);
+  const lines = [];
+  let headHit = false;
+  for (const effect of plan.effects) {
+    const title = effect.label.split(" — ")[0];
+    if (!effect.part) { lines.push(`<li><strong>${escapeHTML(title)}</strong>: knocked back 2 m.</li>`); continue; }
+    let part = effect.part, rolled = "";
+    if (part === "random") {
+      const d6 = activeResults(await new foundry.dice.Roll("1d6").evaluate())[0];
+      part = partFromD6(d6); rolled = ` (d6 = ${d6})`;
+    }
+    const applied = await applyDamage21(loser, part, damage + plan.extraDamage, input);
+    const result = applied.result, notes = damageConsequences(part, result);
+    if (applied.visceral) notes.unshift("VISCERAL: +1 damage, the Part had no Soak.");
+    if (result.absorbed > 0) for (const key of loser.system.r21?.parts?.[part]?.armorMods ?? []) if (ARMOR_MODS_21[key]?.onSoak) notes.push(`${ARMOR_MODS_21[key].label}: the armor's Soak reduced this damage — ${ARMOR_MODS_21[key].onSoak}.`);
+    if (part === "head" && result.hpLoss > 0) headHit = true;
+    lines.push(`<li><strong>${escapeHTML(title)} → ${PARTS[part].label}</strong>${rolled}${applied.typeLabel ? ` · ${escapeHTML(applied.typeLabel)}` : ""}: ${applied.dealt} damage${plan.extraDamage ? ` (${damage} + ${plan.extraDamage} from Strikes left over)` : ""}. Soaked ${result.absorbed} (Soak −${result.soakLoss}) · HP −${result.hpLoss} → ${result.after.hp} / ${result.after.max} · <strong>${result.after.status}</strong>${notes.map(note => `<br><span class="hint">${escapeHTML(note)}</span>`).join("")}</li>`);
+  }
+  const content = `<section class="r21-chat"><h3>Strikes spent · ${escapeHTML(data.attackerName || "Winner")} → ${escapeHTML(loser.name ?? "Target")}</h3>
+    <p>${plan.spent} of ${strikes} Strike${strikes === 1 ? "" : "s"} spent${plan.left > 0 ? ` — <strong>${plan.left} left unspent</strong>` : ""}${data.weapon ? ` with ${escapeHTML(data.weapon)}` : ""}.</p><ul class="r21-mods">${lines.join("")}</ul>${headHit ? headChecksHTML21() : ""}</section>`;
+  return foundry.documents.ChatMessage.create({speaker: foundry.documents.ChatMessage.getSpeaker({actor: loser}), content, flags: headHit ? {[SYSTEM]: {headHit21: {actor: loser.uuid ?? ""}}} : {}});
 }
 
 export function damageConsequences(part, result) {
   const notes = [];
-  if (part === "head" && result.hpLoss > 0) notes.push("Head damage: make a Stun Check (Heart + Stillness) and a Morale Check (p.14).");
+  if (part === "head" && result.hpLoss > 0) notes.push("Head damage: make a Stun Check (Heart + Stillness, p.121) and a Morale Check.");
   if (result.newlyDisabled) {
     notes.push("A Part is Disabled: most beings stop fighting; spend 1 Morale for an Incapacitation Check to continue (p.31).");
     if (part === "torso") notes.push("Torso Disabled: winded, -4 to all Checks.");
@@ -418,10 +714,13 @@ export function damageConsequences(part, result) {
   return notes;
 }
 
-async function postDamage(actor, part, result) {
-  const notes = damageConsequences(part, result);
-  const content = `<section class="r21-chat"><h3>${escapeHTML(actor.name)} · ${PARTS[part].label}</h3><p>Soaked ${result.absorbed} (Soak −${result.soakLoss}) · HP −${result.hpLoss} → ${result.after.hp} / ${result.after.max} · <strong>${result.after.status}</strong></p>${notes.map(note => `<p>${escapeHTML(note)}</p>`).join("")}</section>`;
-  return foundry.documents.ChatMessage.create({speaker: foundry.documents.ChatMessage.getSpeaker({actor}), content});
+async function postDamage(actor, part, result, damageType = "", extraNote = "") {
+  const notes = damageConsequences(part, result), headHit = part === "head" && result.hpLoss > 0;
+  if (extraNote) notes.unshift(extraNote);
+  // Armor Mods that answer when the piece's Soak reduces damage (2.1 p.202).
+  if (result.absorbed > 0) for (const key of actor.system.r21?.parts?.[part]?.armorMods ?? []) if (ARMOR_MODS_21[key]?.onSoak) notes.push(`${ARMOR_MODS_21[key].label}: the armor's Soak reduced this damage — ${ARMOR_MODS_21[key].onSoak}.`);
+  const content = `<section class="r21-chat"><h3>${escapeHTML(actor.name)} · ${PARTS[part].label}${damageType ? ` · ${escapeHTML(damageType)}` : ""}</h3><p>Soaked ${result.absorbed} (Soak −${result.soakLoss}) · HP −${result.hpLoss} → ${result.after.hp} / ${result.after.max} · <strong>${result.after.status}</strong></p>${notes.map(note => `<p>${escapeHTML(note)}</p>`).join("")}${headHit ? headChecksHTML21() : ""}</section>`;
+  return foundry.documents.ChatMessage.create({speaker: foundry.documents.ChatMessage.getSpeaker({actor}), content, flags: headHit ? {[SYSTEM]: {headHit21: {actor: actor.uuid ?? ""}}} : {}});
 }
 
 export {ATTACHMENT_STRENGTHS, partState};

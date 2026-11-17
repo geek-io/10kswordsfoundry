@@ -64,8 +64,8 @@
    "effects": [],
    "sort": 0,
    "system": {
-    "description": "<p><strong>Class · roll 3d6: 3-6</strong></p><p>Oh, wretched of the scum of the earth! Declassed as you are, you hold no organization, but plenty of potential revolution. You can never see the means of production. You are the one the economy needs but will never employ. Unreliable to the Revolution. Capable of desperate revolt but also of cynical reaction.</p><ul><li><strong>Cores:</strong> ✦✦, ✦✦, ✦✦, ✦✦, ✦, ✦</li><li><strong>Cultivations:</strong> ✦✦ to three Cultivations, ✦ to three Cultivations</li><li><strong>Assets:</strong> start with ✦ to buy</li><li><strong>Gear:</strong> One item, randomly rolled</li><li><strong>Starting ♄:</strong> 1 × d6 mag</li></ul><p>Roll a d6 to find out what type you are:</p><ul><li>✦ 1-3: You are Reserve Army. The unemployed, the underemployed, the ones between shifts. The vagrants and the nomads and the addicts. The dregs of society. Useful to preserving the order.</li><li>✦ 4-5: You are Underworld. Smugglers, thieves, unlicensed assayers, the black market's labor force.</li><li>✦ 6: You are Declassed. The fallen bourgeois — the heir who lost the capital, the officer who lost the pension, the sect master who lost the sect. The most dangerous type, because it remembers what it was.</li></ul><p><em>Class is your relation to the means of production — what you own, what you sell, and what owns you. It is not Alignment, and it is not a cage (book p.46). Drop the Class on a 2.1 character to record it; assign the Stars, Assets, gear and starting ♄ by hand.</em></p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.46",
+    "description": "<p><strong>Class · roll 3d6: 3-6</strong></p><p>Oh, wretched of the scum of the earth! Declassed as you are, you hold no organization, but plenty of potential revolution. You can never see the means of production. You are the one the economy needs but will never employ. Unreliable to the Revolution. Capable of desperate revolt but also of cynical reaction.</p><ul><li><strong>Cores:</strong> ✦✦, ✦✦, ✦✦, ✦✦, ✦, ✦</li><li><strong>Cultivations:</strong> ✦✦ to three Cultivations, ✦ to three Cultivations</li><li><strong>Assets:</strong> start with ✦ to buy</li><li><strong>Supply:</strong> One item, randomly rolled</li><li><strong>Starting ♄:</strong> 1 × d6 mag</li></ul><p>Roll a d6 to find out what type you are:</p><ul><li>✦ 1-3: You are Reserve Army. The unemployed, the underemployed, the ones between shifts. The vagrants and the nomads and the addicts. The dregs of society. Useful to preserving the order.</li><li>✦ 4-5: You are Underworld. Smugglers, thieves, unlicensed assayers, the black market's labor force.</li><li>✦ 6: You are Declassed. The fallen bourgeois — the heir who lost the capital, the officer who lost the pension, the sect master who lost the sect. The most dangerous type, because it remembers what it was.</li></ul><p><em>Class is your relation to the means of production — what you own, what you sell, and what owns you. It is not Alignment, and it is not a cage (2.1 rulebook p.44). Perform the Sutras with Cultivator Discovery in the Actors tab, or drop the Class on a 2.1 character to record it and assign the Stars, Assets, Supply and starting ♄ by hand.</em></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.44",
     "category": "body",
     "cultivations": {
      "vio": 1,
@@ -110,8 +110,8 @@
    "effects": [],
    "sort": 1000,
    "system": {
-    "description": "<p><strong>Class · roll 3d6: 7-8</strong></p><p>A half-breed—only partially dependent on wages, and partially dependent on their own land or machinery or another seasonal/part time employment. Half your soul in the mines, half in the land. Half a wage, half a harvest. Half a machine, half a canvas. Half a master, half a slave. Reliable allies for revolution, but easily purchasable as well.</p><ul><li><strong>Cores:</strong> ✦✦✦, ✦✦, ✦✦, ✦✦, ✦, ✦</li><li><strong>Cultivations:</strong> ✦✦ to four Cultivations, ✦ to four Cultivations</li><li><strong>Assets:</strong> start with ✦✦ to buy</li><li><strong>Gear:</strong> Two items or one item + one weapon</li><li><strong>Starting ♄:</strong> 100 × d6 mag</li></ul><p><em>Class is your relation to the means of production — what you own, what you sell, and what owns you. It is not Alignment, and it is not a cage (book p.46). Drop the Class on a 2.1 character to record it; assign the Stars, Assets, gear and starting ♄ by hand.</em></p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.47",
+    "description": "<p><strong>Class · roll 3d6: 7-8</strong></p><p>A half-breed—only partially dependent on wages, and partially dependent on their own land or machinery or another seasonal/part time employment. Half your soul in the mines, half in the land. Half a wage, half a harvest. Half a machine, half a canvas. Half a master, half a slave. Reliable allies for revolution, but easily purchasable as well.</p><ul><li><strong>Cores:</strong> ✦✦✦, ✦✦, ✦✦, ✦✦, ✦, ✦</li><li><strong>Cultivations:</strong> ✦✦ to four Cultivations, ✦ to four Cultivations</li><li><strong>Assets:</strong> start with ✦✦ to buy</li><li><strong>Starting ♄:</strong> 100 × d6 mag</li></ul><p><em>Class is your relation to the means of production — what you own, what you sell, and what owns you. It is not Alignment, and it is not a cage (2.1 rulebook p.44). Perform the Sutras with Cultivator Discovery in the Actors tab, or drop the Class on a 2.1 character to record it and assign the Stars, Assets, Supply and starting ♄ by hand.</em></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.45",
     "category": "body",
     "cultivations": {
      "vio": 1,
@@ -141,7 +141,7 @@
        "1": 4
       },
       "assets": 2,
-      "gear": "Two items or one item + one weapon",
+      "gear": "",
       "magPerD6": 100
      }
     }
@@ -156,8 +156,8 @@
    "effects": [],
    "sort": 2000,
    "system": {
-    "description": "<p><strong>Class · roll 3d6: 9-12</strong></p><p>Arise, ye prisoners of starvation! Arise, ye wretched of the earth! Justice thunders condemnation! You are 100% dependent on your wages for the most elementary of human needs. Not even able to afford shelter, housing, and medicine. But organized within the workplace, or with coworkers. The nucleus of the world—every magicite shard comes from your backbreaking work.</p><ul><li><strong>Cores:</strong> ✦✦✦, ✦✦✦, ✦✦, ✦✦, ✦, ✦</li><li><strong>Cultivations:</strong> ✦✦ to five Cultivations, ✦ to five Cultivations</li><li><strong>Assets:</strong> start with ✦✦ to buy</li><li><strong>Gear:</strong> Two gear + one item</li><li><strong>Starting ♄:</strong> 20 × d6 mag</li></ul><p>Roll a d6 to find out your sector:</p><ul><li>✦ 1: Mining. Shortest lives. Bound together.</li><li>✦ 2: Agrarian. Farmers, harvesters, slaves.</li><li>✦ 3: Industry. Refiners, carpenters, foremen, construction, devil engine workers, weavers, assembly line slaves.</li><li>✦ 4: Service. Clerks, tellers, customer service, masseuses, waiters, and so on.</li><li>✦ 5: Transport. The skyship crew, the caravan hand.</li><li>✦ 6: Sect. Sidhi workers, working for Sect's Gossamer Looms and computers.</li></ul><p><em>Class is your relation to the means of production — what you own, what you sell, and what owns you. It is not Alignment, and it is not a cage (book p.46). Drop the Class on a 2.1 character to record it; assign the Stars, Assets, gear and starting ♄ by hand.</em></p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.47",
+    "description": "<p><strong>Class · roll 3d6: 9-12</strong></p><p>Arise, ye prisoners of starvation! Arise, ye wretched of the earth! Justice thunders condemnation! You are 100% dependent on your wages for the most elementary of human needs. Not even able to afford shelter, housing, and medicine. But organized within the workplace, or with coworkers. The nucleus of the world—every magicite shard comes from your backbreaking work.</p><ul><li><strong>Cores:</strong> ✦✦✦, ✦✦✦, ✦✦, ✦✦, ✦, ✦</li><li><strong>Cultivations:</strong> ✦✦ to five Cultivations, ✦ to five Cultivations</li><li><strong>Assets:</strong> start with ✦✦ to buy</li><li><strong>Starting ♄:</strong> 20 × d6 mag</li></ul><p>Roll a d6 to find out your sector:</p><ul><li>✦ 1: Mining. Shortest lives. Bound together.</li><li>✦ 2: Agrarian. Farmers, harvesters, slaves.</li><li>✦ 3: Industry. Refiners, carpenters, foremen, construction, devil engine workers, weavers, assembly line slaves.</li><li>✦ 4: Service. Clerks, tellers, customer service, masseuses, waiters, and so on.</li><li>✦ 5: Transport. The skyship crew, the caravan hand.</li><li>✦ 6: Sect. Sidhi workers, working for Sect's Gossamer Looms and computers.</li></ul><p><em>Class is your relation to the means of production — what you own, what you sell, and what owns you. It is not Alignment, and it is not a cage (2.1 rulebook p.44). Perform the Sutras with Cultivator Discovery in the Actors tab, or drop the Class on a 2.1 character to record it and assign the Stars, Assets, Supply and starting ♄ by hand.</em></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.45",
     "category": "body",
     "cultivations": {
      "vio": 1,
@@ -187,7 +187,7 @@
        "1": 5
       },
       "assets": 2,
-      "gear": "Two gear + one item",
+      "gear": "",
       "magPerD6": 20
      }
     }
@@ -202,8 +202,8 @@
    "effects": [],
    "sort": 3000,
    "system": {
-    "description": "<p><strong>Class · roll 3d6: 13</strong></p><p>The small business owner, the scourge of the proletariat! Your class interest is in getting richer, and those damned communists are so fucking annoying about it. Shouldn't everyone get rich? For the Revolution? Don't get it twisted: you're always just one day away from proletarianization.</p><ul><li><strong>Cores:</strong> ✦✦✦, ✦✦✦, ✦✦✦, ✦✦, ✦, ✦</li><li><strong>Cultivations:</strong> ✦✦ to five Cultivations, ✦ to five Cultivations</li><li><strong>Assets:</strong> start with ✦✦✦ to buy</li><li><strong>Gear:</strong> Two gear + one item</li><li><strong>Starting ♄:</strong> 150 × d6 mag</li></ul><p><em>Class is your relation to the means of production — what you own, what you sell, and what owns you. It is not Alignment, and it is not a cage (book p.46). Drop the Class on a 2.1 character to record it; assign the Stars, Assets, gear and starting ♄ by hand.</em></p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.48",
+    "description": "<p><strong>Class · roll 3d6: 13</strong></p><p>The small business owner, the scourge of the proletariat! Your class interest is in getting richer, and those damned communists are so fucking annoying about it. Shouldn't everyone get rich? For the Revolution? Don't get it twisted: you're always just one day away from proletarianization.</p><ul><li><strong>Cores:</strong> ✦✦✦, ✦✦✦, ✦✦✦, ✦✦, ✦, ✦</li><li><strong>Cultivations:</strong> ✦✦ to five Cultivations, ✦ to five Cultivations</li><li><strong>Assets:</strong> start with ✦✦✦ to buy</li><li><strong>Starting ♄:</strong> 160 × d6 mag</li></ul><p><em>Class is your relation to the means of production — what you own, what you sell, and what owns you. It is not Alignment, and it is not a cage (2.1 rulebook p.44). Perform the Sutras with Cultivator Discovery in the Actors tab, or drop the Class on a 2.1 character to record it and assign the Stars, Assets, Supply and starting ♄ by hand.</em></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.46",
     "category": "body",
     "cultivations": {
      "vio": 1,
@@ -233,8 +233,8 @@
        "1": 5
       },
       "assets": 3,
-      "gear": "Two gear + one item",
-      "magPerD6": 150
+      "gear": "",
+      "magPerD6": 160
      }
     }
    },
@@ -248,8 +248,8 @@
    "effects": [],
    "sort": 4000,
    "system": {
-    "description": "<p><strong>Class · roll 3d6: 14</strong></p><p>The nation as it stands has gone through an evolution in the Trichiliocosm. Most nations encompass the majority of entities within a Sphere. Some Hells (such as Hingsajagra), still have divided national bourgeoisie, fighting for national development. Something they will never get, of course, as long as they are under imperialism. You are a dangerous ally: you will march with the workers to strike at Heaven's heart, but it is in your class interest to either work with Heaven or sit upon its thrones.</p><ul><li><strong>Cores:</strong> ✦✦✦, ✦✦✦, ✦✦✦, ✦✦, ✦✦, ✦</li><li><strong>Cultivations:</strong> ✦✦✦ to one Cultivation, ✦✦ to five Cultivations, ✦ to five Cultivations</li><li><strong>Assets:</strong> start with ✦✦✦✦ to buy</li><li><strong>Gear:</strong> Two gear + two items</li><li><strong>Starting ♄:</strong> 200 × d6 mag</li></ul><p>Roll d6 to see where you struggle:</p><ul><li>✦ 1-4: You are Sub-Spherical Bourgeoisie or National Bourgeoisie. You want national progress for your own wishes.</li><li>✦ 5-6: You are World Bourgeoisie. You are owners of businesses and means of production that want to accelerate and/or progress the Spherical industries of your particular sphere (in this case, of Hingsajagra).</li></ul><p><em>Class is your relation to the means of production — what you own, what you sell, and what owns you. It is not Alignment, and it is not a cage (book p.46). Drop the Class on a 2.1 character to record it; assign the Stars, Assets, gear and starting ♄ by hand.</em></p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.49",
+    "description": "<p><strong>Class · roll 3d6: 14</strong></p><p>The nation as it stands has gone through an evolution in the Trichiliocosm. Most nations encompass the majority of entities within a Sphere. Some Hells (such as Hingsajagra), still have divided national bourgeoisie, fighting for national development. Something they will never get, of course, as long as they are under imperialism. You are a dangerous ally: you will march with the workers to strike at Heaven's heart, but it is in your class interest to either work with Heaven or sit upon its thrones.</p><ul><li><strong>Cores:</strong> ✦✦✦, ✦✦✦, ✦✦✦, ✦✦, ✦✦, ✦</li><li><strong>Cultivations:</strong> ✦✦✦ to one Cultivation, ✦✦ to five Cultivations, ✦ to five Cultivations</li><li><strong>Assets:</strong> start with ✦✦✦✦ to buy</li><li><strong>Starting ♄:</strong> 200 × d6 mag</li></ul><p>Roll d6 to see where you struggle:</p><ul><li>✦ 1-4: You are Sub-Spherical Bourgeoisie or National Bourgeoisie. You want national progress for your own wishes.</li><li>✦ 5-6: You are World Bourgeoisie. You are owners of businesses and means of production that want to accelerate and/or progress the Spherical industries of your particular sphere (in this case, of Hingsajagra).</li></ul><p><em>Class is your relation to the means of production — what you own, what you sell, and what owns you. It is not Alignment, and it is not a cage (2.1 rulebook p.44). Perform the Sutras with Cultivator Discovery in the Actors tab, or drop the Class on a 2.1 character to record it and assign the Stars, Assets, Supply and starting ♄ by hand.</em></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.46",
     "category": "body",
     "cultivations": {
      "vio": 1,
@@ -280,7 +280,7 @@
        "1": 5
       },
       "assets": 4,
-      "gear": "Two gear + two items",
+      "gear": "",
       "magPerD6": 200
      }
     }
@@ -295,8 +295,8 @@
    "effects": [],
    "sort": 5000,
    "system": {
-    "description": "<p><strong>Class · roll 3d6: 15</strong></p><p>The administer for the Imperial Core—that is to say, for the Heavens. You deliver labor, quell unrest, sign treaties, lobby for policies that strengthen imperialism, and take cuts from what they give you. It's not corruption, it's just the way things work around here. But when the Hells boil over, you are the first to be pulled. Those in the Heavens will toss you overboard first.</p><ul><li><strong>Cores:</strong> ✦✦✦, ✦✦✦, ✦✦✦, ✦✦, ✦✦, ✦✦</li><li><strong>Cultivations:</strong> ✦✦✦ to two Cultivations, ✦✦ to five Cultivations, ✦ to five Cultivations</li><li><strong>Assets:</strong> start with ✦✦✦✦ to buy</li><li><strong>Gear:</strong> Two gear + two items</li><li><strong>Starting ♄:</strong> 300 × d6 mag</li></ul><p><em>Class is your relation to the means of production — what you own, what you sell, and what owns you. It is not Alignment, and it is not a cage (book p.46). Drop the Class on a 2.1 character to record it; assign the Stars, Assets, gear and starting ♄ by hand.</em></p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.48",
+    "description": "<p><strong>Class · roll 3d6: 15</strong></p><p>The administer for the Imperial Core—that is to say, for the Heavens. You deliver labor, quell unrest, sign treaties, lobby for policies that strengthen imperialism, and take cuts from what they give you. It's not corruption, it's just the way things work around here. But when the Hells boil over, you are the first to be pulled. Those in the Heavens will toss you overboard first.</p><ul><li><strong>Cores:</strong> ✦✦✦, ✦✦✦, ✦✦✦, ✦✦, ✦✦, ✦✦</li><li><strong>Cultivations:</strong> ✦✦✦ to two Cultivations, ✦✦ to five Cultivations, ✦ to five Cultivations</li><li><strong>Assets:</strong> start with ✦✦✦✦ to buy</li><li><strong>Starting ♄:</strong> 300 × d6 mag</li></ul><p><em>Class is your relation to the means of production — what you own, what you sell, and what owns you. It is not Alignment, and it is not a cage (2.1 rulebook p.44). Perform the Sutras with Cultivator Discovery in the Actors tab, or drop the Class on a 2.1 character to record it and assign the Stars, Assets, Supply and starting ♄ by hand.</em></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.47",
     "category": "body",
     "cultivations": {
      "vio": 1,
@@ -327,7 +327,7 @@
        "1": 5
       },
       "assets": 4,
-      "gear": "Two gear + two items",
+      "gear": "",
       "magPerD6": 300
      }
     }
@@ -342,8 +342,8 @@
    "effects": [],
    "sort": 6000,
    "system": {
-    "description": "<p><strong>Class · roll 3d6: 16</strong></p><p>You clever devil you: a child of nepotism and political dynasty, rife in the Hells. Your Capital is the State, whether that be a government in a sphere or the World Government of a particular Sphere.</p><ul><li><strong>Cores:</strong> ✦✦✦, ✦✦✦, ✦✦✦, ✦✦, ✦✦, ✦✦</li><li><strong>Cultivations:</strong> ✦✦✦ to two Cultivations, ✦✦ to five Cultivations, ✦ to five Cultivations</li><li><strong>Assets:</strong> start with ✦✦✦✦ to buy</li><li><strong>Gear:</strong> One weapon + two armor pieces + two items</li><li><strong>Starting ♄:</strong> 500 × d6 mag</li></ul><p><em>Class is your relation to the means of production — what you own, what you sell, and what owns you. It is not Alignment, and it is not a cage (book p.46). Drop the Class on a 2.1 character to record it; assign the Stars, Assets, gear and starting ♄ by hand.</em></p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.48",
+    "description": "<p><strong>Class · roll 3d6: 16</strong></p><p>You clever devil you: a child of nepotism and political dynasty, rife in the Hells. Your Capital is the State, whether that be a government in a sphere or the World Government of a particular Sphere.</p><ul><li><strong>Cores:</strong> ✦✦✦, ✦✦✦, ✦✦✦, ✦✦, ✦✦, ✦✦</li><li><strong>Cultivations:</strong> ✦✦✦ to two Cultivations, ✦✦ to five Cultivations, ✦ to five Cultivations</li><li><strong>Assets:</strong> start with ✦✦✦✦ to buy</li><li><strong>Starting ♄:</strong> 500 × d6 mag</li></ul><p><em>Class is your relation to the means of production — what you own, what you sell, and what owns you. It is not Alignment, and it is not a cage (2.1 rulebook p.44). Perform the Sutras with Cultivator Discovery in the Actors tab, or drop the Class on a 2.1 character to record it and assign the Stars, Assets, Supply and starting ♄ by hand.</em></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.47",
     "category": "body",
     "cultivations": {
      "vio": 1,
@@ -374,7 +374,7 @@
        "1": 5
       },
       "assets": 4,
-      "gear": "One weapon + two armor pieces + two items",
+      "gear": "",
       "magPerD6": 500
      }
     }
@@ -389,8 +389,8 @@
    "effects": [],
    "sort": 7000,
    "system": {
-    "description": "<p><strong>Class · roll 3d6: 17</strong></p><p>The land-owning class. Extract profit through rent. You are the heirs of ancient feudalist styles of rule: kings and emperors. Warlords and Sect Masters who rule over those that live within them, extracting rent from them.</p><ul><li><strong>Cores:</strong> ✦✦✦, ✦✦✦, ✦✦✦, ✦✦✦, ✦✦, ✦✦</li><li><strong>Cultivations:</strong> ✦✦✦ to three Cultivations, ✦✦ to five Cultivations, ✦ to five Cultivations</li><li><strong>Assets:</strong> start with ✦✦✦✦✦ to buy</li><li><strong>Gear:</strong> Two weapons + two armor pieces + three items</li><li><strong>Starting ♄:</strong> 800 × d6 mag</li></ul><p><em>Class is your relation to the means of production — what you own, what you sell, and what owns you. It is not Alignment, and it is not a cage (book p.46). Drop the Class on a 2.1 character to record it; assign the Stars, Assets, gear and starting ♄ by hand.</em></p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.50",
+    "description": "<p><strong>Class · roll 3d6: 17</strong></p><p>The land-owning class. Extract profit through rent. You are the heirs of ancient feudalist styles of rule: kings and emperors. Warlords and Sect Masters who rule over those that live within them, extracting rent from them.</p><ul><li><strong>Cores:</strong> ✦✦✦, ✦✦✦, ✦✦✦, ✦✦✦, ✦✦, ✦✦</li><li><strong>Cultivations:</strong> ✦✦✦ to three Cultivations, ✦✦ to five Cultivations, ✦ to five Cultivations</li><li><strong>Assets:</strong> start with ✦✦✦✦✦ to buy</li><li><strong>Starting ♄:</strong> 800 × d6 mag</li></ul><p><em>Class is your relation to the means of production — what you own, what you sell, and what owns you. It is not Alignment, and it is not a cage (2.1 rulebook p.44). Perform the Sutras with Cultivator Discovery in the Actors tab, or drop the Class on a 2.1 character to record it and assign the Stars, Assets, Supply and starting ♄ by hand.</em></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.48",
     "category": "body",
     "cultivations": {
      "vio": 1,
@@ -421,7 +421,7 @@
        "1": 5
       },
       "assets": 5,
-      "gear": "Two weapons + two armor pieces + three items",
+      "gear": "",
       "magPerD6": 800
      }
     }
@@ -436,8 +436,8 @@
    "effects": [],
    "sort": 8000,
    "system": {
-    "description": "<p><strong>Class · roll 3d6: 18</strong></p><p>You own the shrines, the temples, the starships, the star-devouring arrays, the banks, the ♄-shrines, the means of production. You cannot be reformed—your Class must be abolished. And you know it.</p><ul><li><strong>Cores:</strong> ✦✦✦✦, ✦✦✦, ✦✦✦, ✦✦✦, ✦✦, ✦✦</li><li><strong>Cultivations:</strong> ✦✦✦ to five Cultivations, ✦✦ to five Cultivations, ✦ to five Cultivations</li><li><strong>Assets:</strong> start with ✦✦✦✦✦✦ to buy</li><li><strong>Gear:</strong> Two weapons + two armor pieces + three items</li><li><strong>Starting ♄:</strong> 1,000 × d6 mag</li></ul><p><em>Class is your relation to the means of production — what you own, what you sell, and what owns you. It is not Alignment, and it is not a cage (book p.46). Drop the Class on a 2.1 character to record it; assign the Stars, Assets, gear and starting ♄ by hand.</em></p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.50",
+    "description": "<p><strong>Class · roll 3d6: 18</strong></p><p>You own the shrines, the temples, the starships, the star-devouring arrays, the banks, the ♄-shrines, the means of production. You cannot be reformed—your Class must be abolished. And you know it.</p><ul><li><strong>Cores:</strong> ✦✦✦✦, ✦✦✦, ✦✦✦, ✦✦✦, ✦✦, ✦✦</li><li><strong>Cultivations:</strong> ✦✦✦ to five Cultivations, ✦✦ to five Cultivations, ✦ to five Cultivations</li><li><strong>Assets:</strong> start with ✦✦✦✦✦✦ to buy</li><li><strong>Starting ♄:</strong> 1,000 × d6 mag</li></ul><p><em>Class is your relation to the means of production — what you own, what you sell, and what owns you. It is not Alignment, and it is not a cage (2.1 rulebook p.44). Perform the Sutras with Cultivator Discovery in the Actors tab, or drop the Class on a 2.1 character to record it and assign the Stars, Assets, Supply and starting ♄ by hand.</em></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.48",
     "category": "body",
     "cultivations": {
      "vio": 1,
@@ -468,7 +468,7 @@
        "1": 5
       },
       "assets": 6,
-      "gear": "Two weapons + two armor pieces + three items",
+      "gear": "",
       "magPerD6": 1000
      }
     }

@@ -1,5 +1,7 @@
 export function activatePanel(sheet,panel) {
  if(panel==='state')panel='combat';
+ // Rules 2.1 folds Inventory into Combat & Gear: a remembered or requested tab that no longer exists falls back to it.
+ if(panel==='inventory'&&!sheet.element.querySelector('[data-action="sheetPanel"][data-panel="inventory"]'))panel='combat';
  sheet._swordsPanel=panel;
  for(const button of sheet.element.querySelectorAll('[data-action="sheetPanel"]')) {const active=button.dataset.panel===panel;button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));}
  const body=sheet.element.querySelector('.sheet-body');
@@ -19,4 +21,4 @@ export function activatePanel(sheet,panel) {
  }
 }
 export function sheetPanel(event,target){activatePanel(this,target.dataset.panel);}
-export async function openCompendium(){const {openLibrary}=await import('./browser.mjs?v=0.2.16');return openLibrary();}
+export async function openCompendium(){const {openLibrary}=await import('./browser.mjs?v=0.2.40');return openLibrary();}

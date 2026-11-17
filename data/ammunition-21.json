@@ -18,12 +18,12 @@
    "img": "systems/10kswordsfoundry/assets/icons/ammunition.svg",
    "effects": [],
    "system": {
-    "description": "<p>Bows require Arrows as ammunition (p.65). Discovery grants 2 quivers worth of 15 arrows (p.8).</p>",
-    "source": "Rules 2.1 (Red Kalpa Manuscript), p.8",
+    "description": "<p>15 Arrows. ARROW — 0.2 kg; 2 ♄ each; works on Bows; pierce damage.</p><p><em>Catalog note: Weight and price are for the full quiver of 15.</em></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.193",
     "rarity": "common",
     "quantity": 15,
     "slots": 1,
-    "magCost": 0,
+    "magCost": 30,
     "equipped": false,
     "gearSlot": "carry",
     "ammoType": "arrow",
@@ -38,7 +38,7 @@
       "head": 0
      },
      "morale": 0,
-     "weight": 0
+     "weight": 3
     }
    },
    "folder": "1dcac31e58dee417",
@@ -58,12 +58,12 @@
    "img": "systems/10kswordsfoundry/assets/icons/ammunition.svg",
    "effects": [],
    "system": {
-    "description": "<p>Crossbows require Bolts as ammunition (p.65). Discovery grants 2 quivers worth of 15 bolts (p.8).</p>",
-    "source": "Rules 2.1 (Red Kalpa Manuscript), p.8",
+    "description": "<p>15 Bolts. BOLT — 0.2 kg; 2 ♄ each; works on Crossbows; pierce damage.</p><p><em>Catalog note: Weight and price are for the full quiver of 15.</em></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.193",
     "rarity": "common",
     "quantity": 15,
     "slots": 1,
-    "magCost": 0,
+    "magCost": 30,
     "equipped": false,
     "gearSlot": "carry",
     "ammoType": "bolt",
@@ -78,7 +78,7 @@
       "head": 0
      },
      "morale": 0,
-     "weight": 0
+     "weight": 3
     }
    },
    "folder": "1dcac31e58dee417",
@@ -98,12 +98,12 @@
    "img": "systems/10kswordsfoundry/assets/icons/ammunition.svg",
    "effects": [],
    "system": {
-    "description": "<p>Handguns need short bullets. Modern handguns work with 12 round magazines; revolvers count by the bullet.</p><p><em>Catalog note: MORTAR Parabellum 9mm prints 15 rounds; adjust the quantity for that pistol.</em></p>",
-    "source": "Rules 2.1 (Red Kalpa Manuscript), p.65",
+    "description": "<p>12 Pistol Bullets. PISTOL BULLET — 0.1 kg; 1 ♄ each; works on Handguns; pierce damage. Modern handguns work with 12 round magazines; revolvers count by the bullet.</p><p><em>Catalog note: Weight and price are for a full magazine of 12. The HaeCo Dragonhead holds 18.</em></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.193",
     "rarity": "common",
     "quantity": 12,
     "slots": 1,
-    "magCost": 0,
+    "magCost": 12,
     "equipped": false,
     "gearSlot": "carry",
     "ammoType": "bullet",
@@ -118,7 +118,7 @@
       "head": 0
      },
      "morale": 0,
-     "weight": 0
+     "weight": 1.2
     }
    },
    "folder": "1dcac31e58dee417",
@@ -138,12 +138,12 @@
    "img": "systems/10kswordsfoundry/assets/icons/ammunition.svg",
    "effects": [],
    "system": {
-    "description": "<p>Longguns need appropriate long gun bullets and often use magazines. Reloading replaces magazines. The TD-7 Ruyi holds 30 rounds.</p><p><em>Catalog note: The 2.0 ammo families group handgun and longgun bullets together as Gun.</em></p>",
-    "source": "Rules 2.1 (Red Kalpa Manuscript), p.68",
+    "description": "<p>32 Rifle Bullets. RIFLE BULLET — 0.2 kg; 2 ♄ each; works on Longguns; pierce damage. Reloading replaces magazines.</p><p><em>Catalog note: Weight and price are for a full magazine of 32 (MORTAR TD-7 Ruyi). The system groups handgun and longgun bullets together as Gun.</em></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.193",
     "rarity": "common",
-    "quantity": 30,
+    "quantity": 32,
     "slots": 1,
-    "magCost": 0,
+    "magCost": 64,
     "equipped": false,
     "gearSlot": "carry",
     "ammoType": "bullet",
@@ -158,11 +158,251 @@
       "head": 0
      },
      "morale": 0,
-     "weight": 0
+     "weight": 6.4
     }
    },
    "folder": "1dcac31e58dee417",
    "sort": 3000,
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "ammunition-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "6af05cdad3c57a22",
+   "name": "Fireshot",
+   "type": "ammunition",
+   "img": "systems/10kswordsfoundry/assets/icons/ammunition.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>FIRESHOT — 0.2 kg; 100 ♄; works on Handguns and Longguns; sets on fire; blast damage.</p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.193",
+    "rarity": "uncommon",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 100,
+    "equipped": false,
+    "gearSlot": "carry",
+    "ammoType": "fireshot",
+    "tags": "2.1, Ammunition",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.2
+    }
+   },
+   "folder": "1dcac31e58dee417",
+   "sort": 4000,
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "ammunition-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "4385781610c8b233",
+   "name": "Freezeshot",
+   "type": "ammunition",
+   "img": "systems/10kswordsfoundry/assets/icons/ammunition.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>FREEZESHOT — 0.2 kg; 200 ♄; works on Handguns and Longguns; chills upon hit, halving BASIC MOVE for 1 minute; blast damage.</p><p><em>Catalog note: Recorded with the Bullet type; the chill and blast damage are applied at the table.</em></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.193",
+    "rarity": "uncommon",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 200,
+    "equipped": false,
+    "gearSlot": "carry",
+    "ammoType": "bullet",
+    "tags": "2.1, Ammunition",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.2
+    }
+   },
+   "folder": "1dcac31e58dee417",
+   "sort": 5000,
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "ammunition-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "7b1a1697c3a15369",
+   "name": "Blunt Bolt",
+   "type": "ammunition",
+   "img": "systems/10kswordsfoundry/assets/icons/ammunition.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>BLUNT BOLT — 0.2 kg; 30 ♄; works on Crossbows; crush damage.</p><p><em>Catalog note: Recorded with the Bolt type; apply crush damage at the table.</em></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.193",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 30,
+    "equipped": false,
+    "gearSlot": "carry",
+    "ammoType": "bolt",
+    "tags": "2.1, Ammunition",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.2
+    }
+   },
+   "folder": "1dcac31e58dee417",
+   "sort": 6000,
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "ammunition-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "02da64add64b0e95",
+   "name": "Impact Arrow",
+   "type": "ammunition",
+   "img": "systems/10kswordsfoundry/assets/icons/ammunition.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>IMPACT ARROW — 0.2 kg; 10 ♄; works on Bows; inflicts KNOCKBACK 10M; crush damage.</p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.193",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 10,
+    "equipped": false,
+    "gearSlot": "carry",
+    "ammoType": "bluntArrow",
+    "tags": "2.1, Ammunition",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.2
+    }
+   },
+   "folder": "1dcac31e58dee417",
+   "sort": 7000,
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "ammunition-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "f4e20b90d4f164b8",
+   "name": "Slingshot",
+   "type": "ammunition",
+   "img": "systems/10kswordsfoundry/assets/icons/ammunition.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>SLINGSHOT — 0.2 kg; 1 ♄; works on Launchers; crush damage.</p><p><em>Catalog note: Recorded with the launcher crush type (Blunt Dart).</em></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.193",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 1,
+    "equipped": false,
+    "gearSlot": "carry",
+    "ammoType": "bluntDart",
+    "tags": "2.1, Ammunition",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.2
+    }
+   },
+   "folder": "1dcac31e58dee417",
+   "sort": 8000,
+   "flags": {
+    "10kswordsfoundry": {
+     "rules21": {
+      "pack": "ammunition-21"
+     }
+    }
+   }
+  },
+  {
+   "_id": "7a4f0335aa91c57a",
+   "name": "Dart",
+   "type": "ammunition",
+   "img": "systems/10kswordsfoundry/assets/icons/ammunition.svg",
+   "effects": [],
+   "system": {
+    "description": "<p>DART — 0.1 kg; 1 ♄; works on Launchers; can be outfitted with Poisons or other ailment toxins; pierce damage.</p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.193",
+    "rarity": "common",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 1,
+    "equipped": false,
+    "gearSlot": "carry",
+    "ammoType": "dart",
+    "tags": "2.1, Ammunition",
+    "r21": {
+     "coverage": {
+      "rleg": 0,
+      "lleg": 0,
+      "rarm": 0,
+      "larm": 0,
+      "torso": 0,
+      "head": 0
+     },
+     "morale": 0,
+     "weight": 0.1
+    }
+   },
+   "folder": "1dcac31e58dee417",
+   "sort": 9000,
    "flags": {
     "10kswordsfoundry": {
      "rules21": {
@@ -178,8 +418,8 @@
    "img": "systems/10kswordsfoundry/assets/icons/ammunition.svg",
    "effects": [],
    "system": {
-    "description": "<p>Deluxe Divine Longgun ammunition · 1 kg · 1,000 ♄. BLAZE ✦ CRUSHING ✦ PIERCING ✦ KNOCKBACK 10M ✦ EXPLODES IN A 1M RADIUS BLAST UPON IMPACT, DEALING DAMAGE TO EVERYTHING IN RADIUS.</p><p><em>Catalog note: The only ammunition the HDF Dragon Fire Cannon fires.</em></p>",
-    "source": "Rules 2.1 (2.1 player-facing book), p.179",
+    "description": "<p>Deluxe Divine Longgun ammunition · 1 kg · 1,000 ♄. DEALS BLAST DAMAGE ✦ BLAZE ✦ KNOCKBACK 10M ✦ EXPLODES IN A 1M RADIUS FULMINATION UPON IMPACT, DEALING DAMAGE TO EVERYTHING IN RADIUS.</p><p><em>Catalog note: The only ammunition the HDF Dragon Fire Cannon fires.</em></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.201",
     "rarity": "deluxe",
     "quantity": 1,
     "slots": 1,
@@ -202,7 +442,7 @@
     }
    },
    "folder": "1dcac31e58dee417",
-   "sort": 4000,
+   "sort": 10000,
    "flags": {
     "10kswordsfoundry": {
      "rules21": {

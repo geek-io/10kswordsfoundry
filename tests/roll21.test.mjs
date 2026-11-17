@@ -54,7 +54,7 @@ test("KILL THE BUDDHA reports Openings and Empty Hand damage", async () => {
   formValues = {weaponId: "", core: "phy", skill: "beastShrine", adjustment: 0, distance: "", mode: "shoot", shots: 1, demand: 1, ammoId: "", cover: 0, height: 0, unstable: 0, part: ""};
   await killTheBuddha(makeActor());
   const ktb = messages[0].flags["10kswordsfoundry"].ktb;
-  assert.deepEqual([ktb.quick, ktb.solid, ktb.perfect, ktb.whiff, ktb.damage], [1, 2, 2, 0, 1], "6, 6, 5, 4, 2: 2–3 Quick, 4–5 Solid, 6 Perfect");
+  assert.deepEqual([ktb.quick, ktb.solid, ktb.perfect, ktb.whiff, ktb.damage], [2, 2, 0, 1, 3], "6, 6, 5, 4, 2: 4–5 Quick, 6 Solid, 2 Whiff; Empty Hand deals PHYS (2.1 p.192)");
 });
 
 test("Full Auto adds Rate × 3 dice, rolls random Parts and requires AUTO", async () => {
@@ -97,10 +97,85 @@ test("damage removes Soak before HP and reports a Disabled arm", async () => {
   messages.length = 0;
   const vest = {id: "f1", type: "fashion", name: "Vest", system: {equipped: true, r21: {coverage: {rarm: 2}, morale: 0}}};
   const actor = makeActor([vest]);
-  formValues = {part: "rarm", amount: 8, crushing: false, ignoreSoak: false};
+  formValues = {part: "rarm", amount: 12, crushing: false, ignoreSoak: false};
   await damagePart(actor, "rarm");
   const source = actor.toObject().system.parts.rarm;
-  assert.deepEqual([source.damage, source.soakLost], [6, 2], "3 + Physique 3 HP");
+  assert.deepEqual([source.damage, source.soakLost], [10, 2], "12 damage - 2 Soak = 10 to HP, Disabling the arm (max 7 + Physique 3)");
   assert.match(messages[0].content, /Disabled/);
   assert.match(messages[0].content, /drop the weapon/);
+});
+
+test("Strikes buy effects at the printed costs (2.1 p.117)", async () => {
+  const {strikeOptions21, strikePlan21, STRIKE_BUYS_21} = await import("../scripts/rules21.mjs");
+  assert.deepEqual(Object.values(STRIKE_BUYS_21).map(buy => buy.cost), [1, 1, 2, 3, 4]);
+  assert.deepEqual(strikeOptions21(1).map(option => option.value), ["hit:random", "hit:rleg", "hit:lleg", "hit:rarm", "hit:larm", "hit:torso", "hit:head", "knockback"]);
+  assert.ok(strikeOptions21(2).some(option => option.value === "body")); assert.ok(!strikeOptions21(2).some(option => option.buy === "called"));
+  assert.deepEqual(strikeOptions21(3).filter(option => option.buy === "called").map(option => option.part), ["rleg", "lleg", "rarm", "larm"]);
+  assert.ok(strikeOptions21(4).some(option => option.value === "head")); assert.deepEqual(strikeOptions21(0), []);
+  const two = strikePlan21(2, ["hit:random", "hit:random"]);
+  assert.deepEqual([two.ok, two.spent, two.left], [true, 2, 0], "2 Strikes: HIT and HIT again");
+  assert.deepEqual([strikePlan21(4, ["body", "", "knockback"]).spent, strikePlan21(4, ["body", "", "knockback"]).left], [3, 1]);
+  assert.match(strikePlan21(3, ["body", "body"]).error, /cost 4 Strikes; only 3/);
+  assert.match(strikePlan21(2, ["head"]).error, /cannot buy/); assert.match(strikePlan21(2, ["", ""]).error, /at least one/);
+  const bow = strikePlan21(3, ["hit:random"], {single: true});
+  assert.deepEqual([bow.ok, bow.extraDamage, bow.left], [true, 2, 0], "a Bow with 3 Strikes: a random Part and +2 damage");
+  assert.equal(strikePlan21(3, ["body"], {single: true}).extraDamage, 1); assert.equal(strikePlan21(3, ["knockback"], {single: true}).extraDamage, 0);
+  assert.match(strikePlan21(3, ["hit:random", "hit:random"], {single: true}).error, /single effect/);
+});
+
+test("Spend Strikes applies each effect to the loser and reports them on one card", async () => {
+  const {spendStrikes21} = await import("../scripts/roll21.mjs");
+  const loser = makeActor(); loser.uuid = "Actor.loser";
+  messages.length = 0; queue.push([4]);
+  formValues = {pick0: "hit:random", pick1: "body", pick2: "", pick3: "", dtype: "", crushing: false, ignoreSoak: false, visceral: false};
+  await spendStrikes21(loser, {strikes: 4, damage: 3, damageText: "PHYS", attackerName: "Winner", weapon: "Saber"});
+  const parts = loser.toObject().system.parts;
+  assert.deepEqual([parts.larm.damage, parts.torso.damage, parts.head.damage], [3, 3, 0], "d6 = 4 is the Left Arm; BODY HIT is the Torso");
+  assert.equal(messages.length, 1);
+  assert.match(messages[0].content, /Strikes spent · Winner → Test/); assert.match(messages[0].content, /3 of 4 Strikes spent — <strong>1 left unspent<\/strong> with Saber/);
+  assert.match(messages[0].content, /HIT \[1\] → Left Arm<\/strong> \(d6 = 4\): 3 damage/); assert.match(messages[0].content, /BODY HIT \[2\] → Torso/);
+  assert.doesNotMatch(messages[0].content, /data-r21-check/);
+  formValues = {pick0: "hit:rleg", dtype: "", crushing: false, ignoreSoak: false, visceral: false};
+  await spendStrikes21(loser, {strikes: 3, damage: 3, single: true, attackerName: "Archer"});
+  assert.equal(loser.toObject().system.parts.rleg.damage, 5, "ranged without AUTO: one effect, +2 from the Strikes left over");
+  assert.match(messages.at(-1).content, /5 damage \(3 \+ 2 from Strikes left over\)/);
+  formValues = {pick0: "body", pick1: "body", pick2: "", dtype: "", crushing: false, ignoreSoak: false, visceral: false};
+  await assert.rejects(() => spendStrikes21(loser, {strikes: 3, damage: 3}), /cost 4 Strikes; only 3/);
+  await assert.rejects(() => spendStrikes21(loser, {strikes: 0, damage: 3}), /No Strikes/);
+  assert.equal(loser.toObject().system.parts.torso.damage, 3, "a refused plan changes nothing");
+});
+
+test("lost Head HP offers Stun and Morale Check buttons, on the card and from the sheet", async () => {
+  const {spendStrikes21, damagePart} = await import("../scripts/roll21.mjs");
+  const {runHeadCheck21, runChatAction21} = await import("../scripts/chat21.mjs");
+  const loser = makeActor(); loser.uuid = "Actor.loser";
+  messages.length = 0;
+  formValues = {pick0: "head", pick1: "", pick2: "", pick3: "", dtype: "", crushing: false, ignoreSoak: false, visceral: false};
+  await runChatAction21({strikes: 4, damage: 3, targets: [{name: "Test", actorUuid: "Actor.loser"}]}, "spend", 0, {resolve: async uuid => uuid === "Actor.loser" ? loser : null, isGM: true});
+  assert.equal(loser.toObject().system.parts.head.damage, 3);
+  const flag = messages[0].flags["10kswordsfoundry"].headHit21;
+  assert.deepEqual(flag, {actor: "Actor.loser"}); assert.match(messages[0].content, /data-r21-check="stun">Stun Check/); assert.match(messages[0].content, /data-r21-check="morale">Morale Check \(1 Morale\)/);
+  formValues = {part: "head", amount: 1, dtype: "", crushing: false, ignoreSoak: false, visceral: false};
+  await damagePart(loser, "head");
+  assert.match(messages.at(-1).content, /data-r21-check="stun"/); assert.deepEqual(messages.at(-1).flags["10kswordsfoundry"].headHit21, {actor: "Actor.loser"});
+  formValues = {part: "torso", amount: 1, dtype: "", crushing: false, ignoreSoak: false, visceral: false};
+  await damagePart(loser, "torso");
+  assert.doesNotMatch(messages.at(-1).content, /data-r21-check/); assert.deepEqual(messages.at(-1).flags, {});
+  const resolve = async uuid => uuid === "Actor.loser" ? loser : null;
+  formValues = {demand: 2}; queue.push([1, 2, 3]);
+  await runHeadCheck21(flag, "stun", {resolve, isGM: false});
+  assert.equal(loser.toObject().system.conditions21.stunned, true, "Heart 2 + Stillness 1 = 3 dice, no Strikes: Stunned");
+  assert.match(messages.at(-1).flavor, /Stun Check/);
+  queue.push([6, 6, 1, 1]);
+  await runHeadCheck21(flag, "morale", {resolve, isGM: false});
+  assert.equal(loser.toObject().system.morale.value, 2, "the Morale Check spends 1 Morale"); assert.match(messages.at(-1).flavor, /Morale Check · Incapacitation/);
+  loser.isOwner = false;
+  await assert.rejects(() => runHeadCheck21(flag, "stun", {resolve, isGM: false}), /A GM or the owner of Test/);
+  await assert.rejects(() => runHeadCheck21({actor: "Actor.gone"}, "stun", {resolve, isGM: true}), /no longer available/);
+  const {readFileSync} = await import("node:fs");
+  const sheet = readFileSync(new URL("../templates/actor-21.hbs", import.meta.url), "utf8");
+  assert.match(sheet, /data-action="stun21"[^>]*>Stun Check<\/button><button type="button" data-action="incap21"[^>]*>Morale Check \(1 Morale\)/);
+  assert.doesNotMatch(sheet, /anyDisabled/, "the Morale Check button no longer waits for a Disabled Part");
+  assert.doesNotMatch(sheet, /data-panel="inventory"/, "Inventory is folded into the Combat & Gear tab");
+  assert.match(sheet, /data-panel="combat">Combat &amp; Gear<\/button>/); assert.match(sheet, /data-panel="combat"><h2>Gear Slots/);
 });

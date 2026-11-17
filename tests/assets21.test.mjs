@@ -30,7 +30,7 @@ test("rows of the older Asset list become Asset item data", () => {
   const data = assetItemData({key: "debt", name: "Caishen & Co.", stars: 3, notes: "Two payments missed"});
   assert.deepEqual([data.name, data.type, data.system.key, data.system.stars, data.system.detail], ["Debt", "asset", "debt", 3, "Caishen & Co."]);
   assert.match(data.system.description, /Two payments missed/);
-  assert.match(data.system.source, /p\.44$/);
+  assert.equal(data.system.source, "Rules 2.1 (2.1 rulebook), p.211");
   assert.equal(assetItemData({key: "custom", name: "Old Family Name", stars: 1}).name, "Old Family Name");
 });
 

@@ -1,10 +1,13 @@
-import {queueEquipment} from './equipment.mjs?v=0.2.16';
-import {escapeHTML} from './resolution.mjs?v=0.2.16';
-const KEYS=new Set(['system.attackBonus','system.defenseBonus','system.checkBonus','system.movement']);
+import {queueEquipment} from './equipment.mjs?v=0.2.40';
+import {escapeHTML} from './resolution.mjs?v=0.2.40';
+import {CORES} from './rules21.mjs?v=0.2.40';
+const effectKeyLabel=key=>{const core=CORES[String(key).replace('system.cores.','')];return core?core.label:String(key).replace('system.','');};
+// Temporary target modifiers a Technick / special ability may apply. 2.1: the six Cores (temp Core increases from Technicks, 2026-11-15) alongside the 2.0.3 bonuses.
+const KEYS=new Set(['system.attackBonus','system.defenseBonus','system.checkBonus','system.movement','system.cores.phy','system.cores.mot','system.cores.mnd','system.cores.wit','system.cores.voc','system.cores.spi']);
 export function abilityEffectData(actor,item,index,ability,name){return {source:`${actor.uuid}:${item.id}:${index}`,name,key:ability.effectKey,value:ability.effectValue??0};}
 export function effectControls(ability){
  if(!KEYS.has(ability.effectKey)||!ability.effectValue)return '';
- return `<p>Target modifier: ${escapeHTML(ability.effectKey.replace('system.',''))} ${ability.effectValue>0?'+':''}${ability.effectValue}. Select eligible targets and apply after checking range and exceptions. Requires ownership or a GM.</p><button type="button" data-ability-effect="apply">Apply to selected targets</button><button type="button" data-ability-effect="remove">Remove from selected targets</button>`;
+ return `<p>Target modifier: ${escapeHTML(effectKeyLabel(ability.effectKey))} ${ability.effectValue>0?'+':''}${ability.effectValue}. Select eligible targets and apply after checking range and exceptions. Requires ownership or a GM.</p><button type="button" data-ability-effect="apply">Apply to selected targets</button><button type="button" data-ability-effect="remove">Remove from selected targets</button>`;
 }
 export async function applyAbilityEffect(data,actors,remove=false){
  if(!KEYS.has(data.key)||!Number.isSafeInteger(data.value))throw Error('Invalid ability modifier.');

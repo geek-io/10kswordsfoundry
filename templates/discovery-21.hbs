@@ -1,0 +1,126 @@
+<div class="discovery21-layout">
+<nav class="discovery21-nav">
+{{#each steps}}<button type="button" data-action="goto" data-step="{{key}}" class="{{#if active}}active{{/if}}"><span>{{label}}</span><span class="badge {{state}}" data-badge="{{key}}">{{badge}}</span></button>{{/each}}
+<div class="discovery21-side">
+{{#if created}}<p class="hint">This Cultivator has been created. The Discovery is kept for reference and can no longer be changed.</p><button type="button" data-action="openActor">Open character</button>
+{{else}}<p class="hint">Nothing is saved while you work. <strong>Save to chat</strong> keeps this Discovery on a chat card that you and the GM can reopen.</p>
+<button type="button" data-action="rollEverything" data-tooltip="Pure chaos: roll every Sutra at random. Attachments are still yours to write.">Roll everything</button>
+<button type="button" data-action="save" class="discovery21-save">Save to chat</button>
+<p class="hint">{{#if dirty}}Unsaved changes.{{else}}{{#if saved}}Saved to chat.{{else}}Not saved yet.{{/if}}{{/if}}</p>{{/if}}
+<p class="hint">Player: {{ownerName}}</p>
+</div>
+</nav>
+<div class="discovery21-main"><fieldset class="discovery21-step" {{#if locked}}disabled{{/if}}>
+
+{{#if is.class}}<legend>Sutra 1 — Class</legend>
+<p class="hint">You are Proletariat. If you wish, choose or roll 3d6 to see if you'll be someone else. The rest of your Sutras depend on your Class (p.42).</p>
+<p><button type="button" data-action="rollClass">Roll 3d6</button></p>
+<table class="discovery21-table"><thead><tr><th></th><th>3d6</th><th>Class</th><th>Cores</th><th>Cultivations</th><th>Assets</th><th>Starting Macca</th></tr></thead><tbody>
+{{#each classes}}<tr class="{{#if selected}}chosen{{/if}}"><td><input type="radio" name="discovery-class" value="{{key}}" data-field="classKey" {{#if selected}}checked{{/if}} aria-label="{{label}}"></td><td>{{roll}}</td><td><strong>{{label}}</strong> <span class="hint">p.{{page}}</span>{{#if supply}}<br><span class="hint">Supply: {{supply}}</span>{{/if}}</td><td>{{cores}}</td><td>{{cultivations}}</td><td>{{assets}}</td><td>{{macca}}</td></tr>{{/each}}
+</tbody></table>
+{{#if subtypes}}<div class="discovery21-row"><label>{{subtypes.label}} (d6)<select data-field="subtype">{{#each subtypes.options}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></label><button type="button" data-action="rollSubtype">Roll d6</button></div>{{/if}}
+{{/if}}
+
+{{#if is.cores}}<legend>Sutra 2 — Cores</legend>
+<p class="hint">Assign Stars according to Class. {{className}} gives <strong>{{corePool}}</strong> (p.{{classPage}}); put each value on one Core. Each list offers only the values you have left.</p>
+<p>{{#if coreLeft}}Still to assign: <strong>{{coreLeft}}</strong>{{else}}All Core Stars are assigned.{{/if}} <button type="button" data-action="clearCores">Clear</button></p>
+<ul class="discovery21-list">{{#each coreRows}}<li><label><span><strong>{{label}}</strong> ({{abbr}})<br><span class="hint">{{text}}</span></span><select data-field="cores.{{key}}" data-number>{{#each options}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></label></li>{{/each}}</ul>
+{{/if}}
+
+{{#if is.cultivations}}<legend>Sutra 3 — Cultivations</legend>
+<p class="hint">Assign Stars according to Class (p.{{classPage}}). Each list offers only the ratings you have left. The Sect's own Cultivation comes later, in Sutra 7.</p>
+<p>{{#each cultivationPool}}<span class="discovery21-pill {{#if done}}done{{else}}todo{{/if}}">{{stars}} {{have}} / {{want}}</span> {{/each}}<button type="button" data-action="clearCultivations">Clear</button></p>
+<ul class="discovery21-grid">{{#each cultivationRows}}<li class="{{#if rated}}rated{{/if}}"><label data-tooltip="{{text}}"><span>{{label}} <span class="hint">{{core}}</span></span><select data-field="skills.{{key}}" data-number>{{#each options}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></label></li>{{/each}}</ul>
+{{/if}}
+
+{{#if is.assets}}<legend>Sutra 4 — Assets</legend>
+<p class="hint">Buy Asset Stars according to Class. {{className}} starts with <strong>{{assetBudget.stars}}</strong> to buy (p.{{classPage}}); each Asset costs its Stars. The 36 starting Assets are on pp.211–218.</p>
+<p class="{{#if assetBudget.over}}discovery21-over{{/if}}">Stars bought: <strong>{{assetBudget.spent}} / {{assetBudget.budget}}</strong></p>
+<ul class="discovery21-list">{{#each assetRows}}<li class="discovery21-asset"><span><strong>{{label}}</strong> <span class="hint">[{{code}}] p.{{page}}</span></span><select data-field="assets.{{index}}.stars" data-number>{{#each options}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select><input type="text" data-field="assets.{{index}}.detail" value="{{detail}}" placeholder="Name it: the creditor, the Patron, the shop…"><button type="button" data-action="removeAsset" data-index="{{index}}" aria-label="Remove {{label}}">✕</button>{{#if description}}<div class="discovery21-text">{{{description}}}</div>{{/if}}</li>{{/each}}</ul>
+<h4>Add an Asset</h4>
+<div class="discovery21-row" data-asset-add><select aria-label="Asset" data-asset-pick>{{#each assetChoices}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select><button type="button" data-action="addAsset">Add Asset</button><button type="button" data-action="rollAsset">Roll d66</button></div>
+{{#if assetPreview.description}}<div class="discovery21-text discovery21-preview"><p class="hint">{{assetPreview.label}} · p.{{assetPreview.page}}</p>{{{assetPreview.description}}}</div>{{/if}}
+{{/if}}
+
+{{#if is.supply}}<legend>Sutra 5 — Supply</legend>
+<p class="hint">Buy Gear or Items using your starting Macca. Need gear? Consider getting a Patron or get in Debt (p.42).</p>
+<div class="discovery21-row"><span>Starting Macca: <strong>{{macca.per}} × d6</strong>{{#if macca.rolled}} ({{macca.d6}}) = <strong>{{macca.total}}</strong>{{/if}}</span><button type="button" data-action="rollMacca">{{#if macca.rolled}}Roll again{{else}}Roll d6{{/if}}</button></div>
+{{#if macca.rolled}}<p class="{{#if macca.over}}discovery21-over{{/if}}">Spent <strong>{{macca.spent}}</strong> · Left <strong>{{macca.left}}</strong></p>{{/if}}
+<p class="{{#if carry.over}}discovery21-over{{/if}}">Carry: <strong>{{carry.kg}} kg / {{carry.limit}} kg</strong> <span class="hint">Carry Limit = 10 kg + Physique ({{carry.physique}}) × 10 kg</span></p>
+{{#if carry.over}}<p class="discovery21-warning"><strong>Over Carry.</strong> {{carry.text}} You can still take it; the character sheet applies these while the weight is carried.</p>{{/if}}
+{{#if classSupply}}<div class="discovery21-row"><span>{{className}} Supply: <strong>{{classSupply}}</strong></span><button type="button" data-action="randomSupply">Roll a random item</button></div>{{/if}}
+<table class="discovery21-table"><thead><tr><th>Item</th><th>Each</th><th>Qty</th><th>Free</th><th>Total</th><th>Weight</th><th></th></tr></thead><tbody>
+{{#each supplyRows}}<tr><td><a data-action="inspect" data-uuid="{{uuid}}" data-tooltip-html="{{description}}" data-tooltip-class="discovery21-tip" data-tooltip-direction="RIGHT">{{name}}</a>{{#if covers}} <span class="hint">Soak: {{covers}}</span>{{/if}}{{#if note}} <span class="hint">{{note}}</span>{{/if}}</td><td>{{priceText}}</td><td><input type="number" min="1" max="99" step="1" data-field="supply.{{index}}.qty" data-number value="{{qty}}"></td><td><input type="checkbox" data-field="supply.{{index}}.free" {{#if free}}checked{{/if}} data-tooltip="Class Supply, or lent through Debt or a Patron" aria-label="Free"></td><td>{{totalText}}</td><td>{{kgText}}</td><td><button type="button" data-action="removeSupply" data-index="{{index}}" aria-label="Remove {{name}}">✕</button></td></tr>{{else}}<tr><td colspan="7" class="hint">Nothing bought yet.</td></tr>{{/each}}
+</tbody></table>
+<h4>Market <span class="hint">{{shop.shown}} of {{shop.count}} entries from the 2.1 catalogs (pp.186–207)</span></h4>
+<div class="discovery21-row"><input type="search" data-shop="query" value="{{shop.query}}" placeholder="Search the market" aria-label="Search the market"><select data-shop="pack" aria-label="Catalog">{{#each shop.packs}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select><select data-shop="part" aria-label="Armor by the Part it covers">{{#each shop.parts}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select><label class="discovery21-check"><input type="checkbox" data-shop="affordable" {{#if shop.affordable}}checked{{/if}}> I can afford</label></div>
+<p class="hint">Hover an item for its description. Armor shows the Parts it covers and the Soak on each.</p>
+<table class="discovery21-table discovery21-shop"><thead><tr><th>Item</th><th>Kind</th><th>Rarity</th><th>Weight</th><th>Macca</th><th></th></tr></thead><tbody>
+{{#each shop.rows}}<tr class="{{#if dear}}dear{{/if}}"><td><a data-action="inspect" data-uuid="{{uuid}}" data-tooltip-html="{{description}}" data-tooltip-class="discovery21-tip" data-tooltip-direction="RIGHT">{{name}}</a>{{#if covers}}<br><span class="hint">Soak: {{covers}}</span>{{/if}}</td><td class="hint">{{typeLabel}}</td><td class="hint">{{rarity}}</td><td class="hint">{{kgText}}</td><td>{{priceText}}</td><td><button type="button" data-action="addSupply" data-uuid="{{uuid}}">Add</button></td></tr>{{/each}}
+</tbody></table>
+{{/if}}
+
+{{#if is.identity}}<legend>Sutra 6 — Identity</legend>
+<p class="hint">Find out your Name, Culture and Alignment. Then write down at least three Attachments, in short, punchy statements. At least one should be Held, one Firm and one Heart (p.42).</p>
+<div class="discovery21-row"><label class="grow">Name<input type="text" data-field="name" value="{{draft.name}}" placeholder="The shortest poem. Make one up, or roll."></label><button type="button" data-action="rollSyllable" data-tooltip="Roll 2d6 twice for a syllable (p.62) and add it to the name">Roll a syllable</button></div>
+<div class="discovery21-row"><label class="grow">Culture<select data-field="culture">{{#each cultureChoices}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></label><button type="button" data-action="rollCulture">Roll d66</button><label class="grow">…or make one up<input type="text" data-field="cultureCustom" value="{{cultureCustom}}"></label></div>
+{{#if cultureText}}<div class="discovery21-text">{{{cultureText}}}</div>{{/if}}
+<div class="discovery21-row"><label class="grow">Alignment<select data-field="alignment">{{#each alignmentChoices}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></label><button type="button" data-action="rollAlignment">Roll 2d6</button></div>
+{{#if alignmentText}}<div class="discovery21-text">{{{alignmentText}}}</div>{{/if}}
+<h4>Attachments <span class="hint">Held is Strength 1, Firm 2, Heart 3 (p.166)</span></h4>
+<ul class="discovery21-list">{{#each attachmentRows}}<li class="discovery21-attachment"><input type="text" data-field="attachments.{{index}}.text" value="{{text}}" placeholder="I repay those who sheltered me." aria-label="Attachment"><select data-field="attachments.{{index}}.strength" data-number aria-label="Strength">{{#each options}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select><button type="button" data-action="removeAttachment" data-index="{{index}}" aria-label="Remove Attachment">✕</button></li>{{/each}}</ul>
+<p><button type="button" data-action="addAttachment">Add Attachment</button></p>
+{{/if}}
+
+{{#if is.sect}}<legend>Sutra 7 — Sect</legend>
+<p class="hint">Choose one Sect, ingest its Barang, and gain the Sect's Cultivation at ✦✦. Then choose 2 Licenses that you're qualified for and learn them immediately (p.42).</p>
+<div class="discovery21-row"><label class="grow">Sect<select data-field="sect">{{#each sectChoices}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></label></div>
+{{#if sect}}<p class="hint">Hover a License to read what it does; click it to open the full entry.</p><p>Barang: <strong>{{sect.barang}}</strong> · Cultivation: <strong>{{sect.cultivation}} {{sect.stars}}</strong> · Licenses chosen: <strong>{{sect.have}} / {{sect.want}}</strong></p>
+<table class="discovery21-table"><thead><tr><th>License</th><th>Kind</th><th>Needs</th><th></th></tr></thead><tbody>
+{{#each licenseRows}}<tr class="{{#if chosen}}chosen{{/if}}"><td><a data-action="inspect" data-uuid="{{uuid}}" data-tooltip-html="{{description}}" data-tooltip-class="discovery21-tip" data-tooltip-direction="RIGHT">{{name}}</a></td><td class="hint">{{typeLabel}}</td><td>{{cultivation}} {{starText}}</td><td><button type="button" data-action="toggleLicense" data-uuid="{{uuid}}" {{#if full}}disabled{{/if}}>{{#if chosen}}Remove{{else}}Learn{{/if}}</button></td></tr>{{/each}}
+</tbody></table>
+{{#if sect.later}}<p class="hint">{{sect.later}} more {{sect.name}} Licenses need {{sect.cultivation}} above ✦✦ and are not offered at Discovery.</p>{{/if}}
+<label>How did she gain Sect Membership and Training?<textarea data-field="sectStory" rows="4" placeholder="Contrive it, modifying it according to Class.">{{draft.sectStory}}</textarea></label>{{/if}}
+{{/if}}
+
+{{#if is.sidhi}}<legend>Sutra 8 — Sidhi, Ajna, and Self-Flame</legend>
+<p class="hint">Choose the color of the Cultivator's Sidhi, and then imagine her Ajna: the halo, third eye, aureole, horns, moondisc… Make one up for her. Then begin at Sidhi 0 (p.42).</p>
+<label>Sidhi color<input type="text" data-field="sidhiColor" value="{{draft.sidhiColor}}" placeholder="Smokeless white, bruise violet…"></label>
+<label>Ajna<textarea data-field="ajna" rows="4" placeholder="What appears on her brow, on her head or behind it when 2–4 Flame burn (p.90)?">{{draft.ajna}}</textarea></label>
+<p>She begins at <strong>Sidhi 0</strong> in the Desire Realm, with 2 open Meridians (p.86).</p>
+<label>Anything else for the GM<textarea data-field="notes" rows="4">{{draft.notes}}</textarea></label>
+{{/if}}
+
+{{#if is.review}}<legend>Review</legend>
+<p class="discovery21-status {{#if review.complete}}done{{else}}todo{{/if}}"><strong>{{#if review.complete}}All eight Sutras are performed.{{else}}{{review.todo}}{{/if}}</strong></p>
+<h3>{{#if draft.name}}{{draft.name}}{{else}}Unnamed Cultivator{{/if}}</h3>
+<dl class="discovery21-summary">
+<dt>Class</dt><dd>{{className}}{{#if review.subtype}} — {{review.subtype}}{{/if}}</dd>
+<dt>Cores</dt><dd>{{review.cores}}</dd>
+<dt>Cultivations</dt><dd>{{#if review.cultivations}}{{review.cultivations}}{{else}}—{{/if}}</dd>
+<dt>Assets</dt><dd>{{#if review.assets}}{{review.assets}}{{else}}—{{/if}}</dd>
+<dt>Macca</dt><dd>{{#if review.macca}}{{review.macca}}{{else}}—{{/if}}</dd>
+<dt>Supply</dt><dd>{{#if review.supply}}{{review.supply}}{{else}}—{{/if}}</dd>
+<dt>Culture</dt><dd>{{#if draft.culture}}{{draft.culture}}{{else}}—{{/if}}</dd>
+<dt>Alignment</dt><dd>{{#if draft.alignment}}{{draft.alignment}}{{else}}—{{/if}}</dd>
+<dt>Attachments</dt><dd>{{#each review.attachments}}<div>{{strength}}: {{text}}</div>{{else}}—{{/each}}</dd>
+<dt>Sect</dt><dd>{{#if draft.sect}}{{draft.sect}} · {{draft.cultivation}} ✦✦ · Barang: {{draft.barang}}{{else}}—{{/if}}</dd>
+<dt>Licenses</dt><dd>{{#if review.licenses}}{{review.licenses}}{{else}}—{{/if}}</dd>
+<dt>Sect Membership</dt><dd>{{#if draft.sectStory}}{{draft.sectStory}}{{else}}—{{/if}}</dd>
+<dt>Sidhi</dt><dd>{{#if draft.sidhiColor}}{{draft.sidhiColor}}{{else}}—{{/if}} · Sidhi 0</dd>
+<dt>Ajna</dt><dd>{{#if draft.ajna}}{{draft.ajna}}{{else}}—{{/if}}</dd>
+{{#if draft.notes}}<dt>Notes</dt><dd>{{draft.notes}}</dd>{{/if}}
+</dl>
+<h4>Sutras</h4>
+<ul class="discovery21-checklist">{{#each review.sutras}}<li class="{{#if done}}done{{else}}todo{{/if}}"><a data-action="goto" data-step="{{key}}"><strong>{{label}}</strong></a> {{#if done}}✓{{/if}}{{#if issues}}<ul>{{#each issues}}<li>{{this}}</li>{{/each}}</ul>{{/if}}{{#if notes}}<ul class="hint">{{#each notes}}<li>{{this}}</li>{{/each}}</ul>{{/if}}</li>{{/each}}</ul>
+{{#if review.log}}<h4>Rolls made in this Discovery</h4><ul class="discovery21-log hint">{{#each review.log}}<li>{{this}}</li>{{/each}}</ul>{{/if}}
+<h4>GM review</h4>
+{{#if isGM}}<label>Note to the player <span class="hint">shown on the chat card when saved</span><textarea data-gm-note rows="3">{{review.gmNote}}</textarea></label>
+{{#unless created}}<div class="discovery21-row"><button type="button" data-action="save">Save to chat</button><button type="button" data-action="createActor" class="discovery21-create">Create character in the Actors tab</button></div>
+<p class="hint">Creating the character adds the Class, Assets, ingested Barang, Licenses and Supply as Items, sets what Macca is left, and gives the chosen player ownership.</p>{{/unless}}
+{{else}}{{#if review.gmNote}}<p class="discovery21-note"><strong>GM:</strong> {{review.gmNote}}</p>{{else}}<p class="hint">Save to chat when you are ready. The GM reviews the Discovery from the chat card and creates the character in the Actors tab.</p>{{/if}}{{/if}}
+{{/if}}
+
+{{#unless is.review}}{{#if issues}}<ul class="discovery21-issues">{{#each issues}}<li>{{this}}</li>{{/each}}</ul>{{/if}}{{#if notes}}<ul class="discovery21-notes hint">{{#each notes}}<li>{{this}}</li>{{/each}}</ul>{{/if}}{{/unless}}
+</fieldset></div>
+</div>

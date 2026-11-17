@@ -135,6 +135,13 @@ BARANG = [
  ('Zhongkui', 190, 'Soul Weaving Worm', 'Spirit Binding', 'Exorcism and binding INTRA-INTs',
   'The SOUL WEAVING WORM travels across the spine to weave a demon king shrine to subjugate demons.',
   'SPIRIT BINDING is the art of exorcism: calling, subjugating, binding, and driving out INTRA-INT entities.'),
+ # New_Sects.pdf (player-facing book): their Technicks/Magicks/Gear are injected by tools/sects21/newsects.py.
+ ('Bidadari', 230, 'Golden Dawn Cricket', 'Sound Law', 'Instruments, singing, performance',
+  "Their Barang is the Golden Dawn Cricket, a beautiful singing cricket that's always humming some kind of tune. When ingested, it twists the spiritual tendons like the string-wires of a piano.",
+  'SOUND LAW is an esoteric Sidhi road that lets the Bidadari wire their Microcosmic Orbit to the invisible strands of the celestial chorus. It can be used for any instrument, singing, or performance based Check.'),
+ ('Sapphire Star', 270, 'Sapphire Silkworm', 'Dual Cultivation', "Social Checks, Gleaning, Change God's Mind",
+  'Their Barang is the Sapphire Silkworm, a walking silkworm that bundles together sapphire threads that interpenetrate all entities, the network of Sidhic connections.',
+  "DUAL CULTIVATION can be used whenever the Sapphire Star would attempt any Social Check, including GLEANING and CHANGE GOD'S MIND. The Heavenly Ascendance Bureau licenses its envoys as mediators across the Trichiliocosm."),
 ]
 bfolders = [{'_id': uid('folder', 'barang21', 'all'), 'name': 'Sect Barang', 'folder': None, 'type': 'Item', 'sorting': 'a', 'sort': 0, 'color': None}]
 bitems = []

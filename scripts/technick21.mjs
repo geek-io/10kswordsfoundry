@@ -1,14 +1,14 @@
 // Rules 2.1 Technick activation: License and weapon checks, burning (✹) or installing (❂) Flame, areas and targets.
 // The 2.1 manuscript has no separate Technick chapter; costs and Licenses follow the Sect entries (NEEDS, LICENSE) and pp.100–101.
-import {technickInfo21, licenseMet21, weaponRequirement21, bracketValues21, spendFlame21, recoverFlame21, selfFlame21} from "./rules21.mjs?v=0.2.16";
-import {confirmScorch21, deviationCheck21} from "./scorch21.mjs?v=0.2.16";
-import {escapeHTML} from "./resolution.mjs?v=0.2.16";
-import {saveChanges} from "./save-changes.mjs?v=0.2.16";
-import {occupiedSlots} from "./slots.mjs?v=0.2.16";
-import {installationChanges} from "./ability-state.mjs?v=0.2.16";
-import {abilityArea, placeAbilityArea, AREA_SHAPES} from "./areas.mjs?v=0.2.16";
-import {collectTargets} from "./targeting21.mjs?v=0.2.16";
-import {targetsHTML, killTheBuddha} from "./roll21.mjs?v=0.2.16";
+import {technickInfo21, licenseMet21, weaponRequirement21, bracketValues21, spendFlame21, recoverFlame21, selfFlame21} from "./rules21.mjs?v=0.2.40";
+import {confirmScorch21, deviationCheck21} from "./scorch21.mjs?v=0.2.40";
+import {escapeHTML} from "./resolution.mjs?v=0.2.40";
+import {saveChanges} from "./save-changes.mjs?v=0.2.40";
+import {occupiedSlots} from "./slots.mjs?v=0.2.40";
+import {installationChanges} from "./ability-state.mjs?v=0.2.40";
+import {abilityArea, placeAbilityArea, AREA_SHAPES} from "./areas.mjs?v=0.2.40";
+import {collectTargets} from "./targeting21.mjs?v=0.2.40";
+import {targetsHTML, killTheBuddha} from "./roll21.mjs?v=0.2.40";
 
 const SYSTEM = "10kswordsfoundry";
 const int = value => Math.trunc(Number(value) || 0);

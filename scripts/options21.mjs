@@ -1,6 +1,6 @@
-// Rules 2.1 Cultivator Discovery options (book pp.44-65, 70-71, 312-345): Classes, Alignments, Cultures, Truths and Perversions.
+// Rules 2.1 Cultivator Discovery options: Classes (2.1 rulebook pp.44-48), Alignments, Cultures, Truths and Perversions (earlier book pp.50-65, 70-71, 312-345).
 // A Class is stored as a Job item flagged class21; it records the Class and its allotments and never touches Cultivations.
-import {escapeHTML} from "./resolution.mjs?v=0.2.16";
+import {escapeHTML} from "./resolution.mjs?v=0.2.40";
 
 const SYSTEM = "10kswordsfoundry";
 const int = value => Number.isSafeInteger(Number(value)) ? Number(value) : 0;
@@ -8,7 +8,7 @@ export const class21 = item => item?.flags?.[SYSTEM]?.class21 ?? null;
 export const option21 = item => item?.flags?.[SYSTEM]?.option21 ?? null;
 export const OPTION_LABELS_21 = Object.freeze({alignment: "Alignment", culture: "Culture", truth: "Truth", perversion: "Perversion"});
 
-/** Summary lines for a Class's allotments (book pp.46-51). */
+/** Summary lines for a Class's allotments (2.1 rulebook pp.44-48). */
 export function classSummary21(data) {
   const stars = n => "✦".repeat(Math.max(0, int(n)));
   const cults = Object.entries(data?.cultivations ?? {}).toSorted((a, b) => Number(b[0]) - Number(a[0])).map(([rating, count]) => `${stars(rating)} × ${int(count)}`);
@@ -34,7 +34,7 @@ export async function applyClass21(actor, item) {
   await foundry.documents.ChatMessage.create({speaker: foundry.documents.ChatMessage.getSpeaker({actor}), rolls: [roll],
     content: `<section class="r21-chat"><h3>Class · ${escapeHTML(item.name)}</h3>
       <ul class="r21-mods"><li><strong>Cores:</strong> ${summary.cores}</li><li><strong>Cultivations:</strong> ${summary.cultivations}</li>
-      <li><strong>Assets:</strong> ${summary.assets} to buy</li><li><strong>Gear:</strong> ${escapeHTML(summary.gear)}</li>
+      <li><strong>Assets:</strong> ${summary.assets} to buy</li>${summary.gear ? `<li><strong>Supply:</strong> ${escapeHTML(summary.gear)}</li>` : ""}
       <li><strong>Starting ♄:</strong> ${summary.magPerD6.toLocaleString()} × d6 (${roll.total}) = <strong>${mag.toLocaleString()} mag</strong></li></ul>
       <p class="hint">Assign the Stars and add the Assets, gear and ♄ on the sheet; nothing was changed automatically.</p></section>`});
   return created;

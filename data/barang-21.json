@@ -426,6 +426,110 @@
      }
     }
    }
+  },
+  {
+   "_id": "407462d8d10cb939",
+   "name": "Golden Dawn Cricket",
+   "type": "barang",
+   "img": "systems/10kswordsfoundry/assets/icons/barang.svg",
+   "folder": "61ab1e2a5a43aaba",
+   "sort": 16000,
+   "effects": [],
+   "system": {
+    "description": "<p><em>Their Barang is the Golden Dawn Cricket, a beautiful singing cricket that's always humming some kind of tune. When ingested, it twists the spiritual tendons like the string-wires of a piano.</em></p><p><strong>Sect:</strong> Bidadari · <strong>Esoteric Cultivation:</strong> Sound Law</p><p>SOUND LAW is an esoteric Sidhi road that lets the Bidadari wire their Microcosmic Orbit to the invisible strands of the celestial chorus. It can be used for any instrument, singing, or performance based Check.</p><p>Ingesting a Barang awakens the first stage of Sidhi Cultivation and lets the Cultivator learn the Sect's Esoteric Techniques. At Wanderer Discovery, ingest one Sect's Barang, gain its Cultivation at ✦✦ and learn 2 Licenses you qualify for. Ejecting a Barang keeps every Magick and Technick already Cultivated. A new Sect License needs the appropriate Barang to be ingested (2.1 Alpha pp.5, 50–51).</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.230",
+    "tags": "2.1, Barang, Bidadari",
+    "sect": "Bidadari",
+    "cultivation": "Sound Law",
+    "weapons": "Instruments, singing, performance",
+    "ingested": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "barang21": {
+      "sect": "Bidadari",
+      "sourcePage": 230
+     }
+    }
+   }
+  },
+  {
+   "_id": "c3d13688c3230f06",
+   "name": "Sapphire Silkworm",
+   "type": "barang",
+   "img": "systems/10kswordsfoundry/assets/icons/barang.svg",
+   "folder": "61ab1e2a5a43aaba",
+   "sort": 17000,
+   "effects": [],
+   "system": {
+    "description": "<p><em>Their Barang is the Sapphire Silkworm, a walking silkworm that bundles together sapphire threads that interpenetrate all entities, the network of Sidhic connections.</em></p><p><strong>Sect:</strong> Sapphire Star · <strong>Esoteric Cultivation:</strong> Dual Cultivation</p><p>DUAL CULTIVATION can be used whenever the Sapphire Star would attempt any Social Check, including GLEANING and CHANGE GOD'S MIND. The Heavenly Ascendance Bureau licenses its envoys as mediators across the Trichiliocosm.</p><p>Ingesting a Barang awakens the first stage of Sidhi Cultivation and lets the Cultivator learn the Sect's Esoteric Techniques. At Wanderer Discovery, ingest one Sect's Barang, gain its Cultivation at ✦✦ and learn 2 Licenses you qualify for. Ejecting a Barang keeps every Magick and Technick already Cultivated. A new Sect License needs the appropriate Barang to be ingested (2.1 Alpha pp.5, 50–51).</p>",
+    "source": "Rules 2.1 (2.1 player-facing book), p.270",
+    "tags": "2.1, Barang, Sapphire Star",
+    "sect": "Sapphire Star",
+    "cultivation": "Dual Cultivation",
+    "weapons": "Social Checks, Gleaning, Change God's Mind",
+    "ingested": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "barang21": {
+      "sect": "Sapphire Star",
+      "sourcePage": 270
+     }
+    }
+   }
+  },
+  {
+   "_id": "163e0614a714e605",
+   "name": "Liar's Devil Cricket",
+   "type": "barang",
+   "img": "systems/10kswordsfoundry/assets/icons/barang.svg",
+   "folder": "61ab1e2a5a43aaba",
+   "sort": 18000,
+   "effects": [],
+   "system": {
+    "description": "<p><em>Their Barang is the Liar's Devil Cricket. These are 6 iridescent crickets superimposed on each other, with the real one being whichever is the funniest at the moment.</em></p><p><strong>Sect:</strong> Luciferian · <strong>Esoteric Cultivation:</strong> Consummate Lie</p><p>Luciferians cultivate the CONSUMMATE LIE: the cultivation of occult inquiry, counterfeit identity, confidence games, and wagers.</p><p>Ingesting a Barang awakens the first stage of Sidhi Cultivation and lets the Cultivator learn the Sect's Esoteric Techniques. At Wanderer Discovery, ingest one Sect's Barang, gain its Cultivation at ✦✦ and learn 2 Licenses you qualify for. Ejecting a Barang keeps every Magick and Technick already Cultivated. A new Sect License needs the appropriate Barang to be ingested (book pp.68, 198–201).</p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.264",
+    "tags": "2.1, Barang, Luciferian",
+    "sect": "Luciferian",
+    "cultivation": "Consummate Lie",
+    "weapons": "Occult inquiry, counterfeit identity, confidence games, wagers",
+    "ingested": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "barang21": {
+      "sect": "Luciferian",
+      "sourcePage": 264
+     }
+    }
+   }
+  },
+  {
+   "_id": "64727747045f4713",
+   "name": "Black Orb Beetle",
+   "type": "barang",
+   "img": "systems/10kswordsfoundry/assets/icons/barang.svg",
+   "folder": "61ab1e2a5a43aaba",
+   "sort": 19000,
+   "effects": [],
+   "system": {
+    "description": "<p><em>The Metomians ingest the Black Orb Beetle to cultivate the BLACK MACE.</em></p><p><strong>Sect:</strong> Metomian · <strong>Esoteric Cultivation:</strong> Black Mace</p><p>Metomians Cultivate the BLACK MACE, the vaunted forging hammer of Metom, which allows them to create and to craft. BLACK MACE can be used when committing violence with BLUDGEONS and WHIPS.</p><p>Ingesting a Barang awakens the first stage of Sidhi Cultivation and lets the Cultivator learn the Sect's Esoteric Techniques. At Wanderer Discovery, ingest one Sect's Barang, gain its Cultivation at ✦✦ and learn 2 Licenses you qualify for. Ejecting a Barang keeps every Magick and Technick already Cultivated. A new Sect License needs the appropriate Barang to be ingested (book pp.68, 198–201).</p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.272",
+    "tags": "2.1, Barang, Metomian",
+    "sect": "Metomian",
+    "cultivation": "Black Mace",
+    "weapons": "Bludgeons, Whips",
+    "ingested": false
+   },
+   "flags": {
+    "10kswordsfoundry": {
+     "barang21": {
+      "sect": "Metomian",
+      "sourcePage": 272
+     }
+    }
+   }
   }
  ]
 }

@@ -3,7 +3,7 @@ import json, re, hashlib, html
 raw = json.load(open('raw.json'))
 SECT_CULT = {'Asuri':'Demon Body','Aswang':'Devil Beast','Dracontine':'Sky Dragon','Eskatonian':'Black Sorcery','Fangshi':'Internal Elixir',
  'Houyi':'Solar Bow','Imma':'White Sorcery','Jyotisha':'Astral','Katalonan':'Divine Communion','Mendicant':'Vajra Fist','Nezha':'Red Gun','Sword Dialectician':'Sword Dialectics',
- 'Techgnostic':'Techgnosis','Ultramystic':'Immortal Science','Wukong':'Sage Body','Zhongkui':'Spirit Binding'}
+ 'Techgnostic':'Techgnosis','Ultramystic':'Immortal Science','Wukong':'Sage Body','Zhongkui':'Spirit Binding','Bidadari':'Sound Law','Sapphire Star':'Dual','Luciferian':'Consummate Lie','Metomian':'Black Mace'}
 CORE = {'PHYSIQUE':'phy','MOTORICS':'mot','MIND':'mnd','WITS':'wit','VOICE':'voc','SPIRIT':'spi','FACE':'voc','HEART':'spi',
         'PHY':'phy','PHYS':'phy','MOT':'mot','MND':'mnd','WIT':'wit','FAC':'voc','HRT':'spi','VOC':'voc','SPI':'spi'}
 def uid(*parts): return hashlib.sha1('|'.join(parts).encode()).hexdigest()[:16]
@@ -68,37 +68,50 @@ def magick_fields(effect):
     return f
 # Entries whose printed layout needs a hand (checked against the page images).
 OVERRIDE = {
- 'DEVIL BEAST BODY': dict(needs='❂❂❂; MONSTER-SHIFTING must be learned', strip='must be learned '),
+ 'DEVIL BEAST BODY': dict(needs='❂...'),
  'BODY CAULDRON': dict(needs='—'),
  'COVENANT': dict(needs='—', prefix='Requires Bleeding Heart ✦.'),
- 'SAMADHI FIRE': dict(needs='✹; weapon that needs ammo', cut_from='The Cultivator'),
+ 'SAMADHI FIRE': dict(needs='❂', fix=[('their t r weapon i p l with e Samadhi Fire: it gains headed the BLAZE god Mod', 'their weapon with Samadhi Fire: it gains the BLAZE Mod')]),
+ "ON EARTH WE'RE BRIEFLY GORGEOUS": dict(type='magick'),
  'SUN SHOOTING STYLE': dict(needs='✹✹✹✹✹✹; bow, crossbow, launcher, longgun', strip='launcher,longgun '),
  'ING KUNG DHARANI': dict(cut_at=' 1 KG PRESTIGE FASHION', tail_to='WHITE ROBES'),          # the White Robes statblock follows in the same column
  'LANCE OF REVOLUTIONARY WILL': dict(gear=True),                       # printed under a Technick heading, but it is a weapon
  'GRAV': dict(type='magick'),                                          # printed as a Technick, but it has a mantra, mudra and Charge Time
 }
+# 2.1 book (303 pp): a wrapped "needs" row continues on the next line(s).
+NEEDS_JOIN = {'THROATWORK': 1, 'ASWANG FANG': 1, 'FLICKERING SHADE TECHNIQUE': 1, 'DEMON CLAW': 1, 'STEEL SONG MEDITATION': 1, 'CELESTIAL ROAD METER': 1,
+ 'BATTLE BEAT RESONANCE': 1, 'MOUNTAIN BREAKING THUNDER': 1, 'AKASHA PALIMPSEST': 2}
+NEEDS_FIX = {'THREEFOLD HELL LOTUS SUPERPOSITION SLASH': '✹... ; SWORDS or SABERS'}
+DROP |= {('Techgnostic', 'THE INTRAJALA IS THE INTENET OF THINGS. SUFFUSED WITH SIDHI, GRAND MACHINE')}
 abilities, gears, problems, tails = [], [], [], {}
 for e in raw:
     if (e['sect'], e['title']) in DROP: continue
     p = parse(e)
-    book = 2 * e['page'] - 2 + (1 if e['x'] > 400 else 0)
+    book = e['page']
     if p is None: problems.append((e['page'], e['title'], 'no license')); continue
     rec = dict(sect=e['sect'], page=book, title=p['title'], license=p['cult'], stars=p['stars'], needs=p['needs'], flavor=p['flavor'])
     if e['type'] == 'gear': gears.append(dict(rec, lines=p['body'])); continue
+    nj = NEEDS_JOIN.get(p['title'], 0)
+    if nj: rec['needs'] = (rec['needs'] + ' ' + ' '.join(p['body'][:nj])).strip(); p['body'] = p['body'][nj:]
+    rec['needs'] = NEEDS_FIX.get(p['title'], rec['needs'])
     effect = join(p['body'])
     effect = re.sub(r'(\s+\d{3})+\s*$', '', effect)
     typ = 'magick' if e['type'] == 'magick' else 'technique'
     ov = OVERRIDE.get(p['title'], {})
     if ov.get('gear'): gears.append(dict(rec, lines=p['body'])); continue
     if 'needs' in ov: rec['needs'] = ov['needs']
-    if ov.get('cut_from'): effect = effect[effect.index(ov['cut_from']):]
-    if ov.get('cut_at'):
+    if ov.get('cut_from') and ov['cut_from'] in effect: effect = effect[effect.index(ov['cut_from']):]
+    if ov.get('cut_at') and ov['cut_at'] in effect:
         effect, tail = effect.split(ov['cut_at'], 1); effect = effect.strip()
         if ov.get('tail_to'): tails[ov['tail_to']] = ov['cut_at'].strip() + ' ' + tail
     if ov.get('strip'): effect = effect.replace(ov['strip'], '', 1).strip()
+    for a_, b_ in ov.get('fix', []):
+        assert a_ in effect, a_
+        effect = effect.replace(a_, b_)
     if ov.get('prefix'): effect = ov['prefix'] + ' ' + effect
     if ov.get('type'): typ = ov['type']
     effect = effect.replace('ESKATON SORCERY', 'BLACK SORCERY')  # Scour still prints the old Cultivation name
+    effect = effect.replace('installed their Ardor in them', 'installed their Flame in them')  # Metomian Puppetry Array still prints the old word
     if p['cult'] != SECT_CULT[e['sect']]: problems.append((book, p['title'], 'license ' + p['cult']))
     if not p['stars']: problems.append((book, p['title'], 'no stars'))
     abilities.append(dict(rec, type=typ, effect=effect))

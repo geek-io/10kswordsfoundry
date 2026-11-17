@@ -27,7 +27,7 @@ The 2.1 ruleset is **opt-in and in testing**. The GM chooses it in **Game Settin
 | Movement | 12, 32, 35, 63, 93 | Walk 2, Run Motorics + 2, Sprint Motorics + 4, Swim Physique + Thews and Sinews; legs, Knockdown, overload, Spring-Tendon Legs |
 | Carry | 63 | Carry Limit 10 kg + Physique × 10; carried kg entered manually |
 | KILL THE BUDDHA | 22–30, 33–38 | Weapon/Empty Hand, Core and Cultivation defaults from the weapon profile; dice become Whiff/Quick/Solid/Perfect Openings; fusion and Sidhi-upgrade reminders; Firefight range bands, Burst/Full Auto with Rate, ammo; cover, height, terrain, senses, light, mud, Juggled target, Ambush; static Openings for simple World Beings |
-| Body Parts | 31–32 | Six Parts, 3 HP each (+ HP bonus, Mountain Frame, Anvil Head); Disabled at 0, Cleaved at negative maximum; clickable damage and cleave tracks; d6 hit location |
+| Body Parts | 31–32 | Six Parts, 7 + Physique + Sidhi Stage HP each (2.1 playtest 2026-11-15; was 3 HP) (+ HP bonus, Mountain Frame, Anvil Head); Disabled at 0, Cleaved at negative maximum; clickable damage and cleave tracks; d6 hit location |
 | Soak and armor | 38, 66–69 | Per-Part Soak from equipped armor coverage plus a base; damage removes Soak first; Crushing/Bludgeon 2 Soak per point; ignore-Soak option; Repair resets lost Soak |
 | Consequences | 31–35 | Chat reminders for Head damage (Stun and Morale), Disabled and Cleaved Parts; Stun Check; Incapacitation Check spending 1 Morale |
 | Healing | 14, 31 | Shows days to the next healed point and to full, per Part |
@@ -67,12 +67,218 @@ Decisions: the manuscript has no Technick chapter, so activation follows the Sec
 
 | Area | Pages | Implementation |
 | --- | --- | --- |
-| Swords | 6–7 | Combat tracker panel: temporal anchor, number of Cuts (default 4), Cut length; chat at each Cut and when the tip is passed |
-| Cuts | 6–7, 10 | One Combat Round = one Cut; one Maneuver per entity per Cut is left to the table |
+| Rounds (was Swords) | 6–7 | Combat tracker panel: temporal anchor, number of Cuts (default 4), Cut length; chat at each Cut and when the tip is passed. The structured scene was called a **Sword** until 0.2.19; it is now a **Round** (see below) |
+| Cuts | 6–7, 10 | One engine round = one Cut; one Maneuver per entity per Cut is left to the table |
 | Speed order | 10 | Initiative = Speed with no roll; ascending order (lowest declares first); reset to Speed each Cut |
-| Interjecting | 10 | "Interject now (2.1)" moves a higher-Speed combatant who has not acted yet to directly before the current actor |
+| Interjecting | 10 | "Cut-In now (2.1)" moves a higher-Speed combatant who has not acted yet to directly before the current actor |
 
-Decisions: ties in Speed are not addressed by the manuscript; they sort by name. A Sword is attached to a Combat encounter, so chases and debates also run through the Combat tracker. Interjecting needs a Speed strictly higher than the current actor's.
+Decisions: ties in Speed are not addressed by the manuscript; they sort by name. A Round is attached to a Combat encounter, so chases and debates also run through the Combat tracker. Interjecting needs a Speed strictly higher than the current actor's.
+
+## Added in 0.2.39 (Spending Strikes, p.117; Head damage, p.121)
+
+- **Spending Strikes (p.117).** HIT [1] a Random or Controlled Part, or KNOCKBACK 2 m; BODY HIT [2] the Torso; CALLED HIT [3] a Limb; HEAD HIT [4] the Head. Effects can be bought repeatedly up to the Strikes won. Ranged weapons without AUTO buy one effect and add +1 damage per Strike left over (the book's Bow example). The assistant lets Strikes go unspent and says how many.
+- **KNOCKBACK** is treated as its own 1-Strike effect with no damage ("Damage a Random/Controlled Part or KNOCKBACK 2m").
+- **A Controlled Part** is chosen by hand; the assistant does not check that the Part is Controlled.
+- **Cover** is still rolled on the result card; the player leaves out the instances that hit cover.
+- **Head damage (p.121)** forces a Stun Check, Heart + Stillness. The book prints no Demand, so the dialog still asks for one.
+- **Morale Check after Head damage.** The 2.1 rulebook does not print this. The earlier manuscript (p.14) said the 1-Morale Heart + Adamance Check "will also be triggered if a person loses any number of Head HP", and the table asked for it, so the button is offered. It is the same Check as Incapacitation (p.120).
+
+## Added in 0.2.38 (Cultivator Discovery — Roll everything)
+
+- The book's dice are used wherever it prints a table (Class 3d6 and sub-table, Macca d6, Name 2d6 twice per syllable, Culture d66, Alignment 2d6, Assets d66). Everything else (Core and Cultivation placement, Sect, Licenses, Supply) is an even random draw; the book gives no table for those.
+- Assets: d66 is re-rolled when the Asset is already taken or its minimum Stars exceed what is left; Stars bought are random within the Asset's range and the budget.
+- Supply: up to eight random purchases with a price, each within the Macca left. Over Carry is allowed.
+- Ajna forms are the ones the book names (pp.42, 90). The Sidhi colours are plain colour words and are not from the book.
+- Attachments are not generated; the book asks for them to be written.
+
+## Changed in 0.2.37 (Cultivator Discovery table notes; encumbrance, p.182)
+
+- **Encumbrance Check penalty is automatic.** p.182: over the Carry Limit up to ×2 is -2 to Checks and Movement and +2 Speed, up to ×3 is -3, and so on. Movement and Speed were already derived from carried weight; `stateModifiers` now also takes the Check dice off. The hand-set Encumbered condition (-4, older rule) replaces it when ticked, so the two never stack.
+- **Carry in the creation tool** uses the Physique assigned in Sutra 2 (10 kg if none yet) and counts every Supply line, free or bought. Going over is a warning and a Review note, never a block.
+- **Weights:** ammunition weighs per magazine or quiver, other items per piece, as the sheet counts them. A created character gets one Item per magazine bought.
+- **Rolls in the tool** are posted to chat as ordinary public rolls. The saved Discovery card stays whispered.
+
+## Added in 0.2.36 (2.1 rulebook — Cultivator Discovery, pp.42–48, 62, 166)
+
+The eight Sutras of p.42 as a creation tool (`scripts/discovery-rules21.mjs`, `scripts/discovery21.mjs`).
+
+| Sutra | Rule as implemented | Page |
+|---|---|---|
+| 1 Class | Proletariat by default; choose, or roll 3d6: 3–6 Lumpenproletariat, 7–8 Semiproletariat, 9–12 Proletariat, 13 Petit Bourgeoisie, 14 Spherical Bourgeoisie, 15 Comprador Bourgeois, 16 Bureaucrat Capitalists, 17 Landlord, 18 Heavenly Bourgeoisie. Lumpenproletariat, Proletariat and Spherical Bourgeoisie also roll a d6 sub-table. | 42, 44–48 |
+| 2 Cores | The Class prints six Star values; each goes on one Core. | 44–48 |
+| 3 Cultivations | The Class prints how many of the 30 basic Cultivations sit at ✦✦✦, ✦✦ and ✦. Each Cultivation takes one rating. | 44–48 |
+| 4 Assets | The Class prints Stars to buy. An Asset costs its Stars and must be within its printed Star range; only the 36 starting Assets are offered. | 44–48, 211–218 |
+| 5 Supply | Starting Macca = Class multiplier × d6; Gear and Items are bought at catalog prices. Lumpenproletariat also gets one random item. | 42, 44–48 |
+| 6 Identity | Name (syllable table, 2d6 twice), Culture (d66 or made up), Alignment (2d6), at least three Attachments with at least one Held, one Firm and one Heart. | 42, 62, 166 |
+| 7 Sect | One Sect; its Barang is ingested; its Cultivation starts at ✦✦; two Licenses whose requirement is that Cultivation at ✦✦ or less. | 42 |
+| 8 Sidhi | Sidhi color and Ajna are written down; Sidhi 0, Desire Realm. | 42, 86, 90 |
+
+Decisions and ambiguities:
+
+- **Random Supply item (p.44).** The book names no table for "One item, randomly rolled". The tool draws one entry from the Common items of the six 2.1 market catalogs and marks it free. The GM can replace it.
+- **Unspent Asset Stars** are allowed and listed as a note ("Start with ✦✦ to buy").
+- **The same Asset twice** is listed as a note, not refused; only Capital says it can be held several times (p.211).
+- **Debt and Patron (p.42, "Need gear?").** The tool does not grant the lent item or the "I owe [Creditor]" Attachment by itself. The player adds them (a Supply line can be marked free) and the Review step reminds the GM.
+- **"Licenses that you're qualified for"** is read as: the License's Sect Cultivation requirement is ✦✦ or lower. Weapon requirements are not checked at creation.
+- **Supply stock.** The shop offers the general 2.1 catalogs (pp.186–207). Sect Gear is not offered.
+- **Cultures and Alignments** come from the 2.1 Cultivator Discovery compendium, which was read from the earlier player-facing book. Alignment names and 2d6 numbers match the rulebook (pp.51–60). 35 of the 36 Culture names appear in the rulebook's Culture pages (pp.65–82); "Vatuanese" does not and its d66 codes were not re-checked. A made-up Culture can be typed in.
+- **Morale** is set to its maximum on creation. **Flame** is left to the sheet.
+- **Who creates the Actor.** Only a GM. The player who saved the Discovery becomes the owner unless the GM picks someone else.
+- **Privacy.** The chat card is whispered to the GMs and the player, since Attachments are hidden information (p.166).
+
+## Changed in 0.2.35 (2.1 rulebook — weapon Affinities, Grades and mods, pp.194–195)
+
+| Rule | Book | Implementation |
+| --- | --- | --- |
+| Affinities | p.195: MIGHTY / RAZOR / ESOTERIC / ARCANE / LYRICAL / PSIONIC "can use [Core] as a Core and deal [Core] damage" | `r21.affinity`. When the KILL THE BUDDHA is rolled with that Core, damage is that Core + the Profile's bonus; any other Core leaves the weapon as printed. The book says a Refined or higher weapon can have its Affinity modified, but prints Affinities on Base weapons too; the system does not check the Grade. |
+| Material Grades | p.195: Refined +1 Mod, x1.5 DR; Divine +2 Mods, x2 DR, +1 base DMG; Immortal +3 Mods, +2 base DMG | `r21.grade`. Base damage is applied; Mod slots and Durability are a note on the roll. |
+| REACH X | p.194: +X m to the weapon's profile | `r21.reach`, added to the Profile's range or to a range override. |
+| VISCERAL | p.194: +1 damage against Parts without Soak | Mod `visceral`; the attack card carries it and the Apply damage dialog adds 1 when the Part's current Soak is 0. |
+| MORPH X | p.194: as an Action, morph to or back from X Profile | `r21.morph` lists every Profile; the Morph button switches Profile, Grip, ranged/melee and ammo family. Spending the Action on the Ticks tracker is left to the player. |
+| ELECTRIC | p.194: 1-in-6 chance of Stunning on contact | The existing `shock` mod, relabelled. Still a reminder, not rolled. |
+| AUTO | p.194: 3 Bullets per Action, +1 to VOLLEY | Unchanged: 3 bullets per Shoot. VOLLEY is not defined elsewhere in the rules and is not applied. |
+
+## Changed in 0.2.34 (2.1 rulebook — Assets, pp.211–218)
+
+| Rule | Book | Implementation |
+| --- | --- | --- |
+| Asset list | pp.211–218: 36 d36 Assets, codes 11–66 | `ASSETS_21` pages moved to the rulebook; the catalog text is regenerated from these pages |
+| Hummingbird Pulse | p.216: ✦✦✦ only. "Roll the d6 at the start of a Structured Situation twice and take the better result." | `readyDice21`: the first-READY formula is `2d6kl1 + Speed + Tick`. "Better" is read as lower, because a lower READY acts sooner. It no longer adds to Speed. The meal and Stillness penalties are text. |
+| Mountain Frame, Anvil Head, Spring-Tendon Legs, Sleepless Soul | pp.213, 215, 217: unchanged numbers | Still applied automatically (HP, Stun pool, Basic Move, Fatigue) |
+| Python Grip, Beastly Claws, Wrought Limb, Debt, Capital, Patron, Armory | pp.211–217: new text | Catalog text only; applied at the table |
+
+## Changed in 0.2.30 (2.1 rulebook — Armor Mods, profile damage)
+
+| Rule | Book | Implementation |
+| --- | --- | --- |
+| Armor Mods | p.202: one fitted Mod per Armor Piece; Left and Right fit separately; a garment covering several Parts fits one; intact Mods work even at Soak 0; clothing can be fitted | `r21.mod` on the piece. The Mod works on every Part the piece covers (coverage above 0). |
+| +1 Soak Mods | Reinforced, Mourning Lacquer, Retributive Script, Magnetic | +1 to the derived Soak of each covered Part. Reinforced's doubled Durability is not tracked. |
+| On-Soak effects | Mourning Lacquer: attacker cannot Step next Tick; Retributive Script: 1 true damage back; Magnetic: a magnetic weapon is Controlled by the armor | Named on the damage card when the Part's Soak absorbed damage. Not applied automatically. |
+| Arm / Torso / Leg Mods | Sheathe, Retributive Script | Ignored on the Head. |
+| Featherweight | This Part's weight is halved | The piece's weight is halved in the carried total. |
+| Breakaway | "When this Part is" — the sentence is cut off in the book | Selectable, no effect. |
+| Profile damage | p.192: Sword PHYS/MOT + 1, Bludgeon PHYS + 1, Polearm PHYS + 1; p.192: Empty Hand deals PHYS crush | Profiles corrected; Empty Hand = Physique. Without the wielder's Cores the old flat figures (1 / 2) are still shown. |
+| Gear Speed | p.203: Genji Visor "+2 Speed", Kongo Helm "-2 SPEED" | Already carried as `system.speedBonus` effects in the armor catalog; since 0.2.28 they add to Recovery as written (+ is slower). |
+
+Ambiguity: a Mod on clothing that covers no Part gives no Soak here, since there is no Part to add it to.
+
+## Changed in 0.2.29 (2.1 rulebook — Firefight, Strikes engine)
+
+| Rule | Book | Implementation |
+| --- | --- | --- |
+| Aim | p.119: do not fire on the current Tick; +1 die per Tick after, max MOT; cannot move while aiming | Dialog field "Ticks spent Aiming", capped at Motorics. The Ticks are entered by hand; the tracker does not count them. |
+| Out of range | p.119: 4-in-6 chance of going wide | d6 on the attack card; on 1-4 no Strikes land. No range-band dice under the Strikes engine. |
+| Cover | p.122: Light 2-in-6 per instance of ranged damage, 1 Part cannot be hit; Heavy 4-in-6, 3 Parts; Full makes an attack impossible; melee ignores cover | Chosen in the dialog; rolled on the defender's card: one die for a non-AUTO weapon (one instance), one per leftover Strike for AUTO. Which Parts are covered is left to the fiction. |
+| Height | p.122: +1 against someone at least 1 m below | Dialog option. The book places it under hand-to-hand; offered for any KILL THE BUDDHA. |
+| Ambush | p.124: the target's pool is halved, rounded down | Attack dialog checkbox; applied when the defender Blocks or Dodges. |
+| Casting under attack | p.119: the caster's KILL THE BUDDHA Check is halved | A defender holding Magick Charges rolls a halved pool (rounded down, as for Ambush; one halving even if both apply). |
+| Shield | p.192: PHYS + Beast Shrine, 1 m, PHYS crush, SPD +0, innate COVER | `shield` profile. No Grip is printed for it. |
+| COVER / WALL / UNBLOCKABLE | p.194 | Weapon mods; COVER / WALL on a lone target's equipped weapon preselect the cover in the attacker's dialog. |
+| Reloading and capacity | p.119: reloading takes an Action, or is free outside a KILL THE BUDDHA | Dialog hint only; ammunition handling unchanged. |
+
+Not yet applied (found while reading p.192): the printed profile damage is Sword PHYS/MOT + 1, Bludgeon PHYS + 1, Polearm PHYS + 1 and Empty Hand PHYS crush; the system still uses + 0 and a flat 1. Held for the catalog pass, where stored weapon bonuses are checked at the same time.
+
+## Changed in 0.2.28 (2.1 rulebook — Ticks tracker)
+
+The Round / Cut / Speed-order / Cut-In rows further down describe the earlier manuscript and are superseded under 2.1 by this section.
+
+| Rule | Book | Implementation |
+| --- | --- | --- |
+| Ticks | p.22: every situation begins at Tick 0; a Tick is 1 second; Step, then READY entities Act, then Held Acts | One engine round = one Tick. Combatant initiative = next READY Tick, ascending. The turn arrows advance a Tick. |
+| First READY | p.22: d6 + Speed | Initiative formula `1d6 + Speed`; someone joining mid-scene counts from the live Tick (assumption). |
+| Recovery | p.22: after an Act add Speed + Speed Modifiers to the current Tick | **Act** button: READY = Tick + `r21.ticks.recovery`. `system.speedBonus` is a Speed modifier inside Recovery. |
+| Simultaneous Acts | p.22 | Same-Tick combatants are listed together; the Tick message tells the table to settle opposed Acts by fiction or Conflict Check. Not automated. |
+| Dash | p.22: always +1 Recovery | **Dash** button. |
+| Hold / Anticipate | p.22: act later, before your next READY; READY figured as normal | Marks the combatant, sets READY as for an Act; **Release** resolves it; it lapses when the holder is READY again. |
+| Flash | p.22: in Recovery, burn 2 Flame to Act now; then add Recovery "to that Tick instead, moving their real ACT further back" | **Flash**: burns 2 Flame (Scorch rules apply); READY = Flash Tick + Recovery, never earlier than the READY already held. |
+| Flurry | p.117: KILL THE BUDDHA next Tick, no Recovery, up to MOT; afterwards +2 Recovery per continuation; begun before your READY it adds to that READY | The card's Flurry button sets READY to the next Tick and counts; **End Flurry** sets READY = start Tick (or the prior READY) + Recovery + 2 × Flurries. Book example (Speed 4, 3 Flurries, Tick 6 → 16) is a unit test. |
+| Gambits | p.129: WBs have plotted READY Ticks, no Recovery, cannot Flurry | GM context option stores the list; Act moves to the next listed Tick; Flurry is refused. When the list runs out Recovery is used (assumption). |
+| Stunned | p.124: a Stunned READY is delayed until the Stun ends | Not automated; the GM edits the READY. |
+
+Decisions and ambiguities: (1) the Flash sentence can also be read as "add Recovery to the READY you already had"; the implementation takes the later of the two so Flash never brings a READY forward. (2) A flurrier who already pressed Act on the same Tick is not treated as "before her READY". (3) Step, Aim and positions stay with the table.
+
+## Changed in 0.2.27 (2.1 rulebook — Speed, Recovery, movement)
+
+| Rule | Book | Implementation |
+| --- | --- | --- |
+| Weapon SPD | p.192: Dagger +0, Saber +2, Sword +1, Bludgeon +2, Cleaver +2, Polearm +2, Whip +2, Launcher +1, Bow +2, Crossbow +2, Handgun +1, Longgun +2; two weapons use the heavier | `spd` on the profiles; `derive21` takes the highest among equipped weapons. |
+| Recovery | p.22: Speed + Speed Modifiers, added to the current Tick | `ticks21`: Speed + weapon SPD + encumbrance, floor 1. |
+| Movement | p.132: Basic Move = Motorics m/s, Dash = Motorics + Physique, Step = Basic Move / 2 | `movement`: Step rounds down (the book's Motorics 2 example gives 1 m). |
+| Encumbrance | p.182: up to ×2 the Carry Limit = −2 Checks and Movement, +2 Speed; ×3 = −3 / +3 | `encumbrance21`. The Check penalty is a sheet warning only. |
+
+## Changed in 0.2.26 (2.1 rulebook, Nov 16 2026 — combat corrections)
+
+The full 2.1 book is now the authority for 2.1 combat; where it differs from the earlier Google Docs, the book wins.
+
+| Rule | Book | Implementation |
+| --- | --- | --- |
+| KILL THE BUDDHA check | p.117: WEAPON vs Block (Weapon Check) or Dodge (Motorics + Thews And Sinews) | Block rolls the defender's equipped melee weapon profile, or Empty Hand. |
+| Who deals damage | p.117: whoever wins the Conflict Check, even the Defender | Two-way margin; the loser gets the Apply-damage button. A Tie deals none. |
+| Hits | p.117: Hit 1, Body Hit 2, Called Hit 3, Head Hit 4; non-AUTO ranged buys one effect, excess Strikes add damage | Shown on the resolution card. |
+| Flurry | p.117: the Winner, or the Attacker on a Tie; up to Motorics; +2 Recovery per continuation | Button offered to the Winner; a winning Defender starts their own count. |
+| Speed | p.22: 7 − higher of Wits / Mind, plus Speed Modifiers | `ticksSpeed21`. Floor of 1 is an assumption (no minimum printed). Weapon SPD modifiers come with the weapon data patch. |
+| Morale | p.164: maximum = 1 + Heart + Stillness | `moraleMaximum`. |
+| Stun | p.121: stunned for 6 seconds | Condition and Stun Check text. |
+
+## Added in 0.2.25 (combat overhaul patch 4: Flurry)
+
+FLURRY (KTB 2.1): after a resolved KILL THE BUDDHA in the Strikes engine, the attacker may press the advantage — immediately KILL THE BUDDHA again as an Anticipated Action, up to **Motorics** times. Each Strikes resolution (Block / Dodge) shows a **Flurry** button and the running count.
+
+- The Flurry re-rolls the attacker's KILL THE BUDDHA against the same defender, with the weapon pre-selected, carrying `flurry + 1`.
+- After stopping, the next READY lands **Speed + 2 × flurries** Ticks after the Tick the attacker acted on. **Speed = 10 − Wits (minimum 2)** — `ticksSpeed21` in `rules21.mjs`; the delay is `flurryReadyDelay21`. The acting Tick comes from the Ticks tracker (patch 5), so for now the card states the delay, not the absolute Tick.
+- Flurry is specific to the Strikes engine; the Openings engine is unchanged.
+
+## Added in 0.2.24 (combat overhaul patch 3: Finding an Opening)
+
+The seven example maneuvers (KTB 2.1, "Finding an Opening"), each a contested Check. `MANEUVERS_21` in `rules21.mjs`; initiated from the **Find an Opening** sheet button; the target Resists from the chat card.
+
+| Maneuver | Initiator | Target Resists | Effect on a win |
+| --- | --- | --- | --- |
+| Onslaught (melee) | WEAPON | Wits + Beast Shrine | Force the loser up to 2 m; the loser is Off-Balanced (symmetric — whoever loses the contest). |
+| Volley (ranged, spend Ammo) | WEAPON + [AUTO] Ammo dice | Wits + Thews And Sinews | Target moves up to half Basic Move, or is Off-Balanced (winner's choice). |
+| Analyze | Mind + Concrete Analysis | Face + Beast Shrine | +2 on the analyzer's next KILL THE BUDDHA vs the target. |
+| Feint (melee) | Wits + Beast Shrine | Wits + Beast Shrine | +2 on the feinter's next KILL THE BUDDHA vs the target. |
+| Control (melee) | Empty Hand | Motorics + Beast Shrine | Control a Limb; win by 2 the Torso, by 3 the Head. The Part cannot move. |
+| Throw (melee, after Control) | Empty Hand | Physique + Thews And Sinews | Throw up to [Physique + leftover Strikes] m; upward 3 m+ Juggled, downward Knockdown. |
+| Disarm (melee, after Control) | Empty Hand | Physique + Thews And Sinews | Wrench the weapon away (drop it or toss it 3 m). |
+
+Resolution auto-applies Off-Balanced and Control (with the Part tier by margin); the +2-next-KTB, Throw distance/direction, movement, and Disarm are stated on the card for the table. **Empty Hand Check** is read as Physique + Beast Shrine (the Empty Hand profile; the manuscript names no Core/Cultivation for it — recorded as an assumption).
+
+## Added in 0.2.23 (combat overhaul patch 2: the new KILL THE BUDDHA)
+
+The 2.1 KILL THE BUDDHA core, selectable with the world setting **KILL THE BUDDHA engine (2.1)** (`ktbEngine21`; Openings = the existing exchange, default; Strikes = the rewrite). Strikes engine:
+
+| Area | Implementation |
+| --- | --- |
+| Attack | WEAPON check; the attacker's Strikes (dice >= 4) are posted with Block/Dodge buttons for each targeted defender. Weapon mods, Ferocious, Precise, damage, range and firing modes all still apply. |
+| Defense | Block = Physique + Beast Shrine; Dodge = Motorics + Thews And Sinews. The defender's Strikes cancel the attacker's one-for-one. |
+| Landing Strikes | Leftover Strikes buy: 1 = a Random or Controlled Part, or Knockback 2 m; 2 = the Torso; 3 = a Limb; 4 = the Head. Damage may be bought per Strike. Each damaging Strike deals the weapon's damage; the damage type is chosen when applying (patch 1). |
+| Defended | If the defender's Strikes cancel all of the attacker's, no damage is dealt and the attacker may Flurry (Flurry itself is patch 4). |
+
+## Added in 0.2.22 (combat overhaul patch 1: foundations)
+
+From the 2.1 KILL THE BUDDHA / Ticks docs (2026-11-15). Foundations only; the new KTB engine and Ticks initiative come in later patches.
+
+| Area | Implementation |
+| --- | --- |
+| Damage types | Five types chosen by weapon at the point of damage: **Cut** (Bleeding on the Part), **Crush** (-1 Part Soak after), **Pierce** (ignore up to 2 Soak), **Blast** (ignore all Soak, -1 Soak after), **True** (ignore all Soak). `DAMAGE_TYPES_21` + the Apply-damage dropdown. |
+| Off-Balanced | -2 on the next Check in a KILL THE BUDDHA, until the next turn ends. From Onslaught / Volley / Feint. New condition. |
+| Control | A named Part is grappled or pinned and cannot be moved; breaking free costs an Action or the Fiction. New condition (per-Part detail noted by the GM for now). |
+| Bleeding | A Bleeding Part loses [10 - Physique] HP after a minute and gives -1 to physical Checks; does not stack on one Part, but each Bleeding Part adds its -1. |
+| Incapacitation | Most beings stop fighting once any Part is Disabled; spend 1 Morale for a Heart + Adamance Check vs Demand 2 + Disabled Parts. (Already implemented.) |
+| Healing | Heals 1 per X days, X = current damage to the Part; doubled without proper rest and two meals a day. Disabled recovers only when fully healed; Cleaved needs thaumaturgy. (Already implemented, `healingDays`.) |
+
+## Added in 0.2.19 (player-facing book p.24)
+
+**Terminology: Swords → Rounds.** The player-facing book renames the structured scene (a temporal anchor divided into Cuts) from a **Sword** to a **Round**. All player-facing text, the Combat-tracker panel, the chat announcements and the combat-flag concept now say "Round"; the sub-unit is still a **Cut** (one engine round = one Cut), and "Cut-In" is unchanged. The combat flag key moved `sword21` → `round21`, so a scene set in an existing combat before 0.2.19 must be re-set once.
+
+| Area | Page | Implementation |
+| --- | --- | --- |
+| On Movement | 24 | Within a Round, an entity may move up to its Basic Move (Physique + Motorics) per second. An action that takes time (repairing a railing, planting a trap) requires standing still; moving away cancels that maneuver. Recorded as a rules note; the sheet already shows Basic Move |
+| Lightness Technique | 24 | While moving, a Cultivator may install ❂ to enter **Lightness**: run on vertical and diagonal surfaces, tread on falling leaves or swinging weapons, redirect movement by touching a surface, vault or slide past people and objects, and reduce falling damage by [SIDHI]. When knocked back, knocked down or juggled, she may immediately burn the ❂ to tech it — halving the knockback and/or standing back up to neutral. Recorded as a rules note (not yet a runtime condition) |
+| Projects (Extended Checks) | 24 | Long actions that take much longer than a single Check — research, crafting a magochemical pill, art, organization, factional influence. Define **Demand** (per Check), **Duration** (time per Check; minutes to years, the Check made at the end of each), and **Goal** (Successful Checks needed; excess Strikes add as extra Successes). Goals ≈ 8–10 difficult, 11–15 long opuses, 16+ gigantic. Not for long-term persuasion — that is CHANGE GOD'S MIND. Recorded as a rules note (no runtime tracker yet) |
+
+Decisions: Movement, Lightness and Projects are documented from p.24 as rules references; none changes runtime behaviour yet. Lightness is a candidate for a future 2.1 condition and Projects for an extended-check tracker; both are left to the table for now.
 
 ## Added in 0.2.6
 
@@ -111,8 +317,8 @@ From the 2026-11-01 test run (user instructions) and the 53-page Red Kalpa Manus
 | Area | Pages (53-page edition) | Implementation |
 | --- | --- | --- |
 | Renames | test run | Voice → **Face** (FAC), Spirit → **Heart** (HRT), Ardor → **Flame** on the 2.1 sheet, dialogs, cards and 2.1 compendiums. Data keys (`voc`, `spi`, `ardor`) are unchanged so both rulesets share stored values; formulas accept the old names |
-| Openings | test run; 10–11 | 1 Whiff, 2–3 Quick, 4–5 Solid, 6 Perfect. Strikes (Shoot Demand, random hit locations) stay 4+ |
-| Part HP | 14 | 3 + Physique (effective, with Active Effects), plus HP bonus, Mountain Frame and Anvil Head |
+| Openings | test run; 10–11 | 1–3 Whiff, 4–5 Quick, 6 Solid. No die yields a Perfect; Perfects come only from fusing two Solids. Strikes (Shoot Demand, random hit locations) stay 4+ (2026-11-14 engine change) |
+| Part HP | 14 | 7 + Physique + Sidhi Stage (2.1 playtest 2026-11-15; was 3 + Physique) (effective, with Active Effects), plus HP bonus, Mountain Frame and Anvil Head |
 | Assets | 45–49 | New `asset` Item type (Asset key, Stars, detail); 2.1 Assets compendium with all 35 d36 Assets; +Star for 4 × new Star XP (p.3); older Asset-list rows migrate to items once (active GM, on load) |
 | Barang | 2, 51–52; Sect spoilers | New `barang` Item type (Sect, Esoteric Cultivation, weapons, ingested); 2.1 Barang compendium; Ingest (one at a time; optional ✦✦ Cultivation per Wanderer Discovery) and Eject (keeps what was Cultivated) |
 | Flame | 52 | 2 + Sidhi Stage shown, with a button to set the maximum; burnt Flame returns 1 per week |
@@ -124,7 +330,7 @@ From the 2026-11-01 test run (user instructions) and the 53-page Red Kalpa Manus
 
 Decisions:
 
-- The manuscript text still prints 4 = Quick, 5 = Solid, 6 = Perfect and calls 4+ a Strike. The test run's ranks are used for Openings. Strike-based rules (Shoot Demand +1 damage, one random hit location per Strike in Burst/Full Auto) keep counting dice of 4+, which are now the Solid and Perfect Openings.
+- The 2026-11-14 engine change lowered every rank one step: 1–3 Whiff, 4–5 Quick, 6 Solid, and no die rolls a Perfect — Perfects come only from fusing two Solids. (Earlier rulebook text printed 4 = Quick, 5 = Solid, 6 = Perfect, and the first test run used 1 Whiff, 2–3 Quick, 4–5 Solid, 6 Perfect; both are superseded.) Strike-based rules (Shoot Demand +1 damage, one random hit location per Strike in Burst/Full Auto) keep counting dice of 4+, which are now the Quick and Solid Openings. Fusion ratios, the one-extra-Perfect cap, Sidhi upgrades, and the Gambit sequence (Quick → Quick → Solid → Perfect) are unchanged.
 - The manuscript still prints VOICE/WORD and SPIRIT in the Cores list (p.1) and several examples; the test run's names are used. The Sect spoilers already print FACE and HEART.
 - Flame maximum is not changed automatically, because the stored maximum is shared with the 2.0.3 sheet (Ardor). The 2.1 sheet shows 2 + Sidhi Stage and a button to apply it.
 - Meridians count every Magick and Technick on the sheet; the manuscript does not say whether unslotted techniques exist.

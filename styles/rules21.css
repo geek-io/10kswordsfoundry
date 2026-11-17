@@ -12,7 +12,7 @@
 .swords .r21-stats span{display:flex;flex-direction:column;}
 .swords .r21-stats small{color:var(--swords-muted,#b9b6b0);font-size:11px;}
 .swords .r21-skill-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 12px;}
-.swords .r21-skill-list li{display:grid;grid-template-columns:minmax(0,1fr) 54px 48px 28px auto;gap:4px;align-items:center;}
+.swords .r21-skill-list li{display:grid;grid-template-columns:minmax(0,1fr) 44px 28px 40px;gap:4px;align-items:center;}
 .swords .r21-skill-list li .r21-effective{grid-column:1 / -1;}
 .swords .r21-stars{color:#efc375;font-size:11px;letter-spacing:-1px;text-align:right;white-space:nowrap;}
 .swords .r21-core-hint{color:var(--swords-muted,#b9b6b0);font-size:10px;}
@@ -67,14 +67,17 @@
 .r21-technicks li.r21-blocked{opacity:.75;}
 .r21-technicks li small.r21-warning{display:block;}
 .r21-values{font-size:12px;}
-.r21-sword{margin:4px 6px;padding:4px 6px;border:1px solid rgba(255,255,255,.15);border-radius:4px;font-size:12px;}
-.r21-sword p{margin:2px 0;}
-.r21-sword-cuts{display:flex;align-items:center;gap:2px;margin:3px 0;}
+.r21-round{margin:4px 6px;padding:4px 6px;border:1px solid rgba(255,255,255,.15);border-radius:4px;font-size:12px;}
+.r21-round p{margin:2px 0;}
+.r21-round-cuts{display:flex;align-items:center;gap:2px;margin:3px 0;}
 .r21-cut{flex:1;text-align:center;padding:1px 0;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.04);}
 .r21-cut.done{opacity:.45;text-decoration:line-through;}
 .r21-cut.current{background:#7a2020;border-color:#c04040;color:#fff;font-weight:bold;}
 .r21-cut.tip{clip-path:polygon(0 0,70% 0,100% 50%,70% 100%,0 100%);padding-right:6px;}
-.r21-sword button{width:auto;font-size:11px;line-height:1.4;padding:0 6px;}
+.r21-round button{width:auto;font-size:11px;line-height:1.4;padding:0 6px;}
+.r21-tick-row{display:flex;flex-wrap:wrap;gap:3px;align-items:center;margin:3px 0;}
+.r21-tick-row span{flex:1 1 100%;font-weight:bold;}
+.r21-tick-row button{flex:0 0 auto;}
 .r21-tiers{display:flex;gap:4px;align-items:center;margin:2px 0 4px;font-size:12px;}
 .r21-tier{padding:0 6px;border:1px solid rgba(0,0,0,.25);border-radius:3px;}
 .r21-tier.current{background:#7a2020;color:#fff;font-weight:bold;}
@@ -95,3 +98,78 @@
 .swords .r21-skill-list li.r21-skill-head{font-size:11px;font-weight:bold;opacity:.8;text-transform:uppercase;letter-spacing:.03em;}
 .swords .r21-skill-list li.r21-skill-head{align-items:end;}
 .swords .r21-skill-list li.r21-skill-head span:last-child{justify-self:end;text-align:right;white-space:nowrap;line-height:1.15;}
+/* Cultivator Discovery (2.1 rulebook p.42) */
+.discovery21 .window-content{padding:0;overflow:hidden;}
+.discovery21-layout{display:grid;grid-template-columns:190px 1fr;flex:1 1 auto;height:100%;min-height:0;}
+.discovery21-step input,.discovery21-step textarea,.discovery21-step select{box-sizing:border-box;max-width:100%;}
+.discovery21-nav{display:flex;flex-direction:column;gap:4px;padding:10px;border-right:1px solid var(--swords-line,#444752);overflow-y:auto;}
+.discovery21-nav>button{display:flex;justify-content:space-between;align-items:center;gap:6px;text-align:left;width:100%;}
+.discovery21-nav>button.active{outline:2px solid var(--swords-accent,#c9a45c);}
+.discovery21 .badge{min-width:22px;padding:0 6px;border-radius:10px;text-align:center;font-size:12px;font-weight:bold;}
+.discovery21 .badge.todo{background:#7a3340;color:#fff;}
+.discovery21 .badge.done{background:#2f6b45;color:#fff;}
+.discovery21-side{margin-top:auto;padding-top:10px;border-top:1px solid var(--swords-line,#444752);}
+.discovery21-side button{width:100%;}
+.discovery21 .hint{color:var(--swords-muted,#b9b6b0);font-size:12px;}
+.discovery21-main{padding:12px 16px;overflow-y:auto;min-height:0;}
+.discovery21-step{border:0;margin:0;padding:0;min-width:0;}
+.discovery21-step>legend{font-size:18px;font-weight:bold;padding:0;margin-bottom:6px;}
+.discovery21-step label{display:flex;flex-direction:column;gap:2px;margin:6px 0;}
+.discovery21-step textarea{width:100%;resize:vertical;}
+.discovery21-row{display:flex;flex-wrap:wrap;align-items:end;gap:8px;margin:6px 0;}
+.discovery21-row button,.discovery21-step p>button{width:auto;flex:0 0 auto;}
+.discovery21-row .grow{flex:1 1 180px;margin:0;}
+.discovery21-row>input[type=search]{flex:1 1 200px;}
+.discovery21-row>select{flex:1 1 200px;}
+.discovery21-step label.discovery21-check{flex-direction:row;align-items:center;gap:4px;margin:0;}
+.discovery21-table{width:100%;border-collapse:collapse;margin:6px 0;}
+.discovery21-table th,.discovery21-table td{padding:3px 6px;text-align:left;vertical-align:top;border-bottom:1px solid var(--swords-line,#444752);}
+.discovery21-table tr.chosen{background:rgba(201,164,92,.16);}
+.discovery21-table tr.dear td{opacity:.6;}
+.discovery21-table button{width:auto;padding:0 8px;}
+.discovery21-table input[type=number]{width:56px;}
+.discovery21-list{list-style:none;margin:6px 0;padding:0;}
+.discovery21-list>li{margin:4px 0;}
+.discovery21-list>li>label{flex-direction:row;justify-content:space-between;align-items:center;gap:12px;margin:0;}
+.discovery21-list select{width:auto;min-width:96px;flex:0 0 auto;}
+.discovery21-asset,.discovery21-attachment{display:grid;gap:6px;align-items:center;}
+.discovery21-asset{grid-template-columns:minmax(150px,1fr) auto 2fr auto;}
+.discovery21-attachment{grid-template-columns:1fr auto auto;}
+.discovery21-asset button,.discovery21-attachment button{width:auto;padding:0 8px;}
+.discovery21-grid{list-style:none;margin:6px 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:2px 14px;}
+.discovery21-grid label{flex-direction:row;justify-content:space-between;align-items:center;gap:8px;margin:1px 0;}
+.discovery21-grid select{width:auto;min-width:76px;flex:0 0 auto;}
+.discovery21-grid li.rated{font-weight:bold;}
+.discovery21-pill{display:inline-block;padding:1px 8px;border-radius:10px;margin-right:4px;border:1px solid var(--swords-line,#444752);}
+.discovery21-pill.done{border-color:#2f6b45;}
+.discovery21-pill.todo{border-color:#a8485a;}
+.discovery21-over,.discovery21-issues{color:#df6575;}
+.discovery21-issues,.discovery21-notes{margin:10px 0 0;padding-left:18px;}
+.discovery21-status.done{color:#77be8b;}
+.discovery21-status.todo{color:#df6575;}
+.discovery21-summary{display:grid;grid-template-columns:140px 1fr;gap:3px 10px;margin:6px 0;}
+.discovery21-summary dt{font-weight:bold;}
+.discovery21-summary dd{margin:0;white-space:pre-wrap;}
+.discovery21-checklist{list-style:none;padding:0;margin:6px 0;}
+.discovery21-checklist>li.todo>a{color:#df6575;}
+.discovery21-checklist ul{margin:2px 0 6px;padding-left:18px;}
+.discovery21-log{margin:4px 0;padding-left:18px;}
+.discovery21-card .discovery21-buttons{display:flex;gap:6px;margin-top:6px;}
+.discovery21-card[data-status=ready] .discovery21-status{color:#77be8b;}
+.discovery21-card[data-status=draft] .discovery21-status{color:#e0b05c;}
+.discovery21-text{max-height:170px;overflow-y:auto;margin:4px 0 8px;padding:6px 10px;border:1px solid var(--swords-line,#444752);border-radius:6px;font-size:13px;line-height:1.35;grid-column:1 / -1;}
+.discovery21-text p,.discovery21-text ul{margin:0 0 6px;}
+.discovery21-text table{width:100%;font-size:11px;border-collapse:collapse;}
+.discovery21-preview{max-height:230px;}
+.discovery21-warning{padding:6px 10px;border:1px solid #df6575;border-radius:6px;background:rgba(223,101,117,.14);}
+#tooltip.discovery21-tip,.locked-tooltip.discovery21-tip{max-width:460px;max-height:70vh;overflow:hidden;text-align:left;font-size:13px;line-height:1.35;}
+#tooltip.discovery21-tip p{margin:0 0 6px;}
+.swords .r21-skill-list .r21-roll{position:relative;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-inline:6px;min-width:0;}
+.swords .r21-skill-list .r21-roll .r21-skill-name{display:block;overflow:hidden;text-overflow:ellipsis;}
+.swords .r21-skill-list .r21-roll .r21-stars{position:absolute;top:0;right:4px;font-size:9px;line-height:11px;letter-spacing:0;pointer-events:none;}
+.swords .r21-skill-list .r21-advance{padding-inline:0;width:100%;white-space:nowrap;}
+.r21-head-checks{display:flex;gap:6px;margin:6px 0 2px;}
+.r21-head-checks button{width:auto;flex:1 1 auto;}
+.swords .r21-core .r21-core-symbol{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;height:auto;padding:6px;text-align:center;}
+.swords .r21-core .r21-core-symbol img{width:56px;height:56px;object-fit:contain;border:0;}
+.swords .sheet-body.rules21-mode [data-rules20]{display:none !important;}

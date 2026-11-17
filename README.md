@@ -13,6 +13,259 @@ A Foundry VTT v14 game system for *10,000 Swords Against Heaven*, based on rules
 All my work is always free, but a little bit of help is always appreciated!  
 <a href="https://patreon.com/geekioshow"><img src="assets/Patreon-Logo.png" alt="All my work is always free, but a little bit of help is always appreciated" width="240"></a>
 
+# v 0.2.40
+
+**2.1 mode: Core pictures, and 2.0.3 material out of sight.** A world on 2.0.3 looks exactly as before. Nothing is deleted; switching the Rules version back shows everything again.
+
+- **Core pictures.** Each Core on the 2.1 sheet shows the picture of the Cultivation it replaced (Physique uses Violence's, Motorics Grace's, Mind Dialectics', Wits Savvy's, Face Word's, Heart Spirit's). Click it to roll, as before.
+- **Compendium tab.** The eight "Rules 2.0.3" compendiums are hidden while the world runs 2.1, and the Compendium Browser no longer lists their items.
+- **Item sheets.** These 2.0.3-only parts are hidden under 2.1: Upgrade, Affinity (optional), Attack profile, Mods, Special Abilities, Optional enhancement, and the fields Carry slots, Bonus / Base attack bonus, AP cost, Armor increase, a Magick's damage type and attack and defense pools, and a consumable's AP cost. Their values are kept.
+- **Character sheet.** The 2.0.3 Job line is gone, and the Licenses list appears only if the character still carries 2.0.3 License items.
+
+# v 0.2.39
+
+**2.1 character sheet and combat fixes from the table.** 2.0.3 is untouched.
+
+- **Cultivations fit on one line.** The name boxes on the sheet are wider and no longer wrap. The gold Stars sit in the top corner of each box.
+- **Spend Strikes.** After a KILL THE BUDDHA is won, the result card has a **Spend Strikes** button next to Apply damage. It lists what the Strikes can buy (HIT 1, KNOCKBACK 1, BODY HIT 2, CALLED HIT 3, HEAD HIT 4, p.117), counts what is left as you choose, rolls the random Part for a HIT, and applies the weapon's damage for each effect in one go. A ranged weapon without AUTO gets one effect and +1 damage per Strike left over. One chat card reports every hit.
+- **Stun Check and Morale Check after Head damage.** Any card that reports lost Head HP now has both buttons, for a GM or the character's owner. On the sheet, **Stun Check** and **Morale Check (1 Morale)** are always shown in the Body section. The Morale Check is the Heart + Adamance roll against 2 + Disabled Parts that costs 1 Morale; its button used to appear only once a Part was Disabled and was called Incapacitation Check.
+- **Combat and Inventory are one tab,** named **Combat & Gear**. Gear Slots, Licenses, armor, weapons and the rest follow the combat sections.
+
+# v 0.2.38
+
+**Cultivator Discovery: Roll everything.** A **Roll everything** button sits above Save to chat. It asks first, then rolls the whole Cultivator at random and jumps to the Review step. 2.0.3 is untouched.
+
+- **Rolled with the book's dice:** Class (3d6) and its d6 sub-table, starting Macca, Name (one to four syllables), Culture (d66), Alignment (2d6) and Assets (d66 until the Stars run out).
+- **Drawn at random:** which Core gets which Star value, which Cultivations get the Class's ratings, the Sect and two of its Licenses at ✦✦ or less, a Sidhi color and an Ajna.
+- **Supply:** up to eight random things the Macca can pay for. A Lumpenproletariat also gets the free random item. If the haul is over the Carry Limit, the warning shows and the penalties stand.
+- **Left to the player:** Attachments, the Sect story and notes are kept as they were.
+- One chat message lists everything that was rolled. Nothing is saved until Save to chat.
+
+# v 0.2.37
+
+**Cultivator Discovery: changes from the first table test.** 2.0.3 is untouched.
+
+- **Rolls post to chat.** Every roll made in the window (Class, its d6 sub-table, starting Macca, Name syllables, Culture, Alignment, Asset, the random Supply item) now posts as a normal dice roll, so two identical results in a row show as two rolls.
+- **Cores and Cultivations:** each dropdown lists only the Star values you still have left, plus the one already chosen there.
+- **Assets show what they do.** Each chosen Asset has its full text under it, and the Asset picked in the "Add an Asset" list is shown before you add it.
+- **Supply:** the market can be filtered by the Part an armor piece covers. Armor lists its Parts and the Soak on each. Every item shows its weight, and hovering its name shows its description.
+- **Carry.** The Supply step shows carried weight against the Carry Limit (10 kg + Physique × 10 kg). Going over it, or up another tier, raises a warning and a red notice with the penalties (p.182). The item is still added.
+- **Culture and Alignment** show their description under the choice.
+- **Sect:** hovering a Technick or Magick shows its full text. Clicking still opens the entry.
+
+**2.1 character sheet change:** carrying more than the Carry Limit now takes dice off every Check automatically (-2 up to twice the limit, -3 up to three times, and so on). Movement and Speed already changed with weight; the Check penalty was only a note before. If the Encumbered condition is ticked by hand, its -4 is used instead, not both.
+
+**Created characters:** each magazine or quiver bought becomes its own Item, so its weight counts once per magazine.
+
+# v 0.2.36
+
+**Cultivator Discovery: an in-app 2.1 character creation tool (book p.42).** 2.1 worlds get a **Cultivator Discovery** button at the top of the Actors tab. Any player can use it. 2.0.3 is untouched.
+
+- **The eight Sutras, one step each:** Class, Cores, Cultivations, Assets, Supply, Identity, Sect, and Sidhi. A Review step lists what is still missing. Each step shows the rule from the book and checks it: the Core Stars your Class gives, how many Cultivations at each rating, Asset Stars to buy, starting Macca, three Attachments with one Held, one Firm and one Heart, one Sect and two Licenses you qualify for at ✦✦.
+- **Roll or choose.** Class (3d6), its d6 sub-table, starting Macca, Name syllables, Culture (d66), Alignment (2d6) and Assets (d66) can be rolled in the window. Rolls are not posted to chat; they are listed on the Review step for the GM.
+- **Supply is a shop.** It lists the 2.1 Weapons, Armor, Consumables, Accessories, Ammunition and Market Goods with their prices and keeps a running total against your Macca. A line can be marked free for gear that comes from Debt, a Patron or the Class.
+- **Nothing saves on its own.** Closing the window with unsaved changes asks first. **Save to chat** puts the Discovery on a chat card whispered to the GM and the player. Saving again updates the same card.
+- **Reopening.** The card has an **Open Discovery** button. It works for the player who saved it and for any GM. Other players do not see the button.
+- **GM review.** The GM opens the card, reads the Review step, can change anything, and can leave a note that shows on the card.
+- **Create character.** On the Review step the GM presses **Create character in the Actors tab** and picks the owning player. The character gets its Stars, Attachments, Culture, Alignment, the Sect Cultivation at ✦✦, Sidhi 0, the Macca left over, full Morale, and these Items: Class, Culture, Alignment, Assets, the ingested Barang, the two Licenses and the Supply. The card then shows **Created** and the Discovery is locked.
+- A GM can create a character that is not finished; the missing things are listed first.
+
+**Compendium change** (2.1 Cultivator Discovery, ids unchanged): the nine Classes now follow the 303-page rulebook (pp.44–48). Petit Bourgeoisie starts with 160 × d6 ♄ (was 150). Only the Lumpenproletariat has a Supply line; the Gear lines of the other Classes are gone.
+
+# v 0.2.35
+
+**2.1 weapon Affinities, Material Grades, REACH, MORPH and VISCERAL (book pp.194–195).** These were text on the items; the system now applies them. 2.0.3 is untouched.
+
+- **Affinity.** A weapon can carry one Affinity: MIGHTY (PHYS), RAZOR (MOT), ESOTERIC (MND), ARCANE (WIT), LYRICAL (FAC) or PSIONIC (HRT). Choose that Core in the KILL THE BUDDHA dialog and the weapon deals that Core's damage plus its Profile bonus. Roll any other Core and it behaves as normal.
+- **Material Grade.** Base, Refined, Divine or Immortal. Divine adds +1 damage and Immortal +2. Extra Mod slots and Durability are shown as a note.
+- **REACH X** adds X metres to the weapon's range.
+- **VISCERAL** adds +1 damage when the Part hit has no Soak left. The Apply damage dialog has a tick box for it, pre-ticked from the attack card.
+- **MORPH.** A weapon that lists MORPH Profiles gets a **Morph** button beside it on the sheet. It switches the Profile (and Grip, and ranged or melee) and posts a line to chat.
+- **SHOCK is now called ELECTRIC**, as the book prints it. Same effect.
+- All five are set on the weapon's item sheet.
+
+**Compendium changes** (2.1 Weapons and 2.1 Sect Gear, ids unchanged):
+
+- Affinities set where printed: AWW Longclaws and MA Reaping Teppōkatana (RAZOR), HDF Cutting Logic Jian (ESOTERIC), MA Stardust Wrap and EXK Vampire Hunter (PSIONIC), Benzaiten's Drum (LYRICAL).
+- **Damage goes up on Divine and Immortal weapons:** Ritual Keris, HDF Heavenly Slingstaff and HDF Dragon Fire Cannon +1; TMNI Buddhocommunist Ginunting +2.
+- VISCERAL is switched on for the Teppōkatana, HaeCo Folding Spear and Atardar's Fang.
+- **Personal Vajra** (REACH 3) now reaches 4 m: Bludgeon 1 m + 3 m. It was 3 m.
+- Houyi Tonggong and Nezha Huojianqiang have their MORPH Profiles.
+
+# v 0.2.34
+
+**2.1 Assets re-imported from the 2.1 rulebook.** The **2.1 Assets** compendium follows the 303-page book (pp.211–218): the same 36 d36 Assets, with updated text on ten of them. 2.0.3 is untouched. Every Asset keeps its id.
+
+- **Hummingbird Pulse is now always ✦✦✦ and works differently.** It no longer adds to Speed. Instead, when you roll your first READY on the Ticks tracker, the d6 is rolled twice and the lower result kept. Missing meals now costs -3 dice.
+- **Python Grip:** +Stars to all Control and Throw Checks, and it ignores the SPD penalties of GREAT and COLOSSAL weapons.
+- **Beastly Claws:** Empty Hand deals cut damage; the +1 damage now comes at ✦✦✦.
+- **Money amounts follow the new prices:** Debt lends an item by rarity, Capital yields Stars × 2,000 ♄ a month, Patron gives items up to 5,000–1,000,000 ♄, Armory draws 100 / 300 / 800 ♄ of gear.
+- **Wrought Limb** keeps working while Disabled and stops only when Cleaved. **Anvil Head** headbutts are also CRUSHING.
+- Assets added from the older Asset list now cite the rulebook page.
+
+# v 0.2.33
+
+**2.1 item compendiums re-imported from the 2.1 rulebook.** Weapons, Armor, Accessories, Consumables, Ammunition and Market Goods now follow the 303-page 2.1 book (pp.186–207). 2.0.3 compendiums are untouched. Every item keeps its id, so re-importing updates it in place.
+
+- **Armor Soak is lower.** One Soak per printed shield glyph: Kongo pieces 2 (were 5–6), Genji 1–2, Mingwang 3, Heavenly Silk Vest 1. **No Soak any more:** YEI Three Head Crown, Working Class Headwrap.
+- **Prices changed**, many by orders of magnitude: Genji and Mingwang pieces 300,000–899,999 ♄, Angel Arm Prosthetic 4,000,000 ♄, talismans 100,000 ♄, Soma 3,000,000 ♄, Heart and Soul Containers 7,777,777 ♄.
+- **Weapons:** ARTIFACT is gone. New mods where printed: Venom Balaraw TOXIC; Ritual Keris RITUAL and FOCUS; Teppōkatana FEROCIOUS 2. Magicite Onslaught Rifle holds 36. A **Shield (profile)** template joins the Weapon Profiles folder.
+- **Affinities** (RAZOR, ESOTERIC, PSIONIC, p.195) and **VISCERAL** are printed on some weapons. They are shown on the item and applied at the table for now.
+- **Ammunition (p.193):** quivers and magazines now weigh and cost their full count. New: Fireshot, Freezeshot, Blunt Bolt, Impact Arrow, Slingshot, Dart.
+- **Consumables:** Thunderbolt Latte and Asura Stim deal true damage; Asura Stim gives +1 damage (was +2).
+- **Renamed:** ELIXIR Potion (was ELIXIR Healing Pill), ELIXIR Asura Stim, ELIXIR Soma, ELIXIR Occult Wraps, TMNI Buddhocommunist Ginunting, TMNI Stingray Tail, TMNI Blowgun, Demon God Black Sorcery Beads, Clean Necktie, Wairini Locket, Info Talisman Ribbon: Lover Rockers, KC Devil Battery.
+- The Heed Us one-shot gear, the tower shield and the Fangshi concoctions are carried over unchanged. Assets are not re-imported yet.
+
+# v 0.2.32
+
+**2.1 Sect Gear re-imported from the 2.1 rulebook.** The **2.1 Sect Gear** compendium now follows the 303-page 2.1 book (pp.224–303): **44 items** (16 weapons, 20 armor and Fashion pieces, 8 accessories and talismans) across all the Sects that print gear. 2.0.3 compendiums are untouched.
+
+- **Soak is lower across the board.** The book now prints Soak as shield glyphs; one glyph is 1 Soak on each Part the piece covers. Examples: Interlocking Dragonsteel pieces 2 (were 3–4), Phoenix Feather Cap 2, Cloud Walking Boots 2 per leg, Revolt Suit 1 on every Part, San Tou Liu Bi 1, Dharma Robe 1, White Robes 1.
+- **No Soak any more:** Hermetic Robes, Star-Stitched Robes, Shrine Raiments. **Golden Chainmail Shirt** has Torso Soak equal to the wearer's Sage Body; set it on the item by hand.
+- **Weapons:** the ARTIFACT mod is gone from every Sect weapon. FEROCIOUS now has a number: Kalikhadga 3; Mahadirga Knife, Areindama, Tonggong and Atardar's Fang 2. Trismegistus and Rod of Bekanze gain RITUAL; San Miguel is GREAT, HOLY, FOCUS; Lance of Revolutionary Will and Demon Subjugating Sword are HOLY.
+- **Bonuses:** Shrine Raiments +2 max Flame and +2 max Morale (were +1 each); Revolt Suit +2 Morale.
+- **New:** Metomian **Personal Vajra** (ALMIGHTY, FOCUS, Reach 3) and **Adamantite Shell** (an automaton, listed as an accessory with its rules text).
+- **No longer printed, removed:** Sword Runner Jacket and Sword Runner Trousers. Copies already on characters stay as they are.
+- **Techgnostic COMP (666 PTM)** is now named **Techgnostic COMP**. Every item that carries over keeps its id, so re-importing updates it in place.
+- The item catalogs (weapons, armor, ammunition, accessories, consumables, market goods) are not re-imported yet; they still follow the earlier book.
+
+# v 0.2.31
+
+**2.1 Sects re-imported from the 2.1 rulebook.** The **2.1 Sects** compendium now holds every Technick and Magick printed in the 303-page 2.1 book (pp.224–303): **242 entries across 20 Sects** (175 Technicks, 67 Magicks). 2.0.3 compendiums are untouched.
+
+- **Two new Sects:** **Luciferian** (Consummate Lie; 14 entries; Barang: Liar's Devil Cricket) and **Metomian** (Black Mace; 12 entries; Barang: Black Orb Beetle). Both Sect Cultivations count for Licenses.
+- **New entries:** Shell Shedding Technique (Fangshi), Slow the Heavenly Wheel (Jyotisha), Emptiness Sealing Acupoint Strike (Mendicant), Empu Sword Possibility (Sword Dialectician), Akasha Palimpsest (Techgnostic).
+- **No longer printed, removed:** Lightness Technique (Fangshi), Hold the Heavenly Wheel (Jyotisha), Emptiness Sealing Palm (Mendicant), Adamantite Body (Techgnostic). Copies already on characters stay as they are.
+- **Text updated** on 133 of the 211 entries that carry over, including Six Demon Cutting Sword and Hell Ripped Through with Exit Wounds. **Costs or requirements changed** on 26 (for example Asuri's Wrath ✹, Pluck of Many ❂❂❂❂, Samadhi Fire ❂, Live Hand Method ❂❂❂) and **Stars** on 3 (Celestial Heaven Shooter ✦✦, Hell Ripped Through with Exit Wounds ✦✦✦✦, Pluck of Many ✦✦✦✦✦). See [the Sect catalog notes](docs/sect-catalog-2.1.md).
+- Costs printed as a choice ("✹ or ✹✹", "✹✹/✹✹✹/✹✹✹✹") charge the cheapest option and are treated as variable, like "✹..." costs.
+- Existing compendium entries keep their ids, so re-importing updates them in place. **Sect Gear and the item catalogs are not re-imported yet**; they still follow the earlier book.
+
+# v 0.2.30
+
+**2.1 Armor Mods and weapon damage.** 2.0.3 untouched.
+
+- **Armor Mods (2.1 p.202).** Every armor or clothing piece can carry one Mod, chosen on its item sheet: Breakaway, Sheathe, Reinforced, Silent, Mourning Lacquer, Retributive Script, Magnetic, Featherweight.
+  - **Reinforced, Mourning Lacquer, Retributive Script, Magnetic** add +1 Soak to each Part the piece covers.
+  - When a Part with **Mourning Lacquer, Retributive Script or Magnetic** soaks damage, the damage card says what happens to the attacker.
+  - **Featherweight** halves the piece's weight. **Sheathe** and **Retributive Script** fit Arm, Torso and Leg pieces only, so they do nothing on the Head.
+  - **Breakaway** can be recorded but has no effect: its text is cut off in the book.
+- **Weapon damage follows the book (p.192).** Sword, Bludgeon and Polearm now deal Core + 1 (were Core + 0). **Empty Hand deals PHYS** (was a flat 1). This applies to both KILL THE BUDDHA engines in 2.1 worlds.
+
+# v 0.2.29
+
+**2.1 Firefight.** Ranged combat in the Strikes engine now follows the 2.1 book (pp.119–124). The Openings engine and 2.0.3 are untouched.
+
+- **Aim.** The KILL THE BUDDHA dialog has *Ticks spent Aiming*: +1 die per Tick, up to Motorics. You do not fire on the Tick you start and cannot move while aiming.
+- **Cover.** Choose the target's cover: **Light** (each instance of ranged damage has a 2-in-6 chance of hitting cover), **Heavy** (4-in-6) or **Full** (no attack until it is removed). The roll is made on the defender's resolution card. Melee ignores cover. This replaces the old −2 / −4 dice.
+- **Out of range.** A shot beyond the weapon's range has a 4-in-6 chance of going wide; if it does, no Strikes land. This replaces the old range bands.
+- **Height.** At least 1 m above your target: +1 die.
+- **Ambush and Casting.** An Ambushed target, or anyone attacked while holding Magick Charges, rolls a halved pool (rounded down) when they Block or Dodge.
+- **Shield profile** (Physique + Beast Shrine, 1 m, PHYS damage, SPD +0) with innate COVER, and three new weapon mods: **COVER** (Light Cover), **WALL** (Heavy Cover), **UNBLOCKABLE**. A lone target carrying one starts with that cover selected.
+
+# v 0.2.28
+
+**2.1 Ticks tracker.** In 2.1 worlds the Combat tracker now runs on **Ticks** (2.1 book pp.22–23) and the old Round / Cut panel is gone. 2.0.3 combat is untouched.
+
+- **One engine round is one Tick (1 second).** A combatant's initiative is the Tick they are next **READY** on; the earliest READY is listed first. Rolling initiative gives the first READY: **d6 + Speed** (counted from the live Tick for late arrivals). The turn arrows move a whole Tick.
+- **Ticks panel.** Shows the Tick, who is READY and when the next READY falls. The GM has **Next Tick** and **Skip to Tick N** (the next Tick on which someone is READY). A chat line announces each Tick on which someone is READY.
+- **Your combatants get buttons.** When READY: **Act** (next READY = Tick + Recovery), **Dash** (+1 Recovery), **Hold** and **Anticipate** (you name the trigger). In Recovery: **Flash ✹2** — burn 2 Flame to Act now; **Release** resolves a Held or Anticipated Act. Unused Held Acts lapse when you are READY again.
+- **Flurry is counted.** Pressing Flurry on a KILL THE BUDDHA card during an encounter skips Recovery and readies you for the next Tick; **End Flurry** then adds Recovery + 2 per continuation. A Flurry begun before your own READY adds to that READY.
+- **Gambits.** GM: right-click a combatant → **Gambit READY Ticks (2.1)** to plot a WB's READY Ticks (for example 6, 15, 24). It then uses the list instead of Recovery and cannot Flurry.
+- The sheet's old "Speed bonus" is now the **Speed modifier**: it is added to Recovery (positive is slower), as the book's gear entries read. The old Sword-order Speed line is removed.
+
+# v 0.2.27
+
+**2.1 rulebook corrections — Speed, Recovery and movement.** 2.0.3 untouched.
+
+- Every weapon profile now has its **SPD modifier** from the book (Dagger +0, Sword +1, Handgun +1, Launcher +1, the rest +2). With two weapons readied the heavier one counts.
+- The sheet shows **Ticks: Speed and Recovery** — Recovery = Speed + weapon SPD + encumbrance, the Ticks until your next READY after an Act. The Flurry card now uses Recovery.
+- **Basic Move = Motorics**, **Dash = Motorics + Physique**, **Step = half Basic Move** (was Physique + Motorics).
+- **Encumbrance** follows the book: over the Carry Limit up to ×2 is −2 Movement and Checks and +2 Speed; up to ×3 is −3 / +3. The Check penalty is shown as a warning, not applied automatically.
+
+# v 0.2.26
+
+**2.1 rulebook corrections — combat, part 1.** The full 2.1 book (Nov 16) revises the combat rules; this brings what is already live into line. 2.0.3 untouched.
+
+- **KILL THE BUDDHA is a two-way exchange.** Whoever wins the Conflict Check deals weapon damage — the Defender too. The resolution card names the winner, gives the Apply-damage button for the loser, and offers **Flurry to the Winner** (the Attacker on a Tie).
+- **Block is now your own Weapon Check** (the equipped melee weapon, or Empty Hand) instead of Physique + Beast Shrine. Dodge is unchanged. UNBLOCKABLE / ALMIGHTY attacks cannot be Blocked.
+- Hits are named as in the book (Hit, Body Hit, Called Hit, Head Hit). Ranged weapons without AUTO buy one effect; the remaining Strikes become damage.
+- **Strikes is now the default** KILL THE BUDDHA engine; Openings stays available in the system settings.
+- **Speed = 7 − the higher of Wits / Mind** (was 10 − Wits). **Maximum Morale = 1 + Heart + Stillness.** A failed Stun Check stuns for 6 seconds.
+
+# v 0.2.25
+
+**Combat overhaul — patch 4 of 6: Flurry.** Press the advantage after a KILL THE BUDDHA in the Strikes engine. Additive; 2.0.3 and the Openings engine untouched.
+
+- Every Strikes-engine resolution (Block / Dodge) now shows a **Flurry — KILL THE BUDDHA again** button, up to **Motorics** times, and the card tracks how many times you have pressed.
+- Each Flurry is an Anticipated Action: it immediately re-rolls KILL THE BUDDHA against the same defender (same weapon pre-selected). The resolution states the cost — the next READY lands **Speed + 2 × flurries** Ticks after the Tick you acted on (Speed = 10 − Wits, min 2). The Tick itself comes from the Ticks tracker in patch 5.
+
+# v 0.2.24
+
+**Combat overhaul — patch 3 of 6: Finding an Opening.** The seven example maneuvers, as contested Checks. Additive; 2.0.3 untouched. Available on every 2.1 actor sheet (independent of the KILL THE BUDDHA engine setting).
+
+- New sheet button **Find an Opening** (beside KILL THE BUDDHA). Pick one of **Onslaught, Volley, Analyze, Feint, Control, Throw, Disarm**; the initiator rolls and the card gives each target a **Resist** button with the maneuver's opposed pool.
+- Each maneuver's pools follow the manuscript: Onslaught (WEAPON vs Wits + Beast Shrine), Volley (ranged WEAPON, spend Ammo, vs Wits + Thews And Sinews; [AUTO] adds up to 3 Ammo dice), Analyze (Mind + Concrete Analysis vs Face + Beast Shrine), Feint (Wits + Beast Shrine, mirror), Control (Empty Hand vs Motorics + Beast Shrine), Throw and Disarm (Empty Hand vs Physique + Thews And Sinews).
+- Resolution auto-applies what it can: **Off-Balanced** (Onslaught loser, Volley target), **Control** on the target (with the Part tier by margin — a Limb, win by 2 the Torso, by 3 the Head). Throw distance ([Physique + leftover Strikes] m), the +2-next-KTB from Analyze/Feint, Disarm, and throw direction (Juggled / Knockdown) are stated on the card for the table to apply.
+
+# v 0.2.23
+
+**Combat overhaul — patch 2 of 6: the new KILL THE BUDDHA.** A second combat engine, selectable per world. The old Openings/exchange engine is the default and is unchanged. 2.0.3 untouched.
+
+- New world setting **KILL THE BUDDHA engine (2.1)** — *Openings* (the current Quick/Solid/Perfect exchange, default) or *Strikes* (the 2.1 rewrite). Switch it in the system settings; nothing changes until you do.
+- **Strikes engine:** a KILL THE BUDDHA posts the attacker's **Strikes** and each targeted defender gets **Block** (Physique + Beast Shrine) or **Dodge** (Motorics + Thews And Sinews) buttons. The defender's Strikes cancel the attacker's; any that remain land, and the card shows what they buy — **1** a Random/Controlled Part or Knockback 2 m, **2** the Torso, **3** a Limb, **4** the Head — with an Apply-damage button on the defender (where you pick the damage type from patch 1).
+- Weapon mods still apply to the attack roll (Ferocious, Precise, damage, range, firing modes), and a called/Ambush Part and random hit locations carry through.
+
+# v 0.2.22
+
+**Combat overhaul — patch 1 of 6: foundations.** The first slice of the 2.1 KILL THE BUDDHA rewrite (user docs, 2026-11-15). Additive; the current combat engine is unchanged. 2.0.3 untouched.
+
+- **Five damage types** — **Cut** (inflicts Bleeding), **Crush** (-1 Part Soak after), **Pierce** (ignores up to 2 Soak), **Blast** (ignores all Soak, -1 Soak after), **True** (ignores all Soak). Pick one from the new dropdown in the Apply-damage dialog; it sets the Soak handling, reduces the Part's Soak and sets Bleeding as the type requires.
+- **Two new conditions** — **Off-Balanced** (-2 on the next KILL THE BUDDHA Check) and **Control** (a Part is grappled/pinned and cannot move).
+- **Bleeding** now reads as the 2.1 rule: a Bleeding Part loses [10 - Physique] HP after a minute and gives -1 to physical Checks (does not stack on one Part; each Bleeding Part adds its penalty).
+- The **Incapacitation Check** (1 Morale — Heart + Adamance vs 2 + Disabled Parts) and **Healing** (1 per X days, X = current damage; doubled without rest) already matched the new docs, so no change was needed there.
+
+# v 0.2.21
+
+**Force player dice (2.1) — character-sheet rolls use the assigned player's Dice So Nice dice.** Code only; 2.0.3 play is unchanged.
+
+- Every 2.1 roll is spoken by a character, so on other clients Dice So Nice could resolve the 3D dice from whoever drove the roll (often the GM) instead of the character's player. In a 2.1 world, rolls made from a character sheet now animate with the Dice So Nice appearance of the **player assigned to that character** — the same dice a `/r` command shows them. A `/r` command (no character speaker) is never touched.
+- New world setting **Force player dice (2.1)** (default on) toggles it. Turn it off to let Dice So Nice resolve appearance on its own.
+- The system still writes no Dice So Nice data and uses no `eval`; this only points Dice So Nice at the right player when it animates. If dice still fall back to a generic set, that points to a Content-Security-Policy blocking `eval` (a reverse-proxy/CDN or browser-extension setting, not the system).
+
+# v 0.2.20
+
+**Combat and sheet pass: tougher Parts, Ferocious actually rolls, temporary Core boosts, an Esoteric XP button, ammo counts and Dice So Nice bonus dice.** Code only — no compendium changes. 2.0.3 play is unchanged.
+
+- **Part HP is now 7 + Physique + Sidhi Stage** (was 3 + Physique). Every Body Part is tougher; an HP bonus, Mountain Frame and Anvil Head still add on top, and a Part is still Disabled at 0 and Cleaved at negative half its maximum.
+- **Ferocious rolls its extra dice.** A weapon's FEROCIOUS rating adds an exploding d6 for each 6 rolled, up to the rating. The **GREAT** modifier now grants FEROCIOUS 1 (as its rules text says) — previously a GREAT weapon added no dice.
+- **Dice So Nice animates the bonus dice.** Ferocious and Precise bonus dice now roll in 3D through Dice So Nice; the main pool already did.
+- **Temporary Core boosts from Technicks and Traits.** A Technick / special ability can now apply a temporary change to any of the six Cores (Physique…Heart), the same way a Trait's Active Effect already can.
+- **Experience-spend button for Esoteric Cultivations.** Each Esoteric Cultivation row now has a “+ XP” button (3 × the new rating, capped at 5 Stars), matching the basic Cultivations.
+- **Ammo counts by the weapon.** Equipped ranged weapons show their remaining ammo — a loaded magazine, a linked stack, or the family you carry — in the weapon panel and in the KILL THE BUDDHA weapon picker.
+
+# v 0.2.19
+
+**Swords are now Rounds, and the Movement / Lightness / Projects rules are in.** Code and docs only — no compendium changes. 2.0.3 play is unchanged.
+
+- **Swords → Rounds.** The 2.1 structured scene (a temporal anchor divided into Cuts) is renamed from a *Sword* to a *Round*, matching the player-facing book. The Combat-tracker panel, its chat announcements and the "Set Round" button all say Round now; the sub-unit is still a *Cut* (one engine round = one Cut) and *Cut-In* is unchanged. A scene set in a combat before this update must be re-set once (the flag moved `sword21` → `round21`).
+- **On Movement, Lightness Technique and Projects** (player-facing book p.24) are documented in the 2.1 rules notes: within a Round you move up to Basic Move per second and standing actions cancel if you move away; Lightness (install ❂) lets a Cultivator run walls, tread on falling leaves and tech out of knockback; Projects are Extended Checks with a Demand, Duration and Goal. These are rules references for the table — no runtime behaviour changed.
+
+# v 0.2.18
+
+**Two new 2.1 Sects from the player-facing book: the Bidadari and the Sapphire Star.** Both join the 2.1 compendiums with their Technicks, Magicks, Gear and Barang. 2.0.3 play is unchanged.
+
+- **Bidadari** (Sound Law) — bard-diplomats who weaponize music: 12 Technicks (Steel Song Meditation's KILL THE BUDDHA Maneuvers, battle anthems, crowd-swaying songs, the capstone Mountain Breaking Thunder), the Apsara's Flowing Hagoromo arm-ribbons and the Benzaiten's Drum, plus the Golden Dawn Cricket Barang.
+- **Sapphire Star** (Dual Cultivation) — the Heavenly Ascendance Bureau's mediator-spies: 12 Technicks and 2 Magicks (Sapphire Silk Lattice; On Earth We're Briefly Gorgeous), the Plenipotentiary's Sapphire Vestments, and the Sapphire Silkworm Barang. This replaces the flavor-only Sapphire Star preview added in 0.2.16 — it is now a full Sect.
+- The 2.1 Sects compendium is now **215 entries across 18 Sects**; Sect Gear is **44**; Barang is **18**. The runtime Sect-cultivation list adds Sound Law and Dual Cultivation.
+
+# v 0.2.17
+
+**2.1 combat: Maneuver generation lowered a step.** The KILL THE BUDDHA dice now rank one tier lower, matching the current engine. 2.0.3 play is unchanged.
+
+- A die of **1–3 is a Whiff** (no Maneuver), **4–5 is a Quick**, and **6 is a Solid**. No die rolls a Perfect anymore — a **Perfect comes only from fusing two Solids**.
+- Everything downstream is unchanged: Strikes still count dice of 4+, fusion still turns two equal Openings into the next rank (one extra Perfect at most), Sidhi upgrades work the same, and Gambit World Beings keep the Quick → Quick → Solid → Perfect sequence.
+- The dice colours, the roll card's "Resolving Openings" help, and the 2.1 rules notes were updated to match.
+
 # v 0.2.16
 
 **The 2.1 player-facing book, in the compendiums.** The 2.1 ruleset's compendiums are now built from the full 187-page player-facing book, and three new compendiums join them. The 2.0.3 rules are unchanged.
