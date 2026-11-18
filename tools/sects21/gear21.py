@@ -63,7 +63,7 @@ GEAR = [
  P(sect='Nezha', entry='HUO JIAN QIANG', name='Nezha Huojianqiang', kind='weapon', category='Nezha Prestige Gun', weight=5, grip='stock', profile='longgun', material='Red God Metal', rate=15, capacity=0,
    mods=['DOUBLEHANDED','HOLY','SMASHING','MORPH (POLEARM)'], morph='longgun, polearm', note='Magazine: infinite (Capacity left at 0). MORPH: use the Morph button on the sheet for Fire Lance Mode (Polearm).', start='Red Gun Mode'),
  P(sect='Sword Dialectician', entry="ATARDAR'S FANGS", name="Atardar's Fang", kind='weapon', category='Sword Dialectician Prestige Sword', weight=2, grip='hilt', profile='sword', material='Devilsteel',
-   mods=['VISCERAL','LACERATING','FEROCIOUS 2'], note="Printed heading ATARDAR'S FANGS; the statblock is ATARDAR'S FANG.", start='When the wielder enters Samadhi'),
+   mods=['VISCERAL','FEROCIOUS 2'], note="Printed heading ATARDAR'S FANGS; the statblock is ATARDAR'S FANG.", start='When the wielder enters Samadhi'),
  P(sect='Techgnostic', entry='COMP', name='Techgnostic COMP', id_name='Techgnostic COMP (666 PTM)', kind='accessory', category='Techgnostic Prestige Accessory', weight=1,
    note='The 3 Battery Charges are tracked by hand.', start='Can be used to interact'),
  P(sect='Ultramystic', entry='LANCE OF REVOLUTIONARY WILL', name='Lance of Revolutionary Will', kind='weapon', category='Prestige Base Polearm', weight=3, grip='haft', profile='polearm', material='Noosteel',

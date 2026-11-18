@@ -196,7 +196,7 @@
    "type": "fashion",
    "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
    "system": {
-    "description": "<p>The newest and most widespread version of the MORTAR standard issue—the KONGO model—is known for its fearsome Wisdom King aesthetic, blending the \"dharma protector\" into the brutalist blackrock, ceramic, and heavensilk material. You cannot be made to look away..</p><p><strong>Uncommon Head Piece · 6 kg · 900 ♄</strong></p><p><strong>Soak:</strong> Head 2</p><p>-2 SPEED</p><p><em>Catalog note: \"-2 SPEED\" is applied as printed to the Speed modifier.</em></p>",
+    "description": "<p>The newest and most widespread version of the MORTAR standard issue—the KONGO model—is known for its fearsome Wisdom King aesthetic, blending the \"dharma protector\" into the brutalist blackrock, ceramic, and heavensilk material. You cannot be made to look away..</p><p><strong>Uncommon Head Piece · 6 kg · 900 ♄</strong></p><p><strong>Soak:</strong> Head 2</p><p>+2 SPEED</p><p><em>Catalog note: \"+2 SPEED\" is applied as printed to the Speed modifier.</em></p>",
     "source": "Rules 2.1 (2.1 rulebook), p.203",
     "rarity": "uncommon",
     "quantity": 1,
@@ -223,7 +223,7 @@
    "effects": [
     {
      "_id": "16efce41337241a0",
-     "name": "Kongo Helm: -2 Speed",
+     "name": "Kongo Helm: +2 Speed",
      "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
      "transfer": true,
      "disabled": false,
@@ -233,7 +233,7 @@
        {
         "key": "system.speedBonus",
         "type": "add",
-        "value": "-2",
+        "value": "2",
         "phase": "initial",
         "priority": 20
        }
@@ -713,7 +713,7 @@
    "type": "fashion",
    "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
    "system": {
-    "description": "<p>Black wraps threaded through with talismans to the Sword Buddha.</p><p><strong>Uncommon Arm Piece · 1.5 kg · 820 ♄</strong></p><p><strong>Soak:</strong> —</p><p>While worn, DAGGERS, SABERS, and SWORDS gain LACERATING.</p><p><em>Catalog note: No Soak (printed \"—\").</em></p>",
+    "description": "<p>Black wraps threaded through with talismans to the Sword Buddha.</p><p><strong>Uncommon Arm Piece · 1.5 kg · 820 ♄</strong></p><p><strong>Soak:</strong> —</p><p>While worn, DAGGERS, SABERS, and SWORDS gain +1d to BLOCK.</p><p><em>Catalog note: No Soak (printed \"—\").</em></p>",
     "source": "Rules 2.1 (2.1 rulebook), p.205",
     "rarity": "uncommon",
     "quantity": 1,

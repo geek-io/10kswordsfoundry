@@ -1,39 +1,39 @@
-import {WEAPON_REQUIREMENTS} from './special-abilities.mjs?v=0.2.42';
-import {animationContext,playItemAnimation} from './animations.mjs?v=0.2.42';
-import {useConsumable} from './consumables.mjs?v=0.2.42';
-import {CULTIVATION_DETAILS} from './cultivations.mjs?v=0.2.42';
-import {grantSnapshot} from './job-grants.mjs?v=0.2.42';
-import {defaultItemIcon} from './item-icons.mjs?v=0.2.42';
-import {abilityView,isAbility,isInternalized} from './ability-state.mjs?v=0.2.42';
-import {armorTrack} from './health.mjs?v=0.2.42';
-import {inflictedConditions,resolveOngoing} from './mod-conditions.mjs?v=0.2.42';
-import {useAbility,resourceSymbols,AREA_SHAPES} from "./abilities.mjs?v=0.2.42";
-import {RANKS,licenseIdentity,licenseLabel} from "./licenses.mjs?v=0.2.42";
-import {RARITIES} from "./rarity.mjs?v=0.2.42";
-import {interruptAttack} from "./interrupt.mjs?v=0.2.42";
-import {activatePanel,sheetPanel,openCompendium} from "./sheet-navigation.mjs?v=0.2.42";
-import {resolveDefense,recentAttacks,escapeHTML} from "./resolution.mjs?v=0.2.42";
-import {CONDITIONS,assertAction,restChanges} from "./conditions.mjs?v=0.2.42";
-import { sixesHTML, requireFreeHand, wieldedWeapons, tagBonus, inSamadhi, enterSamadhi } from "./roll-support.mjs?v=0.2.42";
-import { attackCultivation, combatModifiers } from "./combat.mjs?v=0.2.42";
-import { healthSutra } from "./health.mjs?v=0.2.42";
-import { createEffect, editEffect, toggleEffect, removeEffect, effectRows } from "./effects.mjs?v=0.2.42";
-import { editorValue, enriched } from "./rich-text.mjs?v=0.2.42";
-import { slotSummary } from "./slots.mjs?v=0.2.42";
-import { AMMO_CHOICES, AMMO_FAMILIES } from "./ammunition.mjs?v=0.2.42";
-import { MODIFIER_CHOICES, modifierProfile, AFFINITIES } from "./modifiers.mjs?v=0.2.42";
-import { UPGRADE_CHOICES, weaponDetails, validateWeapon, installMod } from "./weapons.mjs?v=0.2.42";
-import { LICENSE_CHOICES, LICENSE_DENIED, qualifiesForLicense } from "./licenses.mjs?v=0.2.42";
-import { applyJobToActor } from "./jobs.mjs?v=0.2.42";
-import { CULTIVATIONS, checkFormula, summarizeCheck } from "./rules.mjs?v=0.2.42";
+import {WEAPON_REQUIREMENTS} from './special-abilities.mjs?v=0.2.45';
+import {animationContext,playItemAnimation} from './animations.mjs?v=0.2.45';
+import {useConsumable} from './consumables.mjs?v=0.2.45';
+import {CULTIVATION_DETAILS} from './cultivations.mjs?v=0.2.45';
+import {grantSnapshot} from './job-grants.mjs?v=0.2.45';
+import {defaultItemIcon} from './item-icons.mjs?v=0.2.45';
+import {abilityView,isAbility,isInternalized} from './ability-state.mjs?v=0.2.45';
+import {armorTrack} from './health.mjs?v=0.2.45';
+import {inflictedConditions,resolveOngoing} from './mod-conditions.mjs?v=0.2.45';
+import {useAbility,resourceSymbols,AREA_SHAPES} from "./abilities.mjs?v=0.2.45";
+import {RANKS,licenseIdentity,licenseLabel} from "./licenses.mjs?v=0.2.45";
+import {RARITIES} from "./rarity.mjs?v=0.2.45";
+import {interruptAttack} from "./interrupt.mjs?v=0.2.45";
+import {activatePanel,sheetPanel,openCompendium} from "./sheet-navigation.mjs?v=0.2.45";
+import {resolveDefense,recentAttacks,escapeHTML} from "./resolution.mjs?v=0.2.45";
+import {CONDITIONS,assertAction,restChanges} from "./conditions.mjs?v=0.2.45";
+import { sixesHTML, requireFreeHand, wieldedWeapons, tagBonus, inSamadhi, enterSamadhi } from "./roll-support.mjs?v=0.2.45";
+import { attackCultivation, combatModifiers } from "./combat.mjs?v=0.2.45";
+import { healthSutra } from "./health.mjs?v=0.2.45";
+import { createEffect, editEffect, toggleEffect, removeEffect, effectRows } from "./effects.mjs?v=0.2.45";
+import { editorValue, enriched } from "./rich-text.mjs?v=0.2.45";
+import { slotSummary } from "./slots.mjs?v=0.2.45";
+import { AMMO_CHOICES, AMMO_FAMILIES } from "./ammunition.mjs?v=0.2.45";
+import { MODIFIER_CHOICES, modifierProfile, AFFINITIES } from "./modifiers.mjs?v=0.2.45";
+import { UPGRADE_CHOICES, weaponDetails, validateWeapon, installMod } from "./weapons.mjs?v=0.2.45";
+import { LICENSE_CHOICES, LICENSE_DENIED, qualifiesForLicense } from "./licenses.mjs?v=0.2.45";
+import { applyJobToActor } from "./jobs.mjs?v=0.2.45";
+import { CULTIVATIONS, checkFormula, summarizeCheck } from "./rules.mjs?v=0.2.45";
 
-import { boundedResources, resourceLimits } from "./resources.mjs?v=0.2.42";
+import { boundedResources, resourceLimits } from "./resources.mjs?v=0.2.45";
 
-import { preserveAndLinkWanderer } from "./token-linking.mjs?v=0.2.42";
-import { usesRules21 } from "./rules-version.mjs?v=0.2.42";
-import { class21, option21, OPTION_LABELS_21, applyClass21, recordOption21 } from "./options21.mjs?v=0.2.42";
-import { ACTIONS_21, ACTOR_TEMPLATE_21, prepareActor21, normalizeLists21, assetChoices } from "./sheet21.mjs?v=0.2.42";
-import { CORES, PARTS, PROFILES, GRIPS, WEAPON_MODS_21, ARMOR_MODS_21, AFFINITIES_21, GRADES_21, qualifiesForLicense21 } from "./rules21.mjs?v=0.2.42";
+import { preserveAndLinkWanderer } from "./token-linking.mjs?v=0.2.45";
+import { usesRules21 } from "./rules-version.mjs?v=0.2.45";
+import { class21, option21, OPTION_LABELS_21, applyClass21, recordOption21 } from "./options21.mjs?v=0.2.45";
+import { ACTIONS_21, ACTOR_TEMPLATE_21, prepareActor21, normalizeLists21, assetChoices } from "./sheet21.mjs?v=0.2.45";
+import { CORES, PARTS, PROFILES, GRIPS, WEAPON_MODS_21, ARMOR_MODS_21, AFFINITIES_21, GRADES_21, qualifiesForLicense21 } from "./rules21.mjs?v=0.2.45";
 // 2.0.3 keeps its established License check; 2.1 maps the same prerequisites onto Cores.
 const licenseQualified = (system, license) => usesRules21() ? qualifiesForLicense21(system, license) : qualifiesForLicense(system, license);
 
@@ -779,5 +779,5 @@ export class SwordsItemSheet extends HandlebarsApplicationMixin(foundry.applicat
 
 }
 
-import { queueEquipment, changeEquipment, EQUIPMENT_TYPES, attackBonus, useWeapon, addEquipment } from "./equipment.mjs?v=0.2.42";
+import { queueEquipment, changeEquipment, EQUIPMENT_TYPES, attackBonus, useWeapon, addEquipment } from "./equipment.mjs?v=0.2.45";
 

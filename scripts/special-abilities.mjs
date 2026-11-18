@@ -1,6 +1,6 @@
-import {modifierProfile,modifierKeys,MODIFIERS} from './modifiers.mjs?v=0.2.42';
-import {weaponDetails} from './weapons.mjs?v=0.2.42';
-import {attackCultivation} from './combat.mjs?v=0.2.42';
+import {modifierProfile,modifierKeys,MODIFIERS} from './modifiers.mjs?v=0.2.45';
+import {weaponDetails} from './weapons.mjs?v=0.2.45';
+import {attackCultivation} from './combat.mjs?v=0.2.45';
 export const WEAPON_REQUIREMENTS={'':'No weapon','any':'Any wielded weapon','heavy':'Great or Colossal','ranged':'Ranged weapon','blade':'Dagger, Sword or Saber','sword':'Sword or Saber','gun':'Gun','gunPolearm':'Gun, Crossbow or Polearm'};
 export function eligibleWeapon(item,requirement){
  if(item?.type!=='weapon'||!item.system.equipped||['carry','fashion'].includes(item.system.gearSlot))return false;

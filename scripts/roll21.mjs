@@ -3,14 +3,14 @@ import {CORES, CULTIVATIONS_21, PARTS, PART_KEYS, ATTACHMENT_STRENGTHS, checkFor
   rangePenalty, firingMode, weaponProfile21, stateModifiers, addCharges, assetStars, incapacitationDemand, partFromD6,
   applyPartDamage, partState, targetReach, openingRank, sectCultivationNames21, withoutPenalties, entersFlow, canSuppress, spendFlame21,
   DAMAGE_TYPES_21, DAMAGE_TYPE_KEYS, damageOptions21, ARMOR_MODS_21, MANEUVERS_21, MANEUVER_KEYS, maneuverOutcome21, ticksSpeed21, flurryReadyDelay21,
-  COVER_21, coverHits21, aimBonus21, outOfRange21, goesWide21, halvedPool21, visceralBonus21, strikeOptions21, strikePlan21} from "./rules21.mjs?v=0.2.42";
-import {confirmScorch21, deviationCheck21} from "./scorch21.mjs?v=0.2.42";
-import {escapeHTML} from "./resolution.mjs?v=0.2.42";
-import {occupiedSlots} from "./slots.mjs?v=0.2.42";
-import {useWeapon} from "./equipment.mjs?v=0.2.42";
-import {actingToken, collectTargets} from "./targeting21.mjs?v=0.2.42";
-import {ammoSummary21} from "./ammunition.mjs?v=0.2.42";
-import {abilityArea, placeAbilityArea} from "./areas.mjs?v=0.2.42";
+  COVER_21, coverHits21, aimBonus21, outOfRange21, goesWide21, halvedPool21, visceralBonus21, strikeOptions21, strikePlan21} from "./rules21.mjs?v=0.2.45";
+import {confirmScorch21, deviationCheck21} from "./scorch21.mjs?v=0.2.45";
+import {escapeHTML} from "./resolution.mjs?v=0.2.45";
+import {occupiedSlots} from "./slots.mjs?v=0.2.45";
+import {useWeapon} from "./equipment.mjs?v=0.2.45";
+import {actingToken, collectTargets} from "./targeting21.mjs?v=0.2.45";
+import {ammoSummary21} from "./ammunition.mjs?v=0.2.45";
+import {abilityArea, placeAbilityArea} from "./areas.mjs?v=0.2.45";
 
 const SYSTEM = "10kswordsfoundry";
 /** Which KILL THE BUDDHA engine the world uses: "openings" (default, the Quick/Solid/Perfect exchange) or "strikes" (the 2.1 Block/Dodge rewrite). */
@@ -100,6 +100,7 @@ export async function resolveDefenseStrikes21(data, kind, defender, defenderToke
   const system = defender.system;
   const block = kind === "block";
   if (block && data.unblockable) throw new Error("This attack is UNBLOCKABLE: Dodge instead.");
+  if (!block && data.undodgeable) throw new Error("This attack is UNDODGEABLE: Block instead.");
   // 2.1 book p.117: Block is the defender's own WEAPON CHECK; Dodge is Motorics + Thews And Sinews.
   const held = (defender.items?.contents ?? []).filter(item => item.type === "weapon" && item.system.equipped);
   const defWeapon = held.find(item => !weaponProfile21(item.system).ranged) ?? held[0] ?? null;
@@ -534,7 +535,7 @@ export async function killTheBuddha(actor, {weaponId = "", targets: chosenTarget
         crushing: profile.crushing, piercing: profile.piercing, visceral: profile.visceral, part: input.part, randomParts: random, randomKeys, targets,
         attacker: actor.uuid ?? "", attackerToken: source?.document?.uuid ?? "", attackerName: actor.name ?? "", flurry: int(flurry), weaponId: input.weaponId ?? "",
         attackerSpeed: int(system.r21?.ticks?.recovery) || ticksSpeed21(system.cores?.wit, system.cores?.mnd, profile.spd), attackerMot: Math.max(0, int(system.cores?.mot)),
-        singleEffect: !!profile.ranged && !profile.auto, unblockable: !!profile.unblockable}}});
+        singleEffect: !!profile.ranged && !profile.auto, unblockable: !!profile.unblockable, undodgeable: !!profile.undodgeable}}});
     }
     const html = `<h3>KILL THE BUDDHA · ${escapeHTML(weapon?.name ?? "Empty Hand")}</h3>
       <div class="r21-openings"><span class="r21-open quick">${counts.quick} Quick</span><span class="r21-open solid">${counts.solid} Solid</span><span class="r21-open perfect">${counts.perfect} Perfect</span><span class="r21-open whiff">${counts.whiff} Whiff</span></div>
@@ -576,7 +577,7 @@ async function suppressionFire(actor, weapon, profile, input) {
 /** 2.1 book p.121: any damage to the Head forces a Stun Check (Heart + Stillness). Anvil Head adds dice. */
 export async function stunCheck(actor) {
   const system = actor.system, assets = system.r21?.assets ?? system.assets;
-  const input = await DialogV2().prompt({window: {title: "Stun Check"}, content: `<p>Heart + Stillness${assetStars(assets, "anvilHead") ? ` + Anvil Head ${assetStars(assets, "anvilHead")}` : ""}. The book gives no Demand (p.121); the Intercessor sets it.</p><label>Demand<input name="demand" type="number" min="1" step="1" value="1"></label>`,
+  const input = await DialogV2().prompt({window: {title: "Stun Check"}, content: `<p>Heart + Stillness${assetStars(assets, "anvilHead") ? ` + Anvil Head ${assetStars(assets, "anvilHead")}` : ""}. Demand 3 (2.1 p.121). On a failure you are Stunned for 6 Ticks.</p><label>Demand<input name="demand" type="number" min="1" step="1" value="3"></label>`,
     ok: {label: "Roll", callback: (event, button) => Number(button.form.elements.demand.value)}, rejectClose: false});
   if (!input) return null;
   if (!Number.isSafeInteger(input) || input < 1) throw new Error("Demand must be a positive whole number.");

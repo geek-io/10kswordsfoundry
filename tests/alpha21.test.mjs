@@ -60,7 +60,7 @@ test("playtest Sects renamed every Sect Cultivation; the older names still licen
 test("Alpha conditions: Burning, Scorch and Samadhi in Check modifiers; Flow at Demand + 3", () => {
   for (const key of ["burning", "suppressed", "samadhi"]) assert.ok(CONDITIONS_21[key], key);
   const base = {cores: {}, skills: {}, assets: [], fatigue: 1, scorch: 2, conditions21: {burning: true}};
-  assert.deepEqual(stateModifiers(base).parts.map(part => [part.label, part.value]), [["Burning", -2], ["Fatigue", -1], ["Scorch", -2]]);
+  assert.deepEqual(stateModifiers(base).parts.map(part => [part.label, part.value]), [["Aflame", -1], ["Fatigue", -1], ["Scorch", -2]]);
   const samadhi = stateModifiers({...base, conditions21: {burning: true, samadhi: true}});
   assert.deepEqual([samadhi.total, samadhi.ignorePenalties], [2, true]);
   assert.deepEqual(withoutPenalties([{value: -2}, {value: 3}], true), [{value: 3}]);

@@ -16,7 +16,27 @@ const expand=vm.runInNewContext(`(${code.slice(begin,end)})`,{global:{logger:{wa
 const packRoot=process.env.PACK_ROOT??process.argv[2]??'packs';
 const only=(process.env.PACK_NAMES??'').split(',').filter(Boolean);
 let count=0;
-for(const name of JSON.parse(await readFile('system.json','utf8')).packs.map(pack=>pack.name).filter(name=>!only.length||only.includes(name))){
+const manifestPacks=JSON.parse(await readFile('system.json','utf8')).packs;
+// Actor packs: rebuild each actor through the server's own embedded-collection reader, two levels deep (Items, then their Effects).
+const effectModel={documentName:'ActiveEffect',expandEmbedded:async record=>record};
+const itemModel={documentName:'Item',expandEmbedded:async(record,{idPrefix,sublevelName,ldb})=>{record.effects=await expand.call({name:'effects',model:effectModel},record,`${idPrefix}.${record._id}`,sublevelName,ldb);return record;}};
+for(const name of manifestPacks.filter(pack=>pack.type==='Actor').map(pack=>pack.name).filter(name=>!only.length||only.includes(name))){
+ const source=JSON.parse(await readFile(`data/${name}.json`,'utf8'));
+ const database=new ClassicLevel(resolve(packRoot,name),{keyEncoding:'utf8',valueEncoding:'json'});
+ await database.open();
+ try{
+  const sublevels=Object.fromEntries(['actors.items','actors.items.effects','actors.effects'].map(n=>[n,database.sublevel(n,{valueEncoding:'json'})]));
+  const actors=database.sublevel('actors',{valueEncoding:'json'});
+  for(const actor of source.actors){
+   const stored=await actors.get(actor._id);
+   // The reader runs in its own realm; compare plain copies.
+   const loaded=JSON.parse(JSON.stringify(await expand.call({name:'items',model:itemModel},stored,actor._id,'actors',{sublevels})));
+   assert.deepEqual(loaded.map(item=>item._id),actor.items.map(item=>item._id),actor.name);
+   for(const [i,item] of loaded.entries()){assert.deepEqual(item.effects,actor.items[i].effects??[],`${actor.name}: ${item.name}`);assert.deepEqual(item.system,actor.items[i].system,`${actor.name}: ${item.name}`);count+=item.effects.length;}
+  }
+ }finally{await database.close();}
+}
+for(const name of manifestPacks.filter(pack=>pack.type!=='Actor').map(pack=>pack.name).filter(name=>!only.length||only.includes(name))){
  const source=JSON.parse(await readFile(`data/${name}.json`,'utf8'));
  const database=new ClassicLevel(resolve(packRoot,name),{keyEncoding:'utf8',valueEncoding:'json'});
  await database.open();

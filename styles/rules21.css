@@ -1,4 +1,6 @@
 /* Rules 2.1 sheet and chat. Scoped to .rules-21 / .r21-* so the 2.0.3 sheet is unaffected. */
+.swords .rules-badge.rules-badge-21{border-color:#3fbf6f;color:#3fbf6f;}
+.swords .rules-badge.rules-badge-203{border-color:#4d9fff;color:#4d9fff;}
 .swords .rules-badge{display:inline-block;margin-top:4px;padding:2px 8px;border:1px solid var(--swords-accent,#ec6572);border-radius:999px;color:var(--swords-accent,#ec6572);font-size:11px;letter-spacing:.04em;text-transform:uppercase;}
 .swords .rules-21 .hint,.r21-chat .hint{color:var(--swords-muted,#b9b6b0);font-size:12px;margin:4px 0;}
 .swords .r21-core-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;}

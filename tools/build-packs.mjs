@@ -17,6 +17,7 @@ const wanted=process.argv.slice(2);
 for(const name of wanted) assert.ok(all.includes(name),`Unknown pack: ${name}`);
 const names=wanted.length?wanted:all;
 for(const pack of names) {
+if(manifest.packs.find(p=>p.name===pack).type==='Actor'){await buildActors(pack);continue;}
 const source=JSON.parse(await readFile(`data/${pack}.json`,'utf8'));
 await mkdir(packRoot,{recursive:true});
 const database=new ClassicLevel(resolve(packRoot,pack),{keyEncoding:'utf8',valueEncoding:'json'});
@@ -38,6 +39,35 @@ for(const item of source.items){
 }
 assert.equal((await effects.keys().all()).length,source.items.reduce((n,item)=>n+(item.effects?.length??0),0));
 await database.close();console.log(`${pack}: built and read back ${source.items.length} items in ${source.folders.length} compendium folders.`);
+}
+
+// Actor packs (the 2.1 Bestiary): data/<pack>.json holds {folders, actors}; each actor's Items and their Effects are embedded,
+// stored the way Foundry's server stores them: actors / actors.items (actorId.itemId) / actors.items.effects (actorId.itemId.effectId).
+async function buildActors(pack){
+const source=JSON.parse(await readFile(`data/${pack}.json`,'utf8'));
+await mkdir(packRoot,{recursive:true});
+const database=new ClassicLevel(resolve(packRoot,pack),{keyEncoding:'utf8',valueEncoding:'json'});
+await database.open();await database.clear();
+const sub=name=>database.sublevel(name,{valueEncoding:'json'});
+const actors=sub('actors'),items=sub('actors.items'),itemEffects=sub('actors.items.effects'),actorEffects=sub('actors.effects'),folders=sub('folders');
+const stats={coreVersion:'14.364',systemId:'10kswordsfoundry',systemVersion:manifest.version,createdTime:0,modifiedTime:0,lastModifiedBy:null};
+for(const folder of source.folders)await folders.put(folder._id,folder);
+let itemCount=0,effectCount=0;
+for(const actor of source.actors){
+ assert.match(actor._id,/^[a-z0-9]{16}$/);assert.ok(source.folders.some(f=>f._id===actor.folder),actor.name);assert.ok(actor.name&&actor.type);
+ for(const effect of actor.effects??[])await actorEffects.put(`${actor._id}.${effect._id}`,effect);
+ for(const item of actor.items??[]){
+  assert.match(item._id,/^[a-z0-9]{16}$/);
+  for(const effect of item.effects??[]){await itemEffects.put(`${actor._id}.${item._id}.${effect._id}`,effect);effectCount++;}
+  await items.put(`${actor._id}.${item._id}`,{...item,effects:(item.effects??[]).map(effect=>effect._id),_stats:stats});itemCount++;
+ }
+ await actors.put(actor._id,{...actor,items:(actor.items??[]).map(item=>item._id),effects:(actor.effects??[]).map(effect=>effect._id),ownership:{default:0},_stats:stats});
+}
+assert.equal((await actors.keys().all()).length,source.actors.length);
+assert.equal((await items.keys().all()).length,itemCount);
+assert.equal((await itemEffects.keys().all()).length,effectCount);
+assert.equal((await folders.keys().all()).length,source.folders.length);
+await database.close();console.log(`${pack}: built and read back ${source.actors.length} actors (${itemCount} items, ${effectCount} item effects) in ${source.folders.length} compendium folders.`);
 }
 
 // Fail the build if Foundry cannot reconstruct the embedded records.
