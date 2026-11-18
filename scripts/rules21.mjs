@@ -143,17 +143,17 @@ export const partFromD6 = roll => PART_KEYS.find(key => PARTS[key].d6 === roll) 
 
 // pp.13, 32–36: states that alter Checks or Openings. Kept separate from the 2.0 conditions.
 export const CONDITIONS_21 = Object.freeze({
-  bleeding: {label: "Bleeding", page: 34, text: "A Bleeding Part loses [10 - Physique] HP after a minute and gives -1 to physical Checks. Does not stack on the same Part, but each Bleeding Part adds its -1 penalty."},
+  bleeding: {label: "Bleeding", page: 34, text: "A Bleeding Part loses [10 - Physique] HP (at least 1) after a minute and gives -1 to physical Checks. Does not stack on the same Part, but each Bleeding Part adds its -1 penalty."},
   offBalanced: {label: "Off-Balanced", page: "KTB 2.1", text: "-2 on the next Check in a KILL THE BUDDHA (lasts until the next turn ends). From Onslaught, Volley, or a Feint."},
   control: {label: "Control", page: "KTB 2.1", text: "A Part is grappled or pinned and cannot be moved (which Part is noted when the Control is set). Breaking free costs an Action, or the Fiction."},
-  stunned: {label: "Stunned", page: 34, text: "Cannot do anything until the head clears (6 seconds after a failed Stun Check)."},
-  knockdown: {label: "Knocked Down", page: 35, text: "Move only 2 m/s and -2 to all Actions until you get up."},
+  stunned: {label: "Stunned", page: 34, text: "Cannot do anything until the head clears (6 Ticks after a failed Stun Check, Demand 3; 2.1 p.121)."},
+  knockdown: {label: "Knocked Down", page: 35, text: "Move only 2 m/s and -2 to Checks until you get up."},
   juggled: {label: "Juggled", page: 35, text: "Spinning in the air: lose all Openings and cannot Counter; attackers gain +2 dice."},
-  burning: {label: "Burning", page: "Alpha 16–17", text: "Whole body: 2 damage to a random Part every 3 seconds, ignoring Soak; -2 to all Checks. A Quick Opening pats out a small fire, a Solid Opening smothers it (and knocks you down); water ends it. Inferno: 3 damage per Cut, only drowned or starved."},
+  burning: {label: "Aflame", page: 153, text: "Whole body, not per Part: 1 blast damage to a random Part every Tick; -1 to all Checks. Putting it out takes an Action and a fitting Check; water ends it. Inferno (burning oil, thermite, lava, magick fire): 2 blast damage per second, only drowned or starved of fuel."},
   suppressed: {label: "Suppressed", page: "Alpha 10", text: "Pinned by Suppression Fire: duck into cover or run out of the area; no other action for 3 seconds or until the Cut ends."},
   samadhi: {label: "Samadhi", page: "Alpha 53", text: "+2 to all Checks and ignore all dice penalties; heal 1 burnt Flame per 3 seconds; Samadhi Technicks and Magicks are open."},
   encumbered: {label: "Encumbered", page: 63, text: "-4 to all Checks."},
-  drunk: {label: "Drunk", page: 14, text: "-2 to all actions until sober."},
+  drunk: {label: "Drunk", page: 14, text: "-2 to Checks until sober."},
   deviation: {label: "Sidhi Deviation", page: 18, text: "Every Cultivation falls to 1; learned Magicks and Technicks cannot be used."}
 });
 
@@ -382,8 +382,8 @@ export function stateModifiers(system, {core = "", disabledTorso = false, encumb
   else if (int(encumbrance) > 0) parts.push({label: "Over Carry Limit", value: -int(encumbrance)});
   if (c.knockdown) parts.push({label: "Knocked Down", value: -2});
   if (c.drunk) parts.push({label: "Drunk", value: -2});
-  if (c.burning) parts.push({label: "Burning", value: -2});
-  if (c.bleeding && ["phy", "mot"].includes(core)) parts.push({label: "Bleeding (physical Check)", value: -2});
+  if (c.burning) parts.push({label: "Aflame", value: -1});
+  if (c.bleeding && ["phy", "mot"].includes(core)) parts.push({label: "Bleeding (physical Check)", value: -1});
   const fatigue = Math.max(0, int(system.fatigue) - assetStars(system.assets, "sleeplessSoul"));
   if (fatigue) parts.push({label: "Fatigue", value: -fatigue});
   const scorch = Math.max(0, int(system.scorch));
@@ -468,7 +468,7 @@ export function firingMode(mode, {rate = 1, auto = false, distance = null} = {})
 // 2.1 book pp.192–195: Grips, Profiles, Modifiers, Material Grades and Affinities. Damage is a Core plus the Profile's bonus (Empty Hand deals PHYS).
 export const GRIPS = Object.freeze({hilt: {label: "Hilt", mods: 2}, haft: {label: "Haft", mods: 3}, riser: {label: "Riser", mods: 3}, stock: {label: "Stock", mods: 2}});
 export const PROFILES = Object.freeze({
-  empty: {spd: 0, label: "Empty Hand", grip: null, core: "phy", skill: "beastShrine", range: 1, ranged: false, dmgCore: "phy", dmgAdd: 0, note: "Deals PHYS crush damage (2.1 p.192); usually needed to establish Control."},
+  empty: {spd: 0, label: "Empty Hand", grip: null, core: "phy", skill: "beastShrine", range: 1, ranged: false, dmgCore: "phy", dmgAdd: 0, note: "Deals PHYS damage with no innate damage type (2.1 p.192); usually needed to establish Control."},
   dagger: {spd: 0, label: "Dagger", grip: "hilt", core: "mot", skill: "beastShrine", range: 1, ranged: false, dmgCore: "mot", dmgAdd: 0, note: "On a KILL, deal piercing damage to the Torso."},
   saber: {spd: 2, label: "Saber", grip: "hilt", core: "phy", skill: "beastShrine", range: 1, ranged: false, dmgCore: "phy", dmgAdd: 1, note: "+1 damage against Limbs."},
   sword: {spd: 1, label: "Sword", grip: "hilt", core: "phy", altCore: "mot", skill: "beastShrine", range: 1, ranged: false, dmgCore: "used", dmgAdd: 1, note: "Physique or Motorics + Beast Shrine; damage uses the same Core."},
@@ -476,7 +476,7 @@ export const PROFILES = Object.freeze({
   bludgeon: {spd: 2, label: "Bludgeon", grip: "haft", core: "phy", skill: "beastShrine", range: 1, ranged: false, dmgCore: "phy", dmgAdd: 1, crushing: true, note: "Innate CRUSHING: soaking 1 damage costs 2 Soak."},
   cleaver: {spd: 2, label: "Cleaver", grip: "haft", core: "phy", skill: "beastShrine", range: 1, ranged: false, dmgCore: "phy", dmgAdd: 2, note: "x2 damage when chopping wood."},
   polearm: {spd: 2, label: "Polearm", grip: "haft", core: "phy", skill: "beastShrine", range: 3, ranged: false, dmgCore: "phy", dmgAdd: 1, note: "3 m reach."},
-  shield: {spd: 0, label: "Shield", grip: null, core: "phy", skill: "beastShrine", range: 1, ranged: false, dmgCore: "phy", dmgAdd: 0, cover: "light", note: "Innate COVER: Light Cover while you are behind it (2.1 p.192)."},
+  shield: {spd: 0, label: "Shield", grip: "haft", core: "phy", skill: "beastShrine", range: 1, ranged: false, dmgCore: "phy", dmgAdd: 0, cover: "light", note: "Innate COVER: Light Cover while you are behind it (2.1 p.192)."},
   launcher: {spd: 1, label: "Launcher", grip: "haft", core: "mot", skill: "handEye", range: 20, ranged: true, dmgCore: "mot", dmgAdd: 0, note: "Slings, slingshots, slingstaffs."},
   bow: {spd: 2, label: "Bow", grip: "riser", core: "mot", skill: "handEye", range: 250, ranged: true, dmgCore: "mot", dmgAdd: 1, note: "Needs Physique 2+; requires Arrows."},
   crossbow: {spd: 2, label: "Crossbow", grip: "stock", core: "mot", skill: "handEye", range: 125, ranged: true, dmgCore: "mot", dmgAdd: 1, note: "Requires Bolts; silent."},
@@ -486,8 +486,8 @@ export const PROFILES = Object.freeze({
 export const WEAPON_MODS_21 = Object.freeze({
   auto: "AUTO — Suppression Fire; each Shoot uses 3 bullets",
   crushing: "CRUSHING — 2 Soak per damage soaked",
-  great: "GREAT — two hands, -1 violence Checks, +1 damage",
-  colossal: "COLOSSAL — two hands, -1 violence Checks, +2 damage, Knockback",
+  great: "GREAT — two hands, x2 kg, +1 damage, +2 Speed modifier",
+  colossal: "COLOSSAL — two hands, x4 kg, +2 damage, 2 m Knockback on damage, +3 Speed modifier",
   doublehand: "DOUBLEHAND — requires both hands",
   focus: "FOCUS — replaces Mudras",
   blaze: "BLAZE — 2-in-6 chance of Burning the target",
@@ -508,6 +508,7 @@ export const WEAPON_MODS_21 = Object.freeze({
   cover: "COVER — works as Light Cover while behind it",
   wall: "WALL — works as Heavy Cover while behind it",
   unblockable: "UNBLOCKABLE — a KILL THE BUDDHA with it cannot be Blocked",
+  undodgeable: "UNDODGEABLE — a KILL THE BUDDHA with it cannot be Dodged",
   visceral: "VISCERAL — +1 damage against Parts without Soak"
 });
 // 2.1 book p.195: Affinities. A Refined or higher weapon can use the Affinity's Core for its Check, and then deals that Core's damage.
@@ -551,8 +552,11 @@ export function weaponProfile21(weapon, {cores = null, core = null} = {}) {
   const notes = [base.note];
   // GREAT grants FEROCIOUS (modifiers.mjs; 2.0 wires this too). A direct FEROCIOUS rating on the weapon still wins if higher.
   let ferocious = Math.max(0, int(r21.ferocious));
-  if (mods.great) { bonus -= 1; extra += 1; ferocious = Math.max(ferocious, 1); }
-  if (mods.colossal) { bonus -= 1; extra += 2; notes.push("COLOSSAL: Knockback up to Physique or Knockdown."); }
+  // 2.1 rulebook p.194 (357-page edition): GREAT is +1 damage and +2 Speed modifier; COLOSSAL is +2 damage, 2 m Knockback and +3 Speed modifier.
+  // The earlier "-1 to all violence Checks" is no longer printed.
+  let spdMod = 0;
+  if (mods.great) { extra += 1; spdMod = 2; ferocious = Math.max(ferocious, 1); notes.push("GREAT: +2 Speed modifier."); }
+  if (mods.colossal) { extra += 2; spdMod = 3; notes.push("COLOSSAL: +3 Speed modifier; inflicts 2 m Knockback upon dealing damage."); }
   if (mods.artifact) { bonus += 2; extra += 1; }
   const crushing = !!mods.crushing || !!base.crushing;
   if (mods.crushing) notes.push("CRUSHING: soaking 1 damage costs 2 Soak.");
@@ -569,6 +573,7 @@ export function weaponProfile21(weapon, {cores = null, core = null} = {}) {
   if (mods.almighty) notes.push("ALMIGHTY: damage cannot be lessened and is Unblockable.");
   if (mods.toxic) notes.push("TOXIC: delivers a Poison on any wound.");
   if (mods.unblockable) notes.push("UNBLOCKABLE: cannot be Blocked; Dodge instead.");
+  if (mods.undodgeable) notes.push("UNDODGEABLE: cannot be Dodged; Block instead.");
   const cover = mods.wall ? "heavy" : (mods.cover || base.cover) ? "light" : "";
   if (mods.wall) notes.push("WALL: Heavy Cover while you are behind it.");
   else if (mods.cover) notes.push("COVER: Light Cover while you are behind it.");
@@ -584,9 +589,9 @@ export function weaponProfile21(weapon, {cores = null, core = null} = {}) {
   if (reach) notes.push(`REACH ${reach}: +${reach} m.`);
   const morph = morphOptions21({...r21, profile: key});
   if (morph.length) notes.push(`MORPH: as an Action, becomes a ${morph.map(option => PROFILES[option].label).join(" / ")}.`);
-  return {key, spd: int(base.spd), label: base.label, core: base.core, altCore: base.altCore ?? null, skill: base.skill, range, ranged: base.ranged,
+  return {key, spd: int(base.spd) + spdMod, label: base.label, core: base.core, altCore: base.altCore ?? null, skill: base.skill, range, ranged: base.ranged,
     bonus, damage, damageText, rate: Math.max(1, int(r21.rate) || 1), auto: !!mods.auto, crushing, piercing: !!mods.piercing, precise: !!mods.precise,
-    ferocious, cover, unblockable: !!(mods.unblockable || mods.almighty), visceral: !!mods.visceral, affinity: affinity ? r21.affinity : "", affinityCore: affinity?.core ?? null,
+    ferocious, cover, unblockable: !!(mods.unblockable || mods.almighty), undodgeable: !!mods.undodgeable, visceral: !!mods.visceral, affinity: affinity ? r21.affinity : "", affinityCore: affinity?.core ?? null,
     grade: grade ? r21.grade : "", morph, notes: notes.filter(Boolean)};
 }
 

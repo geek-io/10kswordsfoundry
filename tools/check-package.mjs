@@ -32,4 +32,4 @@ for (const path of manifest.languages.map(l => l.path)) JSON.parse(await readFil
 for (const file of await readdir("scripts")) if (file.endsWith(".mjs")) execFileSync(process.execPath, ["--check", `scripts/${file}`]);
 console.log("Manifest references, JSON, versions, and JavaScript syntax passed. Foundry runtime testing remains required.");
 
-for(const pack of manifest.packs??[]) {assert.equal(pack.type,'Item');await access(`${pack.path}/CURRENT`);}
+for(const pack of manifest.packs??[]) {assert.ok(['Item','Actor'].includes(pack.type));await access(`${pack.path}/CURRENT`);}

@@ -1091,7 +1091,7 @@
    "type": "technique",
    "img": "systems/10kswordsfoundry/assets/icons/technique.svg",
    "system": {
-    "description": "<p><em>\"Asuri are exceptionally hard headed. It helps. Those that are too soft or bend too easily crumble to the conditoining needed to master DEMON BODY.\"</em></p><p><strong>License:</strong> Demon Body ✦✦</p><p><strong>Needs:</strong> ❂</p><p>While installed, the Asuri reduces all damage to her Head by 1. All her damage with her head rises by 1, and she can stun opponents with it if she manages to slam her own head against the target's head.</p>",
+    "description": "<p><em>\"Asuri are exceptionally hard headed. It helps. Those that are too soft or bend too easily crumble to the conditoining needed to master DEMON BODY.\"</em></p><p><strong>License:</strong> Demon Body ✦✦</p><p><strong>Needs:</strong> ❂</p><p>While installed, the Asuri reduces all damage to her Head by 1. All her damage with her head rises by 1, and she can stun opponents with it if she manages to slam her own head against the target's head. She cannot be Stunned from Head damage anymore.</p>",
     "source": "Rules 2.1 (2.1 rulebook), p.225",
     "tags": "Asuri, Demon Body, ✦✦, Technick",
     "sect": "Asuri",
@@ -1124,7 +1124,7 @@
    "type": "technique",
    "img": "systems/10kswordsfoundry/assets/icons/technique.svg",
    "system": {
-    "description": "<p><em>To strengthen one’s body beyond its limits is to eat the face of god. Spit it out, don’t swallow. See? You’ve eaten yourself. The Vajra Warriors abused this technick to the point that their normal muscles were so limp that they could not move without activating this meditation beforehand.</em></p><p><strong>License:</strong> Demon Body ✦✦</p><p><strong>Needs:</strong> ❂</p><p>The Cultivator installs RED BLACK DEMON THEWS to empower their muscles to the highest limit. While installed, all damage she inflicts also deals KNOCKBACK up to [2 + DEMON BODY] meters after damaging. If she uses this upon an immovable object or terrain, she launches herself instead.</p>",
+    "description": "<p><em>To strengthen one’s body beyond its limits is to eat the face of god. Spit it out, don’t swallow. See? You’ve eaten yourself. The Vajra Warriors abused this technick to the point that their normal muscles were so limp that they could not move without activating this meditation beforehand.</em></p><p><strong>License:</strong> Demon Body ✦✦</p><p><strong>Needs:</strong> ❂</p><p>The Cultivator installs BLACK RED DEMON THEWS to empower their muscles to the highest limit. While installed, all damage she inflicts also deals KNOCKBACK up to [2 + DEMON BODY] meters after damaging. If she uses this upon an immovable object or terrain, she launches herself instead.</p>",
     "source": "Rules 2.1 (2.1 rulebook), p.225",
     "tags": "Asuri, Demon Body, ✦✦, Technick",
     "sect": "Asuri",
@@ -1586,7 +1586,7 @@
    "type": "technique",
    "img": "systems/10kswordsfoundry/assets/icons/technique.svg",
    "system": {
-    "description": "<p><em>The very phenomenon of consciousness arises from the self-awareness of death. The very phenomenon of consciousness arises from the self-awareness of death. We only think because we will die. And so let us revel.</em></p><p><strong>License:</strong> Devil Beast ✦✦</p><p><strong>Needs:</strong> ✹; EMPTY HAND; DAGGER; SABER</p><p>The Cultivator activate this when she Steps to teleport [DEVIL BEAST/2]m instead.</p>",
+    "description": "<p><em>The very phenomenon of consciousness arises from the self-awareness of death. The very phenomenon of consciousness arises from the self-awareness of death. We only think because we will die. And so let us revel.</em></p><p><strong>License:</strong> Devil Beast ✦✦</p><p><strong>Needs:</strong> ✹; EMPTY HAND; DAGGER; SABER</p><p>The Cultivator may activate this when she Steps to teleport [DEVIL BEAST/2]m instead.</p>",
     "source": "Rules 2.1 (2.1 rulebook), p.229",
     "tags": "Aswang, Devil Beast, ✦✦, Technick, EMPTY HAND; DAGGER; SABER",
     "sect": "Aswang",
@@ -5381,7 +5381,7 @@
    "type": "technique",
    "img": "systems/10kswordsfoundry/assets/icons/technique.svg",
    "system": {
-    "description": "<p><em>Vajra Warrior Atu used this to deflect a nuclear spear. The boxer stills her breath and condenses a film of Iron Sidhi across their forearms and palms. She attunes her energy to the exact moment of an incoming blow.</em></p><p><strong>License:</strong> Vajra Fist ✦✦</p><p><strong>Needs:</strong> ✹✹</p><p>As long as the Cultivator has one Empty Hand, she can wield her intramaterially empowered bare hands to defend: she can BLOCK any damage attempt against her, even if it is BLOCK.</p>",
+    "description": "<p><em>Vajra Warrior Atu used this to deflect a nuclear spear. The boxer stills her breath and condenses a film of Iron Sidhi across their forearms and palms. She attunes her energy to the exact moment of an incoming blow.</em></p><p><strong>License:</strong> Vajra Fist ✦✦</p><p><strong>Needs:</strong> ✹✹</p><p>As long as the Cultivator has one Empty Hand, she can wield her intramaterially empowered bare hands to defend: she can BLOCK any damage attempt against her, even if it is unblockable.</p>",
     "source": "Rules 2.1 (2.1 rulebook), p.270",
     "tags": "Mendicant, Vajra Fist, ✦✦, Technick",
     "sect": "Mendicant",
@@ -5645,7 +5645,7 @@
    "type": "technique",
    "img": "systems/10kswordsfoundry/assets/icons/technique.svg",
    "system": {
-    "description": "<p><em>The First Gun Red Boy created this as the first Nezha Technick, locking a target's karmic thread to a bullet.</em></p><p><strong>License:</strong> Red Gun ✦</p><p><strong>Needs:</strong> ❂</p><p>The Cultivator chooses a target and activates RED AJNA: as long as the Flame is installed, the Cultivator does not need vision nor line of sight to shoot them, and they ignore light or heavy cover. The bullest fired curve, but can still miss.</p>",
+    "description": "<p><em>The First Gun Red Boy created this as the first Nezha Technick, locking a target's karmic thread to a bullet.</em></p><p><strong>License:</strong> Red Gun ✦</p><p><strong>Needs:</strong> ❂</p><p>The Cultivator chooses a target and activates RED AJNA: as long as the Flame is installed, the Cultivator does not need vision nor line of sight to shoot them, and they ignore light or heavy cover. The bullets fired curve, but can still miss.</p>",
     "source": "Rules 2.1 (2.1 rulebook), p.277",
     "tags": "Nezha, Red Gun, ✦, Technick",
     "sect": "Nezha",

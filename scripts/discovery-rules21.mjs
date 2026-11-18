@@ -1,7 +1,7 @@
 // Rules 2.1 Cultivator Discovery (2.1 rulebook pp.42-48, 62, 166): the eight Sutras as data and pure checks.
 // Nothing here touches Foundry, so the creation tool, the chat card and the tests all read the same rules.
-import {CORES, CORE_KEYS, CULTIVATIONS_21, CULTIVATION_KEYS_21, ASSETS_21, ATTACHMENT_STRENGTHS, carryLimit, encumbrance21, flameMaximum21} from "./rules21.mjs?v=0.2.42";
-import {escapeHTML} from "./resolution.mjs?v=0.2.42";
+import {CORES, CORE_KEYS, CULTIVATIONS_21, CULTIVATION_KEYS_21, ASSETS_21, ATTACHMENT_STRENGTHS, carryLimit, encumbrance21, flameMaximum21} from "./rules21.mjs?v=0.2.45";
+import {escapeHTML} from "./resolution.mjs?v=0.2.45";
 
 const int = value => Math.trunc(Number(value) || 0);
 const text = value => String(value ?? "").trim();
@@ -11,7 +11,7 @@ export const stars21 = n => "✦".repeat(Math.max(0, int(n)));
 export const CLASSES_21 = Object.freeze({
   lumpenproletariat: {label: "Lumpenproletariat", roll: [3, 6], cores: [2, 2, 2, 2, 1, 1], cultivations: {2: 3, 1: 3}, assets: 1, supply: "One item, randomly rolled", maccaPerD6: 1, page: 44,
     subtypeLabel: "Type", subtypes: [{roll: [1, 3], label: "Reserve Army"}, {roll: [4, 5], label: "Underworld"}, {roll: [6, 6], label: "Declassed"}]},
-  semiproletariat: {label: "Semiproletariat", roll: [7, 8], cores: [3, 2, 2, 2, 1, 1], cultivations: {2: 4, 1: 4}, assets: 2, supply: "", maccaPerD6: 100, page: 45, subtypes: []},
+  semiproletariat: {label: "Semiproletariat", roll: [7, 8], cores: [3, 2, 2, 2, 1, 1], cultivations: {2: 4, 1: 4}, assets: 2, supply: "", maccaPerD6: 40, page: 45, subtypes: []},
   proletariat: {label: "Proletariat", roll: [9, 12], cores: [3, 3, 2, 2, 1, 1], cultivations: {2: 5, 1: 5}, assets: 2, supply: "", maccaPerD6: 20, page: 45,
     subtypeLabel: "Sector", subtypes: [{roll: [1, 1], label: "Mining"}, {roll: [2, 2], label: "Agrarian"}, {roll: [3, 3], label: "Industry"}, {roll: [4, 4], label: "Service"}, {roll: [5, 5], label: "Transport"}, {roll: [6, 6], label: "Sect"}]},
   petitBourgeoisie: {label: "Petit Bourgeoisie", roll: [13, 13], cores: [3, 3, 3, 2, 1, 1], cultivations: {2: 5, 1: 5}, assets: 3, supply: "", maccaPerD6: 160, page: 46, subtypes: []},

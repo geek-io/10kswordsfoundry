@@ -2,7 +2,7 @@
 // Reads the book's own layouts: Sect Technicks / Magicks / Gear (pp.224-303), market cards for weapons, armor,
 // accessories, talismans and goods (pp.186-207), Assets (pp.211-218), plus labelled "Name: ..." records.
 // Everything read is kept in the Description; values the book does not print are left at their defaults.
-import {CORES, CULTIVATIONS_21, PROFILES, WEAPON_MODS_21, AFFINITY_KEYS, GRADE_KEYS, ASSETS_21, PART_KEYS, sectCultivationNames21} from "./rules21.mjs?v=0.2.42";
+import {CORES, CULTIVATIONS_21, PROFILES, WEAPON_MODS_21, AFFINITY_KEYS, GRADE_KEYS, ASSETS_21, PART_KEYS, sectCultivationNames21} from "./rules21.mjs?v=0.2.45";
 
 export const IMPORT_TYPES_21 = Object.freeze({weapon: "Weapon", fashion: "Armor & Clothing", gear: "Gear / Consumable / Talisman", accessory: "Accessory", ammunition: "Ammo", salvage: "Salvage",
   technique: "Technick", magick: "Magick", trait: "Trait", asset: "Asset", barang: "Barang"});

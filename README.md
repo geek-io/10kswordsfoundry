@@ -13,6 +13,61 @@ A Foundry VTT v14 game system for *10,000 Swords Against Heaven*, based on rules
 All my work is always free, but a little bit of help is always appreciated!  
 <a href="https://patreon.com/geekioshow"><img src="assets/Patreon-Logo.png" alt="All my work is always free, but a little bit of help is always appreciated" width="240"></a>
 
+# v 0.2.45
+
+**The 2.1 Bestiary is in the compendiums.** All 71 World Beings of the final 2.1 rulebook (pp.346–373) are ready to drag onto a scene.
+
+- New compendium **2.1 World Beings · Bestiary**, listed right after 2.1 World Beings, with everything in one **Bestiary** folder. It is a separate compendium because a Foundry compendium holds one kind of document: the 2.1 World Beings compendium holds Traits and Gambits (Items), and the Bestiary holds World Beings (Actors).
+- A block printed for several Sidhi levels (0/3/5) is one World Being per level, named "Aristocrat (Sidhi 3)" and so on.
+- Each World Being is exactly what the 2.1 importer makes from that page: Cores, Cultivations, Part HP and Soak, Flame, Morale, Move, readied weapons, armor carried unequipped, Licenses, Assets, Traits, and the printed block, lore and drops in its Notes.
+- Weapons, armor, Technicks and Magicks named in a block are the full items from the 2.1 compendiums where the names match (157 of them), so their rules come along.
+- The short Dagger and Saber Goblins on p.372 share names with the longer entries on pp.362–363; they are listed as "Dagger Goblin (p.372)" and "Saber Goblin (p.372)".
+
+# v 0.2.44
+
+**Checked against the final 423-page 2.1 rulebook.** Every page was compared with the 357-page edition: the text word by word, and every page as an image. The final book adds lore pages (37–50 and 374–423), a filled-in Esoteric Anomaly table and four new World Beings; 114 other pages have small edits, nearly all spelling and wording. Everything that touches the rules or the compendiums is applied here.
+
+- **Sheet header.** The 2.1 sheet now reads **Version 2.1** in green (was "Rules 2.1 · testing"). The 2.0.3 sheet shows **Version 2.0.3** in blue in the same place. Nothing else on the 2.0.3 sheet changes.
+- **Short World Being blocks** (final pp.372–373). The four new Goblins are printed in a shorter form with no "✦ genus" line. The 2.1 importer now reads that form too: name, Sidhi, Flame, Morale, Parts HP, Cores, Cultivations, the weapon with its printed pool and damage, and each License with its ✹ / ❂ cost. Block and Dodge pools and CASTING stay in the notes.
+- **Aflame** (final p.153). The Burning condition is now Aflame: −1 to all Checks (was −2), 1 blast damage to a random Part every Tick.
+- **Bleeding** (final p.132) is −1 to physical Checks (the sheet applied −2). It loses [10 − PHYS] HP, at least 1.
+- **Knocked Down and Drunk** read "−2 to Checks".
+- **Semiproletariat** starts with 40 × d6 ♄ (was 100 × d6).
+- **Shields** are a Haft profile (final p.206).
+- **Compendium changes** (prices in ♄):
+  - SSA Red Eye Ring 100 (was 500). Exdead Soul Integrity Earring 1,000 (was 200).
+  - Tsushing Pressplay Player is Uncommon, 300 (was Enhanced, 100). HaeCo Fine Focus Binoculars is Uncommon.
+  - Rend 1,999,000 and Mosesian Spring 1,000,000 (were 100,000).
+  - VATAC Collapsing Lance 90, HaeCo Folding Spear 1,000, AWW Sky Feather Naginata 170,990, AWW Jadesteel Sleeves 400,999.
+  - TMNI Sikarom 100,000, EXK Vampire Hunter 696,969, TMNI Blowgun 200.
+  - HDF Dragon Fire Cannon 5,000,000 and its Meteor 1,000,000.
+  - MORTAR Parabellum 9mm and MORTAR TD-7 Ruyi are Uncommon.
+  - Ka Parashurma, TMNI Sikarom, HDF Miniature Arblast and EXK Vampire Hunter are now printed with their real kind (Cleaver, Bow, Crossbow), so the "printed as…" notes are gone.
+  - Five Thunder Talisman has its new lore line.
+- Page numbers in item sources still follow the earlier printing. In the final book add 14 from page 37 on, and 2 for pages 3–36.
+
+# v 0.2.43
+
+**Checked against the 357-page 2.1 rulebook.** Pages 1–303 of the new edition were compared with the 303-page book the catalogs were built from. Thirteen pages differ; everything that touches the rules or the compendiums is applied here. 2.0.3 is untouched.
+
+- **GREAT and COLOSSAL** (p.194). GREAT is +1 damage and a +2 Speed modifier. COLOSSAL is +2 damage, 2 m Knockback on damage and a +3 Speed modifier. Neither takes 1 off violence Checks any more. The Speed modifier is added to the weapon's own, so the Ticks tracker and the sheet's Speed show it.
+- **UNDODGEABLE** (p.194) is a new weapon Mod: a KILL THE BUDDHA made with it cannot be Dodged, and the Dodge button says so.
+- **Stun Check** (p.121) is now Demand 3 by default, and a failure stuns for 6 Ticks.
+- **Empty Hand** (p.192) deals Physique damage with no innate damage type.
+- **Compendium changes:**
+  - Kongo Helm is **+2** Speed (was −2).
+  - Blademaster Wraps give Daggers, Sabers and Swords +1d to Block (was LACERATING).
+  - Atardar's Fang loses LACERATING.
+  - Hermetic Robes: Violent Sorcery also lets the wearer Step while Casting.
+  - Demon Diamond Head: cannot be Stunned from Head damage.
+  - Vajra Guard Blocks even an unblockable attack.
+  - Wording fixes on Black Red Demon Thews, Flickering Shade Technique and Red Ajna.
+- **World Being importer:** reads the two BEYOND HEAVEN entries (genus printed as "angel?", Parts printed as "[12] HALO 15 HP"), and places ordinary arms and legs before wings when a creature has both.
+
+Items already on characters keep their old text and effects; re-add them from the compendium to pick up the changes.
+
+Not automated: the 2 m Knockback, "ignore the SPD Modifier of GREAT or COLOSSAL weapons" (Six Demon Cutting Sword, Python Grip), and the armor Repair Check on p.202.
+
 # v 0.2.42
 
 **2.1 maximum Flame is 3 + Sidhi Stage** (2.1 rulebook p.90). It was 2 + Sidhi, from the older manuscript. 2.0.3 is untouched.

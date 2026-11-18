@@ -485,7 +485,7 @@
    "type": "weapon",
    "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
    "system": {
-    "description": "<p><em>One of the most important members of the Asuri Sect was Jenma Malari, a decorated practitioner of the Esoteric Infinite Doctrine of the Buddhas, who showed the expedient application of the Dharma into places where hedonism is upheld.</em></p><p><strong>License:</strong> Demon Body ✦✦✦✦ — The Cultivator is now licensed to wield the the KALIKHADGA.</p><p><strong>Asuri Prestige Refined Sword · 10 kg · Price N/A · Hilt / Sword · Nethicite</strong></p><p><strong>Mods:</strong> GREAT ✦ FEROCIOUS 3 ✦ CRUSHING</p><p>Upon inflicting Damage, those wounded lose 1 Flame. If they have no Flame, they suffer 1 true damage to their Torso instead. This weapon suffers no penalties to Attack Checks from being a [GREAT] weapon. Named after the blessed Black Mother, the Kalikhadga was once Dattreya’s weapon, which she infused with Dialectical Sidhi to affect not just the Matter but the interior negations of Matter. Only those that have subsumed their Passions into greater Enlightenment can wield this. Those that have not quickly devolve into Fascists who impose their Will upon reality, Nihilists who seek to destroy the World, or Capitalists who accumulate wealth through physical violence.</p><p><em>Catalog note: GREAT is applied as +1 damage (damage bonus) and two hands without the usual -1, because the Kalikhadga \"suffers no penalties to Attack Checks from being a [GREAT] weapon\".</em></p>",
+    "description": "<p><em>One of the most important members of the Asuri Sect was Jenma Malari, a decorated practitioner of the Esoteric Infinite Doctrine of the Buddhas, who showed the expedient application of the Dharma into places where hedonism is upheld.</em></p><p><strong>License:</strong> Demon Body ✦✦✦✦ — The Cultivator is now licensed to wield the KALIKHADGA.</p><p><strong>Asuri Prestige Refined Sword · 10 kg · Price N/A · Hilt / Sword · Nethicite</strong></p><p><strong>Mods:</strong> GREAT ✦ FEROCIOUS 3 ✦ CRUSHING</p><p>Upon inflicting Damage, those wounded lose 1 Flame. If they have no Flame, they suffer 1 true damage to their Torso instead. This weapon suffers no penalties to Attack Checks from being a [GREAT] weapon. Named after the blessed Black Mother, the Kalikhadga was once Dattreya’s weapon, which she infused with Dialectical Sidhi to affect not just the Matter but the interior negations of Matter. Only those that have subsumed their Passions into greater Enlightenment can wield this. Those that have not quickly devolve into Fascists who impose their Will upon reality, Nihilists who seek to destroy the World, or Capitalists who accumulate wealth through physical violence.</p><p><em>Catalog note: GREAT is applied as +1 damage (damage bonus) and two hands without the usual -1, because the Kalikhadga \"suffers no penalties to Attack Checks from being a [GREAT] weapon\".</em></p>",
     "source": "Rules 2.1 (2.1 rulebook), p.227",
     "rarity": "prestige",
     "quantity": 1,
@@ -536,6 +536,7 @@
       "cover": false,
       "wall": false,
       "unblockable": false,
+      "undodgeable": false,
       "visceral": false
      },
      "weight": 10
@@ -680,6 +681,7 @@
       "cover": false,
       "wall": false,
       "unblockable": false,
+      "undodgeable": false,
       "visceral": false
      },
      "weight": 1.5
@@ -758,6 +760,7 @@
       "cover": false,
       "wall": false,
       "unblockable": false,
+      "undodgeable": false,
       "visceral": false
      },
      "weight": 5
@@ -1012,6 +1015,7 @@
       "cover": false,
       "wall": false,
       "unblockable": false,
+      "undodgeable": false,
       "visceral": false
      },
      "weight": 2
@@ -1041,7 +1045,7 @@
    "type": "fashion",
    "img": "systems/10kswordsfoundry/assets/icons/fashion.svg",
    "system": {
-    "description": "<p><em>All destruction ticks the hand toward Metteyaʼs imminent manifestation, her Final Rebirth: where Metteya is said to herald the Seven Suns, which will scour Hingsajagra and begin it anew. To this end, all Eschatonians endeavor to bring about this Final Rebirth, otherwise known as the Great Equilibirum, which shall herald about a new Universe.</em></p><p><strong>License:</strong> Black Sorcery ✦✦✦✦ — The Cultivator is now Licensed to wear the HERMETIC ROBES.</p><p><strong>Eschatonian Prestige Fashion · 0 kg · Price N/A</strong></p><p>Beneficent Revelation ALL HOSTILE MAGICKS do not affect allies, unless the wearer wishes it so. Violent Sorcery The wearer no longer suffers penalties for KILL THE BUDDHA or to her BASIC MOVE while Casting. The Hermes Trismegistus of Hingsajagra was one of the most accomplished Bodhisattva Mahasiddhas in the arts of destructive magick. The Thrice-Great is known as the Revealer of Cosmic Laws and the Teacher of Deities in the arts of all Magick.</p><p><em>Catalog note: No weight is printed. Soak is printed as \"—\" (none).</em></p>",
+    "description": "<p><em>All destruction ticks the hand toward Metteyaʼs imminent manifestation, her Final Rebirth: where Metteya is said to herald the Seven Suns, which will scour Hingsajagra and begin it anew. To this end, all Eschatonians endeavor to bring about this Final Rebirth, otherwise known as the Great Equilibirum, which shall herald about a new Universe.</em></p><p><strong>License:</strong> Black Sorcery ✦✦✦✦ — The Cultivator is now Licensed to wear the HERMETIC ROBES.</p><p><strong>Eschatonian Prestige Fashion · 0 kg · Price N/A</strong></p><p>Beneficent Revelation ALL HOSTILE MAGICKS do not affect allies, unless the wearer wishes it so. Violent Sorcery The wearer no longer suffers penalties for KILL THE BUDDHA or to her BASIC MOVE while Casting. She can also Step now while Casting. The Hermes Trismegistus of Hingsajagra was one of the most accomplished Bodhisattva Mahasiddhas in the arts of destructive magick. The Thrice-Great is known as the Revealer of Cosmic Laws and the Teacher of Deities in the arts of all Magick.</p><p><em>Catalog note: No weight is printed. Soak is printed as \"—\" (none).</em></p>",
     "source": "Rules 2.1 (2.1 rulebook), p.242",
     "rarity": "prestige",
     "quantity": 1,
@@ -1180,6 +1184,7 @@
       "cover": false,
       "wall": false,
       "unblockable": false,
+      "undodgeable": false,
       "visceral": false
      },
      "weight": 10
@@ -1259,6 +1264,7 @@
       "cover": false,
       "wall": false,
       "unblockable": false,
+      "undodgeable": false,
       "visceral": false
      },
      "weight": 3
@@ -1383,6 +1389,7 @@
       "cover": false,
       "wall": false,
       "unblockable": false,
+      "undodgeable": false,
       "visceral": false
      },
      "weight": 1
@@ -1463,6 +1470,7 @@
       "cover": false,
       "wall": false,
       "unblockable": false,
+      "undodgeable": false,
       "visceral": false
      },
      "weight": 2
@@ -1674,6 +1682,7 @@
       "cover": false,
       "wall": false,
       "unblockable": false,
+      "undodgeable": false,
       "visceral": false
      },
      "weight": 5
@@ -1884,6 +1893,7 @@
       "cover": false,
       "wall": false,
       "unblockable": false,
+      "undodgeable": false,
       "visceral": false
      },
      "weight": 5
@@ -1914,14 +1924,14 @@
    "type": "weapon",
    "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
    "system": {
-    "description": "<p><em>Sword Dialecticians profess that the most accurate analysis of reality is the dialectical one. Of immanent contradictions and eventual sublations. With this meditation in mind, they find that within a Sword’s attack is its own immanent negation, and within an enemy’s victory is in their own defeat.</em></p><p><strong>License:</strong> Sword Dialectics ✦✦✦✦ — The Cultivator now has the License to wield the ATARDAR'S FANG.</p><p><strong>Sword Dialectician Prestige Sword · 2 kg · Price N/A · Hilt / Sword · Devilsteel</strong></p><p><strong>Mods:</strong> VISCERAL ✦ LACERATING ✦ FEROCIOUS 2</p><p>When the wielder enters Samadhi, she can immediately deal weapon damage upon anyone within range of Atardar's Fang for free. Dual Fang Essence [❂] The Atardar's Fangs duplicates into a pair for dual sword purposes: gain +1 to all KILL THE BUDDHAS with this weapon while dual wielding. ATARDAR is the Wrathful Manifestation of the IMPINITU, the Anteprime Sempiternal Bodhisattva of the previous Trichiliocosm, the collected consciousness of that Omniverse’s sentience. ATARDAR is the dharmapala that killed God so that He may be reborn with a chance at becoming a Buddha.</p><p><em>Catalog note: Printed heading ATARDAR'S FANGS; the statblock is ATARDAR'S FANG.</em></p>",
+    "description": "<p><em>Sword Dialecticians profess that the most accurate analysis of reality is the dialectical one. Of immanent contradictions and eventual sublations. With this meditation in mind, they find that within a Sword’s attack is its own immanent negation, and within an enemy’s victory is in their own defeat.</em></p><p><strong>License:</strong> Sword Dialectics ✦✦✦✦ — The Cultivator now has the License to wield the ATARDAR'S FANG.</p><p><strong>Sword Dialectician Prestige Sword · 2 kg · Price N/A · Hilt / Sword · Devilsteel</strong></p><p><strong>Mods:</strong> VISCERAL ✦ FEROCIOUS 2</p><p>When the wielder enters Samadhi, she can immediately deal weapon damage upon anyone within range of Atardar's Fang for free. Dual Fang Essence [❂] The Atardar's Fangs duplicates into a pair for dual sword purposes: gain +1 to all KILL THE BUDDHAS with this weapon while dual wielding. ATARDAR is the Wrathful Manifestation of the IMPINITU, the Anteprime Sempiternal Bodhisattva of the previous Trichiliocosm, the collected consciousness of that Omniverse’s sentience. ATARDAR is the dharmapala that killed God so that He may be reborn with a chance at becoming a Buddha.</p><p><em>Catalog note: Printed heading ATARDAR'S FANGS; the statblock is ATARDAR'S FANG.</em></p>",
     "source": "Rules 2.1 (2.1 rulebook), p.286",
     "rarity": "prestige",
     "quantity": 1,
     "slots": 1,
     "magCost": 0,
     "equipped": false,
-    "tags": "Sword Dialectician, Sword Dialectics, Prestige, Weapon, VISCERAL, LACERATING, FEROCIOUS 2",
+    "tags": "Sword Dialectician, Sword Dialectics, Prestige, Weapon, VISCERAL, FEROCIOUS 2",
     "gearSlot": "carry",
     "weaponType": "melee",
     "range": 1,
@@ -1951,7 +1961,7 @@
       "artifact": false,
       "smashing": false,
       "piercing": false,
-      "lacerating": true,
+      "lacerating": false,
       "precise": false,
       "shock": false,
       "worn": false,
@@ -1965,6 +1975,7 @@
       "cover": false,
       "wall": false,
       "unblockable": false,
+      "undodgeable": false,
       "visceral": true
      },
      "weight": 2
@@ -2087,6 +2098,7 @@
       "cover": false,
       "wall": false,
       "unblockable": false,
+      "undodgeable": false,
       "visceral": false
      },
      "weight": 3
@@ -2363,6 +2375,7 @@
       "cover": false,
       "wall": false,
       "unblockable": false,
+      "undodgeable": false,
       "visceral": false
      },
      "weight": 5
@@ -2518,7 +2531,7 @@
    "type": "accessory",
    "img": "systems/10kswordsfoundry/assets/icons/accessory.svg",
    "system": {
-    "description": "<p><em>The ancient and primeval Seven-Star Constellation is inhabited by INTRA-INTs who are commonly known as the Seven Demon Kings—powerful Cultivators who established a long tradition of demon slaying and exorcism.</em></p><p><strong>License:</strong> Spirit Binding ✦✦✦ — Gain license to use the Five Thunder Talisman.</p><p><strong>Zhongkui Prestige Item · 0.25 kg · Price N/A</strong></p><p>Can be burned with ✹ remotely. When destroyed, the Talisman erupts, summoning Cosmic Thunder. This deals [1 + SPIRIT BINDING] damage. If the target's Morale is 2 or lower, they are Stunned as well for 6 seconds. If the target is a Ghost or Demon, they are similarly Stunned and suffer blast damage. Demons of Sidhi 1 or lower are dispersed into Sidhi outright.</p>",
+    "description": "<p><em>The Five Heavenly Thunders is the thunders wieldded by the heavens to cow and subjugate the demons that yet danced upon the mortal lands.</em></p><p><strong>License:</strong> Spirit Binding ✦✦✦ — Gain license to use the Five Thunder Talisman.</p><p><strong>Zhongkui Prestige Item · 0.25 kg · Price N/A</strong></p><p>Can be burned with ✹ remotely. When destroyed, the Talisman erupts, summoning Cosmic Thunder. This deals [1 + SPIRIT BINDING] damage. If the target's Morale is 2 or lower, they are Stunned as well for 6 seconds. If the target is a Ghost or Demon, they are similarly Stunned and suffer blast damage. Demons of Sidhi 1 or lower are dispersed into Sidhi outright.</p>",
     "source": "Rules 2.1 (2.1 rulebook), p.302",
     "rarity": "prestige",
     "quantity": 1,
@@ -2611,6 +2624,7 @@
       "cover": false,
       "wall": false,
       "unblockable": false,
+      "undodgeable": false,
       "visceral": false
      },
      "weight": 3
@@ -2819,6 +2833,7 @@
       "cover": false,
       "wall": false,
       "unblockable": false,
+      "undodgeable": false,
       "visceral": false
      },
      "weight": 1.5
@@ -2942,6 +2957,7 @@
       "cover": false,
       "wall": false,
       "unblockable": false,
+      "undodgeable": false,
       "visceral": false
      },
      "weight": 5

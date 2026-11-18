@@ -1,5 +1,5 @@
-import {occupiedSlots} from "./slots.mjs?v=0.2.42";
-import {modifierKeys} from "./modifiers.mjs?v=0.2.42";
+import {occupiedSlots} from "./slots.mjs?v=0.2.45";
+import {modifierKeys} from "./modifiers.mjs?v=0.2.45";
 export const sixesHTML = count => `<strong class="swords-sixes">Sixes: ${count}</strong>`;
 export function requireFreeHand(actor) {
   const occupied=new Set(actor.items.contents.flatMap(occupiedSlots));

@@ -74,7 +74,7 @@ test("armor Soak, Morale and effects feed the 2.1 derived data", () => {
   assert.deepEqual([soak('VATAC Adamant Helm "Kongo"', "head"), soak('AWW "Genji" Visor', "head"), soak('HDF "Mingwang" Mask', "head"), soak("Working Class Headwrap", "head")], [2, 1, 3, 0]);
   assert.deepEqual([soak('HDF "Mingwang" Cuirass', "torso"), soak('AWW "Genji" Sleeves', "rarm"), soak('AWW "Genji" Sleeves', "larm"), soak("YEI Worker Bottoms", "lleg")], [3, 2, 0, 1]);
   assert.deepEqual(byName['VATAC Adamant Ballistic Breastplate "Kongo"'].effects[0].system.changes.map(change => [change.key, change.value]), [["system.moveBonus", "-1"]]);
-  assert.deepEqual(byName['VATAC Adamant Helm "Kongo"'].effects[0].system.changes.map(change => [change.key, change.value]), [["system.speedBonus", "-2"]]);
+  assert.deepEqual(byName['VATAC Adamant Helm "Kongo"'].effects[0].system.changes.map(change => [change.key, change.value]), [["system.speedBonus", "2"]]);
   assert.deepEqual([byName["Heavenly Silk Vest"].system.magCost, byName['HDF "Mingwang" Cuirass'].system.magCost, byName["SSA Angel Arm Prosthetic"].system.magCost], [399, 899999, 4000000]);
 });
 

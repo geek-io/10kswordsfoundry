@@ -395,7 +395,57 @@ Decisions and ambiguities (0.2.41):
 - **"Politics"** (pp.334, 338, 342) and "Blacks Sorcery" (p.355) are not Cultivations the system lists; they come in as Esoteric Cultivations with a note.
 - **Not read:** the ammunition list on p.193 (inline bullets, not cards), Fangshi concoctions inside Technick text, and Assets whose code and Star range are split across columns in the PDF text.
 
-## Decisions and ambiguities
+## Added in 0.2.45 (Bestiary compendium)
+
+The 71 World Beings of the final book's Bestiary (pp.346–373) are compiled into the Actor compendium "2.1 World Beings · Bestiary" by the same reader the in-app importer uses, so every decision listed under 0.2.41 and 0.2.44 for stat blocks applies. A name printed twice (Dagger Goblin, Saber Goblin on pp.362–363 and again in short form on p.372) keeps the page in the later name.
+
+## Added in 0.2.44 (357-page edition against the final 423-page book)
+
+The final 2.1 rulebook (423 pages) renumbers everything: final page = earlier page + 14 from p.37 of the earlier books on, and + 2 for pages 3–36. Final pp.37–50 and 374–423 are lore; pp.6–8 are a table of contents and a foreword. Page numbers below are the final book's. Citations elsewhere in this document and in item `source` fields still use the earlier numbering.
+
+| Final page | Change | Applied |
+| --- | --- | --- |
+| 25, 141 | Worked examples: first READY = d6 + Speed; an Anticipate ends when its owner is READY again | already the system's rule |
+| 34 | Cultivation descriptions put in alphabetical order | none needed |
+| 59 | Semiproletariat Starting Macca 40 × d6 ♄ (was 100) | `CLASSES_21` |
+| 132 | Bleeding loses [10 − PHYS] HP, minimum 1; −1 to physical Checks | condition text; modifier now −1 (was −2) |
+| 137, 149 | Knocked Down and Drunk: "−2 to Checks" | condition text |
+| 153 | Aflame: 1 blast to a random Part every Tick, −1 to all Checks; Inferno 2 blast per second | Burning condition renamed Aflame, −1 (was the Alpha's −2) |
+| 172 | A typo fixed: FAC + SUSURRATION vs HRT | not automated |
+| 201–205 | Accessory, Salvage, Tool and Talisman prices and two rarities | accessories-21, goods-21 |
+| 206 | Hafts also take SHIELD profiles | `PROFILES.shield.grip` |
+| 212–215 | Weapon prices, two rarities, four kind labels corrected | weapons-21, ammunition-21 |
+| 241–317 | Sect pages: Core names shortened (MND, HRT, PHYS, MOT, WIT), "Invincible Sword", small wording | sect-gear-21 for two items; sects-21 text left as is |
+| 332–333 | Esoteric Anomaly d66 table now has its text | not in the system |
+| 345 | Bestiary template lists ARMORS, TRAITS, DROPS | already read by the importer |
+| 372–373 | Four Goblins in a short stat-block form | importer reads the short form |
+
+**Ambiguities recorded.** The short stat blocks print "Block Nd Dodge Nd" and "CASTING Nd" pools that do not follow from Cores + Cultivations; they are kept in the notes, not applied. Their Speed is printed higher than 7 − the higher of MND / WIT gives; the sheet keeps its own figure and the importer warns. Bleeding "each Bleeding Part adds its −1" cannot be counted: Bleeding is one switch on the sheet, so it is −1 once.
+
+## Added in 0.2.43 (303-page book against the 357-page edition)
+
+The 357-page "2.1 NO LORE" rulebook keeps the page numbers of the 303-page book for pages 1–303 and adds pages 304–357 (Intercessor chapter and World Beings). The text of pages 1–303 was compared page by page; pages with little or no text layer (including the image-only weapon pages 196–197 and the market pages 186–191) were compared as rendered pages. Thirteen pages differ:
+
+| Page | Change | Applied |
+| --- | --- | --- |
+| 41 | Speed reads 7 − higher of MND / WIT | already the system's rule |
+| 121 | Stun Check is Demand 3; stunned for 6 ticks | Stun Check default Demand 3 |
+| 192 | Empty Hand "has no innate damage type, just pure striking" | profile note |
+| 194 | GREAT: x2 KG, +1 damage, +2 Speed modifier. COLOSSAL: x4 KG, +2 damage, 2 m Knockback on damage, +3 Speed modifier. New Mod UNDODGEABLE | `weaponProfile21`, `WEAPON_MODS_21` |
+| 202 | Repair Check: each Strike (1 hour per Check) restores 2 DR or 1 crushed Soak | not automated |
+| 203 | Kongo Helm +2 SPEED (was −2) | armor-21 |
+| 205 | Blademaster Wraps: +1d to BLOCK (was LACERATING) | armor-21 (text) |
+| 225 | Black Red Demon Thews names itself correctly; Demon Diamond Head "cannot be Stunned from Head damage anymore" | sects-21 (text) |
+| 229 | Flickering Shade Technique "may activate" | sects-21 |
+| 242 | Hermetic Robes, Violent Sorcery: "She can also Step now while Casting" | sect-gear-21 |
+| 270 | Vajra Guard: Blocks "even if it is unblockable" | sects-21 |
+| 277 | Red Ajna typo | sects-21 |
+| 286 | Atardar's Fang: LACERATING removed | sect-gear-21 |
+
+Readings: the "-1 to all violence Checks" on GREAT and COLOSSAL is no longer printed, so it was removed. "x2 KG" / "x4 KG" are taken as already included in the printed card weights. GREAT still grants FEROCIOUS 1 as before (not printed; kept from the earlier build). "+2 SPEED" on the Kongo Helm and "+2 Speed modifier" on GREAT settle the earlier question: a plus is slower. LACERATING is no longer printed anywhere in the book; the Mod stays available on item sheets.
+
+Pages 304–357: Intercessor principles and consequences, play styles, design notes, location tables (Inhabitants d66, Material 2d6, Reward) and the World Beings chapter with the Bestiary. None of it adds Cultivator rules or market items. The location tables are not in the system.
+
 
 Recorded for the Intercessor and the author; none of these were silently resolved without a note.
 

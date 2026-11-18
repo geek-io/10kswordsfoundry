@@ -1,12 +1,12 @@
 // Rules 2.1 Cultivator Discovery tool (2.1 rulebook p.42): the eight Sutras in one window, opened from the Actors tab.
 // Nothing is written to the world while a draft is being worked on. "Save to chat" puts the draft on a whispered chat
 // card; the player who saved it and any GM can reopen it from there, and a GM turns the finished draft into an Actor.
-import {CORES, CORE_KEYS, CULTIVATIONS_21, CULTIVATION_KEYS_21, ASSETS_21, ATTACHMENT_STRENGTHS, PARTS, PART_KEYS, derive21} from "./rules21.mjs?v=0.2.42";
+import {CORES, CORE_KEYS, CULTIVATIONS_21, CULTIVATION_KEYS_21, ASSETS_21, ATTACHMENT_STRENGTHS, PARTS, PART_KEYS, derive21} from "./rules21.mjs?v=0.2.45";
 import {CLASSES_21, CLASS_KEYS_21, STEPS_21, SUTRA_KEYS_21, SECT_START_STARS_21, START_LICENSES_21, stars21, rollLabel21, classFromRoll21, subtypeFromRoll21, startingMacca21,
   nameSyllable21, nameFromSyllables21, emptyDraft21, normalizeDraft21, corePool21, cultivationPool21, assetBudget21, supplyBudget21, discoveryCheck21, actorSystem21,
-  discoveryCard21, canOpenDiscovery21, carryCheck21, coreChoices21, cultivationChoices21, AJNA_FORMS_21, SIDHI_COLORS_21, shuffle21, randomCores21, randomCultivations21} from "./discovery-rules21.mjs?v=0.2.42";
-import {usesRules21} from "./rules-version.mjs?v=0.2.42";
-import {escapeHTML} from "./resolution.mjs?v=0.2.42";
+  discoveryCard21, canOpenDiscovery21, carryCheck21, coreChoices21, cultivationChoices21, AJNA_FORMS_21, SIDHI_COLORS_21, shuffle21, randomCores21, randomCultivations21} from "./discovery-rules21.mjs?v=0.2.45";
+import {usesRules21} from "./rules-version.mjs?v=0.2.45";
+import {escapeHTML} from "./resolution.mjs?v=0.2.45";
 
 const SYSTEM = "10kswordsfoundry";
 const FLAG = "discovery21";

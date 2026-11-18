@@ -157,44 +157,44 @@ WEAPONS = {
  'Cleavers': [
   weapon('Hatchet', 'cleaver', 'common', 'Base Cleaver', 0.5, 10, 198, printed='HATCHET'),
   weapon('HDF Kai Shan Fu', 'cleaver', 'uncommon', 'Base Cleaver', 2, 500, 198, ['GREAT', 'FEROCIOUS'], printed='HDF KAI SHAN FU'),
-  weapon('Ka Parashurma', 'cleaver', 'rare', 'Base Bludgeon', 5, 100000, 198, ['CRUSHING'], printed='KA PARASHURMA',
+  weapon('Ka Parashurma', 'cleaver', 'rare', 'Base Cleaver', 5, 100000, 198, ['CRUSHING'], printed='KA PARASHURMA',
          rules='UNIVERSAL SLAUGHTER [✹✹✹] Upon dealing damage, activate this to apply the damage all chosen entities and the environment up to 10m from the target.',
          note='Printed as a Base Bludgeon in the Cleavers list; recorded as a Cleaver.')],
  'Polearms': [
   weapon('Lance', 'polearm', 'common', 'Base Polearm', 1, 5, 199, printed='LANCE', rules=' '),
-  weapon('VATAC Collapsing Lance', 'polearm', 'common', 'Base Polearm', 1, 200, 199, ['CONCEALABLE'], printed='VATAC COLLAPSING LANCE', rules=' '),
-  weapon('HaeCo Folding Spear', 'polearm', 'enhanced', 'Base Polearm', 1, 330, 199, ['CONCEALABLE', 'VISCERAL'], printed='HAECO FOLDING SPEAR', rules=' ', note=''),
-  weapon('AWW Sky Feather Naginata', 'polearm', 'rare', 'Base Polearm', 2.5, 1799, 199, ['PRECISE'], printed='AWW SKY FEATHER NAGINATA')],
+  weapon('VATAC Collapsing Lance', 'polearm', 'common', 'Base Polearm', 1, 90, 199, ['CONCEALABLE'], printed='VATAC COLLAPSING LANCE', rules=' '),
+  weapon('HaeCo Folding Spear', 'polearm', 'enhanced', 'Base Polearm', 1, 1000, 199, ['CONCEALABLE', 'VISCERAL'], printed='HAECO FOLDING SPEAR', rules=' ', note=''),
+  weapon('AWW Sky Feather Naginata', 'polearm', 'rare', 'Base Polearm', 2.5, 170990, 199, ['PRECISE'], printed='AWW SKY FEATHER NAGINATA')],
  'Whips': [
   weapon('Meteor Hammer', 'whip', 'common', 'Base Whip', 0.5, 50, 199, printed='METEOR HAMMER'),
   weapon('TMNI Stingray Tail', 'whip', 'uncommon', 'Base Whip', 1, 200, 199, ['FEROCIOUS', 'HOLY'], printed='TMNI STINGRAY TAIL', rules=' ', id_name='UM Stingray Tail'),
-  weapon('AWW Jadesteel Sleeves', 'whip', 'rare', 'Base Polearm', 2.5, 4999, 199, ['WORN', 'CRUSHING'], printed='AWW JADESTEEL SLEEVES',
+  weapon('AWW Jadesteel Sleeves', 'whip', 'rare', 'Base Polearm', 2.5, 400999, 199, ['WORN', 'CRUSHING'], printed='AWW JADESTEEL SLEEVES',
          note='Printed as a Base Polearm in the Whips list; recorded as a Whip (3 m).')],
  'Bows': [
   weapon('Wooden Longbow', 'bow', 'common', 'Base Bow', 1, 2, 200, flavor='Classic longbow made of wood.'),
   weapon('AWW Compound Yumi', 'bow', 'uncommon', 'Base Bow', 2, 200, 200, ['PRECISE'], rng=300,
          rules='2m long compound bow. Does not need PHYS 2 to wield. +50m range.', flavor='Yumi are used for Kyudo, but AWW created compound complex yumi for long range sniping.'),
-  weapon('TMNI Sikarom', 'bow', 'rare', 'Base Bludgeon', 2, 10000, 200, ['COLOSSAL', 'FEROCIOUS', 'PRECISE'], printed='TMNI SIKAROM',
+  weapon('TMNI Sikarom', 'bow', 'rare', 'Base Bow', 2, 100000, 200, ['COLOSSAL', 'FEROCIOUS', 'PRECISE'], printed='TMNI SIKAROM',
          note='Printed as a Base Bludgeon in the Bow list; recorded as a Bow.')],
  'Crossbows': [
   weapon('TTC Hunting Crossbow', 'crossbow', 'common', 'Base Crossbow', 1, 100, 200, flavor='Useful carbon crossbow. Sturdy but simple.'),
-  weapon('HDF Miniature Arblast', 'crossbow', 'uncommon', 'Base Cleaver', 3, 300, 200, ['FEROCIOUS'],
+  weapon('HDF Miniature Arblast', 'crossbow', 'uncommon', 'Base Crossbow', 3, 300, 200, ['FEROCIOUS'],
          rules="Targets that are within 3m cannot BLOCK this weapon's attacks. Automatically reloads after firing.",
          flavor='Huge arbalests with self-reloading mechanisms instead of needing a cranequein. Common among Shennin and Selorongian private armies, due to the quieter nature of the Arblast compared to a Gun.',
          note='Printed as a Base Cleaver in the Crossbow list; recorded as a Crossbow.'),
-  weapon('EXK Vampire Hunter', 'crossbow', 'rare', 'Base Bludgeon', 5, 6969, 200, ['COLOSSAL', 'PSIONIC'], printed='EXK VAMPIRE HUNTER',
+  weapon('EXK Vampire Hunter', 'crossbow', 'rare', 'Base Crossbow', 5, 696969, 200, ['COLOSSAL', 'PSIONIC'], printed='EXK VAMPIRE HUNTER',
          rules='PURIFICATORY MANTRAS [❂] Attacks gain HOLY and cannot be BLOCKED.', note='Printed as a Base Bludgeon in the Crossbow list; recorded as a Crossbow. PSIONIC (p.195): choose HRT in the KILL THE BUDDHA dialog to roll and deal damage with it.')],
  'Launchers': [
   weapon('Sling', 'launcher', 'common', 'Base Launcher', 0.5, 10, 201, flavor='A common, almost childish launching implement.'),
-  weapon('TMNI Blowgun', 'launcher', 'uncommon', 'Base Launcher', 0.5, 20, 201, printed='TMNI BLOWGUN', bonus=1, id_name='UM Blowgun', note='The +1 damage with Darts is recorded as a damage bonus.'),
+  weapon('TMNI Blowgun', 'launcher', 'uncommon', 'Base Launcher', 0.5, 200, 201, printed='TMNI BLOWGUN', bonus=1, id_name='UM Blowgun', note='The +1 damage with Darts is recorded as a damage bonus.'),
   weapon('HDF Heavenly Slingstaff', 'launcher', 'prestige', 'Divine Launcher', 1, 11999, 201, ['FEROCIOUS'], printed='HDF HEAVENLY SLINGSTAFF', rng=50)],
  'Handguns & Longguns': [
-  weapon('MORTAR Parabellum 9mm', 'handgun', 'common', 'Base Handgun', 0.5, 800, 201, printed='MORTAR PARABELLUM 9MM', rules=' ', capacity=12),
+  weapon('MORTAR Parabellum 9mm', 'handgun', 'uncommon', 'Base Handgun', 0.5, 800, 201, printed='MORTAR PARABELLUM 9MM', rules=' ', capacity=12),
   weapon('HaeCo Dragonhead .380 LCP', 'handgun', 'uncommon', 'Base Handgun', 0.5, 800, 201, printed='HAECO DRAGONHEAD', rules=' ', capacity=18),
   weapon('AWW Magicite Onslaught Rifle', 'longgun', 'enhanced', 'Base Longgun', 1, 1200, 201, ['FEROCIOUS', 'HOLY', 'AUTO'], printed='AWW MAGICITE ONSLAUGHT RIFLE', capacity=36,
          rules='MAGICITE ROUNDS: Has 36 magicite bullets that are always loaded and can be fired as normal ammo if jammed or out of ammo.'),
-  weapon('MORTAR TD-7 Ruyi', 'longgun', 'common', 'Base Longgun', 4, 1000, 201, ['AUTO'], printed='MORTAR TD-7 RUYI', rules=' ', capacity=32),
-  weapon('HDF Dragon Fire Cannon', 'longgun', 'deluxe', 'Divine Longgun', 7, 10000, 201, ['COLOSSAL'], printed='HDF DRAGON FIRE CANNON')],
+  weapon('MORTAR TD-7 Ruyi', 'longgun', 'uncommon', 'Base Longgun', 4, 1000, 201, ['AUTO'], printed='MORTAR TD-7 RUYI', rules=' ', capacity=32),
+  weapon('HDF Dragon Fire Cannon', 'longgun', 'deluxe', 'Divine Longgun', 7, 5000000, 201, ['COLOSSAL'], printed='HDF DRAGON FIRE CANNON')],
  'Weapon Profiles': [template(p) for p in ['dagger', 'saber', 'sword', 'whip', 'bludgeon', 'cleaver', 'polearm', 'shield', 'launcher', 'bow', 'crossbow', 'handgun', 'longgun']],
 }
 
@@ -219,8 +219,8 @@ ARMOR = {
   armor('Puterijasa Adept Cowl', 'PUTERIJASA ADEPT COWL', 'rare', 'Head Piece', 1, 160000, 203, [], 0, note='No Soak (printed "—"). Add the +1 in the Cast dialog.'),
   armor('Working Class Headwrap', 'WORKING CLASS HEADWRAP', 'common', 'Head Piece', 0.3, 30, 203, [], 0, note='No Soak (printed "—").',
         effects=[('Working Class Headwrap: +1 Manual Labor', [('system.skills.manualLabor', 1)], 203)]),
-  armor('VATAC Adamant Helm "Kongo"', 'VATAC ADAMANT HELM', 'uncommon', 'Head Piece', 6, 900, 203, ['head'], 2, effects=[('Kongo Helm: -2 Speed', [('system.speedBonus', -2)], 203)],
-        note='"-2 SPEED" is applied as printed to the Speed modifier.'),
+  armor('VATAC Adamant Helm "Kongo"', 'VATAC ADAMANT HELM', 'uncommon', 'Head Piece', 6, 900, 203, ['head'], 2, effects=[('Kongo Helm: +2 Speed', [('system.speedBonus', 2)], 203)],
+        note='"+2 SPEED" is applied as printed to the Speed modifier.'),
   armor('AWW "Genji" Visor', 'AWW “GENJI” VISOR', 'rare', 'Head Piece', 0.5, 300000, 203, ['head'], 1, effects=[('Genji Visor: +2 Speed', [('system.speedBonus', 2)], 203)],
         note='"+2 Speed" is applied as printed to the Speed modifier.'),
   armor('HDF "Mingwang" Mask', 'HDF “MINGWANG” MASK', 'rare', 'Head Piece', 7, 500000, 203, ['head'], 3)],
@@ -264,11 +264,11 @@ def goods(name, kind, rarity, category, weight, price, page, rules, flavor, d6=N
         sys_['consumable'] = c
     return {'name': name, 'type': kind, 'img': icon('gear' if kind in ('gear', 'salvage') else kind), 'system': sys_, 'effects': [effect(name, *e) for e in effects], **({'id_name': id_name} if id_name else {})}
 ACCESSORIES = {'Accessories': [
-  goods('SSA Red Eye Ring', 'accessory', 'common', 'Accessory', 0.5, 500, 187, 'Wearing Arm: +1 HP.', grab(187, 'A ring with a tiny life-giving ruby', 'long way.'), d6=1,
+  goods('SSA Red Eye Ring', 'accessory', 'common', 'Accessory', 0.5, 100, 187, 'Wearing Arm: +1 HP.', grab(187, 'A ring with a tiny life-giving ruby', 'long way.'), d6=1,
         effects=[('SSA Red Eye Ring: +1 HP (right arm)', [('system.parts.rarm.hpBonus', 1)], 187, 'Edit the effect key to system.parts.larm.hpBonus for the left arm.')]),
   goods('AWW Thaumaturgical Choker', 'accessory', 'uncommon', 'Accessory', 0.25, 800, 187, 'While worn: +1 max Flame.', grab(187, 'A choker made of practical esoteric', 'regulating talismans.'), d6=2,
         note='Raise Maximum Flame by 1 on the sheet while it is worn.'),
-  goods('Exdead Soul Integrity Earring', 'accessory', 'enhanced', 'Accessory', 0.1, 200, 187, 'While worn, the Stillness Stone reacts: +1 max Morale.', '"ABANDON ALL HESITATION. THE ONLY BEAST HERE IS YOU."', d6=3, morale=1),
+  goods('Exdead Soul Integrity Earring', 'accessory', 'enhanced', 'Accessory', 0.1, 1000, 187, 'While worn, the Stillness Stone reacts: +1 max Morale.', '"ABANDON ALL HESITATION. THE ONLY BEAST HERE IS YOU."', d6=3, morale=1),
   goods('Demon God Black Sorcery Beads', 'accessory', 'rare', 'Accessory', 0.3, 200000, 187, 'While worn: +1 to Empty Hand damage.', grab(187, 'Mala with the heart bead', 'also Violence?'), d6=4, id_name='Demon God Prayer Beads',
         note='Add the +1 as a damage bonus when rolling Empty Hand damage.'),
   goods('Devrendra Data Veil', 'accessory', 'deluxe', 'Accessory', 0.25, 2000000, 187, 'Obfuscates the face with a veil, shimmering it with a digital cover. Hides identity.',
@@ -298,7 +298,7 @@ GOODS = {
   goods('Processor Grid-Shards', 'salvage', 'common', 'Salvage', 0.25, 50, 188, 'Broken Information Talisman matrices. Cannot function as a processor; can be recycled as repair materials.', grab(188, 'Processors are new thaumaturgicals', 'they can get.'), d6=2),
   goods('Wairini Locket', 'salvage', 'common', 'Salvage', 0.1, 1, 188, grab(188, 'A soundstone with a recording', 'revolutionary ideals.'), grab(188, 'Dattreya Wairini was one of the final', 'to fight in the final battle!”'), d6=3, id_name='Wairin Locket'),
   goods('Communist Sutra', 'salvage', 'common', 'Salvage', 0.2, 1, 188, grab(188, 'Read at the day’s beginning:', 'with Communism or not.'), grab(188, 'The abridged version of the Communist Sutra', 'Yenjanese Cathedrals.'), d6=4),
-  goods('Tsushing Pressplay Player', 'salvage', 'enhanced', 'Salvage', 0.5, 100, 188, grab(188, 'A soundstone with reader talismans', 'Includes a headset.'), grab(188, 'Tsushing was a rice cooker company', 'relaying communist studies.'), d6=5),
+  goods('Tsushing Pressplay Player', 'salvage', 'uncommon', 'Salvage', 0.5, 300, 188, grab(188, 'A soundstone with reader talismans', 'Includes a headset.'), grab(188, 'Tsushing was a rice cooker company', 'relaying communist studies.'), d6=5),
   goods('Info Talisman Ribbon: Lover Rockers', 'salvage', 'common', 'Salvage', 0.1, 50, 188, grab(188, 'Contains all 21 songs', 'Requires a cassette player.'), grab(188, 'Too Drunk To Ride, an avant-garde', 'a board game company.'), d6=6,
         id_name='Cassette Tape: Lover Rockers')],
  'Tools': [
@@ -307,7 +307,7 @@ GOODS = {
   goods('Bintang Lighter', 'gear', 'common', 'Tool', 0.1, 20, 189, grab(189, '40 uses. Flick open', 'Strikes a Fire Stone.'), grab(189, 'Common now, especially with the rise of smokes.', 'care about the difference.'), d6=3),
   goods('HaeCo Handheld Radio', 'gear', 'uncommon', 'Tool', 0.6, 120, 189, grab(189, 'Communicate with radios tuned', 'Devil Batteries.'), grab(189, 'Handheld radios used as communication', 'subsumed into HaeCo.'), d6=4),
   goods('HaeCo Magnetic Compass', 'gear', 'common', 'Tool', 0.1, 40, 189, 'A magnetic pocket compass. Points to true north: Thule.', grab(189, 'A pocket compass magnetically attuned', 'Industrialism."'), d6=5),
-  goods('HaeCo Fine Focus Binoculars', 'gear', 'enhanced', 'Tool', 1, 300, 189, grab(189, 'See up to 400m.', 'Adjustable focus.'), grab(189, 'Commercial high-focus binoculars', 'and so on.'), d6=6)],
+  goods('HaeCo Fine Focus Binoculars', 'gear', 'uncommon', 'Tool', 1, 300, 189, grab(189, 'See up to 400m.', 'Adjustable focus.'), grab(189, 'Commercial high-focus binoculars', 'and so on.'), d6=6)],
  'Esotery': [
   goods('Ylourgne Makeup Set', 'gear', 'uncommon', 'Esotery', 0.5, 200, 190, grab(190, 'Thaumaturgically enhanced makeup.', "it's taken off."), grab(190, 'Ylourgne is a popular East Kamguk', 'from Dangnu Island.'), d6=1),
   goods('Devildrug', 'gear', 'uncommon', 'Esotery', 0.5, 900, 190, grab(190, 'While a Cultivator has time', 'into 10 Bullets.'), grab(190, 'Devildrug is made up of six parts', 'firearms were made.'), d6=2),
@@ -321,8 +321,8 @@ GOODS = {
   goods('Second Dimension Vivification', 'gear', 'rare', 'Talisman', 0.15, 100000, 191, grab(191, 'Nearby 2D objects', 'can move through them.'), grab(191, 'Used often by animators', 'The Contradiction intensifies.'), d6=1),
   goods('Enter the Intrajala', 'gear', 'rare', 'Talisman', 0.15, 100000, 191, grab(191, 'Project your Consciousness', 'akashic nexus-space.'), grab(191, 'The Intrajala is essentially', 'Akasha Workings.'), d6=2),
   goods("Thief's Last Door", 'gear', 'rare', 'Talisman', 0.15, 100000, 191, grab(191, 'Fold the paper three times', 'the Intercessor decides what happens.'), grab(191, 'A master burglar used this', 'all the same.'), d6=3),
-  goods('Mosesian Spring', 'gear', 'deluxe', 'Talisman', 0.15, 100000, 191, grab(191, 'Summons potable water', 'from thin air.'), grab(191, 'An incredibly useful talisman', 'can make them now.'), d6=4),
-  goods('Rend', 'gear', 'deluxe', 'Talisman', 0.15, 100000, 191, 'Point at a target within sight. Immediately deal [MND] damage to them.', grab(191, 'A common Talisman during the Esoteric Era,', 'know of its existence.'), d6=5),
+  goods('Mosesian Spring', 'gear', 'deluxe', 'Talisman', 0.15, 1000000, 191, grab(191, 'Summons potable water', 'from thin air.'), grab(191, 'An incredibly useful talisman', 'can make them now.'), d6=4),
+  goods('Rend', 'gear', 'deluxe', 'Talisman', 0.15, 1999000, 191, 'Point at a target within sight. Immediately deal [MND] damage to them.', grab(191, 'A common Talisman during the Esoteric Era,', 'know of its existence.'), d6=5),
   goods('Sky Dance', 'gear', 'prestige', 'Talisman', 0.15, 1000000, 191, grab(191, 'Gain the ability to fly', 'pressure and so on.'), grab(191, 'This Talisman was created by the Mystic', 'someone like him.').replace('illtemper', 'ill-temper'), d6=6,
         note='Printed as a "Prestige Esotery" in the Talismans list. These talismans require destruction to activate (p.191).')]}
 
@@ -345,8 +345,8 @@ AMMO = [
  ammo_item('Impact Arrow', 193, 'bluntArrow', 1, 'IMPACT ARROW — 0.2 kg; 10 ♄; works on Bows; inflicts KNOCKBACK 10M; crush damage.', price=10, weight=0.2),
  ammo_item('Slingshot', 193, 'bluntDart', 1, 'SLINGSHOT — 0.2 kg; 1 ♄; works on Launchers; crush damage.', price=1, weight=0.2, note='Recorded with the launcher crush type (Blunt Dart).'),
  ammo_item('Dart', 193, 'dart', 1, 'DART — 0.1 kg; 1 ♄; works on Launchers; can be outfitted with Poisons or other ailment toxins; pierce damage.', price=1, weight=0.1),
- ammo_item('HDF Dragon Fire Meteor', 201, 'bullet', 1, 'Deluxe Divine Longgun ammunition · 1 kg · 1,000 ♄. DEALS BLAST DAMAGE ✦ BLAZE ✦ KNOCKBACK 10M ✦ EXPLODES IN A 1M RADIUS FULMINATION UPON IMPACT, DEALING DAMAGE TO EVERYTHING IN RADIUS.',
-           'deluxe', 1000, 1, 'The only ammunition the HDF Dragon Fire Cannon fires.')]
+ ammo_item('HDF Dragon Fire Meteor', 201, 'bullet', 1, 'Deluxe Divine Longgun ammunition · 1 kg · 1,000,000 ♄. DEALS BLAST DAMAGE ✦ BLAZE ✦ KNOCKBACK 10M ✦ EXPLODES IN A 1M RADIUS FULMINATION UPON IMPACT, DEALING DAMAGE TO EVERYTHING IN RADIUS.',
+           'deluxe', 1000000, 1, 'The only ammunition the HDF Dragon Fire Cannon fires.')]
 
 # ---------- write ----------
 def previous(pack, folder_names):

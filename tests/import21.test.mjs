@@ -226,3 +226,14 @@ test('World Being preview under Rules 2.1 uses the 2.1 reader and refuses a 2.0.
  const legacy=await previewWorldBeings(['ASURI\nHEALTH 6\n[TRAITS] Rage']);assert.equal(legacy[0].actor.system.health.max,6);
  delete globalThis.game;
 });
+test('2.1 short World Being blocks (no genus line) are read like the long form',()=>{
+ const text=['KETTLE IMP','An imp arising from a dented kettle.','Move 2m · Speed 7','Sidhi 1 · Flame 3 · Morale 4','Parts HP 11 · Block 5d Dodge 4d','WEAPONS SPOUT LANCE (Polearm 6d,','melee 3m, 5 cut or pierce.)','CASTING 4d','CORES & CULTIVATIONS','PHYS 3 · MOT 2 · WIT 2 · MND 1 ·','FAC 1 · HRT 2','CULTIVATIONS','Beast Shrine 3 · Stillness 1 · STEAM DIALECTICS','2','LICENSES','WHISTLE ✹ Every entity within 5m','is Off-Balanced.','LID SLAM ❂❂','Block with the lid.','BOIL 3 Charge · 0 Flame One target takes 1 blast.','372','SECOND IMP','Move 1m · Speed 9','Sidhi 0 · Flame 2 · Morale 2','Parts HP 8 · Block 2d Dodge 2d','WEAPONS Rusty Spoon (2 crush)'].join('\n');
+ assert.equal(isWorldBeing21(text),true);assert.equal(isWorldBeing21('KETTLE IMP\nMove 2m\nHEALTH 6'),false);
+ const [a,b]=parseWorldBeings21(text),s=a.actor.system;
+ assert.equal(a.actor.name,'Kettle Imp');assert.equal(s.sidhi,1);assert.deepEqual(s.cores,{phy:3,mot:2,mnd:1,wit:2,voc:1,spi:2});assert.deepEqual(s.skills,{beastShrine:3,stillness:1});
+ assert.deepEqual(s.esoteric.map(e=>[e.name,e.value]),[['Steam Dialectics',2]]);assert.equal(s.parts.head.hpBonus,0);assert.equal(s.ardor.max,3);assert.equal(s.morale.value,4);assert.equal(s.moveBonus,0);
+ const lance=a.actor.items.find(i=>i.type==='weapon');assert.equal(lance.name,'Spout Lance');assert.equal(lance.system.r21.profile,'polearm');assert.equal(lance.system.r21.damageBonus,1);assert.match(lance.system.description,/Printed pool 6d/);
+ assert.deepEqual(a.actor.items.filter(i=>i.type==='technique').map(i=>[i.name,i.system.burnArdor,i.system.installArdor]),[['Whistle',1,0],['Lid Slam',0,2],['Boil',0,0]]);
+ assert.match(s.notes,/CASTING 4d/);assert.match(s.notes,/Block 5d Dodge 4d/);
+ assert.equal(b.actor.name,'Second Imp');assert.equal(b.actor.items[0].name,'Rusty Spoon');assert.match(b.actor.items[0].system.description,/No pool printed/);
+});

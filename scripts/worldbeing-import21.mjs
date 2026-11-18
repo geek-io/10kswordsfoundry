@@ -1,12 +1,14 @@
-// Rules 2.1 World Being stat blocks (2.1 rulebook Bestiary, pp.331-356). Pure: no Foundry globals.
+// Rules 2.1 World Being stat blocks (2.1 rulebook Bestiary, pp.345-373 of the final book). Pure: no Foundry globals.
 //   NAME ✦ genus            SIDHI X   (or X/Y/Z: one World Being per printed Sidhi version)
 //   lore, then Move · Dash · Step, Speed · Flame · Morale, Parts HP
 //   ARMOR(S), WEAPONS, CORES, CULTIVATIONS, LICENSES, ASSETS, TRAITS, DROPS
+// Short blocks (final book pp.372-373) have no "✦ genus": NAME, lore, "Move Nm · Speed N", "Sidhi N · Flame N · Morale N",
+//   "Parts HP N · Block Nd Dodge Nd", "WEAPONS Name (pool, range, damage)", then the same sections. They are rewritten into the long form first.
 // Printed numbers are authoritative: Part HP, Soak, Move, Morale and Flame are stored so the sheet shows them.
-import {CORES, PARTS, PART_KEYS, PROFILES, ASSETS_21, BASE_PART_HP, ticksSpeed21, flameMaximum21} from "./rules21.mjs?v=0.2.42";
-import {rating21, titleName21} from "./import21.mjs?v=0.2.42";
+import {CORES, PARTS, PART_KEYS, PROFILES, ASSETS_21, BASE_PART_HP, ticksSpeed21, flameMaximum21} from "./rules21.mjs?v=0.2.45";
+import {rating21, titleName21} from "./import21.mjs?v=0.2.45";
 
-const HEADER = /^([A-Z][A-Z0-9 '’,.\-]*?)\s*✦\s*([a-z][a-z \-]*?)(?:\s+SIDHI\s+(\d+(?:\/\d+)*))?$/;
+const HEADER = /^([A-Z][A-Z0-9 '’,.\-]*?)\s*✦\s*([a-z][a-z \-?]*?)(?:\s+SIDHI\s+(\d+(?:\/\d+)*))?$/;
 const SECTION = /^(ARMORS?|WEAPONS|CORES(?: & CULTIVATIONS)?|CULTIVATIONS|LICENSES|ASSETS|TRAITS|DROPS)(?:\s*\[[^\]]*\])?$/;
 const ENTRY = /^([A-Z0-9][A-Z0-9 '’"“”,.\-\/&]*?)\s*(✦+)?\s*(?:\[(\d+)\+\])?\s*(?:·\s*([✹❂]+))?\s*—\s*(.*)$/;
 const esc = value => String(value ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
@@ -21,10 +23,51 @@ const WEAPON_WORDS = [[/\b(SABER|KATANA)\b/, "saber"], [/\b(DAGGER|KNIFE|KERIS)\
 const DAMAGE_20 = {cut: "cut", crush: "impact"};
 const embedded = data => { const copy = structuredClone(data); for (const key of ["_id", "id", "folder", "ownership", "sort", "_stats"]) delete copy[key]; for (const effect of copy.effects ?? []) delete effect._id; return copy; };
 
-/** True when the text holds at least one 2.1 Bestiary header ("NAME ✦ genus") with its stat lines. */
+const SHORT_NAME = /^[A-Z][A-Z0-9 '’,.\-]{2,40}$/;
+const shortStart = (lines, i) => SHORT_NAME.test(lines[i]) && !SECTION.test(lines[i]) && !/^\d/.test(lines[i])
+  && lines.slice(i + 1, i + 8).some((next, n, all) => /^Sidhi\s+\d+\s*·/.test(next) && !all.slice(0, n).some(line => SECTION.test(line) || HEADER.test(line)));
+/** Rewrites short stat blocks (no "✦ genus") into the long Bestiary form, leaving every other line as it is. */
+function longForm(lines) {
+  const out = [];
+  let mode = null, weapon = "";
+  const flush = () => {
+    for (const [, rawName, inside] of weapon.matchAll(/([^()]+?)\s*\(([^)]*)\)/g)) {
+      const name = rawName.replace(/^[\s,;·]+/, "").trim(), pool = inside.match(/\b(\d+)d\b/)?.[1] ?? "", range = inside.match(/\b(\d+)\s*m\b/)?.[1];
+      const dmg = inside.match(/\b(\d+)\s+(cut|crush|pierce|blast|true|noetic)\b/i), hint = WEAPON_WORDS.find(([pattern]) => pattern.test(inside.toUpperCase()))?.[1];
+      out.push([`${name} (${pool ? `${pool}d` : ""})`, range && `${range}m`, dmg && `${dmg[1]} ${dmg[2].toLowerCase()}`, hint && `profile ${hint}`, `printed: ${inside.replace(/\s+/g, " ").replaceAll("·", ",").trim()}`].filter(Boolean).join(" · "));
+    }
+    weapon = "";
+  };
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    if (HEADER.test(line)) { if (mode === "weapon") flush(); mode = null; out.push(line); continue; }
+    if (shortStart(lines, i)) {
+      if (mode === "weapon") flush();
+      const sidhi = lines.slice(i + 1, i + 8).map(next => next.match(/^Sidhi\s+(\d+)/)?.[1]).find(Boolean);
+      out.push(`${line} ✦ world being SIDHI ${sidhi}`); mode = "head"; continue;
+    }
+    if (!mode) { out.push(line); continue; }
+    if (mode === "weapon" && (SECTION.test(line) || /^CASTING\b/.test(line))) { flush(); mode = "body"; }
+    if (mode === "weapon") { weapon += ` ${line}`; continue; }
+    const weapons = line.match(/^WEAPONS\s+(\S.*)$/);
+    if (weapons) { out.push("WEAPONS"); weapon = weapons[1]; mode = "weapon"; continue; }
+    if (/^CASTING\b/.test(line) && mode === "head") { out.push("WEAPONS", line); mode = "body"; continue; }
+    const section = line.match(SECTION);
+    if (section) { mode = section[1] === "LICENSES" ? "licenses" : "body"; out.push(line); continue; }
+    if (mode === "licenses") {
+      const m = line.includes("—") ? null : line.match(/^([A-Z][A-Z0-9 '’\-]*[A-Z0-9])\s*(?:([✹❂]+)(?:\s+(.*))?|\s+(\d+\s+Charge\b.*))$/);
+      if (m) { out.push(`${m[1]}${m[2] ? ` · ${m[2]}` : ""} — ${m[3] ?? m[4] ?? ""}`); continue; }
+    }
+    out.push(line);
+  }
+  if (mode === "weapon") flush();
+  return out;
+}
+
+/** True when the text holds at least one 2.1 Bestiary header ("NAME ✦ genus", or a short block) with its stat lines. */
 export function isWorldBeing21(text) {
-  const lines = String(text ?? "").replaceAll("\r", "").split("\n").map(line => line.trim());
-  return lines.some((line, index) => HEADER.test(line) && lines.slice(index + 1, index + 14).some(next => /^(?:SIDHI\s+\d|Move\s+\d)/.test(next) || /\bSIDHI\s+\d/.test(line)));
+  const lines = String(text ?? "").replaceAll("\r", "").split("\n").map(line => line.replace(/[ \t]+/g, " ").trim()).filter(Boolean);
+  return lines.some((line, index) => shortStart(lines, index)) || lines.some((line, index) => HEADER.test(line) && lines.slice(index + 1, index + 14).some(next => /^(?:SIDHI\s+\d|Move\s+\d)/.test(next) || /\bSIDHI\s+\d/.test(line)));
 }
 /** One value out of a printed "a/b/c" run for the chosen Sidhi version. */
 function pick(value, index, total) {
@@ -43,8 +86,11 @@ function fitParts(list) {
   const byName = name => /HEAD|SKULL|SEAL|CROWN/.test(name) ? "head" : /TORSO|BODY|ABDOMEN|CHEST|TRUNK|BASE/.test(name) ? "torso"
     : /\bR\b.*(HIND ?LEG|LEG|FOOT)|RIGHT.*LEG/.test(name) ? "rleg" : /\bL\b.*(HIND ?LEG|LEG|FOOT)|LEFT.*LEG/.test(name) ? "lleg"
     : /\bR\b.*(FORELEG|ARM|WING|CLAW|EDGE|HAND)|RIGHT.*ARM/.test(name) ? "rarm" : /\bL\b.*(FORELEG|ARM|WING|CLAW|EDGE|HAND)|LEFT.*ARM/.test(name) ? "larm" : null;
-  const left = [];
-  for (const part of list) { const key = byName(part.label); if (key && !map[key]) map[key] = part; else left.push(part); }
+  // The six ordinary Parts keep their own places first; wings, forelegs and the like then take what is free.
+  const exact = {HEAD: "head", TORSO: "torso", "R ARM": "rarm", "L ARM": "larm", "R LEG": "rleg", "L LEG": "lleg"};
+  const rest = [], left = [];
+  for (const part of list) { const key = exact[part.label]; if (key && !map[key]) map[key] = part; else rest.push(part); }
+  for (const part of rest) { const key = byName(part.label); if (key && !map[key]) map[key] = part; else left.push(part); }
   for (const part of left) { const key = PART_KEYS.find(k => !map[k]); if (key) map[key] = part; else extra.push(part); }
   return {map, extra};
 }
@@ -65,7 +111,9 @@ function oneWorldBeing(blockLines, index, total, sidhiList, worldItems) {
   for (const line of blockLines.slice(sectionAt < 0 ? blockLines.length : sectionAt)) {
     const m = line.match(SECTION);
     if (m) { current = m[1].replace(/^ARMORS$/, "ARMOR").replace(/^CORES.*$/, "CORES"); sections[current] ??= []; continue; }
-    if (current && !/^\d{1,3}$/.test(line)) sections[current].push(line);
+    // A lone number is a page number, unless it is a one-digit rating wrapped off the end of a Cultivation line.
+    const wrapped = current === "CULTIVATIONS" && /^\d$/.test(line) && /[A-Za-z]$/.test(sections[current].at(-1) ?? "");
+    if (current && (wrapped || !/^\d{1,3}$/.test(line))) sections[current].push(line);
   }
   // Cores and Cultivations.
   const cores = Object.fromEntries(Object.keys(CORES).map(key => [key, 1])), skills = {}, esoteric = [];
@@ -85,7 +133,7 @@ function oneWorldBeing(blockLines, index, total, sidhiList, worldItems) {
   const derivedHP = BASE_PART_HP + cores.phy + sidhi;
   const parts = Object.fromEntries(PART_KEYS.map(key => [key, {damage: 0, hpBonus: 0, soakBase: 0, soakLost: 0}]));
   const partsText = stats.slice(Math.max(0, stats.search(/\bParts\b/)));
-  const listed = [...partsText.matchAll(/(\d+(?:-\d+)?)\s+([A-Z][A-Z /]*?)\s+(\d+(?:\/\d+)*)\s*HP(?:\s*\(([^)]*)\))?/g)].map(m => ({roll: m[1], label: m[2].trim(), hp: number(m[3], index, total), note: m[4] ?? ""}));
+  const listed = [...partsText.matchAll(/\[?(\d+(?:-\d+)?)\]?\s+([A-Z][A-Z /]*?)\s+(\d+(?:\/\d+)*)\s*HP(?:\s*\(([^)]*)\))?/g)].map(m => ({roll: m[1], label: m[2].trim(), hp: number(m[3], index, total), note: m[4] ?? ""}));
   const uniform = partsText.match(/\bParts\s+(?:HP\s+(\d+(?:\/\d+)*)|(\d+(?:\/\d+)*)\s*HP)/);
   const partNotes = [];
   if (listed.length) {
@@ -123,18 +171,19 @@ function oneWorldBeing(blockLines, index, total, sidhiList, worldItems) {
   }
   // Weapons: readied, with the printed pool and damage noted. Damage is matched through the item's Extra damage.
   let poolNotes = 0, hand = 0, casting = "";
-  for (const entry of entries(sections.WEAPONS ?? [], line => /^[A-Z0-9][A-Z0-9 '’"“”\-.]*?\s*(?:\(\d|\[SIDHI\s*\d+\+\]\s*—)/.test(line) || /^CASTING\b/.test(line))) {
+  for (const entry of entries(sections.WEAPONS ?? [], line => /^[A-Z0-9][A-Z0-9 '’"“”\-.]*?\s*(?:\((?:\d|\))|\[SIDHI\s*\d+\+\]\s*—)/.test(line) || /^CASTING\b/.test(line))) {
     if (/^CASTING\b/.test(entry)) { casting = entry; continue; }
     const gated = entry.match(/^(.+?)\s*\[SIDHI\s*(\d+)\+\]\s*—\s*(.*)$/);
     if (gated && sidhi < int(gated[2])) continue;
-    const m = gated ? [entry, gated[1], "", gated[3]] : entry.match(/^(.+?)\s*\(([\dd/]+)\)\s*·\s*(.*)$/);
+    const m = gated ? [entry, gated[1], "", gated[3]] : entry.match(/^(.+?)\s*\(([\dd/]*)\)\s*·\s*(.*)$/);
     if (!m) { warnings.push(`Weapon not read: "${entry}".`); continue; }
     const isRange = part => /^\d[\d,]*\s*m\b/.test(part);
     const name = m[1].trim(), pool = m[2] ? number(m[2].replaceAll("d", ""), index, total) : null, segments = m[3].split("·").map(part => part.trim());
     const dmg = segments.find(part => !isRange(part) && /^\d+(?:\/\d+)*\s+[A-Za-z]+$/.test(part))?.match(/^(\d+(?:\/\d+)*)\s+(.+)$/), range = segments.find(isRange);
     const damage = dmg ? number(dmg[1], index, total) : 0, kind = (dmg?.[2] ?? "").toLowerCase(), metres = range ? int(range.replace(/,/g, "")) : 0;
     const rounds = segments.map(part => part.match(/^(\d+)\s+(.*rounds?|arrows?|bolts?|shots?)$/i)).find(Boolean);
-    const profile = WEAPON_WORDS.find(([pattern]) => pattern.test(name.toUpperCase()))?.[1] ?? "empty", base = PROFILES[profile];
+    const hinted = segments.map(part => part.match(/^profile (\w+)$/)?.[1]).find(Boolean);
+    const profile = WEAPON_WORDS.find(([pattern]) => pattern.test(name.toUpperCase()))?.[1] ?? (PROFILES[hinted] ? hinted : "empty"), base = PROFILES[profile];
     const expected = cores[base.dmgCore === "used" ? base.core : base.dmgCore] + base.dmgAdd, bonus = dmg ? damage - expected : 0;
     const expectedPool = cores[base.core] + int(skills[base.skill]);
     if (pool !== null && expectedPool !== pool) poolNotes++;
@@ -201,9 +250,9 @@ function oneWorldBeing(blockLines, index, total, sidhiList, worldItems) {
 export function parseWorldBeings21(text, worldItems = [], {versions = "all"} = {}) {
   if (!String(text ?? "").trim()) throw new Error("Paste a World Being stat block first.");
   if (text.length > 2000000) throw new Error("Import at most 2 MB at a time.");
-  const lines = text.replace(/­/g, "").replaceAll("\r", "").split("\n").map(line => line.replace(/[ \t]+/g, " ").trim()).filter(Boolean);
+  const lines = longForm(text.replace(/­/g, "").replaceAll("\r", "").split("\n").map(line => line.replace(/[ \t]+/g, " ").trim()).filter(Boolean));
   const starts = lines.map((line, index) => HEADER.test(line) ? index : -1).filter(index => index >= 0);
-  if (!starts.length) throw new Error("No 2.1 stat block found. Each one starts with a line such as: BANDIT ✦ human   SIDHI 0/3/5");
+  if (!starts.length) throw new Error("No 2.1 stat block found. Each one starts with a line such as: BANDIT ✦ human   SIDHI 0/3/5 (short blocks: a NAME line followed by Move, Sidhi and Parts lines)");
   const records = [];
   starts.forEach((start, n) => {
     const block = lines.slice(start, starts[n + 1] ?? lines.length);

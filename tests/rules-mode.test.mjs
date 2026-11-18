@@ -6,7 +6,7 @@ import {readFileSync} from "node:fs";
 const read = path => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 const manifest = JSON.parse(read("system.json"));
 let mode = "2.1";
-const packs = manifest.packs.map(pack => ({collection: `10kswordsfoundry.${pack.name}`, documentName: "Item", visible: true, metadata: {label: pack.label, packageName: "10kswordsfoundry"},
+const packs = manifest.packs.map(pack => ({collection: `10kswordsfoundry.${pack.name}`, documentName: pack.type, visible: true, metadata: {label: pack.label, packageName: "10kswordsfoundry"},
   getIndex: async () => [{_id: "x", name: `${pack.name} item`, type: "gear", system: {}}]}));
 globalThis.game = {settings: {get: () => mode}, items: {contents: []}, packs, user: {}};
 
@@ -17,7 +17,7 @@ const {CORES} = await import("../scripts/rules21.mjs");
 test("the eight 2.0.3 compendia are recognised by their label, and only those", () => {
   const legacy = packs.filter(isLegacyPack20).map(pack => pack.collection.split(".")[1]).toSorted();
   assert.deepEqual(legacy, ["grimoire-traits", "jobs", "non-sect-items", "sect-equipment", "sect-licenses", "sect-magicks", "sect-technicks", "worldbeing-traits"]);
-  assert.equal(packs.length - legacy.length, 12, "the twelve 2.1 compendia stay");
+  assert.equal(packs.length - legacy.length, 13, "the twelve 2.1 item compendia and the Bestiary stay");
   assert.equal(isLegacyPack20({metadata: {label: "My Homebrew · Rules 2.0.3", packageName: "world"}}), false, "a world's own pack is never hidden");
   assert.equal(isLegacyPack20(null), false);
 });

@@ -144,7 +144,7 @@ test("healing takes X days per point, X = current damage; doubled without rest (
 
 test("state modifiers: Torso Disabled, Encumbered, Knockdown, Drunk, Bleeding on physical Checks, Fatigue", () => {
   const system = actor({conditions21: {bleeding: true, encumbered: true}, fatigue: 2});
-  assert.equal(stateModifiers(system, {core: "phy"}).total, -2 - 4 - 2);
+  assert.equal(stateModifiers(system, {core: "phy"}).total, -1 - 4 - 2);
   assert.equal(stateModifiers(system, {core: "mnd"}).total, -4 - 2);
   assert.equal(stateModifiers(actor(), {disabledTorso: true}).total, -4);
   assert.equal(stateModifiers(actor({fatigue: 2, assets: [{key: "sleeplessSoul", stars: 2}]})).total, 0);
@@ -165,7 +165,9 @@ test("weapon profiles: pools, ranges, damage and GREAT/COLOSSAL/ARTIFACT (pp.38,
   const rifle = weaponProfile21({r21: {profile: "longgun", damage: 2, rate: 4, mods: {auto: true}}});
   assert.deepEqual([rifle.core, rifle.skill, rifle.range, rifle.ranged, rifle.rate, rifle.auto], ["mot", "handEye", 400, true, 4, true]);
   const great = weaponProfile21({r21: {profile: "polearm", damage: 2, mods: {great: true, artifact: true}}});
-  assert.deepEqual([great.range, great.damage, great.bonus], [3, 4, 1], "ARTIFACT also deals +1 damage (RK p.32)");
+  assert.deepEqual([great.range, great.damage, great.bonus, great.spd], [3, 4, 2, 4], "ARTIFACT also deals +1 damage (RK p.32); GREAT is +2 Speed modifier and no longer -1 to Checks (2.1 p.194)");
+  const colossal = weaponProfile21({r21: {profile: "cleaver", damage: 2, mods: {colossal: true, undodgeable: true}}});
+  assert.deepEqual([colossal.bonus, colossal.spd, colossal.undodgeable], [0, 5, true]);
   assert.equal(great.ferocious, 1, "GREAT grants FEROCIOUS 1 (modifiers.mjs)");
   assert.equal(weaponProfile21({r21: {profile: "sword", damage: 2, ferocious: 3}}).ferocious, 3, "a direct FEROCIOUS rating is kept");
   assert.equal(weaponProfile21({r21: {profile: "sword", damage: 2, ferocious: 3, mods: {great: true}}}).ferocious, 3, "GREAT does not lower a higher direct rating");

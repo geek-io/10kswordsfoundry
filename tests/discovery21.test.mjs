@@ -76,7 +76,7 @@ function finished() {
 test("Classes follow the 2.1 rulebook (pp.44-48)", () => {
   const row = key => { const info = CLASSES_21[key]; return [info.roll, info.cores, info.cultivations, info.assets, info.maccaPerD6]; };
   assert.deepEqual(row("lumpenproletariat"), [[3, 6], [2, 2, 2, 2, 1, 1], {2: 3, 1: 3}, 1, 1]);
-  assert.deepEqual(row("semiproletariat"), [[7, 8], [3, 2, 2, 2, 1, 1], {2: 4, 1: 4}, 2, 100]);
+  assert.deepEqual(row("semiproletariat"), [[7, 8], [3, 2, 2, 2, 1, 1], {2: 4, 1: 4}, 2, 40]);
   assert.deepEqual(row("proletariat"), [[9, 12], [3, 3, 2, 2, 1, 1], {2: 5, 1: 5}, 2, 20]);
   assert.deepEqual(row("petitBourgeoisie"), [[13, 13], [3, 3, 3, 2, 1, 1], {2: 5, 1: 5}, 3, 160]);
   assert.deepEqual(row("sphericalBourgeoisie"), [[14, 14], [3, 3, 3, 2, 2, 1], {3: 1, 2: 5, 1: 5}, 4, 200]);
