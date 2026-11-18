@@ -1,27 +1,34 @@
-import {readPdf,cancelPdf} from './pdf-reader.mjs?v=0.2.40';
-import {rememberImport,changeImportTab,previewImport,commitImport} from './import-workflow.mjs?v=0.2.40';
-import {MANUAL_STATS,rememberManual,createManualWorldBeing,browseManualItems,dropManualItem,removeManualItem} from './worldbeing-manual.mjs?v=0.2.40';
-import {itemFolders,checkedFolder} from "./import-folders.mjs?v=0.2.40";
-import {IMPORT_TYPES} from './import-data.mjs?v=0.2.40';
-import {validateImport,openImporter} from './importer.mjs?v=0.2.40';
-import {escapeHTML} from './resolution.mjs?v=0.2.40';
-import {LICENSE_CHOICES} from './licenses.mjs?v=0.2.40';
-import {UPGRADE_CHOICES} from './weapons.mjs?v=0.2.40';
-import {AMMO_CHOICES,AMMO_FAMILIES} from './ammunition.mjs?v=0.2.40';
-import {MODIFIER_CHOICES,AFFINITIES} from './modifiers.mjs?v=0.2.40';
-import {clearLibraryCache} from './library-service.mjs?v=0.2.40';
+import {readPdf,cancelPdf} from './pdf-reader.mjs?v=0.2.42';
+import {rememberImport,changeImportTab,previewImport,commitImport} from './import-workflow.mjs?v=0.2.42';
+import {MANUAL_STATS,MANUAL_STATS_21,rememberManual,createManualWorldBeing,browseManualItems,dropManualItem,removeManualItem} from './worldbeing-manual.mjs?v=0.2.42';
+import {itemFolders,checkedFolder} from "./import-folders.mjs?v=0.2.42";
+import {IMPORT_TYPES,importTypes} from './import-data.mjs?v=0.2.42';
+import {usesRules21} from './rules-version.mjs?v=0.2.42';
+import {CORES,PARTS,PROFILES,ASSETS_21,WEAPON_MODS_21} from './rules21.mjs?v=0.2.42';
+import {validateImport,openImporter} from './importer.mjs?v=0.2.42';
+import {escapeHTML} from './resolution.mjs?v=0.2.42';
+import {LICENSE_CHOICES} from './licenses.mjs?v=0.2.42';
+import {UPGRADE_CHOICES} from './weapons.mjs?v=0.2.42';
+import {AMMO_CHOICES,AMMO_FAMILIES} from './ammunition.mjs?v=0.2.42';
+import {MODIFIER_CHOICES,AFFINITIES} from './modifiers.mjs?v=0.2.42';
+import {clearLibraryCache} from './library-service.mjs?v=0.2.42';
 
 const hidden=new Set(['description','equipped','paidCarry','paidMeridians','paidArdor','ammoId','mods']);
 const labels={burntArdor:'Recover burnt Ardor',allBurntArdor:'Recover all burnt Ardor',allHealth:'Heal all Health',health:'Health restored',bonus:'Base bonus',slots:'Carry cost',meridianCost:'Meridian cost',apCost:'AP cost (✦)',installArdor:'Install Ardor (❂)',burnArdor:'Burn Ardor (✹)',mudraHands:'Hands required',areaSize:'Area size (m)',magCost:'Magnetite (Mag) cost',gearSlot:'Equipment slot',category:'Body / Mind',sect:'Sect',range:'Base range (m)',properties:'Inherent modifiers',ammo:'Inline ammo',cultivations:'Cultivations',prerequisites:'Prerequisites',vio:'VIO',dia:'DIA',grc:'GRC',sav:'SAV',wrd:'WRD',spi:'SPI'};
 const title=key=>labels[key]??key.replace(/([A-Z])/g,' $1').replace(/^./,s=>s.toUpperCase());
 const choices={affinity:{"":"None",...Object.fromEntries(Object.keys(AFFINITIES).map(key=>[title(key),title(key)]))},upgrade:UPGRADE_CHOICES,ammoType:AMMO_CHOICES,ammoFamily:AMMO_FAMILIES,rule:{'':'None',...MODIFIER_CHOICES}};
-function fieldsHTML(fields,values,prefix='system',type='') {
+// Rules 2.1: the form shows the fields 2.1 uses, under the book's names, and leaves the 2.0.3-only ones out.
+const hidden21=new Set(['system.slots','system.bonus','system.apCost','system.armor','system.ardor','system.attackPool','system.defensePool','system.damageType','system.upgrade','system.affinity','system.properties','system.enhancement','system.meridianCost','system.rank','system.consumable.apCost','system.r21.damage']);
+const labels21={'system.magCost':'Price (♄)','system.installArdor':'Install Flame (❂)','system.burnArdor':'Burn Flame (✹)','system.range':'Range (m)','system.ammo':'Loaded ammo','system.r21':'Rules 2.1','system.r21.profile':'Profile','system.r21.grip':'Grip','system.r21.damageBonus':'Extra damage','system.r21.range':'Range override (m; 0 = Profile range)','system.r21.rate':'Rate of fire','system.r21.capacity':'Magazine size','system.r21.ferocious':'FEROCIOUS rating','system.r21.shield':'SHIELD rating','system.r21.reach':'REACH (m)','system.r21.affinity':'Affinity','system.r21.grade':'Material Grade','system.r21.morph':'MORPH Profiles','system.r21.mods':'Mods','system.r21.weight':'Weight (kg)','system.r21.coverage':'Soak by Part','system.r21.morale':'Morale bonus','system.r21.mod':'Armor Mod','system.r21.potency':'Charges needed (Charge Time)','system.r21.castTime':'Charge Time note','system.r21.core':'Casting Core','system.r21.skill':'Casting Cultivation','system.r21.bonus':'Casting bonus dice','system.key':'Printed Asset','system.stars':'Stars','system.detail':'Detail','system.cultivation':'Sect Cultivation','system.weapons':'Sect weapons','system.ingested':'Ingested','system.consumable':'Consumable','system.consumable.burntArdor':'Recover burnt Flame','system.consumable.allBurntArdor':'Recover all burnt Flame','system.consumable.health':'HP healed','system.consumable.allHealth':'Heal every Part'};
+const label21=name=>labels21[name]??(name.startsWith('system.r21.coverage.')?PARTS[name.split('.').at(-1)]?.label:name.startsWith('system.r21.mods.')?WEAPON_MODS_21[name.split('.').at(-1)]?.split(' — ')[0]:undefined);
+const choices21={'system.r21.core':()=>Object.fromEntries(Object.entries(CORES).map(([key,core])=>[key,core.label])),'system.r21.profile':()=>({'':'—',...Object.fromEntries(Object.entries(PROFILES).map(([key,profile])=>[key,profile.label]))}),'system.key':()=>Object.fromEntries(Object.entries(ASSETS_21).map(([key,asset])=>[key,asset.label??title(key)]))};
+function fieldsHTML(fields,values,prefix='system',type='',rules21=false) {
  const F=foundry.data.fields;
- return Object.entries(fields).filter(([key])=>(key==='description'&&prefix!=='system'||!hidden.has(key))&&!(['technique','magick'].includes(type)&&['gearSlot','slots','quantity'].includes(key))).map(([key,field])=>{
-  const name=`${prefix}.${key}`,value=values[key],label=escapeHTML(MODIFIER_CHOICES[key]??title(key));
-  if(field instanceof F.SchemaField)return `<fieldset class="creator-wide"><legend>${label}</legend><div class="creator-grid">${fieldsHTML(field.fields,value,name,type)}</div></fieldset>`;
+ return Object.entries(fields).filter(([key])=>(key==='description'&&prefix!=='system'||!hidden.has(key)||rules21&&`${prefix}.${key}`==='system.r21.mods')&&!(['technique','magick'].includes(type)&&['gearSlot','slots','quantity'].includes(key))&&!(rules21&&hidden21.has(`${prefix}.${key}`))).map(([key,field])=>{
+  const name=`${prefix}.${key}`,value=values?.[key],label=escapeHTML((rules21?label21(name):undefined)??MODIFIER_CHOICES[key]??title(key));
+  if(field instanceof F.SchemaField)return `<fieldset class="creator-wide"><legend>${label}</legend><div class="creator-grid">${fieldsHTML(field.fields,value,name,type,rules21)}</div></fieldset>`;
   if(field instanceof F.ArrayField)return '';
-  let options=choices[key]??field.choices;
+  let options=(rules21?choices21[name]:undefined)??(rules21&&name.startsWith('system.r21.')?undefined:choices[key])??field.choices;
   if(typeof options==='function')options=options();
   if(Array.isArray(options))options=Object.fromEntries(options.map(v=>[v,title(v)]));
   if(options)return `<label>${label}<select name="${name}">${Object.entries(options).map(([v,l])=>`<option value="${escapeHTML(v)}" ${v===value?'selected':''}>${escapeHTML(l)}</option>`).join('')}</select></label>`;
@@ -35,9 +42,11 @@ export class SwordsItemCreator extends foundry.applications.api.HandlebarsApplic
  static PARTS={main:{template:'systems/10kswordsfoundry/templates/item-creator.hbs'}};
  tab='single';importDrafts={};folder='';batch=[];type='weapon';count=0;lastItem=null;busy=false;drafts={};manualDraft={};manualStatus='';manualItems=[];
  async _prepareContext(){
-  const Model=CONFIG.Item.dataModels[this.type];
+  const rules21=this.rules21=usesRules21(),types=importTypes(rules21);
+  if(!Object.hasOwn(types,this.type))this.type='weapon';
+  const Model=CONFIG.Item.dataModels[this.type],manualStats=rules21?MANUAL_STATS_21:MANUAL_STATS;
   const draft=this.drafts[this.type]??{name:'',system:new Model().toObject()};
-  return {manualItems:this.manualItems.map((item,index)=>({index,name:item.name,type:item.type})),isManual:this.tab==='manual',manual:this.manualDraft,manualStatus:this.manualStatus,manualStats:MANUAL_STATS.map(([key,label,initial,min,max],index)=>({key,label,value:this.manualDraft[key]??initial,min,max,resource:index<6})),actorFolders:Object.fromEntries([['','Actors root'],...(game.folders?.contents??[]).filter(f=>f.type==='Actor').sort((a,b)=>a.name.localeCompare(b.name)).map(f=>[f.id,f.name])]),isSingle:this.tab==='single',isWorld:this.tab==='world',tab:this.tab,importState:this.importDrafts[this.tab]??{format:'text',type:'trait'},formats:{text:'Rulebook text',json:'JSON',csv:'CSV'},folders:itemFolders(),folder:this.folder,batch:this.batch.map((item,index)=>({index,name:item.name,type:IMPORT_TYPES[item.type]})),types:IMPORT_TYPES,type:this.type,name:draft.name,fields:fieldsHTML(Model.schema.fields,draft.system,'system',this.type),description:draft.system.description??'',count:this.count,lastName:this.lastItem?.name};
+  return {manualItems:this.manualItems.map((item,index)=>({index,name:item.name,type:item.type})),isManual:this.tab==='manual',manual:this.manualDraft,manualStatus:this.manualStatus,rules21,pdfColumns:this.pdfColumns??rules21,versionChoices:{all:'Every printed version',1:'First only (lowest Sidhi)',2:'Second only',3:'Third only'},manualStats:manualStats.map(([key,label,initial,min,max],index)=>({key,label,value:this.manualDraft[key]??initial,min,max,resource:index<6})),actorFolders:Object.fromEntries([['','Actors root'],...(game.folders?.contents??[]).filter(f=>f.type==='Actor').sort((a,b)=>a.name.localeCompare(b.name)).map(f=>[f.id,f.name])]),isSingle:this.tab==='single',isWorld:this.tab==='world',tab:this.tab,importState:this.importDrafts[this.tab]??{format:'text',type:rules21?'technique':'trait',versions:'all'},formats:{text:rules21?'Rulebook text (2.1)':'Rulebook text',json:'JSON',csv:'CSV'},folders:itemFolders(),folder:this.folder,batch:this.batch.map((item,index)=>({index,name:item.name,type:IMPORT_TYPES[item.type]})),types,type:this.type,name:draft.name,fields:fieldsHTML(Model.schema.fields,draft.system,'system',this.type,rules21),description:draft.system.description??'',count:this.count,lastName:this.lastItem?.name};
  }
  async _onRender(context,options){
   await super._onRender(context,options);
@@ -60,7 +69,7 @@ export class SwordsItemCreator extends foundry.applications.api.HandlebarsApplic
   if(!name)return ui.notifications.warn('Give your item a name.');
   this.busy=true;form.inert=true;const submit=form.querySelector('[type="submit"]');submit.disabled=true;
   try{
-   const [item]=validateImport([{name,type:this.type,system:data.system}]);
+   const [item]=validateImport([{name,type:this.type,system:data.system}],{rules21:!!this.rules21});
    const [created]=await foundry.utils.getDocumentClass('Item').createDocuments([{...item,folder:checkedFolder(this.folder)}]);
    if(!created)throw new Error('The item was not created. Your entries have been kept.');
    this.lastItem=created;this.count++;delete this.drafts[this.type];clearLibraryCache();
@@ -72,7 +81,7 @@ export class SwordsItemCreator extends foundry.applications.api.HandlebarsApplic
   if(!this.element.reportValidity())return;
   try {if(this.batch.length>=200)throw new Error('Import at most 200 items per batch.');const data=foundry.utils.expandObject(new foundry.applications.ux.FormDataExtended(this.element).object);
    if(!data.name?.trim())throw new Error('Give your item a name.');
-   this.batch.push(...validateImport([{name:data.name.trim(),type:this.type,system:data.system}]));
+   this.batch.push(...validateImport([{name:data.name.trim(),type:this.type,system:data.system}],{rules21:!!this.rules21}));
    delete this.drafts[this.type];await this.render({force:true});
   }catch(error){ui.notifications.error(error.message);}
  }
@@ -88,7 +97,7 @@ export class SwordsItemCreator extends foundry.applications.api.HandlebarsApplic
   if(this.busy||!this.batch.length)return;
   if(!game.user.isGM&&!game.user.can('ITEM_CREATE'))return;
   this.rememberDraft();this.busy=true;this.element.inert=true;
-  try {const folder=checkedFolder(this.folder);const created=await foundry.utils.getDocumentClass('Item').createDocuments(validateImport(this.batch).map(item=>({...item,folder})));
+  try {const folder=checkedFolder(this.folder);const created=await foundry.utils.getDocumentClass('Item').createDocuments(validateImport(this.batch,{rules21:!!this.rules21}).map(item=>({...item,folder})));
    for(const item of created){const index=this.batch.findIndex(queued=>queued.name===item.name&&queued.type===item.type);if(index>=0)this.batch.splice(index,1);}
    this.count+=created.length;this.lastItem=created.at(-1)??this.lastItem;clearLibraryCache();await this.render({force:true});
    if(this.batch.length)ui.notifications.warn('Some items were not created and remain queued.');

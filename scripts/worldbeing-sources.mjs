@@ -1,6 +1,10 @@
-import {parseWorldBeings} from './worldbeing-import.mjs?v=0.2.40';
+import {parseWorldBeings as parseWorldBeings20} from './worldbeing-import.mjs?v=0.2.42';
+import {parseWorldBeings21,isWorldBeing21} from './worldbeing-import21.mjs?v=0.2.42';
 // Index first; only fetch full compendium documents actually used by this preview.
-export async function previewWorldBeings(texts){
+export async function previewWorldBeings(texts,{rules21=false,versions='all'}={}){
+ // Rules 2.1 worlds read the 2.1 Bestiary layout; a 2.0.3 block pasted there is refused with a reason rather than half-read.
+ if(rules21&&!texts.some(isWorldBeing21))throw new Error('No Rules 2.1 stat block found. Each one starts with a line such as: BANDIT ✦ human   SIDHI 0/3/5, followed by Move, Speed and Parts lines.');
+ const parseWorldBeings=rules21?(text,items)=>isWorldBeing21(text)?parseWorldBeings21(text,items,{versions}):[]:parseWorldBeings20;
  const candidates=[],failures=[];
  for(const item of game.items?.contents??[]){
   if(!game.user.isGM&&!item.testUserPermission(game.user,'OBSERVER'))continue;

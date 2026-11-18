@@ -742,8 +742,8 @@ export function derive21(system, items = []) {
 
 export {stars as clampStars};
 
-/** RK p.52: a Cultivator generally has [2 + Sidhi Level] Flame. */
-export const flameMaximum21 = sidhi => 2 + Math.max(0, int(sidhi));
+/** 2.1 rulebook p.90: "A Cultivator has [3 + Sidhi Level] max Flames." (Was 2 + Sidhi, Red Kalpa Manuscript p.52, until 0.2.42.) */
+export const flameMaximum21 = sidhi => 3 + Math.max(0, int(sidhi));
 
 /** Alpha p.52 Scorch: burning or installing past 0 Flame goes negative. Free Flame is used first; the rest becomes Scorch.
  * Returns the new totals and how much Scorch this spend added. */

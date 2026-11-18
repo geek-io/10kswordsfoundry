@@ -321,7 +321,7 @@ From the 2026-11-01 test run (user instructions) and the 53-page Red Kalpa Manus
 | Part HP | 14 | 7 + Physique + Sidhi Stage (2.1 playtest 2026-11-15; was 3 + Physique) (effective, with Active Effects), plus HP bonus, Mountain Frame and Anvil Head |
 | Assets | 45–49 | New `asset` Item type (Asset key, Stars, detail); 2.1 Assets compendium with all 35 d36 Assets; +Star for 4 × new Star XP (p.3); older Asset-list rows migrate to items once (active GM, on load) |
 | Barang | 2, 51–52; Sect spoilers | New `barang` Item type (Sect, Esoteric Cultivation, weapons, ingested); 2.1 Barang compendium; Ingest (one at a time; optional ✦✦ Cultivation per Wanderer Discovery) and Eject (keeps what was Cultivated) |
-| Flame | 52 | 2 + Sidhi Stage shown, with a button to set the maximum; burnt Flame returns 1 per week |
+| Flame | rulebook p.90 | 3 + Sidhi Stage shown (2 + Sidhi until 0.2.42), with a button to set the maximum; burnt Flame returns 1 per week |
 | Meridians | 52 | 2 + Sidhi Stage open Meridians; the sheet warns when Magicks + Technicks exceed them. The Sidhi Realm limit (8/16/32) is still shown |
 | ARTIFACT | 32 | +1 damage as well as +2 dice and double Durability |
 | Gambits | 17 | Predetermined Openings for World Beings: one per die, Quick → Quick → Solid → Perfect repeating |
@@ -332,7 +332,7 @@ Decisions:
 
 - The 2026-11-14 engine change lowered every rank one step: 1–3 Whiff, 4–5 Quick, 6 Solid, and no die rolls a Perfect — Perfects come only from fusing two Solids. (Earlier rulebook text printed 4 = Quick, 5 = Solid, 6 = Perfect, and the first test run used 1 Whiff, 2–3 Quick, 4–5 Solid, 6 Perfect; both are superseded.) Strike-based rules (Shoot Demand +1 damage, one random hit location per Strike in Burst/Full Auto) keep counting dice of 4+, which are now the Quick and Solid Openings. Fusion ratios, the one-extra-Perfect cap, Sidhi upgrades, and the Gambit sequence (Quick → Quick → Solid → Perfect) are unchanged.
 - The manuscript still prints VOICE/WORD and SPIRIT in the Cores list (p.1) and several examples; the test run's names are used. The Sect spoilers already print FACE and HEART.
-- Flame maximum is not changed automatically, because the stored maximum is shared with the 2.0.3 sheet (Ardor). The 2.1 sheet shows 2 + Sidhi Stage and a button to apply it.
+- Flame maximum is not changed automatically, because the stored maximum is shared with the 2.0.3 sheet (Ardor). The 2.1 sheet shows 3 + Sidhi Stage and a button to apply it.
 - Meridians count every Magick and Technick on the sheet; the manuscript does not say whether unslotted techniques exist.
 - Ingesting a Barang offers its Cultivation at ✦✦ only when the character does not have it yet (Discovery, p.2); later in play the table decides.
 - Gambits (p.17): the printed 6-dice example (4 Quick, 1 Solid, 1 Perfect) matches the sequence; the 8- and 10-dice examples do not and are not followed.
@@ -370,6 +370,30 @@ Decisions:
 - **Healing.** The Alpha drops the "5 days" example, so ambiguity 4 is settled: 1 point per X days, X = current damage.
 - **Sect Cultivation names.** The Alpha's own list (p.56) differs from the playtest Sects for three Sects (Asuri "Devil Body", Aswang "Shadow Beast", Mendicant "Empty Mind"). The playtest Sects' names are used because their Licenses print them; "Devil Body" and "Shadow Beast" are accepted as aliases. "Empty Mind" is described as a separate Mind Cultivation and is not aliased.
 - **Not automated:** INTRA-INTs (Spiritual Diagnosis, Prayer, Possession, Exorcism, Rituals such as Soul Surgery), Objects and vehicle Durability, the Magnetite economy and wages, Heart Demons, Treatment Demands. These use ordinary Checks and the existing dialogs.
+
+## Added in 0.2.41 (importer for Rules 2.1 — 357-page "2.1 NO LORE" rulebook)
+
+Source pages are PDF page numbers of the 357-page edition.
+
+- **Sect entries (pp.225–303).** Title + `Technick` / `Magick` / `Gear` / `license`, flavor, `LICENSE <Esoteric Cultivation> ✦…`, `NEEDS <✹ / ❂>[; requirement]`, rules. ✹ counts as Flame burnt, ❂ as Flame installed. The Sect is taken from the Esoteric Cultivation (twenty Sects). Magicks: `MANTRA`, `MUDRA`, `CHECK: <Core> + <Cultivation>`, `CHARGE TIME: N` (stored as the Magick's charges needed, as the 2.1 Sects catalog does), `EFFECT`.
+- **Item cards (pp.186–207, and inside Sect Gear).** `[d6] <weight> KG [Sect] <RARITY> [BASE|REFINED|DIVINE|IMMORTAL] <KIND> [price♄ | N/A]`, name, optional Mods line, text; armor prints `soak_ ⛨…` (one Soak per glyph on each Part covered); Sect weapons print `grip_`, `profile_`, `material_`, `mods_`.
+- **Assets (pp.211–218).** d66 code, Star range, name, text. Matched by name to the 36 keys in `ASSETS_21`; anything else is a custom Asset.
+- **Bestiary (pp.331–356).** The format on p.331: `NAME ✦ genus`, `SIDHI X` (X/Y/Z = one entry per Sidhi version), Move · Dash · Step, Speed · Flame · Morale, Parts HP, then ARMOR, WEAPONS, CORES, CULTIVATIONS, LICENSES, ASSETS, TRAITS, DROPS.
+- The printed derived values agree with the system's arithmetic where checked on pp.332–338: Part HP = 7 + PHYS + Sidhi, Speed = 7 − higher of WIT / MND, Morale = 1 + HRT + Stillness, Move = MOT, Dash = MOT + PHYS.
+
+Decisions and ambiguities (0.2.41):
+
+- **Flame.** Bestiary entries print Flame 3 / 6 / 8 at Sidhi 0 / 3 / 5, which is 3 + Sidhi. The rulebook says the same on p.90: "A Cultivator has [3 + Sidhi Level] max Flames." The sheet used 2 + Sidhi, from the older manuscript, until 0.2.42; it now uses 3 + Sidhi (user decision, 2026-11-17). Existing characters keep their stored maximum until the sheet's button is pressed.
+- **Sidhi gates on armor.** `[1]` and `[3/5]` after an armor name are read as: the numbers are Sidhi values when any of them matches a printed version, otherwise 1-based version numbers. So on a 0/3/5 block `[1]` is the first version only and `[3/5]` the Sidhi 3 and 5 versions.
+- **License gates.** `[0+]`, `[3+]` on a License are read as "this version has it at Sidhi N or more". `[SIDHI 3+]` on a weapon likewise.
+- **Printed weapon pools** often differ from Core + Cultivation. The sheet rolls Core + Cultivation; the printed pool is written on the weapon and the reader is told. Damage is matched through the weapon's Extra damage when the printed figure is higher than the Profile's.
+- **Natural weapons** (bite, claw, breath) use the Empty Hand Profile with a range override. A damage figure given as Morale or "noetic" sets NOETIC.
+- **Non-humanoid Parts.** The sheet has six fixed Parts. Printed Parts are placed by name (head, torso, legs, forelegs / wings / arms), then into free slots; a seventh Part (a tail on a 2d6 table) is reported and left to the Intercessor. The printed table is kept in the notes.
+- **Armor on World Beings** adds its Soak to the Parts and is carried unequipped, so Soak is not counted twice. DR (Durability) is kept as text.
+- **Arm pieces** cover one Arm (p.205); the importer puts the Soak on the right arm and says so. **Leg pieces** are read as both legs, as the 2.1 Armor catalog does.
+- **Card kind against section heading.** Some cards print the wrong kind (a bow as "BASE BLUDGEON", p.200). The card line is kept and a note is raised when the nearest heading disagrees; the heading is not trusted on two-column pages.
+- **"Politics"** (pp.334, 338, 342) and "Blacks Sorcery" (p.355) are not Cultivations the system lists; they come in as Esoteric Cultivations with a note.
+- **Not read:** the ammunition list on p.193 (inline bullets, not cards), Fangshi concoctions inside Technick text, and Assets whose code and Star range are split across columns in the PDF text.
 
 ## Decisions and ambiguities
 

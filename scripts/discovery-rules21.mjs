@@ -1,7 +1,7 @@
 // Rules 2.1 Cultivator Discovery (2.1 rulebook pp.42-48, 62, 166): the eight Sutras as data and pure checks.
 // Nothing here touches Foundry, so the creation tool, the chat card and the tests all read the same rules.
-import {CORES, CORE_KEYS, CULTIVATIONS_21, CULTIVATION_KEYS_21, ASSETS_21, ATTACHMENT_STRENGTHS, carryLimit, encumbrance21} from "./rules21.mjs?v=0.2.40";
-import {escapeHTML} from "./resolution.mjs?v=0.2.40";
+import {CORES, CORE_KEYS, CULTIVATIONS_21, CULTIVATION_KEYS_21, ASSETS_21, ATTACHMENT_STRENGTHS, carryLimit, encumbrance21, flameMaximum21} from "./rules21.mjs?v=0.2.42";
+import {escapeHTML} from "./resolution.mjs?v=0.2.42";
 
 const int = value => Math.trunc(Number(value) || 0);
 const text = value => String(value ?? "").trim();
@@ -227,7 +227,7 @@ export function actorSystem21(input) {
   return {cores: Object.fromEntries(CORE_KEYS.map(key => [key, Math.max(1, draft.cores[key])])), skills: Object.fromEntries(CULTIVATION_KEYS_21.map(key => [key, int(draft.skills[key])])),
     esoteric: draft.cultivation ? [{name: draft.cultivation, value: SECT_START_STARS_21, core: "spi"}] : [],
     attachments: draft.attachments.filter(row => text(row.text)).map(row => ({text: text(row.text), strength: row.strength})),
-    culture: draft.culture, alignment: draft.alignment, mag: Math.max(0, supply.left), sidhi: 0, sidhiRealm: "desire", notes};
+    culture: draft.culture, alignment: draft.alignment, mag: Math.max(0, supply.left), sidhi: 0, sidhiRealm: "desire", ardor: {max: flameMaximum21(0), burnt: 0, installed: 0}, notes};
 }
 
 export const STATUS_21 = Object.freeze({draft: "Draft", ready: "Ready for review", created: "Created"});

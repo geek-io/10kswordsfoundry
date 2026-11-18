@@ -1,8 +1,8 @@
-import {queueEquipment} from './equipment.mjs?v=0.2.40';
-import {checkFormula,summarizeCheck} from './rules.mjs?v=0.2.40';
-import {healthSutra} from './health.mjs?v=0.2.40';
-import {inSamadhi,enterSamadhi,sixesHTML} from './roll-support.mjs?v=0.2.40';
-import {escapeHTML} from './resolution.mjs?v=0.2.40';
+import {queueEquipment} from './equipment.mjs?v=0.2.42';
+import {checkFormula,summarizeCheck} from './rules.mjs?v=0.2.42';
+import {healthSutra} from './health.mjs?v=0.2.42';
+import {inSamadhi,enterSamadhi,sixesHTML} from './roll-support.mjs?v=0.2.42';
+import {escapeHTML} from './resolution.mjs?v=0.2.42';
 export function inflictedConditions(attack,resolved){
  if(!resolved||resolved.strikes<1)return [];
  const keys=new Set(attack.profile.keys??[]),out=[];

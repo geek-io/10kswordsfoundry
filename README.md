@@ -13,6 +13,35 @@ A Foundry VTT v14 game system for *10,000 Swords Against Heaven*, based on rules
 All my work is always free, but a little bit of help is always appreciated!  
 <a href="https://patreon.com/geekioshow"><img src="assets/Patreon-Logo.png" alt="All my work is always free, but a little bit of help is always appreciated" width="240"></a>
 
+# v 0.2.42
+
+**2.1 maximum Flame is 3 + Sidhi Stage** (2.1 rulebook p.90). It was 2 + Sidhi, from the older manuscript. 2.0.3 is untouched.
+
+- The 2.1 sheet now shows 3 + Sidhi Stage as the Flame a Cultivator should have. **Existing characters keep the maximum they have stored**: the sheet marks it as different, and its button sets it to the new figure. Nothing is changed for you.
+- New characters from Cultivator Discovery start with 3 Flame.
+- World Beings: the importer already stores the printed Flame; when a block prints none, or the manual form's Flame is left at 0, it uses 3 + Sidhi.
+- Open Meridians are unchanged at 2 + Sidhi Stage.
+
+# v 0.2.41
+
+**The importer reads Rules 2.1.** Under the 2.1 ruleset the Create & Import window (Items tab and Actors tab) now works from the 2.1 rulebook's own layouts. A world on 2.0.3 gets the importer exactly as before.
+
+- **Rulebook text, 2.1.** Paste or read from the PDF, preview, then import. The Mass Importer recognises:
+  - **Sect entries** — a title ending in Technick, Magick or Gear, with its LICENSE and NEEDS lines. Technicks and Magicks get their Sect, Esoteric Cultivation and Stars, and Flame to burn or install. Magicks also read MANTRA, MUDRA, CHECK and CHARGE TIME. Sect Gear becomes the weapon or armor on its card, with the License in the description.
+  - **Item cards** — the line with weight, rarity, kind and price (for example *2 KG UNCOMMON BASE CLEAVER 500♄*), then the name, Mods and text. Weapons get their Profile, Grip, Material Grade, Affinity, Mods, FEROCIOUS and REACH. Armor gets Soak on the Parts it covers from its shield glyphs. Accessories, talismans, tools, consumables and salvage come in with weight, rarity and price.
+  - **Assets** — the d66 code, Star range and name; the 36 printed Assets are recognised and keep their automation.
+  - **Labelled entries** — one *Name:* line per item with any of Type, Rarity, Weight, Price, Profile, Mods, Soak, Covers, License, Needs, Mantra, Mudra, Check, Charge Time.
+- **World Beings, 2.1.** The World Being · Text tab reads the Bestiary layout: *NAME ✦ genus*, *SIDHI*, the Move / Speed / Parts lines and the ARMOR, WEAPONS, CORES, CULTIVATIONS, LICENSES, ASSETS, TRAITS and DROPS sections.
+  - A block printed as **SIDHI 0/3/5** makes three World Beings, or the one version you pick.
+  - Part HP, Soak, Move, Morale and Flame are stored as printed. Weapons arrive readied, with the printed pool and damage noted on each.
+  - Licenses, Assets and armor are matched by name against your world and visible compendiums; anything not found is made from the stat-block text.
+  - Beasts with their own Parts (wings, tails) are fitted onto the sheet's six Parts, and the notes say which is which.
+- **World Being · Manual, 2.1.** The form asks for Sidhi, Flame, HP per Part, Soak, Morale, Macca and the six Cores, and takes Cultivations as typed text ("Beast Shrine 3, Red Gun 4").
+- **Item Importer form, 2.1.** Shows the 2.1 fields under the book's names (Profile, Grip, Mods, Soak by Part, Weight, Price, Flame) and leaves the 2.0.3-only ones out. Asset and Barang are new item types in the list.
+- **PDF reading.** New **Read columns separately** option (on by default under 2.1): two-column pages are read left column first, then right, instead of interleaved. The file size limit is now 250 MB so the full rulebook can be opened.
+
+The importer always shows a preview and review notes before anything is created. Rules text beyond Soak, Mods, costs and Morale is kept in each description and is not automated.
+
 # v 0.2.40
 
 **2.1 mode: Core pictures, and 2.0.3 material out of sight.** A world on 2.0.3 looks exactly as before. Nothing is deleted; switching the Rules version back shows everything again.
