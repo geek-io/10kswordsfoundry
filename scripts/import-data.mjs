@@ -1,11 +1,17 @@
-import {titleCase,paragraphText} from "./import-format.mjs?v=0.2.40";
-import {splitBookText} from './import-boundaries.mjs?v=0.2.40';
-import {bookEntries} from "./book-text.mjs?v=0.2.40";
-import {LICENSE_CHOICES} from './licenses.mjs?v=0.2.40';
-import {MODIFIER_CHOICES} from './modifiers.mjs?v=0.2.40';
-import {isRawJobText,jobParts,jobDescription} from './job-text.mjs?v=0.2.40';
-export const IMPORT_TYPES={weapon:'Weapon',fashion:'Fashion',gear:'Gear',accessory:'Accessory',ammunition:'Ammo',job:'Job',license:'License',technique:'Technick',magick:'Magick',trait:'Trait',weaponMod:'Weapon Mod',gambit:'World Being Gambit',salvage:'Salvage'};
-const aliases={'world being gambit':'gambit',gambits:'gambit',salvages:'salvage',armor:'fashion',armour:'fashion',technick:'technique',technicks:'technique',techniques:'technique',magicks:'magick',jobs:'job',licenses:'license',weapons:'weapon',ammo:'ammunition','weapon mod':'weaponMod',weaponmod:'weaponMod'};
+import {titleCase,paragraphText} from "./import-format.mjs?v=0.2.42";
+import {splitBookText} from './import-boundaries.mjs?v=0.2.42';
+import {bookEntries} from "./book-text.mjs?v=0.2.42";
+import {LICENSE_CHOICES} from './licenses.mjs?v=0.2.42';
+import {MODIFIER_CHOICES} from './modifiers.mjs?v=0.2.42';
+import {isRawJobText,jobParts,jobDescription} from './job-text.mjs?v=0.2.42';
+import {textItems21,IMPORT_TYPES_21} from './import21.mjs?v=0.2.42';
+export const IMPORT_TYPES={weapon:'Weapon',fashion:'Fashion',gear:'Gear',accessory:'Accessory',ammunition:'Ammo',job:'Job',license:'License',technique:'Technick',magick:'Magick',trait:'Trait',weaponMod:'Weapon Mod',gambit:'World Being Gambit',salvage:'Salvage',asset:'Asset (2.1)',barang:'Barang (2.1)'};
+/** The types the importer offers: the 2.1 list under Rules 2.1, otherwise the 2.0.3 list without the 2.1-only types. */
+export function importTypes(rules21=false){if(rules21)return {...IMPORT_TYPES_21};const {asset,barang,...legacy}=IMPORT_TYPES;return legacy;}
+// Only the system's own 2.1 catalog flags survive an import; anything else in pasted JSON is dropped.
+const FLAG_KEYS=['sect21','asset21','barang21'];
+function ownFlags(flags){const scope=flags?.['10kswordsfoundry'];if(!scope||typeof scope!=='object')return null;const kept={};for(const key of FLAG_KEYS){const value=scope[key];if(!value||typeof value!=='object'||Array.isArray(value))continue;const clean={};for(const [k,v] of Object.entries(value))if(['string','number','boolean'].includes(typeof v)&&!['__proto__','constructor','prototype'].includes(k))clean[k]=typeof v==='string'?v.slice(0,300):v;if(Object.keys(clean).length)kept[key]=clean;}return Object.keys(kept).length?{'10kswordsfoundry':kept}:null;}
+const aliases={assets:'asset',barangs:'barang','armor & clothing':'fashion',consumable:'gear',talisman:'gear','world being gambit':'gambit',gambits:'gambit',salvages:'salvage',armor:'fashion',armour:'fashion',technick:'technique',technicks:'technique',techniques:'technique',magicks:'magick',jobs:'job',licenses:'license',weapons:'weapon',ammo:'ammunition','weapon mod':'weaponMod',weaponmod:'weaponMod'};
 export function importType(value){const key=String(value??'').trim();return Object.hasOwn(IMPORT_TYPES,key)?key:Object.hasOwn(aliases,key.toLowerCase())?aliases[key.toLowerCase()]:key.toLowerCase();}
 function put(target,path,value){const parts=path.split('.');if(parts.some(p=>['__proto__','constructor','prototype'].includes(p))) throw new Error('Unsafe field name.');let node=target;for(const part of parts.slice(0,-1))node=node[part]??={};node[parts.at(-1)]=value;}
 function scalar(value){if(value==='true')return true;if(value==='false')return false;if(/^-?\d+(\.\d+)?$/.test(value))return Number(value);if(/^[\[{]/.test(value))return JSON.parse(value);return value;}
@@ -48,10 +54,10 @@ export function textItems(text,chosenType){
   return {item,warnings};
  });
 }
-export function parseImport(text,format,type){
+export function parseImport(text,format,type,{rules21=false}={}){
  if(!text.trim())throw new Error('Paste content or choose a file first.');if(text.length>2000000)throw new Error('Please import at most 2 MB at a time.');
  let records;
- if(format==='text') records=textItems(text,type);
+ if(format==='text') records=rules21?textItems21(text,type):textItems(text,type);
  else {let data=format==='csv'?readCSV(text):JSON.parse(text);if(!Array.isArray(data))data=data.items??[data];records=data.map(item=>({item,warnings:[]}));}
  if(!records.length||records.length>200)throw new Error('Import between 1 and 200 items at a time.');
  return records.map(({item,warnings},index)=>{
@@ -59,6 +65,7 @@ export function parseImport(text,format,type){
   if(!Object.hasOwn(IMPORT_TYPES,item.type))throw new Error(`Item ${index+1}: choose a supported type.`);
   if(typeof item.name!=='string'||!item.name.trim())throw new Error(`Item ${index+1}: name is required.`);
   if(item.system && (Array.isArray(item.system)||typeof item.system!=='object'))throw new Error(`Item ${index+1}: system must be an object.`);
-  return {item:{name:titleCase(item.name),type:item.type,...(typeof item.img==='string'?{img:item.img}:{}),system:{...item.system,...(item.system?.description?{description:paragraphText(item.system.description)}:{})}},warnings};
+  const flags=rules21?ownFlags(item.flags):null;
+  return {item:{name:rules21?item.name.trim():titleCase(item.name),type:item.type,...(typeof item.img==='string'?{img:item.img}:{}),...(flags?{flags}:{}),system:{...item.system,...(item.system?.description?{description:paragraphText(item.system.description)}:{})}},warnings};
  });
 }

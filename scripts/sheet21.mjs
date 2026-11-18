@@ -1,13 +1,13 @@
 // Rules 2.1 character sheet context and actions. Used only when the GM selects the 2.1 ruleset.
 import {CORES, CULTIVATIONS_21, ASSETS_21, PARTS, PART_KEYS, CONDITIONS_21, ATTACHMENT_STRENGTHS, MAX_STARS,
-  derive21, advancementCost, healingDays, weaponProfile21, qualifiesForLicense21, SIDHI_REALMS, abilityLimit21, recoverFlame21, cleaveDepth, PROFILES, morphOptions21} from "./rules21.mjs?v=0.2.40";
-import {rollCheck21, killTheBuddha, findOpening21, castMagick21, stunCheck, incapacitationCheck, randomPart, damagePart} from "./roll21.mjs?v=0.2.40";
-import {escapeHTML} from "./resolution.mjs?v=0.2.40";
-import {activateTechnick21, releaseTechnick21, technickRows21} from "./technick21.mjs?v=0.2.40";
-import {changeGodsMind21, rollDisposition21} from "./social21.mjs?v=0.2.40";
-import {DISPOSITIONS21} from "./social-rules21.mjs?v=0.2.40";
-import {assetRows21, barangRows21, raiseAsset21, ingestBarang21, ejectBarang21} from "./assets21.mjs?v=0.2.40";
-import {ammoSummary21} from "./ammunition.mjs?v=0.2.40";
+  derive21, advancementCost, healingDays, weaponProfile21, qualifiesForLicense21, SIDHI_REALMS, abilityLimit21, recoverFlame21, cleaveDepth, PROFILES, morphOptions21, flameMaximum21} from "./rules21.mjs?v=0.2.42";
+import {rollCheck21, killTheBuddha, findOpening21, castMagick21, stunCheck, incapacitationCheck, randomPart, damagePart} from "./roll21.mjs?v=0.2.42";
+import {escapeHTML} from "./resolution.mjs?v=0.2.42";
+import {activateTechnick21, releaseTechnick21, technickRows21} from "./technick21.mjs?v=0.2.42";
+import {changeGodsMind21, rollDisposition21} from "./social21.mjs?v=0.2.42";
+import {DISPOSITIONS21} from "./social-rules21.mjs?v=0.2.42";
+import {assetRows21, barangRows21, raiseAsset21, ingestBarang21, ejectBarang21} from "./assets21.mjs?v=0.2.42";
+import {ammoSummary21} from "./ammunition.mjs?v=0.2.42";
 
 export const ACTOR_TEMPLATE_21 = "systems/10kswordsfoundry/templates/actor-21.hbs";
 const int = value => Math.trunc(Number(value) || 0);
@@ -25,7 +25,7 @@ export function prepareActor21(document, context) {
   const magicks = (document.items?.contents ?? []).filter(item => item.type === "magick").toSorted((a, b) => (a.sort ?? 0) - (b.sort ?? 0));
   const casting = magicks.find(item => item.id === source.casting?.itemId);
   const abilityCount = (document.items?.contents ?? []).filter(item => ["technique", "magick"].includes(item.type)).length;
-  const flameMax = derived.flameMax ?? 2 + int(source.sidhi), meridians = derived.meridians ?? 2 + int(source.sidhi);
+  const flameMax = derived.flameMax ?? flameMaximum21(source.sidhi), meridians = derived.meridians ?? 2 + int(source.sidhi);
   return {
     rules21: true,
     coreRows: Object.entries(CORES).map(([key, core]) => ({key, ...core, icon: `systems/10kswordsfoundry/assets/cultivations/${core.from}.png`, base: source.cores?.[key] ?? 1, value: system.cores?.[key] ?? 1,
@@ -175,7 +175,7 @@ export const ACTIONS_21 = {
   ejectBarang21(event, target) { return guard(this, () => ejectBarang21(this.document, this.document.items.get(target.dataset.itemId))); },
   setFlameMax21() {
     return guard(this, async () => {
-      const source = this.document.toObject().system, max = 2 + int(source.sidhi);
+      const source = this.document.toObject().system, max = flameMaximum21(source.sidhi);
       if (int(source.ardor?.burnt) + int(source.ardor?.installed) > max) throw new Error(`Burnt plus installed Flame (${int(source.ardor?.burnt) + int(source.ardor?.installed)}) is above ${max}. Recover or release Flame first.`);
       return this.document.update({"system.ardor.max": max});
     });

@@ -1,7 +1,7 @@
 // Rules 2.1 Alpha p.52: Scorch. Burning or installing past 0 Flame goes negative; each point is -1 to all Checks and
 // every new point of Scorch calls for a Deviation Check (Physique + Adamance + Sidhi Stage vs Demand 3 + Scorch).
-import {checkFormula21, deviationDemand21, deviationPool21, DEVIATIONS_21} from "./rules21.mjs?v=0.2.40";
-import {escapeHTML} from "./resolution.mjs?v=0.2.40";
+import {checkFormula21, deviationDemand21, deviationPool21, DEVIATIONS_21} from "./rules21.mjs?v=0.2.42";
+import {escapeHTML} from "./resolution.mjs?v=0.2.42";
 
 const int = value => Math.trunc(Number(value) || 0);
 const SYSTEM = "10kswordsfoundry";

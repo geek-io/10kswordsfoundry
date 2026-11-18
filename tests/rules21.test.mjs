@@ -43,15 +43,15 @@ test("Gambits: one Opening per die in the sequence Quick → Quick → Solid →
   assert.equal(staticOpenings(0).total, 1);
 });
 
-test("Flame and Meridians are 2 + Sidhi Stage; Face and Heart rename Voice and Spirit (RK p.52; 2026-11 test run)", () => {
-  assert.deepEqual([0, 3, 6].map(flameMaximum21), [2, 5, 8]);
+test("Flame is 3 + Sidhi Stage (rulebook p.90) and Meridians 2 + Sidhi Stage; Face and Heart rename Voice and Spirit (RK p.52; 2026-11 test run)", () => {
+  assert.deepEqual([0, 3, 6].map(flameMaximum21), [3, 6, 9]);
   assert.deepEqual([0, 3, 6].map(meridians21), [2, 5, 8]);
   assert.deepEqual([CORES.voc.label, CORES.spi.label], ["Face", "Heart"]);
   const system = actor({esoteric: []});
   assert.deepEqual(["Face", "VOICE", "Heart", "spirit"].map(name => namedRating21(system, name)), [1, 1, 2, 2]);
   assert.deepEqual(bracketValues21("[FACE x 5]m and [VOICE x 5]m", system).map(entry => entry.value), [5, 5]);
   const derived = derive21({...system, sidhi: 3}, []);
-  assert.deepEqual([derived.flameMax, derived.meridians], [5, 5]);
+  assert.deepEqual([derived.flameMax, derived.meridians], [6, 5]);
 });
 
 test("Asset items count like the older Asset list", () => {
