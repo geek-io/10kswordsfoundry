@@ -3022,6 +3022,164 @@
      }
     }
    }
+  },
+  {
+   "_id": "7153a407408938ef",
+   "name": "Metomian Chakra Rod",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "system": {
+    "description": "<p><em>A pure black rod of bound Sidhi that eats all ambient light, summoned from the Cultivator's chest by a long cipher of mantra code.</em></p><p><strong>License:</strong> Black Mace ✦✦✦ — granted by the Chakra Rod Technick (✦✦✦, needs ❂), which summons it.</p><p><strong>Prestige Bludgeon · 1 kg · Price N/A · Haft / Bludgeon · Metomian Sidhi</strong></p><p><strong>Mods:</strong> FOCUS</p><p>Can be thrown up to 30m; it flies in a straight line, ignoring gravity and wind, and can impale even without a point. Upon dealing unsoaked damage, the wielder can drain 1 Flame from the target. After draining 3 Flame this way, the rod explodes: 10 blast damage to all within 5m.</p><p><em>Catalog note: The 30m throw and the Flame drain are played from the card text.</em></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.274",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Metomian, Black Mace, Prestige, Weapon, FOCUS",
+    "gearSlot": "carry",
+    "weaponType": "melee",
+    "range": 1,
+    "damageType": "impact",
+    "r21": {
+     "profile": "bludgeon",
+     "grip": "haft",
+     "damage": 2,
+     "damageBonus": 0,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "reach": 0,
+     "affinity": "",
+     "grade": "",
+     "morph": "",
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": false,
+      "focus": true,
+      "blaze": false,
+      "artifact": false,
+      "smashing": false,
+      "piercing": false,
+      "lacerating": false,
+      "precise": false,
+      "shock": false,
+      "worn": false,
+      "concealable": false,
+      "holy": false,
+      "noetic": false,
+      "ritual": false,
+      "almighty": false,
+      "thundering": false,
+      "toxic": false,
+      "cover": false,
+      "wall": false,
+      "unblockable": false,
+      "undodgeable": false,
+      "visceral": false
+     },
+     "weight": 1
+    }
+   },
+   "folder": "d2bd52e40947faea",
+   "sort": 1000,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 274,
+      "cultivation": "Black Mace",
+      "license": "Black Mace ✦✦✦",
+      "printedMods": [
+       "FOCUS"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "_id": "8f9420e029befdd0",
+   "name": "Metomian Adamantine Noose",
+   "type": "weapon",
+   "img": "systems/10kswordsfoundry/assets/icons/weapon.svg",
+   "system": {
+    "description": "<p><em>The Vajra Noose Metom carried to tame demons and malevolent spirits, summoned from the Cultivator's chest by a long cipher of mantra code.</em></p><p><strong>License:</strong> Black Mace ✦✦✦ — granted by the Adamantine Noose Technick (✦✦✦, needs ❂), which summons it.</p><p><strong>Prestige Whip · 0.5 kg · Price N/A · Hilt / Whip · Metomian Sidhi</strong></p><p><strong>Mods:</strong> REACH 4</p><p>+2 to all attempts to Control, bind or restrain with this. It can wrap around someone and hold them in place as a Control. A Controlled entity can be moved forcibly in any direction at 10m/s, which ends the Control.</p><p><em>Catalog note: The card is printed as \"Prestige Bludgeon\" and titled \"Metomian Chakra Rod\"; its grip, profile and the Technick show it is the Noose, a whip. The printed grip HANDLE is recorded as Hilt, the system's grip for whips. The +2 to Control is played from the card text.</em></p>",
+    "source": "Rules 2.1 (2.1 rulebook), p.274",
+    "rarity": "prestige",
+    "quantity": 1,
+    "slots": 1,
+    "magCost": 0,
+    "equipped": false,
+    "tags": "Metomian, Black Mace, Prestige, Weapon, REACH 4",
+    "gearSlot": "carry",
+    "weaponType": "melee",
+    "range": 7,
+    "damageType": "cut",
+    "r21": {
+     "profile": "whip",
+     "grip": "hilt",
+     "damage": 2,
+     "damageBonus": 0,
+     "range": 0,
+     "rate": 1,
+     "capacity": 0,
+     "reach": 4,
+     "affinity": "",
+     "grade": "",
+     "morph": "",
+     "ferocious": 0,
+     "shield": 0,
+     "mods": {
+      "auto": false,
+      "crushing": false,
+      "great": false,
+      "colossal": false,
+      "doublehand": false,
+      "focus": false,
+      "blaze": false,
+      "artifact": false,
+      "smashing": false,
+      "piercing": false,
+      "lacerating": false,
+      "precise": false,
+      "shock": false,
+      "worn": false,
+      "concealable": false,
+      "holy": false,
+      "noetic": false,
+      "ritual": false,
+      "almighty": false,
+      "thundering": false,
+      "toxic": false,
+      "cover": false,
+      "wall": false,
+      "unblockable": false,
+      "undodgeable": false,
+      "visceral": false
+     },
+     "weight": 0.5
+    }
+   },
+   "folder": "d2bd52e40947faea",
+   "sort": 2000,
+   "effects": [],
+   "flags": {
+    "10kswordsfoundry": {
+     "sect21": {
+      "sourcePage": 274,
+      "cultivation": "Black Mace",
+      "license": "Black Mace ✦✦✦",
+      "printedMods": [
+       "REACH 4"
+      ]
+     }
+    }
+   }
   }
  ]
 }

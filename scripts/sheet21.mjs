@@ -1,13 +1,13 @@
 // Rules 2.1 character sheet context and actions. Used only when the GM selects the 2.1 ruleset.
 import {CORES, CULTIVATIONS_21, ASSETS_21, PARTS, PART_KEYS, CONDITIONS_21, ATTACHMENT_STRENGTHS, MAX_STARS,
-  derive21, advancementCost, healingDays, weaponProfile21, qualifiesForLicense21, SIDHI_REALMS, abilityLimit21, recoverFlame21, cleaveDepth, PROFILES, morphOptions21, flameMaximum21} from "./rules21.mjs?v=0.2.45";
-import {rollCheck21, killTheBuddha, findOpening21, castMagick21, stunCheck, incapacitationCheck, randomPart, damagePart} from "./roll21.mjs?v=0.2.45";
-import {escapeHTML} from "./resolution.mjs?v=0.2.45";
-import {activateTechnick21, releaseTechnick21, technickRows21} from "./technick21.mjs?v=0.2.45";
-import {changeGodsMind21, rollDisposition21} from "./social21.mjs?v=0.2.45";
-import {DISPOSITIONS21} from "./social-rules21.mjs?v=0.2.45";
-import {assetRows21, barangRows21, raiseAsset21, ingestBarang21, ejectBarang21} from "./assets21.mjs?v=0.2.45";
-import {ammoSummary21} from "./ammunition.mjs?v=0.2.45";
+  derive21, advancementCost, healingDays, weaponProfile21, qualifiesForLicense21, SIDHI_REALMS, abilityLimit21, recoverFlame21, cleaveDepth, PROFILES, morphOptions21, flameMaximum21} from "./rules21.mjs?v=0.2.46";
+import {rollCheck21, killTheBuddha, findOpening21, castMagick21, stunCheck, incapacitationCheck, randomPart, damagePart} from "./roll21.mjs?v=0.2.46";
+import {escapeHTML} from "./resolution.mjs?v=0.2.46";
+import {activateTechnick21, releaseTechnick21, technickRows21} from "./technick21.mjs?v=0.2.46";
+import {changeGodsMind21, rollDisposition21} from "./social21.mjs?v=0.2.46";
+import {DISPOSITIONS21} from "./social-rules21.mjs?v=0.2.46";
+import {assetRows21, barangRows21, raiseAsset21, ingestBarang21, ejectBarang21} from "./assets21.mjs?v=0.2.46";
+import {ammoSummary21} from "./ammunition.mjs?v=0.2.46";
 
 export const ACTOR_TEMPLATE_21 = "systems/10kswordsfoundry/templates/actor-21.hbs";
 const int = value => Math.trunc(Number(value) || 0);

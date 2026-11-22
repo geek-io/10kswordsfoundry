@@ -1,11 +1,11 @@
-import {parseImport} from './import-data.mjs?v=0.2.45';
-import {validateImport} from './importer.mjs?v=0.2.45';
-import {checkedFolder} from './import-folders.mjs?v=0.2.45';
-import {parseWorldBeings} from './worldbeing-import.mjs?v=0.2.45';
-import {previewWorldBeings} from './worldbeing-sources.mjs?v=0.2.45';
-import {clearLibraryCache} from './library-service.mjs?v=0.2.45';
-import {reconcileCosts} from './equipment.mjs?v=0.2.45';
-import {usesRules21} from './rules-version.mjs?v=0.2.45';
+import {parseImport} from './import-data.mjs?v=0.2.46';
+import {validateImport} from './importer.mjs?v=0.2.46';
+import {checkedFolder} from './import-folders.mjs?v=0.2.46';
+import {parseWorldBeings} from './worldbeing-import.mjs?v=0.2.46';
+import {previewWorldBeings} from './worldbeing-sources.mjs?v=0.2.46';
+import {clearLibraryCache} from './library-service.mjs?v=0.2.46';
+import {reconcileCosts} from './equipment.mjs?v=0.2.46';
+import {usesRules21} from './rules-version.mjs?v=0.2.46';
 export function rememberImport(app){
  const fields=app.element?.elements;if(!fields)return;
  const state=app.importDrafts[app.tab]??={format:'text',type:usesRules21()?'technique':'trait',content:'',review:'',notes:[],names:[],versions:'all'};

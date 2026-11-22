@@ -1,7 +1,7 @@
 // Rules 2.1 Cultivator Discovery (2.1 rulebook pp.42-48, 62, 166): the eight Sutras as data and pure checks.
 // Nothing here touches Foundry, so the creation tool, the chat card and the tests all read the same rules.
-import {CORES, CORE_KEYS, CULTIVATIONS_21, CULTIVATION_KEYS_21, ASSETS_21, ATTACHMENT_STRENGTHS, carryLimit, encumbrance21, flameMaximum21} from "./rules21.mjs?v=0.2.45";
-import {escapeHTML} from "./resolution.mjs?v=0.2.45";
+import {CORES, CORE_KEYS, CULTIVATIONS_21, CULTIVATION_KEYS_21, ASSETS_21, ATTACHMENT_STRENGTHS, carryLimit, encumbrance21, flameMaximum21} from "./rules21.mjs?v=0.2.46";
+import {escapeHTML} from "./resolution.mjs?v=0.2.46";
 
 const int = value => Math.trunc(Number(value) || 0);
 const text = value => String(value ?? "").trim();

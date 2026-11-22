@@ -1,10 +1,10 @@
-import {titleCase,paragraphText} from "./import-format.mjs?v=0.2.45";
-import {splitBookText} from './import-boundaries.mjs?v=0.2.45';
-import {bookEntries} from "./book-text.mjs?v=0.2.45";
-import {LICENSE_CHOICES} from './licenses.mjs?v=0.2.45';
-import {MODIFIER_CHOICES} from './modifiers.mjs?v=0.2.45';
-import {isRawJobText,jobParts,jobDescription} from './job-text.mjs?v=0.2.45';
-import {textItems21,IMPORT_TYPES_21} from './import21.mjs?v=0.2.45';
+import {titleCase,paragraphText} from "./import-format.mjs?v=0.2.46";
+import {splitBookText} from './import-boundaries.mjs?v=0.2.46';
+import {bookEntries} from "./book-text.mjs?v=0.2.46";
+import {LICENSE_CHOICES} from './licenses.mjs?v=0.2.46';
+import {MODIFIER_CHOICES} from './modifiers.mjs?v=0.2.46';
+import {isRawJobText,jobParts,jobDescription} from './job-text.mjs?v=0.2.46';
+import {textItems21,IMPORT_TYPES_21} from './import21.mjs?v=0.2.46';
 export const IMPORT_TYPES={weapon:'Weapon',fashion:'Fashion',gear:'Gear',accessory:'Accessory',ammunition:'Ammo',job:'Job',license:'License',technique:'Technick',magick:'Magick',trait:'Trait',weaponMod:'Weapon Mod',gambit:'World Being Gambit',salvage:'Salvage',asset:'Asset (2.1)',barang:'Barang (2.1)'};
 /** The types the importer offers: the 2.1 list under Rules 2.1, otherwise the 2.0.3 list without the 2.1-only types. */
 export function importTypes(rules21=false){if(rules21)return {...IMPORT_TYPES_21};const {asset,barang,...legacy}=IMPORT_TYPES;return legacy;}

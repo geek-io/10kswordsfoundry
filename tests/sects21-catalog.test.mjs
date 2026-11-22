@@ -71,7 +71,7 @@ test("2.1 Sects (2.1 rulebook pp.224-303): 242 Technicks and Magicks across 20 S
 
 test("2.1 Sect Gear: profiles, grips, mods and Soak use the 2.1 data model", () => {
   const {items} = load("sect-gear-21");
-  assert.equal(items.length, 44);
+  assert.equal(items.length, 46, "44 Gear entries + the 2 Metomian weapons summoned by Technicks (0.2.46)");
   for (const item of items.filter(item => item.type === "weapon")) {
     assert.ok(PROFILES[item.system.r21.profile], item.name);
     assert.ok(GRIPS[item.system.r21.grip], item.name);
@@ -94,6 +94,12 @@ test("2.1 Sect Gear: profiles, grips, mods and Soak use the 2.1 data model", () 
   assert.deepEqual([byName["Katalonan Shrine Raiments"].system.ardor, byName["Katalonan Shrine Raiments"].system.r21.morale], [2, 2]);
   assert.deepEqual([byName["Asuri Kalikhadga"].system.r21.ferocious, byName["Houyi Tonggong"].system.r21.ferocious, byName["Atardar's Fang"].system.r21.ferocious], [3, 2, 2]);
   assert.deepEqual([byName["Personal Vajra"].system.r21.reach, byName["Personal Vajra"].system.r21.range, byName["Personal Vajra"].system.r21.mods.almighty, byName["Personal Vajra"].system.r21.mods.focus], [3, 0, true, true]);
+  // 0.2.46: the Chakra Rod and Adamantine Noose Technicks print their weapons' cards (final book p.288).
+  const rod = byName["Metomian Chakra Rod"].system, noose = byName["Metomian Adamantine Noose"].system;
+  assert.deepEqual([rod.r21.profile, rod.r21.grip, rod.r21.mods.focus, rod.r21.weight], ["bludgeon", "haft", true, 1]);
+  assert.deepEqual([noose.r21.profile, noose.r21.grip, noose.r21.reach, noose.r21.weight], ["whip", "hilt", 4, 0.5]);
+  assert.equal(weaponProfile21(noose).range, 7, "REACH 4: Whip 3 m + 4 m");
+  assert.equal(byName["Metomian Chakra Rod"].folder, byName["Personal Vajra"].folder, "Metomian / Weapons");
   // 0.2.35: Affinities, Material Grades, MORPH and VISCERAL are data, not tags (2.1 pp.194-195).
   assert.equal(weaponProfile21(byName["Personal Vajra"].system).range, 4, "REACH 3: Bludgeon 1 m + 3 m");
   assert.deepEqual([byName["Benzaiten's Drum"].system.r21.affinity, byName["Asuri Kalikhadga"].system.r21.grade, byName["Atardar's Fang"].system.r21.mods.visceral], ["lyrical", "refined", true]);

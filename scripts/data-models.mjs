@@ -1,9 +1,9 @@
-import {RARITIES} from "./rarity.mjs?v=0.2.45";
-import {CONDITIONS} from "./conditions.mjs?v=0.2.45";
-import { MODIFIER_CHOICES } from "./modifiers.mjs?v=0.2.45";
-import { AMMO_CHOICES, AMMO_FAMILIES } from "./ammunition.mjs?v=0.2.45";
-import { LICENSE_CHOICES, RANKS, licenseIdentity } from "./licenses.mjs?v=0.2.45";
-import { CORE_KEYS, CULTIVATION_KEYS_21, PART_KEYS, CONDITIONS_21, ASSETS_21, PROFILES, GRIPS, WEAPON_MODS_21, SIDHI_REALMS, ARMOR_MOD_KEYS, AFFINITY_KEYS, GRADE_KEYS } from "./rules21.mjs?v=0.2.45";
+import {RARITIES} from "./rarity.mjs?v=0.2.46";
+import {CONDITIONS} from "./conditions.mjs?v=0.2.46";
+import { MODIFIER_CHOICES } from "./modifiers.mjs?v=0.2.46";
+import { AMMO_CHOICES, AMMO_FAMILIES } from "./ammunition.mjs?v=0.2.46";
+import { LICENSE_CHOICES, RANKS, licenseIdentity } from "./licenses.mjs?v=0.2.46";
+import { CORE_KEYS, CULTIVATION_KEYS_21, PART_KEYS, CONDITIONS_21, ASSETS_21, PROFILES, GRIPS, WEAPON_MODS_21, SIDHI_REALMS, ARMOR_MOD_KEYS, AFFINITY_KEYS, GRADE_KEYS } from "./rules21.mjs?v=0.2.46";
 const { NumberField, StringField, SchemaField, BooleanField, ArrayField, ObjectField, HTMLField } = foundry.data.fields;
 const integer = (initial = 0, extra = {}) => new NumberField({ required: true, nullable: false, integer: true, min: 0, initial, ...extra });
 const text = () => new StringField({ required: true, nullable: false, initial: "" });
@@ -130,7 +130,7 @@ export class SwordsLicenseData extends SwordsItemData {
     };
   }
 }
-import { UPGRADE_CHOICES, weaponDetails } from "./weapons.mjs?v=0.2.45";
+import { UPGRADE_CHOICES, weaponDetails } from "./weapons.mjs?v=0.2.46";
 
 export class SwordsAmmoData extends SwordsEquipmentData {
   static defineSchema() {return {...super.defineSchema(),ammoType:new StringField({required:true,nullable:false,initial:"bullet",choices:Object.keys(AMMO_CHOICES)})};}
