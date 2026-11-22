@@ -5,8 +5,8 @@
 // Short blocks (final book pp.372-373) have no "✦ genus": NAME, lore, "Move Nm · Speed N", "Sidhi N · Flame N · Morale N",
 //   "Parts HP N · Block Nd Dodge Nd", "WEAPONS Name (pool, range, damage)", then the same sections. They are rewritten into the long form first.
 // Printed numbers are authoritative: Part HP, Soak, Move, Morale and Flame are stored so the sheet shows them.
-import {CORES, PARTS, PART_KEYS, PROFILES, ASSETS_21, BASE_PART_HP, ticksSpeed21, flameMaximum21} from "./rules21.mjs?v=0.2.46";
-import {rating21, titleName21} from "./import21.mjs?v=0.2.46";
+import {CORES, PARTS, PART_KEYS, PROFILES, ASSETS_21, BASE_PART_HP, ticksSpeed21, flameMaximum21} from "./rules21.mjs?v=0.2.49";
+import {rating21, titleName21} from "./import21.mjs?v=0.2.49";
 
 const HEADER = /^([A-Z][A-Z0-9 '’,.\-]*?)\s*✦\s*([a-z][a-z \-?]*?)(?:\s+SIDHI\s+(\d+(?:\/\d+)*))?$/;
 const SECTION = /^(ARMORS?|WEAPONS|CORES(?: & CULTIVATIONS)?|CULTIVATIONS|LICENSES|ASSETS|TRAITS|DROPS)(?:\s*\[[^\]]*\])?$/;

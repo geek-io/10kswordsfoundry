@@ -13,6 +13,39 @@ A Foundry VTT v14 game system for *10,000 Swords Against Heaven*, based on rules
 All my work is always free, but a little bit of help is always appreciated!  
 <a href="https://patreon.com/geekioshow"><img src="assets/Patreon-Logo.png" alt="All my work is always free, but a little bit of help is always appreciated" width="240"></a>
 
+# v 0.2.49
+
+**Cultivator Discovery: market and checkbox fixes.**
+
+- **Only gear printed in the 2.1 rulebook is for sale** in the creation tool (119 items), each with its page in the final 423-page book. Catalog entries kept from the Red Kalpa one-shot (M8 Rifle, Adamant Longjian, Baopu suit and others) and the Fangshi concoctions from the playtest Sects stay in the compendiums for the GM but are not offered. Ammunition is sold as quivers and magazines of the printed rounds at the printed price per round (p.207). A saved Discovery holding an item that is no longer offered shows it as "not in the 2.1 rulebook" and leaves it out on creation.
+- **Checkboxes** keep their normal size, with a light ring around the box only. The step 1 agreement no longer has a frame, and the "Free" box in the Supply list is no longer stretched across its column.
+
+# v 0.2.48
+
+**Cultivator Discovery: table notes on the starting-XP update.**
+
+- **Roll buttons.** The side panel has **Roll all (spend XP)** and **Roll all (spend no XP)**. Every step from Class to Sidhi also has its own **Roll this step** button; Cores, Cultivations and Sect add **Roll this step (spend XP)**, which spends what XP is left on that step at random.
+- **Another Sect for XP.** With XP to spend, the Sect step can add a second (and third) Sect. The book lets a Cultivator ingest a different Barang and keep what was Cultivated (p.236) but prints no price, so the tool charges what p.100 does print: the new Sect's Cultivation from nothing at 3 × each new rating, and 10 XP for every one of its Licenses. Its Barang comes with the character, carried; the Sutra 7 Barang stays ingested.
+- **Sect Gear is a License.** Gear such as the Nezha San Tou Liu Bi ("License: Red Gun ✦✦✦✦ — Gain the … Armor") is listed with the Sect's Technicks and Magicks (Kind: Gear) and is added to the character when learned. Gear printed inside a Technick (Metomian Chakra Rod, Adamantine Noose) comes with that Technick.
+- **Market.** Weapons can be narrowed to one type (Dagger, Saber, Longgun…), the way armor is narrowed by Part, and the Kind column names the type. The "(profile)" templates (Handgun (profile) and the like) are no longer offered for sale.
+- **Cultivations step.** The XP list sits in a third column beside each Cultivation's Class Stars.
+- **The agreement box** on step 1 is now a framed, light box that turns green when ticked.
+
+# v 0.2.47
+
+**Cultivator Discovery can start above Sidhi 0.**
+
+- **New step 1, Starting Sidhi.** Pick a Sidhi Stage (0–6), or type a custom amount of XP. A tick box confirms that you and your Intercessor agreed on it. The other steps move down one: Class is now step 2, and step 10 is Review and creation.
+- **The Stages follow pp.101 and 108.** Spent XP becomes Foundation, and each Stage needs a total: Sidhi 1 at 50, 2 at 150, 3 at 300, 4 at 500, 5 at 750, 6 at 1050. Choosing a Stage gives exactly that much XP. A custom amount starts at the highest Stage it reaches, and the rest is still there to spend. For example, 75 XP starts at Sidhi 1 (Lightning Gatherer) with 25 XP more than Sidhi 1 needed; Sidhi 2 would need 150.
+- **Spending the XP (p.100), inside the steps it belongs to:**
+  - Cores: an XP list on each Core, 5 × the new rating per Star.
+  - Cultivations: an XP list on each Cultivation, 3 × the new rating per Star, up to ✦✦✦✦✦.
+  - Assets: Stars past the Class's go on XP, 4 × the rating.
+  - Sect: raise the Sect Cultivation past ✦✦ (3 × the new rating), which opens higher Licenses; Licenses past the first two cost 10 XP each, and each needs an open Meridian (2 + Sidhi).
+  - A bar at the top of every step shows XP spent and left.
+- **The created character** gets the Sidhi Stage, 3 + Sidhi max Flame, every raised rating, the leftover XP in XP and the spent XP as Foundation.
+- Drafts saved before 0.2.47 open at Sidhi 0 and only need the agreement box ticked.
+
 # v 0.2.46
 
 **Every Sect entry of the final 2.1 rulebook re-checked against the compendiums.** All 243 Technicks and Magicks, all Sect Gear, and every item card printed on the Sect, market and armor pages were matched one by one.

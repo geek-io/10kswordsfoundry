@@ -1,8 +1,8 @@
 // Rules 2.1 chat card actions: a targeted defender responds with KILL THE BUDDHA, or damage is applied to a target's Part.
-import {killTheBuddha, damagePart, resolveDefenseStrikes21, resolveManeuver21, spendStrikes21, stunCheck, incapacitationCheck} from "./roll21.mjs?v=0.2.46";
-import {PARTS} from "./rules21.mjs?v=0.2.46";
-import {joinExchangeFor21} from "./exchange21.mjs?v=0.2.46";
-import {noteFlurry21} from "./swords21.mjs?v=0.2.46";
+import {killTheBuddha, damagePart, resolveDefenseStrikes21, resolveManeuver21, spendStrikes21, stunCheck, incapacitationCheck} from "./roll21.mjs?v=0.2.49";
+import {PARTS} from "./rules21.mjs?v=0.2.49";
+import {joinExchangeFor21} from "./exchange21.mjs?v=0.2.49";
+import {noteFlurry21} from "./swords21.mjs?v=0.2.49";
 
 const SYSTEM = "10kswordsfoundry";
 const resolveUuid = uuid => uuid ? globalThis.fromUuid?.(uuid) ?? null : null;

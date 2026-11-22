@@ -395,6 +395,17 @@ Decisions and ambiguities (0.2.41):
 - **"Politics"** (pp.334, 338, 342) and "Blacks Sorcery" (p.355) are not Cultivations the system lists; they come in as Esoteric Cultivations with a note.
 - **Not read:** the ammunition list on p.193 (inline bullets, not cards), Fangshi concoctions inside Technick text, and Assets whose code and Star range are split across columns in the PDF text.
 
+## Changed in 0.2.49 (Cultivator Discovery market)
+
+- **Market stock.** The creation tool offers only catalog entries whose source is the 2.1 rulebook, and shows each one's page in the final 423-page book (the catalogs still store the 357-page numbering: +2 for pp.3–36, +14 from p.37). Left out: the Red Kalpa Manuscript one-shot gear (five weapons, two armor pieces) and the nine Fangshi pills and elixirs from the playtest Sects, which the final book prints only inside Fangshi Technicks. This replaces the 0.2.36 note "the shop offers the general 2.1 catalogs (pp.186–207)".
+- **Ammunition (p.207)** prints single rounds (Pistol Bullet 1♄, Rifle Bullet 2♄, Arrow 2♄, Bolt 2♄ and six special rounds). The catalog sells the four common ones as a quiver of 15, a handgun magazine of 12 ("modern handguns work with 12 round magazines", p.207) and a longgun magazine of 32, priced at the printed price per round.
+
+## Added in 0.2.48 (Cultivator Discovery: another Sect, Sect Gear Licenses)
+
+- **Another Sect for XP (user request).** p.236: "should a Cultivator ingest a different Barang, they can cultivate that Barang and gain new Abilities without losing the ones they've already Cultivated." No XP price is printed for doing so. The tool charges only what p.100 prints: the new Sect's Cultivation bought from nothing at 3 × each new rating (✦ 3, ✦✦ 9, ✦✦✦ 18 XP), and 10 XP per License; the two free Sutra 7 Licenses come from the first Sect only. Licenses of every Sect share the open Meridians (2 + Sidhi). Up to two extra Sects. The sheet keeps one Barang ingested at a time, so the extra Barang is created carried, not ingested.
+- **Sect Gear as Licenses.** Sect Gear cards print "License: [Cultivation] ✦…" and are learned like a Technick: listed in the Sect step at that rating, counted as a License (free pick, 10 XP, Meridian). The Sect is the one whose Barang carries that Cultivation. Gear printed inside a Technick with the same name (Metomian Chakra Rod, Adamantine Noose, p.288) is not listed on its own; it is added with that Technick.
+- **Random XP spending** (Roll … (spend XP)) buys only Core Stars on rated Cores, Cultivation Stars, Sect Cultivation Stars and Licenses the character qualifies for. It never buys Assets (a new Asset "must make sense in the fiction", p.100) or extra Sects.
+
 ## Added in 0.2.45 (Bestiary compendium)
 
 The 71 World Beings of the final book's Bestiary (pp.346–373) are compiled into the Actor compendium "2.1 World Beings · Bestiary" by the same reader the in-app importer uses, so every decision listed under 0.2.41 and 0.2.44 for stat blocks applies. A name printed twice (Dagger Goblin, Saber Goblin on pp.362–363 and again in short form on p.372) keeps the page in the later name.

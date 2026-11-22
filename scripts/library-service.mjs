@@ -1,5 +1,5 @@
 export function searchableItem(item){const s=item.system??{};return {tags:s.tags??'',sect:s.sect??'',sidhi:s.sidhi??s.prerequisites?.sidhi??'',rank:s.rank??'',rarity:s.rarity??'',description:String(s.description??'').replace(/<[^>]*>/g,' ')};}
-import {usesRules21,isLegacyPack20} from './rules-version.mjs?v=0.2.46';
+import {usesRules21,isLegacyPack20} from './rules-version.mjs?v=0.2.49';
 const cache=new Map();
 export function clearLibraryCache(){cache.clear();}
 export async function libraryEntries() {
