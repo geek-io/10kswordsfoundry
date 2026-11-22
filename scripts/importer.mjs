@@ -1,11 +1,11 @@
-import {defaultItemIcon} from './item-icons.mjs?v=0.2.45';
-import {titleCase,paragraphText} from "./import-format.mjs?v=0.2.45";
-import {itemFolders,checkedFolder} from "./import-folders.mjs?v=0.2.45";
-import {IMPORT_TYPES,parseImport} from './import-data.mjs?v=0.2.45';
-import {escapeHTML} from './resolution.mjs?v=0.2.45';
-import {editorValue} from './rich-text.mjs?v=0.2.45';
-import {validateWeapon} from './weapons.mjs?v=0.2.45';
-import {clearLibraryCache} from './library-service.mjs?v=0.2.45';
+import {defaultItemIcon} from './item-icons.mjs?v=0.2.46';
+import {titleCase,paragraphText} from "./import-format.mjs?v=0.2.46";
+import {itemFolders,checkedFolder} from "./import-folders.mjs?v=0.2.46";
+import {IMPORT_TYPES,parseImport} from './import-data.mjs?v=0.2.46';
+import {escapeHTML} from './resolution.mjs?v=0.2.46';
+import {editorValue} from './rich-text.mjs?v=0.2.46';
+import {validateWeapon} from './weapons.mjs?v=0.2.46';
+import {clearLibraryCache} from './library-service.mjs?v=0.2.46';
 export function validateImport(items,{rules21=false}={}) {
  return items.map((item,index)=>{
   try {
@@ -29,6 +29,6 @@ export function validateImport(items,{rules21=false}={}) {
  });
 }
 export async function openImporter(defaultFolder="") {
- const {openItemCreator}=await import('./item-creator.mjs?v=0.2.45');
+ const {openItemCreator}=await import('./item-creator.mjs?v=0.2.46');
  return openItemCreator('mass',defaultFolder);
 }

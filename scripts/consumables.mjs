@@ -1,6 +1,6 @@
-import {queueEquipment,reconcileCosts} from './equipment.mjs?v=0.2.45';
-import {assertAction} from './conditions.mjs?v=0.2.45';
-import {escapeHTML} from './resolution.mjs?v=0.2.45';
+import {queueEquipment,reconcileCosts} from './equipment.mjs?v=0.2.46';
+import {assertAction} from './conditions.mjs?v=0.2.46';
+import {escapeHTML} from './resolution.mjs?v=0.2.46';
 export function recoveryUse(source,itemId,{maximumHealth,inCombat=false}={}){
  const next=structuredClone(source),item=next.items.find(i=>i._id===itemId);
  const c=item?.system.consumable;

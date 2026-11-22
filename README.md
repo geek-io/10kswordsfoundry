@@ -13,6 +13,15 @@ A Foundry VTT v14 game system for *10,000 Swords Against Heaven*, based on rules
 All my work is always free, but a little bit of help is always appreciated!  
 <a href="https://patreon.com/geekioshow"><img src="assets/Patreon-Logo.png" alt="All my work is always free, but a little bit of help is always appreciated" width="240"></a>
 
+# v 0.2.46
+
+**Every Sect entry of the final 2.1 rulebook re-checked against the compendiums.** All 243 Technicks and Magicks, all Sect Gear, and every item card printed on the Sect, market and armor pages were matched one by one.
+
+- **Two Metomian weapons added to 2.1 Sect Gear** (Metomian / Weapons folder). The Chakra Rod and Adamantine Noose Technicks each summon a weapon and print its card inside the Technick, so they had never become items:
+  - **Metomian Chakra Rod**: Prestige Bludgeon, 1 kg, Haft, FOCUS; thrown up to 30 m, drains Flame on unsoaked damage.
+  - **Metomian Adamantine Noose**: Prestige Whip, 0.5 kg, REACH 4 (7 m); +2 to Control. The book prints this card under the title "Metomian Chakra Rod"; it is the Noose.
+- Everything else was already in: all 12 Metomian Technicks with Personal Vajra and Adamantite Shell, and every other Sect's Technicks, Magicks and Gear.
+
 # v 0.2.45
 
 **The 2.1 Bestiary is in the compendiums.** All 71 World Beings of the final 2.1 rulebook (pp.346–373) are ready to drag onto a scene.

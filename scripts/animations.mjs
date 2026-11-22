@@ -1,5 +1,5 @@
 // Optional AA integration: https://github.com/theripper93/autoanimations/blob/main/src/system-support/external.js
-import {usesRules21} from './rules-version.mjs?v=0.2.45';
+import {usesRules21} from './rules-version.mjs?v=0.2.46';
 const SYSTEM='10kswordsfoundry';
 
 // Dice So Nice: 2.1 rolls are spoken by a character, so on other clients DSN can resolve the
