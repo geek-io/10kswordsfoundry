@@ -124,6 +124,21 @@
 .discovery21-row>input[type=search]{flex:1 1 200px;}
 .discovery21-row>select{flex:1 1 200px;}
 .discovery21-step label.discovery21-check{flex-direction:row;align-items:center;gap:4px;margin:0;}
+.discovery21-xp{position:sticky;top:-12px;z-index:1;margin:-12px -16px 8px;padding:6px 16px;background:var(--swords-panel,#25262d);border-bottom:1px solid var(--swords-line,#444752);}
+/* Checkboxes keep their own size (Foundry's form rules otherwise stretch them across a flex row) and get a light ring so they show on the dark window. */
+.discovery21 input[type=checkbox]{flex:0 0 auto;width:var(--checkbox-size,16px);height:var(--checkbox-size,16px);min-width:0;max-width:none;padding:0;margin:0;outline:2px solid #f2f0ec;outline-offset:1px;border-radius:3px;}
+.discovery21-step label.discovery21-agree{margin:10px 0;gap:10px;font-weight:bold;}
+.discovery21-rollbar{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px;}
+.discovery21-rollbar button{width:auto;flex:0 0 auto;}
+.discovery21-grid.discovery21-grid-xp{grid-template-columns:repeat(auto-fill,minmax(340px,1fr));}
+.discovery21-grid>li{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:6px;margin:1px 0;}
+.discovery21-grid.discovery21-grid-xp>li{grid-template-columns:minmax(0,1fr) auto auto;}
+.discovery21-grid .discovery21-final{color:var(--swords-accent,#c9a45c);}
+.discovery21-extrasect{margin:10px 0;padding:6px 10px;border:1px solid var(--swords-line,#444752);border-radius:6px;}
+.discovery21-extrasect h4{margin:0;}
+.discovery21-step label.discovery21-xpstars{flex-direction:row;align-items:center;justify-content:flex-end;gap:6px;margin:2px 0 0;font-size:12px;}
+.discovery21-step label.discovery21-xpstars select{width:auto;}
+.discovery21-list>li:has(.discovery21-xpstars){display:grid;grid-template-columns:1fr auto;align-items:center;gap:8px;}
 .discovery21-table{width:100%;border-collapse:collapse;margin:6px 0;}
 .discovery21-table th,.discovery21-table td{padding:3px 6px;text-align:left;vertical-align:top;border-bottom:1px solid var(--swords-line,#444752);}
 .discovery21-table tr.chosen{background:rgba(201,164,92,.16);}
@@ -139,7 +154,6 @@
 .discovery21-attachment{grid-template-columns:1fr auto auto;}
 .discovery21-asset button,.discovery21-attachment button{width:auto;padding:0 8px;}
 .discovery21-grid{list-style:none;margin:6px 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:2px 14px;}
-.discovery21-grid label{flex-direction:row;justify-content:space-between;align-items:center;gap:8px;margin:1px 0;}
 .discovery21-grid select{width:auto;min-width:76px;flex:0 0 auto;}
 .discovery21-grid li.rated{font-weight:bold;}
 .discovery21-pill{display:inline-block;padding:1px 8px;border-radius:10px;margin-right:4px;border:1px solid var(--swords-line,#444752);}

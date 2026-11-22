@@ -2,10 +2,10 @@
 // (File name swords21.mjs retained to avoid an esmodule rename across the deploy; the concept is "Ticks".)
 // Foundry's Combat tracker carries the scene: one engine round is one Tick (1 second); a combatant's initiative is the
 // Tick on which it is next READY, lowest first. Under 2.0.3 every class and hook here leaves the engine untouched.
-import {usesRules21} from "./rules-version.mjs?v=0.2.46";
-import {escapeHTML} from "./resolution.mjs?v=0.2.46";
-import {spendFlame21, flurryReadyDelay21, ticksSpeed21, readyDice21} from "./rules21.mjs?v=0.2.46";
-import {confirmScorch21, deviationCheck21} from "./scorch21.mjs?v=0.2.46";
+import {usesRules21} from "./rules-version.mjs?v=0.2.49";
+import {escapeHTML} from "./resolution.mjs?v=0.2.49";
+import {spendFlame21, flurryReadyDelay21, ticksSpeed21, readyDice21} from "./rules21.mjs?v=0.2.49";
+import {confirmScorch21, deviationCheck21} from "./scorch21.mjs?v=0.2.49";
 
 const SYSTEM = "10kswordsfoundry";
 const int = value => Math.trunc(Number(value) || 0);

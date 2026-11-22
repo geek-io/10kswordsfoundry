@@ -1,6 +1,6 @@
 // Rules 2.1 Cultivator Discovery options: Classes (2.1 rulebook pp.44-48), Alignments, Cultures, Truths and Perversions (earlier book pp.50-65, 70-71, 312-345).
 // A Class is stored as a Job item flagged class21; it records the Class and its allotments and never touches Cultivations.
-import {escapeHTML} from "./resolution.mjs?v=0.2.46";
+import {escapeHTML} from "./resolution.mjs?v=0.2.49";
 
 const SYSTEM = "10kswordsfoundry";
 const int = value => Number.isSafeInteger(Number(value)) ? Number(value) : 0;

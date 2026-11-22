@@ -4,15 +4,30 @@
 <div class="discovery21-side">
 {{#if created}}<p class="hint">This Cultivator has been created. The Discovery is kept for reference and can no longer be changed.</p><button type="button" data-action="openActor">Open character</button>
 {{else}}<p class="hint">Nothing is saved while you work. <strong>Save to chat</strong> keeps this Discovery on a chat card that you and the GM can reopen.</p>
-<button type="button" data-action="rollEverything" data-tooltip="Pure chaos: roll every Sutra at random. Attachments are still yours to write.">Roll everything</button>
+<button type="button" data-action="rollEverything" data-xp="1" {{#unless xp.any}}disabled{{/unless}} data-tooltip="{{#if xp.any}}Pure chaos: roll every step at random, then spend the XP left at random on Core, Cultivation and Sect Stars and Licenses.{{else}}There is no XP to spend: agree on a higher start in step 1.{{/if}}">Roll all (spend XP)</button>
+<button type="button" data-action="rollEverything" data-xp="0" data-tooltip="Pure chaos: roll every step at random and leave the XP unspent. Attachments are still yours to write.">Roll all (spend no XP)</button>
 <button type="button" data-action="save" class="discovery21-save">Save to chat</button>
 <p class="hint">{{#if dirty}}Unsaved changes.{{else}}{{#if saved}}Saved to chat.{{else}}Not saved yet.{{/if}}{{/if}}</p>{{/if}}
 <p class="hint">Player: {{ownerName}}</p>
 </div>
 </nav>
 <div class="discovery21-main"><fieldset class="discovery21-step" {{#if locked}}disabled{{/if}}>
+{{#if xp.any}}{{#unless is.start}}<p class="discovery21-xp {{#if xp.over}}discovery21-over{{/if}}">Sidhi {{xp.sidhi}} · XP spent <strong>{{xp.spent}} / {{xp.start}}</strong> · left <strong>{{xp.left}}</strong></p>{{/unless}}{{/if}}
+{{#if roll}}{{#unless locked}}<div class="discovery21-rollbar"><button type="button" data-action="rollStep" data-step="{{roll.step}}" data-xp="0" data-tooltip="Roll {{roll.label}} at random. This replaces what is on this step.">🎲 Roll this step</button>{{#if roll.xp}}<button type="button" data-action="rollStep" data-step="{{roll.step}}" data-xp="1" data-tooltip="Roll {{roll.label}} at random, then spend the XP left on this step at random.">🎲 Roll this step (spend XP)</button>{{/if}}</div>{{/unless}}{{/if}}
 
-{{#if is.class}}<legend>Sutra 1 — Class</legend>
+{{#if is.start}}<legend>Step 1 — Starting Sidhi</legend>
+<p class="hint">Agree with your Intercessor where this Cultivator starts. Most begin at Sidhi 0. A higher start gives XP to spend on Sidhi Progression in the steps that follow: a Core Star costs 5 × the new rating, a Cultivation Star 3 × the new rating, an Asset 4 × its rating, and a Sect License 10 XP (p.100). Spent XP becomes Foundation, and each Stage needs a total of Foundation (pp.101, 108).</p>
+<div class="discovery21-row"><label class="grow">Start<select data-field="start.mode">{{#each startModes}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></label>
+{{#if customXp}}<label>XP<input type="number" min="0" max="{{maxXp}}" step="1" data-field="start.xp" data-number value="{{draft.start.xp}}"></label>
+{{else}}<label class="grow">Sidhi Stage<select data-field="start.sidhi" data-number>{{#each stageChoices}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></label>{{/if}}</div>
+<p>Starts at <strong>Sidhi {{xp.sidhi}} — {{xp.stage.name}}</strong> with <strong>{{xp.start}} XP</strong> to spend · {{xp.meridians}} open Meridians · {{xp.flame}} max Flame{{#if xp.next}} · Sidhi {{xp.next.stage}} needs {{xp.next.foundation}}{{/if}}</p>
+<table class="discovery21-table"><thead><tr><th>Stage</th><th>Name</th><th>Foundation (XP)</th></tr></thead><tbody>
+{{#each stages}}<tr class="{{#if selected}}chosen{{/if}}"><td>{{stars}} {{stage}}</td><td>{{name}}</td><td>{{foundation}}</td></tr>{{/each}}
+</tbody></table>
+<label class="discovery21-check discovery21-agree {{#if draft.start.agreed}}agreed{{/if}}"><input type="checkbox" data-field="start.agreed" {{#if draft.start.agreed}}checked{{/if}}> My Intercessor and I agreed on this starting Sidhi and XP.</label>
+{{/if}}
+
+{{#if is.class}}<legend>Step 2 · Sutra 1 — Class</legend>
 <p class="hint">You are Proletariat. If you wish, choose or roll 3d6 to see if you'll be someone else. The rest of your Sutras depend on your Class (p.42).</p>
 <p><button type="button" data-action="rollClass">Roll 3d6</button></p>
 <table class="discovery21-table"><thead><tr><th></th><th>3d6</th><th>Class</th><th>Cores</th><th>Cultivations</th><th>Assets</th><th>Starting Macca</th></tr></thead><tbody>
@@ -21,28 +36,31 @@
 {{#if subtypes}}<div class="discovery21-row"><label>{{subtypes.label}} (d6)<select data-field="subtype">{{#each subtypes.options}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></label><button type="button" data-action="rollSubtype">Roll d6</button></div>{{/if}}
 {{/if}}
 
-{{#if is.cores}}<legend>Sutra 2 — Cores</legend>
+{{#if is.cores}}<legend>Step 3 · Sutra 2 — Cores</legend>
 <p class="hint">Assign Stars according to Class. {{className}} gives <strong>{{corePool}}</strong> (p.{{classPage}}); put each value on one Core. Each list offers only the values you have left.</p>
 <p>{{#if coreLeft}}Still to assign: <strong>{{coreLeft}}</strong>{{else}}All Core Stars are assigned.{{/if}} <button type="button" data-action="clearCores">Clear</button></p>
-<ul class="discovery21-list">{{#each coreRows}}<li><label><span><strong>{{label}}</strong> ({{abbr}})<br><span class="hint">{{text}}</span></span><select data-field="cores.{{key}}" data-number>{{#each options}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></label></li>{{/each}}</ul>
+{{#if xp.any}}<p class="hint">Raise Cores with XP: each new Star costs 5 × the new rating (p.100). Assign the Class Stars first.</p>{{/if}}
+<ul class="discovery21-list">{{#each coreRows}}<li><label><span><strong>{{label}}</strong> ({{abbr}})<br><span class="hint">{{text}}</span></span><select data-field="cores.{{key}}" data-number>{{#each options}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></label>{{#if ../xp.any}}<label class="discovery21-xpstars">XP<select data-field="xpCores.{{key}}" data-number aria-label="{{label}} Stars bought with XP">{{#each xpOptions}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select>{{#if raised}}<strong>{{final}}</strong>{{/if}}</label>{{/if}}</li>{{/each}}</ul>
 {{/if}}
 
-{{#if is.cultivations}}<legend>Sutra 3 — Cultivations</legend>
+{{#if is.cultivations}}<legend>Step 4 · Sutra 3 — Cultivations</legend>
 <p class="hint">Assign Stars according to Class (p.{{classPage}}). Each list offers only the ratings you have left. The Sect's own Cultivation comes later, in Sutra 7.</p>
 <p>{{#each cultivationPool}}<span class="discovery21-pill {{#if done}}done{{else}}todo{{/if}}">{{stars}} {{have}} / {{want}}</span> {{/each}}<button type="button" data-action="clearCultivations">Clear</button></p>
-<ul class="discovery21-grid">{{#each cultivationRows}}<li class="{{#if rated}}rated{{/if}}"><label data-tooltip="{{text}}"><span>{{label}} <span class="hint">{{core}}</span></span><select data-field="skills.{{key}}" data-number>{{#each options}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></label></li>{{/each}}</ul>
+{{#if xp.any}}<p class="hint">Raise Cultivations with XP: each new Star costs 3 × the new rating, up to ✦✦✦✦✦, and must make sense for the Wanderer's travels (p.100). Each row: the Class Stars, then the Stars bought with XP.</p>{{/if}}
+<ul class="discovery21-grid {{#if xp.any}}discovery21-grid-xp{{/if}}">{{#each cultivationRows}}<li class="{{#if rated}}rated{{/if}}"><span data-tooltip="{{text}}">{{label}} <span class="hint">{{core}}</span>{{#if raised}} <strong class="discovery21-final">→ {{final}}</strong>{{/if}}</span><select data-field="skills.{{key}}" data-number aria-label="{{label}}">{{#each options}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select>{{#if ../xp.any}}<select data-field="xpSkills.{{key}}" data-number aria-label="{{label}} Stars bought with XP">{{#each xpOptions}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select>{{/if}}</li>{{/each}}</ul>
 {{/if}}
 
-{{#if is.assets}}<legend>Sutra 4 — Assets</legend>
+{{#if is.assets}}<legend>Step 5 · Sutra 4 — Assets</legend>
 <p class="hint">Buy Asset Stars according to Class. {{className}} starts with <strong>{{assetBudget.stars}}</strong> to buy (p.{{classPage}}); each Asset costs its Stars. The 36 starting Assets are on pp.211–218.</p>
-<p class="{{#if assetBudget.over}}discovery21-over{{/if}}">Stars bought: <strong>{{assetBudget.spent}} / {{assetBudget.budget}}</strong></p>
+<p class="{{#if assetBudget.over}}discovery21-over{{/if}}">Stars bought: <strong>{{assetBudget.spent}} / {{assetBudget.budget}}</strong>{{#if assetBudget.xpStars}} · {{assetBudget.xpStars}} more bought with <strong>{{assetBudget.xpCost}} XP</strong>{{/if}}</p>
+{{#if xp.any}}<p class="hint">Past the Class's Stars, Assets are bought with XP: a new Asset costs 4 × its rating, and raising one costs 4 × the new rating (p.100). The Class Stars go to the Assets in list order.</p>{{/if}}
 <ul class="discovery21-list">{{#each assetRows}}<li class="discovery21-asset"><span><strong>{{label}}</strong> <span class="hint">[{{code}}] p.{{page}}</span></span><select data-field="assets.{{index}}.stars" data-number>{{#each options}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select><input type="text" data-field="assets.{{index}}.detail" value="{{detail}}" placeholder="Name it: the creditor, the Patron, the shop…"><button type="button" data-action="removeAsset" data-index="{{index}}" aria-label="Remove {{label}}">✕</button>{{#if description}}<div class="discovery21-text">{{{description}}}</div>{{/if}}</li>{{/each}}</ul>
 <h4>Add an Asset</h4>
 <div class="discovery21-row" data-asset-add><select aria-label="Asset" data-asset-pick>{{#each assetChoices}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select><button type="button" data-action="addAsset">Add Asset</button><button type="button" data-action="rollAsset">Roll d66</button></div>
 {{#if assetPreview.description}}<div class="discovery21-text discovery21-preview"><p class="hint">{{assetPreview.label}} · p.{{assetPreview.page}}</p>{{{assetPreview.description}}}</div>{{/if}}
 {{/if}}
 
-{{#if is.supply}}<legend>Sutra 5 — Supply</legend>
+{{#if is.supply}}<legend>Step 6 · Sutra 5 — Supply</legend>
 <p class="hint">Buy Gear or Items using your starting Macca. Need gear? Consider getting a Patron or get in Debt (p.42).</p>
 <div class="discovery21-row"><span>Starting Macca: <strong>{{macca.per}} × d6</strong>{{#if macca.rolled}} ({{macca.d6}}) = <strong>{{macca.total}}</strong>{{/if}}</span><button type="button" data-action="rollMacca">{{#if macca.rolled}}Roll again{{else}}Roll d6{{/if}}</button></div>
 {{#if macca.rolled}}<p class="{{#if macca.over}}discovery21-over{{/if}}">Spent <strong>{{macca.spent}}</strong> · Left <strong>{{macca.left}}</strong></p>{{/if}}
@@ -50,17 +68,17 @@
 {{#if carry.over}}<p class="discovery21-warning"><strong>Over Carry.</strong> {{carry.text}} You can still take it; the character sheet applies these while the weight is carried.</p>{{/if}}
 {{#if classSupply}}<div class="discovery21-row"><span>{{className}} Supply: <strong>{{classSupply}}</strong></span><button type="button" data-action="randomSupply">Roll a random item</button></div>{{/if}}
 <table class="discovery21-table"><thead><tr><th>Item</th><th>Each</th><th>Qty</th><th>Free</th><th>Total</th><th>Weight</th><th></th></tr></thead><tbody>
-{{#each supplyRows}}<tr><td><a data-action="inspect" data-uuid="{{uuid}}" data-tooltip-html="{{description}}" data-tooltip-class="discovery21-tip" data-tooltip-direction="RIGHT">{{name}}</a>{{#if covers}} <span class="hint">Soak: {{covers}}</span>{{/if}}{{#if note}} <span class="hint">{{note}}</span>{{/if}}</td><td>{{priceText}}</td><td><input type="number" min="1" max="99" step="1" data-field="supply.{{index}}.qty" data-number value="{{qty}}"></td><td><input type="checkbox" data-field="supply.{{index}}.free" {{#if free}}checked{{/if}} data-tooltip="Class Supply, or lent through Debt or a Patron" aria-label="Free"></td><td>{{totalText}}</td><td>{{kgText}}</td><td><button type="button" data-action="removeSupply" data-index="{{index}}" aria-label="Remove {{name}}">✕</button></td></tr>{{else}}<tr><td colspan="7" class="hint">Nothing bought yet.</td></tr>{{/each}}
+{{#each supplyRows}}<tr><td><a data-action="inspect" data-uuid="{{uuid}}" data-tooltip-html="{{description}}" data-tooltip-class="discovery21-tip" data-tooltip-direction="RIGHT">{{name}}</a>{{#if page}} <span class="hint">p.{{page}}</span>{{else}} <span class="hint discovery21-offbook">not in the 2.1 rulebook; left out on creation</span>{{/if}}{{#if covers}} <span class="hint">Soak: {{covers}}</span>{{/if}}{{#if note}} <span class="hint">{{note}}</span>{{/if}}</td><td>{{priceText}}</td><td><input type="number" min="1" max="99" step="1" data-field="supply.{{index}}.qty" data-number value="{{qty}}"></td><td><input type="checkbox" data-field="supply.{{index}}.free" {{#if free}}checked{{/if}} data-tooltip="Class Supply, or lent through Debt or a Patron" aria-label="Free"></td><td>{{totalText}}</td><td>{{kgText}}</td><td><button type="button" data-action="removeSupply" data-index="{{index}}" aria-label="Remove {{name}}">✕</button></td></tr>{{else}}<tr><td colspan="7" class="hint">Nothing bought yet.</td></tr>{{/each}}
 </tbody></table>
-<h4>Market <span class="hint">{{shop.shown}} of {{shop.count}} entries from the 2.1 catalogs (pp.186–207)</span></h4>
-<div class="discovery21-row"><input type="search" data-shop="query" value="{{shop.query}}" placeholder="Search the market" aria-label="Search the market"><select data-shop="pack" aria-label="Catalog">{{#each shop.packs}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select><select data-shop="part" aria-label="Armor by the Part it covers">{{#each shop.parts}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select><label class="discovery21-check"><input type="checkbox" data-shop="affordable" {{#if shop.affordable}}checked{{/if}}> I can afford</label></div>
-<p class="hint">Hover an item for its description. Armor shows the Parts it covers and the Soak on each.</p>
-<table class="discovery21-table discovery21-shop"><thead><tr><th>Item</th><th>Kind</th><th>Rarity</th><th>Weight</th><th>Macca</th><th></th></tr></thead><tbody>
-{{#each shop.rows}}<tr class="{{#if dear}}dear{{/if}}"><td><a data-action="inspect" data-uuid="{{uuid}}" data-tooltip-html="{{description}}" data-tooltip-class="discovery21-tip" data-tooltip-direction="RIGHT">{{name}}</a>{{#if covers}}<br><span class="hint">Soak: {{covers}}</span>{{/if}}</td><td class="hint">{{typeLabel}}</td><td class="hint">{{rarity}}</td><td class="hint">{{kgText}}</td><td>{{priceText}}</td><td><button type="button" data-action="addSupply" data-uuid="{{uuid}}">Add</button></td></tr>{{/each}}
+<h4>Market <span class="hint">{{shop.shown}} of {{shop.count}} items printed in the 2.1 rulebook (pp.200–221)</span></h4>
+<div class="discovery21-row"><input type="search" data-shop="query" value="{{shop.query}}" placeholder="Search the market" aria-label="Search the market"><select data-shop="pack" aria-label="Catalog">{{#each shop.packs}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select><select data-shop="part" aria-label="Armor by the Part it covers">{{#each shop.parts}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select><select data-shop="profile" aria-label="Weapons by type">{{#each shop.profiles}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select><label class="discovery21-check"><input type="checkbox" data-shop="affordable" {{#if shop.affordable}}checked{{/if}}> I can afford</label></div>
+<p class="hint">Hover an item for its description. Armor shows the Parts it covers and the Soak on each; weapons can be narrowed to one type. Only gear printed in the 2.1 rulebook is offered; Page is the final 423-page book's. Ammunition is sold as quivers and magazines of the printed rounds at the printed price per round (p.207).</p>
+<table class="discovery21-table discovery21-shop"><thead><tr><th>Item</th><th>Kind</th><th>Rarity</th><th>Page</th><th>Weight</th><th>Macca</th><th></th></tr></thead><tbody>
+{{#each shop.rows}}<tr class="{{#if dear}}dear{{/if}}"><td><a data-action="inspect" data-uuid="{{uuid}}" data-tooltip-html="{{description}}" data-tooltip-class="discovery21-tip" data-tooltip-direction="RIGHT">{{name}}</a>{{#if covers}}<br><span class="hint">Soak: {{covers}}</span>{{/if}}</td><td class="hint">{{typeLabel}}</td><td class="hint">{{rarity}}</td><td class="hint">p.{{page}}</td><td class="hint">{{kgText}}</td><td>{{priceText}}</td><td><button type="button" data-action="addSupply" data-uuid="{{uuid}}">Add</button></td></tr>{{/each}}
 </tbody></table>
 {{/if}}
 
-{{#if is.identity}}<legend>Sutra 6 — Identity</legend>
+{{#if is.identity}}<legend>Step 7 · Sutra 6 — Identity</legend>
 <p class="hint">Find out your Name, Culture and Alignment. Then write down at least three Attachments, in short, punchy statements. At least one should be Held, one Firm and one Heart (p.42).</p>
 <div class="discovery21-row"><label class="grow">Name<input type="text" data-field="name" value="{{draft.name}}" placeholder="The shortest poem. Make one up, or roll."></label><button type="button" data-action="rollSyllable" data-tooltip="Roll 2d6 twice for a syllable (p.62) and add it to the name">Roll a syllable</button></div>
 <div class="discovery21-row"><label class="grow">Culture<select data-field="culture">{{#each cultureChoices}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></label><button type="button" data-action="rollCulture">Roll d66</button><label class="grow">…or make one up<input type="text" data-field="cultureCustom" value="{{cultureCustom}}"></label></div>
@@ -72,29 +90,39 @@
 <p><button type="button" data-action="addAttachment">Add Attachment</button></p>
 {{/if}}
 
-{{#if is.sect}}<legend>Sutra 7 — Sect</legend>
+{{#if is.sect}}<legend>Step 8 · Sutra 7 — Sect</legend>
 <p class="hint">Choose one Sect, ingest its Barang, and gain the Sect's Cultivation at ✦✦. Then choose 2 Licenses that you're qualified for and learn them immediately (p.42).</p>
 <div class="discovery21-row"><label class="grow">Sect<select data-field="sect">{{#each sectChoices}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></label></div>
-{{#if sect}}<p class="hint">Hover a License to read what it does; click it to open the full entry.</p><p>Barang: <strong>{{sect.barang}}</strong> · Cultivation: <strong>{{sect.cultivation}} {{sect.stars}}</strong> · Licenses chosen: <strong>{{sect.have}} / {{sect.want}}</strong></p>
+{{#if sect}}<p class="hint">Hover a License to read what it does; click it to open the full entry. Sect Gear is learned as a License too (Kind: Gear) and comes with the character.</p><p>Barang: <strong>{{sect.barang}}</strong> · Cultivation: <strong>{{sect.cultivation}} {{sect.stars}}</strong> · Licenses chosen: <strong>{{sect.have}} / {{sect.want}}</strong>{{#if sect.extra}} + {{sect.extra}} bought with XP{{/if}}</p>
+{{#if xp.any}}<div class="discovery21-row"><label>Raise {{sect.cultivation}} with XP <span class="hint">3 × the new rating</span><select data-field="xpSect" data-number>{{#each sect.xpOptions}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></label></div>
+<p class="hint">Licenses past the first two cost 10 XP each, and every License needs an open Meridian: Sidhi {{xp.sidhi}} opens {{sect.meridians}}, {{sect.total}} in use (p.100).</p>{{/if}}
 <table class="discovery21-table"><thead><tr><th>License</th><th>Kind</th><th>Needs</th><th></th></tr></thead><tbody>
-{{#each licenseRows}}<tr class="{{#if chosen}}chosen{{/if}}"><td><a data-action="inspect" data-uuid="{{uuid}}" data-tooltip-html="{{description}}" data-tooltip-class="discovery21-tip" data-tooltip-direction="RIGHT">{{name}}</a></td><td class="hint">{{typeLabel}}</td><td>{{cultivation}} {{starText}}</td><td><button type="button" data-action="toggleLicense" data-uuid="{{uuid}}" {{#if full}}disabled{{/if}}>{{#if chosen}}Remove{{else}}Learn{{/if}}</button></td></tr>{{/each}}
+{{#each sect.rows}}<tr class="{{#if chosen}}chosen{{/if}}"><td><a data-action="inspect" data-uuid="{{uuid}}" data-tooltip-html="{{description}}" data-tooltip-class="discovery21-tip" data-tooltip-direction="RIGHT">{{name}}</a>{{#if grantText}}<br><span class="hint">Comes with: {{grantText}}</span>{{/if}}</td><td class="hint">{{typeLabel}}</td><td>{{cultivation}} {{starText}}</td><td><button type="button" data-action="toggleLicense" data-uuid="{{uuid}}" {{#if full}}disabled{{/if}}>{{#if chosen}}Remove{{else}}Learn{{#if costsXp}} (10 XP){{/if}}{{/if}}</button></td></tr>{{/each}}
 </tbody></table>
-{{#if sect.later}}<p class="hint">{{sect.later}} more {{sect.name}} Licenses need {{sect.cultivation}} above ✦✦ and are not offered at Discovery.</p>{{/if}}
+{{#if sect.later}}<p class="hint">{{sect.later}} more {{sect.name}} Licenses need {{sect.cultivation}} above {{sect.stars}} and are not offered yet.</p>{{/if}}
+{{#each extraSects}}<div class="discovery21-extrasect"><div class="discovery21-row"><h4 class="grow">Another Sect · {{sect}}</h4><button type="button" data-action="removeSect" data-index="{{index}}" aria-label="Remove {{sect}}">✕ Remove</button></div>
+<p>Barang: <strong>{{barang}}</strong> <span class="hint">(carried; the Sutra 7 Barang stays ingested)</span></p>
+<div class="discovery21-row"><label>{{cultivation}} bought with XP <span class="hint">3 × each new rating, from nothing</span><select data-field="extraSects.{{index}}.stars" data-number>{{#each starOptions}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></label></div>
+<table class="discovery21-table"><thead><tr><th>License</th><th>Kind</th><th>Needs</th><th></th></tr></thead><tbody>
+{{#each rows}}<tr class="{{#if chosen}}chosen{{/if}}"><td><a data-action="inspect" data-uuid="{{uuid}}" data-tooltip-html="{{description}}" data-tooltip-class="discovery21-tip" data-tooltip-direction="RIGHT">{{name}}</a>{{#if grantText}}<br><span class="hint">Comes with: {{grantText}}</span>{{/if}}</td><td class="hint">{{typeLabel}}</td><td>{{cultivation}} {{starText}}</td><td><button type="button" data-action="toggleLicense" data-uuid="{{uuid}}" {{#if full}}disabled{{/if}}>{{#if chosen}}Remove{{else}}Learn (10 XP){{/if}}</button></td></tr>{{else}}<tr><td colspan="4" class="hint">Raise {{cultivation}} to see its Licenses.</td></tr>{{/each}}
+</tbody></table>{{#if later}}<p class="hint">More {{sect}} Licenses ({{later}}) need more {{cultivation}} Stars.</p>{{/if}}</div>{{/each}}
+{{#if addSect}}<div class="discovery21-row" data-sect-add><label class="grow">Buy another Sect with XP <span class="hint">The book prints no price for a second Barang (p.236); this charges its Cultivation Stars and 10 XP per License (p.100).</span><select aria-label="Another Sect">{{#each addSect.choices}}<option value="{{value}}">{{label}}</option>{{/each}}</select></label><button type="button" data-action="addSect">Add Sect</button></div>{{/if}}
 <label>How did she gain Sect Membership and Training?<textarea data-field="sectStory" rows="4" placeholder="Contrive it, modifying it according to Class.">{{draft.sectStory}}</textarea></label>{{/if}}
 {{/if}}
 
-{{#if is.sidhi}}<legend>Sutra 8 — Sidhi, Ajna, and Self-Flame</legend>
-<p class="hint">Choose the color of the Cultivator's Sidhi, and then imagine her Ajna: the halo, third eye, aureole, horns, moondisc… Make one up for her. Then begin at Sidhi 0 (p.42).</p>
+{{#if is.sidhi}}<legend>Step 9 · Sutra 8 — Sidhi, Ajna, and Self-Flame</legend>
+<p class="hint">Choose the color of the Cultivator's Sidhi, and then imagine her Ajna: the halo, third eye, aureole, horns, moondisc… Make one up for her. Then begin at the Sidhi Stage agreed in step 1 (p.42).</p>
 <label>Sidhi color<input type="text" data-field="sidhiColor" value="{{draft.sidhiColor}}" placeholder="Smokeless white, bruise violet…"></label>
 <label>Ajna<textarea data-field="ajna" rows="4" placeholder="What appears on her brow, on her head or behind it when 2–4 Flame burn (p.90)?">{{draft.ajna}}</textarea></label>
-<p>She begins at <strong>Sidhi 0</strong> in the Desire Realm, with 2 open Meridians (p.86).</p>
+<p>She begins at <strong>Sidhi {{xp.sidhi}} — {{xp.stage.name}}</strong> in the Desire Realm, with {{xp.meridians}} open Meridians and {{xp.flame}} max Flame (pp.90, 100–101).</p>
 <label>Anything else for the GM<textarea data-field="notes" rows="4">{{draft.notes}}</textarea></label>
 {{/if}}
 
-{{#if is.review}}<legend>Review</legend>
+{{#if is.review}}<legend>Step 10 — Review and creation</legend>
 <p class="discovery21-status {{#if review.complete}}done{{else}}todo{{/if}}"><strong>{{#if review.complete}}All eight Sutras are performed.{{else}}{{review.todo}}{{/if}}</strong></p>
 <h3>{{#if draft.name}}{{draft.name}}{{else}}Unnamed Cultivator{{/if}}</h3>
 <dl class="discovery21-summary">
+<dt>Starting Sidhi</dt><dd>{{review.start}}</dd>
 <dt>Class</dt><dd>{{className}}{{#if review.subtype}} — {{review.subtype}}{{/if}}</dd>
 <dt>Cores</dt><dd>{{review.cores}}</dd>
 <dt>Cultivations</dt><dd>{{#if review.cultivations}}{{review.cultivations}}{{else}}—{{/if}}</dd>
@@ -104,14 +132,15 @@
 <dt>Culture</dt><dd>{{#if draft.culture}}{{draft.culture}}{{else}}—{{/if}}</dd>
 <dt>Alignment</dt><dd>{{#if draft.alignment}}{{draft.alignment}}{{else}}—{{/if}}</dd>
 <dt>Attachments</dt><dd>{{#each review.attachments}}<div>{{strength}}: {{text}}</div>{{else}}—{{/each}}</dd>
-<dt>Sect</dt><dd>{{#if draft.sect}}{{draft.sect}} · {{draft.cultivation}} ✦✦ · Barang: {{draft.barang}}{{else}}—{{/if}}</dd>
+<dt>Sect</dt><dd>{{#if draft.sect}}{{draft.sect}} · {{draft.cultivation}} {{review.sectStars}} · Barang: {{draft.barang}}{{else}}—{{/if}}</dd>
+{{#if review.extraSects}}<dt>Other Sects</dt><dd>{{review.extraSects}}</dd>{{/if}}
 <dt>Licenses</dt><dd>{{#if review.licenses}}{{review.licenses}}{{else}}—{{/if}}</dd>
 <dt>Sect Membership</dt><dd>{{#if draft.sectStory}}{{draft.sectStory}}{{else}}—{{/if}}</dd>
-<dt>Sidhi</dt><dd>{{#if draft.sidhiColor}}{{draft.sidhiColor}}{{else}}—{{/if}} · Sidhi 0</dd>
+<dt>Sidhi</dt><dd>{{#if draft.sidhiColor}}{{draft.sidhiColor}}{{else}}—{{/if}} · Sidhi {{xp.sidhi}}</dd>
 <dt>Ajna</dt><dd>{{#if draft.ajna}}{{draft.ajna}}{{else}}—{{/if}}</dd>
 {{#if draft.notes}}<dt>Notes</dt><dd>{{draft.notes}}</dd>{{/if}}
 </dl>
-<h4>Sutras</h4>
+<h4>Steps</h4>
 <ul class="discovery21-checklist">{{#each review.sutras}}<li class="{{#if done}}done{{else}}todo{{/if}}"><a data-action="goto" data-step="{{key}}"><strong>{{label}}</strong></a> {{#if done}}✓{{/if}}{{#if issues}}<ul>{{#each issues}}<li>{{this}}</li>{{/each}}</ul>{{/if}}{{#if notes}}<ul class="hint">{{#each notes}}<li>{{this}}</li>{{/each}}</ul>{{/if}}</li>{{/each}}</ul>
 {{#if review.log}}<h4>Rolls made in this Discovery</h4><ul class="discovery21-log hint">{{#each review.log}}<li>{{this}}</li>{{/each}}</ul>{{/if}}
 <h4>GM review</h4>

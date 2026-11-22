@@ -1,5 +1,5 @@
-import {parseWorldBeings as parseWorldBeings20} from './worldbeing-import.mjs?v=0.2.46';
-import {parseWorldBeings21,isWorldBeing21} from './worldbeing-import21.mjs?v=0.2.46';
+import {parseWorldBeings as parseWorldBeings20} from './worldbeing-import.mjs?v=0.2.49';
+import {parseWorldBeings21,isWorldBeing21} from './worldbeing-import21.mjs?v=0.2.49';
 // Index first; only fetch full compendium documents actually used by this preview.
 export async function previewWorldBeings(texts,{rules21=false,versions='all'}={}){
  // Rules 2.1 worlds read the 2.1 Bestiary layout; a 2.0.3 block pasted there is refused with a reason rather than half-read.
