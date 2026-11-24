@@ -1,6 +1,6 @@
 # Rules basis — 2.1 (2.1 Alpha; earlier the Red Kalpa Manuscript)
 
-The 2.1 ruleset is **opt-in and in testing**. The GM chooses it in **Game Settings → Configure Settings → System → Rules version**. The default remains **2.0.3**, which is unchanged; see [rules-basis.md](rules-basis.md).
+From 0.2.50 the 2.1 ruleset is the **default for new worlds**. The GM chooses the ruleset in **Game Settings → Configure Settings → System → Rules version**. **2.0.3** stays selectable and unchanged; see [rules-basis.md](rules-basis.md). A world that already had Actors or Items and no stored choice is kept on 2.0.3 (it was running the old default).
 
 - Source (0.2.1–0.2.11): user-supplied `10000_SWORDS_AGAINST_HEAVEN_2.1_Manuscript.pdf` (title "RED KALPA MANUSCRIPT"), 150 PDF pages. SHA-256: `534B6B6FB6EE4946C6B371053B259CFB2D89BD55656B7586331FAF3EDF3BB1D8`.
 - Source (0.2.12 onward): user-supplied `Red_Kalpa_Manuscript.pdf`, a 53-page edition with the same rules chapters in condensed form, plus the user's notes from a test run (2026-11-01). SHA-256: `43DE824466DC3C8F237B1B58AE46996C555F4CC25D22D73A5459DCB021E0A7B8`.
@@ -394,6 +394,10 @@ Decisions and ambiguities (0.2.41):
 - **Card kind against section heading.** Some cards print the wrong kind (a bow as "BASE BLUDGEON", p.200). The card line is kept and a note is raised when the nearest heading disagrees; the heading is not trusted on two-column pages.
 - **"Politics"** (pp.334, 338, 342) and "Blacks Sorcery" (p.355) are not Cultivations the system lists; they come in as Esoteric Cultivations with a note.
 - **Not read:** the ammunition list on p.193 (inline bullets, not cards), Fangshi concoctions inside Technick text, and Assets whose code and Star range are split across columns in the PDF text.
+
+## Changed in 0.2.50 (default ruleset; Core pictures)
+
+- **Core pictures (final book pp.28–29).** Physique red, Motorics peach, Mind purple, Wits orange, Face green, Heart pink, in `assets/cores21/` under the Core keys. The PDF stores p.29's three images in the order Heart, Wits, Face; they were matched by printed colour. Until 0.2.49 the 2.1 sheet reused the 2.0.3 Cultivation pictures through `CORES[key].from`, which is still used for mapping 2.0.3 prerequisites but no longer for art.
 
 ## Changed in 0.2.49 (Cultivator Discovery market)
 

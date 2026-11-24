@@ -1,8 +1,8 @@
-import { CULTIVATIONS } from "./rules.mjs?v=0.2.49";
-import {grantedItems} from './job-grants.mjs?v=0.2.49';
-import {reconcileCosts} from './equipment.mjs?v=0.2.49';
-import {fashionResources} from './fashion.mjs?v=0.2.49';
-import {refundInstallation} from './ability-state.mjs?v=0.2.49';
+import { CULTIVATIONS } from "./rules.mjs?v=0.2.50";
+import {grantedItems} from './job-grants.mjs?v=0.2.50';
+import {reconcileCosts} from './equipment.mjs?v=0.2.50';
+import {fashionResources} from './fashion.mjs?v=0.2.50';
+import {refundInstallation} from './ability-state.mjs?v=0.2.50';
 
 export function jobCultivations(current, previousBase, previousAdjustments, nextBase) {
   const cultivations = {}, adjustments = {};

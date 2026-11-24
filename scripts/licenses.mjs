@@ -1,4 +1,4 @@
-import { CULTIVATIONS } from "./rules.mjs?v=0.2.49";
+import { CULTIVATIONS } from "./rules.mjs?v=0.2.50";
 
 // Rules 2.0.3, PDF pp.127-185: ordered by first license page.
 export const SECTS = Object.freeze({

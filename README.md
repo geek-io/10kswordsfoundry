@@ -1,6 +1,6 @@
 # 10,000 Swords Against Heaven for Foundry VTT
 
-A Foundry VTT v14 game system for *10,000 Swords Against Heaven*, based on rules version 2.0.3, with an opt-in **2.1 (2.1 player-facing book)** ruleset in testing.
+A Foundry VTT v14 game system for *10,000 Swords Against Heaven*. New worlds use the **2.1 rulebook**; the earlier **2.0.3** ruleset stays selectable and unchanged (Configure Settings → System → Rules version).
 
 - System by: Geek IO Dev Team
 
@@ -12,6 +12,13 @@ A Foundry VTT v14 game system for *10,000 Swords Against Heaven*, based on rules
 
 All my work is always free, but a little bit of help is always appreciated!  
 <a href="https://patreon.com/geekioshow"><img src="assets/Patreon-Logo.png" alt="All my work is always free, but a little bit of help is always appreciated" width="240"></a>
+
+# v 0.2.50
+
+**Rules 2.1 is the default, and the Core pictures are the 2.1 rulebook's.**
+
+- **Default ruleset.** A new world starts on **Rules 2.1**, sheet included. 2.0.3 stays in the Rules version list and is unchanged. A world that already has characters and never chose a version was running 2.0.3: it is kept on 2.0.3 the next time its GM logs in, with a notice saying so. Worlds where a version was chosen are not touched.
+- **Core pictures.** The 2.1 sheet now shows the six pictures printed on pp.28–29 of the 2.1 rulebook: Physique red, Motorics peach, Mind purple, Wits orange, Face green, Heart pink. Before, it borrowed the 2.0.3 Cultivation pictures, which put the wrong art on Wits, Face and Heart. The 2.0.3 sheet keeps its own pictures.
 
 # v 0.2.49
 

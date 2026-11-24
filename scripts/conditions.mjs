@@ -30,4 +30,4 @@ export function injuryChanges(actor,source,next) {
  }
  return patch;
 }
-import {inSamadhi} from "./roll-support.mjs?v=0.2.49";
+import {inSamadhi} from "./roll-support.mjs?v=0.2.50";

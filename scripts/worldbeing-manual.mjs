@@ -1,4 +1,4 @@
-import {rating21} from './import21.mjs?v=0.2.49';
+import {rating21} from './import21.mjs?v=0.2.50';
 export function manualItemSource(item){
  const source=structuredClone(item);
  for(const key of ['_id','id','folder','ownership','sort','_stats'])delete source[key];
@@ -6,7 +6,7 @@ export function manualItemSource(item){
  if(source.system){for(const key of ['equipped','active'])if(key in source.system)source.system[key]=false;for(const key of ['paidCarry','paidMeridians','paidArdor'])if(key in source.system)source.system[key]=0;}
  return source;
 }
-export async function browseManualItems(){const {openLibrary}=await import('./browser.mjs?v=0.2.49');openLibrary();}
+export async function browseManualItems(){const {openLibrary}=await import('./browser.mjs?v=0.2.50');openLibrary();}
 export async function dropManualItem(event){
  event.preventDefault();if(this.busy)return;rememberManual(this);this.busy=true;
  try{
