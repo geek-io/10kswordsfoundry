@@ -1,4 +1,4 @@
-import {isRawJobText,jobDescription,grantDescription} from './job-text.mjs?v=0.2.49';
+import {isRawJobText,jobDescription,grantDescription} from './job-text.mjs?v=0.2.50';
 const SYSTEM='10kswordsfoundry',VERSION=1;
 // Job descriptions copied from the book block repeated the Cultivations and loadout already shown on the
 // Details tab, and every granted item carried the whole Job text. Tidy existing world and character copies once.

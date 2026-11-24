@@ -1,8 +1,8 @@
 // Rules 2.1 KILL THE BUDDHA exchange card: everyone's Openings in one chat card, resolved tier by tier (pp.23–28).
 // The active GM writes the card; players' actions reach the GM through the system socket.
-import {newExchange21, applyOperation21, landing21, RANK, RANK_LABEL, TIERS} from "./exchange-state21.mjs?v=0.2.49";
-import {damagePart} from "./roll21.mjs?v=0.2.49";
-import {escapeHTML} from "./resolution.mjs?v=0.2.49";
+import {newExchange21, applyOperation21, landing21, RANK, RANK_LABEL, TIERS} from "./exchange-state21.mjs?v=0.2.50";
+import {damagePart} from "./roll21.mjs?v=0.2.50";
+import {escapeHTML} from "./resolution.mjs?v=0.2.50";
 
 const SYSTEM = "10kswordsfoundry";
 const SOCKET = `system.${SYSTEM}`;

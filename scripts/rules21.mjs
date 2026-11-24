@@ -3,7 +3,7 @@
 // The 2.0.3 rules never import this module.
 
 export const RULES_SETTING = "rulesVersion";
-export const RULES_CHOICES = Object.freeze({"2.0": "2.0.3 — established", "2.1": "2.1 Alpha — testing"});
+export const RULES_CHOICES = Object.freeze({"2.1": "2.1 — current rulebook (default)", "2.0": "2.0.3 — earlier rulebook"});
 
 // p.5: six Cores replace the six 2.0 Cultivations, one to one. The 2026-11 test run renamed Voice to Face and
 // Spirit to Heart (the 2.1 sect spoilers already print FACE and HEART). The data keys stay voc and spi.

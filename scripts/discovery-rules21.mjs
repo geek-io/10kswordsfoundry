@@ -4,8 +4,8 @@
 // a Cultivator may ingest a different Barang and cultivate it (p.236); the book prints no price for that, so the tool charges what
 // p.100 does print, the new Sect's Cultivation Stars (3 × the new rating) and 10 XP for each of its Licenses.
 // Nothing here touches Foundry, so the creation tool, the chat card and the tests all read the same rules.
-import {CORES, CORE_KEYS, CULTIVATIONS_21, CULTIVATION_KEYS_21, ASSETS_21, ATTACHMENT_STRENGTHS, carryLimit, encumbrance21, flameMaximum21} from "./rules21.mjs?v=0.2.49";
-import {escapeHTML} from "./resolution.mjs?v=0.2.49";
+import {CORES, CORE_KEYS, CULTIVATIONS_21, CULTIVATION_KEYS_21, ASSETS_21, ATTACHMENT_STRENGTHS, carryLimit, encumbrance21, flameMaximum21} from "./rules21.mjs?v=0.2.50";
+import {escapeHTML} from "./resolution.mjs?v=0.2.50";
 
 const int = value => Math.trunc(Number(value) || 0);
 const text = value => String(value ?? "").trim();

@@ -1,30 +1,30 @@
-import {prepareFashionEffects,ensureFashionEffects,repairFashionEffects} from './fashion-effects.mjs?v=0.2.49';
-import {repairTechnickActions} from './technick-repair.mjs?v=0.2.49';
-import {registerAnimations, registerDiceSoNice21} from './animations.mjs?v=0.2.49';
-import {repairTraitEffects} from './trait-effect-repair.mjs?v=0.2.49';
-import {registerRulesSetting, usesRules21} from './rules-version.mjs?v=0.2.49';
-import {registerStrikeColors} from './strike-colors.mjs?v=0.2.49';
-import {registerAbilityEffects} from './ability-effects.mjs?v=0.2.49';
-import {registerChat21} from './chat21.mjs?v=0.2.49';
-import {registerTicks21} from './swords21.mjs?v=0.2.49';
-import {registerExchange21} from './exchange21.mjs?v=0.2.49';
-import {registerSocial21} from './social21.mjs?v=0.2.49';
-import {registerAbilityAreas} from './areas.mjs?v=0.2.49';
-import {migrateAssets21, licenseBarangWarning21} from './assets21.mjs?v=0.2.49';
-import {registerModConditions} from './mod-conditions.mjs?v=0.2.49';
-import {setItemIcon,migrateItemIcons} from './item-icons.mjs?v=0.2.49';
-import {registerEffectDropdowns} from "./effects.mjs?v=0.2.49";
-import {persistLegacyArmor} from "./legacy-items.mjs?v=0.2.49";
-import {registerSidebarTools} from "./sidebar-tools.mjs?v=0.2.49";
-import {registerDiscovery21, openDiscovery21} from "./discovery21.mjs?v=0.2.49";
-import {SwordsItem} from "./item-document.mjs?v=0.2.49";
-import { SwordsActor, SwordsActiveEffect } from "./documents.mjs?v=0.2.49";
-import { migrateWorldInventory } from "./migration.mjs?v=0.2.49";
-import { SwordsActorData, SwordsItemData, SwordsJobData, SwordsLicenseData, SwordsFashionData, SwordsGearData, SwordsEquipmentData, SwordsWeaponData, SwordsWeaponModData, SwordsAmmoData, SwordsTechniqueData, SwordsMagickData, SwordsTraitData, SwordsGambitData, SwordsAssetData, SwordsBarangData } from "./data-models.mjs?v=0.2.49";
-import { SwordsActorSheet, SwordsItemSheet } from "./sheets.mjs?v=0.2.49";
-import { setWandererTokenDefault } from "./token-linking.mjs?v=0.2.49";
-import { repairJobText } from "./job-repair.mjs?v=0.2.49";
-import { registerArrowMovement } from "./arrow-move.mjs?v=0.2.49";
+import {prepareFashionEffects,ensureFashionEffects,repairFashionEffects} from './fashion-effects.mjs?v=0.2.50';
+import {repairTechnickActions} from './technick-repair.mjs?v=0.2.50';
+import {registerAnimations, registerDiceSoNice21} from './animations.mjs?v=0.2.50';
+import {repairTraitEffects} from './trait-effect-repair.mjs?v=0.2.50';
+import {registerRulesSetting, usesRules21, pinExistingWorld20} from './rules-version.mjs?v=0.2.50';
+import {registerStrikeColors} from './strike-colors.mjs?v=0.2.50';
+import {registerAbilityEffects} from './ability-effects.mjs?v=0.2.50';
+import {registerChat21} from './chat21.mjs?v=0.2.50';
+import {registerTicks21} from './swords21.mjs?v=0.2.50';
+import {registerExchange21} from './exchange21.mjs?v=0.2.50';
+import {registerSocial21} from './social21.mjs?v=0.2.50';
+import {registerAbilityAreas} from './areas.mjs?v=0.2.50';
+import {migrateAssets21, licenseBarangWarning21} from './assets21.mjs?v=0.2.50';
+import {registerModConditions} from './mod-conditions.mjs?v=0.2.50';
+import {setItemIcon,migrateItemIcons} from './item-icons.mjs?v=0.2.50';
+import {registerEffectDropdowns} from "./effects.mjs?v=0.2.50";
+import {persistLegacyArmor} from "./legacy-items.mjs?v=0.2.50";
+import {registerSidebarTools} from "./sidebar-tools.mjs?v=0.2.50";
+import {registerDiscovery21, openDiscovery21} from "./discovery21.mjs?v=0.2.50";
+import {SwordsItem} from "./item-document.mjs?v=0.2.50";
+import { SwordsActor, SwordsActiveEffect } from "./documents.mjs?v=0.2.50";
+import { migrateWorldInventory } from "./migration.mjs?v=0.2.50";
+import { SwordsActorData, SwordsItemData, SwordsJobData, SwordsLicenseData, SwordsFashionData, SwordsGearData, SwordsEquipmentData, SwordsWeaponData, SwordsWeaponModData, SwordsAmmoData, SwordsTechniqueData, SwordsMagickData, SwordsTraitData, SwordsGambitData, SwordsAssetData, SwordsBarangData } from "./data-models.mjs?v=0.2.50";
+import { SwordsActorSheet, SwordsItemSheet } from "./sheets.mjs?v=0.2.50";
+import { setWandererTokenDefault } from "./token-linking.mjs?v=0.2.50";
+import { repairJobText } from "./job-repair.mjs?v=0.2.50";
+import { registerArrowMovement } from "./arrow-move.mjs?v=0.2.50";
 
 Hooks.on("preCreateItem",setItemIcon);
 Hooks.on("preCreateItem",prepareFashionEffects);
@@ -36,7 +36,7 @@ Hooks.on("updateItem",async(item,changes,options,userId)=>{
 Hooks.on("preCreateActor", setWandererTokenDefault);
 Hooks.on("createItem",(item,options,userId)=>{if(userId!==game.user?.id||!usesRules21())return;const warning=licenseBarangWarning21(item.parent,item);if(warning)ui.notifications.warn(warning);});
 
-Hooks.once("ready",async()=>{await persistLegacyArmor();await migrateWorldInventory();await migrateItemIcons();try{await repairTraitEffects();await repairTechnickActions();await repairFashionEffects();await migrateAssets21();await repairJobText();}catch(error){ui.notifications.error(error.message);}});
+Hooks.once("ready",async()=>{await pinExistingWorld20();await persistLegacyArmor();await migrateWorldInventory();await migrateItemIcons();try{await repairTraitEffects();await repairTechnickActions();await repairFashionEffects();await migrateAssets21();await repairJobText();}catch(error){ui.notifications.error(error.message);}});
 
 Hooks.once("init", () => {
   game.settings.register("10kswordsfoundry","traitEffectRepairVersion",{scope:"world",config:false,type:Number,default:0});
@@ -84,4 +84,4 @@ Hooks.once("init", () => {
   sheets.registerSheet(foundry.documents.Item, "10kswordsfoundry", SwordsItemSheet, { makeDefault: true, types: ["gear", "weapon", "armor", "trait", "license", "technique", "job", "fashion", "magick", "weaponMod", "accessory", "ammunition", "gambit", "salvage", "asset", "barang"], label: "10,000 Swords" });
 });
 
-Hooks.once("ready",()=>{game.system.api={...game.system.api,openDiscovery21,openCompendium:async()=>{const {openLibrary}=await import("./browser.mjs?v=0.2.49");return openLibrary();}};});
+Hooks.once("ready",()=>{game.system.api={...game.system.api,openDiscovery21,openCompendium:async()=>{const {openLibrary}=await import("./browser.mjs?v=0.2.50");return openLibrary();}};});

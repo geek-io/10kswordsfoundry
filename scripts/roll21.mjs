@@ -3,14 +3,14 @@ import {CORES, CULTIVATIONS_21, PARTS, PART_KEYS, ATTACHMENT_STRENGTHS, checkFor
   rangePenalty, firingMode, weaponProfile21, stateModifiers, addCharges, assetStars, incapacitationDemand, partFromD6,
   applyPartDamage, partState, targetReach, openingRank, sectCultivationNames21, withoutPenalties, entersFlow, canSuppress, spendFlame21,
   DAMAGE_TYPES_21, DAMAGE_TYPE_KEYS, damageOptions21, ARMOR_MODS_21, MANEUVERS_21, MANEUVER_KEYS, maneuverOutcome21, ticksSpeed21, flurryReadyDelay21,
-  COVER_21, coverHits21, aimBonus21, outOfRange21, goesWide21, halvedPool21, visceralBonus21, strikeOptions21, strikePlan21} from "./rules21.mjs?v=0.2.49";
-import {confirmScorch21, deviationCheck21} from "./scorch21.mjs?v=0.2.49";
-import {escapeHTML} from "./resolution.mjs?v=0.2.49";
-import {occupiedSlots} from "./slots.mjs?v=0.2.49";
-import {useWeapon} from "./equipment.mjs?v=0.2.49";
-import {actingToken, collectTargets} from "./targeting21.mjs?v=0.2.49";
-import {ammoSummary21} from "./ammunition.mjs?v=0.2.49";
-import {abilityArea, placeAbilityArea} from "./areas.mjs?v=0.2.49";
+  COVER_21, coverHits21, aimBonus21, outOfRange21, goesWide21, halvedPool21, visceralBonus21, strikeOptions21, strikePlan21} from "./rules21.mjs?v=0.2.50";
+import {confirmScorch21, deviationCheck21} from "./scorch21.mjs?v=0.2.50";
+import {escapeHTML} from "./resolution.mjs?v=0.2.50";
+import {occupiedSlots} from "./slots.mjs?v=0.2.50";
+import {useWeapon} from "./equipment.mjs?v=0.2.50";
+import {actingToken, collectTargets} from "./targeting21.mjs?v=0.2.50";
+import {ammoSummary21} from "./ammunition.mjs?v=0.2.50";
+import {abilityArea, placeAbilityArea} from "./areas.mjs?v=0.2.50";
 
 const SYSTEM = "10kswordsfoundry";
 /** Which KILL THE BUDDHA engine the world uses: "openings" (default, the Quick/Solid/Perfect exchange) or "strikes" (the 2.1 Block/Dodge rewrite). */

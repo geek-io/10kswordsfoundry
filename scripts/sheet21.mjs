@@ -1,13 +1,13 @@
 // Rules 2.1 character sheet context and actions. Used only when the GM selects the 2.1 ruleset.
 import {CORES, CULTIVATIONS_21, ASSETS_21, PARTS, PART_KEYS, CONDITIONS_21, ATTACHMENT_STRENGTHS, MAX_STARS,
-  derive21, advancementCost, healingDays, weaponProfile21, qualifiesForLicense21, SIDHI_REALMS, abilityLimit21, recoverFlame21, cleaveDepth, PROFILES, morphOptions21, flameMaximum21} from "./rules21.mjs?v=0.2.49";
-import {rollCheck21, killTheBuddha, findOpening21, castMagick21, stunCheck, incapacitationCheck, randomPart, damagePart} from "./roll21.mjs?v=0.2.49";
-import {escapeHTML} from "./resolution.mjs?v=0.2.49";
-import {activateTechnick21, releaseTechnick21, technickRows21} from "./technick21.mjs?v=0.2.49";
-import {changeGodsMind21, rollDisposition21} from "./social21.mjs?v=0.2.49";
-import {DISPOSITIONS21} from "./social-rules21.mjs?v=0.2.49";
-import {assetRows21, barangRows21, raiseAsset21, ingestBarang21, ejectBarang21} from "./assets21.mjs?v=0.2.49";
-import {ammoSummary21} from "./ammunition.mjs?v=0.2.49";
+  derive21, advancementCost, healingDays, weaponProfile21, qualifiesForLicense21, SIDHI_REALMS, abilityLimit21, recoverFlame21, cleaveDepth, PROFILES, morphOptions21, flameMaximum21} from "./rules21.mjs?v=0.2.50";
+import {rollCheck21, killTheBuddha, findOpening21, castMagick21, stunCheck, incapacitationCheck, randomPart, damagePart} from "./roll21.mjs?v=0.2.50";
+import {escapeHTML} from "./resolution.mjs?v=0.2.50";
+import {activateTechnick21, releaseTechnick21, technickRows21} from "./technick21.mjs?v=0.2.50";
+import {changeGodsMind21, rollDisposition21} from "./social21.mjs?v=0.2.50";
+import {DISPOSITIONS21} from "./social-rules21.mjs?v=0.2.50";
+import {assetRows21, barangRows21, raiseAsset21, ingestBarang21, ejectBarang21} from "./assets21.mjs?v=0.2.50";
+import {ammoSummary21} from "./ammunition.mjs?v=0.2.50";
 
 export const ACTOR_TEMPLATE_21 = "systems/10kswordsfoundry/templates/actor-21.hbs";
 const int = value => Math.trunc(Number(value) || 0);
@@ -28,7 +28,7 @@ export function prepareActor21(document, context) {
   const flameMax = derived.flameMax ?? flameMaximum21(source.sidhi), meridians = derived.meridians ?? 2 + int(source.sidhi);
   return {
     rules21: true,
-    coreRows: Object.entries(CORES).map(([key, core]) => ({key, ...core, icon: `systems/10kswordsfoundry/assets/cultivations/${core.from}.png`, base: source.cores?.[key] ?? 1, value: system.cores?.[key] ?? 1,
+    coreRows: Object.entries(CORES).map(([key, core]) => ({key, ...core, icon: `systems/10kswordsfoundry/assets/cores21/${key}.png`, base: source.cores?.[key] ?? 1, value: system.cores?.[key] ?? 1,
       modified: (source.cores?.[key] ?? 1) !== (system.cores?.[key] ?? 1), cost: cost("core", source.cores?.[key] ?? 1)})),
     skillRows: Object.entries(CULTIVATIONS_21).map(([key, skill]) => {
       const base = source.skills?.[key] ?? 0;

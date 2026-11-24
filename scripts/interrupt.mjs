@@ -1,12 +1,12 @@
-import {recentAttacks,escapeHTML,clashDice,resolveDefense} from './resolution.mjs?v=0.2.49';
-import {assertAction} from './conditions.mjs?v=0.2.49';
-import {wieldedWeapons,inSamadhi,enterSamadhi,sixesHTML,tagBonus} from './roll-support.mjs?v=0.2.49';
-import {attackCultivation} from './combat.mjs?v=0.2.49';
-import {modifierProfile} from './modifiers.mjs?v=0.2.49';
-import {weaponDetails} from './weapons.mjs?v=0.2.49';
-import {useWeapon} from './equipment.mjs?v=0.2.49';
-import {healthSutra} from './health.mjs?v=0.2.49';
-import {CULTIVATIONS,checkFormula,summarizeCheck} from './rules.mjs?v=0.2.49';
+import {recentAttacks,escapeHTML,clashDice,resolveDefense} from './resolution.mjs?v=0.2.50';
+import {assertAction} from './conditions.mjs?v=0.2.50';
+import {wieldedWeapons,inSamadhi,enterSamadhi,sixesHTML,tagBonus} from './roll-support.mjs?v=0.2.50';
+import {attackCultivation} from './combat.mjs?v=0.2.50';
+import {modifierProfile} from './modifiers.mjs?v=0.2.50';
+import {weaponDetails} from './weapons.mjs?v=0.2.50';
+import {useWeapon} from './equipment.mjs?v=0.2.50';
+import {healthSutra} from './health.mjs?v=0.2.50';
+import {CULTIVATIONS,checkFormula,summarizeCheck} from './rules.mjs?v=0.2.50';
 export async function interruptAttack() {
  if(!this.isEditable||this._interrupting) return;
  this._interrupting=true;
